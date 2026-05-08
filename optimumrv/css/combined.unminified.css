@@ -2882,7 +2882,7 @@ ul.control li {
 	margin-top:0;
 }
 .hero{
-	background-image:url('https://thomgriggs.com/work/optimumrv/images/hero2.webp');
+	background-image:url('../images/hero2.webp');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
