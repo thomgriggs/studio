@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kickball Tracker</title>
+    <meta name="theme-color" content="#0f2528">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <p class="eyebrow">Liquid Breakfast Club</p>
+        <h1>Kickball Tracker</h1>
+        <p id="gameMeta" class="header-meta">Sunday game</p>
+      </div>
+      <div class="header-score" aria-label="Current score">
+        <div>
+          <span>Us</span>
+          <strong id="headerUs">0</strong>
+        </div>
+        <div>
+          <span>Them</span>
+          <strong id="headerThem">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="App views">
+      <button class="tab active" data-view="score">Score</button>
+      <button class="tab" data-view="lineup">Lineup</button>
+      <button class="tab" data-view="defense">Defense</button>
+      <button class="tab" data-view="stats">Stats</button>
+      <button class="tab" data-view="admin">Setup</button>
+    </nav>
+
+    <main>
+      <section id="score" class="view active">
+        <div class="score-layout">
+          <section class="score-hero">
+            <div class="game-state-strip">
+              <div>
+                <span class="label">Inning</span>
+                <strong id="inningLabel">Top 1</strong>
+              </div>
+              <div>
+                <span class="label">Outs</span>
+                <strong id="outsLabel">0 / 4</strong>
+              </div>
+              <div>
+                <span class="label">Runs</span>
+                <strong id="runsInningLabel">0</strong>
+              </div>
+            </div>
+
+            <div class="kicker-card">
+              <span class="label">At The Plate</span>
+              <h2 id="currentKicker">Set lineup first</h2>
+              <p id="nextKickers" class="next-kickers"></p>
+              <p id="scoreWarning" class="warning"></p>
+            </div>
+
+            <div class="diamond" aria-label="Base state">
+              <div class="base-card base-second" data-base-card="2">
+                <span>2B</span>
+                <strong id="base2">Empty</strong>
+                <div class="base-actions">
+                  <button data-runner-action="advance" data-base="2">Advance</button>
+                  <button data-runner-action="score" data-base="2">Score</button>
+                  <button data-runner-action="clear" data-base="2">Clear</button>
+                </div>
+              </div>
+              <div class="base-card base-third" data-base-card="3">
+                <span>3B</span>
+                <strong id="base3">Empty</strong>
+                <div class="base-actions">
+                  <button data-runner-action="advance" data-base="3">Advance</button>
+                  <button data-runner-action="score" data-base="3">Score</button>
+                  <button data-runner-action="clear" data-base="3">Clear</button>
+                </div>
+              </div>
+              <div class="plate">Home</div>
+              <div class="base-card base-first" data-base-card="1">
+                <span>1B</span>
+                <strong id="base1">Empty</strong>
+                <div class="base-actions">
+                  <button data-runner-action="advance" data-base="1">Advance</button>
+                  <button data-runner-action="score" data-base="1">Score</button>
+                  <button data-runner-action="clear" data-base="1">Clear</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="score-side">
+            <section class="action-panel">
+              <div class="section-heading">
+                <h2>Result</h2>
+                <button id="undo" class="ghost">Undo</button>
+              </div>
+              <div class="result-grid">
+                <button class="primary-action" data-action="single">Single</button>
+                <button class="primary-action" data-action="double">Double</button>
+                <button class="primary-action" data-action="triple">Triple</button>
+                <button class="primary-action" data-action="homeRun">Home Run</button>
+                <button data-action="out">Out</button>
+                <button data-action="foulOut">Foul Out</button>
+                <button data-action="reachedError">Reached Error</button>
+                <button data-action="fieldersChoice">Fielder's Choice</button>
+                <button data-action="automaticOut">Auto Out</button>
+              </div>
+            </section>
+
+            <section class="action-panel">
+              <h2>Score Adjust</h2>
+              <div class="score-adjust">
+                <button data-score-action="usMinus">- Us</button>
+                <button data-score-action="usPlus">+ Us</button>
+                <button data-score-action="themMinus">- Them</button>
+                <button data-score-action="themPlus">+ Them</button>
+              </div>
+            </section>
+
+            <section class="action-panel">
+              <h2>Game Flow</h2>
+              <div class="button-row">
+                <button id="nextHalf">Next Half</button>
+                <button id="clearBases">Clear Bases</button>
+                <button id="resetGame" class="danger">Reset</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="activity-panel">
+          <div class="section-heading">
+            <h2>Play Log</h2>
+            <span id="eventCount" class="pill">0 plays</span>
+          </div>
+          <ol id="eventLog" class="event-log"></ol>
+        </section>
+      </section>
+
+      <section id="lineup" class="view">
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow dark">Pregame</p>
+            <h2>Kicking Lineup</h2>
+          </div>
+          <button id="balanceLineup" class="primary">Balance Lineup</button>
+        </div>
+
+        <section class="lineup-layout">
+          <div class="lineup-board">
+            <div class="section-heading">
+              <h3>Order</h3>
+              <span id="lineupCount" class="pill">0 active</span>
+            </div>
+            <div id="lineupValidation" class="warning-list"></div>
+            <div id="lineupList" class="lineup-list"></div>
+          </div>
+
+          <aside class="attendance-board">
+            <div class="section-heading">
+              <h3>Available Players</h3>
+              <span id="attendanceCount" class="pill">0 here</span>
+            </div>
+            <div id="attendanceList" class="attendance-list"></div>
+          </aside>
+        </section>
+      </section>
+
+      <section id="defense" class="view">
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow dark">Field</p>
+            <h2>Defense Board</h2>
+          </div>
+          <div class="count-stack">
+            <span id="fieldCount" class="pill">0 on field</span>
+            <span id="maleFieldCount" class="pill">0 men</span>
+          </div>
+        </div>
+
+        <div id="defenseValidation" class="warning-list"></div>
+        <section class="defense-layout">
+          <div id="positions" class="positions"></div>
+          <aside class="bench-panel">
+            <div class="section-heading">
+              <h3>Bench</h3>
+              <span id="benchCount" class="pill">0</span>
+            </div>
+            <div id="benchList" class="bench-list"></div>
+          </aside>
+        </section>
+      </section>
+
+      <section id="stats" class="view">
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow dark">Season</p>
+            <h2>Player Stats</h2>
+          </div>
+          <span id="teamSummary" class="pill">0 plate appearances</span>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span class="label">Hits</span>
+            <strong id="teamHits">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="label">Runs</span>
+            <strong id="teamRuns">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="label">Outs</span>
+            <strong id="teamOuts">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="label">OBP</span>
+            <strong id="teamObp">.000</strong>
+          </div>
+        </div>
+
+        <section class="table-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>PA</th>
+                <th>H</th>
+                <th>R</th>
+                <th>RBI</th>
+                <th>Out</th>
+                <th>OBP</th>
+              </tr>
+            </thead>
+            <tbody id="statsTable"></tbody>
+          </table>
+        </section>
+      </section>
+
+      <section id="admin" class="view">
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow dark">Setup</p>
+            <h2>Game And Roster</h2>
+          </div>
+          <button id="saveSetup" class="primary">Save Setup</button>
+        </div>
+
+        <section class="setup-grid">
+          <form id="gameSetup" class="form-panel">
+            <label>
+              Opponent
+              <input id="opponentInput" name="opponent" autocomplete="off">
+            </label>
+            <label>
+              Date
+              <input id="dateInput" name="date" type="date">
+            </label>
+            <label>
+              Location
+              <input id="locationInput" name="location" autocomplete="off">
+            </label>
+          </form>
+
+          <div class="form-panel">
+            <div class="section-heading">
+              <h3>Roster</h3>
+              <span id="rosterCount" class="pill">20 players</span>
+            </div>
+            <div id="rosterList" class="roster-list"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator && location.protocol !== "file:") {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </body>
+</html>
