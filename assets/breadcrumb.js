@@ -36,19 +36,20 @@
 
   // Some page templates (e.g. Squarespace) pin a fixed/sticky header to the
   // viewport top, which sits at the same y-position as this bar and renders
-  // over it. Push any such header down by the bar's height. Squarespace's
-  // own scroll handler keeps rewriting the header's inline `top`, so a
-  // one-time inline override gets clobbered — use a stylesheet rule with
-  // !important instead, which wins over inline styles without !important.
+  // over it. Push any such header down by the bar's height via a stylesheet
+  // rule (not an inline style): Squarespace applies its own fixed/sticky
+  // positioning asynchronously (after this script's one-time computed-style
+  // check would already have run), and separately keeps rewriting the
+  // header's inline `top` on scroll. A stylesheet `!important` rule wins
+  // over both — it applies whenever the element becomes positioned, and
+  // isn't clobbered by later inline-style writes. It's a no-op on elements
+  // that stay `position: static`, since `top` has no effect on those.
   var headerOffsetStyle = document.createElement('style');
   document.head.appendChild(headerOffsetStyle);
 
   function offsetFixedHeader() {
     var header = document.querySelector('#header, header, .header');
     if (!header || header === bar) return;
-
-    var cs = getComputedStyle(header);
-    if (cs.position !== 'fixed' && cs.position !== 'sticky') return;
 
     var selector = header.id ? '#' + header.id : header.tagName.toLowerCase();
     var barHeight = bar.getBoundingClientRect().height;
