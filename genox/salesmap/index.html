@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Genox Sales Map</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQ7P7tbmM3a8xUXi5f2M/qFce9d3xvI="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Genox Sales Map home">
+        <img
+          src="https://genoxusa.com/wp-content/uploads/2019/04/genoxusa1.png"
+          alt="Genox USA"
+        />
+      </a>
+      <nav class="primary-nav" aria-label="Sales tool navigation">
+        <a href="#" aria-current="page">Sales Map</a>
+        <a href="#">Territories</a>
+        <a href="#">Reheat Queue</a>
+        <a href="#">Customers</a>
+        <a href="#">Reports</a>
+      </nav>
+      <a class="user-chip" href="#">Internal</a>
+    </header>
+
+    <main class="app-shell">
+      <section class="toolbar" aria-label="Map filters">
+        <div>
+          <p class="eyebrow">Genox USA Internal</p>
+          <h1>Genox Sales Map</h1>
+        </div>
+        <label class="search-field">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Company, order, machine, city" />
+        </label>
+        <label class="select-field">
+          <span>Machine</span>
+          <select id="machineFilter">
+            <option value="all">All machines</option>
+            <option value="Shredder">Shredders</option>
+            <option value="Granulator">Granulators</option>
+            <option value="Wash System">Wash systems</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span>Status</span>
+          <select id="statusFilter">
+            <option value="all">All statuses</option>
+            <option value="Priority">Priority</option>
+            <option value="Warm">Warm</option>
+            <option value="Recent">Recent</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="dashboard" aria-label="Sales territory dashboard">
+        <div id="map" class="map-panel" aria-label="Customer order map"></div>
+        <aside class="detail-panel" aria-label="Visible customer list">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Visible Territory</p>
+              <h2 id="territoryTitle">United States</h2>
+            </div>
+            <span id="resultCount" class="count-pill">0</span>
+          </div>
+
+          <div class="metric-grid" aria-label="Territory summary">
+            <div>
+              <span id="priorityCount">0</span>
+              <p>Priority</p>
+            </div>
+            <div>
+              <span id="repCount">0</span>
+              <p>Sales Contacts</p>
+            </div>
+            <div>
+              <span id="machineCount">0</span>
+              <p>Machine Types</p>
+            </div>
+          </div>
+
+          <div id="customerList" class="customer-list"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <section>
+          <h2>Sales Map</h2>
+          <ul>
+            <li><a href="#">Customer Map</a></li>
+            <li><a href="#">Territory View</a></li>
+            <li><a href="#">ZIP Detail</a></li>
+            <li><a href="#">Machine Filters</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Reheat Queue</h2>
+          <ul>
+            <li><a href="#">Priority Accounts</a></li>
+            <li><a href="#">Follow Up Dates</a></li>
+            <li><a href="#">Recent Orders</a></li>
+            <li><a href="#">Dormant Customers</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Customers</h2>
+          <ul>
+            <li><a href="#">Company Profiles</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Sales Contacts</a></li>
+            <li><a href="#">Website & Logo Data</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Admin</h2>
+          <ul>
+            <li><a href="#">QuickBooks Sync</a></li>
+            <li><a href="#">CSV Import</a></li>
+            <li><a href="#">Users & Access</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </section>
+        <section class="footer-brand">
+          <img
+            src="https://genoxusa.com/wp-content/uploads/2019/04/genoxusa1.png"
+            alt="Genox USA"
+          />
+          <p>Internal Sales Tool</p>
+          <p>© Genox USA</p>
+        </section>
+      </div>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

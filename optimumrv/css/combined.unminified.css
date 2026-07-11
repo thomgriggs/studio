@@ -3012,6 +3012,12 @@ ul.control li {
 	margin-top: 0;
 	padding: 8px 32px;
 }
+.hero .herobanner.memorial{
+	background-image:url('../images/memorial.webp');
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 400px 100%;
+}
 .hero .herobanner.memorial .message{
 	align-items: center;
 	display: flex;
