@@ -33,4 +33,28 @@
   bar.appendChild(current);
 
   document.body.insertBefore(bar, document.body.firstChild);
+
+  // Some page templates (e.g. Squarespace) pin a fixed/sticky header to the
+  // viewport top, which sits at the same y-position as this bar and renders
+  // over it. Push any such header down by the bar's height. Squarespace's
+  // own scroll handler keeps rewriting the header's inline `top`, so a
+  // one-time inline override gets clobbered — use a stylesheet rule with
+  // !important instead, which wins over inline styles without !important.
+  var headerOffsetStyle = document.createElement('style');
+  document.head.appendChild(headerOffsetStyle);
+
+  function offsetFixedHeader() {
+    var header = document.querySelector('#header, header, .header');
+    if (!header || header === bar) return;
+
+    var cs = getComputedStyle(header);
+    if (cs.position !== 'fixed' && cs.position !== 'sticky') return;
+
+    var selector = header.id ? '#' + header.id : header.tagName.toLowerCase();
+    var barHeight = bar.getBoundingClientRect().height;
+    headerOffsetStyle.textContent = selector + ' { top: ' + barHeight + 'px !important; }';
+  }
+
+  offsetFixedHeader();
+  window.addEventListener('resize', offsetFixedHeader);
 })();
