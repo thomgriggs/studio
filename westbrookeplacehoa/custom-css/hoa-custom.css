@@ -1,0 +1,19 @@
+/*
+  WESTBROOKE PLACE — CUSTOM CSS WORKSPACE
+  =========================================
+  This file intentionally starts with no visual overrides.
+
+  Add experiments below. After testing, the contents can be copied into:
+  Settings > Miscellaneous > Custom CSS
+
+  The local page uses the real HOA Express template stylesheet first, then
+  loads this file afterward so these rules behave like production overrides.
+*/
+
+/* Example page-specific scope (currently inactive):
+
+body:has(.pet_search) .main_column {
+  outline: 2px dashed tomato;
+}
+
+*/
