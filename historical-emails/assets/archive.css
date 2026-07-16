@@ -74,7 +74,7 @@ h1 {
 
 .archive-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 22px;
   padding-bottom: 110px;
 }
@@ -191,6 +191,58 @@ h1 {
 }
 
 .email-frame.proof { width: min(808px, 100%); }
+
+.catalog-zone {
+  padding: 72px 20px 100px;
+  background: #151515;
+  color: #fff;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.catalog-intro {
+  width: min(1160px, 100%);
+  margin: 0 auto 34px;
+}
+
+.catalog-intro .artifact-label {
+  width: auto;
+  margin: 0 0 10px;
+  color: #aaa49b;
+}
+
+.catalog-intro p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: #bbb6ae;
+}
+
+.spread-grid {
+  display: grid;
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  gap: 34px;
+}
+
+.spread {
+  margin: 0;
+}
+
+.spread img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(0,0,0,.45);
+}
+
+.spread figcaption {
+  margin-top: 12px;
+  color: #aaa49b;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
 
 .notes {
   display: grid;
