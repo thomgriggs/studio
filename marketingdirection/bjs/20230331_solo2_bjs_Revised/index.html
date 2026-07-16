@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BJ's Email</title>
+
+<!--[if gte mso 9]><xml>
+  <o:OfficeDocumentSettings>
+	<o:AllowPNG/>
+	<o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<style type="text/css">
+
+body {
+	width: 100% !important;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	background-color:#ffffff;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-weight: 500;
+	font-size:16px;
+}
+#backgroundTable {
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	line-height: 100% !important;
+}
+img {
+	outline: none;
+	text-decoration: none;
+	height:auto !important;
+	display:block;
+	width:100%;
+	-ms-interpolation-mode: bicubic;
+}
+a img {
+	border: none;
+}
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse !important;
+}
+td, th {
+	border-collapse: collapse !important;
+	vertical-align: top;
+}
+tbody{
+	padding:0; margin:0;
+}
+table, tr, td {
+	padding: 0;
+}
+
+/* Layout Framework */
+.section{
+	max-width: 320px;
+	width:100%;
+}
+.row{
+	width:640px;
+	padding:0;
+	margin:0 auto;
+}
+.col-6{
+	width:620px;
+	margin: 0 auto !important;
+}
+.col-5{
+	width:515px;
+	margin: 0 auto !important;
+}
+.col-4{
+	width:410px;
+	margin: 0 auto !important;
+}
+.col-3{
+	width:305px;
+	margin: 0 auto !important;
+}
+.col-2{
+	width:200px;
+	margin: 0 auto !important;
+}
+.col-1{
+	width:95px;
+	margin: 0 auto !important;
+}
+/* Fluid Layout */
+.col-6-fluid{
+	width:640px;
+	margin: 0 auto;
+}
+.col-4-fluid{
+	width:430px;
+	margin: 0 auto;
+}
+.col-3-fluid{
+	width:310px;
+	margin: 0 auto;
+}
+.col-2-fluid{
+	width:210px;
+	margin: 0 auto;
+}
+.col-1_5-fluid{
+	width:160px;
+	margin: 0 auto;
+}
+/* Padding */
+.section-padding{
+	padding:0 0 15px;
+}
+.row-padding{
+	padding:15px 0 0;
+	box-sizing: border-box;
+}
+.col-padding{
+	padding:20px;
+}
+.img-padding{
+	padding:0 0 10px;
+}
+.text-padding{
+	padding:10px;
+}
+
+/* Typography */
+h1, h2, h3, h4, p, ul, ol, li, a{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+h1{
+	font-size:32px;
+	line-height:1.125;
+	margin:10px auto;
+	font-weight:700;
+}
+h1 a{
+	color:#ba2938;
+}
+h2{
+	font-size:28px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:700;
+}
+h3{
+	font-size:24px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:700;
+}
+h4{
+	font-size:20px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:400;
+}
+span{
+	color: #525250;
+}
+p, ol, ul, li{
+	font-weight: 400;
+	font-size:16px;
+}
+p{
+	line-height: 1.125;
+	margin:5px 0 10px;
+}
+p.discount{
+	color:#ba2938;
+	font-style: italic;
+}
+a{
+	text-decoration: none;
+	color: #ba2938;
+}
+a.text-white{
+	color:#ffffff;
+}
+h1 a, h2 a, h3 a, h4 a{
+	color:#000000;
+}
+strong{
+	font-weight: 700;
+} 
+.text-bold{
+	font-weight: 700;
+}
+.text-center{
+	text-align: center !important;
+}
+h3.text-center{
+	text-align:center;
+}
+sup{
+	line-height: 0;
+	font-size: 60%;
+	vertical-align: top;
+	mso-line-height-rule:exactly;
+}
+p sup{
+	vertical-align: 5px;
+}
+h2 sup{
+	vertical-align: 11px;
+}
+h3 sup{
+	vertical-align: 9px;
+}
+h4 sup{
+	vertical-align: 7px;
+}
+li sup{
+	vertical-align: 5px;
+}
+ul{
+	padding:0 0 0 30px;
+}
+ul li{
+	line-height: 1.25; 
+	margin: 10px 0;
+}
+
+/* Colors */
+.bg-red{
+	background:#ba2938;
+}
+.bg-red h1, .bg-red h2, .bg-red h3, .bg-red p, .bg-red a {
+	color: #ffffff !important;
+}
+.bg-white{
+	background:#ffffff;
+}
+.bg-lt-blue{
+	background:#E6F4FF;
+}
+.bg-blue{
+	background:#B1DFFF;
+}
+.bg-lt-grey{
+	background:#F3F4F6;
+}
+.bg-black{
+	background: #000000;
+}
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black p, .bg-black a {
+	color: #ffffff !important;
+}
+.text-red, .text-red a{
+	color:#ba2938 !important;
+}
+.text-white, .text-white a{
+	color: #ffffff !important;
+}
+h1.text-white, h2.text-white, h3.text-white, p.text-white, a.text-white {
+	color: #ffffff !important;
+}
+.border-dashed {
+	border:2px dashed #ba2938;
+}
+.border-dashed .col-3{
+	width:301px;
+}
+
+/* Componants */
+.btn{
+	margin:0 auto;
+	text-align:center;
+}
+.btn-square{
+	background:#ba2938;
+}
+.btn-secondary-square{
+	background:#ffffff;
+}
+.btn td{
+	padding:10px 25px;
+	text-align: center;
+	font-size:16px;
+	font-weight: 700;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+.btn td a{
+	text-decoration:none !important;
+}
+.btn.btn-square{
+	color:#ffffff;
+	border:2px solid #ba2938;
+}
+.btn.btn-square td a{
+	color:#ffffff;
+}
+.btn.btn-secondary-square{
+	color:#ba2938;
+	border: 2px solid #ffffff;
+}
+.btn.btn-secondary-square td a{
+	color:#ba2938;
+}
+
+/* Header Footer Classes */
+.header .greeting{
+	padding:20px 10px 10px;
+}
+.header .greeting p{
+	text-align: right; 
+	color: #ba2938; 
+	font-size: 24px;
+}
+.header .details p{
+	color: #6B7280; 
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 1.125 !important;
+}
+.header .details .member-info-td{
+	padding:5px 10px 0;
+}
+.header .nav td a{
+	text-align: center !important;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 14px !important;
+	margin: 0 auto !important;
+}
+/* Footer Styling */
+.section.footer p{
+	font-size:12px !important;
+	line-height: 1.25;
+	color:#595959 !important;
+}
+.section.footer a{
+	text-decoration: underline !important;
+	color: #595959 !important;
+}
+.section.footer strong{
+	font-weight: 500;
+}
+.footer-padding{
+	padding:10px 30px 30px;
+}
+/* Utility Classes */
+.rtl{
+	direction: ltr;
+}
+.mobile-hidden{
+	display: table;
+}
+.mobile-visible{
+	display: none;
+}
+
+/* Column with a Vertical Button */
+.col-content{
+	vertical-align: top;
+}
+.col-btn-cta, .col-btn-cta td{
+	vertical-align: bottom !important;
+}
+/* Coupon Styling */
+.border-dashed {
+	border:2px dashed #ba2938;
+}
+.coupon-padding{
+	padding:30px 20px;
+}
+.coupon-content{
+	vertical-align: top;
+}
+.coupon-content td{
+	vertical-align: top;
+}
+.coupon-content img{
+	height:auto !important;
+}
+.coupon-cta{
+	vertical-align: bottom !important;
+}
+.coupon-cta td{
+	vertical-align: bottom !important;
+}
+
+@media only screen and (max-width: 640px) {
+	.row{
+		width:100% !important;
+		max-width: 100% !important;
+		min-width: 100% !important;
+		table-layout: auto !important;
+	}
+	.row-col{
+		white-space: normal !important;
+		max-width: 100% !important;
+		min-width: 100% !important;
+		width: auto !important;
+		float:left !important;
+	}
+	.row-padding{
+		padding:15px 0 !important;
+	}
+	th {
+		display: block !important;
+		width: 100% !important;
+	}
+	.rtl{
+		direction: rtl !important;
+	}
+	.col-6{
+		width:100% !important;
+	}
+	.col-5{
+		width:100% !important;
+	}
+	.col-4{
+		width:100% !important;
+	}
+	.col-3{
+		width:100% !important;
+	}
+	.col-2{
+		width:100% !important;
+	}
+	.col-6-fluid{
+		width:100% !important;
+	}
+	.col-4-fluid{
+		width:100% !important;
+	}
+	.col-3-fluid{
+		width:100% !important;
+	}
+	.col-2-fluid{
+		width:100% !important;
+	}
+	.col-1_5-fluid{
+		width:100% !important;
+	}
+	.header .row-col.logo-row, .header .row-col.nav{
+		max-width: 49.5% !important;
+		min-width: 49.5% !important;
+	}
+	.header .nav.first-child{
+		border-bottom: none !important;
+	}
+	.header .nav.second-child{
+		border-right: solid 1px #000000 !important;
+		border-bottom: none !important;
+	}
+	.header .greeting{
+		padding:12px 10px 0 !important;
+	}
+	.header .greeting p{
+		font-size: 18px !important;
+	}
+	.header .details .member-info-td{
+		padding: 0px 10px !important;
+	}
+	.header .details p{
+		vertical-align: bottom;
+		text-align: left !important;
+		line-height: 14px !important;
+		margin:0 auto 8px !important;
+	}
+	.header .nav td a{
+		font-size: 12px !important;
+	}
+	img{
+		width:100% !important;
+	}
+	.btn{
+		width: 100% !important;
+	}
+	.col-2.border-dashed{
+		height:auto !important;
+		width: 100% !important;
+	}
+	.logo{
+		max-width:120px !important;
+	}
+	.mobile-hidden{
+		display: none !important;
+	}
+	.mobile-visible{
+		display: table !important;
+	}
+} 
+</style>
+</head>
+<body>
+<!-- ////////////// REMOVE - Header just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Header"><img src="header.jpg" alt="Header" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Header just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Banner"><img src="banner.jpg" alt="Summer cruises are selling fast. | Photo © 2023 Royal Caribbean International" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<p>Reserve your spot at sea from just <strong>$68/night<sup>**</sup></strong> and catch loads of deals, like:</p>
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Book now, pay later: <strong>No deposit</strong> toward your cruise<sup>†</sup></p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Exclusive: Up to a <strong>$500 BJ’s gift card</strong><sup>††</sup></p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p><strong>50% off</strong> every guest</p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p><strong>Open bar, included gratuities</strong> & more</p></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<table class="btn btn-square">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<a href="">BOOK NOW</a>
+						</td>
+					</tr>
+				</table>
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<h4>Book now, pay later<sup>†</sup> and get up to a $500 BJ’s gift card<sup>††</sup> with every qualifying cruise booking</h4>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Norwegian_cruise_line"><img src="norwegian-cruise-line.jpg" alt="Norwegian Cruise Line" border="0" width="320" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<span>CRUISE</span>
+							<h3>
+								<a href="#" _label="Sail">Sail from $50/night<sup>**</sup></a>
+							</h3>
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Exclusive: Up to $200 to spend</p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>All the FREE at Sea deals</p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Unlimited open bar & more</td>
+								</tr>
+							</table>
+							<p><strong><a href="#" _label="Book_Now">Book By Tomorrow&nbsp;&rsaquo;</a></strong></p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>   
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="mobile-hidden" width="10">&nbsp;</td>
+					</tr>
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Carnival"><img src="carnival.jpg" alt="Carnival" border="0" width="320" /></a>
+									</td>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<span>CRUISE</span>
+										<h3>
+											<a href="#" _label="Sail">Sail from $45/night<sup>**</sup></a>
+										</h3>
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>Exclusive: Up to $200 to spend</p></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>Exclusive: Up to $200 to spend</p></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>FREE upgrades & more</td>
+											</tr>
+										</table>
+										<p><strong><a href="#" _label="Book_by_tommorow">Book By Tomorrow&nbsp;&rsaquo;</a></strong></p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="mobile-hidden" width="10">&nbsp;</td>
+					</tr>
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Royal_carribean_international"><img src="royal-carribean-international.jpg" alt="Royal Carribean International" border="0" width="320" /></a>
+									</td>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<span>CRUISE</span>
+										<h3>
+											<a href="#" _label="Save">Sail from $64/night<sup>**</sup></a>
+										</h3>
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>Exclusive: Gratuities included</p></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>Up to $650 in instant savings<sup>*</sup></p></td>
+											</tr>
+											<tr>
+												<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+												<td align="left" ><p>Kids sail FREE & more</td>
+											</tr>
+										</table>
+										<p><strong><a href="#" _label="Book_By_Midnight">Book By Midnight&nbsp;&rsaquo;</a></strong></p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<h4>More can’t-miss travel deals for members like you</h4>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="mobile-hidden" width="10">&nbsp;</td>
+					</tr>
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Princess_hotels_resorts"><img src="princess-hotels-resorts.jpg" alt="Princess Hotels Resorts" border="0" width="320" /></a>
+									</td>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<span>VACATION PACKAGES</span>
+										<h3>
+											<a href="#" _label="Punta_Cana">Punta Cana vacation packages.</a>
+										</h3>
+										<p>Enjoy 4 nights at Bavaro Princess All Suites Resort from $684/person<sup>‡</sup> — up to 24% off.<sup>‡‡</sup></p>
+										<p><strong><a href="#" _label="Book_Now">BOOK NOW&nbsp;&rsaquo;</a></strong></p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="mobile-hidden" width="10">&nbsp;</td>
+					</tr>
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Villas_of_distinction"><img src="villas-of-distinction.jpg" alt="Villas of Distinction | Luxury Villa Rentals" border="0" width="320" /></a>
+									</td>
+									<td class="mobile-hidden" width="10">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<span>VILLAS</span>
+										<h3>
+											<a href="#" _label="Barbados_villas_rentals">Barbados villa rentals.</a>
+										</h3>
+										<p>Save up to 15% at Secret Cove 2 when you book by 11/15/23.<sup>§</sup> Rates start at $550/night.<sup>**</sup></p>
+										<p><strong><a href="#" _label="Book_Now">BOOK NOW&nbsp;&rsaquo;</a></strong></p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Rosen_Shingle_Creek"><img src="rosen-shingle-creek.jpg" alt="Rosen Shingle Creek" border="0" width="320" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<span>HOTEL</span>
+							<h3>
+								<a href="#" _label="Rosen_Shingle_Creek">Rosen Shingle Creek Universal Blvd.</a>
+							</h3>
+							<p>Save up to 19% at Rosen Shingle Creek Universal Blvd.<sup>§§</sup> Member-only rates start at $234/night.<up>**</up></p>
+							<p><strong><a href="#" _label="Book_Now">Book Now&nbsp;&rsaquo;</a></strong></p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>   
+</td></tr></table>
+<table dir="rtl" class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr> 
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table dir="ltr" class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="#" _label="Budget"><img src="budget.jpg" alt="budget" border="0" width="310" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table dir="ltr" class="col-3-fluid" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<span>CAR</span>
+							<h3>
+								<a href="#" _label="Budget_car_rentals">Budget car rentals.</a>
+							</h3>
+							<p>Unlock up to 35% off Pay Now rates, FREE upgrades, $10 off $175+ rentals and more.<sup>1</sup></p>
+							<p><strong><a href="#" _label="Book_Now">BOOK NOW&nbsp;&rsaquo;</a></strong></p>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Footer just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Footer"><img src="footer.jpg" alt="Footer" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Footer just for comp -->
+</body>
+</html>

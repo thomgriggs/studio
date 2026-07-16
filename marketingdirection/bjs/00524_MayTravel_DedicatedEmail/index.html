@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BJ's Email</title>
+
+<!--[if gte mso 9]><xml>
+  <o:OfficeDocumentSettings>
+	<o:AllowPNG/>
+	<o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<style type="text/css">
+
+body {
+	width: 100% !important;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+	background-color:#ffffff;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-weight: 500;
+	font-size:16px;
+}
+#backgroundTable {
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	line-height: 100% !important;
+}
+img {
+	outline: none;
+	text-decoration: none;
+	height:auto !important;
+	display:block;
+	width:100%;
+	-ms-interpolation-mode: bicubic;
+}
+a img {
+	border: none;
+}
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse !important;
+}
+td, th {
+	border-collapse: collapse !important;
+	vertical-align: top;
+}
+tbody{
+	padding:0; margin:0;
+}
+table, tr, td {
+	padding: 0;
+}
+
+/* Layout Framework */
+.section{
+	max-width: 320px;
+	width:100%;
+}
+.row{
+	width:640px;
+	padding:0;
+	margin:0 auto;
+}
+.col-6{
+	width:620px;
+	margin: 0 auto !important;
+}
+.col-5{
+	width:515px;
+	margin: 0 auto !important;
+}
+.col-4{
+	width:410px;
+	margin: 0 auto !important;
+}
+.col-3{
+	width:305px;
+	margin: 0 auto !important;
+}
+.col-2{
+	width:200px;
+	margin: 0 auto !important;
+}
+.col-1{
+	width:95px;
+	margin: 0 auto !important;
+}
+/* Fluid Layout */
+.col-6-fluid{
+	width:640px;
+	margin: 0 auto;
+}
+.col-4-fluid{
+	width:430px;
+	margin: 0 auto;
+}
+.col-3-fluid{
+	width:310px;
+	margin: 0 auto;
+}
+.col-2-fluid{
+	width:210px;
+	margin: 0 auto;
+}
+.col-1_5-fluid{
+	width:160px;
+	margin: 0 auto;
+}
+/* Padding */
+.section-padding{
+	padding:0 0 15px;
+}
+.row-padding{
+	padding:15px 0 0;
+	box-sizing: border-box;
+}
+.col-padding{
+	padding:20px;
+}
+.img-padding{
+	padding:0 0 10px;
+}
+.text-padding{
+	padding:10px;
+}
+
+/* Typography */
+h1, h2, h3, h4, p, ul, ol, li, a{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+h1{
+	font-size:32px;
+	line-height:1.125;
+	margin:10px auto;
+	font-weight:700;
+}
+h1 a{
+	color:#ba2938;
+}
+h2{
+	font-size:28px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:700;
+}
+h3{
+	font-size:24px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:700;
+}
+h4{
+	font-size:20px;
+	line-height:1.125;
+	margin:10px 0;
+	font-weight:400;
+}
+span{
+	color: #525250;
+}
+p, ol, ul, li{
+	font-weight: 400;
+	font-size:16px;
+}
+p{
+	line-height: 1.125;
+	margin:5px 0 10px;
+}
+p.discount{
+	color:#ba2938;
+	font-style: italic;
+}
+a{
+	text-decoration: none;
+	color: #ba2938;
+}
+a.text-white{
+	color:#ffffff;
+}
+h1 a, h2 a, h3 a, h4 a{
+	color:#000000;
+}
+strong{
+	font-weight: 700;
+} 
+.text-bold{
+	font-weight: 700;
+}
+.text-center{
+	text-align: center !important;
+}
+h3.text-center{
+	text-align:center;
+}
+sup{
+	line-height: 0;
+	font-size: 60%;
+	vertical-align: top;
+	mso-line-height-rule:exactly;
+}
+p sup{
+	vertical-align: 5px;
+}
+h2 sup{
+	vertical-align: 11px;
+}
+h3 sup{
+	vertical-align: 9px;
+}
+h4 sup{
+	vertical-align: 7px;
+}
+li sup{
+	vertical-align: 5px;
+}
+ul{
+	padding:0 0 0 30px;
+}
+ul li{
+	line-height: 1.25; 
+	margin: 10px 0;
+}
+.bullet{
+	color: #ba2938;
+}
+
+/* Colors */
+.bg-red{
+	background:#ba2938;
+}
+.bg-red h1, .bg-red h2, .bg-red h3, .bg-red p, .bg-red a {
+	color: #ffffff !important;
+}
+.bg-white{
+	background:#ffffff;
+}
+.bg-lt-blue{
+	background:#E6F4FF;
+}
+.bg-blue{
+	background:#B1DFFF;
+}
+.bg-lt-grey{
+	background:#F3F4F6;
+}
+.bg-black{
+	background: #000000;
+}
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black p, .bg-black a {
+	color: #ffffff !important;
+}
+.text-red, .text-red a{
+	color:#ba2938 !important;
+}
+.text-white, .text-white a{
+	color: #ffffff !important;
+}
+h1.text-white, h2.text-white, h3.text-white, p.text-white, a.text-white {
+	color: #ffffff !important;
+}
+.border-dashed {
+	border:2px dashed #ba2938;
+}
+.border-dashed .col-3{
+	width:301px;
+}
+
+/* Componants */
+.btn{
+	margin:0 auto;
+	text-align:center;
+}
+.btn-square{
+	background:#ba2938;
+}
+.btn-secondary-square{
+	background:#ffffff;
+}
+.btn td{
+	padding:10px 25px;
+	text-align: center;
+	font-size:16px;
+	font-weight: 700;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+}
+.btn td a{
+	text-decoration:none !important;
+}
+.btn.btn-square{
+	color:#ffffff;
+	border:2px solid #ba2938;
+}
+.btn.btn-square td a{
+	color:#ffffff;
+}
+.btn.btn-secondary-square{
+	color:#ba2938;
+	border: 2px solid #ffffff;
+}
+.btn.btn-secondary-square td a{
+	color:#ba2938;
+}
+.btn.btn-full{
+	margin: 0;
+	width: 100%;
+}
+
+/* Header Footer Classes */
+.header .greeting{
+	padding:20px 10px 10px;
+}
+.header .greeting p{
+	text-align: right; 
+	color: #ba2938; 
+	font-size: 24px;
+}
+.header .details p{
+	color: #6B7280; 
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 1.125 !important;
+}
+.header .details .member-info-td{
+	padding:5px 10px 0;
+}
+.header .nav td a{
+	text-align: center !important;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 14px !important;
+	margin: 0 auto !important;
+}
+/* Footer Styling */
+.section.footer p{
+	font-size:12px !important;
+	line-height: 1.25;
+	color:#595959 !important;
+}
+.section.footer a{
+	text-decoration: underline !important;
+	color: #595959 !important;
+}
+.section.footer strong{
+	font-weight: 500;
+}
+.footer-padding{
+	padding:10px 30px 30px;
+}
+/* Utility Classes */
+.rtl{
+	direction: ltr;
+}
+.mobile-hidden{
+	display: table;
+}
+.mobile-visible{
+	display: none;
+}
+
+/* Column with a Vertical Button */
+.col-content{
+	vertical-align: top;
+}
+.col-btn-cta, .col-btn-cta td{
+	vertical-align: bottom !important;
+}
+/* Coupon Styling */
+.border-dashed {
+	border:2px dashed #ba2938;
+}
+.coupon-padding{
+	padding:30px 20px;
+}
+.coupon-content{
+	vertical-align: top;
+}
+.coupon-content td{
+	vertical-align: top;
+}
+.coupon-content img{
+	height:auto !important;
+}
+.coupon-cta{
+	vertical-align: bottom !important;
+}
+.coupon-cta td{
+	vertical-align: bottom !important;
+}
+
+@media only screen and (max-width: 640px) {
+	.row{
+		width:100% !important;
+		max-width: 100% !important;
+		min-width: 100% !important;
+		table-layout: auto !important;
+	}
+	.row-col{
+		white-space: normal !important;
+		max-width: 100% !important;
+		min-width: 100% !important;
+		width: auto !important;
+		float:left !important;
+	}
+	.row-padding{
+		padding:15px 0 !important;
+	}
+	th {
+		display: block !important;
+		width: 100% !important;
+	}
+	.rtl{
+		direction: rtl !important;
+	}
+	.col-6{
+		width:100% !important;
+	}
+	.col-5{
+		width:100% !important;
+	}
+	.col-4{
+		width:100% !important;
+	}
+	.col-3{
+		width:100% !important;
+	}
+	.col-2{
+		width:100% !important;
+	}
+	.col-6-fluid{
+		width:100% !important;
+	}
+	.col-4-fluid{
+		width:100% !important;
+	}
+	.col-3-fluid{
+		width:100% !important;
+	}
+	.col-2-fluid{
+		width:100% !important;
+	}
+	.col-1_5-fluid{
+		width:100% !important;
+	}
+	.header .row-col.logo-row, .header .row-col.nav{
+		max-width: 49.5% !important;
+		min-width: 49.5% !important;
+	}
+	.header .nav.first-child{
+		border-bottom: none !important;
+	}
+	.header .nav.second-child{
+		border-right: solid 1px #000000 !important;
+		border-bottom: none !important;
+	}
+	.header .greeting{
+		padding:12px 10px 0 !important;
+	}
+	.header .greeting p{
+		font-size: 18px !important;
+	}
+	.header .details .member-info-td{
+		padding: 0px 10px !important;
+	}
+	.header .details p{
+		vertical-align: bottom;
+		text-align: left !important;
+		line-height: 14px !important;
+		margin:0 auto 8px !important;
+	}
+	.header .nav td a{
+		font-size: 12px !important;
+	}
+	img{
+		width:100% !important;
+	}
+	.btn{
+		width: 100% !important;
+	}
+	.col-2.border-dashed{
+		height:auto !important;
+		width: 100% !important;
+	}
+	.logo{
+		max-width:120px !important;
+	}
+	.mobile-hidden{
+		display: none !important;
+	}
+	.mobile-visible{
+		display: table !important;
+	}
+}
+</style>
+</head>
+<body>
+<!-- ////////////// REMOVE - Header just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Header"><img src="header.jpg" alt="Header" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Header just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Banner"><img src="BermudaHero_1280x1110.jpg" alt="Experience the beauty of Bermuda. | Get up to a $500 BJ’s gift card after departure!†" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<h3>Set your sights on Bermuda</h3>
+						</td>
+					</tr>
+				</table>
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<p>Embark on a Bermuda cruise from just <strong>$[NCL low lead]/night<sup>**</sup></strong> and we’ll send you off with a boatload of savings like:</p>
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Book now, pay later: <strong>No deposit</strong> toward your cruise<sup>***</sup></p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Exclusive: Up to $400 to spend on board<sup>§</sup></p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Exclusive: Up to a <strong>$500 BJ’s gift card</strong><sup>†</sup></p></td>
+								</tr>
+								<tr>
+									<td align="center" valign="top" width="8%"><span class="bullet">&bullet;</span></td>
+									<td align="left" ><p>Exclusive: Up to a $100 parking credit<sup>††</sup></p></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<table class="btn btn-square">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<a href="https://bit.ly/20230508_dedicated_geo_bermuda">Book by Thursday</a>
+						</td>
+					</tr>
+				</table>
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="col-padding"><!-- Col Padding Here .col-padding -->
+							<h4><a href="https://bit.ly/20230508_dedicated_sectionheader_geo_traveldeals">More top travel deals for members like you</a></h4>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="https://bit.ly/20230508_dedicated_geo_hotel" _label="Caribe_Royale_Orlando"><img src="caribe-royale-orlando.jpg" alt="Caribe Royale Orlando" border="0" width="320" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<h3>
+											<a href="https://bit.ly/20230508_dedicated_geo_hotel" _label="Hotels">Hotels</a>
+										</h3>
+										<p>Save up to 50% on hotels in thousands of destinations around the world<sup>1</sup></p>
+										<table class="btn btn-square btn-full">
+											<tr>
+												<td class="col-padding"><!-- Col Padding Here .col-padding -->
+													<a href="https://bit.ly/20230508_dedicated_geo_hotel">Hotels</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="https://bit.ly/20230508_dedicated_geo_package" _label="Secrets_Resorts_Spa"><img src="secrets-resorts-spa.jpg" alt="Secrets Resorts Spa" border="0" width="320" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<h3>
+											<a href="https://bit.ly/20230508_dedicated_geo_package" _label="Packages">Packages</a>
+										</h3>
+										<p>Save up to $500 and enjoy loads of amenities when you bundle hotel + air<sup>2</sup></p>
+										<table class="btn btn-square btn-full">
+											<tr>
+												<td class="col-padding"><!-- Col Padding Here .col-padding -->
+													<a href="https://bit.ly/20230508_dedicated_geo_package">Vacation Packages</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td  style="padding:10px 0 10px;">
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="https://bit.ly/20230508_dedicated_geo_carrental" _label="Car_Rentals"><img src="car-rentals.jpg" alt="Car Rentals" border="0" width="320" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<h3>
+											<a href="https://bit.ly/20230508_dedicated_geo_carrental" _label="Car_Rentals">Car Rentals</a>
+										</h3>
+										<p>Unlock free car class upgrades, up to 35% off Pay Now rates and more<sup>3</sup></p>
+										<table class="btn btn-square btn-full">
+											<tr>
+												<td class="col-padding"><!-- Col Padding Here .col-padding -->
+													<a href="https://bit.ly/20230508_dedicated_geo_carrental">Car Rentals</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col" bgcolor="f4f5f5">
+				<table class="col-3" width="310" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td ><!-- Col Padding Here .col-padding -->
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><!-- Image Padding Here .img-padding -->
+										<a href="https://bit.ly/20230508_dedicated_geo_thingstodo" _label="Cirque_Du_Soleil_Mystére"><img src="cirque-du-soleil.jpg" alt="Cirque Du Soleil Mystére" border="0" width="320" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-padding" colspan="3"><!-- Col Padding Here .col-padding -->
+										<h3>
+											<a href="https://bit.ly/20230508_dedicated_geo_thingstodo" _label="Things_to_Do">Things to Do</a>
+										</h3>
+										<p>Save on tickets and more with promo code “MEMBER” at checkout<sup>4</sup></p>
+										<table class="btn btn-square btn-full">
+											<tr>
+												<td class="col-padding"><!-- Col Padding Here .col-padding -->
+													<a href="https://bit.ly/20230508_dedicated_geo_thingstodo">Things to Do</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Footer just for comp -->
+<table class="section bg-white" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+	<table class="row" align="center" width="640" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<!-- Vertical spacer that hides on mobile -->
+			<td class="mobile-hidden" width="10">&nbsp;</td>
+			<td class="row-col">
+				<table align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td>
+							<table align="center" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>
+										<a href="#" _label="Footer"><img src="footer.jpg" alt="Footer" border="0" width="640" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td></tr></table>
+<!-- ////////////// REMOVE - Footer just for comp -->
+</body>
+</html>
