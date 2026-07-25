@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap');
+.brand{font-family:Fraunces,var(--font-serif),Georgia,serif;font-weight:550;letter-spacing:-.04em}
+.brand .brand-house{font-family:inherit;font-weight:550;font-style:italic;color:var(--terra)}
+.brand .brand-dot{color:var(--brass);font-style:normal}
+.footer-brand .brand-house{color:var(--terra)}
+.footer-brand .brand-dot{color:var(--brass)}
 .subpage-hero{padding:94px 0 86px;border-bottom:1px solid var(--line)}
 .subpage-hero .eyebrow{margin-bottom:22px}
 .subpage-hero h1{max-width:980px;margin:0;font-family:var(--font-serif),Georgia,serif;font-size:clamp(58px,7vw,96px);font-weight:400;line-height:.92;letter-spacing:-.05em}
