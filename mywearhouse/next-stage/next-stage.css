@@ -1,0 +1,49 @@
+.subpage-hero{padding:94px 0 86px;border-bottom:1px solid var(--line)}
+.subpage-hero .eyebrow{margin-bottom:22px}
+.subpage-hero h1{max-width:980px;margin:0;font-family:var(--font-serif),Georgia,serif;font-size:clamp(58px,7vw,96px);font-weight:400;line-height:.92;letter-spacing:-.05em}
+.subpage-hero h1 em{color:var(--terra);font-weight:400}
+.subpage-hero .lede{max-width:720px}
+.subnav{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.subnav a{border:1px solid var(--line);border-radius:99px;padding:10px 15px;font-size:11px;font-weight:800}
+.subnav a:hover{border-color:var(--terra);color:var(--terra)}
+.partner-intro{padding:105px 0}
+.partner-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:start}
+.partner-grid h2,.workflow h2,.partner-cta h2,.audience h2{margin:0;font-family:var(--font-serif),Georgia,serif;font-size:clamp(44px,5vw,68px);font-weight:400;line-height:1;letter-spacing:-.045em}
+.partner-copy>p:not(.section-kicker){color:var(--sage);font-family:var(--font-serif);font-size:21px;line-height:1.55}
+.benefit-list{border-top:1px solid var(--line)}
+.benefit-list article{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.benefit-list span{color:var(--terra);font-size:11px;font-weight:800}
+.benefit-list h3{margin:0 0 7px;font-family:var(--font-serif);font-size:25px;font-weight:400}
+.benefit-list p{margin:0;color:var(--sage);font-size:14px;line-height:1.65}
+.workflow{background:var(--paper);padding:105px 0}
+.workflow-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:58px}
+.workflow-head>p{max-width:420px;color:var(--sage);line-height:1.7}
+.workflow-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.workflow-grid article{min-height:245px;padding:30px 28px 25px 0;border-right:1px solid var(--line)}
+.workflow-grid article+article{padding-left:28px}
+.workflow-grid article:last-child{border-right:0}
+.workflow-grid span{color:var(--terra);font-size:11px;font-weight:800}
+.workflow-grid h3{margin:38px 0 12px;font-family:var(--font-serif);font-size:25px;font-weight:400}
+.workflow-grid p{color:var(--sage);font-size:13px;line-height:1.65}
+.model-tabs{padding:105px 0}
+.tab-controls{display:flex;gap:8px;margin:38px 0 34px}
+.tab-controls button{cursor:pointer;border:1px solid var(--line);border-radius:99px;padding:12px 18px;font-size:12px;font-weight:800}
+.tab-controls button.active{background:var(--ink);color:white;border-color:var(--ink)}
+.tab-panel{display:none;grid-template-columns:.9fr 1.1fr;gap:70px;padding:44px;background:var(--paper);border-radius:6px 90px 6px 6px}
+.tab-panel.active{display:grid}
+.tab-panel h3{margin:0;font-family:var(--font-serif);font-size:42px;font-weight:400;line-height:1}
+.tab-panel ul{margin:0;padding:0;list-style:none}
+.tab-panel li{padding:14px 0;border-top:1px solid var(--line);font-size:14px}
+.partner-cta{background:var(--terra);color:white;padding:90px 0}
+.partner-cta .shell{display:flex;justify-content:space-between;align-items:center;gap:50px}
+.partner-cta h2{max-width:780px}
+.partner-cta .button{background:white;color:var(--terra);flex:none}
+.audience{padding:105px 0}
+.audience-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.audience-cards article{background:var(--paper);padding:30px;border-top:4px solid var(--terra)}
+.audience-cards h3{font-family:var(--font-serif);font-size:28px;font-weight:400}
+.audience-cards p{color:var(--sage);font-size:14px;line-height:1.65}
+.concept-banner{background:var(--brass);color:var(--ink);padding:10px 24px;text-align:center;font-size:11px;font-weight:800;letter-spacing:.08em}
+.concept-banner a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:950px){.partner-grid,.tab-panel{grid-template-columns:1fr;gap:42px}.workflow-grid{grid-template-columns:1fr 1fr}.workflow-grid article:nth-child(2){border-right:0}.partner-cta .shell,.workflow-head{display:block}.partner-cta .button{margin-top:28px}.audience-cards{grid-template-columns:1fr}}
+@media(max-width:600px){.subpage-hero{padding:68px 0}.partner-intro,.workflow,.model-tabs,.audience{padding:75px 0}.workflow-grid{grid-template-columns:1fr}.workflow-grid article,.workflow-grid article+article{border-right:0;border-bottom:1px solid var(--line);padding:27px 0}.tab-panel{padding:28px;border-radius:5px 55px 5px 5px}}
