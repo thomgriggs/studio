@@ -1,0 +1,638 @@
+:root {
+  color-scheme: light;
+  --ink: #162127;
+  --muted: #667684;
+  --line: #d9e0e4;
+  --soft-line: #e9eef1;
+  --surface: #ffffff;
+  --surface-2: #f7faf9;
+  --background: #eef3f1;
+  --header: #0f2528;
+  --accent: #087a72;
+  --accent-strong: #055f59;
+  --accent-soft: #dff2ee;
+  --gold: #d3922f;
+  --warn-bg: #fff3df;
+  --warn: #965800;
+  --danger: #b42318;
+  --danger-soft: #fff0ee;
+  --shadow: 0 14px 40px rgba(19, 40, 44, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #f8fbfa 0, var(--background) 38%, #edf0f3 100%);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 750;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 12px;
+  transition: 120ms ease;
+}
+
+button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(8, 122, 114, 0.1);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.primary,
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+button.ghost {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+button.danger {
+  background: var(--danger-soft);
+  border-color: #f0b6b1;
+  color: var(--danger);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.08;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.15;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.app-header {
+  align-items: center;
+  background: linear-gradient(135deg, var(--header), #18393a);
+  color: #fff;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  padding: 18px 20px;
+}
+
+.brand-block {
+  min-width: 0;
+}
+
+.eyebrow {
+  color: #9ccfca;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.eyebrow.dark {
+  color: var(--accent);
+}
+
+.header-meta {
+  color: #bdd4d1;
+  margin-bottom: 0;
+}
+
+.header-score {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, minmax(74px, 1fr));
+  overflow: hidden;
+}
+
+.header-score div {
+  padding: 10px 12px;
+}
+
+.header-score div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.header-score span {
+  color: #cfe0df;
+  display: block;
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.header-score strong {
+  display: block;
+  font-size: 31px;
+  line-height: 1;
+}
+
+.tabs {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.tab {
+  flex: 0 0 auto;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 16px;
+}
+
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+.score-layout,
+.lineup-layout,
+.defense-layout,
+.setup-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+.score-hero,
+.action-panel,
+.activity-panel,
+.lineup-board,
+.attendance-board,
+.bench-panel,
+.table-panel,
+.form-panel,
+.metric-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.score-hero {
+  padding: 14px;
+}
+
+.game-state-strip {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+
+.game-state-strip > div,
+.kicker-card {
+  background: var(--surface-2);
+  border: 1px solid var(--soft-line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.game-state-strip strong {
+  display: block;
+  font-size: 26px;
+}
+
+.label {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.kicker-card {
+  margin-bottom: 14px;
+}
+
+.kicker-card h2 {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+.next-kickers {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.diamond {
+  aspect-ratio: 1.22 / 1;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    ". second ."
+    "third home first";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  min-height: 330px;
+  padding: 10px;
+}
+
+.base-card {
+  align-self: stretch;
+  background: #f9fbfb;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 12px;
+}
+
+.base-card.occupied {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.base-card span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.base-card strong {
+  font-size: 20px;
+  overflow-wrap: anywhere;
+}
+
+.base-first {
+  grid-area: first;
+}
+
+.base-second {
+  grid-area: second;
+}
+
+.base-third {
+  grid-area: third;
+}
+
+.plate {
+  align-items: center;
+  align-self: stretch;
+  background: #fff7e8;
+  border: 2px solid #e1b465;
+  border-radius: 10px;
+  color: #794500;
+  display: flex;
+  font-weight: 850;
+  grid-area: home;
+  justify-content: center;
+}
+
+.base-actions {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.base-actions button {
+  font-size: 12px;
+  min-height: 34px;
+  padding: 6px;
+}
+
+.score-side {
+  display: grid;
+  gap: 12px;
+}
+
+.action-panel,
+.activity-panel,
+.lineup-board,
+.attendance-board,
+.bench-panel,
+.table-panel,
+.form-panel {
+  padding: 14px;
+}
+
+.section-heading,
+.screen-heading {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.screen-heading {
+  margin-bottom: 14px;
+}
+
+.result-grid,
+.score-adjust {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.result-grid .primary-action {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  min-height: 54px;
+}
+
+.button-row,
+.count-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.activity-panel {
+  margin-top: 14px;
+}
+
+.event-log {
+  color: var(--muted);
+  margin: 0;
+  padding-left: 22px;
+}
+
+.event-log li {
+  margin-bottom: 6px;
+}
+
+.pill {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  min-height: 28px;
+  padding: 6px 10px;
+}
+
+.warning,
+.warning-list {
+  color: var(--warn);
+  font-weight: 750;
+}
+
+.warning-list {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.warning-list div {
+  background: var(--warn-bg);
+  border: 1px solid #f2d5a6;
+  border-radius: 8px;
+  padding: 9px 10px;
+}
+
+.lineup-list,
+.attendance-list,
+.positions,
+.bench-list,
+.roster-list {
+  display: grid;
+  gap: 8px;
+}
+
+.lineup-item,
+.attendance-item,
+.position-row,
+.bench-item,
+.roster-item {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+}
+
+.lineup-item {
+  grid-template-columns: 34px minmax(0, 1fr) auto auto;
+}
+
+.lineup-item.current {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.attendance-item {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.attendance-item.inactive {
+  color: var(--muted);
+  opacity: 0.64;
+}
+
+.position-row {
+  grid-template-columns: minmax(105px, 150px) minmax(0, 1fr);
+}
+
+.bench-item,
+.roster-item {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.gender {
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 8px;
+  text-transform: capitalize;
+}
+
+.gender.female {
+  background: #7a4f9f;
+}
+
+.gender.male {
+  background: #1f6f9f;
+}
+
+select,
+input {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  min-height: 42px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+label {
+  color: var(--muted);
+  display: grid;
+  font-size: 12px;
+  font-weight: 850;
+  gap: 6px;
+  text-transform: uppercase;
+}
+
+.form-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+
+.metric-card {
+  padding: 14px;
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 31px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--soft-line);
+  padding: 10px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+td:first-child,
+th:first-child {
+  white-space: normal;
+}
+
+@media (max-width: 880px) {
+  .score-layout,
+  .lineup-layout,
+  .defense-layout,
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diamond {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .header-score {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  .game-state-strip,
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kicker-card h2 {
+    font-size: 28px;
+  }
+
+  .diamond {
+    aspect-ratio: auto;
+    grid-template-areas:
+      "second second"
+      "third first"
+      "home home";
+    grid-template-columns: 1fr 1fr;
+    min-height: 0;
+  }
+
+  .base-card {
+    min-height: 132px;
+  }
+
+  .lineup-item {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .lineup-item > span:last-child,
+  .lineup-item .gender {
+    grid-column: span 1;
+  }
+
+  .position-row {
+    grid-template-columns: 1fr;
+  }
+}

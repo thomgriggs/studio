@@ -1,0 +1,17 @@
+{
+  "name": "Kickball Tracker",
+  "short_name": "Kickball",
+  "description": "Live scoring and season stats for kickball teams.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f5f7f9",
+  "theme_color": "#102126",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
