@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/broadsheet-e57c4dc0-438a-4c91-bd56-dbcf230a40d0/styles.css">
+<script src="_ds/broadsheet-e57c4dc0-438a-4c91-bd56-dbcf230a40d0/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;text-wrap:pretty}
+a{color:var(--color-accent-700);text-decoration:none}
+a:not(.btn):not(.tag):hover{color:var(--color-accent-600);text-decoration:underline}
+.nav-brand{white-space:nowrap}
+.rc-navlinks a{white-space:nowrap}
+.nav .btn{white-space:nowrap;flex-shrink:0}
+@media (max-width:760px){.rc-navlinks{display:none}}
+@media (max-width:900px){.rc-cols3{grid-template-columns:1fr!important}.rc-footgrid{grid-template-columns:1fr 1fr!important}}
+</style>
+</helmet>
+
+<div style="max-width:1200px;margin:0 auto">
+
+<nav class="nav" style="display:flex;align-items:center;gap:28px;padding:20px clamp(20px,5vw,72px)">
+  <a href="./Home.dc.html" style="display:flex;align-items:center"><img src="./assets/reliance-logo.png" alt="Reliance Consulting" style="height:36px;display:block"></a>
+  <div class="rc-navlinks" style="display:flex;gap:24px;margin-right:auto">
+    <a href="#tax" style="color:var(--color-text)">Services</a>
+    <a href="#industries" style="color:var(--color-text)">Industries</a>
+    <a href="./About.dc.html" style="color:var(--color-text)">About</a>
+    <a href="./Contact.dc.html" style="color:var(--color-text)">Contact</a>
+  </div>
+  <a href="#" class="btn btn-ghost">Client Login</a>
+  <a href="./Contact.dc.html" class="btn btn-primary" style="color:var(--color-bg)">Schedule a Consultation</a>
+</nav>
+
+<section style="padding:72px clamp(20px,5vw,72px) 40px">
+  <span style="display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 70%, transparent);margin-bottom:14px">Services</span>
+  <h1 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(34px,5vw,52px);letter-spacing:-0.02em;margin:0;max-width:24ch">Everything a business or a household needs from a CPA</h1>
+  <p style="font-size:16px;line-height:28px;max-width:60ch;margin:20px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Tax, bookkeeping, payroll, and the strategy behind the numbers — under one roof, since 1984.</p>
+</section>
+
+<section id="tax" style="padding:48px clamp(20px,5vw,72px)">
+  <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.015em;margin:0">Tax Preparation &amp; Planning</h2>
+  <p style="font-size:15.5px;line-height:28px;color:color-mix(in srgb, var(--color-text) 78%, transparent);max-width:64ch;margin:16px 0 28px">Filing is the last step, not the first. We plan ahead so tax season is a formality, not a scramble.</p>
+  <div class="rc-cols3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px 32px">
+    <div class="card elev-sm"><span class="card-kicker">Planning</span><h4 class="card-title">Tax Planning</h4><p class="card-body">Year-round strategy to minimize what you owe and maximize what you keep.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Business</span><h4 class="card-title">Business Tax</h4><p class="card-body">Entity-level filing and planning for businesses of every size.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Individuals</span><h4 class="card-title">Income Tax Services</h4><p class="card-body">Personal returns prepared and reviewed by a CPA, not software alone.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Prep</span><h4 class="card-title">Tax Preparer</h4><p class="card-body">Accurate, on-time preparation for individuals and businesses alike.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Resolution</span><h4 class="card-title">IRS Problem Resolution</h4><p class="card-body">Facing an audit or a notice? We handle the IRS so you don't have to.</p></div>
+  </div>
+</section>
+
+<section id="bookkeeping" style="padding:48px clamp(20px,5vw,72px)">
+  <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.015em;margin:0">Bookkeeping, Payroll &amp; Small Business Accounting</h2>
+  <p style="font-size:15.5px;line-height:28px;color:color-mix(in srgb, var(--color-text) 78%, transparent);max-width:64ch;margin:16px 0 28px">Reliance BackOffice keeps your books, payroll, and cash flow current — so decisions are based on real numbers.</p>
+  <div class="rc-cols3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px 32px">
+    <div class="card elev-sm"><span class="card-kicker">Books</span><h4 class="card-title">Bookkeeping</h4><p class="card-body">Accurate, up-to-date books maintained on your schedule.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Software</span><h4 class="card-title">QuickBooks Accountant</h4><p class="card-body">Setup, cleanup, and ongoing support for QuickBooks.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Payroll</span><h4 class="card-title">Payroll Services</h4><p class="card-body">Payroll processed correctly and on time, every time.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Cash Flow</span><h4 class="card-title">Cash Flow Management</h4><p class="card-body">Know what's coming in and going out before it happens.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">BackOffice</span><h4 class="card-title">Reliance BackOffice</h4><p class="card-body">Outsourced accounting operations, run like an in-house team.</p></div>
+  </div>
+</section>
+
+<section id="consulting" style="padding:48px clamp(20px,5vw,72px)">
+  <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.015em;margin:0">Business Consulting</h2>
+  <p style="font-size:15.5px;line-height:28px;color:color-mix(in srgb, var(--color-text) 78%, transparent);max-width:64ch;margin:16px 0 28px">From a first business plan to a next expansion, we work alongside owners on strategy and financing.</p>
+  <div class="rc-cols3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px 32px">
+    <div class="card elev-sm"><span class="card-kicker">Strategy</span><h4 class="card-title">Strategic Business Planning</h4><p class="card-body">Long-term plans built to survive contact with reality.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Startups</span><h4 class="card-title">New Business Planning</h4><p class="card-body">Structure, financing, and projections for a new venture.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Finance</span><h4 class="card-title">Financial Planning</h4><p class="card-body">Personal and business financial planning, aligned to your goals.</p></div>
+  </div>
+</section>
+
+<section id="industries" style="padding:48px clamp(20px,5vw,72px) 72px">
+  <h2 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:28px;letter-spacing:-0.015em;margin:0">Industry-Specific CPA</h2>
+  <p style="font-size:15.5px;line-height:28px;color:color-mix(in srgb, var(--color-text) 78%, transparent);max-width:64ch;margin:16px 0 28px">Specialized accounting practices built around the businesses we know best.</p>
+  <div class="rc-cols3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px 32px">
+    <div class="card elev-sm"><span class="card-kicker">Dental</span><h4 class="card-title">Dental CPA</h4><p class="card-body">Practice acquisition, valuation, financing, and asset protection for dentists.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Veterinary</span><h4 class="card-title">Veterinary CPA</h4><p class="card-body">Bookkeeping, benchmarking, and succession planning for veterinary practices.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Medical</span><h4 class="card-title">Physician Accountants</h4><p class="card-body">Tax and business strategy for physicians running a practice.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Property</span><h4 class="card-title">Real Estate CPA</h4><p class="card-body">Accounting for investors, developers, and real estate professionals.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Hospitality</span><h4 class="card-title">Restaurant &amp; Hotel</h4><p class="card-body">Cash flow and tax planning built for restaurants and hospitality.</p></div>
+    <div class="card elev-sm"><span class="card-kicker">Retail</span><h4 class="card-title">Retail Accounting</h4><p class="card-body">Bookkeeping and business accounting for retail operations.</p></div>
+  </div>
+</section>
+
+<section style="padding:0 clamp(20px,5vw,72px) 72px">
+  <h3 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:24px;margin:0">Not sure where to start?</h3>
+  <p style="font-size:15.5px;line-height:28px;color:color-mix(in srgb, var(--color-text) 78%, transparent);max-width:58ch;margin:14px 0 0">Tell us about your business or your finances. We'll point you to the right service.</p>
+  <a href="./Contact.dc.html" class="btn btn-primary" style="margin-top:20px">Schedule a Free Consultation</a>
+</section>
+
+<footer style="padding:56px clamp(20px,5vw,72px) 40px">
+  <div class="rc-footgrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px 44px;padding-bottom:32px">
+    <div>
+      <h5 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:14px;letter-spacing:0.04em;margin:0 0 12px">Services</h5>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="./Services.dc.html#tax" style="color:var(--color-text)">Tax Preparation</a>
+        <a href="./Services.dc.html#bookkeeping" style="color:var(--color-text)">Bookkeeping &amp; Payroll</a>
+        <a href="./Services.dc.html#consulting" style="color:var(--color-text)">Business Consulting</a>
+      </div>
+    </div>
+    <div>
+      <h5 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:14px;letter-spacing:0.04em;margin:0 0 12px">Industries</h5>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="./Services.dc.html#industries" style="color:var(--color-text)">Dental CPA</a>
+        <a href="./Services.dc.html#industries" style="color:var(--color-text)">Veterinary CPA</a>
+        <a href="./Services.dc.html#industries" style="color:var(--color-text)">Physician Accountants</a>
+      </div>
+    </div>
+    <div>
+      <h5 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:14px;letter-spacing:0.04em;margin:0 0 12px">Company</h5>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="./About.dc.html" style="color:var(--color-text)">About Us</a>
+        <a href="./Contact.dc.html" style="color:var(--color-text)">Contact</a>
+        <a href="#" style="color:var(--color-text)">Client Login</a>
+      </div>
+    </div>
+    <div>
+      <h5 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:14px;letter-spacing:0.04em;margin:0 0 12px">Contact</h5>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:color-mix(in srgb, var(--color-text) 78%, transparent)">
+        <span>13940 N Dale Mabry Hwy, Tampa, FL 33618</span>
+        <a href="tel:8139317258" style="color:var(--color-text)">(813) 931-7258</a>
+      </div>
+    </div>
+  </div>
+  <hr style="height:0;border:0;border-top:1px solid var(--color-neutral-300);margin:0 0 20px">
+  <p style="font-size:13px;line-height:20px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:0">© 2026 Reliance Consulting, LLC. All rights reserved.</p>
+</footer>
+
+</div>
+</x-dc>
+</body>
+</html>
