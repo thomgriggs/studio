@@ -7,6 +7,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelectorAll('[class*="mobile-navigation__MenuIcon"]').forEach((menuIcon) => {
+    const topRow = menuIcon.closest('[class*="mobile-navigation__TopRow"]');
+    const collapsible = topRow?.nextElementSibling;
+    const menuContent = collapsible?.firstElementChild;
+    if (!collapsible || !menuContent) return;
+
+    menuIcon.setAttribute("role", "button");
+    menuIcon.setAttribute("tabindex", "0");
+    menuIcon.setAttribute("aria-label", "Toggle navigation menu");
+    menuIcon.setAttribute("aria-expanded", "false");
+
+    const toggleMobileMenu = () => {
+      const open = menuIcon.getAttribute("aria-expanded") !== "true";
+      menuIcon.setAttribute("aria-expanded", String(open));
+      collapsible.setAttribute("aria-hidden", String(!open));
+      collapsible.style.height = open ? "auto" : "0px";
+      collapsible.style.overflow = open ? "visible" : "hidden";
+      menuContent.style.display = open ? "block" : "none";
+    };
+
+    menuIcon.addEventListener("click", toggleMobileMenu);
+    menuIcon.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleMobileMenu();
+      }
+    });
+  });
+
   const folderPages = {
     "Book Club": [
       ["Monthly book club list", "/p/Monthly-Book-Club-List"],
