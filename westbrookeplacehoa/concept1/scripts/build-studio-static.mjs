@@ -8,6 +8,13 @@ const snapshots = path.join(root, "public", "snapshots");
 const manifest = JSON.parse(await fs.readFile(path.join(snapshots, "manifest.json"), "utf8"));
 const prefix = "/westbrookeplacehoa/concept1";
 
+// The generated pages use their final Studio asset paths. Mirror those assets
+// under public/ as well so the same files work through the local vinext server.
+const localAssetRoot = path.join(root, "public", ...prefix.split("/").filter(Boolean));
+await fs.mkdir(path.join(localAssetRoot, "custom-css"), { recursive: true });
+await fs.copyFile(path.join(root, "local-interactions.js"), path.join(localAssetRoot, "local-interactions.js"));
+await fs.copyFile(path.join(root, "custom-css", "hoa-custom.css"), path.join(localAssetRoot, "custom-css", "hoa-custom.css"));
+
 const rewriteLinks = (html) => html
   .replace(/href="\/(file|account|payments)\//g, 'href="https://www.westbrookeplacehoa.com/$1/')
   .replace(/href="\/p\//g, `href="${prefix}/p/`)
