@@ -1,3 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  /* Core palette */
+  --wp-forest: #173f35;      /* primary forest green (headings, links, borders) */
+  --wp-dark: #102d26;        /* darker forest, used for nav drawer / footer backgrounds */
+  --wp-paper: #fffaf0;       /* warm off-white paper background */
+  --wp-gold: #d8b65a;        /* gold accent (banner title, highlights) */
+  --wp-gold-dark: #c89f45;   /* deeper gold accent (footer border, calendar events) */
+
+  /* Forest at recurring alpha values (rgba(23, 63, 53, x)) */
+  --wp-forest-a12: rgba(23, 63, 53, 0.12);
+  --wp-forest-a16: rgba(23, 63, 53, 0.16);
+  --wp-forest-a20: rgba(23, 63, 53, 0.2);
+  --wp-forest-a24: rgba(23, 63, 53, 0.24);
+  --wp-forest-a68: rgba(23, 63, 53, 0.68);
+  --wp-forest-a90: rgba(23, 63, 53, 0.9);
+
+  /* Zebra-stripe row backgrounds (directory/table listings) */
+  --wp-zebra-odd: #f7f4ea;
+  --wp-zebra-even: #f0f2ea;
+  --wp-zebra-hover: #edf1e5;
+
+  /* Text grays */
+  --wp-text-dark: #344248;
+  --wp-text-mid: #66747a;
+  --wp-text-label: #52636a;
+  --wp-text-body: #2e3b34;
+
+  /* Font stacks -- two variants exist in the source file (one includes
+     Helvetica explicitly, one doesn't). Kept as two variables rather than
+     unified, since collapsing them would be a values change, not just a
+     reorganization. */
+  --wp-font: Figtree, Arial, Helvetica, sans-serif;
+  --wp-font-alt: Figtree, Arial, sans-serif;
+
+  /* Type weight */
+  --wp-weight-label: 700;
+
+  /* Border radius */
+  --wp-radius-md: 0.35rem;
+
+  /* Secondary/accent colors */
+  --wp-charcoal: #26343a;
+  --wp-slate: #5e6c72;
+  --wp-gold-accent: #9a7627;
+  --wp-slate-dark: #46545a;
+  --wp-gray-mid: #78868c;
+  --wp-overlay-white-48: rgba(255, 255, 255, 0.48);
+
+  /* Transition timing */
+  --wp-transition-fast: 160ms;
+  --wp-transition-base: 180ms;
+}
+
+/* ----- RESETS ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CKEditor-authored content (topic posts/comments, page body text, etc.)
+   doesn't inherit the site font -- the editor's own reset sets it back to
+   the browser default serif. Applies everywhere this content shows up,
+   not just the homepage-scoped copy above. */
+[class*="editor-generated-content-container"] {
+  font-family: var(--wp-font) !important;
+}
+
 /*
   WESTBROOKE PLACE — CONCEPT 1 CSS WORKSPACE
   ===========================================
@@ -27,3 +97,4512 @@
 
   We will add and evaluate one small treatment at a time below this comment.
 */
+
+/* ============================================================
+   GENERAL / GLOBAL
+   Site-wide layout: banner mechanics, top bar, mobile nav,
+   content container, footer.
+   ============================================================ */
+
+/*
+  WESTBROOKE PLACE — CONCEPT 1 CSS WORKSPACE
+  ===========================================
+
+  This stylesheet is intentionally inactive.
+  The page below should display the untouched HOA Express layout.
+
+  APPROVED DESIGN REFERENCES — NOT YET APPLIED
+
+  Color palette:
+    Forest:    #173f35
+    Dark:      #102d26
+    Cream:     #f4efe4
+    Paper:     #fffaf0
+    Lime:      #c6dc3c
+    Yellow:    #f2d642
+    Coral:     #dc7255
+    Sky:       #a9ced1
+
+  Font direction:
+    Display: Bricolage Grotesque
+    Body:    DM Sans
+
+  Production constraint:
+    The final redesign must work as a single CSS-only override against the
+    untouched HOA Express markup. No HTML or JavaScript changes.
+
+  We will add and evaluate one small treatment at a time below this comment.
+*/
+/*
+  PAGE-SPECIFIC BANNER PHOTOS
+  ---------------------------
+  The current page is identified by HOA Express's active navigation link.
+  Unmapped pages retain the original HOA Express banner photo.
+*/
+[class*="app__AppContainer"] {
+  --wp-banner-image: none;
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 1;
+}
+
+[class*="banner__BannerPhotoContainer"] {
+  background-image: var(--wp-banner-image) !important;
+  background-position: var(--wp-banner-position) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+[class*="banner__BannerPhotoContainer"] > [class*="banner__BannerPhoto"] {
+  opacity: var(--wp-banner-photo-opacity) !important;
+}
+
+/* Wider desktop canvas */
+@media (min-width: 64rem) {
+  [class*="banner__BannerContainer"],
+  [class*="content__Container"],
+  [class*="top-bar__Wrapper"],
+  [class*="admin-bar__Content"] {
+    max-width: 90rem !important;
+  }
+}
+
+/* Banner community name */
+[class*="banner__GridContainer"] {
+  justify-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+[class*="banner__CommunityLink"] {
+  color: var(--wp-gold) !important;
+  font-family: Georgia, serif !important;
+  font-size: clamp(3.25rem, 8.5vw, 8.75rem) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  line-height: 0.78 !important;
+  letter-spacing: -0.045em !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  -webkit-text-stroke: clamp(2px, 0.045em, 5px) var(--wp-forest-a90);
+  paint-order: stroke fill;
+  text-shadow: 0 0.04em 0.14em rgba(16, 45, 38, 0.3);
+  text-wrap: balance;
+  transform: translateY(0.38em);
+}
+
+[class*="banner__BannerContainer"] {
+  flex: 0 0 auto;
+  left: auto !important;
+  width: min(100vw, 90rem) !important;
+  max-width: 90rem !important;
+  margin-left: calc(50% - min(50vw, 45rem)) !important;
+  isolation: isolate;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+[class*="banner__BannerPhotoContainer"] {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Homepage weather placement */
+[class*="weather__WeatherContainer"] {
+  top: auto !important;
+  right: clamp(1.25rem, 3vw, 3rem) !important;
+  bottom: clamp(1.25rem, 3vw, 3rem) !important;
+}
+
+/* Prevent the closed off-canvas menu shadow from bleeding onto the page. */
+[class*="mobile-navigation__Container"] > .rah-static {
+  box-shadow: none !important;
+}
+
+[class*="mobile-navigation__Container"] > .rah-static[aria-hidden="false"] {
+  box-shadow: 1.25rem 0 3.5rem rgba(16, 45, 38, 0.32) !important;
+}
+
+@media (max-width: 40rem) {
+  [class*="weather__WeatherContainer"] {
+    right: 1rem !important;
+    bottom: 1rem !important;
+  }
+}
+
+/* Local user and notification dropdowns reconstructed from the captured controls. */
+[class*="top-bar__Wrapper"] {
+  position: relative !important;
+}
+
+/* Document listing tables (Public Documents, Member Documents, Board
+   Member Documents, etc. -- all share this one class) get the same
+   bordered/rounded card language as the Members-tab and directory tables
+   elsewhere in this file. border-collapse: separate + spacing: 0 is
+   required for the rounded corners to actually clip in Chrome/Safari --
+   collapse defeats overflow:hidden's clipping on <table>. */
+[class*="documents__Container"] [class*="table__Container"] {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid var(--wp-forest-a12) !important;
+  border-radius: var(--wp-radius-md) !important;
+  overflow: hidden !important;
+  background: var(--wp-overlay-white-48) !important;
+}
+
+[class*="documents__Container"] thead th {
+  border-bottom: 1px solid var(--wp-forest-a16) !important;
+  color: var(--wp-text-mid) !important;
+  font-weight: 600 !important;
+}
+
+/* NOTE: this block mixes mobile overrides for several different
+   pages (Map, Calendar, Community Members, Discussion Forum,
+   Recipes, plus general top-bar/banner rules) in one @media
+   query. Left intact and unsplit -- splitting it apart risked
+   changing cascade order for no readability benefit. */
+/* Mobile refinement pass: full-bleed banner and consistent content rhythm. */
+@media (max-width: 40rem) {
+  [class*="top-bar__Wrapper"] {
+    padding-right: 0.9375rem !important;
+    padding-left: 0.9375rem !important;
+  }
+
+  [class*="mobile-navigation__TopRow"] {
+    padding-right: 0.9375rem !important;
+    padding-left: 0.9375rem !important;
+  }
+
+  [class*="mobile-navigation__MenuIcon"] {
+    left: 0.9375rem !important;
+  }
+
+  [class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+    margin-right: 0 !important;
+  }
+
+  [class*="banner__BannerContainer"] {
+    left: auto !important;
+    width: min(100vw, 90rem) !important;
+    max-width: 90rem !important;
+    margin-left: calc(50% - min(50vw, 45rem)) !important;
+  }
+
+  [class*="banner__CommunityLink"] {
+    z-index: 3 !important;
+    color: var(--wp-gold) !important;
+    background: none !important;
+    -webkit-text-fill-color: currentColor;
+    transform: translateY(0.52em) !important;
+  }
+
+  /* Keep the Map heading close to both the breadcrumb and map itself. */
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Map"]
+  ) [class*="content__Container"] {
+    row-gap: 0.5rem !important;
+    padding-top: 0.35rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Map"]
+  ) main [class*="heading__Container"] {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* The upward desktop nudge clipped the month label inside the calendar. */
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Calendar"]
+  ) .fc-toolbar-title {
+    max-width: 100% !important;
+    font-size: 1rem !important;
+    white-space: normal !important;
+    transform: none !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Calendar"]
+  ) .fc-header-toolbar {
+    overflow: visible !important;
+  }
+
+  /* File listings must collapse to the content column instead of scrolling. */
+  [class*="documents__Container"],
+  [class*="documents__Container"] [class*="table__Wrapper"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: clip !important;
+  }
+
+  [class*="documents__Container"] [class*="table__Container"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+  }
+
+  [class*="documents__Container"] :is(th, td) {
+    min-width: 0 !important;
+    padding-right: 0.55rem !important;
+    padding-left: 0.55rem !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  [class*="documents__Container"] [class*="documents__UploadedCell"],
+  [class*="documents__Container"] :is(th, td):last-child {
+    width: 6.25rem !important;
+  }
+
+  /* Make the member filters read as one deliberately stacked control group. */
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main [class*="resident-directory__SearchAndPageSizeWrapper"] {
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1.25rem !important;
+    text-align: left !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main [class*="resident-directory__SearchAndPageSizeWrapper"] :is(
+    [data-field-container],
+    [class*="input-container__InputContainer"],
+    input,
+    select
+  ) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Discussion and Recipes share the same action/form rhythm on compact screens. */
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"]:is(
+      [href$="/p/Discussion-Forum"],
+      [href$="/p/Recipes"]
+    )
+  ) [class*="content__Container"] {
+    row-gap: 0.55rem !important;
+    padding-top: 0.4rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"]:is(
+      [href$="/p/Discussion-Forum"],
+      [href$="/p/Recipes"]
+    )
+  ) main [class*="heading__Container"] {
+    margin-bottom: 0.85rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"]:is(
+      [href$="/p/Discussion-Forum"],
+      [href$="/p/Recipes"]
+    )
+  ) main [class*="user-control-button__Wrapper"] {
+    margin-bottom: 0.85rem !important;
+  }
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="forum__SearchAndPageSizeWrapper"] {
+  margin-bottom: 0.75rem !important;
+}
+
+/* Discussion Forum controls aligned with the shared filter-panel system. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main > [class*="user-control-button__Wrapper"] {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  padding: 1rem 1rem 0.5rem !important;
+  border: 1px solid var(--wp-forest-a12) !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  background: var(--wp-overlay-white-48) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main > [class*="forum__SearchAndPageSizeWrapper"] {
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
+  padding: 0.5rem 1rem 1rem !important;
+  border: 1px solid var(--wp-forest-a12) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background: var(--wp-overlay-white-48) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="user-control-button__Button"] {
+  min-height: 2.75rem !important;
+  padding: 0.65rem 0.9rem !important;
+  border: 1px solid var(--wp-forest-a20) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  color: var(--wp-text-dark) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="user-control-button__Button"] svg {
+  color: var(--wp-gold-accent) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="forum__SearchAndPageSizeWrapper"] label {
+  display: block !important;
+  margin-bottom: 0.35rem !important;
+  color: var(--wp-text-label) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.72rem !important;
+  font-weight: var(--wp-weight-label) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="forum__SearchAndPageSizeWrapper"] [class*="input-container__InputContainer"] {
+  min-height: 2.75rem !important;
+  overflow: hidden;
+  border: 1px solid var(--wp-forest-a20) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main [class*="forum__SearchAndPageSizeWrapper"] input {
+  min-height: 2.75rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--wp-text-dark) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.9rem !important;
+  box-shadow: none !important;
+}
+}
+
+[class*="content__Container"]:has(
+  [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+) {
+  display: grid !important;
+  grid-template-rows: auto auto !important;
+  row-gap: clamp(0.85rem, 1.5vw, 1.25rem) !important;
+  padding-top: 0.65rem !important;
+}
+
+[class*="content__Container"]:has(
+  [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+) > [class*="content__SideBarWrapper"] {
+  display: contents !important;
+}
+
+@media (max-width: 40rem) {
+  [class*="banner__CommunityLink"] {
+    line-height: 0.86 !important;
+    letter-spacing: -0.055em !important;
+    transform: translateY(0.28em);
+  }
+}
+
+/* Sidebar remains hidden on compact screens */
+[class*="content__SideBarWrapper"] {
+  display: none !important;
+  padding-right: 0 !important;
+}
+
+[class*="content__Container"] {
+  flex: 1 0 auto;
+  width: 100% !important;
+  max-width: 90rem !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 0 auto !important;
+  padding-top: clamp(2rem, 3vw, 3rem) !important;
+  padding-bottom: clamp(4rem, 6vw, 6rem) !important;
+  padding-left: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+[class*="app__FluidContainer"] {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+@media (max-width: 47.9375rem) {
+  [class*="content__Container"] {
+    padding-top: 2rem !important;
+    padding-right: 0.9375rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 0.9375rem !important;
+  }
+}
+
+[class*="content__Container"]::before {
+  position: absolute;
+  z-index: -1;
+  top: clamp(-11rem, -12vw, -7rem);
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  background: #cbd5b8;
+  content: "";
+  transform: translateX(-50%);
+}
+
+[class*="content__Container"] > main {
+  grid-column: 1 !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+[class*="content__Container"]:has(
+  [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+) > main {
+  grid-row: 2 !important;
+}
+
+@media (min-width: 48rem) {
+  [class*="content__Container"]:has(
+    > [class*="content__SideBarWrapper"] [class*="rotating-photos__Wrapper"]
+  ) {
+    grid-template-columns: minmax(0, 3fr) minmax(13rem, 1fr) !important;
+    column-gap: clamp(2rem, 4vw, 4.5rem) !important;
+  }
+
+  [class*="content__Container"]:has(
+    > [class*="content__SideBarWrapper"] [class*="rotating-photos__Wrapper"]
+  ) > [class*="content__SideBarWrapper"] {
+    display: block !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  [class*="content__Container"]:has(
+    > [class*="content__SideBarWrapper"] [class*="rotating-photos__Wrapper"]
+  ) > main {
+    grid-column: 1 !important;
+  }
+
+  [class*="content__Container"]:has(
+    > [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+  ) > [class*="content__SideBarWrapper"] {
+    display: contents !important;
+  }
+
+  [class*="content__Container"]:has(
+    > [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+  ) [class*="rotating-photos__Wrapper"] {
+    grid-row: 2 !important;
+    grid-column: 2 !important;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  [class*="content__Container"]::before {
+    top: clamp(-6rem, -18vw, -3.5rem);
+  }
+}
+
+/* Use HOA Express's compact navigation at every viewport width */
+[class*="mobile-navigation__Container"] {
+  display: block !important;
+  position: relative !important;
+  z-index: 10000 !important;
+  margin-top: -3.5rem !important;
+  padding-bottom: 0 !important;
+  pointer-events: none;
+}
+
+[class*="top-bar__TopBarContainer"] {
+  min-height: 3.5rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--wp-forest) !important;
+}
+
+[class*="top-bar__Wrapper"] {
+  display: grid !important;
+  position: relative !important;
+  z-index: 9999;
+  grid-template-columns: minmax(3.75rem, 1fr) auto auto !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 3.5rem !important;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] {
+  grid-column: 2 !important;
+  max-width: calc(100vw - 7rem);
+  overflow: hidden;
+  color: var(--wp-forest) !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+  grid-column: 3 !important;
+  color: var(--wp-forest) !important;
+}
+
+/* Quiet, matching member and notification controls */
+[class*="top-bar__Wrapper"] [class*="user-box__Container"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+  align-self: center !important;
+  height: 2.75rem !important;
+  min-height: 2.4rem !important;
+  border: 1px solid #ccd3d5 !important;
+  border-radius: 0.55rem !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  color: var(--wp-text-dark) !important;
+  transition:
+    border-color var(--wp-transition-base) ease,
+    background-color var(--wp-transition-base) ease,
+    box-shadow var(--wp-transition-base) ease;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] {
+  gap: 0.5rem !important;
+  padding: 0.3rem 0.7rem 0.3rem 0.35rem !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.84rem !important;
+  font-weight: 550 !important;
+  letter-spacing: -0.01em;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] [class*="user-avatar__Wrapper"] {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  min-width: 1.75rem !important;
+  border: 0;
+  border-radius: 0.38rem !important;
+  background: #e8edf0 !important;
+  color: var(--wp-text-dark) !important;
+  font-size: 0.7rem !important;
+  font-weight: 800 !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] > svg {
+  width: 0.65rem !important;
+  margin-left: 0.1rem;
+  color: var(--wp-gray-mid) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+  width: 2.4rem !important;
+  min-width: 2.4rem !important;
+  margin-left: 0.45rem !important;
+  padding: 0 !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] svg {
+  width: 0.92rem !important;
+  color: var(--wp-slate) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"]:hover,
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"]:hover,
+[class*="top-bar__Wrapper"] [class*="user-box__Container"][aria-expanded="true"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"][aria-expanded="true"] {
+  border-color: #9aa8ad !important;
+  background: #f7f9fa !important;
+  color: #202c31 !important;
+  box-shadow: 0 0.25rem 0.8rem rgba(52, 66, 72, 0.1) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"]:focus-visible,
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"]:focus-visible {
+  z-index: 2;
+  outline: 3px solid rgba(93, 134, 151, 0.28) !important;
+  outline-offset: 2px;
+}
+
+@media (max-width: 32rem) {
+  [class*="top-bar__Wrapper"] [class*="user-box__Container"] {
+    max-width: min(12.5rem, calc(100vw - 7.25rem)) !important;
+    font-size: 0.78rem !important;
+  }
+
+  [class*="top-bar__Wrapper"] [class*="user-box__Container"] [class*="user-avatar__Wrapper"] {
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+    min-width: 1.6rem !important;
+  }
+}
+
+[class*="mobile-navigation__TopRow"] {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 90rem !important;
+  min-height: 3.5rem !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-left: 0.9375rem !important;
+  pointer-events: none;
+}
+
+[class*="mobile-navigation__MenuIcon"] {
+  position: absolute !important;
+  z-index: 10003;
+  top: calc(50% + 0.2rem) !important;
+  left: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(94, 108, 114, 0.38);
+  border-radius: 0.48rem;
+  background: transparent;
+  color: transparent !important;
+  overflow: visible;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: -9999px;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
+
+[class*="mobile-navigation__MenuIcon"]::after {
+  position: absolute;
+  left: calc(100% + 0.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--wp-forest);
+  font-size: 0.85rem;
+  line-height: 1;
+  text-indent: 0;
+  white-space: nowrap;
+  content: "Menu";
+}
+
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+) [class*="mobile-navigation__MenuIcon"]::after {
+  content: "";
+}
+
+[class*="mobile-navigation__MenuIcon"]::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.35rem;
+  height: 0.9rem;
+  background:
+    linear-gradient(var(--wp-slate), var(--wp-slate)) center top / 1.35rem 0.18rem no-repeat,
+    linear-gradient(var(--wp-slate), var(--wp-slate)) center / 1.35rem 0.18rem no-repeat,
+    linear-gradient(var(--wp-slate), var(--wp-slate)) center bottom / 1.35rem 0.18rem no-repeat;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+[class*="mobile-navigation__MenuIcon"]:hover {
+  border-color: rgba(94, 108, 114, 0.7);
+}
+
+[class*="mobile-navigation__MenuIcon"]:focus-visible {
+  outline: 3px solid rgba(93, 134, 151, 0.28);
+  outline-offset: 2px;
+}
+
+[class*="mobile-navigation__Container"] > .rah-static {
+  pointer-events: auto;
+}
+
+[class*="top-bar__TopBarContainer"] button,
+[class*="mobile-navigation__MenuIcon"] {
+  color: var(--wp-forest) !important;
+}
+
+/* Keep the utility controls visually secondary to the site navigation. */
+[class*="top-bar__Wrapper"] [class*="user-box__Container"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"],
+[class*="top-bar__Wrapper"] [class*="user-box__Container"]:hover,
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"]:hover,
+[class*="top-bar__Wrapper"] [class*="user-box__Container"][aria-expanded="true"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"][aria-expanded="true"] {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--wp-slate-dark) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] {
+  margin-right: 0.45rem !important;
+  margin-left: 0.45rem !important;
+  padding-right: 0.85rem !important;
+  padding-left: 0.85rem !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] [class*="user-avatar__Wrapper"] {
+  display: none !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+  width: 2rem !important;
+  min-width: 2rem !important;
+  margin-left: 0 !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"]:hover,
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"]:hover {
+  color: #1f2b30 !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"][aria-expanded="true"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"][aria-expanded="true"] {
+  border: 0 !important;
+  border-radius: 0.55rem 0.55rem 0 0 !important;
+  outline: 0 !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: none !important;
+  color: var(--wp-charcoal) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"][aria-expanded="true"] > svg {
+  transform: rotate(180deg);
+}
+
+[class*="top-bar__Wrapper"] [class*="user-box__Container"] > svg {
+  transition: transform var(--wp-transition-base) ease;
+}
+
+#root,
+#storybook-root {
+  background: #e3edf0 !important;
+  overflow-x: clip;
+}
+
+/* Merge the compact menu trigger into the desktop member bar */
+@media (min-width: 48rem) {
+  [class*="top-bar__TopBarContainer"] {
+    min-height: 3.5rem !important;
+  }
+
+  [class*="top-bar__Wrapper"] {
+    min-height: 3.5rem !important;
+  }
+
+  [class*="mobile-navigation__Container"] {
+    position: relative !important;
+    z-index: 10000 !important;
+    margin-top: -3.5rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  [class*="mobile-navigation__TopRow"] {
+    width: 100% !important;
+    max-width: 90rem !important;
+    min-height: 3.5rem !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-left: 0.9375rem !important;
+    pointer-events: none;
+  }
+
+  [class*="mobile-navigation__MenuIcon"] {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    padding-right: 0 !important;
+    pointer-events: auto;
+  }
+}
+
+/* Left-side navigation drawer. The close (X) icon is fixed to the viewport,
+   outside this element in the markup, so it can sit above the drawer while
+   open -- but that also means it's not part of this element's own scroll
+   flow. Previously the whole drawer (icon zone included) was one scrollable
+   box, so list items scrolled up underneath the fixed icon and got covered.
+   Fix: keep this outer box fixed/full-height purely as the dark-green
+   backdrop (overflow hidden, no scrolling here), and let only the inner
+   child div scroll, inset from the top by the icon's height -- content then
+   has nowhere to go that overlaps the icon. */
+[class*="mobile-navigation__Container"] > .rah-static {
+  position: fixed !important;
+  z-index: 10001 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: min(28rem, 88vw) !important;
+  height: 100dvh !important;
+  overflow: hidden !important;
+  background: var(--wp-forest) !important;
+  box-shadow: 1rem 0 3rem rgba(16, 45, 38, 0.28);
+  transform: translateX(-105%);
+  transition: transform 280ms ease !important;
+}
+
+[class*="mobile-navigation__Container"] > .rah-static[aria-hidden="false"] {
+  transform: translateX(0);
+}
+
+[class*="mobile-navigation__Container"] > .rah-static > div {
+  position: absolute !important;
+  top: 3.75rem !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  min-height: 0 !important;
+  padding: 2rem 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+) [class*="mobile-navigation__MenuIcon"] {
+  position: fixed !important;
+  z-index: 10002 !important;
+  top: 0.55rem !important;
+  left: 0.9375rem !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: transparent !important;
+  line-height: 2.5rem !important;
+  transform: none;
+}
+
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+) [class*="mobile-navigation__MenuIcon"]::before {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  color: #fff;
+  content: "\00d7";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  text-align: center;
+  text-indent: 0;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="mobile-navigation__Container"] > .rah-static {
+    transition: none !important;
+  }
+}
+
+/* Refined slide-out navigation */
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+)::before {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(16, 45, 38, 0.38);
+  content: "";
+  pointer-events: none;
+}
+
+[class*="mobile-navigation__Container"] > .rah-static {
+  width: min(24rem, 92vw) !important;
+  background: var(--wp-dark) !important;
+  box-shadow: 1.25rem 0 3.5rem rgba(16, 45, 38, 0.32);
+  scrollbar-color: rgba(216, 182, 90, 0.5) transparent;
+  scrollbar-width: thin;
+}
+
+[class*="mobile-navigation__Container"] > .rah-static > div {
+  min-height: 100% !important;
+  padding: 4.75rem 0 2rem !important;
+  font-family: var(--wp-font-alt) !important;
+}
+
+[class*="mobile-navigation__UserBox"] {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  gap: 0.25rem 1rem;
+  max-width: none !important;
+  margin: 0 1.25rem 2rem !important;
+  padding: 1.15rem !important;
+  border: 0.0625rem solid rgba(227, 237, 240, 0.14);
+  border-radius: 0.45rem;
+  background: rgba(227, 237, 240, 0.08) !important;
+  text-align: left;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__ProfileContainer"] {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2;
+  margin: 0 !important;
+  align-self: start;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__ProfileAvatar"] {
+  width: 3.25rem !important;
+  height: 3.25rem !important;
+  margin: 0 !important;
+  background: var(--wp-gold) !important;
+  color: var(--wp-dark) !important;
+  font-family: var(--wp-font-alt) !important;
+  font-size: 1.15rem !important;
+  font-weight: var(--wp-weight-label) !important;
+  box-shadow: none !important;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__MemberMenu"] {
+  grid-column: 2 !important;
+  min-width: 0;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__Name"] {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--wp-paper);
+  font-family: var(--wp-font-alt) !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+  line-height: 1.2 !important;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__MemberMenu"] ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+  list-style: none;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__MemberMenu"] li a {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0 !important;
+  color: rgba(255, 250, 240, 0.78) !important;
+  text-decoration-color: rgba(255, 250, 240, 0.32) !important;
+}
+
+[class*="mobile-navigation__UserBox"] [class*="user-menu__MemberMenu"] li a:hover,
+[class*="mobile-navigation__UserBox"] [class*="user-menu__MemberMenu"] li a:focus-visible {
+  color: var(--wp-paper) !important;
+  text-decoration-color: var(--wp-gold) !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] {
+  padding: 0 1.25rem 2rem !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] > a {
+  padding-left: 2rem !important;
+  color: rgba(255, 250, 240, 0.72) !important;
+  font-size: 0.86rem !important;
+}
+
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+) [class*="mobile-navigation__MenuIcon"] {
+  top: 0.8rem !important;
+  left: 1.25rem !important;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0.0625rem solid rgba(255, 250, 240, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 250, 240, 0.08);
+  line-height: 2.75rem !important;
+}
+
+[class*="mobile-navigation__Container"]:has(
+  > .rah-static[aria-hidden="false"]
+) [class*="mobile-navigation__MenuIcon"]::before {
+  font-size: 1.8rem;
+  line-height: 2.75rem;
+}
+
+/* Repeated Georgia-goldenrod accent above the footer */
+[class*="footer__Container"] {
+  border-top: 7.8125rem solid var(--wp-gold-dark) !important;
+  min-height: calc(7.8125rem + 4.0625rem) !important;
+  padding: 1.45rem 1rem !important;
+  background: var(--wp-dark) !important;
+  font-family: var(--wp-font-alt) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.35 !important;
+  display: block !important;
+  white-space: normal;
+}
+
+[class*="footer__Container"] a {
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+[class*="footer__LargeScreenPipe"] {
+  margin-right: 0.45rem;
+  margin-left: 0.45rem;
+}
+
+/* Homepage content typography */
+main [class*="heading__Container"] {
+  display: flex !important;
+  gap: 1rem;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  border-bottom: 0 !important;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2.25rem) !important;
+}
+
+main [class*="heading__EditPage"] {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin: 0 0 0 auto !important;
+  padding: 0.3rem 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(46, 59, 52, 0.58) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+main [class*="heading__EditPage"] svg {
+  width: 0.7rem !important;
+  margin-right: 0.3rem;
+}
+
+main [class*="heading__EditPage"]:hover,
+main [class*="heading__EditPage"]:focus-visible {
+  color: var(--wp-text-body) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.18em;
+}
+
+main [class*="heading__HeaderText"] {
+  min-width: 0;
+  max-width: 18ch;
+  margin-bottom: 0 !important;
+  color: var(--wp-forest) !important;
+  font-family: var(--wp-font-alt) !important;
+  font-size: clamp(2.25rem, 4.5vw, 4.75rem) !important;
+  font-weight: 600 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance;
+}
+
+/* Some detail pages (e.g. a Discussion Forum topic) wrap the page title in a
+   plain, classless <a> back-link. Since it carries no class, none of our
+   [class*="..."] selectors can reach it on their own — force it to inherit
+   the heading's own color/weight instead of falling back to raw browser
+   link-blue. */
+main [class*="heading__HeaderText"] a {
+  color: inherit !important;
+  font: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Static snapshots omit the live #root wrapper; keep the page canvas consistent. */
+html,
+body {
+  overflow-x: clip !important;
+  background: #e3edf0 !important;
+}
+
+/* ============================================================
+   SHARED COMPONENTS
+   ============================================================ */
+
+/* ----- DIRECTORY LIST TABLE (shared base pattern) ----- */
+
+/* Shared treatment for every HOA Express file-list table */
+[class*="app__AppContainer"]:has(main [class*="row__TableRow"]) main tbody tr,
+[class*="app__AppContainer"]:has(main [class*="row__TableRow"]) main tbody tr:nth-child(odd) {
+  background: var(--wp-zebra-odd) !important;
+  background-image: none !important;
+}
+
+[class*="app__AppContainer"]:has(main [class*="row__TableRow"]) {
+  & main tbody tr:nth-child(even) {
+      background: var(--wp-zebra-even) !important;
+      background-image: none !important;
+  }
+
+  & main tbody td {
+      padding-top: 0.9rem !important;
+      padding-bottom: 0.9rem !important;
+      border-bottom: 1px solid var(--wp-forest-a16) !important;
+      color: var(--wp-text-body) !important;
+      line-height: 1.45 !important;
+  }
+
+  & main tbody td:first-child {
+      padding-left: 1.1rem !important;
+  }
+
+  & main thead th {
+      border-bottom: 0 !important;
+  }
+
+  & main tbody tr:hover {
+      background: var(--wp-zebra-hover) !important;
+  }
+
+  & main tbody a {
+      color: var(--wp-forest) !important;
+      font-weight: 650 !important;
+      text-decoration-color: rgba(154, 118, 39, 0.6) !important;
+      text-underline-offset: 0.18em;
+  }
+}
+
+
+/* ----- LOCAL DROPDOWN MENUS ----- */
+
+.local-control-menu {
+  position: absolute;
+  z-index: 10020;
+  top: 100%;
+  width: min(24rem, calc(100vw - 2.5rem));
+  padding: 1rem 1.15rem;
+  border: 0;
+  border-radius: 0.4rem 0 0.4rem 0.4rem;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(16, 45, 38, 0.14);
+  color: var(--wp-text-dark);
+}
+
+.local-control-menu[hidden] {
+  display: none !important;
+}
+
+.local-control-menu--user {
+  right: 3.7rem;
+}
+
+.local-control-menu--notifications {
+  right: 0;
+}
+
+[aria-label="Member dropdown menu"][aria-expanded="true"],
+[aria-label="Notification dropdown menu"][aria-expanded="true"] {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.local-control-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.local-control-menu li + li {
+  margin-top: 0.25rem;
+}
+
+.local-control-menu a {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  min-height: 2.7rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #46565d !important;
+  text-decoration: none !important;
+}
+
+.local-control-menu a:hover,
+.local-control-menu a:focus-visible {
+  background: rgba(23, 63, 53, 0.065);
+}
+
+.local-control-menu svg {
+  width: 1.1rem;
+  color: #7f8d92;
+}
+
+.local-control-menu h3 {
+  margin: 0 0 0.75rem;
+  color: var(--wp-text-dark);
+  font-size: 1.1rem;
+}
+
+.local-control-menu p {
+  margin: 0;
+  color: #59686e;
+}
+
+@media (max-width: 40rem) {
+  .local-control-menu--user,
+  .local-control-menu--notifications {
+    right: 0;
+  }
+}
+
+/* Local concept fallback for the HOA Express member dropdown. */
+[class*="top-bar__Wrapper"] {
+  position: relative !important;
+}
+
+[data-local-user-dropdown],
+[data-local-notification-dropdown] {
+  position: fixed;
+  z-index: 10005;
+  top: 3.625rem;
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  width: min(15.5rem, calc(100vw - 1.5rem));
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #fff;
+  box-shadow: 0 0.9rem 1.5rem -0.65rem rgba(31, 43, 48, 0.18);
+  color: var(--wp-text-dark);
+}
+
+[data-local-user-dropdown][hidden],
+[data-local-notification-dropdown][hidden] {
+  display: none !important;
+}
+
+[data-local-user-dropdown] [class*="mobile-navigation__UserBox"] {
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0.65rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+[data-local-user-dropdown] {
+  right: clamp(3.5rem, 5vw, 4.5rem);
+  border-top-right-radius: 0;
+}
+
+[data-local-notification-dropdown] {
+  border-top-right-radius: 0;
+}
+
+[data-local-user-dropdown] [class*="user-menu__MemberMenu"] {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+[data-local-user-dropdown] [class*="user-menu__ProfileContainer"],
+[data-local-user-dropdown] [class*="user-menu__Name"] {
+  display: none !important;
+}
+
+[data-local-user-dropdown] ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+[data-local-user-dropdown] li {
+  margin: 0.15rem 0 !important;
+}
+
+[data-local-user-dropdown] a {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.78rem 0.9rem !important;
+  border-radius: 0.3rem;
+  color: var(--wp-slate-dark) !important;
+  -webkit-text-fill-color: var(--wp-slate-dark) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.84rem !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  text-decoration: none !important;
+}
+
+[data-local-user-dropdown] a svg {
+  width: 0.9rem !important;
+  color: var(--wp-gray-mid) !important;
+}
+
+[data-local-user-dropdown] a:hover,
+[data-local-user-dropdown] a:focus-visible {
+  background: #f2f5f4 !important;
+  color: var(--wp-charcoal) !important;
+  -webkit-text-fill-color: var(--wp-charcoal) !important;
+  text-decoration: none !important;
+}
+
+[data-local-notification-dropdown] {
+  width: min(18rem, calc(100vw - 1.5rem));
+  padding: 0.85rem 1rem;
+}
+
+[data-local-notification-dropdown] strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--wp-charcoal);
+  font-family: var(--wp-font);
+  font-size: 0.9rem;
+}
+
+[data-local-notification-dropdown] p {
+  margin: 0 !important;
+  color: var(--wp-text-mid) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.45 !important;
+}
+
+[data-local-user-dropdown] *,
+[data-local-notification-dropdown] * {
+  border-color: rgba(52, 66, 72, 0.12) !important;
+}
+
+[data-local-notification-dropdown],
+[data-local-notification-dropdown] strong,
+[data-local-notification-dropdown] p {
+  color: var(--wp-slate-dark) !important;
+}
+
+/* ----- ACCOUNT & MEMBER SETTINGS SYSTEM ----- */
+/* Covers /account/account-settings/*, /account/member-settings/*, and
+   /account/communications/archive. These real platform class names are
+   unique enough (member-settings__, account-settings__, addresses__,
+   members__, privacy__, admin__, communications-archive__, etc.) that no
+   page-scoping :has() qualifier is needed -- they don't appear elsewhere. */
+
+/* Left-nav layout: the tab bar becomes a sidebar, the tab content fills the
+   rest. Give up the rotating-photo column entirely on these pages -- it
+   doesn't belong here. */
+/* Specificity note: the existing rotating-photo two-column rule (elsewhere
+   in this file) matches via a two-attribute :has() argument and would
+   otherwise beat this, since it still sees the sidebar's rotating-photo
+   markup in the DOM even once we hide it. Repeat the base selector to
+   out-specificity it rather than fight source order. */
+[class*="content__Container"][class*="content__Container"]:has(main > [class*="page-actions__Container"]) {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+[class*="content__Container"][class*="content__Container"]:has(main > [class*="page-actions__Container"])
+  > [class*="content__SideBarWrapper"] {
+  display: none !important;
+}
+
+main:has(> [class*="page-actions__Container"]) {
+  display: grid;
+  grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+
+main:has(> [class*="page-actions__Container"]) > [class*="heading__Container"] {
+  grid-column: 1 / -1;
+}
+
+main:has(> [class*="page-actions__Container"]) > [class*="page-actions__Container"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+main:has(> [class*="page-actions__Container"]) > *:last-child {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Flat, modern vertical tabs -- no boxes, no borders anywhere. Each tab is
+   a full-width rounded-rect hit area; the active one gets a soft tint fill
+   and forest text, everything else is just muted text on the page
+   background. */
+[class*="page-actions__Container"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-top: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* These tab links also carry the generic link__LinkButton class, styled
+   further down with its own !important border shorthand -- that rule comes
+   later in the file, so even with !important on both sides it would win on
+   source order. Double the attribute selector to out-specificity it rather
+   than depend on position. */
+[class*="page-action__StyledLinkButton"][class*="page-action__StyledLinkButton"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  margin-left: 0 !important;
+  border: 0 !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: transparent !important;
+  color: var(--wp-text-mid) !important;
+  font-family: var(--wp-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: left;
+  transition: background var(--wp-transition-base) ease, color var(--wp-transition-base) ease;
+}
+
+/* Icons vary in natural width per glyph; pin them to a fixed box so the
+   text column starts at the same x position on every row instead of
+   drifting with each icon's intrinsic size. */
+[class*="page-action__StyledLinkButton"][class*="page-action__StyledLinkButton"] svg {
+  flex: 0 0 1rem;
+  width: 1rem;
+}
+
+[class*="page-action__StyledLinkButton"][class*="page-action__StyledLinkButton"]:hover,
+[class*="page-action__StyledLinkButton"][class*="page-action__StyledLinkButton"]:focus-visible {
+  background: var(--wp-zebra-hover) !important;
+  color: var(--wp-forest) !important;
+}
+
+/* Active-tab indicator: soft tinted pill fill, no border, no box -- reads
+   as a modern app sidebar selection state rather than a bordered folder
+   tab. The platform gives the current tab a stable variant class (verified
+   consistent across every settings tab on this build); if a future
+   platform rebuild changes that hash, tabs still work fine, they just lose
+   this one highlight. */
+[class*="page-action__StyledLinkButton"][class*="page-action__StyledLinkButton"].eYTCKY {
+  background: var(--wp-forest-a12) !important;
+  color: var(--wp-forest) !important;
+  font-weight: 700;
+}
+
+/* Content panel: no border/box either -- just generous padding and a
+   faint background tint to separate it from the page without looking
+   boxy. */
+main:has(> [class*="page-actions__Container"]) > [class*="member-settings__Container"],
+main:has(> [class*="page-actions__Container"]) > [class*="account-settings__Container"] {
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-overlay-white-48);
+}
+
+/* Forms inside the panel stack in a single column, same as the rest of the
+   settings pages -- simpler to scan than a two-column grid when fields have
+   uneven lengths (fieldsets, textareas, photo upload, submit row). */
+[class*="member-settings__Container"] [class*="form__Wrapper"],
+[class*="account-settings__Container"] [class*="form__Wrapper"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 40rem) {
+  [class*="member-settings__Container"] [class*="form__Wrapper"],
+  [class*="account-settings__Container"] [class*="form__Wrapper"] {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom checkbox, matching the Contact Us treatment exactly. */
+[class*="member-settings__Container"] input[type="checkbox"],
+[class*="account-settings__Container"] input[type="checkbox"],
+[class*="privacy__Container"] input[type="checkbox"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: inline-grid !important;
+  flex: 0 0 1.2rem;
+  width: 1.2rem !important;
+  min-width: 1.2rem !important;
+  max-width: 1.2rem !important;
+  height: 1.2rem !important;
+  min-height: 1.2rem !important;
+  margin: 0 !important;
+  border: 1.5px solid var(--wp-forest-a24) !important;
+  border-radius: 0.2rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 0.72rem !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+[class*="member-settings__Container"] input[type="checkbox"]:checked,
+[class*="account-settings__Container"] input[type="checkbox"]:checked,
+[class*="privacy__Container"] input[type="checkbox"]:checked {
+  border-color: var(--wp-forest) !important;
+  background-color: var(--wp-forest) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.2' d='m3.2 8.2 3 3 6.6-6.7'/%3E%3C/svg%3E") !important;
+}
+
+[class*="member-settings__Container"] input[type="checkbox"]:focus-visible,
+[class*="account-settings__Container"] input[type="checkbox"]:focus-visible,
+[class*="privacy__Container"] input[type="checkbox"]:focus-visible {
+  outline: 3px solid rgba(216, 182, 90, 0.35) !important;
+  outline-offset: 2px !important;
+}
+
+[class*="member-settings__Container"] h2,
+[class*="member-settings__Container"] h4,
+[class*="account-settings__Container"] h2,
+[class*="account-settings__Container"] h4,
+[class*="admin__Container"] h2,
+[class*="privacy__Container"] h2,
+fieldset[class*="multi-checkbox-container__Container"] h4 {
+  margin: 0 0 0.75rem;
+  color: var(--wp-forest);
+  font-family: var(--wp-font);
+  font-size: 1.1rem;
+}
+
+[class*="labels__Label"],
+[class*="labels__InlineLabel"] {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--wp-text-label);
+  font-family: var(--wp-font);
+  font-size: 0.72rem;
+  font-weight: var(--wp-weight-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[class*="labels__Label"] small {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+[class*="labels__Label"] small + small {
+  margin-left: 0.35rem;
+}
+
+[class*="labels__InlineLabel"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+[class*="field-container__StyledFieldContainer"] {
+  margin-bottom: 1rem;
+}
+
+[class*="input-container__InputContainer"] {
+  border: 1px solid var(--wp-forest-a20) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Icon-prefixed inputs (social URL "link" icon, etc.) -- the wrapper is
+   block by default, so the icon and input stack instead of sitting side by
+   side. Lay them out as a row and give the icon consistent spacing/color
+   instead of touching the input text. Excludes select wrappers, which use
+   their own absolute-positioned chevron handled elsewhere. */
+[class*="input-container__InputContainer"]:not(:has(select)) {
+  display: flex;
+  align-items: center;
+}
+
+[class*="input-container__InputContainer"]:not(:has(select)) [class*="input-icon-holder__InputIconHolder"] {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  color: var(--wp-text-mid) !important;
+}
+
+[class*="input-container__InputContainer"]:not(:has(select)) [class*="input-icon-holder__InputIconHolder"] svg {
+  width: 0.85rem;
+}
+
+/* Textarea character-count strip: give it its own padded row instead of
+   sitting flush against the textarea's bottom edge with no separation. */
+[class*="textarea__BottomPortion"] {
+  padding: 0.3rem 0.75rem;
+  border-top: 1px solid var(--wp-forest-a12);
+}
+
+[class*="textarea__CharacterCount"] {
+  display: block;
+  color: var(--wp-text-mid) !important;
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+[class*="member-settings__Container"] input:not([type="checkbox"]):not([type="radio"]),
+[class*="member-settings__Container"] select,
+[class*="member-settings__Container"] textarea,
+[class*="account-settings__Container"] input:not([type="checkbox"]):not([type="radio"]),
+[class*="account-settings__Container"] select,
+[class*="account-settings__Container"] textarea,
+[class*="privacy__Container"] input:not([type="checkbox"]):not([type="radio"]) {
+  min-height: 2.75rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--wp-text-dark);
+  font-family: var(--wp-font);
+  font-size: 0.9rem;
+}
+
+/* Hide the browser's native dropdown arrow on <select> -- the input
+   wrapper already renders its own chevron icon, so without this the field
+   showed two overlapping arrows. Sitewide, not just account/member
+   settings, since any <select> wrapped by input-container__InputContainer
+   has the same platform-rendered chevron. */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 2.25rem 0.6rem 0.75rem;
+  border: 0;
+  border-radius: var(--wp-radius-md);
+  background: transparent;
+  color: var(--wp-text-dark);
+  font-family: var(--wp-font);
+  font-size: 0.9rem;
+}
+
+/* The wrapper's own chevron icon sits in normal flow after the <select>,
+   so once the select is stretched to width:100% the icon gets pushed onto
+   its own line below. Pin it to the right edge instead, vertically
+   centered over the select. */
+[class*="input-container__InputContainer"]:has(select) {
+  position: relative;
+}
+
+[class*="input-container__InputContainer"]:has(select) [class*="input-icon-holder__InputIconHolder"] {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+}
+
+/* The intl-tel-input phone widget reserves left padding for its own flag
+   dropdown button; don't let the generic input padding above collide with
+   it. */
+[class*="member-settings__Container"] .iti input,
+[class*="account-settings__Container"] .iti input {
+  padding-left: 3rem !important;
+}
+
+[class*="standard__Button"],
+[class*="link__LinkButton"] {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  min-height: 2.65rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--wp-forest-a24) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  color: var(--wp-forest) !important;
+  font-family: var(--wp-font);
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--wp-transition-base) ease, color var(--wp-transition-base) ease,
+    border-color var(--wp-transition-base) ease, box-shadow var(--wp-transition-base) ease;
+}
+
+/* Delete buttons across account/member settings (address delete, member
+   delete icon button) all share this one stable platform variant class --
+   verified consistent across the addresses and members tabs on this build.
+   Give them the same red/danger treatment as the account-deletion button. */
+[class*="standard__Button"][class*="standard__Button"].bbLVmW {
+  border-color: rgba(180, 60, 50, 0.4) !important;
+  color: rgb(150, 45, 40) !important;
+}
+
+[class*="standard__Button"][class*="standard__Button"].bbLVmW:hover,
+[class*="standard__Button"][class*="standard__Button"].bbLVmW:focus-visible {
+  border-color: rgb(150, 45, 40) !important;
+  background: rgb(150, 45, 40) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(150, 45, 40, 0.25);
+}
+
+/* Breathing room between adjacent action buttons (Edit/Delete,
+   Add member/Cancel, etc.) that otherwise sit flush against each other. */
+[class*="standard__Button"] + [class*="standard__Button"],
+[class*="standard__Button"] + [class*="link__LinkButton"],
+[class*="link__LinkButton"] + [class*="standard__Button"],
+[class*="link__LinkButton"] + [class*="link__LinkButton"] {
+  margin-left: 0.6rem;
+}
+
+/* A platform rule (`.xxxxxx form button[type="submit"]:hover`) matches
+   submit buttons with equal specificity weight and its own !important,
+   winning on the element-column tiebreak. Double the attribute selector to
+   out-specificity it rather than depend on source order. */
+[class*="standard__Button"][class*="standard__Button"]:hover,
+[class*="link__LinkButton"][class*="link__LinkButton"]:hover,
+[class*="standard__Button"][class*="standard__Button"]:focus-visible,
+[class*="link__LinkButton"][class*="link__LinkButton"]:focus-visible {
+  border-color: var(--wp-forest) !important;
+  background: var(--wp-forest) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(28, 46, 38, 0.18);
+}
+
+/* Cards / panels shared across tabs */
+[class*="panel__Wrapper"],
+[class*="address__Card"],
+fieldset[class*="multi-checkbox-container__Container"],
+[class*="admin__Container"] [class*="admin__FormWrapper"],
+[class*="upload-profile-photo__ProfilePhotoWrapper"] {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--wp-forest-a12);
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-overlay-white-48);
+  margin-bottom: 1rem;
+}
+
+/* Add-member form: no outer card -- the select and buttons already carry
+   their own boxes, so wrapping them in a second background just nests one
+   box inside another. Sits flush on the flat panel like any other field
+   group. */
+[class*="upsert-member__FormContainer"] {
+  margin-bottom: 1rem;
+}
+
+fieldset[class*="multi-checkbox-container__Container"] {
+  margin-bottom: 1rem;
+}
+
+/* Addresses tab */
+[class*="addresses__Columns"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+[class*="address__Column"] {
+  color: var(--wp-text-body);
+  line-height: 1.45;
+}
+
+[class*="address__FormattedLines"] {
+  color: var(--wp-text-dark);
+  font-weight: 600;
+}
+
+[class*="address__AddressNotes"] {
+  color: var(--wp-text-mid);
+  font-size: 0.86rem;
+}
+
+/* Members tab -- reuses the same directory-list table language as the
+   Board Members / Community Members / Pet Directory pattern, wrapped in its
+   own card so it reads as a distinct block against the panel. */
+[class*="account-settings__Container"] [class*="table__Container"] {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--wp-forest-a12);
+  border-radius: var(--wp-radius-md);
+  overflow: hidden;
+  background: var(--wp-overlay-white-48);
+}
+
+[class*="account-settings__Container"] [class*="table__Container"] thead th {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--wp-forest-a16);
+  color: var(--wp-text-mid);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+[class*="account-settings__Container"] [class*="table__Container"] tbody tr {
+  background: var(--wp-zebra-odd);
+}
+
+[class*="account-settings__Container"] [class*="table__Container"] tbody tr:nth-child(even) {
+  background: var(--wp-zebra-even);
+}
+
+[class*="account-settings__Container"] [class*="table__Container"] tbody td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--wp-forest-a16);
+  color: var(--wp-text-body);
+}
+
+[class*="account-settings__Container"] [class*="table__Container"] tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+[class*="members__ProfileAvatar"] {
+  background: var(--wp-forest) !important;
+  color: #fff !important;
+}
+
+[class*="members__Email"] {
+  color: var(--wp-text-mid);
+  font-size: 0.86rem;
+}
+
+[class*="members__CannotDeleteContainer"] {
+  color: var(--wp-text-mid);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Profile tab -- photo upload + social URLs */
+[class*="upload-profile-photo__ProfileAvatar"] {
+  background: var(--wp-forest) !important;
+  color: #fff !important;
+}
+
+[class*="file-input__FileButton"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.65rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--wp-forest-a20);
+  border-radius: var(--wp-radius-md);
+  background: #fff;
+  color: var(--wp-text-dark);
+  font-family: var(--wp-font);
+  font-size: 0.85rem;
+}
+
+[class*="file-input__FileButtonIcon"] {
+  color: var(--wp-gold-accent);
+}
+
+[class*="social-urls__DeleteButton"] {
+  color: var(--wp-text-mid);
+}
+
+/* Password tab */
+[class*="password-strength-meter__Container"] {
+  margin-top: 0.5rem;
+}
+
+/* Contact tab -- preference checkboxes/radios */
+[class*="contact__RadioContainer"] {
+  margin-top: 1rem;
+}
+
+[class*="contact__EmailFrequencyNote"] {
+  color: var(--wp-text-mid);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Privacy tabs (member-settings + account-settings share the same classes) */
+[class*="privacy__RadioContainer"],
+[class*="privacy__InputContainer"] {
+  margin-top: 0.5rem;
+}
+
+[class*="privacy__LeadershipNote"] {
+  color: var(--wp-text-mid);
+  font-size: 0.86rem;
+}
+
+[class*="privacy__DeleteAccountPanel"] {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(180, 60, 50, 0.3);
+  border-radius: var(--wp-radius-md);
+  background: rgba(180, 60, 50, 0.06);
+}
+
+[class*="privacy__DeleteAccountHeading"] {
+  margin: 0 0 0.5rem;
+  color: rgb(150, 45, 40);
+  font-family: var(--wp-font);
+  font-size: 1.05rem;
+}
+
+[class*="privacy__DeleteAccountBody"] {
+  color: var(--wp-text-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+[class*="privacy__DeleteButtonWrapper"] [class*="standard__Button"] {
+  margin-top: 0.75rem;
+  border-color: rgba(180, 60, 50, 0.4) !important;
+  color: rgb(150, 45, 40) !important;
+}
+
+[class*="privacy__DeleteButtonWrapper"] [class*="standard__Button"]:hover,
+[class*="privacy__DeleteButtonWrapper"] [class*="standard__Button"]:focus-visible {
+  border-color: rgb(150, 45, 40) !important;
+  background: rgb(150, 45, 40) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(150, 45, 40, 0.25);
+}
+
+/* Communications archive -- each entry already has its own
+   communications-archive__Container wrapper (one per entry -- not one
+   shared container for all of them, and it holds exactly the heading +
+   content pair), so the card border/background/radius belongs on that one
+   wrapper rather than duplicated across both children. The heading keeps
+   its own bottom border as the internal divider between title/date and
+   body. */
+[class*="communications-archive__Container"] {
+  padding: clamp(1.1rem, 3vw, 1.25rem);
+  border: 1px solid var(--wp-forest-a12);
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-overlay-white-48);
+}
+
+[class*="communications-archive__Container"] + [class*="communications-archive__Container"] {
+  margin-top: 1.5rem;
+}
+
+[class*="communications-archive__CommunicationHeading"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin: 0 0 0.85rem;
+  padding: 0 0 0.85rem;
+  border-bottom: 1px solid var(--wp-forest-a16);
+  color: var(--wp-forest);
+  font-family: var(--wp-font);
+  font-size: 1.15rem;
+}
+
+[class*="communications-archive__DateWrapper"] {
+  color: var(--wp-text-mid);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+[class*="communications-archive__DateWrapper"] small {
+  margin-left: 0.4rem;
+}
+
+[class*="communications-archive__Divider"] {
+  margin: 1.25rem 0;
+  border: 0;
+  border-top: 1px solid var(--wp-forest-a16);
+}
+
+/* Attached files: paperclip icon + filename link, previously flush against
+   the card's bottom edge with no spacing and default browser link-blue. */
+[class*="communications-archive__AttachmentsWrapper"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+[class*="attachments__Attachment"] a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--wp-forest) !important;
+  font-family: var(--wp-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+[class*="attachments__Attachment"] a:hover {
+  text-decoration: underline !important;
+}
+
+[class*="attachments__Attachment"] svg {
+  color: var(--wp-gold-accent) !important;
+  width: 0.8rem;
+}
+
+[class*="communications-archive__CommunicationContent"] {
+  color: var(--wp-text-body);
+  font-family: var(--wp-font) !important;
+  line-height: 1.55;
+}
+
+/* ----- BREADCRUMB / PAGES-MENU SYSTEM ----- */
+
+/* Context breadcrumbs repurposed from the desktop sidebar page menu */
+[class*="content__Container"]:has(
+  a.active:is(
+    [href$="/p/Monthly-Book-Club-List"],
+    [href$="/p/Book-recommendations"]
+  )
+) {
+  --wp-breadcrumb-parent: "Book Club  /";
+}
+
+[class*="content__Container"]:has(
+  a.active:is(
+    [href$="/p/General"],
+    [href$="/p/ACC"],
+    [href$="/p/Minutes-of-meetings"],
+    [href$="/p/Legal"],
+    [href$="/p/Financial"]
+  )
+) {
+  --wp-breadcrumb-parent: "Board Member Documents  /";
+}
+
+[class*="content__Container"]:has(
+  a.active:is(
+    [href$="/p/Surveys"],
+    [href$="/p/Insurance"],
+    [href$="/p/Maintenance"],
+    [href$="/p/Miscellaneous"],
+    [href$="/p/Templatessamples"],
+    [href$="/p/Annual-Meetings"]
+  )
+) {
+  --wp-breadcrumb-parent: "Infrastructure  /";
+}
+
+[class*="content__Container"]:has(
+  [class*="content__SideBarWrapper"] a.active:not([href="/"]):not([href$="/westbrookeplacehoa/concept1/"])
+) [class*="content__SideBarWrapper"] [class*="pages-menu__PagesMenuContainer"] {
+  position: static !important;
+  z-index: 4;
+  grid-row: 1 !important;
+  grid-column: 1 / -1 !important;
+  display: block !important;
+  width: 100%;
+  margin-top: -4px !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__PagesMenuContainer"] > h3 {
+  display: none !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__PagesList"] {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0;
+  padding: 0 !important;
+  list-style: none;
+  color: var(--wp-forest);
+  font-family: var(--wp-font-alt);
+  font-size: clamp(0.78rem, 1vw, 0.9rem) !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+[class*="content__Container"] [class*="pages-menu__PagesList"]::before {
+  order: 2;
+  color: var(--wp-forest-a68);
+  content: var(--wp-breadcrumb-parent, none);
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"] {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"]:has(> a.active) {
+  order: 3;
+  display: inline-flex !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"]:has(
+  > a[href="/"],
+  > a[href$="/westbrookeplacehoa/concept1/"]
+) {
+  order: 1;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"]:has(
+  > a[href="/"],
+  > a[href$="/westbrookeplacehoa/concept1/"]
+)::after {
+  margin-left: 0.35rem;
+  color: var(--wp-forest-a68);
+  content: "/";
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href="/"],
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href$="/westbrookeplacehoa/concept1/"] {
+  padding: 0 !important;
+  color: var(--wp-forest-a68) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href="/"]:hover,
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href="/"]:focus-visible,
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href$="/westbrookeplacehoa/concept1/"]:hover,
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a[href$="/westbrookeplacehoa/concept1/"]:focus-visible {
+  color: var(--wp-forest) !important;
+  text-decoration: underline !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a.active {
+  padding: 0 !important;
+  color: var(--wp-forest) !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+[class*="content__Container"] [class*="pages-menu__ListItem"] > a.active svg {
+  display: none;
+}
+
+[class*="content__SideBarWrapper"] [class*="pages-menu__PagesMenuContainer"] {
+  display: none !important;
+}
+
+/* The top bar already contains the member control; keep the drawer navigation-only. */
+[class*="mobile-navigation__Container"] [class*="mobile-navigation__UserBox"],
+[class*="mobile-navigation__Container"] [class*="pages-menu__PagesMenuContainer"] > h3 {
+  display: none !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__PagesMenuContainer"] {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__PagesMenuContainer"] > h3 {
+  margin: 0 0 0.55rem !important;
+  padding: 0 0 0.7rem;
+  border-bottom: 0.0625rem solid rgba(227, 237, 240, 0.16);
+  color: rgba(255, 250, 240, 0.62);
+  font-family: var(--wp-font-alt) !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__PagesList"] {
+  display: block !important;
+  margin: 0;
+  padding: 0 !important;
+  list-style: none;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  font-size: 0.94rem !important;
+  line-height: 1.25 !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] > a,
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__Folder"] {
+  display: flex !important;
+  gap: 0.55rem;
+  align-items: center;
+  width: 100%;
+  min-height: 2.65rem;
+  padding: 0.65rem 0.7rem !important;
+  border-bottom: 0.0625rem solid rgba(227, 237, 240, 0.09) !important;
+  color: rgba(255, 250, 240, 0.88) !important;
+  background: transparent !important;
+  font-family: var(--wp-font-alt) !important;
+  text-decoration: none !important;
+  transition: color var(--wp-transition-fast) ease, background-color var(--wp-transition-fast) ease;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] > a:hover,
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] > a:focus-visible,
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__Folder"]:hover,
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__Folder"]:focus-visible {
+  color: var(--wp-paper) !important;
+  background: rgba(227, 237, 240, 0.08) !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] > a.active {
+  border-bottom-color: transparent !important;
+  border-left: 0.2rem solid var(--wp-gold) !important;
+  padding-left: 0.8rem !important;
+  background: rgba(216, 182, 90, 0.15) !important;
+  color: var(--wp-paper) !important;
+  font-weight: 600;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__Folder"][aria-expanded="true"] {
+  color: var(--wp-gold) !important;
+  background: rgba(227, 237, 240, 0.05) !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__Folder"] svg {
+  flex: 0 0 auto;
+  width: 0.65rem;
+  transition: transform var(--wp-transition-base) ease;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"] > a svg:not(.fa-chevron-right) {
+  margin-left: auto;
+  color: rgba(216, 182, 90, 0.48) !important;
+  font-size: 0.68rem;
+}
+
+/* Submenu items (data-local-folder-child) sit as flat <li> siblings of their
+   parent folder with the same classes as top-level items -- nothing in the
+   markup marks them as nested. Indent, mute, and set them on a shaded strip
+   with a left accent so they read as children of the folder above them
+   rather than more top-level links. Must come after the generic ListItem
+   link rule above (same specificity) to win the cascade. */
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] {
+  background: rgba(0, 0, 0, 0.14) !important;
+}
+
+/* The Infrastructure folder's six pages are also present in the flat
+   top-level page list (a content-side duplication, not a folder-nesting
+   quirk like the rest of the menu) -- each shows up a second time right
+   after the folder's own nested copies, undoing the indent treatment above.
+   Hide the flat, non-nested duplicates and keep only the ones marked
+   data-local-folder-child. */
+[class*="mobile-navigation__PagesWrapper"] [class*="pages-menu__ListItem"]:not([data-local-folder-child]):has(
+  > a:is(
+    [href$="/p/Surveys"],
+    [href$="/p/Insurance"],
+    [href$="/p/Maintenance"],
+    [href$="/p/Miscellaneous"],
+    [href$="/p/Templatessamples"],
+    [href$="/p/Annual-Meetings"]
+  )
+) {
+  display: none !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] > a {
+  padding-left: 2.35rem !important;
+  border-left: 0.15rem solid rgba(216, 182, 90, 0.3) !important;
+  color: rgba(255, 250, 240, 0.68) !important;
+  font-size: 0.86rem !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] > a:hover,
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] > a:focus-visible {
+  border-left-color: var(--wp-gold) !important;
+}
+
+[class*="mobile-navigation__PagesWrapper"] [data-local-folder-child] > a.active {
+  border-left-width: 0.2rem !important;
+  border-left-color: var(--wp-gold) !important;
+}
+
+/* ----- CALENDAR / FULLCALENDAR ----- */
+
+/* Calendar: responsive, readable FullCalendar treatment */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) {
+  & [class*="calendar__CalendarContainer"] {
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      color: var(--wp-forest);
+      font-family: var(--wp-font-alt);
+  }
+
+  & .fc-header-toolbar {
+      display: flex !important;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      margin-bottom: 1.25rem !important;
+  }
+
+  & .fc-toolbar-chunk:last-child {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      margin-left: auto;
+  }
+
+  & .fc-button-group {
+      display: inline-flex;
+      overflow: hidden;
+      border: 1px solid var(--wp-forest-a24);
+      border-radius: var(--wp-radius-md);
+      background: rgba(255, 255, 255, 0.38);
+  }
+
+  & .fc-toolbar-title {
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font-alt) !important;
+      font-size: clamp(1.05rem, 2vw, 1.5rem) !important;
+      font-weight: 600 !important;
+      line-height: 1.2 !important;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      transform: translateY(-8px);
+  }
+
+  & .fc-button-primary {
+      min-width: 2.4rem;
+      min-height: 2.4rem;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      color: var(--wp-slate-dark) !important;
+      font-family: var(--wp-font-alt) !important;
+      font-weight: 600 !important;
+      box-shadow: none !important;
+  }
+
+  & .fc-toolbar-chunk:last-child .fc-button-primary + .fc-button-primary {
+      border-left: 1px solid rgba(23, 63, 53, 0.18) !important;
+  }
+
+  & .fc-today-button {
+      border: 1px solid var(--wp-forest-a24) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: rgba(255, 255, 255, 0.38) !important;
+      padding-right: 0.8rem !important;
+      padding-left: 0.8rem !important;
+  }
+
+  & .fc-button-primary:focus-visible {
+      outline: 0.1875rem solid var(--wp-gold) !important;
+      outline-offset: 0.125rem;
+  }
+
+  & .fc-button-primary:disabled {
+      background: rgba(255, 255, 255, 0.18) !important;
+      color: rgba(70, 84, 90, 0.45) !important;
+      opacity: 1 !important;
+  }
+
+  & .fc-scrollgrid {
+      overflow: hidden;
+      border: 0.0625rem solid rgba(23, 63, 53, 0.28) !important;
+      border-radius: var(--wp-radius-md);
+      background: rgba(255, 250, 240, 0.7);
+  }
+
+  & .fc-col-header-cell {
+      border-color: var(--wp-forest-a20) !important;
+      background: var(--wp-forest);
+  }
+
+  & .fc-col-header-cell + .fc-col-header-cell {
+      border-left-color: rgba(255, 250, 240, 0.2) !important;
+  }
+
+  & .fc-col-header-cell-cushion {
+      display: block;
+      padding: 0.65rem 0.25rem !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      font-weight: 600;
+      text-align: center;
+  }
+
+  & .fc-col-header-cell-cushion::after {
+      color: var(--wp-paper);
+      font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+      content: attr(aria-label);
+  }
+
+  & .fc-daygrid-day {
+      border-color: rgba(23, 63, 53, 0.18) !important;
+      background: rgba(255, 250, 240, 0.72);
+      vertical-align: top;
+  }
+
+  & .fc-daygrid-day-frame {
+      min-height: clamp(5rem, 10vw, 8.5rem) !important;
+  }
+
+  & .fc-daygrid-day-number {
+      padding: 0.45rem 0.55rem !important;
+      color: var(--wp-forest) !important;
+      font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+      font-weight: 600;
+  }
+
+  & .fc-day-other {
+      background: rgba(227, 237, 240, 0.58);
+  }
+
+  & .fc-day-other .fc-daygrid-day-number {
+      opacity: 0.42;
+  }
+
+  & .fc-day-today {
+      background: rgba(203, 213, 184, 0.46) !important;
+      box-shadow: inset 0.2rem 0 #b6923d;
+  }
+
+  & .fc-day-today .fc-daygrid-day-number {
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      color: var(--wp-forest) !important;
+  }
+
+  @media (max-width: 40rem) {
+    & .fc-header-toolbar {
+          align-items: stretch;
+
+    }
+
+    & .fc-toolbar-chunk:first-child {
+          flex: 1 0 100%;
+
+    }
+
+    & .fc-toolbar-chunk:last-child {
+          width: 100%;
+          margin-left: 0;
+
+    }
+
+    & .fc-today-button {
+          flex: 1 1 auto;
+
+    }
+
+    & .fc-col-header-cell-cushion::after {
+          content: attr(aria-label);
+          display: block;
+          max-width: 1.1ch;
+          margin: auto;
+          overflow: hidden;
+
+    }
+
+    & .fc-daygrid-day-frame {
+          min-height: 4.25rem !important;
+
+    }
+
+    & .fc-event-time {
+          display: none;
+
+    }
+  }
+
+  /* Calendar */
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/FoKO4DpXamQ/download?force=true&w=2000");
+      --wp-banner-position: center 48%;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* A clear monthly planner keeps the Calendar subject legible and unmistakable. */
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/FoKO4DpXamQ/download?force=true&w=2000");
+      --wp-banner-position: center 48%;
+  }
+
+  & .fc table {
+      table-layout: fixed !important;
+  }
+
+  & main [class*="heading__Container"] {
+      margin-top: 4px !important;
+  }
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-view-harness,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-scroller-harness,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-scroller,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-daygrid-body,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-scrollgrid,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-col-header,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-scrollgrid-sync-table {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-button-primary:hover,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-button-primary:focus-visible {
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: var(--wp-forest) !important;
+}
+
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-event,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Calendar"]
+) .fc-daygrid-event {
+  margin: 0.125rem 0.25rem !important;
+  border: 0 !important;
+  border-radius: 0.2rem !important;
+  padding: 0.2rem 0.3rem !important;
+  background: var(--wp-gold-dark) !important;
+  color: var(--wp-dark) !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  font-size: clamp(0.65rem, 1vw, 0.82rem) !important;
+  font-weight: 600;
+  line-height: 1.2 !important;
+}
+
+
+/* ============================================================
+   PAGE-SPECIFIC OVERRIDES
+   ============================================================ */
+
+/* ===== HOME ===== */
+
+/* Home */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/XGvwt544g8k/download?force=true&w=2000");
+  --wp-banner-position: center 52%;
+  --wp-banner-photo-opacity: 0;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main {
+  padding-left: clamp(1.25rem, 3vw, 3rem) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main [class*="heading__Container"] {
+  border-bottom: 0 !important;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2.25rem) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h1,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h2,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h3 {
+  color: var(--wp-forest) !important;
+  font-family: var(--wp-font-alt) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h1 {
+  max-width: 18ch;
+  margin-bottom: 0 !important;
+  font-size: clamp(2.25rem, 4.5vw, 4.75rem) !important;
+  line-height: 0.98 !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h2 {
+  font-size: clamp(1.65rem, 2.5vw, 2.75rem) !important;
+  line-height: 1.08 !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main h3 {
+  font-size: clamp(1.25rem, 1.8vw, 1.75rem) !important;
+  line-height: 1.18 !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main [class*="editor-generated-content-container"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) main p {
+  max-width: 72ch;
+  color: var(--wp-text-body) !important;
+  font-family: var(--wp-font) !important;
+  font-size: clamp(1rem, 0.35vw + 0.94rem, 1.125rem) !important;
+  letter-spacing: -0.012em;
+  line-height: 1.72 !important;
+}
+
+/* ===== CALENDAR ===== */
+
+
+/* ===== MAP ===== */
+
+/* Map */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Map"]) {
+  --wp-banner-image: url("https://unsplash.com/photos/tU9n3Y0KCMk/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ===== PUBLIC & MEMBER DOCUMENTS ===== */
+
+/* Public Documents */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Public-Documents-2"]
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/DDkyGrfvp40/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* Member Documents */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Member-Documents"]
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/8EzNkvLQosk/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* Covered by the shared DIRECTORY LIST TABLE pattern above — no page-specific override needed. */
+
+/* ===== BOARD MEMBERS ===== */
+
+/* Board Members */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Board-Members"]) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/WFItslWB89M/download?force=true&w=2000");
+      --wp-banner-position: center;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Board Members listing aligned with Community Members and document rows.
+     Wrapped in the same bordered/rounded card as the Members-tab table.
+     border-collapse: collapse defeats overflow:hidden's corner-clipping on
+     <table> in Chrome/Safari -- separate + zero spacing keeps the same flat
+     row look while letting the rounded card border actually clip. */
+  & main table {
+      width: 100% !important;
+      border-collapse: separate !important;
+      border-spacing: 0 !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: var(--wp-radius-md) !important;
+      overflow: hidden !important;
+      background: var(--wp-overlay-white-48) !important;
+  }
+
+  & main thead th {
+      padding: 0.7rem 1rem !important;
+      border-bottom: 1px solid var(--wp-forest-a16) !important;
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.72rem !important;
+      font-weight: var(--wp-weight-label) !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+  }
+
+  /* Background/hover zebra rows and border-bottom now live in the shared merged rules after the Pet Directory section. */
+  & main tbody td {
+      padding: 0.95rem 1rem !important;
+      color: var(--wp-text-dark) !important;
+      font-family: var(--wp-font) !important;
+      line-height: 1.45;
+  }
+
+  & main [class*="row__BoardMember"] {
+      gap: 0.75rem;
+      color: var(--wp-charcoal) !important;
+      font-weight: 650;
+  }
+
+  & main [class*="row__BoardMemberRole"] {
+      color: var(--wp-text-mid) !important;
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+  }
+
+  & main [class*="contact-info__Wrapper"] {
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+  }
+
+  & main [class*="contact-info__Wrapper"] li {
+      gap: 0.45rem;
+      margin: 0.2rem 0 !important;
+      color: var(--wp-text-mid) !important;
+      font-size: 0.86rem !important;
+  }
+}
+
+
+/* contact-info svg color and link underline treatment now live in the shared merged rules after the Pet Directory section. */
+
+/* Avatar-color rotation now lives in the shared 6-color merged rule after the Pet Directory section (unified with Community Members' palette). */
+
+/* ===== COMMUNITY MEMBERS ===== */
+
+/* Community Members directory and resident profiles */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/qgHGDbbSNm8/download?force=true&w=2000");
+      --wp-banner-position: center 40%;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Community Members directory */
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] {
+      display: grid !important;
+      grid-template-columns: minmax(14rem, 1fr) minmax(10rem, auto) !important;
+      gap: 1rem !important;
+      align-items: end !important;
+      margin-bottom: 1.25rem !important;
+      padding: 1rem !important;
+      border: 1px solid var(--wp-forest-a12);
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48);
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] > div {
+      display: contents !important;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] label {
+      display: block;
+      margin-bottom: 0.35rem !important;
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.72rem !important;
+      font-weight: var(--wp-weight-label) !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] [class*="input-container__InputContainer"] {
+      min-height: 2.75rem !important;
+      overflow: hidden;
+      border: 1px solid var(--wp-forest-a20) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] [class*="input-icon-holder__InputIconHolder"] {
+      color: var(--wp-gray-mid) !important;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] [data-field-container]:has(select) [class*="input-container__InputContainer"] {
+      display: block !important;
+      position: relative !important;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] [data-field-container]:has(select) [class*="input-icon-holder__InputIconHolder"] {
+      position: absolute !important;
+      top: 50% !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      align-self: auto !important;
+      height: auto !important;
+      transform: translateY(-50%) !important;
+  }
+
+  & main [class*="resident-directory__SearchAndPageSizeWrapper"] [data-field-container]:has(select) select {
+      width: 100% !important;
+  }
+
+  & main > a[href*="/p/Community-Members/account/"] {
+      margin-bottom: 0.65rem !important;
+      padding: 1rem 1.15rem !important;
+      border: 1px solid rgba(23, 63, 53, 0.1) !important;
+      border-radius: 0.4rem !important;
+      background: rgba(247, 244, 234, 0.86) !important;
+      box-shadow: none !important;
+      color: var(--wp-text-dark) !important;
+      text-decoration: none !important;
+      transition: border-color var(--wp-transition-fast) ease, background-color var(--wp-transition-fast) ease, transform var(--wp-transition-fast) ease;
+  }
+
+  & main > a[href*="/p/Community-Members/account/"] [class*="account__Header"] {
+      margin-bottom: 0.35rem !important;
+      color: var(--wp-charcoal) !important;
+      font-family: var(--wp-font) !important;
+      font-size: clamp(1rem, 1.4vw, 1.2rem) !important;
+      font-weight: 650 !important;
+      letter-spacing: -0.015em;
+  }
+
+  & main > a[href*="/p/Community-Members/account/"] [class*="account__Address"] {
+      gap: 0.45rem;
+      color: var(--wp-text-mid) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.86rem !important;
+      line-height: 1.45;
+  }
+
+  /* account__Address svg color now lives in the shared merged rule after the Pet Directory section. */
+  & main > a[href*="/p/Community-Members/account/"] [class*="account__ProfileAvatar"] {
+      border: 0 !important;
+      background: #e4e9e7 !important;
+      color: var(--wp-text-label) !important;
+  }
+
+  @media (max-width: 42rem) {
+    & main [class*="resident-directory__SearchAndPageSizeWrapper"] {
+          grid-template-columns: minmax(0, 1fr) !important;
+          gap: 0.75rem !important;
+
+    }
+
+    & main > a[href*="/p/Community-Members/account/"] {
+          padding: 0.9rem !important;
+
+    }
+  }
+
+  /* Align the member directory with the shared document-list visual language. */
+  & main [class*="use-pagination__Pagination"] {
+      margin-top: 1.5rem !important;
+  }
+
+  & main > a[href*="/p/Community-Members/account/"] {
+      margin-bottom: 0 !important;
+      padding: 0.95rem 1.1rem !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      transform: none !important;
+  }
+
+  /* hover/focus-visible background now lives in the shared merged rule after the Pet Directory section. */
+  & main > a[href*="/p/Community-Members/account/"]:first-of-type {
+      border-radius: 0 !important;
+  }
+
+  & main > a[href*="/p/Community-Members/account/"]:last-of-type {
+      border-bottom: 0 !important;
+      border-radius: 0 !important;
+  }
+}
+
+/* Keep the final compact overrides after the legacy responsive rules. */
+@media (max-width: 40rem) {
+  [class*="mobile-navigation__MenuIcon"] {
+    left: 0.9375rem !important;
+  }
+
+  [class*="banner__CommunityLink"] {
+    transform: translateY(0.52em) !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main [class*="resident-directory__SearchAndPageSizeWrapper"] {
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+}
+
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="resident-directory__SearchAndPageSizeWrapper"] :is(input, select) {
+  min-height: 2.75rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--wp-text-dark) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.9rem !important;
+  box-shadow: none !important;
+}
+
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:is(:hover, :focus-visible) {
+  border-color: rgba(23, 63, 53, 0.28) !important;
+  background: #fff !important;
+  transform: translateY(-1px);
+}
+
+
+/* background and border-bottom for this rule now live in the shared merged rules after the Pet Directory section (order preserved: they still apply after the border: 0 reset above). */
+
+/* nth-of-type(even) background now lives in the shared merged rule after the Pet Directory section. */
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:is(:hover, :focus-visible) {
+  transform: none !important;
+}
+
+/* Individual member detail page ("Sample Resident 10 | Community Members"):
+   the whole details block (heading, address card, member rows) shares one
+   card treatment, matching the rest of the site's directory-list language. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="details__Container"] {
+  padding: 1.25rem;
+  border: 1px solid var(--wp-forest-a12);
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-overlay-white-48);
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="details__Container"] > h3 {
+  margin: 0 0 0.75rem;
+  color: var(--wp-forest);
+  font-family: var(--wp-font);
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="details__AddressHeader"] {
+  margin-bottom: 0.5rem;
+  color: var(--wp-text-label);
+  font-family: var(--wp-font);
+  font-size: 0.72rem;
+  font-weight: var(--wp-weight-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="addresses__Address"] {
+  color: var(--wp-text-body);
+  line-height: 1.45;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="member__Container"] {
+  gap: 0.9rem;
+  padding: 0.85rem 0;
+}
+
+/* An <hr> already separates each member row (and the address block above
+   the first one) — style that single divider rather than also adding our
+   own border, which would double up the line between rows. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="details__Container"] > hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--wp-forest-a16);
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="member__Container"] [class*="user-avatar__Wrapper"] {
+  background: var(--wp-forest) !important;
+  color: #fff !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="member__MemberDesignation"] {
+  color: var(--wp-text-mid);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="member__Container"] [class*="contact-info__Wrapper"] svg {
+  width: 0.85rem;
+  color: var(--wp-gold-accent);
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main [class*="member__Container"] [class*="contact-info__Wrapper"] a {
+  color: var(--wp-forest);
+  text-decoration-color: rgba(154, 118, 39, 0.55);
+  text-underline-offset: 0.16em;
+}
+
+
+/* ===== PET DIRECTORY ===== */
+
+/* Pet Directory */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Pet-Directory"]) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/CdK2eYhWfQ0/download?force=true&w=2000");
+      --wp-banner-position: center 52%;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Pet Directory aligned with the shared directory/list system */
+  & main [class*="pet-directory__SearchAndPageSizeWrapper"] {
+      display: block !important;
+      margin-bottom: 1.25rem !important;
+      padding: 1rem !important;
+      border: 1px solid var(--wp-forest-a12);
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48);
+  }
+
+  & main [class*="pet-directory__SearchAndPageSizeWrapper"] label {
+      display: block;
+      margin-bottom: 0.35rem !important;
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.72rem !important;
+      font-weight: var(--wp-weight-label) !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+  }
+
+  & main [class*="pet-directory__SearchAndPageSizeWrapper"] [class*="input-container__InputContainer"] {
+      min-height: 2.75rem !important;
+      overflow: hidden;
+      border: 1px solid var(--wp-forest-a20) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="pet-directory__SearchAndPageSizeWrapper"] input {
+      min-height: 2.75rem !important;
+      border: 0 !important;
+      background: transparent !important;
+      color: var(--wp-text-dark) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.9rem !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="pet-directory__SearchAndPageSizeWrapper"] [class*="input-icon-holder__InputIconHolder"] {
+      color: var(--wp-gray-mid) !important;
+  }
+
+  & main [class*="pet-directory__Container"] > [class*="pet__Wrapper"] {
+      margin: 0 !important;
+      padding: 0.95rem 1.1rem !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="pet__Header"] {
+      margin-bottom: 0.25rem !important;
+      color: var(--wp-charcoal) !important;
+      font-family: var(--wp-font) !important;
+      font-size: clamp(1rem, 1.4vw, 1.2rem) !important;
+      font-weight: 650 !important;
+      letter-spacing: -0.015em;
+  }
+
+  /* pet__OwnerDetails svg color and link underline treatment now live in the shared merged rules after this section. */
+  & main [class*="use-pagination__Pagination"] {
+      margin-top: 1.5rem !important;
+  }
+
+  & main [class*="pet-directory__AddPet"] {
+      margin-top: 1.5rem !important;
+  }
+}
+
+
+/* background (base/even/hover) and border-bottom for pet__Wrapper now live in the shared merged rules after this section (order preserved: they still apply after the border: 0 reset above). */
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet__ProfilePhotoArea"] :is(img, [class*="pet__ProfileAvatar"]) {
+  width: 6.25rem !important;
+  height: 6.25rem !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 42rem) {
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Pet-Directory"]
+  ) main [class*="pet__ProfilePhotoArea"] :is(img, [class*="pet__ProfileAvatar"]) {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+}
+
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main :is([class*="pet__OwnerNameContainer"], [class*="pet__OwnerDetails"]) {
+  color: var(--wp-text-mid) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.45;
+}
+
+
+/* ----- SHARED DIRECTORY ROW DECLARATIONS ----- */
+/* Shared across Board Members, Community Members, and Pet Directory. */
+/* Placed after all three page sections so this preserves the original cascade order relative to each page's own `border: 0` / other resets above. */
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"] {
+  background: var(--wp-zebra-odd) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(even),
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:nth-of-type(even),
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"]:nth-child(even) {
+  background: var(--wp-zebra-even) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:is(:hover, :focus-visible),
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:is(:hover, :focus-visible),
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"]:is(:hover, :focus-visible) {
+  background: var(--wp-zebra-hover) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody td,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"] {
+  border-bottom: 1px solid var(--wp-forest-a16) !important;
+}
+
+/* Community Members and Pet Directory have no shared table/list wrapper
+   element to hang a card border on -- each row is a direct child. Fake the
+   same bordered/rounded card the Members-tab table uses by bordering the
+   left/right edges of every row and rounding only the first/last row's
+   outer corners. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"] {
+  border-left: 1px solid var(--wp-forest-a12) !important;
+  border-right: 1px solid var(--wp-forest-a12) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:first-of-type,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"]:first-child {
+  border-top: 1px solid var(--wp-forest-a12) !important;
+  border-top-left-radius: var(--wp-radius-md) !important;
+  border-top-right-radius: var(--wp-radius-md) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"]:last-of-type,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet-directory__Container"] > [class*="pet__Wrapper"]:last-child {
+  border-bottom: 1px solid var(--wp-forest-a12) !important;
+  border-bottom-left-radius: var(--wp-radius-md) !important;
+  border-bottom-right-radius: var(--wp-radius-md) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main [class*="contact-info__Wrapper"] svg,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) main > a[href*="/p/Community-Members/account/"] [class*="account__Address"] svg,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet__OwnerDetails"] svg {
+  width: 0.85rem !important;
+  color: var(--wp-gold-accent) !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main [class*="contact-info__Wrapper"] a,
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Pet-Directory"]
+) main [class*="pet__OwnerDetails"] a {
+  color: var(--wp-forest) !important;
+  text-decoration-color: rgba(154, 118, 39, 0.55) !important;
+  text-underline-offset: 0.16em;
+}
+
+/* Unified 6-color avatar rotation, shared by Board Members and Community Members. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n + 1) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n + 1) [class*="account__ProfileAvatar"] {
+  background: #d8e3e7 !important;
+  color: #35515c !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n + 2) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n + 2) [class*="account__ProfileAvatar"] {
+  background: #ead9a8 !important;
+  color: #614d1d !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n + 3) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n + 3) [class*="account__ProfileAvatar"] {
+  background: #d4dec5 !important;
+  color: #40543d !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n + 4) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n + 4) [class*="account__ProfileAvatar"] {
+  background: #e5c9bd !important;
+  color: #67463b !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n + 5) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n + 5) [class*="account__ProfileAvatar"] {
+  background: #d9d3df !important;
+  color: #51475a !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Board-Members"]
+) main tbody tr:nth-child(6n) [class*="row__ProfileAvatar"],
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Community-Members"]
+) [class*="account__Members"] > [class*="account__Member"]:nth-child(6n) [class*="account__ProfileAvatar"] {
+  background: #d9dcda !important;
+  color: #47514c !important;
+}
+
+/* ===== RECIPES ===== */
+
+/* Recipes */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"]) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/yjYxtxLOiF4/download?force=true&w=2000");
+      --wp-banner-position: center 52%;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Expanded Add a Recipe form. */
+  & main > .local-recipe-panel--open {
+      width: 100% !important;
+      margin: -1rem 0 1.5rem !important;
+  }
+
+  & main > .local-recipe-panel--open [class*="panel__Wrapper"] {
+      padding: clamp(1rem, 3vw, 1.5rem) !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48) !important;
+      box-shadow: none !important;
+  }
+
+  & main > .local-recipe-panel--open form {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem !important;
+  }
+
+  & main > .local-recipe-panel--open [data-field-container] {
+      min-width: 0 !important;
+      margin: 0 !important;
+  }
+
+  @media (max-width: 40rem) {
+    & main > .local-recipe-panel--open form {
+          grid-template-columns: 1fr;
+
+    }
+  }
+
+  /* Recipes action panel and chart aligned with the directory/listing system. */
+  & main > [class*="user-control-button__Wrapper"] {
+      width: 100% !important;
+      margin-bottom: 1.5rem !important;
+      padding: 1rem !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48) !important;
+  }
+
+  & main [class*="user-control-button__Button"] {
+      min-height: 2.75rem !important;
+      padding: 0.65rem 0.9rem !important;
+      border: 1px solid var(--wp-forest-a20) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+      color: var(--wp-text-dark) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.9rem !important;
+      font-weight: 600 !important;
+  }
+
+  & main [class*="user-control-button__Button"] svg {
+      color: var(--wp-gold-accent) !important;
+  }
+
+  & main > [class*="table__Wrapper"] {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      overflow-x: auto !important;
+  }
+
+  & main [class*="table__Container"] {
+      width: 100% !important;
+      min-width: 0 !important;
+      border-collapse: separate !important;
+      border-spacing: 0 !important;
+      table-layout: fixed !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: var(--wp-radius-md) !important;
+      overflow: hidden !important;
+      background: var(--wp-overlay-white-48) !important;
+  }
+
+  /* The empty-state placeholder row uses colspan="999", which makes browsers
+     infer 999 columns under table-layout: fixed, collapsing every header
+     cell to a sliver and stacking their text. Fall back to auto layout only
+     while that placeholder is showing; real recipe rows never use colspan
+     and so use the fixed layout above uninterrupted. */
+  & main [class*="table__Container"]:has([class*="empty-state-row__EmptyStateCell"]) {
+      table-layout: auto !important;
+  }
+
+  & main thead th {
+      padding: 0.7rem 1.1rem !important;
+      border-bottom: 1px solid var(--wp-forest-a16) !important;
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.72rem !important;
+      font-weight: var(--wp-weight-label) !important;
+      letter-spacing: 0.08em;
+      text-align: left !important;
+      text-transform: uppercase;
+  }
+
+  & main tbody tr:nth-child(odd) {
+      background: var(--wp-zebra-odd) !important;
+  }
+
+  & main tbody tr:nth-child(even) {
+      background: var(--wp-zebra-even) !important;
+  }
+
+  & main tbody td {
+      min-width: 0 !important;
+      padding: 0.95rem 1.1rem !important;
+      border-bottom: 1px solid var(--wp-forest-a16) !important;
+      color: var(--wp-text-body) !important;
+      line-height: 1.45 !important;
+      overflow-wrap: anywhere !important;
+  }
+
+  & main [class*="empty-state-row__EmptyStateCell"] {
+      padding: 1.25rem 1.1rem !important;
+      background: var(--wp-overlay-white-48) !important;
+      color: var(--wp-text-mid) !important;
+  }
+}
+
+
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"])
+  main > .local-recipe-panel--open [data-field-container]:has(textarea),
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"])
+  main > .local-recipe-panel--open [class*="group__ButtonGroup"] {
+  grid-column: 1 / -1;
+}
+
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"])
+  main > .local-recipe-panel--open :is(input, select, textarea) {
+  width: 100% !important;
+  max-width: 100% !important;
+  border: 1px solid var(--wp-forest-a20) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+
+@media (max-width: 40rem) {
+  [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"])
+    main > [class*="user-control-button__Wrapper"] {
+    margin-bottom: 1rem !important;
+    padding: 0.85rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"])
+    main :is(th, td) {
+    padding-right: 0.7rem !important;
+    padding-left: 0.7rem !important;
+  }
+}
+
+/* ===== DISCUSSION FORUM ===== */
+
+/* Discussion Forum */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Discussion-Forum"]) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/ETRPjvb0KM0/download?force=true&w=2000");
+      --wp-banner-position: center;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Discussion Forum topic/detail view */
+  & main > [class*="topic__TopicContainer"] {
+      margin-bottom: 1.5rem !important;
+      padding: clamp(1.25rem, 3vw, 2.5rem) !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: rgba(247, 244, 234, 0.82) !important;
+      box-shadow: none !important;
+  }
+
+  & main > [class*="topic__CommentsContainer"] {
+      position: relative !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: clamp(1.25rem, 3vw, 2.5rem) !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: rgba(247, 244, 234, 0.62) !important;
+  }
+
+  /* One continuous timeline rail spanning the whole comments container,
+     instead of a separate segment per comment -- per-segment lines broke
+     visually in the gap between one comment and the next. Positioned
+     using the container's own padding plus half the badge width, so it
+     lines up with the badge center regardless of viewport width. */
+  & main > [class*="topic__CommentsContainer"]::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: clamp(1.25rem, 3vw, 2.5rem);
+      bottom: clamp(1.25rem, 3vw, 2.5rem);
+      left: calc(clamp(1.25rem, 3vw, 2.5rem) + 2.25rem);
+      width: 2px;
+      background: var(--wp-forest-a16);
+  }
+
+  & main [class*="topic__CommentsContainer"] > * {
+      min-width: 0 !important;
+      max-width: 100% !important;
+  }
+
+  /* Profile avatar circle -- the platform gives it an initials wrapper
+     with no background of its own, so bare initials floated as plain
+     text; give it the same forest-green badge treatment used for
+     Members-tab avatars. */
+  & main [class*="byline__Wrapper"] {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      color: var(--wp-text-mid) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.85rem !important;
+  }
+
+  & main [class*="user-avatar__Wrapper"] {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto !important;
+      width: 1.85rem !important;
+      height: 1.85rem !important;
+      border-radius: 50%;
+      background: var(--wp-forest) !important;
+      color: #fff !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.75rem !important;
+      font-weight: 700;
+  }
+
+  & main [class*="topic__Title"] {
+      margin-bottom: 0.5rem !important;
+      color: var(--wp-forest) !important;
+      font-family: var(--wp-font) !important;
+  }
+
+  & main [class*="topic__Divider"] {
+      margin: 1.25rem 0 !important;
+      border: 0 !important;
+      border-top: 1px solid var(--wp-forest-a16) !important;
+  }
+
+  /* Comment date badge: the platform absolutely-positions it 64px to the
+     left of the comment column (assumes a wide gutter that isn't part of
+     our layout), which is why the day/month numbers floated off on their
+     own with no visual container. Turn it into a proper rounded badge
+     sitting inline instead of relying on that offset. */
+  /* Hyphen-suffixed to avoid also matching topic__CommentsContainer /
+     topic__ReplyContainer -- "topic__Comment" and "topic__Reply" are both
+     literal substrings of those wrapper class names too, and matching them
+     by accident put a second, differently-positioned copy of this rule (and
+     the timeline rail below) on the wrong element. */
+  & main [class*="topic__Comment-"],
+  & main [class*="topic__Reply-"] {
+      position: relative !important;
+      margin-left: 0 !important;
+      padding-left: 5.5rem !important;
+  }
+
+  /* The platform nests replies inside topic__ReplyContainer with its own
+     margin/padding meant for a wider gutter than this layout has, which
+     pushed the reply's date badge out of line with the comment above it.
+     Zero that indent out -- our own padding-left on topic__Reply above
+     already accounts for the badge. */
+  & main [class*="topic__ReplyContainer"] {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+  }
+
+  & main [class*="topic__Posted"] {
+      position: absolute !important;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      top: 0 !important;
+      left: 0 !important;
+      width: 4.5rem;
+  }
+
+  & main [class*="topic__Posted"] small {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      min-width: 3rem;
+      padding: 0.5rem 0.4rem;
+      border: 1px solid var(--wp-forest-a16);
+      border-radius: var(--wp-radius-md);
+      background: #fff;
+      color: var(--wp-text-mid) !important;
+      font-family: var(--wp-font) !important;
+      line-height: 1.2;
+  }
+
+  & main [class*="topic__Day"] {
+      color: var(--wp-forest) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 1.1rem !important;
+      font-weight: 700 !important;
+  }
+
+  & main [class*="topic__Month"] {
+      color: var(--wp-text-mid) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.68rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+  }
+
+  /* Below ~40rem there isn't room for a side gutter -- drop the badge back
+     into normal flow above the comment text and hide the rail, same
+     fallback the platform's own narrow layout uses elsewhere. */
+  @media (max-width: 40rem) {
+    & main [class*="topic__Comment-"],
+    & main [class*="topic__Reply-"] {
+        padding-left: 0 !important;
+    }
+
+    & main [class*="topic__Posted"] {
+        position: static !important;
+        display: inline-flex !important;
+        justify-content: flex-start !important;
+        width: auto !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    & main [class*="topic__Posted"] small {
+        flex-direction: row !important;
+        gap: 0.35rem;
+    }
+
+    & main > [class*="topic__CommentsContainer"]::before {
+        display: none;
+    }
+  }
+
+  & main .ck-toolbar__items {
+      flex-wrap: wrap !important;
+  }
+
+  & main .ck-editor__editable {
+      min-height: 9rem !important;
+  }
+
+  /* Discussion Forum action and search as one shared filter panel. */
+  & main > [class*="user-control-button__Wrapper"] {
+      width: 100% !important;
+      margin-bottom: 0 !important;
+      padding: 1rem 1rem 0.5rem !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-bottom: 0 !important;
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48) !important;
+  }
+
+  & main > [class*="forum__SearchAndPageSizeWrapper"] {
+      width: 100% !important;
+      margin-bottom: 1.5rem !important;
+      padding: 0.5rem 1rem 1rem !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-top: 0 !important;
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48) !important;
+  }
+
+  & main [class*="user-control-button__Button"] {
+      min-height: 2.75rem !important;
+      padding: 0.65rem 0.9rem !important;
+      border: 1px solid var(--wp-forest-a20) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+      color: var(--wp-text-dark) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.9rem !important;
+      font-weight: 600 !important;
+  }
+
+  & main [class*="user-control-button__Button"] svg {
+      color: var(--wp-gold-accent) !important;
+  }
+
+  & main [class*="forum__SearchAndPageSizeWrapper"] label {
+      display: block !important;
+      margin-bottom: 0.35rem !important;
+      color: var(--wp-text-label) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.72rem !important;
+      font-weight: var(--wp-weight-label) !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+  }
+
+  & main [class*="forum__SearchAndPageSizeWrapper"] [class*="input-container__InputContainer"] {
+      min-height: 2.75rem !important;
+      overflow: hidden;
+      border: 1px solid var(--wp-forest-a20) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="forum__SearchAndPageSizeWrapper"] input {
+      min-height: 2.75rem !important;
+      border: 0 !important;
+      background: transparent !important;
+      color: var(--wp-text-dark) !important;
+      font-family: var(--wp-font) !important;
+      font-size: 0.9rem !important;
+      box-shadow: none !important;
+  }
+}
+
+/* The legacy theme imposes a later 900px cap on these two rows. */
+html body:has(.page_text > .forum > .comments) > .container-fluid > .row.banner,
+html body:has(.page_text > .forum > .comments) > .container-fluid > .row.content {
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html body:has(.page_text > .forum > .comments) > .container-fluid > .row.content {
+  isolation: isolate;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+html body:has(.page_text > .forum > .comments) .row.content::before {
+  z-index: 0;
+}
+
+html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 {
+  position: relative;
+  z-index: 1;
+}
+
+html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+/* Bound CKEditor without overriding its functional control styling. */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"][href$="/p/Discussion-Forum"]
+) main :is(.ck-editor, .ck-editor__top, .ck-sticky-panel, .ck-sticky-panel__content,
+  .ck-toolbar, .ck-toolbar__items, .ck-editor__main, .ck-editor__editable) {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+
+@media (max-width: 40rem) {
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Discussion-Forum"]
+  ) main > :is([class*="topic__TopicContainer"], [class*="topic__CommentsContainer"]) {
+    padding: 1rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Discussion-Forum"]
+  ) main [class*="topic__Posted"] {
+    position: static !important;
+    display: inline-flex !important;
+    margin: 0 0 0.75rem !important;
+    transform: none !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Discussion-Forum"]
+  ) main [class*="topic__CommentsContainer"] > :is(
+    [class*="topic__Comment-"],
+    [class*="topic__ReplyContainer"]
+  ) {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* ===== CONTACT US ===== */
+
+/* Contact Us */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"]) {
+  & {
+      --wp-banner-image: url("https://unsplash.com/photos/goholCAVTRs/download?force=true&w=2000");
+      --wp-banner-position: center;
+      --wp-banner-photo-opacity: 0;
+  }
+
+  /* Contact Us checkbox and message-field refinements. */
+  & main [class*="multi-checkbox-container__Container"] input[type="checkbox"] {
+      appearance: none !important;
+      -webkit-appearance: none !important;
+      display: inline-grid !important;
+      flex: 0 0 1.2rem;
+      width: 1.2rem !important;
+      min-width: 1.2rem !important;
+      max-width: 1.2rem !important;
+      height: 1.2rem !important;
+      min-height: 1.2rem !important;
+      margin: 0 !important;
+      border: 1.5px solid rgba(23, 63, 53, 0.42) !important;
+      border-radius: 0.2rem !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: 0.72rem !important;
+      box-shadow: none !important;
+      cursor: pointer;
+  }
+
+  & main [class*="multi-checkbox-container__Container"] input[type="checkbox"]:checked {
+      border-color: var(--wp-forest) !important;
+      background-color: var(--wp-forest) !important;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.2' d='m3.2 8.2 3 3 6.6-6.7'/%3E%3C/svg%3E") !important;
+  }
+
+  & main [class*="multi-checkbox-container__Container"] input[type="checkbox"]:focus-visible {
+      outline: 3px solid rgba(216, 182, 90, 0.35) !important;
+      outline-offset: 2px !important;
+  }
+
+  & main [class*="multi-checkbox-container__Container"] label {
+      display: flex !important;
+      gap: 0.7rem;
+      align-items: center;
+      margin: 0 !important;
+      color: var(--wp-text-dark) !important;
+      font-size: 0.95rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0 !important;
+      line-height: 1.4;
+      text-transform: none !important;
+      cursor: pointer;
+  }
+
+  & main [class*="input-container__InputContainer"]:has(textarea) {
+      overflow: visible !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+  }
+
+  & main [class*="custom-form-builder__Container"] textarea {
+      min-height: 11rem !important;
+      padding: 0.9rem 1rem !important;
+      border: 1px solid var(--wp-forest-a24) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: rgba(255, 255, 255, 0.96) !important;
+      color: var(--wp-text-dark) !important;
+      font: 400 1rem/1.6 var(--wp-font) !important;
+      box-shadow: inset 0 1px 0 rgba(23, 63, 53, 0.025) !important;
+      transition: border-color var(--wp-transition-fast) ease, box-shadow var(--wp-transition-fast) ease;
+  }
+
+  & main [class*="custom-form-builder__Container"] textarea::placeholder {
+      color: #879398 !important;
+      opacity: 1;
+  }
+
+  & main [class*="custom-form-builder__Container"] textarea:focus {
+      outline: none !important;
+      border-color: var(--wp-gold-accent) !important;
+      box-shadow: 0 0 0 3px rgba(216, 182, 90, 0.2) !important;
+  }
+
+  & main [class*="textarea__BottomPortion"] {
+      display: none !important;
+  }
+
+  /* Contact Us form matched to the account-settings form system. */
+  & main [class*="custom-form-builder__Container"] {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: clamp(1rem, 3vw, 1.5rem) !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: 0 !important;
+      background: var(--wp-overlay-white-48) !important;
+      box-shadow: none !important;
+  }
+
+  & main [class*="custom-form-builder__Container"] form {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem !important;
+      width: 100% !important;
+      max-width: none !important;
+  }
+
+  & main [class*="custom-form-builder__Container"] form > * {
+      min-width: 0 !important;
+      margin: 0 !important;
+  }
+
+  & main [class*="custom-form-builder__Container"] form > :nth-child(n + 3) {
+      grid-column: 1 / -1;
+  }
+
+  & main [class*="custom-form-builder__Container"] label small {
+      margin-left: 0.4rem;
+      color: #7a878c;
+      font-size: 0.68rem;
+      letter-spacing: 0.03em;
+  }
+
+  & main [class*="custom-form-builder__Container"] textarea {
+      min-height: 9rem !important;
+      padding: 0.75rem !important;
+      resize: vertical;
+  }
+
+  & main [class*="multi-checkbox-container__Container"] {
+      padding: 1rem !important;
+      border: 1px solid var(--wp-forest-a12) !important;
+      border-radius: 0 !important;
+      background: rgba(255, 255, 255, 0.45) !important;
+  }
+
+  & main [class*="group__ButtonGroup"] button[type="submit"] {
+      min-height: 2.65rem !important;
+      padding: 0.6rem 1rem !important;
+      border: 1px solid rgba(23, 63, 53, 0.25) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: #fff !important;
+      box-shadow: none !important;
+      color: var(--wp-forest) !important;
+      font-weight: 650 !important;
+  }
+
+  @media (max-width: 40rem) {
+    & main [class*="custom-form-builder__Container"] form {
+          grid-template-columns: 1fr;
+
+    }
+
+    & main [class*="custom-form-builder__Container"] form > * {
+          grid-column: 1 !important;
+
+    }
+  }
+
+  /* Final Contact Us message-field override: keep this after HOA Express form rules. */
+  & main [class*="custom-form-builder__Container"] textarea {
+      min-height: 11rem !important;
+      padding: 0.9rem 1rem !important;
+      border: 1px solid var(--wp-forest-a24) !important;
+      border-radius: var(--wp-radius-md) !important;
+      background: rgba(255, 255, 255, 0.96) !important;
+      color: var(--wp-text-dark) !important;
+      font: 400 1rem/1.6 var(--wp-font) !important;
+      box-shadow: inset 0 1px 0 rgba(23, 63, 53, 0.025) !important;
+  }
+
+  & main [class*="custom-form-builder__Container"] textarea:focus {
+      outline: none !important;
+      border-color: var(--wp-gold-accent) !important;
+      box-shadow: 0 0 0 3px rgba(216, 182, 90, 0.2) !important;
+  }
+}
+
+
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"])
+  main [class*="custom-form-builder__Container"] label,
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"])
+  main [class*="custom-form-builder__Container"] legend {
+  display: block !important;
+  margin-bottom: 0.4rem !important;
+  color: var(--wp-text-label) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.75rem !important;
+  font-weight: var(--wp-weight-label) !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"])
+  main [class*="custom-form-builder__Container"] :is(
+    [class*="input-container__InputContainer"],
+    input:not([type="checkbox"]),
+    select,
+    textarea
+  ) {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-color: var(--wp-forest-a20) !important;
+  border-radius: var(--wp-radius-md) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"])
+  main [class*="custom-form-builder__Container"] :is(input, select) {
+  min-height: 2.75rem !important;
+}
+
+
+/* ===== BOOK CLUB ===== */
+
+/* Book Club folder pages */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href$="/p/Monthly-Book-Club-List"],
+    [href$="/p/Book-recommendations"]
+  )
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/2NZQmMLo_7Q/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ===== BOARD MEMBER DOCUMENTS (FOLDER PAGES) ===== */
+
+/* Board Member Documents folder pages */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href$="/p/General"],
+    [href$="/p/ACC"],
+    [href$="/p/Minutes-of-meetings"],
+    [href$="/p/Legal"],
+    [href$="/p/Financial"]
+  )
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/81ikZZG7_AA/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ===== INFRASTRUCTURE (FOLDER PAGES) ===== */
+
+/* Infrastructure folder pages */
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href$="/p/Annual-Meetings"],
+    [href$="/p/Surveys"],
+    [href$="/p/Insurance"],
+    [href$="/p/Maintenance"],
+    [href$="/p/Miscellaneous"],
+    [href$="/p/Templatessamples"]
+  )
+) {
+  --wp-banner-image: url("https://unsplash.com/photos/rn00OVh0gEI/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ===== HOA VOTING / SURVEYS ===== */
+
+/* HOA Voting / Surveys */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/HoA-VotingSurveys"]) {
+  --wp-banner-image: url("https://unsplash.com/photos/0CvHQ62gwY8/download?force=true&w=2000");
+  --wp-banner-position: center;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ===== GOOD SAMARITAN WESTBROOKE ===== */
+
+/* Good Samaritan Westbrooke */
+[class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Good-Samaritan-Westbrooke"]) {
+  --wp-banner-image: url("https://unsplash.com/photos/tXiMrX3Gc-g/download?force=true&w=2000");
+  --wp-banner-position: center 42%;
+  --wp-banner-photo-opacity: 0;
+}
+
+/* ============================================================
+   FINAL CASCADE OVERRIDES
+   These blocks intentionally re-open earlier selectors late in
+   the file to win the cascade (see each block's own comment).
+   Left in their original relative order and position -- moving
+   any of them earlier could change which declaration wins.
+   ============================================================ */
+
+/* Final mobile precedence after all legacy component rules. */
+
+[class*="content__Container"] {
+  align-content: start !important;
+  grid-auto-rows: max-content !important;
+  grid-template-rows: max-content max-content !important;
+  padding-right: clamp(1.25rem, 5vw, 2.5rem) !important;
+  padding-left: clamp(1.25rem, 5vw, 2.5rem) !important;
+}
+
+[class*="content__Container"] > main {
+  align-self: start !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+[class*="app__AppContainer"]:has(
+  a[aria-current="page"]:is(
+    [href="/"],
+    [href$="/westbrookeplacehoa/concept1/"]
+  )
+) [class*="content__Container"] > main {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Keep the community title visually separate from the banner photo. */
+
+[class*="banner__CommunityLink"] {
+  letter-spacing: -0.045em !important;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem) !important;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem) !important;
+  -webkit-text-stroke: clamp(2px, 0.045em, 5px) var(--wp-forest-a90);
+  transform: none !important;
+  text-shadow:
+    -0.015em 0.015em 0 rgba(255, 255, 255, 0.9),
+    0 0 0.09em var(--wp-overlay-white-48),
+    0 0.04em 0.14em rgba(16, 45, 38, 0.3) !important;
+}
+
+@media (max-width: 40rem) {
+  [class*="mobile-navigation__MenuIcon"] {
+    left: 0.9375rem !important;
+  }
+
+  [class*="banner__CommunityLink"] {
+    font-size: clamp(2.5rem, 13vw, 3.75rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.04em !important;
+    margin-top: clamp(1.5rem, 3vw, 2.5rem) !important;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem) !important;
+    -webkit-text-stroke: clamp(1.25px, 0.045em, 2.4px) var(--wp-forest-a90);
+    transform: none !important;
+    text-shadow:
+      -0.018em 0.018em 0 rgba(255, 255, 255, 0.88),
+      0 0 0.055em rgba(255, 255, 255, 0.34),
+      0 0.035em 0.09em rgba(16, 45, 38, 0.26) !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main [class*="resident-directory__SearchAndPageSizeWrapper"] {
+    gap: 1rem !important;
+    padding: 1.25rem !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main > a[href*="/p/Community-Members/account/"] {
+    justify-items: start !important;
+    padding: 1.15rem !important;
+    text-align: left !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main > a[href*="/p/Community-Members/account/"] [class*="account__Members"] {
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main > a[href*="/p/Community-Members/account/"] [class*="account__Header"] {
+    width: 100% !important;
+    margin-top: 0.7rem !important;
+    margin-bottom: 0.45rem !important;
+    text-align: left !important;
+  }
+
+  [class*="app__AppContainer"]:has(
+    a[aria-current="page"][href$="/p/Community-Members"]
+  ) main > a[href*="/p/Community-Members/account/"] [class*="account__Addresses"] {
+    justify-self: stretch !important;
+    width: 100% !important;
+  }
+}
+
+/* Smooth the title treatment between the phone and full desktop versions. */
+
+@media (min-width: 40.001rem) and (max-width: 63.999rem) {
+  [class*="banner__CommunityLink"] {
+    font-size: clamp(3.75rem, 8.5vw, 8.75rem) !important;
+    -webkit-text-stroke: clamp(2px, 0.045em, 4px) var(--wp-forest-a90);
+    text-shadow:
+      -0.016em 0.016em 0 rgba(255, 255, 255, 0.9),
+      0 0 0.07em rgba(255, 255, 255, 0.42),
+      0 0.038em 0.115em rgba(16, 45, 38, 0.28) !important;
+  }
+}
+
+/* Mirror the utility controls against a shared outer page gutter. */
+
+[class*="top-bar__Wrapper"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-right: clamp(1.25rem, 8vw, 1.875rem) !important;
+  padding-left: clamp(1.25rem, 8vw, 1.875rem) !important;
+}
+
+[class*="top-bar__TopBarContainer"],
+[class*="mobile-navigation__TopRow"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+[class*="mobile-navigation__TopRow"] {
+  padding-right: clamp(1.25rem, 8vw, 1.875rem) !important;
+  padding-left: clamp(1.25rem, 8vw, 1.875rem) !important;
+}
+
+[class*="mobile-navigation__MenuIcon"] {
+  left: clamp(1.25rem, 8vw, 1.875rem) !important;
+}
+
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
+  transform: translateX(0.625rem);
+}
+
+/* Match the admin bar and footer to the main content gutter. */
+
+/* Fallback background -- see the skip-link/button note below, same
+   per-route missing-platform-CSS issue: without this the bar has no
+   background of its own and the white logo/text become unreadable. */
+[class*="admin-bar__Container"] {
+  background: rgb(51, 51, 51);
+}
+
+[class*="admin-bar__Content"] {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 2.75rem !important;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+}
+
+/* An absolutely-positioned child's containing block is its ancestor's
+   padding box, not its content box -- left:0 sits flush at the start of
+   that padding, ignoring the padding value itself. Match it explicitly to
+   admin-bar__Content's own 40px padding-left above. */
+[class*="admin-bar__Logo"] {
+  position: absolute !important;
+  top: 50% !important;
+  left: 40px !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Fallback size -- the platform normally scales this logo image down to
+   100px wide via its own runtime CSS; without it (missing on some local
+   preview snapshots) it renders at the raw 200px image size. */
+[class*="admin-bar__Logo"] img {
+  width: 100px;
+  height: auto;
+}
+
+/* "Admin Portal"/"Support" as flat horizontal tabs sitting in the dark bar
+   -- no box/border, just a bottom accent that lights up gold on
+   hover/focus, the same "connected to what it controls" logic as the
+   vertical settings tabs elsewhere in this file, just laid out sideways.
+   Also carries the fallback colors/sizing this pair needs since the
+   platform's own runtime CSS for it is injected per-route and occasionally
+   isn't captured for every local preview snapshot -- without it these
+   render as raw browser-default blue underlined links. */
+[class*="admin-bar__StyledAnchorButton"][class*="admin-bar__StyledAnchorButton"] {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.75rem;
+  padding: 0 0.9rem !important;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.82rem;
+  text-decoration: none !important;
+  transition: border-color var(--wp-transition-base) ease, color var(--wp-transition-base) ease;
+}
+
+[class*="admin-bar__StyledAnchorButton"][class*="admin-bar__StyledAnchorButton"]:hover,
+[class*="admin-bar__StyledAnchorButton"][class*="admin-bar__StyledAnchorButton"]:focus-visible {
+  border-bottom-color: var(--wp-gold) !important;
+  color: #fff !important;
+}
+
+[class*="admin-bar__StyledAnchorButton"][class*="admin-bar__StyledAnchorButton"] svg {
+  color: inherit !important;
+}
+
+/* "View website without admin controls" -- match the flat tab treatment
+   above (transparent, white text, gold underline on hover) instead of the
+   white rounded pill it gets from the generic standard__Button rule. */
+[class*="admin-bar__StyledButton"][class*="admin-bar__StyledButton"] {
+  height: 2.75rem;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.82rem;
+  transition: border-color var(--wp-transition-base) ease, color var(--wp-transition-base) ease;
+}
+
+[class*="admin-bar__StyledButton"][class*="admin-bar__StyledButton"]:hover,
+[class*="admin-bar__StyledButton"][class*="admin-bar__StyledButton"]:focus-visible {
+  border-bottom-color: var(--wp-gold) !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+[class*="admin-bar__StyledButton"][class*="admin-bar__StyledButton"] svg {
+  color: inherit !important;
+}
+
+/* At narrow widths the logo (100px + 40px offset) plus all three links no
+   longer fit on one line. The row is flex nowrap with no wrap allowed, so
+   the links' text wraps internally instead, inflating past the bar's fixed
+   height and getting clipped top/bottom. Drop the logo (purely decorative
+   here) and let the links scroll horizontally on one line instead. */
+@media (max-width: 40rem) {
+  [class*="admin-bar__Logo"] {
+    display: none !important;
+  }
+
+  [class*="admin-bar__Content"] {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  [class*="admin-bar__Content"] > div {
+    display: flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    white-space: nowrap !important;
+  }
+
+  [class*="admin-bar__StyledAnchorButton"][class*="admin-bar__StyledAnchorButton"],
+  [class*="admin-bar__StyledButton"][class*="admin-bar__StyledButton"] {
+    flex: 0 0 auto;
+    height: auto !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+}
+
+[class*="skip-to-main-content__Link"] {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+[class*="skip-to-main-content__Link"]:focus {
+  position: fixed !important;
+  z-index: 10010;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-forest);
+  color: #fff !important;
+  clip: auto;
+  white-space: normal;
+}
+
+[class*="footer__Container"] {
+  padding-right: clamp(1.25rem, 5vw, 2.5rem) !important;
+  padding-left: clamp(1.25rem, 5vw, 2.5rem) !important;
+}
+
+
+

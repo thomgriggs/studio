@@ -16,12 +16,23 @@ await fs.copyFile(path.join(root, "local-interactions.js"), path.join(localAsset
 await fs.copyFile(path.join(root, "custom-css", "hoa-custom.css"), path.join(localAssetRoot, "custom-css", "hoa-custom.css"));
 
 const rewriteLinks = (html) => html
-  .replace(/href="\/(file|account|payments)\//g, 'href="https://www.westbrookeplacehoa.com/$1/')
+  .replace(/href="\/file\//g, 'href="https://www.westbrookeplacehoa.com/file/')
+  .replace(/href="\/account\/member-settings"/g, `href="${prefix}/account/member-settings/general"`)
+  .replace(/href="\/account\/account-settings"/g, `href="${prefix}/account/account-settings/addresses"`)
+  .replace(/href="\/account\//g, `href="${prefix}/account/`)
+  .replace(/href="\/payments\//g, 'href="https://www.westbrookeplacehoa.com/payments/')
   .replace(/href="\/p\//g, `href="${prefix}/p/`)
   .replace(/href="\/"/g, `href="${prefix}/"`);
 
 for (const item of manifest) {
-  const snapshot = await fs.readFile(path.join(snapshots, `${item.key}.html`), "utf8");
+  let snapshot = await fs.readFile(path.join(snapshots, `${item.key}.html`), "utf8");
+  if (item.key === "Recipes") {
+    snapshot = snapshot
+      .replaceAll("Melody &amp; Paul, Melody, &amp; Sample Resident 85", "Sample Resident Household")
+      .replaceAll("The Aldo Family", "The Sample Family")
+      .replaceAll("Paul Aldo", "Sample Resident 85");
+    await fs.writeFile(path.join(snapshots, `${item.key}.html`), snapshot);
+  }
   const route = item.path;
   const outputDir = route === "/" ? root : path.join(root, route.slice(1));
   await fs.mkdir(outputDir, { recursive: true });

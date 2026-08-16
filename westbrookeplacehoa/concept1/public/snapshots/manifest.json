@@ -113,6 +113,12 @@
     "tables": 0
   },
   {
+    "path": "/p/Discussion-Forum/topic/Greetings-from-your-New-Neighbors--543288365",
+    "key": "Discussion-Forum__topic__Greetings-from-your-New-Neighbors--543288365",
+    "title": "Welcome from Your New Neighbors! | Discussion Forum | Westbrooke Place",
+    "signedIn": true
+  },
+  {
     "path": "/p/Recipes",
     "key": "Recipes",
     "title": "Recipes | Westbrooke Place",
@@ -565,5 +571,55 @@
     "path": "/p/Community-Members/account/3783897349",
     "key": "p__Community-Members__account__3783897349",
     "title": "Sample Resident 16 | Community Members | Westbrooke Place"
+  },
+  {
+    "path": "/account/account-settings/addresses",
+    "key": "account__account-settings__addresses",
+    "title": "Account settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/account-settings/members",
+    "key": "account__account-settings__members",
+    "title": "Members | Account settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/account-settings/privacy",
+    "key": "account__account-settings__privacy",
+    "title": "Privacy | Account settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/general",
+    "key": "account__member-settings__general",
+    "title": "Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/profile",
+    "key": "account__member-settings__profile",
+    "title": "Profile | Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/password",
+    "key": "account__member-settings__password",
+    "title": "Password | Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/contact",
+    "key": "account__member-settings__contact",
+    "title": "Contact | Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/privacy",
+    "key": "account__member-settings__privacy",
+    "title": "Privacy | Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/member-settings/admin",
+    "key": "account__member-settings__admin",
+    "title": "Admin | Member settings | Westbrooke Place"
+  },
+  {
+    "path": "/account/communications/archive",
+    "key": "account__communications__archive",
+    "title": "Communications archive | Westbrooke Place"
   }
 ]
