@@ -115,10 +115,17 @@ export function SnapshotPage({ snapshotKey }: { snapshotKey: string }) {
       userMenu.innerHTML = mobileUserLinks
         ? `<ul>${mobileUserLinks.innerHTML}</ul>`
         : "<p>Account controls are unavailable in this snapshot.</p>";
+      const studioPrefix = "/westbrookeplacehoa/concept1";
       userMenu.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
         const label = link.textContent?.trim();
-        if (label === "Member settings") link.href = "/account/member-settings/general";
-        if (label === "Account settings") link.href = "/account/account-settings/addresses";
+        if (label === "Member settings") link.setAttribute("href", `${studioPrefix}/account/member-settings/general`);
+        else if (label === "Account settings") link.setAttribute("href", `${studioPrefix}/account/account-settings/addresses`);
+        else {
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("/") && !href.startsWith(studioPrefix)) {
+            link.setAttribute("href", studioPrefix + href);
+          }
+        }
       });
 
       const notificationMenu = document.createElement("div");
