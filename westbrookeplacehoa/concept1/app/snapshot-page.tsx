@@ -30,16 +30,8 @@ export function SnapshotPage({ snapshotKey }: { snapshotKey: string }) {
     if (rotatingPhoto) {
       const rotatingImages = [
         {
-          src: "https://unsplash.com/photos/UmqzalI5oIE/download?force=true&w=1400",
-          alt: "Southern brick home with a welcoming porch",
-        },
-        {
-          src: "https://unsplash.com/photos/CJxWogLhFJw/download?force=true&w=1400",
-          alt: "Blue hydrangeas in a sunlit garden courtyard",
-        },
-        {
-          src: "https://unsplash.com/photos/5rS3ujHGAw4/download?force=true&w=1400",
-          alt: "Mature oak tree beside a quiet neighborhood road",
+          src: "https://public-files.hoa-express.com/website-1063154681/pages/page-4074006143/rotating-photos/X35LiRb1RjKh73WC.jpg",
+          alt: "Westbrooke Place community photo",
         },
       ];
       let rotatingIndex = 0;
