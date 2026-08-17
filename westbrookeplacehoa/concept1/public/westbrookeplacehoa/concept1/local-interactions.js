@@ -1,7 +1,9 @@
 /* Local preview behavior only. This file is never copied into HOA Express. */
 document.addEventListener("DOMContentLoaded", () => {
-  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-    const studioPrefix = "/westbrookeplacehoa/concept1";
+  const studioPrefix = "/westbrookeplacehoa/concept1";
+  const isLocalPreview = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
+  if (isLocalPreview) {
     document.querySelectorAll(`a[href^="${studioPrefix}/"]`).forEach((link) => {
       link.setAttribute("href", link.getAttribute("href").slice(studioPrefix.length) || "/");
     });
@@ -169,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       child.style.paddingLeft = "1.5rem";
 
       const link = document.createElement("a");
-      link.href = href;
+      link.href = isLocalPreview ? href : studioPrefix + href;
       link.textContent = title;
       child.append(link);
       return child;
