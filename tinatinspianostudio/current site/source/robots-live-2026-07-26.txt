@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+sitemap: https://tinatinspianostudio.com/sitemap171.xml
+sitemap: https://tinatinspianostudio.com/sitemap121.xml
+sitemap: https://tinatinspianostudio.com/sitemap926.xml
+sitemap: https://tinatinspianostudio.com/sitemap155.xml
+sitemap: https://tinatinspianostudio.com/sitemap109.xml

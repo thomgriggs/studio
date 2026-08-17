@@ -1,0 +1,8 @@
+/* Blue offsets stay visible against the performance archive's pink hero. */
+.performance-header .logo span {
+  text-shadow: 4px 3px 0 var(--blue);
+}
+
+.performance-header .signup {
+  box-shadow: 4px 4px 0 var(--blue);
+}

@@ -1,0 +1,167 @@
+/* Narrow-screen safeguards for the selected direction. */
+@media (max-width: 850px) {
+  .hello,
+  .truth,
+  .community,
+  .price-cards,
+  .schedule,
+  .policies > div,
+  .featured,
+  .story,
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lesson-list a {
+    grid-template-columns: 45px minmax(0, 1fr) 30px;
+  }
+
+  .price-cards article,
+  .cards,
+  .card {
+    min-width: 0;
+  }
+
+  .card h3 {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .site-header .logo {
+    min-width: 0;
+  }
+
+  .site-header .logo span {
+    font-size: 54px;
+  }
+
+  .site-header .logo b {
+    font-size: 14px;
+  }
+
+  .site-header .signup {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 22vw;
+  }
+
+  .truth {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .truth h2 {
+    font-size: 18vw;
+    overflow-wrap: anywhere;
+  }
+
+  .truth p {
+    font-size: 30px;
+  }
+
+  .truth .circle {
+    width: min(260px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 54px;
+  }
+
+  .lesson-list b,
+  .caption {
+    overflow-wrap: anywhere;
+  }
+
+  .caption {
+    left: 15px;
+    right: 15px;
+  }
+
+  .lesson-hero,
+  .pricing,
+  .schedule,
+  .trial,
+  .policies,
+  .performance-header + main .hero,
+  .page-head,
+  .archive,
+  .story-copy,
+  .cta {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .lesson-hero h1 {
+    font-size: 20vw;
+    overflow-wrap: anywhere;
+  }
+
+  .pricing-intro h2,
+  .policies > h2 {
+    font-size: 17vw;
+    overflow-wrap: anywhere;
+  }
+
+  .price-cards article {
+    padding: 27px;
+  }
+
+  .price-cards b {
+    font-size: 36px;
+  }
+
+  .schedule h2 {
+    font-size: 14vw;
+    letter-spacing: -.065em;
+    overflow-wrap: anywhere;
+  }
+
+  .schedule aside {
+    grid-template-columns: 88px minmax(0, 1fr);
+  }
+
+  .trial h2 {
+    font-size: 22vw;
+  }
+
+  .trial > a {
+    max-width: 100%;
+    padding: 16px 18px;
+  }
+
+  .page-head h1 {
+    font-size: 17vw;
+    overflow-wrap: anywhere;
+  }
+
+  .archive > h2 {
+    font-size: 16vw;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 330px;
+    padding: 27px;
+  }
+
+  .card h3 {
+    font-size: 34px;
+  }
+
+  .story-copy h2 {
+    font-size: 36px;
+  }
+
+  .cta h2 {
+    font-size: 19vw;
+    overflow-wrap: anywhere;
+  }
+}

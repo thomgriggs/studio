@@ -1,0 +1,26 @@
+/* The lessons hero is yellow, so its header gets a page-specific palette. */
+.lesson-header {
+  color: var(--ink);
+}
+
+.lesson-header .logo span {
+  color: var(--pink);
+  text-shadow: 4px 3px 0 var(--blue);
+}
+
+.lesson-header .signup {
+  background: var(--pink);
+  color: white;
+  box-shadow: 4px 4px 0 var(--blue);
+}
+
+.lesson-header nav a:not(.signup) {
+  text-decoration-color: var(--pink);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.lesson-header nav a:not(.signup):hover,
+.lesson-header nav a:not(.signup):focus-visible {
+  text-decoration-line: underline;
+}

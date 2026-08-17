@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <title>Request a Lesson — Tinatin’s Piano Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared-header.css">
+  <link rel="stylesheet" href="../performances/performance-footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../performances/social-icons.css">
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+  <header class="site-header booking-header">
+    <a class="logo" href="../"><span>T</span><b>TINATIN’S<br>PIANO STUDIO</b></a>
+    <nav><a href="../#about">About</a><a href="../lessons/">Lessons</a><a href="../performances/">Performances</a><a href="../#community">Studio Life</a><a class="signup" href="./">TRY A LESSON!</a></nav>
+  </header>
+
+  <main class="booking-shell" data-booking>
+    <section class="booking-intro">
+      <p class="eyebrow">A FIRST MEETING AT THE PIANO</p>
+      <h1>LET’S FIND<br>YOUR TIME.</h1>
+      <p>Choose an open time for a complimentary 30-minute trial. Tinatin will review the request before the lesson is confirmed.</p>
+      <div class="approval-note"><span>1</span><b>REQUEST</b><i>→</i><span>2</span><b>APPROVAL</b><i>→</i><span>3</span><b>PLAY!</b></div>
+    </section>
+
+    <section class="scheduler" aria-live="polite">
+      <ol class="steps" aria-label="Booking progress">
+        <li class="active" data-step-marker="1"><span>01</span> Lesson</li>
+        <li data-step-marker="2"><span>02</span> Time</li>
+        <li data-step-marker="3"><span>03</span> You</li>
+        <li data-step-marker="4"><span>04</span> Review</li>
+      </ol>
+
+      <div class="panel active" data-panel="1">
+        <p class="mini">CHOOSE A FIRST STEP</p>
+        <h2>What brings you to the piano?</h2>
+        <div class="choices lesson-choices">
+          <button type="button" data-lesson="Complimentary trial" data-duration="30 minutes" data-price="Free">
+            <span class="choice-number">30</span><span><strong>COMPLIMENTARY TRIAL</strong><small>A relaxed first meeting for a new student</small></span><b>FREE</b>
+          </button>
+          <button type="button" data-lesson="Returning-student lesson" data-duration="45 minutes" data-price="Included in tuition">
+            <span class="choice-number">45</span><span><strong>RETURNING STUDENT</strong><small>For current studio families with an active plan</small></span><b>MEMBERS</b>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="2">
+        <button class="back-step" type="button" data-back="1">← Change lesson</button>
+        <p class="mini">ONLY OPEN TIMES ARE SHOWN</p>
+        <h2>Choose a time that sings.</h2>
+        <div class="week-strip">
+          <button type="button" class="day active" data-day="Tuesday, August 11"><small>TUE</small><strong>11</strong><span>3 times</span></button>
+          <button type="button" class="day" data-day="Wednesday, August 12"><small>WED</small><strong>12</strong><span>2 times</span></button>
+          <button type="button" class="day" data-day="Thursday, August 13"><small>THU</small><strong>13</strong><span>3 times</span></button>
+          <button type="button" class="day" data-day="Friday, August 14"><small>FRI</small><strong>14</strong><span>2 times</span></button>
+        </div>
+        <div class="time-grid" data-times>
+          <button type="button" data-time="9:30 AM">9:30 AM</button><button type="button" data-time="1:00 PM">1:00 PM</button><button type="button" data-time="4:00 PM">4:00 PM</button>
+        </div>
+        <p class="privacy-note">Booked lessons and student names are never displayed.</p>
+      </div>
+
+      <div class="panel" data-panel="3">
+        <button class="back-step" type="button" data-back="2">← Change time</button>
+        <p class="mini">TELL TINATIN A LITTLE ABOUT YOU</p>
+        <h2>Who will be playing?</h2>
+        <form data-details>
+          <label>Student name<input name="student" autocomplete="name" required placeholder="First and last name"></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label>Student age<select name="age"><option>4–6</option><option>7–10</option><option>11–14</option><option>15–18</option><option>Adult</option></select></label>
+          <label>Experience<select name="experience"><option>Brand new</option><option>Less than one year</option><option>1–3 years</option><option>4+ years</option><option>Advanced / professional</option></select></label>
+          <label class="wide">What would you love to learn?<textarea name="goals" rows="4" placeholder="Favorite music, goals, previous study…"></textarea></label>
+          <button class="continue" type="submit">REVIEW MY REQUEST →</button>
+        </form>
+      </div>
+
+      <div class="panel" data-panel="4">
+        <button class="back-step" type="button" data-back="3">← Edit details</button>
+        <p class="mini">ONE LAST LOOK</p>
+        <h2>Your trial request.</h2>
+        <div class="summary" data-summary></div>
+        <button class="continue" type="button" data-submit-request>SEND REQUEST TO TINATIN →</button>
+        <p class="privacy-note">No payment is collected for a complimentary trial.</p>
+      </div>
+
+      <div class="panel confirmation" data-panel="5">
+        <div class="confetti">♪</div>
+        <p class="mini">REQUEST RECEIVED</p>
+        <h2>Now Tinatin<br>takes a look.</h2>
+        <p>Your requested time is being held. You’ll receive an email when Tinatin approves it or suggests another opening.</p>
+        <div class="status"><span>REQUESTED</span><i>→</i><b>PENDING APPROVAL</b></div>
+        <a href="../">BACK TO THE STUDIO →</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="owner-view">
+    <div><p class="mini">BEHIND THE MUSIC · TINATIN’S VIEW</p><h2>A simple approval queue.</h2><p>The student never sees this side. Tinatin receives the request with the student’s goals and can approve it or propose another available time.</p></div>
+    <article><span>NEW TRIAL REQUEST</span><h3 data-owner-name>New student</h3><p data-owner-slot>Tuesday, August 11 · 9:30 AM</p><div><button type="button">APPROVE</button><button type="button">SUGGEST ANOTHER TIME</button></div></article>
+  </section>
+
+  <footer class="site-footer"><a class="logo" href="../"><span>T</span><b>TINATIN’S<br>PIANO STUDIO</b></a><p>Tampa Bay, Florida<br>Private piano lessons · Performance · Accompaniment</p><div class="socials"><a href="https://www.facebook.com/tgudadze" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a><a href="https://www.instagram.com/tikatikagudadze/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a><a href="https://www.youtube.com/channel/UC31NFt_E4eKYRylOLm-wqqA/videos" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span></a><a href="https://www.linkedin.com/in/tinatin-gudadze-037978a1/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></div></footer>
+  <script src="booking.js"></script>
+</body>
+</html>
