@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Learning Experience — Design Directions</title>
+<style>
+:root{--navy:#233c5d;--blue:#375f98;--gold:#ffb706;--coral:#fb6642;--ink:#171717;--paper:#f4f5f2;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:#e9ebe8;color:var(--ink);font-family:"Open Sans",Arial,sans-serif}.top{background:#fff;border-bottom:1px solid #d9ddd9;padding:24px 5vw;position:sticky;top:0;z-index:10}.top strong{color:var(--navy);font-size:20px}.top span{color:#667;display:block;font-size:13px;margin-top:5px}.direction{min-height:100vh;padding:clamp(70px,8vw,120px) 6vw}.eyebrow{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.title{color:var(--navy);font-size:clamp(44px,6vw,82px);font-weight:400;letter-spacing:-.04em;line-height:.98;margin:15px 0 54px}.title strong{font-weight:800}.label{background:var(--navy);color:#fff;display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:22px;padding:9px 13px;text-transform:uppercase}
+/* 01 */
+.editorial{background:#fff}.editorial-grid{display:grid;gap:52px;grid-template-columns:.65fr 1.35fr}.editorial-intro{align-self:start;position:sticky;top:135px}.editorial-intro p{font-size:20px;line-height:1.6;max-width:390px}.timeline{position:relative}.timeline:before{background:var(--gold);content:"";height:calc(100% - 38px);left:35px;position:absolute;top:20px;width:3px}.step{display:grid;gap:28px;grid-template-columns:72px 1fr;padding:0 0 48px;position:relative}.num{align-items:center;background:#fff;border:3px solid var(--gold);border-radius:50%;color:var(--navy);display:flex;font-size:17px;font-weight:800;height:72px;justify-content:center;position:relative;width:72px}.step h3{color:var(--navy);font-size:29px;margin:4px 0 13px}.step p{font-size:17px;line-height:1.65;margin:0;max-width:680px}
+/* 02 */
+.progression{background:var(--navy);color:#fff}.progression .eyebrow{color:var(--gold)}.progression .title{color:#fff}.rail{display:grid;gap:2px;grid-template-columns:repeat(4,1fr)}.stage{background:rgba(255,255,255,.07);min-height:440px;padding:38px 28px;position:relative;transition:.25s}.stage:hover{background:#fff;color:var(--ink);transform:translateY(-10px)}.stage:before{background:var(--gold);content:"";height:6px;left:0;position:absolute;right:0;top:0}.stage-no{color:var(--gold);font-size:56px;font-weight:300;line-height:1}.stage h3{font-size:25px;line-height:1.1;margin:42px 0 24px}.stage ul{line-height:1.65;margin:0;padding-left:20px}.stage li+li{margin-top:12px}.progression-note{border-left:4px solid var(--gold);font-size:20px;line-height:1.55;margin:48px 0 0;padding-left:22px}
+/* 03 */
+.photo-led{background:#f7f7f4;padding:0}.photo-wrap{display:grid;grid-template-columns:1fr 1.15fr;min-height:100vh}.photo{background:linear-gradient(rgba(35,60,93,.16),rgba(35,60,93,.16)),url('https://images.squarespace-cdn.com/content/v1/63bef885f503c72ec46863fe/78bd0616-769b-4f56-bdec-446e3110fa1d/3.png?format=1500w') center/cover no-repeat;min-height:850px}.photo-content{padding:clamp(65px,7vw,110px) 6vw}.photo-content .title{font-size:clamp(42px,5vw,70px);margin-bottom:42px}.cards{display:grid;gap:16px}.card{align-items:flex-start;background:#fff;border-left:5px solid transparent;box-shadow:0 10px 30px rgba(35,60,93,.07);display:grid;gap:20px;grid-template-columns:52px 1fr;padding:24px;transition:.25s}.card:hover{border-left-color:var(--gold);transform:translateX(-10px)}.icon{align-items:center;background:var(--gold);border-radius:50%;color:var(--navy);display:flex;font-size:14px;font-weight:900;height:48px;justify-content:center;width:48px}.card h3{color:var(--navy);font-size:22px;margin:0 0 8px}.card ul{font-size:15px;line-height:1.55;margin:0;padding-left:19px}.card li+li{margin-top:5px}.footer-note{color:#667;font-size:13px;margin-top:30px}
+@media(max-width:900px){.editorial-grid,.photo-wrap{grid-template-columns:1fr}.editorial-intro{position:static}.rail{grid-template-columns:1fr 1fr}.photo{min-height:540px}}@media(max-width:620px){.direction{padding-inline:24px}.rail{grid-template-columns:1fr}.stage{min-height:auto}.photo-content{padding-inline:24px}.title{font-size:44px}}
+</style>
+</head>
+<body>
+<header class="top"><strong>Our Learning Experience — Inspiration Directions</strong><span>Three local-only concepts using the existing content and Executive Presence palette.</span></header>
+
+<section class="direction editorial">
+  <span class="label">Direction 01 · Editorial Timeline</span>
+  <div class="editorial-grid">
+    <div class="editorial-intro"><p class="eyebrow">A deliberate progression</p><h1 class="title">Our Learning<br><strong>Experience</strong></h1><p>Clean, calm, and premium. This direction turns the content into a guided story instead of a collection of bordered boxes.</p></div>
+    <div class="timeline">
+      <article class="step"><div class="num">01</div><div><h3>Structured Discovery</h3><p>EPI Behavior Assessment · Nine Dimensions™ Leadership Model · Message Architecture · Video Analysis &amp; Nonverbal Behavior</p></div></article>
+      <article class="step"><div class="num">02</div><div><h3>Participant Awareness</h3><p>Feedback from assessments and video analysis, supported by personal reflection and group discussion.</p></div></article>
+      <article class="step"><div class="num">03</div><div><h3>Change Choice</h3><p>Identify the key behavior to change, define how the change will happen behaviorally, and establish accountability.</p></div></article>
+      <article class="step"><div class="num">04</div><div><h3>Daily Practice</h3><p>Incorporate the behavior change into daily interactions, then build on it once it becomes comfortable and natural.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="direction progression">
+  <span class="label">Direction 02 · Active Progression</span>
+  <p class="eyebrow">Learning becomes behavior</p><h2 class="title">Four stages.<br><strong>One practical change.</strong></h2>
+  <div class="rail">
+    <article class="stage"><div class="stage-no">01</div><h3>Structured<br>Discovery</h3><ul><li>EPI Behavior Assessment</li><li>Nine Dimensions™ model</li><li>Message architecture</li><li>Video and nonverbal analysis</li></ul></article>
+    <article class="stage"><div class="stage-no">02</div><h3>Participant<br>Awareness</h3><ul><li>Assessment feedback</li><li>Video-analysis feedback</li><li>Personal reflection</li><li>Group discussion</li></ul></article>
+    <article class="stage"><div class="stage-no">03</div><h3>Change<br>Choice</h3><ul><li>Choose the key behavior</li><li>Define the behavioral change</li><li>Create accountability</li></ul></article>
+    <article class="stage"><div class="stage-no">04</div><h3>Daily<br>Practice</h3><ul><li>Apply change in daily interactions</li><li>Practice until natural</li><li>Build on the new behavior</li></ul></article>
+  </div>
+  <p class="progression-note">Best if you want this section to feel energetic, structured, and clearly connected to the animated change cycle above it.</p>
+</section>
+
+<section class="direction photo-led">
+  <div class="photo-wrap">
+    <div class="photo" role="img" aria-label="Leaders participating in a learning experience"></div>
+    <div class="photo-content">
+      <span class="label">Direction 03 · Human &amp; Immersive</span><p class="eyebrow">Built for real-world leadership</p><h2 class="title">Our Learning<br><strong>Experience</strong></h2>
+      <div class="cards">
+        <article class="card"><div class="icon">01</div><div><h3>Structured Discovery</h3><ul><li>EPI Behavior Assessment</li><li>Nine Dimensions™ Leadership Model</li><li>Message Architecture</li><li>Video Analysis &amp; Nonverbal Behavior</li></ul></div></article>
+        <article class="card"><div class="icon">02</div><div><h3>Participant Awareness</h3><ul><li>Feedback: Assessments and Video Analysis</li><li>Personal Reflection and Group Discussion</li></ul></div></article>
+        <article class="card"><div class="icon">03</div><div><h3>Change Choice</h3><ul><li>Identify what key behaviors need to change</li><li>Specify how that change will be made behaviorally and define accountability</li></ul></div></article>
+        <article class="card"><div class="icon">04</div><div><h3>Daily Practice</h3><ul><li>Incorporate the behavior change in daily interactions</li><li>Build on the change once it is comfortable and natural</li></ul></div></article>
+      </div>
+      <p class="footer-note">Visual presentation changed; existing content preserved verbatim.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
