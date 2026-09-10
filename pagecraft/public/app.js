@@ -117,7 +117,6 @@ const previewButton = document.querySelector("#preview-button");
 const fullEditButton = document.querySelector("#full-edit-button");
 const roleBadge = document.querySelector("#role-badge");
 const secretStatus = document.querySelector("#secret-status");
-const editSiteButton = document.querySelector("#edit-site-button");
 const roomGrid = document.querySelector("#room-grid");
 const entryList = document.querySelector("#entry-list");
 const entryForm = document.querySelector("#entry-form");
@@ -1552,7 +1551,6 @@ function openLogin() {
 }
 
 function enableEditMode() {
-  editSiteButton.hidden = true;
   mediaList = state.media || [];
   menus = state.menus || [];
   activeMenuId = menus.some((menu) => menu.id === activeMenuId) ? activeMenuId : menus[0]?.id ?? null;
@@ -1729,11 +1727,9 @@ document.querySelector("#logout-button").addEventListener("click", async () => {
   toolbar.hidden = true;
   fullEditor.hidden = true;
   preview.classList.remove("edit-active");
-  editSiteButton.hidden = false;
   renderSite();
 });
 
-editSiteButton.addEventListener("click", () => openLogin());
 tabContentButton.addEventListener("click", () => switchTab("content"));
 tabSeoButton.addEventListener("click", () => switchTab("seo"));
 tabTranslationsButton.addEventListener("click", () => switchTab("translations"));
