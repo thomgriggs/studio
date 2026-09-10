@@ -1,4 +1,19 @@
 const API_BASE = new URL(".", import.meta.url).pathname.replace(/\/$/, "");
+document.querySelectorAll(".site-logo").forEach((link) => { link.href = `${API_BASE}/`; });
+
+// Decide which container (home vs. a secondary page) to show immediately,
+// synchronously, before any data has loaded. Both #site-preview and
+// #generic-page exist in the static HTML; without this, navigating to a
+// page briefly flashes the *other* page's content until the async fetch
+// to /api/public resolves and renderPublicRoute() corrects it.
+{
+  const isHome = !currentPageSlug();
+  const earlySitePreview = document.querySelector("#site-preview");
+  const earlyGenericPage = document.querySelector("#generic-page");
+  if (earlySitePreview) earlySitePreview.hidden = !isHome;
+  if (earlyGenericPage) earlyGenericPage.hidden = isHome;
+}
+
 const SECRET_CODE = "pagecraft";
 const LANGUAGE_CHOICES = [
   ["es", "Spanish"], ["fr", "French"], ["de", "German"], ["it", "Italian"],
@@ -73,6 +88,7 @@ const menuNameInput = document.querySelector("#menu-name-input");
 const menuPublishButton = document.querySelector("#menu-publish-button");
 const menuDeleteButton = document.querySelector("#menu-delete-button");
 const menuTree = document.querySelector("#menu-tree");
+const menuLinkSuggestions = document.querySelector("#menu-link-suggestions");
 const addMenuItemButton = document.querySelector("#add-menu-item-button");
 const sectionFormsButton = document.querySelector("#section-forms");
 const formsWorkspace = document.querySelector("#forms-workspace");
@@ -1219,6 +1235,22 @@ function activeMenu() {
 function renderMenuManager() {
   renderMenuList();
   renderMenuEditor();
+  renderMenuLinkSuggestions();
+}
+
+function renderMenuLinkSuggestions() {
+  if (!menuLinkSuggestions) return;
+  menuLinkSuggestions.replaceChildren();
+  const links = [
+    { path: "/", title: "Home" },
+    ...pages.map((page) => ({ path: `/${page.slug}`, title: page.title }))
+  ];
+  links.forEach(({ path, title }) => {
+    const option = document.createElement("option");
+    option.value = path;
+    option.label = title;
+    menuLinkSuggestions.append(option);
+  });
 }
 
 function renderMenuList() {
@@ -1327,6 +1359,7 @@ function buildMenuItemRow(item, path) {
   row.className = "menu-item-row";
   row.draggable = true;
   row.dataset.path = path.join(".");
+  row.dataset.itemId = item.id;
 
   const handle = document.createElement("span");
   handle.className = "drag-handle";
@@ -1346,7 +1379,8 @@ function buildMenuItemRow(item, path) {
   hrefInput.type = "text";
   hrefInput.className = "menu-item-href";
   hrefInput.value = item.href;
-  hrefInput.placeholder = "#anchor or https://…";
+  hrefInput.placeholder = "Pick a page, or type a link";
+  hrefInput.setAttribute("list", "menu-link-suggestions");
   hrefInput.setAttribute("aria-label", "Item link");
   hrefInput.addEventListener("input", () => queueMenuItemEdit(path, { href: hrefInput.value }));
   row.append(hrefInput);
@@ -1437,6 +1471,25 @@ async function saveMenuTree(tree) {
   } catch (error) { menuMessage.textContent = error.message; }
 }
 
+async function saveMenuTreeQuiet(tree) {
+  // Used for in-place text edits (label/href): must not touch #menu-tree's DOM,
+  // since rebuilding it mid-keystroke steals focus from whichever input the
+  // admin is typing in. Only structural changes (add/remove/move) rebuild the tree.
+  const menu = activeMenu();
+  if (!menu) return;
+  menu.draft = tree;
+  menu.status = JSON.stringify(menu.draft) === JSON.stringify(menu.published) ? "published" : "changed";
+  menuPublishButton.disabled = session.role !== "admin" || menu.status === "published";
+  renderSite();
+  try {
+    const updated = await request(`/api/menus/${menu.id}`, { method: "PATCH", body: JSON.stringify({ items: tree }) });
+    Object.assign(menu, updated);
+    menuPublishButton.disabled = session.role !== "admin" || menu.status === "published";
+    renderMenuList();
+    renderSite();
+  } catch (error) { menuMessage.textContent = error.message; }
+}
+
 function queueMenuItemEdit(path, patch) {
   const menu = activeMenu();
   if (!menu) return;
@@ -1444,17 +1497,23 @@ function queueMenuItemEdit(path, patch) {
   if (!node) return;
   Object.assign(node, patch);
   window.clearTimeout(menuSaveTimer);
-  menuSaveTimer = window.setTimeout(() => saveMenuTree(cloneMenuTree(menu)), 450);
+  menuSaveTimer = window.setTimeout(() => saveMenuTreeQuiet(cloneMenuTree(menu)), 450);
 }
 
-function addMenuItem(parentPath) {
+async function addMenuItem(parentPath) {
   const menu = activeMenu();
   if (!menu) return;
-  const newItem = { id: `item-${Date.now().toString(36)}`, label: "New item", href: "#", children: [] };
+  const newItem = { id: `item-${Date.now().toString(36)}`, label: "New item", href: "", children: [] };
   const list = parentPath ? findNode(menu.draft, parentPath)?.children : menu.draft;
   if (!list) return;
   list.push(newItem);
-  saveMenuTree(cloneMenuTree(menu));
+  await saveMenuTree(cloneMenuTree(menu));
+  const row = menuTree.querySelector(`[data-item-id="${newItem.id}"]`);
+  const labelInput = row?.querySelector(".menu-item-label");
+  if (labelInput) {
+    labelInput.focus();
+    labelInput.select();
+  }
 }
 
 function removeMenuItem(path) {
