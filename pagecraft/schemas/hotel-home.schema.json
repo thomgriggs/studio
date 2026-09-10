@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "starter.hotel.home",
+  "title": "Hotel home page",
+  "type": "object",
+  "required": ["hero", "introduction", "bookingUrl"],
+  "properties": {
+    "hero": {
+      "type": "object",
+      "required": ["eyebrow", "heading", "image"],
+      "properties": {
+        "eyebrow": { "type": "string", "maxLength": 80, "x-cms-translatable": true },
+        "heading": { "type": "string", "maxLength": 120, "x-cms-translatable": true },
+        "image": { "$ref": "#/$defs/image" }
+      }
+    },
+    "introduction": { "type": "string", "maxLength": 500, "x-cms-translatable": true },
+    "bookingUrl": { "type": "string", "format": "uri", "x-cms-editor-locked": true },
+    "featuredRooms": {
+      "type": "array",
+      "items": { "type": "string", "x-cms-relation": "hotel.room" },
+      "maxItems": 6
+    },
+    "featuredOffers": {
+      "type": "array",
+      "items": { "type": "string", "x-cms-relation": "hotel.offer" },
+      "maxItems": 6
+    },
+    "location": { "type": "string", "x-cms-relation": "core.location" }
+  },
+  "$defs": {
+    "image": {
+      "type": "object",
+      "required": ["assetId", "alt"],
+      "properties": {
+        "assetId": { "type": "string" },
+        "alt": { "type": "string", "x-cms-translatable": true },
+        "decorative": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}
+

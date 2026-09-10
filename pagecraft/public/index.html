@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" id="meta-description" content="A quiet coastal hotel shaped by salt air, warm light, and unhurried days.">
+    <title>Tidehouse — a quieter edge of California</title>
+    <link rel="stylesheet" href="/app.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-logo" href="#top" aria-label="Tidehouse home" data-field="siteName"></a>
+      <nav aria-label="Main navigation" id="site-nav"></nav>
+      <div class="header-actions">
+        <div class="language-switch" id="language-switch" hidden role="group" aria-label="Choose language"></div>
+        <a class="booking-link" href="https://booking.example" data-field="bookingLabel"></a>
+        <button class="edit-site-button" id="edit-site-button" type="button">Edit this site</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <article class="site-preview" id="site-preview">
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <p class="kicker editable" data-field="eyebrow" tabindex="-1"></p>
+            <h1 class="editable" data-field="heading" tabindex="-1"></h1>
+            <p class="intro editable" data-field="introduction" tabindex="-1"></p>
+            <a class="site-button" href="#stay">Discover Tidehouse</a>
+          </div>
+          <div class="hero-art" id="hero-art" role="img" aria-label="Abstract view of a sun setting over the Pacific coast">
+            <span></span>
+          </div>
+        </section>
+
+        <section class="story" id="story">
+          <p class="kicker editable" data-field="storyEyebrow" tabindex="-1"></p>
+          <h2 class="editable" data-field="storyTitle" tabindex="-1"></h2>
+          <p class="editable" data-field="storyText" tabindex="-1"></p>
+        </section>
+
+        <section class="stays" id="stay" aria-labelledby="stay-heading">
+          <div class="section-heading">
+            <p class="kicker editable" data-field="roomsEyebrow" tabindex="-1"></p>
+            <h2 class="editable" id="stay-heading" data-field="roomsTitle" tabindex="-1"></h2>
+          </div>
+          <div class="room-grid" id="room-grid"></div>
+        </section>
+
+        <section class="offer" id="offer">
+          <p class="kicker">Seasonal offer</p>
+          <h2 class="editable" data-field="offerTitle" tabindex="-1"></h2>
+          <p class="editable" data-field="offerText" tabindex="-1"></p>
+          <a class="text-link" href="https://booking.example">View the offer</a>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-heading" hidden>
+          <div class="section-heading">
+            <p class="kicker">Get in touch</p>
+            <h2 id="contact-heading"></h2>
+          </div>
+          <form class="public-form" id="public-contact-form"></form>
+          <p class="public-form-message" id="public-contact-message" role="alert" aria-live="polite"></p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <a class="site-logo" href="#top" data-field="siteName"></a>
+      <p data-field="footerTagline"></p>
+      <p>Demo property for Pagecraft</p>
+    </footer>
+
+    <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-heading">
+      <button class="dialog-close" id="login-close" type="button" aria-label="Close sign-in">×</button>
+      <p class="kicker">Pagecraft</p>
+      <h2 id="login-heading">Edit this website</h2>
+      <p>Sign in to reveal the content you can change.</p>
+      <form id="login-form">
+        <label>Username <input name="username" autocomplete="username" value="admin" required></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password" value="admin-demo" required></label>
+        <button type="submit">Enter edit mode</button>
+        <p class="hint">Admin: admin/admin-demo · Editor: editor/editor-demo</p>
+        <p class="message" id="login-message" role="alert"></p>
+      </form>
+    </dialog>
+
+    <div class="edit-toolbar" id="edit-toolbar" hidden aria-label="Pagecraft editing toolbar">
+      <div class="toolbar-brand"><span class="status-dot"></span><strong>Pagecraft</strong><span id="role-badge"></span></div>
+      <span id="save-status" role="status" aria-live="polite">Draft loaded</span>
+      <button class="toolbar-button" id="mode-button" type="button" aria-pressed="true">Hide outlines</button>
+      <button class="toolbar-button" id="preview-button" type="button" aria-pressed="false">View published</button>
+      <button class="toolbar-button primary" id="full-edit-button" type="button" aria-expanded="false" aria-controls="full-editor">Full edit</button>
+      <button class="toolbar-button" id="publish-button" type="button">Publish</button>
+      <button class="toolbar-icon" id="logout-button" type="button" aria-label="Sign out of Pagecraft">×</button>
+    </div>
+
+    <section class="full-editor" id="full-editor" hidden aria-labelledby="editor-heading">
+      <header class="editor-header">
+        <div><p class="kicker">Pagecraft</p><h2 id="editor-heading">Full page edit</h2></div>
+        <button class="dialog-close" id="editor-close" type="button" aria-label="Close full editor">×</button>
+      </header>
+      <div class="editor-body">
+        <nav class="editor-nav" aria-label="Pagecraft sections">
+          <p class="nav-label">Website</p>
+          <button type="button" id="section-pages" aria-current="page">Pages</button>
+          <button type="button" id="section-navigation"><span>Menus</span></button>
+          <button type="button" id="section-media"><span>Media</span></button>
+          <button type="button" id="section-forms"><span>Forms</span></button>
+          <p class="nav-label">Manage</p>
+          <button type="button" disabled><span>Publishing</span><span class="planned-badge">Planned</span></button>
+          <button type="button" id="section-settings"><span>Site settings</span></button>
+        </nav>
+        <div class="editor-content" id="settings-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Manage</p><h3>Site settings</h3><p class="editor-intro">Basic identity shown across the whole site.</p></div>
+          </div>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Site-wide</p><h3>Identity</h3><p>The site name appears in the header and footer logo.</p></div>
+            </div>
+            <div class="section-fields" id="settings-form"></div>
+          </section>
+        </div>
+        <div class="editor-content" id="media-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Website</p><h3>Media</h3><p class="editor-intro">Upload images and use them across the site. PNG, JPEG, WebP, or GIF, up to 5 MB.</p></div>
+            <label class="editor-action media-upload-label" for="media-upload-input">Upload image</label>
+          </div>
+          <input type="file" id="media-upload-input" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+          <p class="entry-message" id="media-message" aria-live="polite"></p>
+          <div class="media-grid" id="media-grid" aria-label="Uploaded media"></div>
+        </div>
+        <div class="editor-content" id="forms-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Website</p><h3>Forms</h3><p class="editor-intro">The first form in the list appears on the homepage as a contact section. Submissions are stored locally — export them as CSV any time.</p></div>
+            <button class="editor-action" id="new-form-button" type="button">Add form</button>
+          </div>
+          <p class="entry-message" id="form-message" aria-live="polite"></p>
+          <div class="menu-layout">
+            <ul class="menu-list" id="form-list" aria-label="Forms"></ul>
+            <div class="menu-editor" id="form-editor">
+              <div class="menu-empty" id="form-empty"><h4>Select a form</h4><p>Choose a form to edit, or add a new one.</p></div>
+              <div id="form-editor-body" hidden>
+                <div class="menu-editor-heading">
+                  <input type="text" id="form-name-input" class="menu-name-input" maxlength="60" aria-label="Form name">
+                  <div class="menu-editor-actions">
+                    <a id="form-csv-link" class="csv-link" href="#" download>Download CSV</a>
+                    <button type="button" id="form-delete-button" class="danger">Delete form</button>
+                  </div>
+                </div>
+                <nav class="page-tabs" aria-label="Form settings">
+                  <button type="button" id="form-tab-fields" aria-current="page">Fields</button>
+                  <button type="button" id="form-tab-submissions">Submissions</button>
+                </nav>
+                <div id="form-panel-fields">
+                  <ul class="form-field-list" id="form-field-list"></ul>
+                  <button type="button" class="editor-action" id="add-form-field-button">Add field</button>
+                </div>
+                <div id="form-panel-submissions" hidden>
+                  <div id="submission-list" aria-label="Submissions"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="editor-content" id="navigation-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Website</p><h3>Menus</h3><p class="editor-intro">Build as many menus as you need, with nested submenus. The first menu in the list appears in the site header. Drag to reorder.</p></div>
+            <button class="editor-action" id="new-menu-button" type="button">Add menu</button>
+          </div>
+          <p class="entry-message" id="menu-message" aria-live="polite"></p>
+          <div class="menu-layout">
+            <ul class="menu-list" id="menu-list" aria-label="Menus"></ul>
+            <div class="menu-editor" id="menu-editor">
+              <div class="menu-empty" id="menu-empty"><h4>Select a menu</h4><p>Choose a menu to edit, or add a new one.</p></div>
+              <div id="menu-editor-body" hidden>
+                <div class="menu-editor-heading">
+                  <input type="text" id="menu-name-input" class="menu-name-input" maxlength="60" aria-label="Menu name">
+                  <div class="menu-editor-actions">
+                    <button type="button" id="menu-publish-button">Publish menu</button>
+                    <button type="button" id="menu-delete-button" class="danger">Delete menu</button>
+                  </div>
+                </div>
+                <ul class="menu-tree" id="menu-tree" aria-label="Menu items"></ul>
+                <button type="button" class="editor-action" id="add-menu-item-button">Add item</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="editor-content" id="pages-workspace">
+          <div class="workspace-heading">
+            <div><p class="kicker">Pages</p><h3>Home</h3><p class="editor-intro">Edit this page’s content, metadata, and publishing history.</p></div>
+            <button class="editor-action" type="button" disabled>New page <span class="planned-badge">Next</span></button>
+          </div>
+          <div class="page-layout">
+            <aside class="page-list" aria-label="Website pages">
+              <button type="button" aria-current="page"><strong>Home</strong><span>/</span></button>
+              <button type="button" disabled><strong>Rooms</strong><span>/rooms</span></button>
+              <button type="button" disabled><strong>Dining</strong><span>/dining</span></button>
+              <button type="button" disabled><strong>Offers</strong><span>/offers</span></button>
+              <button type="button" disabled><strong>About</strong><span>/about</span></button>
+              <button type="button" disabled><strong>Contact</strong><span>/contact</span></button>
+            </aside>
+            <div class="page-fields">
+              <nav class="page-tabs" aria-label="Home page settings">
+                <button type="button" id="tab-content" aria-current="page">Content</button>
+                <button type="button" id="tab-seo">SEO</button>
+                <button type="button" id="tab-translations">Translations</button>
+                <button type="button" disabled>Settings <span class="planned-badge">Planned</span></button>
+              </nav>
+              <div id="tab-panel-content">
+                <form id="content-form"></form>
+                <section class="page-section repeatable-section" aria-labelledby="rooms-section-title">
+                  <div class="section-editor-heading">
+                    <div><p class="section-kind">Repeatable section</p><h3 id="rooms-section-title">Rooms listing</h3><p>These are the room cards shown on this page.</p></div>
+                    <button class="editor-action" id="new-entry-button" type="button">Add room</button>
+                  </div>
+                  <div class="library-layout">
+                    <div class="entry-list" id="entry-list" aria-label="Rooms on this page"></div>
+                    <form class="entry-form" id="entry-form" aria-label="Edit room">
+                      <div class="entry-empty" id="entry-empty"><h4>Select a room</h4><p>Choose a room to edit, or add a new one.</p></div>
+                      <div id="entry-fields" hidden></div>
+                    </form>
+                  </div>
+                </section>
+                <section class="history" aria-labelledby="history-title">
+                  <h3 id="history-title">Published history</h3>
+                  <div id="history-list"></div>
+                </section>
+              </div>
+              <div id="tab-panel-seo" hidden>
+                <section class="page-section">
+                  <div class="section-editor-heading compact">
+                    <div><p class="section-kind">Search &amp; sharing</p><h3>SEO</h3><p>Controls how this page appears in search results and the browser tab.</p></div>
+                  </div>
+                  <div class="section-fields" id="seo-form"></div>
+                </section>
+              </div>
+              <div id="tab-panel-translations" hidden>
+                <section class="page-section">
+                  <div class="section-editor-heading">
+                    <div><p class="section-kind">Main language: English</p><h3>Translations</h3><p>Add any language, then override text side by side. Anything left blank falls back to English on the live site.</p></div>
+                    <div class="locale-picker">
+                      <select id="locale-picker-select" aria-label="Language to add"></select>
+                      <button class="editor-action" id="add-locale-button" type="button">Add language</button>
+                    </div>
+                  </div>
+                  <div class="locale-tabs" id="locale-tabs" role="tablist" aria-label="Added languages"></div>
+                  <p class="entry-message" id="translation-message" aria-live="polite"></p>
+                  <div id="translation-editor" hidden>
+                    <div class="translation-header">
+                      <h4 id="translation-locale-label"></h4>
+                      <div class="translation-toolbar">
+                        <button class="editor-action" id="translation-publish-button" type="button">Publish translation</button>
+                        <button type="button" id="remove-locale-button" class="danger">Remove language</button>
+                      </div>
+                    </div>
+                    <div class="translation-compare-head">
+                      <span>English (main)</span>
+                      <span id="translation-compare-label"></span>
+                    </div>
+                    <div class="translation-compare" id="translation-form"></div>
+                  </div>
+                  <p class="menu-empty" id="translation-empty">Add a language to start translating this page.</p>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="secret-status" id="secret-status" aria-live="polite"></p>
+  </body>
+</html>

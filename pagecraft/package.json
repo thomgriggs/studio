@@ -1,0 +1,15 @@
+{
+  "name": "pagecraft-demo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Dependency-light vertical slice for visual and structured editing",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "test": "node --test",
+    "smoke": "node scripts/smoke.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

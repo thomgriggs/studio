@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "starter.restaurant.dish",
+  "title": "Restaurant dish",
+  "type": "object",
+  "required": ["name", "description", "price", "menuSection"],
+  "properties": {
+    "name": { "type": "string", "maxLength": 100, "x-cms-translatable": true },
+    "description": { "type": "string", "maxLength": 300, "x-cms-translatable": true },
+    "price": { "type": "number", "minimum": 0 },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$", "default": "USD" },
+    "menuSection": { "type": "string", "x-cms-relation": "restaurant.menu-section" },
+    "image": { "type": "string", "x-cms-asset": "image" },
+    "dietaryTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "available": { "type": "boolean", "default": true },
+    "sortOrder": { "type": "integer", "minimum": 0 }
+  }
+}
+
