@@ -161,6 +161,8 @@ let pages = [];
 let activePageView = "home";
 let activePageId = null;
 let pageSaveTimer = null;
+let activeViewedPageId = null;
+let inlinePageSaveTimer = null;
 
 async function request(path, options = {}) {
   const headers = { "content-type": "application/json", ...(options.headers || {}) };
@@ -327,6 +329,7 @@ function renderSite() {
     publishButton.title = session.role === "admin" ? "Publish the current draft" : "Only administrators can publish";
   }
   renderRoomsInto(roomGrid, publicRooms);
+  renderPublicRoute();
 }
 
 function renderRoomsInto(container, rooms) {
@@ -374,43 +377,69 @@ function currentPageSlug() {
   return pathname.replace(/^\/|\/$/g, "");
 }
 
+function pageById(id) {
+  return pages.find((page) => page.id === id) || null;
+}
+
+function resolvedPageForRoute(slug) {
+  if (session) {
+    const page = pages.find((entry) => entry.slug === slug);
+    if (!page) return null;
+    const content = (showingPublished ? page.published : page.draft) || {};
+    return { id: page.id, slug: page.slug, title: page.title, kind: page.kind, content };
+  }
+  const page = publicPages.find((entry) => entry.slug === slug);
+  if (!page) return null;
+  return { id: null, slug: page.slug, title: page.title, kind: page.kind, content: page.content };
+}
+
 function renderPublicRoute() {
   if (!genericPage) return;
   const slug = currentPageSlug();
   if (!slug) {
     sitePreview.hidden = false;
     genericPage.hidden = true;
+    activeViewedPageId = null;
     return;
   }
   sitePreview.hidden = true;
   genericPage.hidden = false;
-  const page = publicPages.find((entry) => entry.slug === slug);
+  const resolved = resolvedPageForRoute(slug);
+  activeViewedPageId = resolved?.id ?? null;
 
-  genericPageNotFound.hidden = Boolean(page);
+  genericPageNotFound.hidden = Boolean(resolved);
   genericPageBodySection.hidden = true;
   genericPageRoomsSection.hidden = true;
   genericPageDiningSection.hidden = true;
   genericPageContactSection.hidden = true;
-  if (!page) return;
+  const editing = Boolean(session && outlinesVisible && !showingPublished && activeViewedPageId);
+  genericPage.classList.toggle("edit-active", editing);
+  if (!resolved) return;
 
-  document.title = page.content.seoTitle || page.title;
-  if (page.content.seoDescription) metaDescription.setAttribute("content", page.content.seoDescription);
-  genericPageHeading.textContent = page.content.heading;
-  genericPageIntro.textContent = page.content.intro || "";
+  const content = resolved.content;
+  document.title = content.seoTitle || resolved.title;
+  if (content.seoDescription) metaDescription.setAttribute("content", content.seoDescription);
 
-  if (page.content.body) {
-    genericPageBodySection.hidden = false;
-    genericPageBody.textContent = page.content.body;
-  }
-  if (page.kind === "rooms") {
+  const pageFieldLabels = { heading: "Heading", intro: "Intro", body: "Body" };
+  [genericPageHeading, genericPageIntro, genericPageBody].forEach((element) => {
+    const field = element.dataset.pageField;
+    if (document.activeElement !== element || element.contentEditable !== "true") {
+      element.textContent = content[field] || "";
+    }
+    element.dataset.label = pageFieldLabels[field];
+    element.tabIndex = editing ? 0 : -1;
+  });
+
+  genericPageBodySection.hidden = !(content.body || editing);
+  if (resolved.kind === "rooms") {
     genericPageRoomsSection.hidden = false;
     renderRoomsInto(genericRoomGrid, publicRooms);
   }
-  if (page.kind === "dining") {
+  if (resolved.kind === "dining") {
     genericPageDiningSection.hidden = false;
     renderDishesInto(genericDishGrid, publicDishes);
   }
-  if (page.kind === "form") {
+  if (resolved.kind === "form") {
     const hasFields = renderContactFormInto(genericContactForm);
     genericPageContactSection.hidden = !hasFields;
   }
@@ -906,6 +935,24 @@ function queuePageContentEdit(field, value) {
       Object.assign(page, updated);
       pagePublishButton.disabled = session.role !== "admin" || page.status === "published";
     } catch (error) { pageMessage.textContent = error.message; }
+  }, 450);
+}
+
+function queuePageInlineSave(field, value) {
+  const page = pageById(activeViewedPageId);
+  if (!page) return;
+  page.draft = { ...page.draft, [field]: value };
+  saveStatus.textContent = "Unsaved changes";
+  window.clearTimeout(inlinePageSaveTimer);
+  inlinePageSaveTimer = window.setTimeout(async () => {
+    saveStatus.textContent = "Saving…";
+    try {
+      const updated = await request(`/api/pages/${page.id}`, { method: "PATCH", body: JSON.stringify({ content: page.draft }) });
+      Object.assign(page, updated);
+      saveStatus.textContent = "Draft saved";
+      renderPageList();
+      if (activePageId === page.id) renderPageEditor();
+    } catch (error) { saveStatus.textContent = error.message; }
   }, 450);
 }
 
@@ -1589,6 +1636,7 @@ async function saveField(field, value) {
 
 function beginInlineEdit(element) {
   if (!session || !outlinesVisible || showingPublished) return;
+  if (element.dataset.pageField && !activeViewedPageId) return;
   element.contentEditable = "true";
   element.focus();
   const selection = window.getSelection();
@@ -1599,8 +1647,14 @@ function beginInlineEdit(element) {
 function finishInlineEdit(element, save) {
   if (element.contentEditable !== "true") return;
   element.contentEditable = "false";
-  if (save) queueSave(element.dataset.field, element.textContent);
-  else element.textContent = state.draft[element.dataset.field];
+  if (element.dataset.pageField) {
+    const field = element.dataset.pageField;
+    if (save) queuePageInlineSave(field, element.textContent);
+    else element.textContent = pageById(activeViewedPageId)?.draft[field] || "";
+  } else {
+    if (save) queueSave(element.dataset.field, element.textContent);
+    else element.textContent = state.draft[element.dataset.field];
+  }
   element.focus();
 }
 
@@ -1649,6 +1703,31 @@ preview.addEventListener("focusout", (event) => {
 
 preview.addEventListener("keydown", (event) => {
   const element = event.target.closest("[data-field]");
+  if (!element) return;
+  if (element.contentEditable !== "true" && (event.key === "Enter" || event.key === " ")) {
+    event.preventDefault();
+    beginInlineEdit(element);
+  } else if (element.contentEditable === "true" && event.key === "Escape") {
+    event.preventDefault();
+    finishInlineEdit(element, false);
+  } else if (element.contentEditable === "true" && event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    finishInlineEdit(element, true);
+  }
+});
+
+genericPage.addEventListener("dblclick", (event) => {
+  const element = event.target.closest("[data-page-field]");
+  if (element) beginInlineEdit(element);
+});
+
+genericPage.addEventListener("focusout", (event) => {
+  const element = event.target.closest("[data-page-field]");
+  if (element?.contentEditable === "true") finishInlineEdit(element, true);
+});
+
+genericPage.addEventListener("keydown", (event) => {
+  const element = event.target.closest("[data-page-field]");
   if (!element) return;
   if (element.contentEditable !== "true" && (event.key === "Enter" || event.key === " ")) {
     event.preventDefault();
@@ -1985,7 +2064,6 @@ pageDeleteButton.addEventListener("click", async () => {
   renderPublicContactForm();
   renderLanguageSwitch();
   renderSite();
-  renderPublicRoute();
   const existing = await request("/api/session");
   if (existing.authenticated) {
     session = existing;
