@@ -263,3 +263,45 @@ export function validateSubmission(fields, data) {
   }
   return { ok: true, value };
 }
+
+export const MAX_PAGES = 30;
+const RESERVED_SLUGS = new Set(["home", "api", "uploads", "pagecraft"]);
+const SLUG_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+export const pageKinds = Object.freeze({
+  content: "A heading, intro, and body of text.",
+  rooms: "Lists every published room, in full.",
+  dining: "Lists every published dish, in full.",
+  form: "Embeds the site's primary contact form."
+});
+
+export function validatePageSlug(slug) {
+  const normalized = String(slug ?? "").trim().toLowerCase();
+  if (!SLUG_PATTERN.test(normalized) || normalized.length > 40) {
+    return { ok: false, error: "Path must be lowercase letters, numbers, and hyphens, like \"about\" or \"our-story\"." };
+  }
+  if (RESERVED_SLUGS.has(normalized)) return { ok: false, error: `"${normalized}" is reserved.` };
+  return { ok: true, value: normalized };
+}
+
+export function validatePageTitle(title) {
+  const normalized = String(title ?? "").trim();
+  if (!normalized) return { ok: false, error: "Page title cannot be empty." };
+  if (normalized.length > 60) return { ok: false, error: "Page title is too long." };
+  return { ok: true, value: normalized };
+}
+
+export function validatePageKind(kind) {
+  return Object.prototype.hasOwnProperty.call(pageKinds, kind) ? { ok: true, value: kind } : { ok: false, error: "Unknown page type." };
+}
+
+export function validatePageContent(data) {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return { ok: false, error: "Page content must be an object." };
+  const heading = String(data.heading ?? "").trim().slice(0, 120);
+  if (!heading) return { ok: false, error: "Page heading is required." };
+  const intro = String(data.intro ?? "").trim().slice(0, 300);
+  const body = String(data.body ?? "").trim().slice(0, 3000);
+  const seoTitle = String(data.seoTitle ?? "").trim().slice(0, 70);
+  const seoDescription = String(data.seoDescription ?? "").trim().slice(0, 160);
+  return { ok: true, value: { heading, intro, body, seoTitle, seoDescription } };
+}

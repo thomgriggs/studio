@@ -6,8 +6,8 @@
     <meta name="color-scheme" content="light">
     <meta name="description" id="meta-description" content="A quiet coastal hotel shaped by salt air, warm light, and unhurried days.">
     <title>Tidehouse — a quieter edge of California</title>
-    <link rel="stylesheet" href="/app.css">
-    <script type="module" src="/app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <script type="module" src="app.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -66,6 +66,29 @@
           <p class="public-form-message" id="public-contact-message" role="alert" aria-live="polite"></p>
         </section>
       </article>
+
+      <article class="generic-page" id="generic-page" hidden>
+        <section class="page-hero">
+          <div class="section-heading">
+            <p class="kicker" id="generic-page-intro"></p>
+            <h1 id="generic-page-heading"></h1>
+          </div>
+        </section>
+        <section class="page-body" id="generic-page-body-section" hidden>
+          <p id="generic-page-body"></p>
+        </section>
+        <section class="page-rooms" id="generic-page-rooms-section" hidden aria-label="Rooms">
+          <div class="room-grid" id="generic-room-grid"></div>
+        </section>
+        <section class="page-dining" id="generic-page-dining-section" hidden aria-label="Dishes">
+          <div class="dish-grid" id="generic-dish-grid"></div>
+        </section>
+        <section class="page-contact" id="generic-page-contact-section" hidden>
+          <form class="public-form" id="generic-contact-form"></form>
+          <p class="public-form-message" id="generic-contact-message" role="alert" aria-live="polite"></p>
+        </section>
+        <p class="page-not-found" id="generic-page-not-found" hidden>We couldn't find that page.</p>
+      </article>
     </main>
 
     <footer class="site-footer">
@@ -80,10 +103,9 @@
       <h2 id="login-heading">Edit this website</h2>
       <p>Sign in to reveal the content you can change.</p>
       <form id="login-form">
-        <label>Username <input name="username" autocomplete="username" value="admin" required></label>
-        <label>Password <input name="password" type="password" autocomplete="current-password" value="admin-demo" required></label>
+        <label>Username <input name="username" autocomplete="username" required></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
         <button type="submit">Enter edit mode</button>
-        <p class="hint">Admin: admin/admin-demo · Editor: editor/editor-demo</p>
         <p class="message" id="login-message" role="alert"></p>
       </form>
     </dialog>
@@ -193,19 +215,14 @@
         </div>
         <div class="editor-content" id="pages-workspace">
           <div class="workspace-heading">
-            <div><p class="kicker">Pages</p><h3>Home</h3><p class="editor-intro">Edit this page’s content, metadata, and publishing history.</p></div>
-            <button class="editor-action" type="button" disabled>New page <span class="planned-badge">Next</span></button>
+            <div><p class="kicker">Pages</p><h3 id="pages-workspace-title">Home</h3><p class="editor-intro" id="pages-workspace-intro">Edit this page’s content, metadata, and publishing history.</p></div>
+            <button class="editor-action" id="new-page-button" type="button">New page</button>
           </div>
           <div class="page-layout">
-            <aside class="page-list" aria-label="Website pages">
-              <button type="button" aria-current="page"><strong>Home</strong><span>/</span></button>
-              <button type="button" disabled><strong>Rooms</strong><span>/rooms</span></button>
-              <button type="button" disabled><strong>Dining</strong><span>/dining</span></button>
-              <button type="button" disabled><strong>Offers</strong><span>/offers</span></button>
-              <button type="button" disabled><strong>About</strong><span>/about</span></button>
-              <button type="button" disabled><strong>Contact</strong><span>/contact</span></button>
+            <aside class="page-list" id="page-list" aria-label="Website pages">
+              <button type="button" id="page-list-home" aria-current="page"><strong>Home</strong><span>/</span></button>
             </aside>
-            <div class="page-fields">
+            <div class="page-fields" id="home-page-editor">
               <nav class="page-tabs" aria-label="Home page settings">
                 <button type="button" id="tab-content" aria-current="page">Content</button>
                 <button type="button" id="tab-seo">SEO</button>
@@ -268,6 +285,18 @@
                   <p class="menu-empty" id="translation-empty">Add a language to start translating this page.</p>
                 </section>
               </div>
+            </div>
+            <div class="page-fields" id="secondary-page-editor" hidden>
+              <div class="menu-editor-heading">
+                <input type="text" id="page-title-input" class="menu-name-input" maxlength="60" aria-label="Page title">
+                <div class="menu-editor-actions">
+                  <button type="button" id="page-publish-button">Publish page</button>
+                  <button type="button" id="page-delete-button" class="danger">Delete page</button>
+                </div>
+              </div>
+              <p class="entry-message" id="page-message" aria-live="polite"></p>
+              <p class="page-kind-note" id="page-kind-note"></p>
+              <div class="section-fields" id="page-content-form"></div>
             </div>
           </div>
         </div>

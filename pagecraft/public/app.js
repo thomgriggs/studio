@@ -1,3 +1,4 @@
+const API_BASE = new URL(".", import.meta.url).pathname.replace(/\/$/, "");
 const SECRET_CODE = "pagecraft";
 const LANGUAGE_CHOICES = [
   ["es", "Spanish"], ["fr", "French"], ["de", "German"], ["it", "Italian"],
@@ -36,6 +37,33 @@ const mediaUploadInput = document.querySelector("#media-upload-input");
 const mediaMessage = document.querySelector("#media-message");
 const heroArt = document.querySelector("#hero-art");
 const siteNav = document.querySelector("#site-nav");
+const sitePreview = document.querySelector("#site-preview");
+const genericPage = document.querySelector("#generic-page");
+const genericPageHeading = document.querySelector("#generic-page-heading");
+const genericPageIntro = document.querySelector("#generic-page-intro");
+const genericPageBodySection = document.querySelector("#generic-page-body-section");
+const genericPageBody = document.querySelector("#generic-page-body");
+const genericPageRoomsSection = document.querySelector("#generic-page-rooms-section");
+const genericRoomGrid = document.querySelector("#generic-room-grid");
+const genericPageDiningSection = document.querySelector("#generic-page-dining-section");
+const genericDishGrid = document.querySelector("#generic-dish-grid");
+const genericPageContactSection = document.querySelector("#generic-page-contact-section");
+const genericContactForm = document.querySelector("#generic-contact-form");
+const genericContactMessage = document.querySelector("#generic-contact-message");
+const genericPageNotFound = document.querySelector("#generic-page-not-found");
+const pagesWorkspaceTitle = document.querySelector("#pages-workspace-title");
+const pagesWorkspaceIntro = document.querySelector("#pages-workspace-intro");
+const pageList = document.querySelector("#page-list");
+const pageListHomeButton = document.querySelector("#page-list-home");
+const newPageButton = document.querySelector("#new-page-button");
+const homePageEditor = document.querySelector("#home-page-editor");
+const secondaryPageEditor = document.querySelector("#secondary-page-editor");
+const pageTitleInput = document.querySelector("#page-title-input");
+const pagePublishButton = document.querySelector("#page-publish-button");
+const pageDeleteButton = document.querySelector("#page-delete-button");
+const pageMessage = document.querySelector("#page-message");
+const pageKindNote = document.querySelector("#page-kind-note");
+const pageContentForm = document.querySelector("#page-content-form");
 const menuListElement = document.querySelector("#menu-list");
 const newMenuButton = document.querySelector("#new-menu-button");
 const menuMessage = document.querySelector("#menu-message");
@@ -128,11 +156,17 @@ let publicTranslations = {};
 let activeLocale = "en";
 let activeTranslationLocale = null;
 let translationSaveTimer = null;
+let publicPages = [];
+let publicDishes = [];
+let pages = [];
+let activePageView = "home";
+let activePageId = null;
+let pageSaveTimer = null;
 
 async function request(path, options = {}) {
   const headers = { "content-type": "application/json", ...(options.headers || {}) };
   if (session?.csrf && options.method && options.method !== "GET") headers["x-csrf-token"] = session.csrf;
-  const response = await fetch(path, { ...options, headers });
+  const response = await fetch(`${API_BASE}${path}`, { ...options, headers });
   const body = await response.json();
   if (!response.ok) throw new Error(body.error || "Request failed.");
   return body;
@@ -199,47 +233,51 @@ function buildPublicField(field) {
   return label;
 }
 
-function renderPublicContactForm() {
-  if (!contactSection) return;
-  if (!publicForm || !publicForm.fields?.length) {
-    contactSection.hidden = true;
-    return;
-  }
-  contactSection.hidden = false;
-  contactHeading.textContent = publicForm.name;
-  publicContactForm.replaceChildren();
-  publicForm.fields.forEach((field) => publicContactForm.append(buildPublicField(field)));
+function renderContactFormInto(formElement) {
+  formElement.replaceChildren();
+  if (!publicForm || !publicForm.fields?.length) return false;
+  publicForm.fields.forEach((field) => formElement.append(buildPublicField(field)));
   const submit = document.createElement("button");
   submit.type = "submit";
   submit.textContent = "Send";
   submit.className = "field-full";
-  publicContactForm.append(submit);
+  formElement.append(submit);
+  return true;
 }
 
-async function submitPublicContactForm(event) {
+function renderPublicContactForm() {
+  if (!contactSection) return;
+  const hasFields = Boolean(publicForm?.fields?.length);
+  contactSection.hidden = !hasFields;
+  if (!hasFields) return;
+  contactHeading.textContent = publicForm.name;
+  renderContactFormInto(publicContactForm);
+}
+
+async function submitContactForm(event, formElement, messageElement) {
   event.preventDefault();
   if (!publicForm) return;
-  publicContactMessage.className = "public-form-message";
-  publicContactMessage.textContent = "Sending…";
-  const formData = new FormData(publicContactForm);
+  messageElement.className = "public-form-message";
+  messageElement.textContent = "Sending…";
+  const formData = new FormData(formElement);
   const data = {};
   publicForm.fields.forEach((field) => {
-    data[field.id] = field.type === "checkbox" ? publicContactForm.elements[field.id].checked : formData.get(field.id) || "";
+    data[field.id] = field.type === "checkbox" ? formElement.elements[field.id].checked : formData.get(field.id) || "";
   });
   try {
-    const response = await fetch(`/api/forms/${publicForm.id}/submit`, {
+    const response = await fetch(`${API_BASE}/api/forms/${publicForm.id}/submit`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data)
     });
     const body = await response.json();
     if (!response.ok) throw new Error(body.error || "Could not send your message.");
-    publicContactMessage.className = "public-form-message success";
-    publicContactMessage.textContent = "Thank you — we’ll be in touch.";
-    publicContactForm.reset();
+    messageElement.className = "public-form-message success";
+    messageElement.textContent = "Thank you — we’ll be in touch.";
+    formElement.reset();
   } catch (error) {
-    publicContactMessage.className = "public-form-message error";
-    publicContactMessage.textContent = error.message;
+    messageElement.className = "public-form-message error";
+    messageElement.textContent = error.message;
   }
 }
 
@@ -289,11 +327,11 @@ function renderSite() {
     publishButton.disabled = session.role !== "admin" || !state.dirty;
     publishButton.title = session.role === "admin" ? "Publish the current draft" : "Only administrators can publish";
   }
-  renderRooms(publicRooms);
+  renderRoomsInto(roomGrid, publicRooms);
 }
 
-function renderRooms(rooms) {
-  roomGrid.replaceChildren();
+function renderRoomsInto(container, rooms) {
+  container.replaceChildren();
   rooms.filter((room) => room.available !== false).forEach((room, index) => {
     const card = document.createElement("article");
     const art = document.createElement("div");
@@ -305,8 +343,78 @@ function renderRooms(rooms) {
     const description = document.createElement("p");
     description.textContent = room.occupancy ? `${room.description} · Up to ${room.occupancy} guests` : room.description;
     card.append(art, heading, description);
-    roomGrid.append(card);
+    container.append(card);
   });
+}
+
+function renderDishesInto(container, dishes) {
+  container.replaceChildren();
+  dishes.filter((dish) => dish.available !== false).forEach((dish) => {
+    const card = document.createElement("article");
+    card.className = "dish-card";
+    const copy = document.createElement("div");
+    const heading = document.createElement("h3");
+    heading.textContent = dish.name;
+    const description = document.createElement("p");
+    description.textContent = dish.menuSection ? `${dish.description} · ${dish.menuSection}` : dish.description;
+    copy.append(heading, description);
+    card.append(copy);
+    if (dish.price != null) {
+      const price = document.createElement("span");
+      price.className = "dish-price";
+      price.textContent = `$${Number(dish.price).toFixed(2)}`;
+      card.append(price);
+    }
+    container.append(card);
+  });
+}
+
+function currentPageSlug() {
+  let pathname = window.location.pathname;
+  if (API_BASE && pathname.startsWith(API_BASE)) pathname = pathname.slice(API_BASE.length);
+  return pathname.replace(/^\/|\/$/g, "");
+}
+
+function renderPublicRoute() {
+  if (!genericPage) return;
+  const slug = currentPageSlug();
+  if (!slug) {
+    sitePreview.hidden = false;
+    genericPage.hidden = true;
+    return;
+  }
+  sitePreview.hidden = true;
+  genericPage.hidden = false;
+  const page = publicPages.find((entry) => entry.slug === slug);
+
+  genericPageNotFound.hidden = Boolean(page);
+  genericPageBodySection.hidden = true;
+  genericPageRoomsSection.hidden = true;
+  genericPageDiningSection.hidden = true;
+  genericPageContactSection.hidden = true;
+  if (!page) return;
+
+  document.title = page.content.seoTitle || page.title;
+  if (page.content.seoDescription) metaDescription.setAttribute("content", page.content.seoDescription);
+  genericPageHeading.textContent = page.content.heading;
+  genericPageIntro.textContent = page.content.intro || "";
+
+  if (page.content.body) {
+    genericPageBodySection.hidden = false;
+    genericPageBody.textContent = page.content.body;
+  }
+  if (page.kind === "rooms") {
+    genericPageRoomsSection.hidden = false;
+    renderRoomsInto(genericRoomGrid, publicRooms);
+  }
+  if (page.kind === "dining") {
+    genericPageDiningSection.hidden = false;
+    renderDishesInto(genericDishGrid, publicDishes);
+  }
+  if (page.kind === "form") {
+    const hasFields = renderContactFormInto(genericContactForm);
+    genericPageContactSection.hidden = !hasFields;
+  }
 }
 
 async function loadContentLibrary(preferredId = activeEntryId) {
@@ -456,7 +564,7 @@ async function publishActiveEntry() {
     await request(`/api/entries/${activeEntryId}/publish`, { method: "POST", body: "{}" });
     const publicState = await request("/api/public");
     publicRooms = publicState.rooms;
-    renderRooms(publicRooms);
+    renderRoomsInto(roomGrid, publicRooms);
     await loadContentLibrary(activeEntryId);
   } catch (error) { message.textContent = error.message; }
 }
@@ -713,6 +821,95 @@ function renderHistory() {
   });
 }
 
+function activePage() {
+  return pages.find((page) => page.id === activePageId) || null;
+}
+
+function renderPageManager() {
+  renderPageList();
+  renderPageEditor();
+}
+
+function renderPageList() {
+  if (!pageList) return;
+  pageList.querySelectorAll("[data-page-row]").forEach((el) => el.remove());
+  pages.forEach((page) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.pageRow = "true";
+    button.setAttribute("aria-current", String(activePageView === "page" && page.id === activePageId));
+    const title = document.createElement("strong");
+    title.textContent = page.title;
+    const path = document.createElement("span");
+    path.textContent = `/${page.slug}`;
+    button.append(title, path);
+    button.addEventListener("click", () => {
+      activePageView = "page";
+      activePageId = page.id;
+      renderPageList();
+      renderPageEditor();
+    });
+    pageList.append(button);
+  });
+  pageListHomeButton.setAttribute("aria-current", String(activePageView === "home"));
+}
+
+function renderPageEditor() {
+  const isHome = activePageView === "home";
+  homePageEditor.hidden = !isHome;
+  secondaryPageEditor.hidden = isHome;
+  pagesWorkspaceTitle.textContent = isHome ? "Home" : activePage()?.title || "";
+  pagesWorkspaceIntro.textContent = isHome
+    ? "Edit this page’s content, metadata, and publishing history."
+    : "Edit this page’s content and publish it independently of the homepage.";
+  if (isHome) return;
+
+  const page = activePage();
+  if (!page) return;
+  if (document.activeElement !== pageTitleInput) pageTitleInput.value = page.title;
+  pageKindNote.textContent = `/${page.slug} — ${pageKindLabels[page.kind] || page.kind}`;
+  pagePublishButton.disabled = session.role !== "admin" || page.status === "published";
+  pagePublishButton.title = session.role === "admin" ? "Publish this page" : "Only administrators can publish";
+  pageDeleteButton.disabled = session.role !== "admin";
+  pageDeleteButton.title = session.role === "admin" ? "Delete this page" : "Only administrators can delete pages";
+
+  pageContentForm.replaceChildren();
+  const fieldSpecs = [
+    ["heading", "Heading", 120, "textarea"],
+    ["intro", "Intro", 300, "textarea"],
+    ["body", "Body", 3000, "textarea"],
+    ["seoTitle", "Page title (SEO)", 70, "textarea"],
+    ["seoDescription", "Meta description", 160, "textarea"]
+  ];
+  fieldSpecs.forEach(([field, label, maxLength]) => {
+    const wrapper = document.createElement("label");
+    wrapper.textContent = label;
+    const input = document.createElement("textarea");
+    input.name = field;
+    input.value = page.draft[field] || "";
+    input.maxLength = maxLength;
+    input.addEventListener("input", () => queuePageContentEdit(field, input.value));
+    wrapper.append(input);
+    pageContentForm.append(wrapper);
+  });
+}
+
+const pageKindLabels = { content: "Content page", rooms: "Rooms listing", dining: "Dining listing", form: "Contact form" };
+
+function queuePageContentEdit(field, value) {
+  const page = activePage();
+  if (!page) return;
+  page.draft = { ...page.draft, [field]: value };
+  window.clearTimeout(pageSaveTimer);
+  pageSaveTimer = window.setTimeout(async () => {
+    try {
+      const updated = await request(`/api/pages/${page.id}`, { method: "PATCH", body: JSON.stringify({ content: page.draft }) });
+      Object.assign(page, updated);
+      pagePublishButton.disabled = session.role !== "admin" || page.status === "published";
+    } catch (error) { pageMessage.textContent = error.message; }
+  }, 450);
+}
+
 function renderAuthenticated() {
   renderSite();
   renderForm();
@@ -721,6 +918,7 @@ function renderAuthenticated() {
   renderMenuManager();
   renderFormManager();
   renderTranslationManager();
+  renderPageManager();
 }
 
 function activeForm() {
@@ -764,7 +962,7 @@ function renderFormEditor() {
   if (document.activeElement !== formNameInput) formNameInput.value = form.name;
   formDeleteButton.disabled = session.role !== "admin";
   formDeleteButton.title = session.role === "admin" ? "Delete this form" : "Only administrators can delete forms";
-  formCsvLink.href = `/api/forms/${form.id}/submissions.csv`;
+  formCsvLink.href = `${API_BASE}/api/forms/${form.id}/submissions.csv`;
   renderFormFieldList();
   if (!formPanelSubmissions.hidden) renderSubmissions();
 }
@@ -1362,6 +1560,7 @@ function enableEditMode() {
   activeFormId = forms.some((form) => form.id === activeFormId) ? activeFormId : forms[0]?.id ?? null;
   locales = state.locales || [];
   translations = state.translations || {};
+  pages = state.pages || [];
   renderLanguageSwitch();
   toolbar.hidden = false;
   roleBadge.textContent = session.role;
@@ -1600,7 +1799,7 @@ menuDeleteButton.addEventListener("click", async () => {
 });
 
 addMenuItemButton.addEventListener("click", () => addMenuItem(null));
-publicContactForm.addEventListener("submit", submitPublicContactForm);
+publicContactForm.addEventListener("submit", (event) => submitContactForm(event, publicContactForm, publicContactMessage));
 sectionFormsButton.addEventListener("click", () => switchSection("forms"));
 
 newFormButton.addEventListener("click", async () => {
@@ -1708,18 +1907,89 @@ removeLocaleButton.addEventListener("click", async () => {
   } catch (error) { translationMessage.textContent = error.message; }
 });
 
+genericContactForm.addEventListener("submit", (event) => submitContactForm(event, genericContactForm, genericContactMessage));
+
+pageListHomeButton.addEventListener("click", () => {
+  activePageView = "home";
+  activePageId = null;
+  renderPageList();
+  renderPageEditor();
+});
+
+function slugify(value) {
+  return String(value).toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
+}
+
+newPageButton.addEventListener("click", async () => {
+  const title = window.prompt("Title for this page:");
+  if (!title) return;
+  const slug = slugify(title);
+  if (!slug) {
+    pageMessage.textContent = "Couldn't derive a URL path from that title.";
+    return;
+  }
+  try {
+    const created = await request("/api/pages", { method: "POST", body: JSON.stringify({ slug, title }) });
+    pages = await request("/api/pages");
+    activePageView = "page";
+    activePageId = created.id;
+    renderPageManager();
+  } catch (error) { pageMessage.textContent = error.message; }
+});
+
+pageTitleInput.addEventListener("input", () => {
+  const page = activePage();
+  if (!page) return;
+  page.title = pageTitleInput.value;
+  window.clearTimeout(pageSaveTimer);
+  pageSaveTimer = window.setTimeout(async () => {
+    try {
+      const updated = await request(`/api/pages/${page.id}`, { method: "PATCH", body: JSON.stringify({ title: pageTitleInput.value }) });
+      Object.assign(page, updated);
+      renderPageList();
+    } catch (error) { pageMessage.textContent = error.message; }
+  }, 450);
+});
+
+pagePublishButton.addEventListener("click", async () => {
+  const page = activePage();
+  if (!page) return;
+  try {
+    const published = await request(`/api/pages/${page.id}/publish`, { method: "POST", body: "{}" });
+    Object.assign(page, published);
+    renderPageEditor();
+    renderPageList();
+  } catch (error) { pageMessage.textContent = error.message; }
+});
+
+pageDeleteButton.addEventListener("click", async () => {
+  const page = activePage();
+  if (!page) return;
+  if (!window.confirm(`Delete "${page.title}"? This cannot be undone.`)) return;
+  try {
+    await request(`/api/pages/${page.id}`, { method: "DELETE" });
+    pages = await request("/api/pages");
+    activePageView = "home";
+    activePageId = null;
+    renderPageManager();
+  } catch (error) { pageMessage.textContent = error.message; }
+});
+
 (async () => {
   const publicState = await request("/api/public");
   publicContent = publicState.published;
   publicRooms = publicState.rooms || [];
+  publicDishes = publicState.dishes || [];
   publicHeroImageUrl = publicState.heroImageUrl || null;
   publicMenus = publicState.menus || [];
   publicForm = publicState.form || null;
   publicLocales = publicState.locales || [];
   publicTranslations = publicState.translations || {};
+  publicPages = publicState.pages || [];
   renderPublicContactForm();
   renderLanguageSwitch();
   renderSite();
+  renderPublicRoute();
   const existing = await request("/api/session");
   if (existing.authenticated) {
     session = existing;

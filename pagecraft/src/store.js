@@ -103,6 +103,17 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
       position INTEGER NOT NULL,
       created_at TEXT NOT NULL
     ) STRICT;
+
+    CREATE TABLE IF NOT EXISTS pages (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      slug TEXT NOT NULL UNIQUE,
+      title TEXT NOT NULL,
+      kind TEXT NOT NULL,
+      draft_json TEXT NOT NULL,
+      published_json TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    ) STRICT;
   `);
 
   const getStateStatement = database.prepare("SELECT value FROM site_state WHERE key = ?");
@@ -152,6 +163,14 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
   const localeInsertStatement = database.prepare("INSERT INTO locales (code, name, position, created_at) VALUES (?, ?, ?, ?)");
   const localeDeleteStatement = database.prepare("DELETE FROM locales WHERE code = ?");
   const deleteStateStatement = database.prepare("DELETE FROM site_state WHERE key = ?");
+  const pageListStatement = database.prepare("SELECT * FROM pages ORDER BY id ASC");
+  const pageGetStatement = database.prepare("SELECT * FROM pages WHERE id = ?");
+  const pageGetBySlugStatement = database.prepare("SELECT * FROM pages WHERE slug = ?");
+  const pageCountStatement = database.prepare("SELECT COUNT(*) AS count FROM pages");
+  const pageInsertStatement = database.prepare("INSERT INTO pages (slug, title, kind, draft_json, published_json, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)");
+  const pageUpdateStatement = database.prepare("UPDATE pages SET title = ?, draft_json = ?, updated_at = ? WHERE id = ?");
+  const pagePublishStatement = database.prepare("UPDATE pages SET published_json = draft_json, updated_at = ? WHERE id = ?");
+  const pageDeleteStatement = database.prepare("DELETE FROM pages WHERE id = ?");
 
   const DEFAULT_FORM_FIELDS = [
     { id: "name", label: "Name", type: "text", required: true },
@@ -166,6 +185,77 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
 
   if (localeCountStatement.get().count === 0) {
     localeInsertStatement.run("es", "Spanish", 0, now());
+  }
+
+  const DEFAULT_PAGES = [
+    {
+      slug: "about",
+      title: "About",
+      kind: "content",
+      content: {
+        heading: "A hotel shaped by the coastline.",
+        intro: "Tidehouse began as a single beach house, rebuilt slowly with the tide in mind.",
+        body: "Thirty-two rooms sit between the hillside and the Pacific, each one turned toward the water. The garden kitchen serves what the coast provides that week, and the path down to the beach is never more than a few minutes from any door. We keep the rhythm slow on purpose — this is a place for the fourth morning, not just the first.",
+        seoTitle: "About Tidehouse",
+        seoDescription: "How a single beach house became a thirty-two room hotel shaped by the Pacific coastline."
+      }
+    },
+    {
+      slug: "rooms",
+      title: "Rooms",
+      kind: "rooms",
+      content: {
+        heading: "Every room, every view.",
+        intro: "From the Coast Room to the Horizon Suite, each room is built around its light.",
+        body: "",
+        seoTitle: "Rooms & Suites at Tidehouse",
+        seoDescription: "Browse every room and suite at Tidehouse, from the Coast Room to the Horizon Suite."
+      }
+    },
+    {
+      slug: "dining",
+      title: "Dining",
+      kind: "dining",
+      content: {
+        heading: "A garden kitchen, close to the water.",
+        intro: "Seasonal, coastal, and served slowly.",
+        body: "",
+        seoTitle: "Dining at Tidehouse",
+        seoDescription: "See the full seasonal menu served at Tidehouse's garden kitchen."
+      }
+    },
+    {
+      slug: "offers",
+      title: "Offers",
+      kind: "content",
+      content: {
+        heading: "Stay a little longer.",
+        intro: "Book three nights and enjoy the fourth morning at your own pace.",
+        body: "Our standing offer runs year-round: stay three nights in any room and the fourth morning is on us — no early checkout, no rush. Ask at booking or mention it when you arrive.",
+        seoTitle: "Offers at Tidehouse",
+        seoDescription: "Current stay offers and seasonal packages at Tidehouse."
+      }
+    },
+    {
+      slug: "contact",
+      title: "Contact",
+      kind: "form",
+      content: {
+        heading: "Get in touch.",
+        intro: "We usually reply within a day.",
+        body: "",
+        seoTitle: "Contact Tidehouse",
+        seoDescription: "Reach the Tidehouse team with questions about your stay."
+      }
+    }
+  ];
+
+  if (pageCountStatement.get().count === 0) {
+    for (const page of DEFAULT_PAGES) {
+      const timestamp = now();
+      const json = JSON.stringify(page.content);
+      pageInsertStatement.run(page.slug, page.title, page.kind, json, json, timestamp, timestamp);
+    }
   }
 
   const DEFAULT_MENU_ITEMS = [
@@ -234,6 +324,23 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
       draft: draftItems,
       published: publishedItems,
       status: publishedItems ? (JSON.stringify(draftItems) === JSON.stringify(publishedItems) ? "published" : "changed") : "draft",
+      createdAt: row.created_at,
+      updatedAt: row.updated_at
+    };
+  }
+
+  function formatPage(row) {
+    if (!row) return null;
+    const draft = parseContent(row.draft_json, {});
+    const published = row.published_json ? parseContent(row.published_json, {}) : null;
+    return {
+      id: row.id,
+      slug: row.slug,
+      title: row.title,
+      kind: row.kind,
+      draft,
+      published,
+      status: published ? (JSON.stringify(draft) === JSON.stringify(published) ? "published" : "changed") : "draft",
       createdAt: row.created_at,
       updatedAt: row.updated_at
     };
@@ -481,6 +588,46 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
     createSubmission(formId, data) {
       const result = submissionInsertStatement.run(formId, JSON.stringify(data), now());
       return { id: Number(result.lastInsertRowid), formId, data, createdAt: now() };
+    },
+
+    listPages() {
+      return pageListStatement.all().map(formatPage);
+    },
+
+    getPage(id) {
+      return formatPage(pageGetStatement.get(id));
+    },
+
+    getPageBySlug(slug) {
+      return formatPage(pageGetBySlugStatement.get(slug));
+    },
+
+    createPage(slug, title, kind, content) {
+      const timestamp = now();
+      const result = pageInsertStatement.run(slug, title, kind, JSON.stringify(content), null, timestamp, timestamp);
+      return this.getPage(Number(result.lastInsertRowid));
+    },
+
+    updatePage(id, { title, content }) {
+      const current = pageGetStatement.get(id);
+      if (!current) return null;
+      const nextTitle = title ?? current.title;
+      const nextContent = content ?? parseContent(current.draft_json, {});
+      pageUpdateStatement.run(nextTitle, JSON.stringify(nextContent), now(), id);
+      return this.getPage(id);
+    },
+
+    publishPage(id) {
+      if (!pageGetStatement.get(id)) return null;
+      pagePublishStatement.run(now(), id);
+      return this.getPage(id);
+    },
+
+    deletePage(id) {
+      const row = pageGetStatement.get(id);
+      if (!row) return null;
+      pageDeleteStatement.run(id);
+      return formatPage(row);
     },
 
     close() {

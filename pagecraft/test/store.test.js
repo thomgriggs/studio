@@ -169,3 +169,27 @@ test("a default Spanish locale is seeded, more languages can be added, and delet
   assert.equal(store.snapshotTranslation("fr").draft.heading, "", "translation state should be cleared after deleting the locale");
   store.close();
 });
+
+test("five example pages are seeded with real content, and pages support create, edit, publish, and delete", () => {
+  const store = createStore({ now: () => "2026-08-05T00:00:00.000Z" });
+  const seeded = store.listPages();
+  assert.equal(seeded.length, 5);
+  assert.deepEqual(seeded.map((page) => page.slug), ["about", "rooms", "dining", "offers", "contact"]);
+  assert.equal(seeded.every((page) => page.status === "published"), true);
+  assert.equal(store.getPageBySlug("rooms").kind, "rooms");
+
+  const created = store.createPage("faq", "FAQ", "content", { heading: "Questions", intro: "", body: "", seoTitle: "", seoDescription: "" });
+  assert.equal(created.status, "draft");
+
+  const updated = store.updatePage(created.id, { content: { heading: "Frequently asked questions", intro: "", body: "", seoTitle: "", seoDescription: "" } });
+  assert.equal(updated.draft.heading, "Frequently asked questions");
+
+  const published = store.publishPage(created.id);
+  assert.equal(published.status, "published");
+  assert.equal(published.published.heading, "Frequently asked questions");
+
+  const deleted = store.deletePage(created.id);
+  assert.equal(deleted.slug, "faq");
+  assert.equal(store.listPages().length, 5);
+  store.close();
+});

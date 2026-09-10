@@ -64,7 +64,7 @@ const textUpdate = await authenticated("/api/draft", editor, {
 const textState = await textUpdate.json();
 if (textState.draft.heading !== malicious) throw new Error("Plain-text content was unexpectedly transformed.");
 
-const admin = await signIn("admin", "admin-demo");
+const admin = await signIn("thomgriggs@gmail.com", process.env.PAGECRAFT_ADMIN_PASSWORD || "admin-demo");
 const publish = await authenticated("/api/publish", admin, { method: "POST", body: "{}" });
 if (publish.status !== 200) throw new Error(`Admin publish failed: ${publish.status}`);
 const published = await publish.json();

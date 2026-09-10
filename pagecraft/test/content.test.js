@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName } from "../src/content.js";
+import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, pageKinds } from "../src/content.js";
 
 test("accepts and normalizes a known plain-text field", () => {
   assert.deepEqual(validatePatch({ heading: "  A calm coast  " }), {
@@ -149,5 +149,36 @@ test("translation patches allow clearing to empty (not yet translated) but rejec
   assert.deepEqual(validateTranslationPatch({ [field]: "" }), { ok: true, field, value: "" });
   assert.equal(validateTranslationPatch({ siteName: "Nombre" }).ok, false);
   assert.equal(validateTranslationPatch({ role: "admin" }).ok, false);
+});
+
+test("validates page slugs: shape, reserved words, and case normalization", () => {
+  assert.deepEqual(validatePageSlug("About"), { ok: true, value: "about" });
+  assert.deepEqual(validatePageSlug("our-story"), { ok: true, value: "our-story" });
+  assert.equal(validatePageSlug("home").ok, false);
+  assert.equal(validatePageSlug("api").ok, false);
+  assert.equal(validatePageSlug("Has Spaces").ok, false);
+  assert.equal(validatePageSlug("-leading-hyphen").ok, false);
+  assert.equal(validatePageSlug("").ok, false);
+});
+
+test("validates page titles", () => {
+  assert.deepEqual(validatePageTitle(" About us "), { ok: true, value: "About us" });
+  assert.equal(validatePageTitle("").ok, false);
+  assert.equal(validatePageTitle("x".repeat(61)).ok, false);
+});
+
+test("validates page kinds against the known set", () => {
+  assert.deepEqual(validatePageKind("rooms"), { ok: true, value: "rooms" });
+  assert.equal(validatePageKind("nonsense").ok, false);
+  assert.ok(Object.keys(pageKinds).includes("content"));
+});
+
+test("validates and trims page content, requiring a heading", () => {
+  const result = validatePageContent({ heading: "  About Tidehouse  ", intro: "  A short intro  ", body: "Body copy." });
+  assert.equal(result.ok, true);
+  assert.equal(result.value.heading, "About Tidehouse");
+  assert.equal(result.value.intro, "A short intro");
+  assert.equal(validatePageContent({ heading: "" }).ok, false);
+  assert.equal(validatePageContent("not an object").ok, false);
 });
 

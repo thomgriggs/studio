@@ -1,0 +1,27 @@
+{
+  "name": "pagecraft",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pagecraft-db",
+      "database_id": "d575e68a-f06d-433f-b3bc-664d894110fb"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "MEDIA_KV",
+      "id": "ab9a7871d2c44d78a59cb447fd4c89b6"
+    }
+  ],
+  "routes": [
+    { "pattern": "studio.thomgriggs.com/pagecraft*", "zone_name": "thomgriggs.com" }
+  ]
+}

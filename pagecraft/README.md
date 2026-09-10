@@ -28,10 +28,14 @@ The spike requires Node.js 20 or newer and has no third-party runtime packages.
 npm run dev
 ```
 
-Open `http://127.0.0.1:4173`. Demo accounts are shown on the sign-in screen:
+Open `http://127.0.0.1:4173`. Sign-in credentials are no longer shown on screen. By
+default, local dev falls back to demo passwords (not for production use):
 
-- Administrator: `admin` / `admin-demo`
-- Editor: `editor` / `editor-demo`
+- Administrator: `thomgriggs@gmail.com` / `admin-demo` (or `PAGECRAFT_ADMIN_PASSWORD`)
+- Editor: `editor` / `editor-demo` (or `PAGECRAFT_EDITOR_PASSWORD`)
+
+The deployed Cloudflare Worker uses real passwords set via `wrangler secret put
+ADMIN_PASSWORD` / `EDITOR_PASSWORD`, never the local fallback.
 
 Run the validation, revision, and payload checks with:
 

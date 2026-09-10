@@ -4,7 +4,7 @@ import { mkdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { dirname, extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES } from "./content.js";
+import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES } from "./content.js";
 import { validateEntry } from "./models.js";
 import { createStore } from "./store.js";
 
@@ -21,8 +21,8 @@ const MAX_BODY = 16 * 1024;
 const MAX_MEDIA_BODY = 7 * 1024 * 1024;
 
 const users = Object.freeze({
-  admin: { role: "admin", passwordHash: hash("admin-demo") },
-  editor: { role: "editor", passwordHash: hash("editor-demo") }
+  "thomgriggs@gmail.com": { role: "admin", passwordHash: hash(process.env.PAGECRAFT_ADMIN_PASSWORD || "admin-demo") },
+  editor: { role: "editor", passwordHash: hash(process.env.PAGECRAFT_EDITOR_PASSWORD || "editor-demo") }
 });
 
 function hash(value) {
@@ -94,7 +94,7 @@ async function api(request, response, url) {
     const body = await readJson(request);
     const user = users[body.username];
     if (!user || typeof body.password !== "string" || !equalSecret(body.password, user.passwordHash)) {
-      json(response, 401, { error: "Invalid demo credentials." });
+      json(response, 401, { error: "Invalid credentials." });
       return;
     }
     const id = randomBytes(24).toString("base64url");
@@ -124,6 +124,7 @@ async function api(request, response, url) {
 
   if (url.pathname === "/api/public" && request.method === "GET") {
     const rooms = store.listContent("room").entries.filter((entry) => entry.published).map((entry) => ({ id: entry.id, ...entry.published }));
+    const dishes = store.listContent("dish").entries.filter((entry) => entry.published).map((entry) => ({ id: entry.id, ...entry.published }));
     const published = store.snapshot().published;
     const heroImage = published.heroImageId ? store.getMedia(published.heroImageId) : null;
     const menus = store.listMenus().map((menu) => ({ id: menu.id, name: menu.name, items: menu.published || [] }));
@@ -133,7 +134,10 @@ async function api(request, response, url) {
     const translations = Object.fromEntries(
       locales.map((locale) => [locale.code, store.snapshotTranslation(locale.code).published])
     );
-    json(response, 200, { published, rooms, heroImageUrl: heroImage?.url || null, menus, form, locales, translations });
+    const pages = store.listPages()
+      .filter((page) => page.published)
+      .map((page) => ({ slug: page.slug, title: page.title, kind: page.kind, content: page.published }));
+    json(response, 200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales, translations, pages });
     return;
   }
 
@@ -144,7 +148,7 @@ async function api(request, response, url) {
     const translations = Object.fromEntries(
       locales.map((locale) => [locale.code, store.snapshotTranslation(locale.code)])
     );
-    json(response, 200, { ...store.snapshot(), fields: fieldDefinitions, media: store.listMedia(), menus: store.listMenus(), forms: store.listForms(), locales, translations });
+    json(response, 200, { ...store.snapshot(), fields: fieldDefinitions, media: store.listMedia(), menus: store.listMenus(), forms: store.listForms(), locales, translations, pages: store.listPages() });
     return;
   }
 
@@ -536,6 +540,72 @@ async function api(request, response, url) {
     }
   }
 
+  if (url.pathname === "/api/pages" && request.method === "GET") {
+    const session = requireSession(request, response);
+    if (!session) return;
+    json(response, 200, store.listPages());
+    return;
+  }
+
+  if (url.pathname === "/api/pages" && request.method === "POST") {
+    const session = requireSession(request, response);
+    if (!session) return;
+    if (store.listPages().length >= MAX_PAGES) {
+      json(response, 400, { error: `You can have at most ${MAX_PAGES} pages.` });
+      return;
+    }
+    const body = await readJson(request);
+    const slug = validatePageSlug(body.slug);
+    if (!slug.ok) return json(response, 400, { error: slug.error });
+    const title = validatePageTitle(body.title);
+    if (!title.ok) return json(response, 400, { error: title.error });
+    const kind = validatePageKind(body.kind || "content");
+    if (!kind.ok) return json(response, 400, { error: kind.error });
+    if (store.getPageBySlug(slug.value)) return json(response, 400, { error: "That path is already used by another page." });
+    const content = validatePageContent({ heading: title.value, intro: "", body: "", seoTitle: "", seoDescription: "" });
+    json(response, 201, store.createPage(slug.value, title.value, kind.value, content.value));
+    return;
+  }
+
+  const pageMatch = url.pathname.match(/^\/api\/pages\/(\d+)(?:\/(publish))?$/);
+  if (pageMatch) {
+    const id = Number(pageMatch[1]);
+    const action = pageMatch[2];
+    if (!action && request.method === "PATCH") {
+      const session = requireSession(request, response);
+      if (!session) return;
+      const body = await readJson(request);
+      const patch = {};
+      if (body.title !== undefined) {
+        const title = validatePageTitle(body.title);
+        if (!title.ok) return json(response, 400, { error: title.error });
+        patch.title = title.value;
+      }
+      if (body.content !== undefined) {
+        const content = validatePageContent(body.content);
+        if (!content.ok) return json(response, 400, { error: content.error });
+        patch.content = content.value;
+      }
+      const updated = store.updatePage(id, patch);
+      json(response, updated ? 200 : 404, updated || { error: "Page not found." });
+      return;
+    }
+    if (!action && request.method === "DELETE") {
+      const session = requireSession(request, response, { admin: true });
+      if (!session) return;
+      const deleted = store.deletePage(id);
+      json(response, deleted ? 200 : 404, deleted ? { ok: true } : { error: "Page not found." });
+      return;
+    }
+    if (action === "publish" && request.method === "POST") {
+      const session = requireSession(request, response, { admin: true });
+      if (!session) return;
+      const published = store.publishPage(id);
+      json(response, published ? 200 : 404, published || { error: "Page not found." });
+      return;
+    }
+  }
+
   json(response, 404, { error: "Not found." });
 }
 
@@ -577,7 +647,9 @@ async function uploadedFile(response, pathname) {
 }
 
 async function staticFile(response, pathname) {
-  const requested = pathname === "/" ? "index.html" : pathname.slice(1);
+  // No file extension and not a known static asset: treat as a client-side page
+  // route (e.g. /about, /rooms) and let the SPA shell resolve it from /api/public.
+  const requested = pathname === "/" || !extname(pathname) ? "index.html" : pathname.slice(1);
   const safe = normalize(requested).replace(/^(\.\.[/\\])+/, "");
   const path = join(publicRoot, safe);
   if (!path.startsWith(publicRoot)) {
@@ -601,8 +673,9 @@ async function staticFile(response, pathname) {
 }
 
 const server = createServer(async (request, response) => {
+  const url = new URL(request.url, `http://${request.headers.host || `${host}:${port}`}`);
+
   try {
-    const url = new URL(request.url, `http://${request.headers.host || `${host}:${port}`}`);
     if (url.pathname.startsWith("/api/")) await api(request, response, url);
     else if (url.pathname.startsWith("/uploads/")) await uploadedFile(response, url.pathname);
     else await staticFile(response, url.pathname);
@@ -614,5 +687,5 @@ const server = createServer(async (request, response) => {
 
 server.listen(port, host, () => {
   console.log(`Pagecraft demo: http://${host}:${port}`);
-  console.log("Demo accounts: admin/admin-demo and editor/editor-demo");
+  console.log("Demo accounts: thomgriggs@gmail.com/admin-demo and editor/editor-demo (override with PAGECRAFT_ADMIN_PASSWORD / PAGECRAFT_EDITOR_PASSWORD)");
 });
