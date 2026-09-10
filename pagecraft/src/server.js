@@ -4,7 +4,7 @@ import { mkdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { dirname, extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES } from "./content.js";
+import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES, validatePageTranslationPatch, pageTranslatableFields } from "./content.js";
 import { validateEntry } from "./models.js";
 import { createStore } from "./store.js";
 
@@ -136,7 +136,13 @@ async function api(request, response, url) {
     );
     const pages = store.listPages()
       .filter((page) => page.published)
-      .map((page) => ({ slug: page.slug, title: page.title, kind: page.kind, content: page.published }));
+      .map((page) => ({
+        slug: page.slug,
+        title: page.title,
+        kind: page.kind,
+        content: page.published,
+        translations: Object.fromEntries(locales.map((locale) => [locale.code, store.snapshotPageTranslation(page.id, locale.code).published]))
+      }));
     json(response, 200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales, translations, pages });
     return;
   }
@@ -602,6 +608,44 @@ async function api(request, response, url) {
       if (!session) return;
       const published = store.publishPage(id);
       json(response, published ? 200 : 404, published || { error: "Page not found." });
+      return;
+    }
+  }
+
+  const pageTranslationMatch = url.pathname.match(/^\/api\/pages\/(\d+)\/translations\/([a-z-]+)(?:\/(publish))?$/);
+  if (pageTranslationMatch) {
+    const pageId = Number(pageTranslationMatch[1]);
+    const locale = pageTranslationMatch[2];
+    const action = pageTranslationMatch[3];
+    if (!store.getPage(pageId)) {
+      json(response, 404, { error: "Page not found." });
+      return;
+    }
+    if (!store.getLocale(locale)) {
+      json(response, 404, { error: "That language has not been added to this project." });
+      return;
+    }
+    if (!action && request.method === "GET") {
+      const session = requireSession(request, response);
+      if (!session) return;
+      json(response, 200, store.snapshotPageTranslation(pageId, locale));
+      return;
+    }
+    if (!action && request.method === "PATCH") {
+      const session = requireSession(request, response);
+      if (!session) return;
+      const validation = validatePageTranslationPatch(await readJson(request));
+      if (!validation.ok) {
+        json(response, 400, { error: validation.error });
+        return;
+      }
+      json(response, 200, store.updatePageTranslation(pageId, locale, validation.field, validation.value));
+      return;
+    }
+    if (action === "publish" && request.method === "POST") {
+      const session = requireSession(request, response, { admin: true });
+      if (!session) return;
+      json(response, 200, store.publishPageTranslation(pageId, locale));
       return;
     }
   }

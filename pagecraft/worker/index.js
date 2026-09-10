@@ -3,7 +3,8 @@ import {
   fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems,
   validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS,
   validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, translatableFields,
-  validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES
+  validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES,
+  validatePageTranslationPatch, pageTranslatableFields
 } from "../src/content.js";
 import { contentTypes, validateEntry } from "../src/models.js";
 import { createStore } from "./store.js";
@@ -12,6 +13,7 @@ const PREFIX = "/pagecraft";
 const MAX_BODY = 16 * 1024;
 const MAX_MEDIA_BODY = 7 * 1024 * 1024;
 const emptyTranslation = Object.fromEntries(translatableFields.map((field) => [field, ""]));
+const emptyPageTranslation = Object.fromEntries(pageTranslatableFields.map((field) => [field, ""]));
 
 function getUsers(env) {
   return {
@@ -118,9 +120,17 @@ async function handleApi(request, env, pathname, url) {
     const translations = Object.fromEntries(
       await Promise.all(allLocales.map(async (locale) => [locale.code, (await store.snapshotTranslation(locale.code, emptyTranslation)).published]))
     );
-    const pages = allPages
-      .filter((page) => page.published)
-      .map((page) => ({ slug: page.slug, title: page.title, kind: page.kind, content: page.published }));
+    const pages = await Promise.all(
+      allPages.filter((page) => page.published).map(async (page) => ({
+        slug: page.slug,
+        title: page.title,
+        kind: page.kind,
+        content: page.published,
+        translations: Object.fromEntries(
+          await Promise.all(allLocales.map(async (locale) => [locale.code, (await store.snapshotPageTranslation(page.id, locale.code, emptyPageTranslation)).published]))
+        )
+      }))
+    );
     return json(200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales: allLocales, translations, pages });
   }
 
@@ -500,6 +510,32 @@ async function handleApi(request, env, pathname, url) {
       if (error) return error;
       const published = await store.publishPage(id);
       return json(published ? 200 : 404, published || { error: "Page not found." });
+    }
+  }
+
+  const pageTranslationMatch = pathname.match(/^\/api\/pages\/(\d+)\/translations\/([a-z-]+)(?:\/(publish))?$/);
+  if (pageTranslationMatch) {
+    const pageId = Number(pageTranslationMatch[1]);
+    const locale = pageTranslationMatch[2];
+    const action = pageTranslationMatch[3];
+    if (!(await store.getPage(pageId))) return json(404, { error: "Page not found." });
+    if (!(await store.getLocale(locale))) return json(404, { error: "That language has not been added to this project." });
+    if (!action && method === "GET") {
+      const { error } = await requireSession(request, store);
+      if (error) return error;
+      return json(200, await store.snapshotPageTranslation(pageId, locale, emptyPageTranslation));
+    }
+    if (!action && method === "PATCH") {
+      const { error } = await requireSession(request, store);
+      if (error) return error;
+      const validation = validatePageTranslationPatch(await readJson(request));
+      if (!validation.ok) return json(400, { error: validation.error });
+      return json(200, await store.updatePageTranslation(pageId, locale, validation.field, validation.value, emptyPageTranslation));
+    }
+    if (action === "publish" && method === "POST") {
+      const { error } = await requireSession(request, store, { admin: true });
+      if (error) return error;
+      return json(200, await store.publishPageTranslation(pageId, locale, emptyPageTranslation));
     }
   }
 

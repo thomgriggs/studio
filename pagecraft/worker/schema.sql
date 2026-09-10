@@ -80,3 +80,12 @@ CREATE TABLE IF NOT EXISTS pages (
   created_at TEXT NOT NULL,
   updated_at TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS page_translations (
+  page_id INTEGER NOT NULL REFERENCES pages(id) ON DELETE CASCADE,
+  locale TEXT NOT NULL,
+  draft_json TEXT NOT NULL,
+  published_json TEXT,
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY (page_id, locale)
+);

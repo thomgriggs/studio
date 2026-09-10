@@ -193,3 +193,27 @@ test("five example pages are seeded with real content, and pages support create,
   assert.equal(store.listPages().length, 5);
   store.close();
 });
+
+test("page translations start empty per (page, locale), save as drafts, and publish independently", () => {
+  const store = createStore({ now: () => "2026-08-06T00:00:00.000Z" });
+  const empty = { heading: "", intro: "", body: "", seoTitle: "", seoDescription: "" };
+  const about = store.getPageBySlug("about");
+
+  const initial = store.snapshotPageTranslation(about.id, "es");
+  assert.deepEqual(initial.draft, empty);
+  assert.equal(initial.dirty, false);
+
+  const updated = store.updatePageTranslation(about.id, "es", "heading", "Un hotel junto al mar.");
+  assert.equal(updated.draft.heading, "Un hotel junto al mar.");
+  assert.equal(updated.published.heading, "");
+  assert.equal(updated.dirty, true);
+
+  const published = store.publishPageTranslation(about.id, "es");
+  assert.equal(published.published.heading, "Un hotel junto al mar.");
+  assert.equal(published.dirty, false);
+
+  // A different page's translation for the same locale is independent.
+  const rooms = store.getPageBySlug("rooms");
+  assert.deepEqual(store.snapshotPageTranslation(rooms.id, "es").draft, empty);
+  store.close();
+});

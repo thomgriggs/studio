@@ -7,13 +7,18 @@ export const fieldDefinitions = Object.freeze({
   storyText: { label: "Story description", maxLength: 500, inline: true, section: "Story" },
   roomsEyebrow: { label: "Rooms eyebrow", maxLength: 80, inline: true, section: "Rooms listing" },
   roomsTitle: { label: "Rooms heading", maxLength: 120, inline: true, section: "Rooms listing" },
+  heroButtonLabel: { label: "Hero button label", maxLength: 40, inline: true },
+  offerKicker: { label: "Offer eyebrow", maxLength: 40, inline: true },
   offerTitle: { label: "Offer title", maxLength: 100, inline: true },
   offerText: { label: "Offer description", maxLength: 300, inline: true },
+  offerLinkLabel: { label: "Offer link label", maxLength: 40, inline: true },
+  contactKicker: { label: "Contact eyebrow", maxLength: 40, inline: true },
   seoTitle: { label: "Page title", maxLength: 70, section: "SEO", help: "Shown in the browser tab and search results." },
   seoDescription: { label: "Meta description", maxLength: 160, section: "SEO", help: "Shown under the title in search results." },
-  bookingLabel: { label: "Booking button label", maxLength: 30, section: "Settings" },
-  siteName: { label: "Site name", maxLength: 60, section: "Settings", help: "Shown in the header and footer logo." },
-  footerTagline: { label: "Footer tagline", maxLength: 100, section: "Settings" },
+  bookingLabel: { label: "Booking button label", maxLength: 30, section: "Settings", translatable: true },
+  siteName: { label: "Site name", maxLength: 60, section: "Settings", help: "Shown in the header and footer logo. Not translated, since brand names usually stay the same across languages." },
+  footerTagline: { label: "Footer tagline", maxLength: 100, section: "Settings", translatable: true },
+  footerNote: { label: "Footer note", maxLength: 100, section: "Settings", translatable: true },
   heroImageId: { label: "Hero background image", maxLength: 40, section: "Settings", help: "Set from the Media library. Leave empty to use the default background.", optional: true, managedInMedia: true }
 });
 
@@ -27,13 +32,18 @@ export const seedContent = Object.freeze({
   storyText: "Thirty-two rooms, a garden kitchen, and a path that reaches the water before breakfast.",
   roomsEyebrow: "Rooms & suites",
   roomsTitle: "Find your view.",
+  heroButtonLabel: "Discover Tidehouse",
+  offerKicker: "Seasonal offer",
   offerTitle: "Stay a little longer",
   offerText: "Book three nights and enjoy the fourth morning at your own pace.",
+  offerLinkLabel: "View the offer",
+  contactKicker: "Get in touch",
   seoTitle: "Tidehouse — a quieter edge of California",
   seoDescription: "A quiet coastal hotel shaped by salt air, warm light, and unhurried days.",
   bookingLabel: "Check availability",
   siteName: "Tidehouse",
   footerTagline: "Somewhere on the California coast",
+  footerNote: "Demo property for Pagecraft",
   heroImageId: ""
 });
 
@@ -42,7 +52,12 @@ const NON_CONTENT_SECTIONS = new Set(["SEO", "Settings"]);
 export const translatableFields = Object.freeze(
   Object.keys(fieldDefinitions).filter((field) => {
     const definition = fieldDefinitions[field];
-    return !definition.managedInMedia && !NON_CONTENT_SECTIONS.has(definition.section);
+    if (definition.managedInMedia) return false;
+    if (!NON_CONTENT_SECTIONS.has(definition.section)) return true;
+    // A field in an excluded section (e.g. Settings) can still opt back in —
+    // used for visible site text like the footer tagline or booking button
+    // label, which should translate even though they live in Site Settings.
+    return Boolean(definition.translatable);
   })
 );
 
@@ -304,4 +319,23 @@ export function validatePageContent(data) {
   const seoTitle = String(data.seoTitle ?? "").trim().slice(0, 70);
   const seoDescription = String(data.seoDescription ?? "").trim().slice(0, 160);
   return { ok: true, value: { heading, intro, body, seoTitle, seoDescription } };
+}
+
+export const pageTranslatableFields = Object.freeze(["heading", "intro", "body", "seoTitle", "seoDescription"]);
+const PAGE_FIELD_MAX_LENGTHS = { heading: 120, intro: 300, body: 3000, seoTitle: 70, seoDescription: 160 };
+
+export function validatePageTranslationPatch(patch) {
+  if (!patch || typeof patch !== "object" || Array.isArray(patch)) {
+    return { ok: false, error: "The update must be an object." };
+  }
+  const entries = Object.entries(patch);
+  if (entries.length !== 1) return { ok: false, error: "Update exactly one field at a time." };
+
+  const [[field, value]] = entries;
+  if (!pageTranslatableFields.includes(field)) return { ok: false, error: "Unknown field." };
+  if (typeof value !== "string") return { ok: false, error: "Value must be text." };
+
+  const normalized = value.replace(/\r\n?/g, "\n").trim();
+  if (normalized.length > PAGE_FIELD_MAX_LENGTHS[field]) return { ok: false, error: `${field} is too long.` };
+  return { ok: true, field, value: normalized };
 }

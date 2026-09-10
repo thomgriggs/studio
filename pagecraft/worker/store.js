@@ -1,3 +1,5 @@
+import { seedContent } from "../src/content.js";
+
 function now() {
   return new Date().toISOString();
 }
@@ -97,8 +99,8 @@ export function createStore(db) {
   return {
     async snapshot() {
       const [draft, published, history] = await Promise.all([
-        readState("draft", {}),
-        readState("published", {}),
+        readState("draft", seedContent),
+        readState("published", seedContent),
         db.prepare("SELECT id, created_at FROM revisions ORDER BY id DESC").all()
       ]);
       return {
@@ -110,13 +112,13 @@ export function createStore(db) {
     },
 
     async update(field, value) {
-      const draft = { ...(await readState("draft", {})), [field]: value };
+      const draft = { ...(await readState("draft", seedContent)), [field]: value };
       await writeState("draft", draft);
       return this.snapshot();
     },
 
     async publish() {
-      const draft = await readState("draft", {});
+      const draft = await readState("draft", seedContent);
       await db.batch([
         db.prepare("INSERT INTO site_state (key, value, updated_at) VALUES ('published', ?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at").bind(JSON.stringify(draft), now()),
         db.prepare("INSERT INTO revisions (created_at, content_json) VALUES (?, ?)").bind(now(), JSON.stringify(draft))
@@ -400,6 +402,31 @@ export function createStore(db) {
       if (!row) return null;
       await db.prepare("DELETE FROM pages WHERE id = ?").bind(id).run();
       return formatPage(row);
+    },
+
+    async snapshotPageTranslation(pageId, locale, emptyPageTranslation) {
+      const row = await db.prepare("SELECT * FROM page_translations WHERE page_id = ? AND locale = ?").bind(pageId, locale).first();
+      const draft = row ? parseObject(row.draft_json, emptyPageTranslation) : { ...emptyPageTranslation };
+      const published = row?.published_json ? parseObject(row.published_json, emptyPageTranslation) : { ...emptyPageTranslation };
+      return { pageId, locale, draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    async updatePageTranslation(pageId, locale, field, value, emptyPageTranslation) {
+      const current = await this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
+      const draft = { ...current.draft, [field]: value };
+      const row = await db.prepare("SELECT published_json FROM page_translations WHERE page_id = ? AND locale = ?").bind(pageId, locale).first();
+      await db.prepare(`
+        INSERT INTO page_translations (page_id, locale, draft_json, published_json, updated_at) VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(page_id, locale) DO UPDATE SET draft_json = excluded.draft_json, updated_at = excluded.updated_at
+      `).bind(pageId, locale, JSON.stringify(draft), row?.published_json ?? null, now()).run();
+      return this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
+    },
+
+    async publishPageTranslation(pageId, locale, emptyPageTranslation) {
+      const existing = await db.prepare("SELECT 1 FROM page_translations WHERE page_id = ? AND locale = ?").bind(pageId, locale).first();
+      if (!existing) return this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
+      await db.prepare("UPDATE page_translations SET published_json = draft_json, updated_at = ? WHERE page_id = ? AND locale = ?").bind(now(), pageId, locale).run();
+      return this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
     }
   };
 }

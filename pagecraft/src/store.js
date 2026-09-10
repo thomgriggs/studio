@@ -1,8 +1,9 @@
 import { DatabaseSync } from "node:sqlite";
-import { seedContent, translatableFields } from "./content.js";
+import { seedContent, translatableFields, pageTranslatableFields } from "./content.js";
 import { contentTypes, seedEntries } from "./models.js";
 
 const emptyTranslation = Object.freeze(Object.fromEntries(translatableFields.map((field) => [field, ""])));
+const emptyPageTranslation = Object.freeze(Object.fromEntries(pageTranslatableFields.map((field) => [field, ""])));
 
 function parseContent(value, fallback) {
   try {
@@ -114,6 +115,15 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
       created_at TEXT NOT NULL,
       updated_at TEXT NOT NULL
     ) STRICT;
+
+    CREATE TABLE IF NOT EXISTS page_translations (
+      page_id INTEGER NOT NULL REFERENCES pages(id) ON DELETE CASCADE,
+      locale TEXT NOT NULL,
+      draft_json TEXT NOT NULL,
+      published_json TEXT,
+      updated_at TEXT NOT NULL,
+      PRIMARY KEY (page_id, locale)
+    ) STRICT;
   `);
 
   const getStateStatement = database.prepare("SELECT value FROM site_state WHERE key = ?");
@@ -171,6 +181,12 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
   const pageUpdateStatement = database.prepare("UPDATE pages SET title = ?, draft_json = ?, updated_at = ? WHERE id = ?");
   const pagePublishStatement = database.prepare("UPDATE pages SET published_json = draft_json, updated_at = ? WHERE id = ?");
   const pageDeleteStatement = database.prepare("DELETE FROM pages WHERE id = ?");
+  const pageTranslationGetStatement = database.prepare("SELECT * FROM page_translations WHERE page_id = ? AND locale = ?");
+  const pageTranslationUpsertStatement = database.prepare(`
+    INSERT INTO page_translations (page_id, locale, draft_json, published_json, updated_at) VALUES (?, ?, ?, ?, ?)
+    ON CONFLICT(page_id, locale) DO UPDATE SET draft_json = excluded.draft_json, updated_at = excluded.updated_at
+  `);
+  const pageTranslationPublishStatement = database.prepare("UPDATE page_translations SET published_json = draft_json, updated_at = ? WHERE page_id = ? AND locale = ?");
 
   const DEFAULT_FORM_FIELDS = [
     { id: "name", label: "Name", type: "text", required: true },
@@ -628,6 +644,27 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
       if (!row) return null;
       pageDeleteStatement.run(id);
       return formatPage(row);
+    },
+
+    snapshotPageTranslation(pageId, locale) {
+      const row = pageTranslationGetStatement.get(pageId, locale);
+      const draft = row ? parseContent(row.draft_json, emptyPageTranslation) : { ...emptyPageTranslation };
+      const published = row?.published_json ? parseContent(row.published_json, emptyPageTranslation) : { ...emptyPageTranslation };
+      return { pageId, locale, draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    updatePageTranslation(pageId, locale, field, value) {
+      const current = this.snapshotPageTranslation(pageId, locale);
+      const draft = { ...current.draft, [field]: value };
+      const row = pageTranslationGetStatement.get(pageId, locale);
+      pageTranslationUpsertStatement.run(pageId, locale, JSON.stringify(draft), row?.published_json ?? null, now());
+      return this.snapshotPageTranslation(pageId, locale);
+    },
+
+    publishPageTranslation(pageId, locale) {
+      if (!pageTranslationGetStatement.get(pageId, locale)) return this.snapshotPageTranslation(pageId, locale);
+      pageTranslationPublishStatement.run(now(), pageId, locale);
+      return this.snapshotPageTranslation(pageId, locale);
     },
 
     close() {

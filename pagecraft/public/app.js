@@ -14,6 +14,14 @@ document.querySelectorAll(".site-logo").forEach((link) => { link.href = `${API_B
   if (earlyGenericPage) earlyGenericPage.hidden = isHome;
 }
 
+// Safety net for our custom drag-and-drop (menus, form fields): every
+// individual drop zone already calls preventDefault, but a drag that ends
+// anywhere else (e.g. an accidental drag started while interacting with a
+// datalist suggestion) falls through to the browser's default action, which
+// for link-like text is to navigate to it. Block that globally.
+document.addEventListener("dragover", (event) => event.preventDefault());
+document.addEventListener("drop", (event) => event.preventDefault());
+
 const SECRET_CODE = "pagecraft";
 const LANGUAGE_CHOICES = [
   ["es", "Spanish"], ["fr", "French"], ["de", "German"], ["it", "Italian"],
@@ -648,10 +656,11 @@ function renderForm() {
   seoForm.replaceChildren();
   settingsForm.replaceChildren();
   const sections = {
-    Hero: ["eyebrow", "heading", "introduction"],
+    Hero: ["eyebrow", "heading", "introduction", "heroButtonLabel"],
     Story: ["storyEyebrow", "storyTitle", "storyText"],
     "Rooms listing": ["roomsEyebrow", "roomsTitle"],
-    Offer: ["offerTitle", "offerText"]
+    Offer: ["offerKicker", "offerTitle", "offerText", "offerLinkLabel"],
+    Contact: ["contactKicker"]
   };
   const containers = {};
   Object.keys(sections).forEach((sectionName) => {
@@ -768,7 +777,9 @@ function renderTranslationEditor() {
   translationForm.replaceChildren();
   const nonContentSections = new Set(["SEO", "Settings"]);
   Object.entries(state.fields).forEach(([field, definition]) => {
-    if (definition.managedInMedia || nonContentSections.has(definition.section)) return;
+    if (definition.managedInMedia) return;
+    const excluded = nonContentSections.has(definition.section) && !definition.translatable;
+    if (excluded) return;
     translationForm.append(buildTranslationRow(field, definition, locale));
   });
 }
@@ -1750,17 +1761,20 @@ loginForm.addEventListener("submit", async (event) => {
 
 document.querySelector("#login-close").addEventListener("click", () => loginDialog.close());
 
-preview.addEventListener("dblclick", (event) => {
+// Scoped to `document`, not just `#site-preview`, so header/footer chrome
+// (site name, footer tagline, etc.) is inline-editable too — they live
+// outside the preview article but still carry [data-field] bindings.
+document.addEventListener("dblclick", (event) => {
   const element = event.target.closest("[data-field]");
   if (element) beginInlineEdit(element);
 });
 
-preview.addEventListener("focusout", (event) => {
+document.addEventListener("focusout", (event) => {
   const element = event.target.closest("[data-field]");
   if (element?.contentEditable === "true") finishInlineEdit(element, true);
 });
 
-preview.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
   const element = event.target.closest("[data-field]");
   if (!element) return;
   if (element.contentEditable !== "true" && (event.key === "Enter" || event.key === " ")) {
@@ -1773,6 +1787,14 @@ preview.addEventListener("keydown", (event) => {
     event.preventDefault();
     finishInlineEdit(element, true);
   }
+});
+
+// Editable text that also happens to be a real link (hero button, offer
+// link, site logo) would otherwise navigate away on the first click of a
+// double-click, interrupting the edit gesture. Suppress that while editing.
+document.addEventListener("click", (event) => {
+  const element = event.target.closest("a[data-field], a[data-page-field]");
+  if (element && session && outlinesVisible && !showingPublished) event.preventDefault();
 });
 
 genericPage.addEventListener("dblclick", (event) => {

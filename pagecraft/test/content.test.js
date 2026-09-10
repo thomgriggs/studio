@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, pageKinds } from "../src/content.js";
+import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, pageKinds, validatePageTranslationPatch, pageTranslatableFields } from "../src/content.js";
 
 test("accepts and normalizes a known plain-text field", () => {
   assert.deepEqual(validatePatch({ heading: "  A calm coast  " }), {
@@ -143,6 +143,18 @@ test("translatable fields include Story and Rooms listing content, not just unse
   assert.ok(!translatableFields.includes("heroImageId"));
 });
 
+test("visible chrome text (footer tagline, footer note, booking label) is translatable even though it lives in the Settings section", () => {
+  assert.ok(translatableFields.includes("footerTagline"));
+  assert.ok(translatableFields.includes("footerNote"));
+  assert.ok(translatableFields.includes("bookingLabel"));
+  assert.ok(translatableFields.includes("heroButtonLabel"));
+  assert.ok(translatableFields.includes("offerKicker"));
+  assert.ok(translatableFields.includes("offerLinkLabel"));
+  assert.ok(translatableFields.includes("contactKicker"));
+  // siteName stays untranslated deliberately — it's a brand name.
+  assert.ok(!translatableFields.includes("siteName"));
+});
+
 test("translation patches allow clearing to empty (not yet translated) but reject unknown or non-translatable fields", () => {
   const [field] = translatableFields;
   assert.deepEqual(validateTranslationPatch({ [field]: "  Traducido  " }), { ok: true, field, value: "Traducido" });
@@ -180,5 +192,13 @@ test("validates and trims page content, requiring a heading", () => {
   assert.equal(result.value.intro, "A short intro");
   assert.equal(validatePageContent({ heading: "" }).ok, false);
   assert.equal(validatePageContent("not an object").ok, false);
+});
+
+test("page translation patches allow clearing to empty and reject unknown fields", () => {
+  const [field] = pageTranslatableFields;
+  assert.deepEqual(validatePageTranslationPatch({ [field]: "  Traducido  " }), { ok: true, field, value: "Traducido" });
+  assert.deepEqual(validatePageTranslationPatch({ [field]: "" }), { ok: true, field, value: "" });
+  assert.equal(validatePageTranslationPatch({ slug: "nope" }).ok, false);
+  assert.equal(validatePageTranslationPatch({ heading: "a", body: "b" }).ok, false);
 });
 

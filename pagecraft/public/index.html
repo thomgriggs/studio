@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <a class="site-logo" href="#top" aria-label="Tidehouse home" data-field="siteName"></a>
+      <a class="site-logo editable" href="#top" aria-label="Tidehouse home" data-field="siteName" tabindex="-1"></a>
       <nav aria-label="Main navigation" id="site-nav"></nav>
       <div class="header-actions">
         <div class="language-switch" id="language-switch" hidden role="group" aria-label="Choose language"></div>
@@ -28,7 +28,7 @@
             <p class="kicker editable" data-field="eyebrow" tabindex="-1"></p>
             <h1 class="editable" data-field="heading" tabindex="-1"></h1>
             <p class="intro editable" data-field="introduction" tabindex="-1"></p>
-            <a class="site-button" href="#stay">Discover Tidehouse</a>
+            <a class="site-button editable" href="#stay" data-field="heroButtonLabel" tabindex="-1"></a>
           </div>
           <div class="hero-art" id="hero-art" role="img" aria-label="Abstract view of a sun setting over the Pacific coast">
             <span></span>
@@ -50,15 +50,15 @@
         </section>
 
         <section class="offer" id="offer">
-          <p class="kicker">Seasonal offer</p>
+          <p class="kicker editable" data-field="offerKicker" tabindex="-1"></p>
           <h2 class="editable" data-field="offerTitle" tabindex="-1"></h2>
           <p class="editable" data-field="offerText" tabindex="-1"></p>
-          <a class="text-link" href="https://booking.example">View the offer</a>
+          <a class="text-link editable" href="https://booking.example" data-field="offerLinkLabel" tabindex="-1"></a>
         </section>
 
         <section class="contact" id="contact" aria-labelledby="contact-heading" hidden>
           <div class="section-heading">
-            <p class="kicker">Get in touch</p>
+            <p class="kicker editable" data-field="contactKicker" tabindex="-1"></p>
             <h2 id="contact-heading"></h2>
           </div>
           <form class="public-form" id="public-contact-form"></form>
@@ -91,9 +91,9 @@
     </main>
 
     <footer class="site-footer">
-      <a class="site-logo" href="#top" data-field="siteName"></a>
-      <p data-field="footerTagline"></p>
-      <p>Demo property for Pagecraft</p>
+      <a class="site-logo editable" href="#top" data-field="siteName" tabindex="-1"></a>
+      <p class="editable" data-field="footerTagline" tabindex="-1"></p>
+      <p class="editable" data-field="footerNote" tabindex="-1"></p>
     </footer>
 
     <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-heading">
