@@ -1,5 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
-import { seedContent, translatableFields, pageTranslatableFields } from "./content.js";
+import { seedContent, translatableFields, pageTranslatableFields, defaultSiteStyles, defaultBranding } from "./content.js";
 import { contentTypes, seedEntries } from "./models.js";
 
 const emptyTranslation = Object.freeze(Object.fromEntries(translatableFields.map((field) => [field, ""])));
@@ -665,6 +665,42 @@ export function createStore({ path = ":memory:", now = () => new Date().toISOStr
       if (!pageTranslationGetStatement.get(pageId, locale)) return this.snapshotPageTranslation(pageId, locale);
       pageTranslationPublishStatement.run(now(), pageId, locale);
       return this.snapshotPageTranslation(pageId, locale);
+    },
+
+    snapshotStyles() {
+      const draft = readState("styles:draft", defaultSiteStyles);
+      const published = readState("styles:published", defaultSiteStyles);
+      return { draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    updateStyles(patch) {
+      const draft = { ...readState("styles:draft", defaultSiteStyles), ...patch };
+      writeState("styles:draft", draft);
+      return this.snapshotStyles();
+    },
+
+    publishStyles() {
+      const draft = readState("styles:draft", defaultSiteStyles);
+      writeState("styles:published", draft);
+      return this.snapshotStyles();
+    },
+
+    snapshotBranding() {
+      const draft = readState("branding:draft", defaultBranding);
+      const published = readState("branding:published", defaultBranding);
+      return { draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    updateBranding(patch) {
+      const draft = { ...readState("branding:draft", defaultBranding), ...patch };
+      writeState("branding:draft", draft);
+      return this.snapshotBranding();
+    },
+
+    publishBranding() {
+      const draft = readState("branding:draft", defaultBranding);
+      writeState("branding:published", draft);
+      return this.snapshotBranding();
     },
 
     close() {

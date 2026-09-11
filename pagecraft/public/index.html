@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <a class="site-logo editable" href="#top" aria-label="Tidehouse home" data-field="siteName" tabindex="-1"></a>
+      <a class="site-logo" href="#top" aria-label="Tidehouse home"></a>
       <nav aria-label="Main navigation" id="site-nav"></nav>
       <div class="header-actions">
         <div class="language-switch" id="language-switch" hidden role="group" aria-label="Choose language"></div>
@@ -91,7 +91,7 @@
     </main>
 
     <footer class="site-footer">
-      <a class="site-logo editable" href="#top" data-field="siteName" tabindex="-1"></a>
+      <a class="site-logo" href="#top"></a>
       <p class="editable" data-field="footerTagline" tabindex="-1"></p>
       <p class="editable" data-field="footerNote" tabindex="-1"></p>
     </footer>
@@ -131,6 +131,8 @@
           <button type="button" id="section-navigation"><span>Menus</span></button>
           <button type="button" id="section-media"><span>Media</span></button>
           <button type="button" id="section-forms"><span>Forms</span></button>
+          <button type="button" id="section-styles"><span>Site styles</span></button>
+          <button type="button" id="section-branding"><span>Logo &amp; favicon</span></button>
           <p class="nav-label">Manage</p>
           <button type="button" disabled><span>Publishing</span><span class="planned-badge">Planned</span></button>
           <button type="button" id="section-settings"><span>Site settings</span></button>
@@ -144,6 +146,100 @@
               <div><p class="section-kind">Site-wide</p><h3>Identity</h3><p>The site name appears in the header and footer logo.</p></div>
             </div>
             <div class="section-fields" id="settings-form"></div>
+          </section>
+        </div>
+        <div class="editor-content" id="styles-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Website</p><h3>Site styles</h3><p class="editor-intro">Colors, fonts, and button style used across the whole site.</p></div>
+            <button class="editor-action" id="styles-publish-button" type="button">Publish styles</button>
+          </div>
+          <p class="entry-message" id="styles-message" aria-live="polite"></p>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Colors</p><h3>Palette</h3><p>Applied through the whole site: text, background, muted text, and the accent color used for buttons and links.</p></div>
+            </div>
+            <div class="section-fields" id="styles-color-fields">
+              <label>Primary (accent) color<input type="color" id="style-colorPrimary"></label>
+              <label>Text color<input type="color" id="style-colorText"></label>
+              <label>Background color<input type="color" id="style-colorBackground"></label>
+              <label>Muted text color<input type="color" id="style-colorMuted"></label>
+            </div>
+          </section>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Typography</p><h3>Fonts</h3><p>Headline and body fonts. Type to search Google Fonts — any exact family name works, not just the suggestions.</p></div>
+            </div>
+            <div class="section-fields" id="styles-font-fields">
+              <label>Headline font<input type="text" id="style-headingFont" list="google-fonts-suggestions" autocomplete="off"></label>
+              <label>Headline weight<select id="style-headingWeight"></select></label>
+              <label>Body font<input type="text" id="style-bodyFont" list="google-fonts-suggestions" autocomplete="off"></label>
+              <label>Body weight<select id="style-bodyWeight"></select></label>
+            </div>
+            <datalist id="google-fonts-suggestions"></datalist>
+          </section>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Buttons</p><h3>Button style</h3><p>Applied to the main site button and form submit buttons.</p></div>
+            </div>
+            <div class="section-fields" id="styles-button-fields">
+              <label>Button shape<select id="style-buttonRadius">
+                <option value="sharp">Sharp</option>
+                <option value="rounded">Rounded</option>
+                <option value="pill">Pill</option>
+              </select></label>
+            </div>
+          </section>
+        </div>
+        <div class="editor-content" id="branding-workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="kicker">Website</p><h3>Logo &amp; favicon</h3><p class="editor-intro">The logo shown in the header, the browser-tab icon, and the image used when the site is shared on social media.</p></div>
+            <button class="editor-action" id="branding-publish-button" type="button">Publish</button>
+          </div>
+          <p class="entry-message" id="branding-message" aria-live="polite"></p>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Header</p><h3>Logo</h3><p>Use a text logo styled with your site fonts, or upload an image.</p></div>
+            </div>
+            <div class="section-fields">
+              <label>Logo type<select id="branding-logo-type">
+                <option value="text">Text</option>
+                <option value="image">Image</option>
+              </select></label>
+              <label id="branding-logo-text-label">Logo text (defaults to site name)<input type="text" id="branding-logo-text" maxlength="60"></label>
+              <div id="branding-logo-image-field" hidden>
+                <p class="field-meta">Logo image</p>
+                <div class="favicon-preview-row">
+                  <img id="branding-logo-preview" alt="Logo preview" hidden>
+                  <label class="editor-action media-upload-label" for="branding-logo-upload">Upload logo image</label>
+                  <input type="file" id="branding-logo-upload" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Browser tab</p><h3>Favicon</h3><p>Generate one automatically from your logo, or upload your own.</p></div>
+            </div>
+            <div class="section-fields">
+              <div class="favicon-preview-row">
+                <img id="branding-favicon-preview" alt="Favicon preview" hidden>
+                <button type="button" class="editor-action" id="branding-generate-favicon-button">Generate from logo</button>
+                <label class="editor-action media-upload-label" for="branding-favicon-upload">Upload favicon</label>
+                <input type="file" id="branding-favicon-upload" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+              </div>
+            </div>
+          </section>
+          <section class="page-section">
+            <div class="section-editor-heading compact">
+              <div><p class="section-kind">Sharing</p><h3>Social share image</h3><p>Shown when the site is shared on social media or messaging apps. Recommended size: 1200×630.</p></div>
+            </div>
+            <div class="section-fields">
+              <div class="favicon-preview-row">
+                <img id="branding-social-preview" alt="Social share image preview" hidden>
+                <label class="editor-action media-upload-label" for="branding-social-upload">Upload social image</label>
+                <input type="file" id="branding-social-upload" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+              </div>
+            </div>
           </section>
         </div>
         <div class="editor-content" id="media-workspace" hidden>
@@ -219,9 +315,12 @@
             <button class="editor-action" id="new-page-button" type="button">New page</button>
           </div>
           <div class="page-layout">
-            <aside class="page-list" id="page-list" aria-label="Website pages">
-              <button type="button" id="page-list-home" aria-current="page"><strong>Home</strong><span>/</span></button>
-            </aside>
+            <div class="page-list-wrap">
+              <input type="search" id="page-filter-input" class="page-filter-input" placeholder="Find a page…" hidden>
+              <aside class="page-list" id="page-list" aria-label="Website pages">
+                <button type="button" id="page-list-home" aria-current="page"><strong>Home</strong><span>/</span></button>
+              </aside>
+            </div>
             <div class="page-fields" id="home-page-editor">
               <nav class="page-tabs" aria-label="Home page settings">
                 <button type="button" id="tab-content" aria-current="page">Content</button>
@@ -296,7 +395,43 @@
               </div>
               <p class="entry-message" id="page-message" aria-live="polite"></p>
               <p class="page-kind-note" id="page-kind-note"></p>
-              <div class="section-fields" id="page-content-form"></div>
+              <nav class="page-tabs" aria-label="Page settings">
+                <button type="button" id="page-tab-content" aria-current="page">Content</button>
+                <button type="button" id="page-tab-seo">SEO</button>
+                <button type="button" id="page-tab-translations">Translations</button>
+              </nav>
+              <div id="page-tab-panel-content">
+                <div class="section-fields" id="page-content-form"></div>
+              </div>
+              <div id="page-tab-panel-seo" hidden>
+                <section class="page-section">
+                  <div class="section-editor-heading compact">
+                    <div><p class="section-kind">Search &amp; sharing</p><h3>SEO</h3><p>Controls how this page appears in search results and the browser tab.</p></div>
+                  </div>
+                  <div class="section-fields" id="page-seo-form"></div>
+                </section>
+              </div>
+              <div id="page-tab-panel-translations" hidden>
+                <section class="page-section">
+                  <div class="section-editor-heading">
+                    <div><p class="section-kind">Main language: English</p><h3>Translations</h3><p>Languages are added once from Home → Translations. Here you translate this page's own content. Anything left blank falls back to English.</p></div>
+                  </div>
+                  <div class="locale-tabs" id="page-locale-tabs" role="tablist" aria-label="Added languages"></div>
+                  <p class="entry-message" id="page-translation-message" aria-live="polite"></p>
+                  <div id="page-translation-editor" hidden>
+                    <div class="translation-header">
+                      <h4 id="page-translation-locale-label"></h4>
+                      <button class="editor-action" id="page-translation-publish-button" type="button">Publish translation</button>
+                    </div>
+                    <div class="translation-compare-head">
+                      <span>English (main)</span>
+                      <span id="page-translation-compare-label"></span>
+                    </div>
+                    <div class="translation-compare" id="page-translation-form"></div>
+                  </div>
+                  <p class="menu-empty" id="page-translation-empty">No languages added yet. Add one from Home → Translations.</p>
+                </section>
+              </div>
             </div>
           </div>
         </div>

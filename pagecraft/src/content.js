@@ -339,3 +339,138 @@ export function validatePageTranslationPatch(patch) {
   if (normalized.length > PAGE_FIELD_MAX_LENGTHS[field]) return { ok: false, error: `${field} is too long.` };
   return { ok: true, field, value: normalized };
 }
+
+// Curated so every option is a real, popular Google Font (plus the site's
+// original system-font defaults). Values are Google Fonts family names,
+// used both as the CSS font-family and in the Google Fonts stylesheet URL.
+// A large, curated slice of the Google Fonts catalog, used to power a
+// searchable picker. This isn't the full ~1800-family catalog (that requires
+// a live Google Fonts API call, which this project deliberately avoids), but
+// it isn't a hard allowlist either — validateSiteStyles accepts any
+// well-formed font name, so typing an exact family name outside this list
+// still works and still lazy-loads only when that font is actually chosen.
+export const GOOGLE_FONTS = Object.freeze([...new Set([
+  "Playfair Display", "Fraunces", "Cormorant Garamond", "Cormorant", "Libre Baskerville",
+  "Lora", "Merriweather", "DM Serif Display", "DM Serif Text", "Bitter", "Crimson Text",
+  "Crimson Pro", "EB Garamond", "Source Serif 4", "Spectral", "Playfair", "Vollkorn",
+  "Bodoni Moda", "Prata", "Cardo", "Domine", "Noto Serif", "PT Serif", "Rufina",
+  "Marcellus", "Cinzel", "Abril Fatface", "Cormorant Infant", "Frank Ruhl Libre",
+  "Josefin Slab", "Zilla Slab", "Faustina", "Alegreya", "Alegreya Sans",
+  "Work Sans", "Source Sans 3", "Nunito Sans", "Nunito", "Karla", "IBM Plex Sans",
+  "Mulish", "Public Sans", "Rubik", "Inter", "Roboto", "Open Sans", "Lato",
+  "Montserrat", "Poppins", "Raleway", "Oswald", "Manrope", "Barlow", "DM Sans",
+  "Figtree", "Sora", "Outfit", "Plus Jakarta Sans", "Space Grotesk", "Urbanist",
+  "Epilogue", "Jost", "Archivo", "Archivo Narrow", "Hind", "PT Sans", "Cabin",
+  "Quicksand", "Josefin Sans", "Libre Franklin", "Overpass", "Red Hat Display",
+  "Bricolage Grotesque", "Instrument Sans", "Onest", "Geist", "Schibsted Grotesk",
+  "Bebas Neue", "Anton", "Oswald", "Archivo Black", "Big Shoulders Display",
+  "Fjalla One", "Passion One", "Righteous", "Alfa Slab One", "Staatliches",
+  "Caveat", "Pacifico", "Sacramento", "Dancing Script", "Great Vibes", "Satisfy",
+  "Kalam", "Shadows Into Light", "Permanent Marker", "Indie Flower",
+  "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Fira Code",
+  "Source Code Pro", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC",
+  "Inter Tight", "Albert Sans", "General Sans"
+])]);
+// Kept for backwards compatibility with any external callers.
+export const HEADING_FONTS = GOOGLE_FONTS;
+export const BODY_FONTS = GOOGLE_FONTS;
+export const BUTTON_RADII = Object.freeze(["sharp", "rounded", "pill"]);
+export const FONT_WEIGHTS = Object.freeze([400, 500, 600, 700]);
+
+export const defaultSiteStyles = Object.freeze({
+  colorPrimary: "#176d68",
+  colorText: "#17332f",
+  colorBackground: "#fdfdf8",
+  colorMuted: "#62706b",
+  headingFont: "Georgia (default)",
+  bodyFont: "Inter (default)",
+  headingWeight: 400,
+  bodyWeight: 400,
+  buttonRadius: "sharp"
+});
+
+const HEX_COLOR_PATTERN = /^#[0-9a-f]{6}$/i;
+
+function validateHexColor(value, label) {
+  const normalized = String(value ?? "").trim();
+  if (!HEX_COLOR_PATTERN.test(normalized)) return { ok: false, error: `${label} must be a hex color like #176d68.` };
+  return { ok: true, value: normalized.toLowerCase() };
+}
+
+const FONT_NAME_PATTERN = /^[A-Za-z0-9 '()\-]{1,60}$/;
+
+function validateFontName(value, label) {
+  const name = String(value ?? "").trim();
+  if (!FONT_NAME_PATTERN.test(name)) return { ok: false, error: `${label} must be a valid font name.` };
+  return { ok: true, value: name };
+}
+
+export function validateSiteStyles(data) {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return { ok: false, error: "Site styles must be an object." };
+  const result = { ...defaultSiteStyles };
+
+  for (const [field, label] of [["colorPrimary", "Primary color"], ["colorText", "Text color"], ["colorBackground", "Background color"], ["colorMuted", "Muted text color"]]) {
+    if (data[field] === undefined) continue;
+    const color = validateHexColor(data[field], label);
+    if (!color.ok) return color;
+    result[field] = color.value;
+  }
+
+  if (data.headingFont !== undefined) {
+    const font = validateFontName(data.headingFont, "Heading font");
+    if (!font.ok) return font;
+    result.headingFont = font.value;
+  }
+  if (data.bodyFont !== undefined) {
+    const font = validateFontName(data.bodyFont, "Body font");
+    if (!font.ok) return font;
+    result.bodyFont = font.value;
+  }
+  if (data.headingWeight !== undefined) {
+    if (!FONT_WEIGHTS.includes(Number(data.headingWeight))) return { ok: false, error: "Unknown heading weight." };
+    result.headingWeight = Number(data.headingWeight);
+  }
+  if (data.bodyWeight !== undefined) {
+    if (!FONT_WEIGHTS.includes(Number(data.bodyWeight))) return { ok: false, error: "Unknown body weight." };
+    result.bodyWeight = Number(data.bodyWeight);
+  }
+  if (data.buttonRadius !== undefined) {
+    if (!BUTTON_RADII.includes(data.buttonRadius)) return { ok: false, error: "Unknown button style." };
+    result.buttonRadius = data.buttonRadius;
+  }
+
+  return { ok: true, value: result };
+}
+
+export const LOGO_TYPES = Object.freeze(["text", "image"]);
+
+export const defaultBranding = Object.freeze({
+  logoType: "text",
+  logoText: "",
+  logoImageId: "",
+  faviconId: "",
+  socialImageId: ""
+});
+
+export function validateBranding(data) {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return { ok: false, error: "Branding must be an object." };
+  const result = { ...defaultBranding };
+
+  if (data.logoType !== undefined) {
+    if (!LOGO_TYPES.includes(data.logoType)) return { ok: false, error: "Unknown logo type." };
+    result.logoType = data.logoType;
+  }
+  if (data.logoText !== undefined) {
+    const text = String(data.logoText).trim();
+    if (text.length > 60) return { ok: false, error: "Logo text must be 60 characters or fewer." };
+    result.logoText = text;
+  }
+  for (const field of ["logoImageId", "faviconId", "socialImageId"]) {
+    if (data[field] === undefined) continue;
+    const value = String(data[field] ?? "").trim();
+    if (value.length > 60) return { ok: false, error: "Invalid media reference." };
+    result[field] = value;
+  }
+
+  return { ok: true, value: result };
+}

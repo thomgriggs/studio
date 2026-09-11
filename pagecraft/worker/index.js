@@ -4,7 +4,7 @@ import {
   validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS,
   validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, translatableFields,
   validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES,
-  validatePageTranslationPatch, pageTranslatableFields
+  validatePageTranslationPatch, pageTranslatableFields, validateSiteStyles, GOOGLE_FONTS, validateBranding
 } from "../src/content.js";
 import { contentTypes, validateEntry } from "../src/models.js";
 import { createStore } from "./store.js";
@@ -18,7 +18,8 @@ const emptyPageTranslation = Object.fromEntries(pageTranslatableFields.map((fiel
 function getUsers(env) {
   return {
     "thomgriggs@gmail.com": { role: "admin", passwordHash: hash(env.ADMIN_PASSWORD || "admin-demo") },
-    editor: { role: "editor", passwordHash: hash(env.EDITOR_PASSWORD || "editor-demo") }
+    editor: { role: "editor", passwordHash: hash(env.EDITOR_PASSWORD || "editor-demo") },
+    "mwild8@protonmail.com": { role: "admin", passwordHash: hash(env.FRIEND_PASSWORD || "friend-demo") }
   };
 }
 
@@ -71,6 +72,17 @@ async function requireSession(request, store, { admin = false } = {}) {
     return { error: json(403, { error: "Invalid request token." }) };
   }
   return { session };
+}
+
+async function pagesWithTranslations(store, pagesList, localesList) {
+  const pages = pagesList || (await store.listPages());
+  const locales = localesList || (await store.listLocales());
+  return Promise.all(pages.map(async (page) => ({
+    ...page,
+    translations: Object.fromEntries(
+      await Promise.all(locales.map(async (locale) => [locale.code, await store.snapshotPageTranslation(page.id, locale.code, emptyPageTranslation)]))
+    )
+  })));
 }
 
 async function handleApi(request, env, pathname, url) {
@@ -131,7 +143,15 @@ async function handleApi(request, env, pathname, url) {
         )
       }))
     );
-    return json(200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales: allLocales, translations, pages });
+    const styles = (await store.snapshotStyles()).published;
+    const branding = (await store.snapshotBranding()).published;
+    const [logoImage, faviconImage, socialImage] = await Promise.all([
+      branding.logoImageId ? store.getMedia(branding.logoImageId) : null,
+      branding.faviconId ? store.getMedia(branding.faviconId) : null,
+      branding.socialImageId ? store.getMedia(branding.socialImageId) : null
+    ]);
+    const brandingUrls = { logoImageUrl: logoImage?.url || null, faviconUrl: faviconImage?.url || null, socialImageUrl: socialImage?.url || null };
+    return json(200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales: allLocales, translations, pages, styles, branding, ...brandingUrls });
   }
 
   if (pathname === "/api/state" && method === "GET") {
@@ -143,7 +163,10 @@ async function handleApi(request, env, pathname, url) {
     const translations = Object.fromEntries(
       await Promise.all(locales.map(async (locale) => [locale.code, await store.snapshotTranslation(locale.code, emptyTranslation)]))
     );
-    return json(200, { ...snapshot, fields: fieldDefinitions, media, menus, forms, locales, translations, pages });
+    const styles = await store.snapshotStyles();
+    const branding = await store.snapshotBranding();
+    const pagesWithTx = await pagesWithTranslations(store, pages, locales);
+    return json(200, { ...snapshot, fields: fieldDefinitions, media, menus, forms, locales, translations, pages: pagesWithTx, styles, branding, googleFonts: GOOGLE_FONTS });
   }
 
   if (pathname === "/api/content" && method === "GET") {
@@ -458,7 +481,7 @@ async function handleApi(request, env, pathname, url) {
   if (pathname === "/api/pages" && method === "GET") {
     const { error } = await requireSession(request, store);
     if (error) return error;
-    return json(200, await store.listPages());
+    return json(200, await pagesWithTranslations(store));
   }
 
   if (pathname === "/api/pages" && method === "POST") {
@@ -539,6 +562,38 @@ async function handleApi(request, env, pathname, url) {
     }
   }
 
+  if (pathname === "/api/styles" && method === "PATCH") {
+    const { error } = await requireSession(request, store);
+    if (error) return error;
+    const body = await readJson(request);
+    const validation = validateSiteStyles(body);
+    if (!validation.ok) return json(400, { error: validation.error });
+    const patch = Object.fromEntries(Object.keys(body).filter((field) => field in validation.value).map((field) => [field, validation.value[field]]));
+    return json(200, await store.updateStyles(patch));
+  }
+
+  if (pathname === "/api/styles/publish" && method === "POST") {
+    const { error } = await requireSession(request, store, { admin: true });
+    if (error) return error;
+    return json(200, await store.publishStyles());
+  }
+
+  if (pathname === "/api/branding" && method === "PATCH") {
+    const { error } = await requireSession(request, store);
+    if (error) return error;
+    const body = await readJson(request);
+    const validation = validateBranding(body);
+    if (!validation.ok) return json(400, { error: validation.error });
+    const patch = Object.fromEntries(Object.keys(body).filter((field) => field in validation.value).map((field) => [field, validation.value[field]]));
+    return json(200, await store.updateBranding(patch));
+  }
+
+  if (pathname === "/api/branding/publish" && method === "POST") {
+    const { error } = await requireSession(request, store, { admin: true });
+    if (error) return error;
+    return json(200, await store.publishBranding());
+  }
+
   return json(404, { error: "Not found." });
 }
 
@@ -584,7 +639,7 @@ export default {
       const assetResponse = await env.ASSETS.fetch(new Request(assetUrl, request));
       const headers = new Headers(assetResponse.headers);
       headers.set("cache-control", "no-store");
-      headers.set("content-security-policy", "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
+      headers.set("content-security-policy", "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
       headers.set("referrer-policy", "no-referrer");
       headers.set("x-content-type-options", "nosniff");
       headers.set("x-frame-options", "DENY");

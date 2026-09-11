@@ -217,3 +217,40 @@ test("page translations start empty per (page, locale), save as drafts, and publ
   assert.deepEqual(store.snapshotPageTranslation(rooms.id, "es").draft, empty);
   store.close();
 });
+
+test("site styles default to the built-in theme, save as drafts, and publish independently", () => {
+  const store = createStore({ now: () => "2026-08-07T00:00:00.000Z" });
+  const initial = store.snapshotStyles();
+  assert.equal(initial.draft.colorPrimary, "#176d68");
+  assert.equal(initial.dirty, false);
+
+  const updated = store.updateStyles({ colorPrimary: "#a33", headingFont: "Lora" });
+  assert.equal(updated.draft.colorPrimary, "#a33");
+  assert.equal(updated.draft.headingFont, "Lora");
+  assert.equal(updated.draft.bodyFont, "Inter (default)", "unspecified fields stay at their previous value");
+  assert.equal(updated.published.colorPrimary, "#176d68");
+  assert.equal(updated.dirty, true);
+
+  const published = store.publishStyles();
+  assert.equal(published.published.colorPrimary, "#a33");
+  assert.equal(published.dirty, false);
+  store.close();
+});
+
+test("branding defaults to a text logo, saves as drafts, and publishes independently", () => {
+  const store = createStore({ now: () => "2026-08-08T00:00:00.000Z" });
+  const initial = store.snapshotBranding();
+  assert.equal(initial.draft.logoType, "text");
+  assert.equal(initial.dirty, false);
+
+  const updated = store.updateBranding({ logoType: "image", logoImageId: "media123" });
+  assert.equal(updated.draft.logoType, "image");
+  assert.equal(updated.draft.logoImageId, "media123");
+  assert.equal(updated.published.logoType, "text");
+  assert.equal(updated.dirty, true);
+
+  const published = store.publishBranding();
+  assert.equal(published.published.logoType, "image");
+  assert.equal(published.dirty, false);
+  store.close();
+});

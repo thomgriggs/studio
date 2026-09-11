@@ -51,10 +51,49 @@ const sectionPagesButton = document.querySelector("#section-pages");
 const sectionNavigationButton = document.querySelector("#section-navigation");
 const sectionSettingsButton = document.querySelector("#section-settings");
 const sectionMediaButton = document.querySelector("#section-media");
+const sectionStylesButton = document.querySelector("#section-styles");
 const pagesWorkspace = document.querySelector("#pages-workspace");
 const navigationWorkspace = document.querySelector("#navigation-workspace");
 const settingsWorkspace = document.querySelector("#settings-workspace");
 const mediaWorkspace = document.querySelector("#media-workspace");
+const stylesWorkspace = document.querySelector("#styles-workspace");
+const stylesMessage = document.querySelector("#styles-message");
+const stylesPublishButton = document.querySelector("#styles-publish-button");
+const styleColorPrimaryInput = document.querySelector("#style-colorPrimary");
+const styleColorTextInput = document.querySelector("#style-colorText");
+const styleColorBackgroundInput = document.querySelector("#style-colorBackground");
+const styleColorMutedInput = document.querySelector("#style-colorMuted");
+const styleHeadingFontSelect = document.querySelector("#style-headingFont");
+const styleBodyFontSelect = document.querySelector("#style-bodyFont");
+const googleFontsSuggestions = document.querySelector("#google-fonts-suggestions");
+const styleHeadingWeightSelect = document.querySelector("#style-headingWeight");
+const styleBodyWeightSelect = document.querySelector("#style-bodyWeight");
+const styleButtonRadiusSelect = document.querySelector("#style-buttonRadius");
+const styleOverrideTag = document.createElement("style");
+styleOverrideTag.id = "site-style-overrides";
+document.head.append(styleOverrideTag);
+const loadedGoogleFonts = new Set();
+const sectionBrandingButton = document.querySelector("#section-branding");
+const brandingWorkspace = document.querySelector("#branding-workspace");
+const brandingMessage = document.querySelector("#branding-message");
+const brandingPublishButton = document.querySelector("#branding-publish-button");
+const brandingLogoTypeSelect = document.querySelector("#branding-logo-type");
+const brandingLogoTextLabel = document.querySelector("#branding-logo-text-label");
+const brandingLogoTextInput = document.querySelector("#branding-logo-text");
+const brandingLogoImageField = document.querySelector("#branding-logo-image-field");
+const brandingLogoPreview = document.querySelector("#branding-logo-preview");
+const brandingLogoUploadInput = document.querySelector("#branding-logo-upload");
+const brandingFaviconPreview = document.querySelector("#branding-favicon-preview");
+const brandingGenerateFaviconButton = document.querySelector("#branding-generate-favicon-button");
+const brandingFaviconUploadInput = document.querySelector("#branding-favicon-upload");
+const brandingSocialPreview = document.querySelector("#branding-social-preview");
+const brandingSocialUploadInput = document.querySelector("#branding-social-upload");
+const faviconLinkTag = document.createElement("link");
+faviconLinkTag.rel = "icon";
+document.head.append(faviconLinkTag);
+const socialImageMetaTag = document.createElement("meta");
+socialImageMetaTag.setAttribute("property", "og:image");
+document.head.append(socialImageMetaTag);
 const mediaGrid = document.querySelector("#media-grid");
 const mediaUploadInput = document.querySelector("#media-upload-input");
 const mediaMessage = document.querySelector("#media-message");
@@ -87,6 +126,22 @@ const pageDeleteButton = document.querySelector("#page-delete-button");
 const pageMessage = document.querySelector("#page-message");
 const pageKindNote = document.querySelector("#page-kind-note");
 const pageContentForm = document.querySelector("#page-content-form");
+const pageSeoForm = document.querySelector("#page-seo-form");
+const pageTabContentButton = document.querySelector("#page-tab-content");
+const pageTabSeoButton = document.querySelector("#page-tab-seo");
+const pageTabTranslationsButton = document.querySelector("#page-tab-translations");
+const pageTabPanelContent = document.querySelector("#page-tab-panel-content");
+const pageTabPanelSeo = document.querySelector("#page-tab-panel-seo");
+const pageTabPanelTranslations = document.querySelector("#page-tab-panel-translations");
+const pageLocaleTabs = document.querySelector("#page-locale-tabs");
+const pageTranslationMessage = document.querySelector("#page-translation-message");
+const pageTranslationEditor = document.querySelector("#page-translation-editor");
+const pageTranslationLocaleLabel = document.querySelector("#page-translation-locale-label");
+const pageTranslationCompareLabel = document.querySelector("#page-translation-compare-label");
+const pageTranslationForm = document.querySelector("#page-translation-form");
+const pageTranslationPublishButton = document.querySelector("#page-translation-publish-button");
+const pageTranslationEmpty = document.querySelector("#page-translation-empty");
+const pageFilterInput = document.querySelector("#page-filter-input");
 const menuListElement = document.querySelector("#menu-list");
 const newMenuButton = document.querySelector("#new-menu-button");
 const menuMessage = document.querySelector("#menu-message");
@@ -187,6 +242,15 @@ let activePageId = null;
 let pageSaveTimer = null;
 let activeViewedPageId = null;
 let inlinePageSaveTimer = null;
+let activePageTab = "content";
+let activePageTranslationLocale = null;
+let pageFilterQuery = "";
+let styles = null;
+let publicStyles = null;
+let stylesSaveTimer = null;
+let publicBranding = null;
+let publicBrandingUrls = {};
+let brandingSaveTimer = null;
 
 async function request(path, options = {}) {
   const headers = { "content-type": "application/json", ...(options.headers || {}) };
@@ -197,6 +261,13 @@ async function request(path, options = {}) {
   return body;
 }
 
+function resolveLinkHref(href) {
+  if (!href) return "#";
+  if (/^(https?:)?\/\//i.test(href) || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return href;
+  if (href.startsWith("/")) return `${API_BASE}${href}`;
+  return href;
+}
+
 function buildNavTree(items, isRoot) {
   const list = document.createElement("ul");
   list.className = isRoot ? "site-nav-list" : "site-nav-submenu";
@@ -204,7 +275,7 @@ function buildNavTree(items, isRoot) {
     const li = document.createElement("li");
     if (isRoot) li.className = "site-nav-item";
     const link = document.createElement("a");
-    link.href = item.href || "#";
+    link.href = resolveLinkHref(item.href);
     link.textContent = item.label;
     li.append(link);
     if (item.children?.length) li.append(buildNavTree(item.children, false));
@@ -332,6 +403,7 @@ function renderSite() {
   const content = localizedContent(contentForView());
   if (!content) return;
   document.querySelectorAll("[data-field]").forEach((element) => {
+    if (element.classList.contains("site-logo")) return;
     const field = element.dataset.field;
     if (document.activeElement !== element || element.contentEditable !== "true") {
       element.textContent = content[field] || "";
@@ -340,6 +412,8 @@ function renderSite() {
     element.tabIndex = session && outlinesVisible && !showingPublished ? 0 : -1;
   });
   preview.classList.toggle("edit-active", Boolean(session && outlinesVisible && !showingPublished));
+  if (session) renderBrandingForm();
+  else applyBranding(publicBranding, publicBrandingUrls);
   renderSiteNav();
   const heroUrl = resolveHeroImageUrl(content);
   if (heroArt) {
@@ -405,16 +479,29 @@ function pageById(id) {
   return pages.find((page) => page.id === id) || null;
 }
 
+function localizedPageContent(base, page) {
+  if (!base || activeLocale === "en") return base;
+  const localeTranslation = page.translations?.[activeLocale];
+  if (!localeTranslation) return base;
+  const overrides = session
+    ? (showingPublished ? localeTranslation.published : localeTranslation.draft)
+    : localeTranslation;
+  if (!overrides) return base;
+  const merged = { ...base };
+  Object.entries(overrides).forEach(([field, value]) => { if (value) merged[field] = value; });
+  return merged;
+}
+
 function resolvedPageForRoute(slug) {
   if (session) {
     const page = pages.find((entry) => entry.slug === slug);
     if (!page) return null;
-    const content = (showingPublished ? page.published : page.draft) || {};
+    const content = localizedPageContent((showingPublished ? page.published : page.draft) || {}, page);
     return { id: page.id, slug: page.slug, title: page.title, kind: page.kind, content };
   }
   const page = publicPages.find((entry) => entry.slug === slug);
   if (!page) return null;
-  return { id: null, slug: page.slug, title: page.title, kind: page.kind, content: page.content };
+  return { id: null, slug: page.slug, title: page.title, kind: page.kind, content: localizedPageContent(page.content, page) };
 }
 
 function renderPublicRoute() {
@@ -697,6 +784,229 @@ function renderForm() {
   }
 }
 
+function buttonRadiusValue(radius) {
+  return { sharp: ".15rem", rounded: ".5rem", pill: "999px" }[radius] || ".15rem";
+}
+
+function loadGoogleFont(fontLabel) {
+  const name = fontLabel.replace(" (default)", "");
+  if (name === "Georgia" || name === "Inter" || loadedGoogleFonts.has(name)) return;
+  loadedGoogleFonts.add(name);
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(name)}:wght@400;500;600;700&display=swap`;
+  document.head.append(link);
+}
+
+function applyStyles(activeStyles) {
+  if (!activeStyles) return;
+  loadGoogleFont(activeStyles.headingFont);
+  loadGoogleFont(activeStyles.bodyFont);
+  const headingFamily = activeStyles.headingFont.replace(" (default)", "");
+  const bodyFamily = activeStyles.bodyFont.replace(" (default)", "");
+  styleOverrideTag.textContent = `:root {
+    --sea: ${activeStyles.colorPrimary};
+    --sea-dark: ${activeStyles.colorPrimary};
+    --ink: ${activeStyles.colorText};
+    --paper: ${activeStyles.colorBackground};
+    --muted: ${activeStyles.colorMuted};
+    --heading-font: "${headingFamily}", Georgia, serif;
+    --body-font: "${bodyFamily}", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --heading-weight: ${activeStyles.headingWeight};
+    --body-weight: ${activeStyles.bodyWeight};
+    --button-radius: ${buttonRadiusValue(activeStyles.buttonRadius)};
+  }`;
+}
+
+function populateGoogleFontsSuggestions(fonts) {
+  if (googleFontsSuggestions.childElementCount) return;
+  fonts.forEach((font) => {
+    const option = document.createElement("option");
+    option.value = font;
+    googleFontsSuggestions.append(option);
+  });
+}
+
+function populateWeightSelect(select, current) {
+  select.replaceChildren();
+  [400, 500, 600, 700].forEach((weight) => {
+    const option = document.createElement("option");
+    option.value = weight;
+    option.textContent = weight;
+    select.append(option);
+  });
+  select.value = String(current);
+}
+
+function renderStylesForm() {
+  if (!state?.styles) return;
+  const draft = state.styles.draft;
+  styleColorPrimaryInput.value = draft.colorPrimary;
+  styleColorTextInput.value = draft.colorText;
+  styleColorBackgroundInput.value = draft.colorBackground;
+  styleColorMutedInput.value = draft.colorMuted;
+  populateGoogleFontsSuggestions(state.googleFonts || []);
+  if (document.activeElement !== styleHeadingFontSelect) styleHeadingFontSelect.value = draft.headingFont;
+  if (document.activeElement !== styleBodyFontSelect) styleBodyFontSelect.value = draft.bodyFont;
+  populateWeightSelect(styleHeadingWeightSelect, draft.headingWeight);
+  populateWeightSelect(styleBodyWeightSelect, draft.bodyWeight);
+  styleButtonRadiusSelect.value = draft.buttonRadius;
+  stylesPublishButton.disabled = !state.styles.dirty;
+  applyStyles(draft);
+}
+
+function queueStyleSave(patch) {
+  clearTimeout(stylesSaveTimer);
+  stylesMessage.textContent = "Saving…";
+  stylesSaveTimer = setTimeout(async () => {
+    try {
+      const updated = await request("/api/styles", { method: "PATCH", body: JSON.stringify(patch) });
+      state.styles = updated;
+      stylesPublishButton.disabled = !updated.dirty;
+      applyStyles(updated.draft);
+      stylesMessage.textContent = "Draft saved";
+    } catch (error) { stylesMessage.textContent = error.message; }
+  }, 350);
+}
+
+function mediaUrlFor(id) {
+  if (!id) return null;
+  return mediaList.find((item) => item.id === id)?.url || null;
+}
+
+function applyBranding(activeBranding, urls) {
+  if (!activeBranding) return;
+  document.querySelectorAll(".site-logo").forEach((link) => {
+    link.replaceChildren();
+    if (activeBranding.logoType === "image" && urls.logoImageUrl) {
+      const img = document.createElement("img");
+      img.src = urls.logoImageUrl;
+      img.alt = "";
+      img.className = "site-logo-image";
+      link.append(img);
+    } else {
+      link.textContent = activeBranding.logoText || state?.draft?.siteName || publicContent?.siteName || "";
+    }
+  });
+  faviconLinkTag.href = urls.faviconUrl || "";
+  faviconLinkTag.hidden = !urls.faviconUrl;
+  if (urls.socialImageUrl) {
+    socialImageMetaTag.setAttribute("content", urls.socialImageUrl);
+  } else {
+    socialImageMetaTag.removeAttribute("content");
+  }
+}
+
+async function uploadBrandingAsset(file) {
+  const dataUrl = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Could not read file."));
+    reader.readAsDataURL(file);
+  });
+  const dataBase64 = String(dataUrl).split(",")[1] || "";
+  const record = await request("/api/media", {
+    method: "POST",
+    body: JSON.stringify({ filename: file.name, mimeType: file.type, dataBase64 })
+  });
+  mediaList = await request("/api/media");
+  return record;
+}
+
+async function canvasToMediaRecord(canvas, filename) {
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+  const dataUrl = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Could not generate image."));
+    reader.readAsDataURL(blob);
+  });
+  const dataBase64 = String(dataUrl).split(",")[1] || "";
+  const record = await request("/api/media", {
+    method: "POST",
+    body: JSON.stringify({ filename, mimeType: "image/png", dataBase64 })
+  });
+  mediaList = await request("/api/media");
+  return record;
+}
+
+async function generateFaviconFromLogo() {
+  const draft = state.branding.draft;
+  const size = 64;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const context = canvas.getContext("2d");
+  try {
+    if (draft.logoType === "image" && draft.logoImageId) {
+      const url = mediaUrlFor(draft.logoImageId);
+      if (!url) throw new Error("Upload a logo image first.");
+      const image = await new Promise((resolve, reject) => {
+        const element = new Image();
+        element.crossOrigin = "anonymous";
+        element.onload = () => resolve(element);
+        element.onerror = () => reject(new Error("Could not load the logo image."));
+        element.src = url;
+      });
+      const scale = Math.min(size / image.width, size / image.height);
+      const width = image.width * scale;
+      const height = image.height * scale;
+      context.drawImage(image, (size - width) / 2, (size - height) / 2, width, height);
+    } else {
+      const text = (draft.logoText || state?.draft?.siteName || "P").trim();
+      const initials = text.slice(0, 2).toUpperCase() || "P";
+      context.fillStyle = state?.styles?.draft?.colorPrimary || "#176d68";
+      context.fillRect(0, 0, size, size);
+      context.fillStyle = "#ffffff";
+      context.font = `700 ${size * 0.45}px sans-serif`;
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(initials, size / 2, size / 2 + 2);
+    }
+    const record = await canvasToMediaRecord(canvas, "favicon.png");
+    await queueBrandingSaveNow({ faviconId: record.id });
+    renderBrandingForm();
+  } catch (error) { brandingMessage.textContent = error.message; }
+}
+
+function renderBrandingForm() {
+  if (!state?.branding) return;
+  const draft = state.branding.draft;
+  brandingLogoTypeSelect.value = draft.logoType;
+  brandingLogoTextInput.value = draft.logoText;
+  brandingLogoTextLabel.hidden = draft.logoType !== "text";
+  brandingLogoImageField.hidden = draft.logoType !== "image";
+  const logoUrl = mediaUrlFor(draft.logoImageId);
+  brandingLogoPreview.hidden = !logoUrl;
+  brandingLogoPreview.src = logoUrl || "";
+  const faviconUrl = mediaUrlFor(draft.faviconId);
+  brandingFaviconPreview.hidden = !faviconUrl;
+  brandingFaviconPreview.src = faviconUrl || "";
+  const socialUrl = mediaUrlFor(draft.socialImageId);
+  brandingSocialPreview.hidden = !socialUrl;
+  brandingSocialPreview.src = socialUrl || "";
+  brandingPublishButton.disabled = !state.branding.dirty;
+  applyBranding(draft, { logoImageUrl: logoUrl, faviconUrl, socialImageUrl: socialUrl });
+}
+
+async function queueBrandingSaveNow(patch) {
+  const updated = await request("/api/branding", { method: "PATCH", body: JSON.stringify(patch) });
+  state.branding = updated;
+  return updated;
+}
+
+function queueBrandingSave(patch) {
+  clearTimeout(brandingSaveTimer);
+  brandingMessage.textContent = "Saving…";
+  brandingSaveTimer = setTimeout(async () => {
+    try {
+      await queueBrandingSaveNow(patch);
+      brandingMessage.textContent = "Draft saved";
+      renderBrandingForm();
+    } catch (error) { brandingMessage.textContent = error.message; }
+  }, 350);
+}
+
 function setCurrent(activeButton, ...buttons) {
   buttons.forEach((button) => button.removeAttribute("aria-current"));
   activeButton.setAttribute("aria-current", "page");
@@ -708,7 +1018,9 @@ function switchSection(section) {
   mediaWorkspace.hidden = section !== "media";
   formsWorkspace.hidden = section !== "forms";
   settingsWorkspace.hidden = section !== "settings";
-  const buttons = { pages: sectionPagesButton, navigation: sectionNavigationButton, media: sectionMediaButton, forms: sectionFormsButton, settings: sectionSettingsButton };
+  stylesWorkspace.hidden = section !== "styles";
+  brandingWorkspace.hidden = section !== "branding";
+  const buttons = { pages: sectionPagesButton, navigation: sectionNavigationButton, media: sectionMediaButton, forms: sectionFormsButton, settings: sectionSettingsButton, styles: sectionStylesButton, branding: sectionBrandingButton };
   setCurrent(buttons[section], ...Object.values(buttons));
 }
 
@@ -887,8 +1199,13 @@ function renderPageManager() {
 
 function renderPageList() {
   if (!pageList) return;
+  pageFilterInput.hidden = pages.length < 12;
   pageList.querySelectorAll("[data-page-row]").forEach((el) => el.remove());
-  pages.forEach((page) => {
+  const query = pageFilterQuery.trim().toLowerCase();
+  const visiblePages = query
+    ? pages.filter((page) => page.title.toLowerCase().includes(query) || page.slug.toLowerCase().includes(query))
+    : pages;
+  visiblePages.forEach((page) => {
     const button = document.createElement("button");
     button.type = "button";
     button.dataset.pageRow = "true";
@@ -901,12 +1218,15 @@ function renderPageList() {
     button.addEventListener("click", () => {
       activePageView = "page";
       activePageId = page.id;
+      activePageTab = "content";
+      activePageTranslationLocale = null;
       renderPageList();
       renderPageEditor();
     });
     pageList.append(button);
   });
   pageListHomeButton.setAttribute("aria-current", String(activePageView === "home"));
+  pageListHomeButton.hidden = Boolean(query && !"home".includes(query));
 }
 
 function renderPageEditor() {
@@ -929,14 +1249,17 @@ function renderPageEditor() {
   pageDeleteButton.title = session.role === "admin" ? "Delete this page" : "Only administrators can delete pages";
 
   pageContentForm.replaceChildren();
-  const fieldSpecs = [
-    ["heading", "Heading", 120, "textarea"],
-    ["intro", "Intro", 300, "textarea"],
-    ["body", "Body", 3000, "textarea"],
-    ["seoTitle", "Page title (SEO)", 70, "textarea"],
-    ["seoDescription", "Meta description", 160, "textarea"]
+  pageSeoForm.replaceChildren();
+  const contentFieldSpecs = [
+    ["heading", "Heading", 120],
+    ["intro", "Intro", 300],
+    ["body", "Body", 3000]
   ];
-  fieldSpecs.forEach(([field, label, maxLength]) => {
+  const seoFieldSpecs = [
+    ["seoTitle", "Page title (SEO)", 70],
+    ["seoDescription", "Meta description", 160]
+  ];
+  contentFieldSpecs.forEach(([field, label, maxLength]) => {
     const wrapper = document.createElement("label");
     wrapper.textContent = label;
     const input = document.createElement("textarea");
@@ -947,6 +1270,114 @@ function renderPageEditor() {
     wrapper.append(input);
     pageContentForm.append(wrapper);
   });
+  seoFieldSpecs.forEach(([field, label, maxLength]) => {
+    const wrapper = document.createElement("label");
+    wrapper.textContent = label;
+    const input = document.createElement("textarea");
+    input.name = field;
+    input.value = page.draft[field] || "";
+    input.maxLength = maxLength;
+    input.addEventListener("input", () => queuePageContentEdit(field, input.value));
+    wrapper.append(input);
+    pageSeoForm.append(wrapper);
+  });
+  switchPageTab(activePageTab);
+  renderPageTranslationManager();
+}
+
+function switchPageTab(tab) {
+  activePageTab = tab;
+  pageTabPanelContent.hidden = tab !== "content";
+  pageTabPanelSeo.hidden = tab !== "seo";
+  pageTabPanelTranslations.hidden = tab !== "translations";
+  const buttons = { content: pageTabContentButton, seo: pageTabSeoButton, translations: pageTabTranslationsButton };
+  setCurrent(buttons[tab], ...Object.values(buttons));
+}
+
+function renderPageTranslationManager() {
+  const page = activePage();
+  if (!page || !pageLocaleTabs) return;
+  activePageTranslationLocale = locales.some((locale) => locale.code === activePageTranslationLocale)
+    ? activePageTranslationLocale
+    : locales[0]?.code ?? null;
+  pageTranslationEmpty.hidden = locales.length > 0;
+  renderPageLocaleTabs();
+  renderPageTranslationEditor();
+}
+
+function renderPageLocaleTabs() {
+  pageLocaleTabs.replaceChildren();
+  locales.forEach((locale) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("role", "tab");
+    button.textContent = locale.name;
+    button.setAttribute("aria-current", String(locale.code === activePageTranslationLocale));
+    button.addEventListener("click", () => { activePageTranslationLocale = locale.code; renderPageLocaleTabs(); renderPageTranslationEditor(); });
+    pageLocaleTabs.append(button);
+  });
+}
+
+const pageTranslationFieldLabels = { heading: "Heading", intro: "Intro", body: "Body", seoTitle: "Page title (SEO)", seoDescription: "Meta description" };
+
+function renderPageTranslationEditor() {
+  const page = activePage();
+  const translation = page && activePageTranslationLocale ? page.translations?.[activePageTranslationLocale] : null;
+  pageTranslationEditor.hidden = !translation;
+  if (!translation) return;
+  const localeMeta = locales.find((entry) => entry.code === activePageTranslationLocale);
+  pageTranslationLocaleLabel.textContent = localeMeta?.name || activePageTranslationLocale;
+  pageTranslationCompareLabel.textContent = `${localeMeta?.name || activePageTranslationLocale} (override)`;
+  pageTranslationPublishButton.disabled = !translation.dirty;
+  pageTranslationForm.replaceChildren();
+  Object.entries(pageTranslationFieldLabels).forEach(([field, label]) => {
+    pageTranslationForm.append(buildPageTranslationRow(field, label, page, translation));
+  });
+}
+
+function buildPageTranslationRow(field, label, page, translation) {
+  const row = document.createElement("div");
+  row.className = "translation-row";
+
+  const fieldLabel = document.createElement("p");
+  fieldLabel.className = "field-label";
+  fieldLabel.textContent = label;
+  row.append(fieldLabel);
+
+  const source = document.createElement("div");
+  source.className = "translation-source";
+  source.textContent = page.draft[field] || "";
+  row.append(source);
+
+  const input = document.createElement("textarea");
+  input.name = field;
+  input.value = translation.draft[field] || "";
+  input.placeholder = "Not yet translated — falls back to English";
+  input.classList.toggle("is-override", Boolean(translation.draft[field]));
+  input.setAttribute("aria-label", `${label} translation`);
+  input.addEventListener("input", () => {
+    input.classList.toggle("is-override", Boolean(input.value.trim()));
+    queuePageTranslationSave(field, input.value);
+  });
+  row.append(input);
+
+  return row;
+}
+
+function queuePageTranslationSave(field, value) {
+  const page = activePage();
+  const locale = activePageTranslationLocale;
+  if (!page || !locale) return;
+  window.clearTimeout(pageSaveTimer);
+  pageTranslationMessage.textContent = "Saving…";
+  pageSaveTimer = window.setTimeout(async () => {
+    try {
+      const updated = await request(`/api/pages/${page.id}/translations/${locale}`, { method: "PATCH", body: JSON.stringify({ [field]: value }) });
+      page.translations = { ...page.translations, [locale]: updated };
+      pageTranslationMessage.textContent = "Draft saved";
+      if (locale === activePageTranslationLocale) pageTranslationPublishButton.disabled = !updated.dirty;
+    } catch (error) { pageTranslationMessage.textContent = error.message; }
+  }, 450);
 }
 
 const pageKindLabels = { content: "Content page", rooms: "Rooms listing", dining: "Dining listing", form: "Contact form" };
@@ -992,6 +1423,8 @@ function renderAuthenticated() {
   renderFormManager();
   renderTranslationManager();
   renderPageManager();
+  renderStylesForm();
+  renderBrandingForm();
 }
 
 function activeForm() {
@@ -1841,6 +2274,15 @@ fullEditButton.addEventListener("click", () => {
   fullEditButton.setAttribute("aria-expanded", "true");
   document.querySelector("#editor-heading").focus();
   if (!contentLibrary) loadContentLibrary().catch((error) => { saveStatus.textContent = error.message; });
+  switchSection("pages");
+  if (activeViewedPageId) {
+    activePageView = "page";
+    activePageId = activeViewedPageId;
+  } else {
+    activePageView = "home";
+    activePageId = null;
+  }
+  renderPageManager();
 });
 
 document.querySelector("#editor-close").addEventListener("click", () => {
@@ -1887,6 +2329,8 @@ document.querySelector("#logout-button").addEventListener("click", async () => {
   toolbar.hidden = true;
   fullEditor.hidden = true;
   preview.classList.remove("edit-active");
+  applyStyles(publicStyles);
+  applyBranding(publicBranding, publicBrandingUrls);
   renderSite();
 });
 
@@ -1897,6 +2341,93 @@ sectionPagesButton.addEventListener("click", () => switchSection("pages"));
 sectionNavigationButton.addEventListener("click", () => switchSection("navigation"));
 sectionMediaButton.addEventListener("click", () => switchSection("media"));
 sectionSettingsButton.addEventListener("click", () => switchSection("settings"));
+sectionStylesButton.addEventListener("click", () => switchSection("styles"));
+
+styleColorPrimaryInput.addEventListener("input", () => queueStyleSave({ colorPrimary: styleColorPrimaryInput.value }));
+styleColorTextInput.addEventListener("input", () => queueStyleSave({ colorText: styleColorTextInput.value }));
+styleColorBackgroundInput.addEventListener("input", () => queueStyleSave({ colorBackground: styleColorBackgroundInput.value }));
+styleColorMutedInput.addEventListener("input", () => queueStyleSave({ colorMuted: styleColorMutedInput.value }));
+styleHeadingFontSelect.addEventListener("input", () => queueStyleSave({ headingFont: styleHeadingFontSelect.value }));
+styleBodyFontSelect.addEventListener("input", () => queueStyleSave({ bodyFont: styleBodyFontSelect.value }));
+styleHeadingWeightSelect.addEventListener("change", () => queueStyleSave({ headingWeight: Number(styleHeadingWeightSelect.value) }));
+styleBodyWeightSelect.addEventListener("change", () => queueStyleSave({ bodyWeight: Number(styleBodyWeightSelect.value) }));
+styleButtonRadiusSelect.addEventListener("change", () => queueStyleSave({ buttonRadius: styleButtonRadiusSelect.value }));
+
+stylesPublishButton.addEventListener("click", async () => {
+  try {
+    stylesMessage.textContent = "Publishing…";
+    const updated = await request("/api/styles/publish", { method: "POST", body: "{}" });
+    state.styles = updated;
+    stylesPublishButton.disabled = true;
+    publicStyles = updated.published;
+    stylesMessage.textContent = "Published";
+  } catch (error) { stylesMessage.textContent = error.message; }
+});
+
+sectionBrandingButton.addEventListener("click", () => switchSection("branding"));
+
+brandingLogoTypeSelect.addEventListener("change", () => queueBrandingSave({ logoType: brandingLogoTypeSelect.value }));
+brandingLogoTextInput.addEventListener("input", () => queueBrandingSave({ logoText: brandingLogoTextInput.value }));
+
+brandingLogoUploadInput.addEventListener("change", async () => {
+  const file = brandingLogoUploadInput.files[0];
+  if (!file) return;
+  brandingMessage.textContent = "Uploading…";
+  try {
+    const record = await uploadBrandingAsset(file);
+    await queueBrandingSaveNow({ logoImageId: record.id });
+    brandingMessage.textContent = "Draft saved";
+    renderBrandingForm();
+  } catch (error) { brandingMessage.textContent = error.message; }
+  brandingLogoUploadInput.value = "";
+});
+
+brandingFaviconUploadInput.addEventListener("change", async () => {
+  const file = brandingFaviconUploadInput.files[0];
+  if (!file) return;
+  brandingMessage.textContent = "Uploading…";
+  try {
+    const record = await uploadBrandingAsset(file);
+    await queueBrandingSaveNow({ faviconId: record.id });
+    brandingMessage.textContent = "Draft saved";
+    renderBrandingForm();
+  } catch (error) { brandingMessage.textContent = error.message; }
+  brandingFaviconUploadInput.value = "";
+});
+
+brandingSocialUploadInput.addEventListener("change", async () => {
+  const file = brandingSocialUploadInput.files[0];
+  if (!file) return;
+  brandingMessage.textContent = "Uploading…";
+  try {
+    const record = await uploadBrandingAsset(file);
+    await queueBrandingSaveNow({ socialImageId: record.id });
+    brandingMessage.textContent = "Draft saved";
+    renderBrandingForm();
+  } catch (error) { brandingMessage.textContent = error.message; }
+  brandingSocialUploadInput.value = "";
+});
+
+brandingGenerateFaviconButton.addEventListener("click", () => {
+  brandingMessage.textContent = "Generating…";
+  generateFaviconFromLogo().then(() => { brandingMessage.textContent = "Draft saved"; });
+});
+
+brandingPublishButton.addEventListener("click", async () => {
+  try {
+    brandingMessage.textContent = "Publishing…";
+    const updated = await request("/api/branding/publish", { method: "POST", body: "{}" });
+    state.branding = updated;
+    brandingPublishButton.disabled = true;
+    publicBranding = updated.published;
+    publicBrandingUrls = {
+      logoImageUrl: mediaUrlFor(updated.published.logoImageId),
+      faviconUrl: mediaUrlFor(updated.published.faviconId),
+      socialImageUrl: mediaUrlFor(updated.published.socialImageId)
+    };
+    brandingMessage.textContent = "Published";
+  } catch (error) { brandingMessage.textContent = error.message; }
+});
 mediaUploadInput.addEventListener("change", () => {
   const file = mediaUploadInput.files[0];
   mediaUploadInput.value = "";
@@ -2021,6 +2552,28 @@ translationPublishButton.addEventListener("click", async () => {
   } catch (error) { translationMessage.textContent = error.message; }
 });
 
+pageTabContentButton.addEventListener("click", () => switchPageTab("content"));
+pageTabSeoButton.addEventListener("click", () => switchPageTab("seo"));
+pageTabTranslationsButton.addEventListener("click", () => switchPageTab("translations"));
+
+pageTranslationPublishButton.addEventListener("click", async () => {
+  const page = activePage();
+  const locale = activePageTranslationLocale;
+  if (!page || !locale) return;
+  try {
+    pageTranslationMessage.textContent = "Publishing…";
+    const updated = await request(`/api/pages/${page.id}/translations/${locale}/publish`, { method: "POST", body: "{}" });
+    page.translations = { ...page.translations, [locale]: updated };
+    renderPageTranslationEditor();
+    pageTranslationMessage.textContent = "Published";
+  } catch (error) { pageTranslationMessage.textContent = error.message; }
+});
+
+pageFilterInput.addEventListener("input", () => {
+  pageFilterQuery = pageFilterInput.value;
+  renderPageList();
+});
+
 addLocaleButton.addEventListener("click", async () => {
   const selected = localePickerSelect.value;
   if (!selected) return;
@@ -2040,8 +2593,10 @@ addLocaleButton.addEventListener("click", async () => {
     activeTranslationLocale = created.code;
     translations[created.code] = await request(`/api/translations/${created.code}`);
     state.locales = locales;
+    pages = await request("/api/pages");
     renderTranslationManager();
     renderLanguageSwitch();
+    if (activePageView === "page") renderPageTranslationManager();
   } catch (error) { translationMessage.textContent = error.message; }
 });
 
@@ -2055,11 +2610,14 @@ removeLocaleButton.addEventListener("click", async () => {
     locales = await request("/api/locales");
     delete translations[locale];
     activeTranslationLocale = null;
+    activePageTranslationLocale = null;
     if (activeLocale === locale) activeLocale = "en";
     state.locales = locales;
+    pages = await request("/api/pages");
     renderTranslationManager();
     renderLanguageSwitch();
     renderSite();
+    if (activePageView === "page") renderPageTranslationManager();
   } catch (error) { translationMessage.textContent = error.message; }
 });
 
@@ -2142,6 +2700,11 @@ pageDeleteButton.addEventListener("click", async () => {
   publicLocales = publicState.locales || [];
   publicTranslations = publicState.translations || {};
   publicPages = publicState.pages || [];
+  publicStyles = publicState.styles || null;
+  applyStyles(publicStyles);
+  publicBranding = publicState.branding || null;
+  publicBrandingUrls = { logoImageUrl: publicState.logoImageUrl || null, faviconUrl: publicState.faviconUrl || null, socialImageUrl: publicState.socialImageUrl || null };
+  applyBranding(publicBranding, publicBrandingUrls);
   renderPublicContactForm();
   renderLanguageSwitch();
   renderSite();

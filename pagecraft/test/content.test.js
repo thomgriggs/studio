@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, pageKinds, validatePageTranslationPatch, pageTranslatableFields } from "../src/content.js";
+import { validatePatch, validateMediaUpload, MAX_MEDIA_BYTES, validateMenuItems, validateMenuName, validateMenuOrder, MAX_MENU_DEPTH, validateFormName, validateFormFields, validateSubmission, MAX_FORM_FIELDS, validateTranslationPatch, translatableFields, validateLocaleCode, validateLocaleName, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, pageKinds, validatePageTranslationPatch, pageTranslatableFields, validateSiteStyles, defaultSiteStyles, HEADING_FONTS, BODY_FONTS, validateBranding, defaultBranding } from "../src/content.js";
 
 test("accepts and normalizes a known plain-text field", () => {
   assert.deepEqual(validatePatch({ heading: "  A calm coast  " }), {
@@ -200,5 +200,40 @@ test("page translation patches allow clearing to empty and reject unknown fields
   assert.deepEqual(validatePageTranslationPatch({ [field]: "" }), { ok: true, field, value: "" });
   assert.equal(validatePageTranslationPatch({ slug: "nope" }).ok, false);
   assert.equal(validatePageTranslationPatch({ heading: "a", body: "b" }).ok, false);
+});
+
+test("validates site styles: partial updates merge onto defaults, unknown values rejected", () => {
+  const first = validateSiteStyles({ colorPrimary: "#FF00AA" });
+  assert.equal(first.ok, true);
+  assert.equal(first.value.colorPrimary, "#ff00aa");
+  assert.equal(first.value.bodyFont, defaultSiteStyles.bodyFont);
+
+  assert.equal(validateSiteStyles({ colorPrimary: "not-a-color" }).ok, false);
+  // Font names accept any well-formed Google Fonts family, not just a fixed allowlist —
+  // this app doesn't call the live Google Fonts API, so it can't validate existence.
+  assert.equal(validateSiteStyles({ headingFont: "Comic Sans" }).ok, true);
+  assert.equal(validateSiteStyles({ headingFont: HEADING_FONTS[1] }).ok, true);
+  assert.equal(validateSiteStyles({ bodyFont: BODY_FONTS[1] }).ok, true);
+  assert.equal(validateSiteStyles({ headingFont: "<script>" }).ok, false);
+  assert.equal(validateSiteStyles({ headingFont: "x".repeat(61) }).ok, false);
+  assert.equal(validateSiteStyles({ headingWeight: 450 }).ok, false);
+  assert.equal(validateSiteStyles({ headingWeight: 700 }).ok, true);
+  assert.equal(validateSiteStyles({ buttonRadius: "square" }).ok, false);
+  assert.equal(validateSiteStyles({ buttonRadius: "pill" }).ok, true);
+  assert.equal(validateSiteStyles("nope").ok, false);
+});
+
+test("validates branding: logo type, logo text length, and media references, merging onto defaults", () => {
+  const first = validateBranding({ logoType: "image", logoImageId: "abc123" });
+  assert.equal(first.ok, true);
+  assert.equal(first.value.logoType, "image");
+  assert.equal(first.value.logoImageId, "abc123");
+  assert.equal(first.value.logoText, defaultBranding.logoText);
+
+  assert.equal(validateBranding({ logoType: "svg" }).ok, false);
+  assert.equal(validateBranding({ logoText: "x".repeat(61) }).ok, false);
+  assert.deepEqual(validateBranding({ logoText: "  Tidehouse  " }).value.logoText, "Tidehouse");
+  assert.equal(validateBranding({ faviconId: "fav1" }).ok, true);
+  assert.equal(validateBranding("nope").ok, false);
 });
 

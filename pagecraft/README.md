@@ -33,6 +33,7 @@ default, local dev falls back to demo passwords (not for production use):
 
 - Administrator: `thomgriggs@gmail.com` / `admin-demo` (or `PAGECRAFT_ADMIN_PASSWORD`)
 - Editor: `editor` / `editor-demo` (or `PAGECRAFT_EDITOR_PASSWORD`)
+- Administrator: `mwild8@protonmail.com` (or `PAGECRAFT_FRIEND_PASSWORD` locally; `FRIEND_PASSWORD` Worker secret in production)
 
 The deployed Cloudflare Worker uses real passwords set via `wrangler secret put
 ADMIN_PASSWORD` / `EDITOR_PASSWORD`, never the local fallback.

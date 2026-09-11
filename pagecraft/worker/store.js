@@ -1,4 +1,4 @@
-import { seedContent } from "../src/content.js";
+import { seedContent, defaultSiteStyles, defaultBranding } from "../src/content.js";
 
 function now() {
   return new Date().toISOString();
@@ -427,6 +427,42 @@ export function createStore(db) {
       if (!existing) return this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
       await db.prepare("UPDATE page_translations SET published_json = draft_json, updated_at = ? WHERE page_id = ? AND locale = ?").bind(now(), pageId, locale).run();
       return this.snapshotPageTranslation(pageId, locale, emptyPageTranslation);
+    },
+
+    async snapshotStyles() {
+      const draft = await readState("styles:draft", defaultSiteStyles);
+      const published = await readState("styles:published", defaultSiteStyles);
+      return { draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    async updateStyles(patch) {
+      const draft = { ...(await readState("styles:draft", defaultSiteStyles)), ...patch };
+      await writeState("styles:draft", draft);
+      return this.snapshotStyles();
+    },
+
+    async publishStyles() {
+      const draft = await readState("styles:draft", defaultSiteStyles);
+      await writeState("styles:published", draft);
+      return this.snapshotStyles();
+    },
+
+    async snapshotBranding() {
+      const draft = await readState("branding:draft", defaultBranding);
+      const published = await readState("branding:published", defaultBranding);
+      return { draft, published, dirty: JSON.stringify(draft) !== JSON.stringify(published) };
+    },
+
+    async updateBranding(patch) {
+      const draft = { ...(await readState("branding:draft", defaultBranding)), ...patch };
+      await writeState("branding:draft", draft);
+      return this.snapshotBranding();
+    },
+
+    async publishBranding() {
+      const draft = await readState("branding:draft", defaultBranding);
+      await writeState("branding:published", draft);
+      return this.snapshotBranding();
     }
   };
 }

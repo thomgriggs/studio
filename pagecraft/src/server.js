@@ -4,7 +4,7 @@ import { mkdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { dirname, extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
-import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES, validatePageTranslationPatch, pageTranslatableFields } from "./content.js";
+import { fieldDefinitions, validatePatch, validateMediaUpload, validateMenuName, validateMenuItems, validateMenuOrder, MAX_MENUS, validateFormName, validateFormFields, validateSubmission, MAX_FORMS, validateTranslationPatch, validateLocaleCode, validateLocaleName, MAX_LOCALES, validatePageSlug, validatePageTitle, validatePageKind, validatePageContent, MAX_PAGES, validatePageTranslationPatch, pageTranslatableFields, validateSiteStyles, GOOGLE_FONTS, validateBranding } from "./content.js";
 import { validateEntry } from "./models.js";
 import { createStore } from "./store.js";
 
@@ -22,7 +22,8 @@ const MAX_MEDIA_BODY = 7 * 1024 * 1024;
 
 const users = Object.freeze({
   "thomgriggs@gmail.com": { role: "admin", passwordHash: hash(process.env.PAGECRAFT_ADMIN_PASSWORD || "admin-demo") },
-  editor: { role: "editor", passwordHash: hash(process.env.PAGECRAFT_EDITOR_PASSWORD || "editor-demo") }
+  editor: { role: "editor", passwordHash: hash(process.env.PAGECRAFT_EDITOR_PASSWORD || "editor-demo") },
+  "mwild8@protonmail.com": { role: "admin", passwordHash: hash(process.env.PAGECRAFT_FRIEND_PASSWORD || "friend-demo") }
 });
 
 function hash(value) {
@@ -89,6 +90,14 @@ function requireSession(request, response, { admin = false } = {}) {
   return session;
 }
 
+function pagesWithTranslations() {
+  const locales = store.listLocales();
+  return store.listPages().map((page) => ({
+    ...page,
+    translations: Object.fromEntries(locales.map((locale) => [locale.code, store.snapshotPageTranslation(page.id, locale.code)]))
+  }));
+}
+
 async function api(request, response, url) {
   if (url.pathname === "/api/login" && request.method === "POST") {
     const body = await readJson(request);
@@ -143,7 +152,14 @@ async function api(request, response, url) {
         content: page.published,
         translations: Object.fromEntries(locales.map((locale) => [locale.code, store.snapshotPageTranslation(page.id, locale.code).published]))
       }));
-    json(response, 200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales, translations, pages });
+    const styles = store.snapshotStyles().published;
+    const branding = store.snapshotBranding().published;
+    const brandingUrls = {
+      logoImageUrl: branding.logoImageId ? (store.getMedia(branding.logoImageId)?.url || null) : null,
+      faviconUrl: branding.faviconId ? (store.getMedia(branding.faviconId)?.url || null) : null,
+      socialImageUrl: branding.socialImageId ? (store.getMedia(branding.socialImageId)?.url || null) : null
+    };
+    json(response, 200, { published, rooms, dishes, heroImageUrl: heroImage?.url || null, menus, form, locales, translations, pages, styles, branding, ...brandingUrls });
     return;
   }
 
@@ -154,7 +170,11 @@ async function api(request, response, url) {
     const translations = Object.fromEntries(
       locales.map((locale) => [locale.code, store.snapshotTranslation(locale.code)])
     );
-    json(response, 200, { ...store.snapshot(), fields: fieldDefinitions, media: store.listMedia(), menus: store.listMenus(), forms: store.listForms(), locales, translations, pages: store.listPages() });
+    json(response, 200, {
+      ...store.snapshot(), fields: fieldDefinitions, media: store.listMedia(), menus: store.listMenus(),
+      forms: store.listForms(), locales, translations, pages: pagesWithTranslations(), styles: store.snapshotStyles(),
+      branding: store.snapshotBranding(), googleFonts: GOOGLE_FONTS
+    });
     return;
   }
 
@@ -549,7 +569,7 @@ async function api(request, response, url) {
   if (url.pathname === "/api/pages" && request.method === "GET") {
     const session = requireSession(request, response);
     if (!session) return;
-    json(response, 200, store.listPages());
+    json(response, 200, pagesWithTranslations());
     return;
   }
 
@@ -650,6 +670,48 @@ async function api(request, response, url) {
     }
   }
 
+  if (url.pathname === "/api/styles" && request.method === "PATCH") {
+    const session = requireSession(request, response);
+    if (!session) return;
+    const body = await readJson(request);
+    const validation = validateSiteStyles(body);
+    if (!validation.ok) {
+      json(response, 400, { error: validation.error });
+      return;
+    }
+    const patch = Object.fromEntries(Object.keys(body).filter((field) => field in validation.value).map((field) => [field, validation.value[field]]));
+    json(response, 200, store.updateStyles(patch));
+    return;
+  }
+
+  if (url.pathname === "/api/styles/publish" && request.method === "POST") {
+    const session = requireSession(request, response, { admin: true });
+    if (!session) return;
+    json(response, 200, store.publishStyles());
+    return;
+  }
+
+  if (url.pathname === "/api/branding" && request.method === "PATCH") {
+    const session = requireSession(request, response);
+    if (!session) return;
+    const body = await readJson(request);
+    const validation = validateBranding(body);
+    if (!validation.ok) {
+      json(response, 400, { error: validation.error });
+      return;
+    }
+    const patch = Object.fromEntries(Object.keys(body).filter((field) => field in validation.value).map((field) => [field, validation.value[field]]));
+    json(response, 200, store.updateBranding(patch));
+    return;
+  }
+
+  if (url.pathname === "/api/branding/publish" && request.method === "POST") {
+    const session = requireSession(request, response, { admin: true });
+    if (!session) return;
+    json(response, 200, store.publishBranding());
+    return;
+  }
+
   json(response, 404, { error: "Not found." });
 }
 
@@ -705,7 +767,7 @@ async function staticFile(response, pathname) {
     response.writeHead(200, {
       "content-type": types[extname(path)] || "application/octet-stream",
       "cache-control": "no-store",
-      "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "content-security-policy": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
       "referrer-policy": "no-referrer",
       "x-content-type-options": "nosniff",
       "x-frame-options": "DENY"
