@@ -335,17 +335,6 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 body.nav-scroll { overflow:hidden; }
 
 /* ========================================================================== */
-.role-switch {
-	align-items:center;
-	background:#1f1f1f;
-	color:#cfcfcf;
-	display:flex;
-	font-size:var(--font_size-xsmall);
-	gap:8px;
-	padding:6px var(--gutter);
-	strong { color:#fff; font-weight:var(--font_weight-bold-primary); margin-inline-end:6px; }
-	a { border-radius:var(--radius_pill); padding:4px 10px; &.is-active { background:var(--color_brand-secondary); color:#fff; } &:hover:not(.is-active) { background:#333; } }
-	.role-switch-note { margin-inline-start:auto; color:#8f8f8f; }
 }
 
 /* ========================================================================== */
