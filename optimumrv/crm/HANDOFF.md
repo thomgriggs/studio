@@ -14,7 +14,7 @@ Open `index.html` through any static server (e.g. `python3 -m http.server` from 
 
 `<body data-view data-role data-desk>` carries the current page context. Role-specific chrome is present in the markup for every role and shown/hidden with `[data-role]` CSS, so one file shows every variant.
 
-The dark **Prototype role** bar at the top and the **Show block labels** toggle in the sidebar are prototype aids — remove both for production.
+Roles are chosen on `index.html` (or via `?role=` in the URL). The **Show block labels** toggle in the sidebar is a prototype aid — remove it for production.
 
 ## Naming contract (shared with optimumrv.com)
 

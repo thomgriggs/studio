@@ -40,7 +40,6 @@ function crmInit() {
 	document.body.dataset.role = role;
 	document.body.dataset.desk = desk;
 
-	crmRenderRoleSwitch();
 	crmRenderShell(roleData);
 	crmBindDrawer();
 	crmBindLabels();
@@ -80,15 +79,6 @@ function crmQuery(extra = {}) {
 }
 
 /* ---------- shell: role switch, sidebar, nav hrefs ---------------------- */
-function crmRenderRoleSwitch() {
-	const bar = document.querySelector('.role-switch');
-	if (!bar) return;
-	const links = Object.entries(CRM_DATA.roles).map(([id, r]) =>
-		`<a href="?role=${id}" class="${id === crmState.role ? 'is-active' : ''}" data-action="switch-role" data-role="${id}">${r.label}</a>`
-	).join('');
-	bar.innerHTML = `<strong>Prototype role</strong>${links}<span class="role-switch-note">This bar is a prototype aid — not part of the product.</span>`;
-}
-
 function crmRenderShell(roleData) {
 	crmFill(document, { user:roleData.user });
 	document.querySelectorAll('.sidebar-navigation .nav-item, .role-picker a[data-view]').forEach(a => {
@@ -116,7 +106,7 @@ function crmBindDrawer() {
 
 /* ---------- dev labels overlay ------------------------------------------ */
 const CRM_BLOCKS = [
-	'topbar', 'sidebar-navigation', 'role-switch', 'pipeline-toggle', 'pipeline-filters', 'filter-control',
+	'topbar', 'sidebar-navigation', 'pipeline-toggle', 'pipeline-filters', 'filter-control',
 	'calendar', 'calendar-nav', 'calendar-modes', 'calendar-sidebar', 'mini-month', 'calendar-list', 'calendar-main', 'calendar-head', 'calendar-grid', 'calendar-now', 'calendar-event', 'followup-task', 'day-agenda', 'agenda-item', 'calendar-month', 'calendar-year', 'event-popover', 'event-editor',
 	'pipeline', 'pipeline-column', 'column-header', 'column-lane', 'lead-card', 'card-owner', 'card-flag', 'forsale-summary', 'quick-edit', 'stage-picker',
 	'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
@@ -144,7 +134,6 @@ function crmToggleLabels(on) {
 		});
 	});
 	document.querySelectorAll('[data-action]').forEach(el => {
-		if (el.closest('.role-switch')) return;
 		crmLabel(el, `data-action="${el.dataset.action}"`, 'action');
 	});
 }

@@ -335,8 +335,6 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 body.nav-scroll { overflow:hidden; }
 
 /* ========================================================================== */
-/* ROLE SWITCH — prototype-only bar to hop between Sales/Management/Consign  */
-/* ========================================================================== */
 .role-switch {
 	align-items:center;
 	background:#1f1f1f;
@@ -356,7 +354,7 @@ body.nav-scroll { overflow:hidden; }
 .daily-view {
 	display:grid;
 	grid-template-columns:var(--inbox_width) 1fr;
-	height:calc(100dvh - 30px);
+	height:100dvh;
 	min-height:0;
 }
 
@@ -747,7 +745,7 @@ body.show-labels [data-dev-labeled] { outline:1px dashed rgba(0,0,0,.25); outlin
 }
 @media (max-width:860px) {
 	:root { --inbox_width:100%; }
-	.daily-view { grid-template-columns:1fr; height:auto; min-height:calc(100dvh - 30px); }
+	.daily-view { grid-template-columns:1fr; height:auto; min-height:100dvh; }
 	.inbox { border-inline-end:0; .inbox-list { max-height:40dvh; } }
 	.conversation { min-height:70dvh; }
 	.lead-header { .lead-actions { flex-wrap:wrap; .lead-cta { border:0; padding:0; margin:0; width:100%; } } }
@@ -851,7 +849,7 @@ body[data-view="pipeline"], body[data-view="calendar"], body[data-view="daily-vi
 body[data-view="pipeline"] .pipeline, body[data-view="calendar"] .calendar, body[data-view="daily-view"] .daily-view { flex:1; height:auto; min-height:0; }
 @media (max-width:860px) {
 	body[data-view="daily-view"] { height:auto; overflow:auto; }
-	body[data-view="daily-view"] .daily-view { min-height:calc(100dvh - 30px); }
+	body[data-view="daily-view"] .daily-view { min-height:100dvh; }
 }
 @media (max-width:1100px) {
 }
