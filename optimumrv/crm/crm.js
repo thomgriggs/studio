@@ -388,7 +388,7 @@ function crmSendStub(e) {
 /* ========================================================================== */
 /* PIPELINE                                                                   */
 /* ========================================================================== */
-const crmBoard = { owner:'', location:'', waiting:'', search:'', showLost:false };
+const crmBoard = { stores:null, owners:null, waitingSet:null, search:'', showLost:false };
 
 function crmInitPipeline(params) {
 	const roleData = CRM_DATA.roles[crmState.role];
@@ -410,29 +410,24 @@ function crmInitPipeline(params) {
 	document.getElementById('global-search-input').addEventListener('input', e => { crmBoard.search = e.target.value; crmRenderBoard(desk); });
 }
 
+function crmLeadStore(lead) { const m = (lead.location || '').match(/· ([A-Z]{3})$/); if (m) return m[1]; const st = CRM_DATA.stores.find(x => (lead.location || '').startsWith(x.name)); return st ? st.code : 'OCA'; }
 function crmRenderBoardFilters(roleData, desk) {
 	const wrap = document.querySelector('.pipeline-filters');
 	const filters = (desk.board && desk.board.filters) || [];
-	const parts = [];
 	if (!filters.length) {
-		parts.push(`<span class="context-pill"><i data-feather="map-pin"></i><span data-field="user.location">${roleData.user.location}</span></span>`);
-		parts.push(`<span class="context-pill"><i data-feather="user"></i><span data-field="user.name">${roleData.user.name}</span></span>`);
+		wrap.innerHTML = `<span class="context-pill"><i data-feather="map-pin"></i><span data-field="user.location">${roleData.user.location}</span></span><span class="context-pill"><i data-feather="user"></i><span data-field="user.name">${roleData.user.name}</span></span>`;
+		crmIcons(); return;
 	}
-	if (filters.includes('location')) {
-		const all = crmState.role === 'consignment' ? 'All Locations' : roleData.user.location;
-		parts.push(`<label class="filter-control" data-filter="location"><i data-feather="map-pin"></i><select data-action="filter-location"><option value="">${all}</option>${CRM_DATA.locations.map(l => `<option>${l}</option>`).join('')}</select><i data-feather="chevron-down"></i></label>`);
-	}
-	if (filters.includes('owner')) {
-		parts.push(`<label class="filter-control" data-filter="owner"><i data-feather="user"></i><select data-action="filter-owner"><option value="">${roleData.ownerLabel}</option>${(roleData.owners || []).map(o => `<option>${o}</option>`).join('')}</select><i data-feather="chevron-down"></i></label>`);
-	}
-	if (filters.includes('waiting')) {
-		parts.push(`<label class="filter-control" data-filter="waiting"><i data-feather="loader"></i><select data-action="filter-waiting"><option value="">Waiting on: All roles</option><option>Lister</option><option>Consignor</option><option>Buy-in Admin</option><option>Inventory Admin</option><option>GM</option></select><i data-feather="chevron-down"></i></label>`);
-	}
+	const leadOwners = () => [...new Set(desk.leads.filter(l => l.card && crmBoard.stores.has(crmLeadStore(l))).map(l => l.owner))];
+	crmBoard.stores = new Set(crmState.role === 'consignment' ? CRM_DATA.stores.map(st => st.code) : ['OCA']);
+	crmBoard.owners = new Set(leadOwners());
+	crmBoard.waitingSet = new Set(['Lister', 'Consignor', 'Buy-in Admin', 'Inventory Admin', 'GM']);
+	const parts = [];
+	if (filters.includes('location')) { CRM_MENUS.stores = { icon:'map-pin', noun:'stores', items:crmStoreItems, get selected() { return crmBoard.stores; }, set selected(v) { crmBoard.stores = v; crmBoard.owners = new Set(leadOwners()); }, onChange:() => crmRenderBoard(desk) }; parts.push('<div class="filter-menu" data-menu="stores"></div>'); }
+	if (filters.includes('owner')) { CRM_MENUS.reps = { icon:'users', noun:roleData.ownerLabel === 'All Listers' ? 'listers' : 'salespeople', items:() => leadOwners().map(o => ({ value:o, label:o, swatch:`data-owner="${o}"` })), get selected() { return crmBoard.owners; }, set selected(v) { crmBoard.owners = v; }, onChange:() => crmRenderBoard(desk) }; parts.push('<div class="filter-menu" data-menu="reps"></div>'); }
+	if (filters.includes('waiting')) { CRM_MENUS.waiting = { icon:'loader', noun:'roles', items:() => ['Lister', 'Consignor', 'Buy-in Admin', 'Inventory Admin', 'GM'].map(r => ({ value:r, label:r, swatch:'data-store' })), get selected() { return crmBoard.waitingSet; }, set selected(v) { crmBoard.waitingSet = v; }, onChange:() => crmRenderBoard(desk) }; parts.push('<div class="filter-menu" data-menu="waiting"></div>'); }
 	wrap.innerHTML = parts.join('');
-	wrap.querySelectorAll('select').forEach(s => s.addEventListener('change', () => {
-		crmBoard[s.closest('.filter-control').dataset.filter] = s.value;
-		crmRenderBoard(desk);
-	}));
+	crmRenderFilterMenus();
 }
 
 function crmBoardLeads(desk) {
@@ -440,9 +435,9 @@ function crmBoardLeads(desk) {
 	const q = crmBoard.search.trim().toLowerCase();
 	return desk.leads.filter(l => l.card)
 		.filter(l => desk.ownerScope !== 'mine' || l.owner === me)
-		.filter(l => !crmBoard.owner || l.owner === crmBoard.owner)
-		.filter(l => !crmBoard.location || (l.location || '').startsWith(crmBoard.location))
-		.filter(l => !crmBoard.waiting || l.waitingOn === crmBoard.waiting)
+		.filter(l => !crmBoard.stores || crmBoard.stores.has(crmLeadStore(l)))
+		.filter(l => !crmBoard.owners || crmBoard.owners.has(l.owner))
+		.filter(l => !crmBoard.waitingSet || !l.waitingOn || crmBoard.waitingSet.has(l.waitingOn))
 		.filter(l => !q || [l.name, l.unit, l.card.unitTitle, l.card.activity].join(' ').toLowerCase().includes(q));
 }
 
@@ -1230,7 +1225,9 @@ function crmInitCalendar(params) {
 	const wrap = document.querySelector('.calendar-filters');
 	if (roleData.owners) {
 		crmCal.stores = new Set(['OCA']);
-		crmCal.owners = new Set(CRM_DATA.stores.find(st => st.code === 'OCA').reps);
+		crmCal.owners = new Set(crmStoreReps(crmCal.stores));
+		CRM_MENUS.stores = { icon:'map-pin', noun:'stores', items:crmStoreItems, get selected() { return crmCal.stores; }, set selected(v) { crmCal.stores = v; crmCal.owners = new Set(crmStoreReps(v)); }, onChange:crmRenderCalendar };
+		CRM_MENUS.reps = { icon:'users', noun:'salespeople', items:() => crmRepItems(crmCal.stores), get selected() { return crmCal.owners; }, set selected(v) { crmCal.owners = v; }, onChange:crmRenderCalendar };
 		wrap.innerHTML = `<div class="filter-menu" data-menu="stores"></div><div class="filter-menu" data-menu="reps"></div>`;
 		crmRenderFilterMenus();
 	} else {
@@ -1255,29 +1252,32 @@ function crmInitCalendar(params) {
 	setInterval(() => { if ((crmCal.mode === 'week' || crmCal.mode === 'day') && !crmPop.eventId && !crmPop.draft) crmRenderCalendar(); }, 60000);
 }
 
-/* ---- filter menus (management): checkbox dropdowns for stores and reps ---- */
+/* ---- filter menus: checkbox dropdowns, shared by the calendar and the pipeline ----
+   CRM_MENUS[kind] = { icon, noun, items:() => [{value,label,sub,swatch}], selected:Set, onChange } */
+const CRM_MENUS = {};
+function crmMenuLabel(kind) {
+	const m = CRM_MENUS[kind], items = m.items(), sel = m.selected;
+	if (!items.length) return m.empty || `No ${m.noun}`;
+	if (sel.size === items.length) return items.length === 1 ? items[0].label : `All ${m.noun}`;
+	if (sel.size === 0) return `No ${m.noun}`;
+	if (sel.size === 1) return items.find(i => sel.has(i.value))?.label || `1 ${m.noun}`;
+	return `${sel.size} ${m.noun}`;
+}
 function crmRenderFilterMenus() {
-	const storesEl = document.querySelector('.filter-menu[data-menu="stores"]');
-	const repsEl = document.querySelector('.filter-menu[data-menu="reps"]');
-	if (!storesEl) return;
-	const stores = CRM_DATA.stores;
-	const selStores = [...crmCal.stores];
-	const reps = [...new Set(stores.filter(st => crmCal.stores.has(st.code)).flatMap(st => st.reps || []))];
-	crmCal.owners = new Set([...crmCal.owners].filter(o => reps.includes(o)).concat(reps.filter(r => !crmCal._repsTouched)));
-	const storeLabel = selStores.length === stores.length ? 'All stores' : selStores.length === 1 ? stores.find(st => st.code === selStores[0]).name : `${selStores.length} stores`;
-	const repLabel = !reps.length ? 'No salespeople' : crmCal.owners.size === reps.length ? (reps.length === 1 ? reps[0] : 'All salespeople') : crmCal.owners.size === 0 ? 'Nobody' : crmCal.owners.size === 1 ? [...crmCal.owners][0] : `${crmCal.owners.size} salespeople`;
-	const menu = (el, icon, label, items, kind, allChecked) => {
-		const open = el.classList.contains('is-open');
-		el.innerHTML = `<button type="button" class="filter-control" data-action="toggle-menu" data-menu="${kind}" aria-expanded="${open}"><i data-feather="${icon}"></i><span>${label}</span><i data-feather="chevron-down"></i></button>
+	document.querySelectorAll('.filter-menu[data-menu]').forEach(el => {
+		const kind = el.dataset.menu, m = CRM_MENUS[kind]; if (!m) return;
+		const items = m.items(), open = el.classList.contains('is-open');
+		el.innerHTML = `<button type="button" class="filter-control" data-action="toggle-menu" data-menu="${kind}" aria-expanded="${open}"><i data-feather="${m.icon}"></i><span>${crmMenuLabel(kind)}</span><i data-feather="chevron-down"></i></button>
 			<div class="filter-menu-panel" ${open ? '' : 'hidden'}>
-				<label class="calendar-list-item is-all"><input type="checkbox" ${allChecked ? 'checked' : ''} data-action="menu-all" data-menu="${kind}"><span class="swatch" data-all></span>All</label>
-				${items.map(it => `<label class="calendar-list-item"><input type="checkbox" ${it.checked ? 'checked' : ''} data-action="menu-pick" data-menu="${kind}" data-value="${it.value}"><span class="swatch" ${it.swatch}></span>${it.label}${it.sub ? `<small>${it.sub}</small>` : ''}</label>`).join('')}
+				<label class="calendar-list-item is-all"><input type="checkbox" ${items.length && m.selected.size === items.length ? 'checked' : ''} data-action="menu-all" data-menu="${kind}"><span class="swatch" data-all></span>All</label>
+				${items.map(it => `<label class="calendar-list-item"><input type="checkbox" ${m.selected.has(it.value) ? 'checked' : ''} data-action="menu-pick" data-menu="${kind}" data-value="${it.value}"><span class="swatch" ${it.swatch || ''}></span>${it.label}${it.sub ? `<small>${it.sub}</small>` : ''}</label>`).join('')}
 			</div>`;
-	};
-	menu(storesEl, 'map-pin', storeLabel, stores.map(st => ({ value:st.code, label:st.name, sub:(st.reps || []).length ? `${st.reps.length} rep${st.reps.length > 1 ? 's' : ''}` : '', checked:crmCal.stores.has(st.code), swatch:'data-store' })), 'stores', selStores.length === stores.length);
-	menu(repsEl, 'users', repLabel, reps.map(r => ({ value:r, label:r, sub:stores.filter(st => (st.reps || []).includes(r) && crmCal.stores.has(st.code)).map(st => st.code).join(' · '), checked:crmCal.owners.has(r), swatch:`data-owner="${r}"` })), 'reps', reps.length > 0 && crmCal.owners.size === reps.length);
+	});
 	crmIcons();
 }
+function crmStoreReps(stores) { return [...new Set(CRM_DATA.stores.filter(st => stores.has(st.code)).flatMap(st => st.reps || []))]; }
+function crmStoreItems() { return CRM_DATA.stores.map(st => ({ value:st.code, label:st.name, sub:(st.reps || []).length ? `${st.reps.length} rep${st.reps.length > 1 ? 's' : ''}` : '', swatch:'data-store' })); }
+function crmRepItems(stores) { return crmStoreReps(stores).map(r => ({ value:r, label:r, sub:CRM_DATA.stores.filter(st => (st.reps || []).includes(r) && stores.has(st.code)).map(st => st.code).join(' · '), swatch:`data-owner="${r}"` })); }
 document.addEventListener('click', e => { if (document.contains(e.target) && !e.target.closest('.filter-menu')) document.querySelectorAll('.filter-menu.is-open').forEach(m => { m.classList.remove('is-open'); m.querySelector('.filter-menu-panel').hidden = true; m.querySelector('[data-action="toggle-menu"]').setAttribute('aria-expanded', 'false'); }); });
 
 function crmSetMode(mode) {
@@ -1669,10 +1669,10 @@ Object.assign(CRM_ACTIONS, {
 	'mini-prev': () => { crmCal.mini = crmAddMonths(crmCal.mini, -1); document.getElementById('mini-month').innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': () => { crmCal.mini = crmAddMonths(crmCal.mini, 1); document.getElementById('mini-month').innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'toggle-sidebar': () => { crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
-	/* filter menus (management) */
+	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
-	'menu-all': el => { if (el.dataset.menu === 'stores') { crmCal.stores = new Set(el.checked ? CRM_DATA.stores.map(st => st.code) : []); crmCal._repsTouched = false; } else { const reps = [...new Set(CRM_DATA.stores.filter(st => crmCal.stores.has(st.code)).flatMap(st => st.reps || []))]; crmCal.owners = new Set(el.checked ? reps : []); crmCal._repsTouched = true; } crmRenderFilterMenus(); crmRenderCalendar(); },
-	'menu-pick': el => { if (el.dataset.menu === 'stores') { if (el.checked) crmCal.stores.add(el.dataset.value); else crmCal.stores.delete(el.dataset.value); if (!crmCal._repsTouched) crmCal.owners = new Set(CRM_DATA.stores.filter(st => crmCal.stores.has(st.code)).flatMap(st => st.reps || [])); } else { if (el.checked) crmCal.owners.add(el.dataset.value); else crmCal.owners.delete(el.dataset.value); crmCal._repsTouched = true; } crmRenderFilterMenus(); crmRenderCalendar(); },
+	'menu-all': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; m.selected = new Set(el.checked ? m.items().map(i => i.value) : []); crmRenderFilterMenus(); m.onChange(); },
+	'menu-pick': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; const sel = new Set(m.selected); if (el.checked) sel.add(el.dataset.value); else sel.delete(el.dataset.value); m.selected = sel; crmRenderFilterMenus(); m.onChange(); },
 	/* sidebar filters */
 	'toggle-calendar': el => { crmCal.show[el.dataset.category] = el.checked; crmRenderCalendar(); },
 	'toggle-followups': el => { crmCal.show.followup = el.checked; crmRenderCalendar(); },

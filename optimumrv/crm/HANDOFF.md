@@ -105,6 +105,8 @@ Stages move **automatically** from what the salesperson logs; only two decisions
 | Lost → Working | Salesperson or Manager | `reopen-lead` — old reason stays on the timeline |
 | Any → any | **Manager** | Quick-edit popup on a pipeline card, or drag & drop; backward moves ask for a reason |
 
+**Filters** (`filter-menu`, shared by Pipeline and Calendar): checkbox dropdowns for **stores** (`data-menu="stores"`, from `CRM_DATA.stores`), **salespeople / listers** (`reps` — the reps of the ticked stores), and on the consignment board **waiting-on role**. Each has an *All* row; the button label reads the single selection, a count, or *All …*. Actions: `toggle-menu` `menu-all` `menu-pick`.
+
 **Pipeline card popup** (`quick-edit`, `.quick-edit` / `.stage-picker`): stage picker (steps a role can't set by hand are disabled with a "moves automatically" tooltip), owner select (management / consignment), next follow-up + *Add follow-up*, *Open conversation*. Nothing applies until **Apply**.
 
 **Drag & drop**: cards are draggable (salespeople: only Working cards); a drop never moves the card by itself — it opens the popup with the target stage pre-selected, so every move is confirmed and attributed. Native HTML5 DnD; no touch support (the popup covers phones).
