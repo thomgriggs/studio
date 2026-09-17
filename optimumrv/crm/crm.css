@@ -335,9 +335,6 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 body.nav-scroll { overflow:hidden; }
 
 /* ========================================================================== */
-}
-
-/* ========================================================================== */
 /* DAILY VIEW — two-pane layout: inbox (left) + conversation (right)          */
 /* ========================================================================== */
 .daily-view {
