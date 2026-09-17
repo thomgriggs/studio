@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<meta name="studio:project" content="Optimum RV CRM">
+	<meta name="studio:description" content="Calendar — appointments and follow-ups.">
+	<title>Calendar — Optimum RV CRM</title>
+	<link rel="icon" href="https://optimumrv.com/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="crm.css">
+</head>
+<body data-view="calendar" data-role="sales" data-desk="default">
+
+	<!-- ===== SVG SPRITE : RV line-art placeholders ===== -->
+	<svg hidden aria-hidden="true">
+		<symbol id="rv-trailer" viewBox="0 0 64 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M6 22V10a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v12H6z"/><path d="M48 16h8l4 6H48"/><rect x="12" y="10" width="8" height="6" rx="1"/><rect x="26" y="10" width="8" height="6" rx="1"/><circle cx="20" cy="25" r="3"/><circle cx="36" cy="25" r="3"/><path d="M2 22h4"/>
+		</symbol>
+		<symbol id="rv-motorhome" viewBox="0 0 64 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M4 23V9a3 3 0 0 1 3-3h40l13 8v9H4z"/><rect x="10" y="10" width="9" height="6" rx="1"/><rect x="24" y="10" width="9" height="6" rx="1"/><path d="M47 6v8h13"/><circle cx="16" cy="25" r="3"/><circle cx="48" cy="25" r="3"/>
+		</symbol>
+	</svg>
+
+	<!-- ===== ROLE SWITCH : prototype-only bar (remove in production) ===== -->
+	<nav class="role-switch" aria-label="Prototype role"></nav>
+
+	<!-- ===== SIDEBAR NAVIGATION ===== -->
+	<aside class="sidebar-navigation" id="sidebar-navigation" aria-hidden="true" aria-label="Main navigation">
+		<div class="sidebar-navigation-head">
+			<button type="button" class="menu-btn sidebar-navigation-close" data-action="close-menu" aria-label="Close menu"><i data-feather="x"></i></button>
+			<a class="brand" href="index.html"><img src="assets/optimumrvlogo.svg" alt="Optimum RV" width="209" height="50"></a>
+		</div>
+		<nav class="primary-navigation" aria-label="Views">
+			<a class="nav-item" data-view="daily-view" href="daily-view.html"><i data-feather="message-circle"></i><span>Daily View</span></a>
+			<a class="nav-item" data-view="calendar" href="calendar.html"><i data-feather="calendar"></i><span>Calendar</span></a>
+			<a class="nav-item" data-view="pipeline" href="pipeline.html"><i data-feather="columns"></i><span>Pipeline</span></a>
+		</nav>
+		<div class="sidebar-footer">
+			<div class="user-card">
+				<span class="avatar avatar-small" data-field="user.initials">RM</span>
+				<div><strong data-field="user.name">Riley Morgan</strong><small data-field="user.location">Ocala, FL</small></div>
+			</div>
+			<a class="nav-item" href="#" data-action="open-settings"><i data-feather="settings"></i><span>Settings</span></a>
+			<a class="nav-item" href="#" data-action="open-help"><i data-feather="help-circle"></i><span>Help center</span></a>
+			<a class="nav-item" href="index.html" data-action="sign-out"><i data-feather="log-out"></i><span>Sign out</span></a>
+			<label class="dev-toggle"><input type="checkbox" data-action="toggle-labels"> Show block labels (handoff aid)</label>
+			<small class="version" data-field="app.version">Version 1.2</small>
+		</div>
+	</aside>
+	<div class="global-overlay"></div>
+
+	<!-- ===== TOPBAR : menu · sidebar toggle · title · ‹ Today › · new · view modes · context · search ===== -->
+	<header class="topbar">
+		<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
+		<button type="button" class="menu-btn" data-action="toggle-sidebar" aria-label="Show or hide the calendar sidebar" title="Sidebar"><i data-feather="sidebar"></i></button>
+		<h1 class="page-title">Calendar</h1>
+		<!-- CALENDAR NAV : previous / today / next, and the title for the current range -->
+		<div class="calendar-nav">
+			<button type="button" class="menu-btn" data-action="cal-prev" aria-label="Previous"><i data-feather="chevron-left"></i></button>
+			<button type="button" class="btn" data-action="cal-today">Today</button>
+			<button type="button" class="menu-btn" data-action="cal-next" aria-label="Next"><i data-feather="chevron-right"></i></button>
+			<span class="calendar-title" data-field="calendar.title">August 2026</span>
+		</div>
+		<button type="button" class="btn btn-primary btn-round" data-action="new-event" aria-label="New appointment or follow-up"><i data-feather="plus"></i></button>
+		<!-- CALENDAR MODES : Day / Week / Month / Year (keys d w m y) -->
+		<div class="calendar-modes">
+			<div class="segmented" role="group" aria-label="Calendar view">
+				<button type="button" data-mode="day" data-action="calendar-mode-day">Day</button>
+				<button type="button" class="is-active is-brand" data-mode="week" data-action="calendar-mode-week">Week</button>
+				<button type="button" data-mode="month" data-action="calendar-mode-month">Month</button>
+				<button type="button" data-mode="year" data-action="calendar-mode-year">Year</button>
+			</div>
+		</div>
+		<div class="topbar-context">
+			<!-- CALENDAR FILTERS : location (management) or store pill -->
+			<div class="pipeline-filters calendar-filters"></div>
+			<form class="field global-search" role="search" onsubmit="return false"><i data-feather="search"></i><label class="sr-only" for="global-search-input">Search</label><input id="global-search-input" type="search" placeholder="Search" data-action="search-calendar"></form>
+		</div>
+	</header>
+
+	<!-- ===== CALENDAR : sidebar + main; data-mode drives which view renders ===== -->
+	<main class="calendar" id="calendar" data-mode="week" aria-label="Calendar">
+
+		<!-- CALENDAR SIDEBAR : mini month for jumping dates, and the calendars you can show/hide -->
+		<aside class="calendar-sidebar" aria-label="Calendar sidebar">
+			<div id="mini-month"></div>
+			<section class="calendar-list-group">
+				<h3>Calendars</h3>
+				<div class="calendar-list">
+					<label class="calendar-list-item"><input type="checkbox" checked data-action="toggle-calendar" data-category="appointment"><span class="swatch" data-category="appointment"></span>Appointments</label>
+					<label class="calendar-list-item"><input type="checkbox" checked data-action="toggle-calendar" data-category="logistics"><span class="swatch" data-category="logistics"></span>Deliveries &amp; drop-offs</label>
+					<label class="calendar-list-item"><input type="checkbox" checked data-action="toggle-followups" data-category="followup"><span class="swatch" data-category="followup"></span>Follow-ups</label>
+				</div>
+			</section>
+			<section class="calendar-list-group" id="calendar-owners" hidden>
+				<h3>Salespeople</h3>
+				<div class="calendar-list"></div>
+			</section>
+		</aside>
+
+		<!-- CALENDAR MAIN : the active view -->
+		<div class="calendar-main">
+			<div class="calendar-scroll" id="calendar-scroll">
+				<!-- CALENDAR HEAD : day-of-week labels (click a day to open it) -->
+				<div class="calendar-head"><span></span></div>
+				<!-- CALENDAR GRID : time gutter + day columns; events absolutely positioned by start/end; double-click empty space to add -->
+				<div class="calendar-grid" id="calendar-grid"><div class="calendar-times"></div></div>
+			</div>
+			<!-- DAY AGENDA : Notion-style list of the day's items with inline actions -->
+			<section class="day-agenda" id="day-agenda" hidden aria-label="Agenda"></section>
+			<!-- CALENDAR MONTH : iCal-style grid; click a date to open the day, empty space to add -->
+			<div class="calendar-month" id="calendar-month" hidden></div>
+			<!-- CALENDAR YEAR : twelve mini months; click a day or a month name -->
+			<div class="calendar-year" id="calendar-year" hidden></div>
+		</div>
+	</main>
+
+	<!-- ===== EVENT POPOVER : iCal-style card anchored to the clicked event ===== -->
+	<div class="event-popover" id="event-popover" hidden role="dialog" aria-label="Event"></div>
+
+
+	<!-- ===== TEMPLATES ===== -->
+	<template id="tpl-calendar-event">
+		<button type="button" class="calendar-event" data-event="" data-lead="" data-owner="" data-category="" data-action="open-event">
+			<span class="event-owner"><span data-field="owner"></span></span>
+			<span class="event-body">
+				<span class="thumb"></span>
+				<span class="event-text">
+					<span class="event-name" data-field="name"></span>
+					<span class="event-unit" data-field="unit"></span>
+					<span class="event-meta"><span data-field="type"></span> · <span data-field="timeLabel"></span></span>
+				</span>
+			</span>
+			<span class="event-done" hidden><i data-feather="check"></i></span>
+		</button>
+	</template>
+
+	<template id="tpl-followup-task">
+		<label class="followup-task" data-event="" data-lead="" data-status="">
+			<input type="checkbox" data-action="complete-followup">
+			<span data-field="label"></span>
+		</label>
+	</template>
+
+	<script src="js/feather.min.js"></script>
+	<script src="js/micromodal.min.js"></script>
+	<script src="data.js"></script>
+	<script src="crm.js"></script>
+</body>
+</html>

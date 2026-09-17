@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<meta name="studio:project" content="Optimum RV CRM">
+	<meta name="studio:description" content="Daily View — inbox and conversation thread.">
+	<title>Daily View — Optimum RV CRM</title>
+	<link rel="icon" href="https://optimumrv.com/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="crm.css">
+</head>
+<body data-view="daily-view" data-role="sales" data-desk="default">
+
+	<!-- ===== SVG SPRITE : RV line-art placeholders used by .thumb when no photo exists ===== -->
+	<svg hidden aria-hidden="true">
+		<symbol id="rv-trailer" viewBox="0 0 64 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M6 22V10a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v12H6z"/><path d="M48 16h8l4 6H48"/><rect x="12" y="10" width="8" height="6" rx="1"/><rect x="26" y="10" width="8" height="6" rx="1"/><circle cx="20" cy="25" r="3"/><circle cx="36" cy="25" r="3"/><path d="M2 22h4"/>
+		</symbol>
+		<symbol id="rv-motorhome" viewBox="0 0 64 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M4 23V9a3 3 0 0 1 3-3h40l13 8v9H4z"/><rect x="10" y="10" width="9" height="6" rx="1"/><rect x="24" y="10" width="9" height="6" rx="1"/><path d="M47 6v8h13"/><circle cx="16" cy="25" r="3"/><circle cx="48" cy="25" r="3"/>
+		</symbol>
+	</svg>
+
+	<!-- ===== ROLE SWITCH : prototype-only bar to hop between roles (remove in production) ===== -->
+	<nav class="role-switch" aria-label="Prototype role"></nav>
+
+	<!-- ===== SIDEBAR NAVIGATION : app drawer — views, current user, settings, dev tools ===== -->
+	<aside class="sidebar-navigation" id="sidebar-navigation" aria-hidden="true" aria-label="Main navigation">
+		<div class="sidebar-navigation-head">
+			<button type="button" class="menu-btn sidebar-navigation-close" data-action="close-menu" aria-label="Close menu"><i data-feather="x"></i></button>
+			<a class="brand" href="index.html"><img src="assets/optimumrvlogo.svg" alt="Optimum RV" width="209" height="50"></a>
+		</div>
+		<nav class="primary-navigation" aria-label="Views">
+			<a class="nav-item" data-view="daily-view" href="daily-view.html"><i data-feather="message-circle"></i><span>Daily View</span></a>
+			<a class="nav-item" data-view="calendar" href="calendar.html"><i data-feather="calendar"></i><span>Calendar</span></a>
+			<a class="nav-item" data-view="pipeline" href="pipeline.html"><i data-feather="columns"></i><span>Pipeline</span></a>
+		</nav>
+		<div class="sidebar-footer">
+			<div class="user-card">
+				<span class="avatar avatar-small" data-field="user.initials">RM</span>
+				<div><strong data-field="user.name">Riley Morgan</strong><small data-field="user.location">Ocala, FL</small></div>
+			</div>
+			<a class="nav-item" href="#" data-action="open-settings"><i data-feather="settings"></i><span>Settings</span></a>
+			<a class="nav-item" href="#" data-action="open-help"><i data-feather="help-circle"></i><span>Help center</span></a>
+			<a class="nav-item" href="index.html" data-action="sign-out"><i data-feather="log-out"></i><span>Sign out</span></a>
+			<label class="dev-toggle"><input type="checkbox" data-action="toggle-labels"> Show block labels (handoff aid)</label>
+			<small class="version" data-field="app.version">Version 1.2</small>
+		</div>
+	</aside>
+	<div class="global-overlay"></div>
+
+	<!-- ===== DAILY VIEW : inbox (left) + conversation (right) ===== -->
+	<main class="daily-view">
+
+		<!-- ===== INBOX : today's leads for this desk, filtered by tab and search ===== -->
+		<section class="inbox" id="inbox" aria-label="Inbox">
+			<div class="inbox-header">
+				<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
+				<h1 class="page-title">Daily View</h1>
+				<button type="button" class="btn btn-primary btn-round" data-action="compose-new" aria-label="New message"><i data-feather="edit-3"></i></button>
+			</div>
+			<div class="inbox-tabs"><div class="segmented" role="tablist" aria-label="Inbox filter"></div></div>
+			<div class="inbox-search">
+				<form class="field" role="search" onsubmit="return false">
+					<i data-feather="search"></i>
+					<label class="sr-only" for="inbox-search-input">Search inbox</label>
+					<input id="inbox-search-input" type="search" placeholder="Search" autocomplete="off" data-action="search-inbox">
+				</form>
+			</div>
+			<div class="inbox-list" id="inbox-list" role="list"></div>
+		</section>
+
+		<!-- ===== CONVERSATION : selected lead — header, thread, composer ===== -->
+		<section class="conversation" aria-label="Conversation">
+
+			<!-- ===== LEAD HEADER : identity, pipeline position, summary cards, actions ===== -->
+			<header class="lead-header" data-stage="">
+				<div class="lead-identity">
+					<span class="avatar" data-field="initials">MT</span>
+					<div>
+						<div class="lead-name"><span data-field="name">Marcus Trent</span><span class="lead-badges"></span></div>
+						<div class="lead-contact">
+							<span><i data-feather="phone"></i><a href="#" data-action="call" data-field="phone">352-555-0142</a></span>
+							<span><i data-feather="mail"></i><a href="#" data-action="email" data-field="email">m.trent@example.com</a></span>
+							<span><i data-feather="map-pin"></i><span data-field="location">Ocala, FL</span></span>
+							<span class="lead-owner" hidden><i data-feather="user"></i><span data-field="owner">Riley Morgan</span></span>
+						</div>
+					</div>
+				</div>
+
+				<!-- STAGE STEPPER : each <li> carries data-stage; is-done / is-current -->
+				<nav class="stage-stepper" aria-label="Pipeline stage">
+					<ol></ol>
+					<span class="stepper-status" data-field="stageNote"></span>
+				</nav>
+
+				<div class="lead-actions">
+					<button type="button" class="action-button" data-action="call"><span class="action-icon"><i data-feather="phone"></i></span>Call</button>
+					<button type="button" class="action-button" data-action="text"><span class="action-icon"><i data-feather="message-circle"></i></span>Text</button>
+					<button type="button" class="action-button" data-action="email"><span class="action-icon"><i data-feather="mail"></i></span>Email</button>
+					<button type="button" class="action-button" data-action="schedule"><span class="action-icon"><i data-feather="calendar"></i></span>Schedule</button>
+					<!-- DECISIONS : the two stage changes a salesperson makes by hand -->
+					<button type="button" class="action-button is-decision" data-action="mark-agreed"><span class="action-icon"><i data-feather="check-circle"></i></span>Agreed</button>
+					<button type="button" class="action-button is-decision" data-action="mark-lost"><span class="action-icon"><i data-feather="x-circle"></i></span>Lost</button>
+					<button type="button" class="btn waiting-pill reopen-lead" data-action="reopen-lead"><i data-feather="rotate-ccw"></i>Reopen</button>
+					<!-- LEAD CTA : role-specific primary action (Mark price agreed, Send 60-day update, Waiting on …) -->
+					<div class="lead-cta" hidden></div>
+				</div>
+
+				<!-- LEAD SUMMARY : KPI cards — unit(s), pricing, payoff/trade, appointment/term -->
+				<div class="lead-summary"></div>
+			</header>
+
+			<!-- ===== THREAD : chronological messages, calls, emails, notes, and system events ===== -->
+			<div class="thread" id="thread" role="log" aria-live="polite"></div>
+
+			<!-- ===== COMPOSER : reply in Text / Email / Note mode ===== -->
+			<form class="composer" id="composer-form">
+				<button type="button" class="btn btn-round composer-add" data-action="composer-add" aria-label="Add attachment or template"><i data-feather="plus"></i></button>
+				<div class="composer-mode">
+					<div class="segmented" role="group" aria-label="Message type">
+						<button type="button" class="is-active" data-mode="text" data-action="composer-mode-text">Text</button>
+						<button type="button" data-mode="email" data-action="composer-mode-email">Email</button>
+						<button type="button" data-mode="note" data-action="composer-mode-note">Note</button>
+					</div>
+				</div>
+				<div class="field composer-input">
+					<label class="sr-only" for="composer-input">Message</label>
+					<input id="composer-input" type="text" placeholder="Text Marcus…" autocomplete="off">
+					<div class="composer-tools">
+						<button type="button" data-action="insert-template" aria-label="Insert a saved reply"><i data-feather="file-text"></i></button>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-round composer-send" data-action="send-message" aria-label="Send"><i data-feather="arrow-up"></i></button>
+				<p class="composer-status"><i data-feather="shield"></i><span data-field="composerStatus">Texting 352-555-0142 — opted in</span></p>
+			</form>
+		</section>
+	</main>
+
+	<!-- ===== DETAIL PANEL : slides in from the right when a summary card is clicked — everything a salesperson needs to close, without leaving the thread ===== -->
+	<aside class="detail-panel" id="detail-panel" aria-hidden="true" aria-label="Details">
+		<header class="detail-head">
+			<button type="button" class="menu-btn" data-action="close-detail" aria-label="Close details"><i data-feather="x"></i></button>
+			<h2 class="detail-title" data-field="detail.title"></h2>
+		</header>
+		<div class="detail-body"></div>
+	</aside>
+	<div class="detail-overlay" data-action="close-detail"></div>
+
+	<!-- ===== TEMPLATES : exact markup for every repeated item (rendered by crm.js from data.js) ===== -->
+	<template id="tpl-inbox-item">
+		<button type="button" class="inbox-item" role="listitem" data-action="open-lead" data-lead="" data-stage="">
+			<span class="item-unread" data-status=""></span>
+			<span class="avatar" data-field="initials"></span>
+			<span class="item-name"><span data-field="name"></span><time data-field="time"></time></span>
+			<span class="item-unit" data-field="unit"></span>
+			<span class="item-preview"><span data-field="preview"></span><span class="pill item-pill" data-status=""></span></span>
+		</button>
+	</template>
+
+	<template id="tpl-summary-card">
+		<button type="button" class="summary-card" data-kind="" data-action="open-detail">
+			<span class="summary-media"></span>
+			<div class="summary-body">
+				<strong class="summary-title"></strong>
+				<span class="summary-meta" data-field="summary.meta"></span>
+				<span class="summary-meta summary-meta2" data-field="summary.meta2"></span>
+				<span class="summary-status"></span>
+			</div>
+		</button>
+	</template>
+
+	<template id="tpl-thread-day">
+		<p class="thread-day"><strong data-field="day.label"></strong> <time data-field="day.time"></time></p>
+	</template>
+
+	<template id="tpl-thread-event">
+		<p class="thread-event" data-tone=""></p>
+	</template>
+
+	<template id="tpl-thread-message">
+		<article class="thread-message" data-direction="">
+			<p class="message-label"></p>
+			<p class="message-body" data-field="message.body"></p>
+			<p class="message-meta" data-field="message.status"></p>
+		</article>
+	</template>
+
+	<template id="tpl-thread-call">
+		<article class="thread-call">
+			<span class="call-icon"><i data-feather="phone"></i></span>
+			<div class="call-body">
+				<p class="call-title"><span data-field="call.title"></span><span class="call-links"><a href="#" data-action="play-recording"><i data-feather="play"></i>Recording</a><a href="#" data-action="open-transcript">Transcript</a></span></p>
+				<p class="call-summary" data-field="call.summary"></p>
+			</div>
+		</article>
+	</template>
+
+	<template id="tpl-thread-note">
+		<p class="thread-note"><span class="note-author"><i data-feather="edit-2"></i>Internal note · <span data-field="note.author"></span></span><span data-field="note.text"></span></p>
+	</template>
+
+	<template id="tpl-thread-email">
+		<article class="thread-email">
+			<p class="email-meta"><i data-feather="mail"></i><span data-field="email.time"></span><span class="email-automated"><i data-feather="zap"></i> Automated</span><span class="email-opened"><i data-feather="check"></i>Opened <i data-feather="chevron-down"></i></span></p>
+			<p class="email-subject" data-field="email.subject"></p>
+			<p class="email-preview" data-field="email.preview"></p>
+		</article>
+	</template>
+
+	<template id="tpl-thread-image">
+		<article class="thread-message thread-image inbound" data-direction="inbound">
+			<img src="" alt="Photo from the customer" data-field="message.image">
+			<p class="message-body" data-field="message.body"></p>
+		</article>
+	</template>
+
+	<script src="js/feather.min.js"></script>
+	<script src="js/micromodal.min.js"></script>
+	<script src="data.js"></script>
+	<script src="crm.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<meta name="studio:project" content="Optimum RV CRM">
+	<meta name="studio:description" content="Click-through prototype — pick a role to start.">
+	<title>Optimum RV CRM — prototype</title>
+	<link rel="icon" href="https://optimumrv.com/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="crm.css">
+</head>
+<body data-view="index" data-role="sales">
+
+	<!-- ===== ROLE PICKER : prototype entry — choose a role, then a view ===== -->
+	<main class="role-picker">
+		<div class="picker-head">
+			<img src="assets/optimumrvlogo.svg" alt="Optimum RV" width="209" height="50">
+			<h1>CRM prototype</h1>
+			<p>Click-through shell of the Salesperson, Management and Consignment screens. Every block, field and control is named for handoff — open the sidebar and turn on <em>Show block labels</em> to see the map.</p>
+		</div>
+		<div class="picker-grid">
+			<article class="picker-card" data-role="sales">
+				<h2>Salesperson</h2>
+				<p>Riley Morgan · Ocala. Four-stage lead pipeline, own calendar, own inbox.</p>
+				<div class="picker-links">
+					<a href="daily-view.html?role=sales"><i data-feather="message-circle"></i>Daily View</a>
+					<a href="pipeline.html?role=sales"><i data-feather="columns"></i>Pipeline</a>
+					<a href="calendar.html?role=sales"><i data-feather="calendar"></i>Calendar</a>
+				</div>
+			</article>
+			<article class="picker-card" data-role="management">
+				<h2>Management</h2>
+				<p>Jordan Pike · Ocala. Same views across all salespeople, with owner bars and filters.</p>
+				<div class="picker-links">
+					<a href="daily-view.html?role=management"><i data-feather="message-circle"></i>Daily View</a>
+					<a href="pipeline.html?role=management"><i data-feather="columns"></i>Pipeline</a>
+					<a href="calendar.html?role=management"><i data-feather="calendar"></i>Calendar</a>
+				</div>
+			</article>
+			<article class="picker-card" data-role="consignment">
+				<h2>Consignment</h2>
+				<p>Two desks: <strong>Consign</strong> (lister, six stages to contract) and <strong>Back Office</strong> (Motility → Payout).</p>
+				<div class="picker-links">
+					<a href="daily-view.html?role=consignment&desk=consign"><i data-feather="message-circle"></i>Daily View · Consign</a>
+					<a href="daily-view.html?role=consignment&desk=backoffice"><i data-feather="message-circle"></i>Daily View · Back Office</a>
+					<a href="pipeline.html?role=consignment"><i data-feather="columns"></i>Pipeline</a>
+					<a href="calendar.html?role=consignment"><i data-feather="calendar"></i>Calendar</a>
+				</div>
+			</article>
+		</div>
+		<p class="picker-note">Reference mockups live in <code>crm/screens/</code>. Naming conventions and the data shape are documented in <code>HANDOFF.md</code>.</p>
+	</main>
+
+	<script src="js/feather.min.js"></script>
+	<script>feather.replace();</script>
+</body>
+</html>
