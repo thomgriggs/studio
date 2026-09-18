@@ -1823,6 +1823,25 @@ Object.assign(CRM_ACTIONS, {
 		const close = e => { if (!e.target.closest('[data-action="phone-more"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
 		setTimeout(() => document.addEventListener('click', close, true), 0);
 	},
+	'composer-mode-menu': el => {
+		let menu = document.getElementById('composer-mode-menu');
+		if (menu) { menu.remove(); return; }
+		const current = document.querySelector('.composer-mode button.is-active').dataset.mode;
+		const modes = [['text', 'Text', 'message-circle'], ['email', 'Email', 'mail'], ['note', 'Note', 'edit-2']];
+		menu = document.createElement('div');
+		menu.id = 'composer-mode-menu'; menu.className = 'phone-menu is-up'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = modes.map(([id, label, icon]) => `<button type="button" role="menuitemradio" aria-checked="${id === current}" data-action="composer-mode-pick" data-mode="${id}"><span>${crmIcon(icon)} ${label}</span>${id === current ? crmIcon('check') : ''}</button>`).join('');
+		el.closest('.composer').appendChild(menu);
+		crmIcons();
+		const close = e => { if (!e.target.closest('[data-action="composer-mode-menu"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true), 0);
+	},
+	'composer-mode-pick': el => {
+		document.querySelector(`.composer-mode [data-mode="${el.dataset.mode}"]`).click();
+		const icon = { text:'message-circle', email:'mail', note:'edit-2' }[el.dataset.mode];
+		const btn = document.querySelector('.composer-mode-btn'); if (btn) { btn.innerHTML = crmIcon(icon); crmIcons(); }
+		document.getElementById('composer-mode-menu')?.remove();
+	},
 	'phone-filter-pick': el => {
 		const desk = crmDesk();
 		crmState.tab = el.dataset.tab;

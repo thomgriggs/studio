@@ -1479,3 +1479,10 @@ body[data-device="phone"][data-view="daily-view"] {
 	.phone-menu button[data-tone="ok"] { color:var(--status_ok); .feather { color:var(--status_ok); } }
 	.phone-menu button[data-tone="muted"] { color:var(--color_text-muted); .feather { color:var(--color_text-muted); } }
 }
+
+/* phone composer: Text / Email / Note collapse into one icon with a dropdown that opens upward */
+body[data-device="phone"][data-view="daily-view"] .composer { position:relative;
+	.composer-mode { display:none; }
+	.composer-mode-btn { grid-row:2; grid-column:2; width:36px; height:36px; border-radius:50%; background:var(--color_bg-secondary); display:inline-flex !important; align-items:center; justify-content:center; color:var(--color_brand-secondary); .feather { width:18px; height:18px; } }
+	.phone-menu.is-up { top:auto; inset-block-end:calc(100% - 4px); inset-inline-start:8px; inset-inline-end:auto; transform-origin:bottom left; button span .feather { width:16px; height:16px; color:var(--color_text-muted); } }
+}
