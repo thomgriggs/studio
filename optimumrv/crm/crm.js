@@ -28,8 +28,24 @@ function crmHydrate() {
 }
 function crmResetDemo() { try { sessionStorage.removeItem(CRM_STORE_KEY); } catch (e) {} location.reload(); }
 
+/* ---------- device: phone or desktop ------------------------------------ */
+/* Phone when the viewport is narrow, or a touch device in landscape; can be   */
+/* forced with ?device=phone or Settings → Phone preview (for demos).          */
+function crmDevice() {
+	const params = new URLSearchParams(location.search);
+	let forced = params.get('device');
+	try { forced = forced || sessionStorage.getItem('optimumrv-crm-device'); } catch (e) {}
+	const phone = forced === 'phone' ? true : forced === 'desktop' ? false : (matchMedia('(max-width: 700px)').matches || matchMedia('(pointer: coarse) and (max-width: 900px)').matches);
+	const prev = document.body.dataset.device;
+	document.body.dataset.device = phone ? 'phone' : 'desktop';
+	const inset = params.get('inset'); if (inset) document.body.style.setProperty('--safe_top', `${+inset}px`); /* fake notch inset for the framed preview */
+	return prev !== document.body.dataset.device;
+}
+
 function crmInit() {
 	crmHydrate();
+	crmDevice();
+	let resizeTimer; addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (crmDevice() && document.body.dataset.view === 'daily-view') crmPhoneApply(); }, 120); });
 	const params = new URLSearchParams(location.search);
 	const role = CRM_DATA.roles[params.get('role')] ? params.get('role') : 'sales';
 	const roleData = CRM_DATA.roles[role];
@@ -74,7 +90,8 @@ function crmFill(node, obj) {
 }
 
 function crmQuery(extra = {}) {
-	const q = new URLSearchParams({ role:crmState.role, desk:crmState.desk, ...extra });
+	const forced = new URLSearchParams(location.search).get('device');
+	const q = new URLSearchParams({ role:crmState.role, desk:crmState.desk, ...(forced ? { device:forced } : {}), ...extra });
 	return '?' + q.toString();
 }
 
@@ -109,7 +126,7 @@ const CRM_BLOCKS = [
 	'topbar', 'sidebar-navigation', 'pipeline-toggle', 'pipeline-filters', 'filter-control',
 	'calendar', 'calendar-nav', 'calendar-modes', 'calendar-sidebar', 'mini-month', 'calendar-list', 'calendar-main', 'calendar-head', 'calendar-grid', 'calendar-now', 'calendar-event', 'followup-task', 'day-agenda', 'agenda-item', 'calendar-month', 'calendar-year', 'event-popover', 'event-editor',
 	'pipeline', 'pipeline-column', 'column-header', 'column-lane', 'lead-card', 'card-owner', 'card-flag', 'forsale-summary', 'quick-edit', 'stage-picker',
-	'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
+	'phone-topbar', 'phone-focus', 'phone-bottombar', 'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
 	'detail-panel', 'detail-section', 'thread', 'thread-day', 'thread-event', 'thread-message', 'thread-call', 'thread-note', 'thread-email', 'thread-image', 'composer'
 ];
 
@@ -174,6 +191,7 @@ function crmInitDailyView(params) {
 		document.getElementById('composer-input').placeholder = { text:'Text', email:'Email', note:'Note for' }[b.dataset.mode] + ' ' + (crmCurrentLead()?.name.split(' ')[0] || '') + '…';
 	}));
 	document.getElementById('composer-form').addEventListener('submit', crmSendStub);
+	crmInitPhone(desk, params);
 }
 
 function crmRenderTabs(desk) {
@@ -212,9 +230,10 @@ function crmRenderInbox(desk, search = '') {
 		const pill = item.querySelector('.item-pill');
 		if (lead.pill) { pill.dataset.status = lead.pill.status; pill.title = CRM_PILL_HELP[lead.pill.status] || ''; pill.innerHTML = `${crmIcon(lead.pill.icon)}<span data-field="pill.label">${lead.pill.label}</span>`; }
 		else pill.remove();
-		item.addEventListener('click', () => crmOpenLead(lead.id));
+		item.addEventListener('click', () => { crmOpenLead(lead.id); if (document.body.dataset.device === 'phone') crmShowScreen('conversation', true); });
 		list.appendChild(item);
 	});
+	crmRenderFocus(desk);
 	crmIcons();
 }
 
@@ -226,7 +245,8 @@ function crmOpenLead(id) {
 	if (!lead) return;
 	crmState.leadId = id;
 	document.querySelectorAll('.inbox-item').forEach(i => i.classList.toggle('is-active', i.dataset.lead === id));
-	history.replaceState(null, '', `daily-view.html${crmQuery({ tab:crmState.tab, lead:id })}`);
+	const onInbox = document.body.dataset.device === 'phone' && crmPhone.screen !== 'conversation';
+	history.replaceState(history.state, '', `daily-view.html${crmQuery(onInbox ? { tab:crmState.tab } : { tab:crmState.tab, lead:id })}`);
 
 	const header = document.querySelector('.lead-header');
 	header.dataset.stage = lead.stage;
@@ -837,11 +857,13 @@ const CRM_ACTIONS = {
 				{ icon:'bell', title:'Notifications', sub:'New lead, customer reply, overdue follow-up', static:true, right:'<label class="calendar-toggle"><input type="checkbox" checked></label>' },
 				{ icon:'message-circle', title:'Text signature', sub:`— ${u.name.split(' ')[0]}, Optimum RV ${u.location.split(',')[0]}`, static:true },
 				{ icon:'clock', title:'Working hours', sub:'Mon–Sat 8 AM – 7 PM · automated texts pause outside', static:true, right:'<label class="calendar-toggle"><input type="checkbox" checked></label>' },
+				{ icon:'smartphone', title:'Phone preview', sub:'Prototype only — show the phone layout in this window', right:`<span class="pill">${document.body.dataset.device === 'phone' ? 'On' : 'Off'}</span>` },
 				{ icon:'refresh-cw', title:'Reset demo data', sub:'Prototype only — undo every change made in this browser session', right:'<span class="pill">Prototype</span>' }
 			], 'data-settings-pick'),
 			actions:[{ label:'Done', primary:true }]
 		});
-		m.querySelector('[data-settings-pick="4"]').addEventListener('click', crmResetDemo);
+		m.querySelector('[data-settings-pick="4"]').addEventListener('click', () => { try { const on = document.body.dataset.device === 'phone'; sessionStorage.setItem('optimumrv-crm-device', on ? 'desktop' : 'phone'); } catch (e) {} const u = new URL(location.href); u.searchParams.delete('device'); location.href = u.toString(); });
+		m.querySelector('[data-settings-pick="5"]').addEventListener('click', crmResetDemo);
 	},
 
 	/* ---- pipeline: For Sale drill-downs ---- */
@@ -1698,4 +1720,101 @@ Object.assign(CRM_ACTIONS, {
 		crmClosePopover();
 		crmSheet({ title:'Delete this item?', reason:'Delete is for mistakes — a wrong customer, a duplicate. If the customer backed out, use Cancel instead so the reason stays on the timeline.', actions:[{ label:'Keep' }, { label:'Delete', primary:true, run:() => { const list = CRM_DATA.calendar.events[crmState.role]; list.splice(list.indexOf(e), 1); crmPersist(); crmRenderCalendar(); } }] });
 	},
+});
+
+/* ========================================================================== */
+/* PHONE — Daily View as two screens: inbox → conversation                   */
+/* ========================================================================== */
+const crmPhone = { screen:'inbox', bound:false };
+
+function crmInitPhone(desk, params) {
+	if (crmPhone.bound) return;
+	crmPhone.bound = true;
+	/* search from the bottom bar */
+	const ps = document.getElementById('phone-search-input');
+	if (ps) ps.addEventListener('input', e => { document.getElementById('inbox-search-input').value = e.target.value; crmRenderInbox(desk, e.target.value); });
+	/* send button appears when there's text */
+	const input = document.getElementById('composer-input');
+	input.addEventListener('input', () => document.getElementById('composer-form').classList.toggle('has-text', input.value.trim().length > 0));
+	/* keyboard: keep the composer above it */
+	if (window.visualViewport) {
+		const vv = window.visualViewport;
+		const onVV = () => { const off = Math.max(0, innerHeight - vv.height - vv.offsetTop); document.body.style.setProperty('--keyboard_offset', `${off}px`); };
+		vv.addEventListener('resize', onVV); vv.addEventListener('scroll', onVV);
+	}
+	/* history: back returns to the inbox */
+	addEventListener('popstate', e => { if (document.body.dataset.device !== 'phone') return; crmShowScreen((e.state && e.state.screen) || 'inbox', false); });
+	/* left-edge swipe → back */
+	let swipe = null;
+	document.addEventListener('touchstart', e => { const t = e.touches[0]; swipe = (document.body.dataset.screen === 'conversation' && t.clientX < 28) ? { x:t.clientX, y:t.clientY } : null; }, { passive:true });
+	document.addEventListener('touchmove', e => { if (!swipe) return; const t = e.touches[0]; if (t.clientX - swipe.x > 60 && Math.abs(t.clientY - swipe.y) < 40) { swipe = null; CRM_ACTIONS['phone-back'](); } }, { passive:true });
+	/* which screen to start on */
+	crmShowScreen(params.get('lead') ? 'conversation' : 'inbox', false);
+	crmPhoneApply();
+}
+
+function crmPhoneApply() {
+	document.body.dataset.screen = document.body.dataset.device === 'phone' ? crmPhone.screen : '';
+	const desk = crmDesk();
+	if (document.body.dataset.device === 'phone') crmRenderFocus(desk);
+}
+
+function crmShowScreen(screen, push) {
+	crmPhone.screen = screen;
+	document.body.dataset.screen = screen;
+	if (push) history.pushState({ screen }, '', `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
+	if (screen === 'inbox') { crmCloseDetail(); crmClose(); history.replaceState(history.state, '', `daily-view.html${crmQuery({ tab:crmState.tab })}`); }
+	else requestAnimationFrame(() => { const t = document.getElementById('thread'); if (t) t.scrollTop = t.scrollHeight; });
+}
+
+/* the six to deal with first: response timers, then overdue, then today's appointments, then unread */
+function crmFocusScore(l) {
+	const st = l.pill && l.pill.status;
+	if (st === 'urgent') return 5;
+	if (l.unread === 'overdue' || st === 'overdue') return 4;
+	if (st === 'info' && l.pill.icon === 'clock') return 3;
+	if (st === 'appointment') return 2;
+	if (l.unread) return 1;
+	return 0;
+}
+function crmRenderFocus(desk) {
+	const wrap = document.getElementById('phone-focus');
+	if (!wrap) return;
+	const picks = desk.leads.filter(l => l.tabs.length && l.stage !== 'lost').map(l => ({ l, s:crmFocusScore(l) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 6).map(x => x.l);
+	wrap.hidden = !picks.length;
+	wrap.innerHTML = picks.map(l => `<button type="button" class="focus-item" data-action="open-focus" data-lead="${l.id}"><span class="avatar" data-field="initials">${l.initials}<span class="focus-dot" data-status="${l.unread === 'overdue' ? 'overdue' : (l.pill && l.pill.status) || 'unread'}"></span></span><small data-field="name">${l.name.split(' ')[0]}</small></button>`).join('');
+	const fires = desk.leads.filter(l => l.tabs.length && (l.unread === 'overdue' || (l.pill && ['urgent', 'overdue'].includes(l.pill.status)))).length;
+	const badge = document.getElementById('phone-badge');
+	if (badge) { badge.hidden = !fires; badge.textContent = fires; }
+}
+
+Object.assign(CRM_ACTIONS, {
+	'phone-back': () => { if (history.state && history.state.screen === 'conversation') history.back(); else crmShowScreen('inbox', false); },
+	'open-focus': el => { crmOpenLead(el.dataset.lead); crmShowScreen('conversation', true); },
+	'open-pipeline': el => { location.href = `pipeline.html${crmQuery()}`; },
+	'open-lead-details': () => {
+		const lead = crmLeadOrPick(); if (!lead) return;
+		const desk = crmDesk();
+		const stage = desk.stages.find(st => st.id === lead.stage);
+		crmSheet({
+			title:lead.name,
+			body:crmRows([
+				{ icon:'phone', title:lead.phone, sub:'Tap to call', static:false },
+				{ icon:'mail', title:lead.email, sub:'Tap to email', static:false },
+				{ icon:'map-pin', title:lead.location, static:true },
+				{ icon:'columns', title:stage ? stage.label : lead.stage, sub:lead.stageNote || '', static:true },
+				{ icon:'user', title:lead.owner, sub:'Owner', static:true }
+			], 'data-detail-pick'),
+			actions:[{ label:'Close', primary:true }]
+		}).querySelectorAll('[data-detail-pick]').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.detailPick; crmClose(); if (i === 0) CRM_ACTIONS.call(); if (i === 1) CRM_ACTIONS.email(); }));
+	},
+	'dictate': () => {
+		const m = crmSheet({
+			title:'Dictate',
+			reason:'Salespeople walk the lot — talking is faster than typing. On a device the developer wires this to native dictation (Web Speech API); the prototype fakes the listening state.',
+			body:`<p class="sheet-big"><span class="dictate-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><small id="dictate-text">Listening…</small></p>`,
+			actions:[{ label:'Cancel' }, { label:'Use text', primary:true, run:() => { const ps = document.getElementById('phone-search-input'); if (ps) { ps.value = 'Marcus'; ps.dispatchEvent(new Event('input')); } } }]
+		});
+		setTimeout(() => { const t = m.querySelector('#dictate-text'); if (t) t.textContent = '“Marcus”'; }, 1400);
+	}
 });

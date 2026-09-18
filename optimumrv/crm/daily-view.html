@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 	<meta name="studio:project" content="Optimum RV CRM">
 	<meta name="studio:description" content="Daily View — inbox and conversation thread.">
@@ -56,12 +56,20 @@
 
 		<!-- ===== INBOX : today's leads for this desk, filtered by tab and search ===== -->
 		<section class="inbox" id="inbox" aria-label="Inbox">
+			<!-- PHONE TOPBAR (inbox) : menu · title with alert badge · Pipeline shortcut — iPhone Messages layout -->
+			<header class="phone-topbar" data-phone>
+				<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
+				<h1 class="phone-title">Daily View<span class="phone-badge" id="phone-badge" hidden></span></h1>
+				<a class="menu-btn" href="pipeline.html" data-view="pipeline" data-action="open-pipeline" aria-label="Pipeline"><i data-feather="columns"></i></a>
+			</header>
 			<div class="inbox-header">
 				<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
 				<h1 class="page-title">Daily View</h1>
 				<button type="button" class="btn btn-primary btn-round" data-action="compose-new" aria-label="New message"><i data-feather="edit-3"></i></button>
 			</div>
 			<div class="inbox-tabs"><div class="segmented" role="tablist" aria-label="Inbox filter"></div></div>
+			<!-- PHONE FOCUS : the six leads to deal with first — timers, overdue, today's appointments, unread -->
+			<div class="phone-focus" id="phone-focus" data-phone hidden></div>
 			<div class="inbox-search">
 				<form class="field" role="search" onsubmit="return false">
 					<i data-feather="search"></i>
@@ -70,10 +78,26 @@
 				</form>
 			</div>
 			<div class="inbox-list" id="inbox-list" role="list"></div>
+			<!-- PHONE BOTTOMBAR : search with dictation + compose (new lead) -->
+			<footer class="phone-bottombar" data-phone>
+				<form class="field phone-search" role="search" onsubmit="return false">
+					<i data-feather="search"></i>
+					<label class="sr-only" for="phone-search-input">Search</label>
+					<input id="phone-search-input" type="search" placeholder="Search" autocomplete="off" data-action="search-inbox">
+					<button type="button" data-action="dictate" aria-label="Dictate"><i data-feather="mic"></i></button>
+				</form>
+				<button type="button" class="btn btn-icon phone-compose" data-action="compose-new" aria-label="New lead"><i data-feather="edit"></i></button>
+			</footer>
 		</section>
 
 		<!-- ===== CONVERSATION : selected lead — header, thread, composer ===== -->
 		<section class="conversation" aria-label="Conversation">
+			<!-- PHONE TOPBAR (conversation) : back · avatar + name (tap for details) · call -->
+			<header class="phone-topbar" data-phone>
+				<button type="button" class="menu-btn phone-back" data-action="phone-back" aria-label="Back to inbox"><i data-feather="chevron-left"></i></button>
+				<button type="button" class="phone-lead" data-action="open-lead-details"><span class="avatar avatar-small" data-field="initials">MT</span><span class="phone-lead-name" data-field="name">Marcus Trent</span></button>
+				<button type="button" class="menu-btn" data-action="call" aria-label="Call"><i data-feather="phone"></i></button>
+			</header>
 
 			<!-- ===== LEAD HEADER : identity, pipeline position, summary cards, actions ===== -->
 			<header class="lead-header" data-stage="">
@@ -157,6 +181,7 @@
 			<span class="item-name"><span data-field="name"></span><time data-field="time"></time></span>
 			<span class="item-unit" data-field="unit"></span>
 			<span class="item-preview"><span data-field="preview"></span><span class="pill item-pill" data-status=""></span></span>
+			<i class="item-chevron" data-feather="chevron-right" data-phone></i>
 		</button>
 	</template>
 
