@@ -401,7 +401,8 @@ function crmSendStub(e) {
 /* ========================================================================== */
 /* PIPELINE                                                                   */
 /* ========================================================================== */
-const crmBoard = { stores:null, owners:null, waitingSet:null, search:'', showLost:false };
+const crmBoard = { stores:null, owners:null, waitingSet:null, search:'', showLost:false, mode:'board', sort:{ key:'stage', dir:1 }, stage:null };
+try { crmBoard.mode = sessionStorage.getItem('optimumrv-crm-board-mode') || 'board'; } catch (e) {}
 
 function crmInitPipeline(params) {
 	const roleData = CRM_DATA.roles[crmState.role];
@@ -418,9 +419,11 @@ function crmInitPipeline(params) {
 	}
 
 	crmRenderBoardFilters(roleData, desk);
+	crmBoard.stage = (desk.stages.find(st => st.id === params.get('stage')) || desk.stages.find(st => desk.leads.some(l => l.card && l.stage === st.id)) || desk.stages[0]).id;
 	crmRenderBoard(desk);
 	crmBindBoardPan();
 	document.getElementById('global-search-input').addEventListener('input', e => { crmBoard.search = e.target.value; crmRenderBoard(desk); });
+	if (document.body.dataset.device === 'phone') crmInitPhoneBoard(desk, params);
 }
 
 function crmLeadStore(lead) { const m = (lead.location || '').match(/· ([A-Z]{3})$/); if (m) return m[1]; const st = CRM_DATA.stores.find(x => (lead.location || '').startsWith(x.name)); return st ? st.code : 'OCA'; }
@@ -455,6 +458,12 @@ function crmBoardLeads(desk) {
 }
 
 function crmRenderBoard(desk) {
+	if (document.body.dataset.device === 'phone') { crmRenderPhoneBoard(desk); return; }
+	const table = document.getElementById('lead-table');
+	document.querySelectorAll('.board-modes button').forEach(b => { const on = b.dataset.mode === crmBoard.mode; b.classList.toggle('is-active', on); b.classList.toggle('is-brand', on); });
+	if (table) table.hidden = crmBoard.mode !== 'list';
+	document.getElementById('pipeline').hidden = crmBoard.mode === 'list';
+	if (crmBoard.mode === 'list') { crmRenderLeadTable(desk); return; }
 	const board = document.getElementById('pipeline');
 	const lanes = (desk.board && desk.board.lanes) || {};
 	const summary = desk.board && desk.board.summary;
@@ -554,6 +563,136 @@ function crmLeadCard(lead, desk) {
 	if (c.flag) { flag.dataset.tone = c.flag.tone || 'warn'; flag.innerHTML = `${crmIcon(c.flag.icon || 'flag')}<span data-field="card.flag">${c.flag.text}</span>`; }
 	else flag.remove();
 	return el;
+}
+
+/* ---- lead row: the list form of a lead — used by the phone board and the desktop List layout ---- */
+function crmLeadTimer(lead) { const t = lead.card && lead.card.timer; return t ? `<span class="pill card-timer" data-status="${t.status || 'neutral'}">${crmIcon(t.icon)}<span data-field="card.timer">${t.label}</span></span>` : ''; }
+function crmLeadRow(lead, desk) {
+	const c = lead.card || {};
+	const unread = c.unread === 'overdue' ? 'overdue' : (c.unread || lead.unread) ? 'unread' : '';
+	const showOwner = !!CRM_DATA.roles[crmState.role].owners;
+	return `<button type="button" class="lead-row ${c.muted ? 'is-muted' : ''}" data-action="open-lead-row" data-lead="${lead.id}" data-stage="${lead.stage}" data-owner="${lead.owner}">
+		<span class="row-unread" data-status="${unread}"></span>
+		<span class="avatar" data-field="initials">${lead.initials || ''}</span>
+		<span class="row-text">
+			<strong class="row-name" data-field="name">${lead.name}</strong>
+			<small class="row-unit" data-field="unit">${c.unitTitle || lead.unit || [c.source, c.type].filter(Boolean).join(' · ')}</small>
+			<small class="row-activity"><i data-feather="${c.activityIcon || 'message-circle'}"></i><span data-field="card.activity">${c.activity || ''}</span>${showOwner ? ` · <span data-field="owner">${lead.owner}</span>` : ''}</small>
+			${c.flag ? `<small class="row-flag" data-tone="${c.flag.tone || 'warn'}">${crmIcon(c.flag.icon || 'flag')}${c.flag.text}</small>` : ''}
+		</span>
+		<span class="row-side">${crmLeadTimer(lead)}<time data-field="card.age">${c.age || ''}</time><i data-feather="chevron-right" class="row-chevron"></i></span>
+	</button>`;
+}
+
+/* ---- List layout: a sortable table of the same leads the board shows ---- */
+const CRM_TABLE_COLS = [
+	{ key:'name', label:'Lead', get:l => l.name },
+	{ key:'unit', label:'Unit', get:l => l.card.unitTitle || l.unit || '' },
+	{ key:'stage', label:'Stage', get:l => crmStageIndex(crmDesk(), l.stage) },
+	{ key:'owner', label:'Owner', get:l => l.owner, when:() => !!CRM_DATA.roles[crmState.role].owners },
+	{ key:'waiting', label:'Waiting on', get:l => l.waitingOn || '', when:desk => desk.leads.some(l => l.waitingOn) },
+	{ key:'activity', label:'Last activity', get:l => l.card.activity || '' },
+	{ key:'age', label:'Age', get:l => crmAgeMinutes(l.card.age) },
+	{ key:'timer', label:'Timer', get:l => l.card.timer ? ({ overdue:0, warn:1, ok:2, neutral:3 }[l.card.timer.status] ?? 3) : 9 }
+];
+function crmAgeMinutes(a) { if (!a) return 1e9; const m = String(a).match(/(\d+)\s*(m|h|d|w)/); if (!m) return { Yesterday:1440, Tuesday:4000 }[a] || 1e8; return +m[1] * { m:1, h:60, d:1440, w:10080 }[m[2]]; }
+function crmRenderLeadTable(desk) {
+	const wrap = document.getElementById('lead-table');
+	const cols = CRM_TABLE_COLS.filter(c => !c.when || c.when(desk));
+	const { key, dir } = crmBoard.sort;
+	const col = cols.find(c => c.key === key) || cols[2];
+	const leads = crmBoardLeads(desk).filter(l => crmBoard.showLost || l.stage !== 'lost').sort((a, b) => { const x = col.get(a), y = col.get(b); return (x < y ? -1 : x > y ? 1 : crmStageIndex(desk, a.stage) - crmStageIndex(desk, b.stage)) * dir; });
+	const showOwner = !!CRM_DATA.roles[crmState.role].owners;
+	wrap.innerHTML = `<table class="lead-table">
+		<thead><tr>${cols.map(c => `<th scope="col" aria-sort="${c.key === col.key ? (dir > 0 ? 'ascending' : 'descending') : 'none'}"><button type="button" data-action="table-sort" data-key="${c.key}">${c.label}${c.key === col.key ? `<i data-feather="chevron-${dir > 0 ? 'up' : 'down'}"></i>` : ''}</button></th>`).join('')}</tr></thead>
+		<tbody>${leads.map(l => { const c = l.card, st = desk.stages.find(x => x.id === l.stage); return `<tr class="lead-table-row ${c.muted ? 'is-muted' : ''}" data-action="quick-edit" data-lead="${l.id}" data-stage="${l.stage}" tabindex="0">
+			<td class="cell-lead"><span class="row-unread" data-status="${c.unread === 'overdue' ? 'overdue' : (c.unread || l.unread) ? 'unread' : ''}"></span><span class="avatar avatar-small">${l.initials || ''}</span><span><strong data-field="name">${l.name}</strong>${c.flag ? `<small class="row-flag" data-tone="${c.flag.tone || 'warn'}">${crmIcon(c.flag.icon || 'flag')}${c.flag.text}</small>` : ''}</span></td>
+			<td class="cell-unit" data-field="unit">${c.unitTitle || l.unit || [c.source, c.type].filter(Boolean).join(' · ')}</td>
+			<td class="cell-stage"><span class="stage-chip" data-stage="${l.stage}"><span class="stage-dot"></span>${st ? st.label : l.stage}</span></td>
+			${showOwner ? `<td class="cell-owner" data-field="owner">${l.owner}</td>` : ''}
+			${cols.some(x => x.key === 'waiting') ? `<td class="cell-waiting">${l.waitingOn || '—'}</td>` : ''}
+			<td class="cell-activity"><i data-feather="${c.activityIcon || 'message-circle'}"></i>${c.activity || ''}</td>
+			<td class="cell-age"><time>${c.age || ''}</time></td>
+			<td class="cell-timer">${crmLeadTimer(l)}</td>
+		</tr>`; }).join('')}</tbody></table>
+		${leads.length ? '' : '<p class="pipeline-empty">Nothing matches.</p>'}
+		<p class="lead-table-foot"><label><input type="checkbox" ${crmBoard.showLost ? 'checked' : ''} data-action="toggle-column"> Show lost</label><span>${leads.length} lead${leads.length === 1 ? '' : 's'}</span></p>`;
+	crmIcons();
+}
+
+/* ---- Phone board: stage strip + rows, lead screen ---- */
+function crmInitPhoneBoard(desk, params) {
+	const roleData = CRM_DATA.roles[crmState.role];
+	const filters = (desk.board && desk.board.filters) || [];
+	document.querySelector('.phone-board-stores').hidden = !filters.includes('location');
+	document.querySelector('.phone-board-filter').hidden = !(filters.includes('owner') || filters.includes('waiting'));
+	const deskIds = Object.keys(roleData.desks);
+	if (deskIds.length > 1) { const d = document.getElementById('phone-desk'); d.hidden = false; d.querySelector('.segmented').innerHTML = deskIds.map(id => `<a href="pipeline.html?role=${crmState.role}&desk=${id}" class="${id === crmState.desk ? 'is-active is-brand' : ''}" data-action="switch-desk" data-desk="${id}">${roleData.desks[id].label}</a>`).join(''); }
+	document.getElementById('phone-board-search').addEventListener('input', e => { crmBoard.search = e.target.value; document.getElementById('global-search-input').value = e.target.value; crmRenderBoard(desk); });
+	addEventListener('popstate', e => { const sc = e.state && e.state.screen; if (sc === 'lead' && crmPhone.leadId) crmPhoneLeadScreen(crmPhone.leadId, false); else crmShowScreen('board', false); });
+	/* swipes: the list moves a stage, the left edge on the lead screen goes back */
+	let sw = null;
+	const begin = (t, x, y) => { const zone = t.closest('.phone-leads, .phone-stages') ? 'list' : (document.body.dataset.screen === 'lead' && x < 28) ? 'edge' : null; sw = zone ? { zone, x, y } : null; };
+	const finish = (x, y) => { if (!sw) return; const dx = x - sw.x, dy = y - sw.y, z = sw.zone; sw = null; if (Math.abs(dx) < 50 || Math.abs(dy) > 60) return; if (z === 'edge') { if (dx > 0) CRM_ACTIONS['phone-back'](); return; } const i = desk.stages.findIndex(st => st.id === crmBoard.stage); const n = i + (dx < 0 ? 1 : -1); if (n < 0 || n >= desk.stages.length) return; crmBoard.stage = desk.stages[n].id; crmPhoneSlide([document.getElementById('phone-leads')], dx < 0 ? 1 : -1, () => crmRenderBoard(desk)); };
+	document.addEventListener('touchstart', e => { const t = e.touches[0]; begin(e.target, t.clientX, t.clientY); }, { passive:true });
+	document.addEventListener('touchend', e => { const t = e.changedTouches[0]; finish(t.clientX, t.clientY); }, { passive:true });
+	document.addEventListener('pointerdown', e => { if (e.pointerType === 'mouse' && e.button === 0) begin(e.target, e.clientX, e.clientY); });
+	document.addEventListener('pointerup', e => { if (e.pointerType === 'mouse') finish(e.clientX, e.clientY); });
+	if (params.get('lead') && desk.leads.some(l => l.id === params.get('lead'))) crmPhoneLeadScreen(params.get('lead'), false); else crmShowScreen('board', false);
+}
+function crmRenderPhoneBoard(desk) {
+	const wrap = document.querySelector('.phone-board'); if (!wrap) return;
+	const leads = crmBoardLeads(desk);
+	const summary = desk.board && desk.board.summary;
+	const strip = document.getElementById('phone-stages');
+	strip.innerHTML = desk.stages.map(st => { const n = summary && summary.stage === st.id ? summary.count : leads.filter(l => l.stage === st.id).length; return `<button type="button" class="stage-pill ${st.id === crmBoard.stage ? 'is-selected' : ''} ${st.terminal ? 'is-terminal' : ''}" data-action="phone-stage-pick" data-stage="${st.id}"><span class="stage-dot"></span>${st.label}<span class="column-count">${n}</span></button>`; }).join('');
+	const sel = strip.querySelector('.is-selected'); if (sel) sel.scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' });
+	const list = document.getElementById('phone-leads');
+	const stage = desk.stages.find(st => st.id === crmBoard.stage) || desk.stages[0];
+	if (crmBoard.search.trim()) {
+		list.innerHTML = desk.stages.map(st => { const inStage = leads.filter(l => l.stage === st.id); return inStage.length ? `<p class="agenda-date">${st.label}</p>${inStage.map(l => crmLeadRow(l, desk)).join('')}` : ''; }).join('') || `<p class="column-empty"><i data-feather="search"></i>Nothing matches “${crmBoard.search.trim()}”</p>`;
+	} else if (summary && summary.stage === stage.id) {
+		list.innerHTML = ''; list.appendChild(crmForSaleSummary(summary));
+	} else {
+		const inStage = leads.filter(l => l.stage === stage.id);
+		list.innerHTML = inStage.length ? inStage.map(l => crmLeadRow(l, desk)).join('') : `<p class="column-empty"><i data-feather="${stage.terminal ? 'x-circle' : 'inbox'}"></i>${stage.terminal ? 'No lost leads' : 'Nothing here'}</p>`;
+	}
+	const dot = wrap.querySelector('.phone-board-filter .phone-filter-dot');
+	if (dot) { const allOwners = !CRM_MENUS.reps || CRM_MENUS.reps.selected.size === CRM_MENUS.reps.items().length; const allWaiting = !CRM_MENUS.waiting || CRM_MENUS.waiting.selected.size === CRM_MENUS.waiting.items().length; dot.hidden = allOwners && allWaiting; }
+	crmIcons();
+	if (document.body.dataset.screen === 'lead' && crmPhone.leadId) crmPhoneLeadScreen(crmPhone.leadId, false);
+}
+function crmPhoneLeadScreen(id, push) {
+	const desk = crmDesk();
+	const lead = desk.leads.find(l => l.id === id); if (!lead) return;
+	const roleData = CRM_DATA.roles[crmState.role];
+	crmPhone.leadId = id; crmState.leadId = id;
+	const head = document.querySelector('.phone-lead-screen .phone-topbar');
+	head.querySelector('[data-field="initials"]').textContent = lead.initials || '';
+	head.querySelector('[data-field="name"]').textContent = lead.name;
+	const c = lead.card || {};
+	const stage = desk.stages.find(st => st.id === lead.stage);
+	const nextFollowup = (CRM_DATA.calendar.events[crmState.role] || []).filter(e => e.kind === 'followup' && e.lead === lead.id && !e.done).sort((a, b) => a.date.localeCompare(b.date) || a.start - b.start)[0];
+	const store = CRM_DATA.stores.find(st => st.code === crmLeadStore(lead));
+	document.getElementById('phone-lead-body').innerHTML = `
+		${c.unitTitle || lead.unit ? `<div class="phone-lead-unit"><span class="thumb">${c.image ? `<img src="${c.image}" alt="">` : `<svg><use href="#${c.svg || 'rv-trailer'}"/></svg>`}</span><span><strong data-field="unit">${c.unitTitle || lead.unit}</strong>${c.price ? `<small data-field="card.price">${c.price}</small>` : ''}${c.stock ? `<small data-field="card.stock">${c.stock}</small>` : ''}</span></div>` : ''}
+		${c.flag ? `<p class="card-flag" data-tone="${c.flag.tone || 'warn'}">${crmIcon(c.flag.icon || 'flag')}<span>${c.flag.text}</span></p>` : ''}
+		<div class="phone-lead-group">
+			<button type="button" class="sheet-row" data-action="quick-edit" data-lead="${lead.id}"><span class="stage-dot" data-stage="${lead.stage}"></span><span class="sheet-row-text"><strong>${stage ? stage.label : lead.stage}</strong><small>${lead.stageNote || 'Moves from what you log'}</small></span>${crmLeadTimer(lead)}${crmIcon('chevron-right')}</button>
+			<p class="sheet-row is-static">${crmIcon('user')}<span class="sheet-row-text"><strong>${lead.owner}</strong><small>${roleData.owners ? 'Owner · tap the stage row to reassign' : 'Owner'}</small></span></p>
+			${lead.waitingOn ? `<p class="sheet-row is-static">${crmIcon('loader')}<span class="sheet-row-text"><strong>Waiting on ${lead.waitingOn}</strong><small>Back office</small></span></p>` : ''}
+			<p class="sheet-row is-static">${crmIcon('map-pin')}<span class="sheet-row-text"><strong>${store ? store.name : lead.location || ''}</strong><small>${c.loc || c.source ? [c.source, c.type].filter(Boolean).join(' · ') : ''}</small></span></p>
+			<button type="button" class="sheet-row" data-action="quick-edit" data-lead="${lead.id}" data-focus="followup">${crmIcon('clock')}<span class="sheet-row-text"><strong>${nextFollowup ? nextFollowup.label : 'No follow-up set'}</strong><small>${nextFollowup ? `${crmFmt(crmDate(nextFollowup.date), 'short')} · ${crmHourLabel(nextFollowup.start)}` : 'Tap to add one'}</small></span>${crmIcon('chevron-right')}</button>
+		</div>
+		<div class="phone-lead-group">
+			<p class="sheet-row is-static">${crmIcon(c.activityIcon || 'message-circle')}<span class="sheet-row-text"><strong>${c.activity || 'No activity yet'}</strong><small>${c.age || ''}</small></span></p>
+		</div>
+		<div class="phone-lead-actions">
+			<a class="btn btn-primary" href="daily-view.html${crmQuery({ lead:lead.id })}">${crmIcon('message-circle')}Open conversation</a>
+			<a class="btn" href="tel:${(lead.phone || '').replace(/\D/g, '')}">${crmIcon('phone')}Call</a>
+		</div>`;
+	crmIcons();
+	crmShowScreen('lead', push);
 }
 
 function crmForSaleSummary(summary) {
@@ -1011,11 +1150,53 @@ function crmQuickEdit(lead, opts = {}) {
 }
 
 Object.assign(CRM_ACTIONS, {
-	'quick-edit': el => { const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
+	'quick-edit': el => { if (el.dataset.lead && !el.closest('.lead-card')) { const ld = crmDesk().leads.find(l => l.id === el.dataset.lead); if (ld) { crmQuickEdit(ld); return; } } const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
 	'quick-stage': () => {},      /* handled inside crmQuickEdit */
 	'quick-reassign': () => {},   /* handled inside crmQuickEdit */
 	'quick-followup': () => {},   /* handled inside crmQuickEdit */
 	'toggle-column': () => { crmBoard.showLost = !crmBoard.showLost; crmRenderBoard(crmDesk()); },
+	'board-mode': el => { crmBoard.mode = el.dataset.mode; try { sessionStorage.setItem('optimumrv-crm-board-mode', crmBoard.mode); } catch (e) {} crmRenderBoard(crmDesk()); },
+	'table-sort': el => { const k = el.dataset.key; crmBoard.sort = { key:k, dir:crmBoard.sort.key === k ? -crmBoard.sort.dir : 1 }; crmRenderBoard(crmDesk()); },
+	'open-lead-row': el => { if (document.body.dataset.device === 'phone') crmPhoneLeadScreen(el.dataset.lead, true); else { const lead = crmDesk().leads.find(l => l.id === el.dataset.lead); if (lead) crmQuickEdit(lead); } },
+	'phone-stage-pick': el => { const desk = crmDesk(); const from = desk.stages.findIndex(st => st.id === crmBoard.stage), to = desk.stages.findIndex(st => st.id === el.dataset.stage); if (from === to) return; crmBoard.stage = el.dataset.stage; crmPhoneSlide([document.getElementById('phone-leads')], to > from ? 1 : -1, () => crmRenderBoard(desk)); },
+	'phone-board-filter': el => {
+		let menu = document.getElementById('phone-board-filter-menu');
+		if (menu) { menu.remove(); return; }
+		document.getElementById('phone-board-stores-menu')?.remove();
+		menu = document.createElement('div'); menu.id = 'phone-board-filter-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		const section = (kind, label) => { const m = CRM_MENUS[kind]; if (!m) return ''; return `<p class="phone-menu-label">${label}</p>` + m.items().map(it => `<label><input type="checkbox" ${m.selected.has(it.value) ? 'checked' : ''} data-action="phone-menu-pick" data-menu="${kind}" data-value="${it.value}"><span class="swatch" ${it.swatch || ''}></span>${it.label}</label>`).join(''); };
+		menu.innerHTML = section('reps', CRM_MENUS.reps && CRM_MENUS.reps.noun === 'listers' ? 'Listers' : 'Salespeople') + section('waiting', 'Waiting on');
+		el.closest('.phone-topbar').appendChild(menu);
+		const close = e => { if (!e.target.closest('#phone-board-filter-menu, [data-action="phone-board-filter"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true));
+	},
+	'phone-board-stores': el => {
+		let menu = document.getElementById('phone-board-stores-menu');
+		if (menu) { menu.remove(); return; }
+		document.getElementById('phone-board-filter-menu')?.remove();
+		menu = document.createElement('div'); menu.id = 'phone-board-stores-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = `<p class="phone-menu-label">Stores</p>` + CRM_MENUS.stores.items().map(it => `<label><input type="checkbox" ${CRM_MENUS.stores.selected.has(it.value) ? 'checked' : ''} data-action="phone-menu-pick" data-menu="stores" data-value="${it.value}"><span class="swatch" data-store></span>${it.label}</label>`).join('');
+		el.closest('.phone-topbar').appendChild(menu);
+		const close = e => { if (!e.target.closest('#phone-board-stores-menu, [data-action="phone-board-stores"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true));
+	},
+	'phone-menu-pick': el => { const m = CRM_MENUS[el.dataset.menu]; const v = new Set(m.selected); el.checked ? v.add(el.dataset.value) : v.delete(el.dataset.value); m.selected = v; m.onChange(); },
+	'phone-lead-more': el => {
+		let menu = document.getElementById('phone-lead-more-menu');
+		if (menu) { menu.remove(); return; }
+		const desk = crmDesk(); const lead = desk.leads.find(l => l.id === crmPhone.leadId); if (!lead) return;
+		menu = document.createElement('div'); menu.id = 'phone-lead-more-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		const items = [];
+		if (lead.stage !== 'lost' && crmCanSetStage(lead, 'agreed') && lead.stage !== 'agreed') items.push({ icon:'check-circle', label:'Mark agreed', tone:'ok', stage:'agreed' });
+		if (lead.stage !== 'lost' && crmCanSetStage(lead, 'lost')) items.push({ icon:'x-circle', label:'Mark lost', tone:'muted', stage:'lost' });
+		if (lead.stage === 'lost') items.push({ icon:'rotate-ccw', label:'Reopen', stage:desk.stages[0].id });
+		items.push({ icon:'calendar', label:'Schedule', run:() => { location.href = `calendar.html${crmQuery({ mode:'day', date:crmISO(crmNow()) })}`; } });
+		menu.innerHTML = items.map((it, i) => `<button type="button" data-tone="${it.tone || ''}" data-i="${i}">${crmIcon(it.icon)}${it.label}</button>`).join('');
+		menu.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const it = items[+b.dataset.i]; menu.remove(); if (it.run) it.run(); else crmQuickEdit(lead, { proposeStage:it.stage }); });
+		el.closest('.phone-topbar').appendChild(menu); crmIcons();
+		const close = e => { if (!e.target.closest('#phone-lead-more-menu, [data-action="phone-lead-more"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true));
+	},
 	'mark-agreed': () => {
 		const lead = crmLeadOrPick(); if (!lead) return;
 		const unit = (lead.summary && lead.summary[0] && lead.summary[0].title) || lead.unit || 'Unit';
@@ -1780,7 +1961,9 @@ function crmPhoneApply() {
 function crmShowScreen(screen, push) {
 	crmPhone.screen = screen;
 	document.body.dataset.screen = screen;
-	if (push) history.pushState({ screen }, '', document.body.dataset.view === 'calendar' ? `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor), event:crmPop.eventId || '' })}` : `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
+	const view = document.body.dataset.view;
+	if (push) history.pushState({ screen }, '', view === 'calendar' ? `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor), event:crmPop.eventId || '' })}` : view === 'pipeline' ? `pipeline.html${crmQuery({ lead:crmPhone.leadId || '' })}` : `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
+	if (screen === 'board') { crmClose(); crmPhone.leadId = null; history.replaceState(history.state, '', `pipeline.html${crmQuery({})}`); return; }
 	if (screen === 'inbox') { crmCloseDetail(); crmClose(); history.replaceState(history.state, '', `daily-view.html${crmQuery({ tab:crmState.tab })}`); }
 	if (screen === 'agenda') { crmClose(); crmPop.eventId = null; crmPop.editing = null; history.replaceState(history.state, '', `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor) })}`); }
 	else requestAnimationFrame(() => { const t = document.getElementById('thread'); if (t) t.scrollTop = t.scrollHeight; });
@@ -1806,7 +1989,7 @@ function crmRenderFocus(desk) {
 }
 
 Object.assign(CRM_ACTIONS, {
-	'phone-back': () => { const home = document.body.dataset.view === 'calendar' ? 'agenda' : 'inbox'; const sub = home === 'agenda' ? 'event' : 'conversation'; if (history.state && history.state.screen === sub) history.back(); else crmShowScreen(home, false); },
+	'phone-back': () => { const view = document.body.dataset.view; const home = view === 'calendar' ? 'agenda' : view === 'pipeline' ? 'board' : 'inbox'; const sub = { agenda:'event', board:'lead', inbox:'conversation' }[home]; if (history.state && history.state.screen === sub) history.back(); else crmShowScreen(home, false); },
 	'open-focus': el => { crmOpenLead(el.dataset.lead); crmShowScreen('conversation', true); },
 	'phone-filter': el => {
 		const desk = crmDesk();
