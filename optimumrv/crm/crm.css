@@ -1604,3 +1604,14 @@ body[data-device="phone"][data-view="calendar"] {
 	.phone-year-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px 12px; }
 	.phone-year-month { display:block; padding:0; border:0; background:none; text-align:left; color:inherit; font:inherit; strong { display:block; font-family:var(--font_name-secondary); font-size:1rem; margin-block-end:4px; } &.is-today strong { color:var(--color_brand-secondary); } .year-grid { display:grid; grid-template-columns:repeat(7, 1fr); gap:3px 0; } .year-day { display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; border-radius:50%; flex:none; font-size:.6rem; line-height:1; justify-self:center; &.is-outside { visibility:hidden; } &.is-today { background:var(--color_brand-secondary); color:#fff; font-weight:700; } &.has-events:not(.is-today) { text-decoration:underline; text-decoration-color:var(--color_brand-secondary); text-underline-offset:2px; } } }
 }
+/* phone calendar: day mode is the hour grid, one column, like iOS */
+body[data-device="phone"][data-view="calendar"] {
+	.phone-agenda { --calendar_hour:72px; --calendar_gutter:58px; --calendar_days:1; position:relative; padding:0;
+		.calendar-grid { --calendar_days:1; grid-template-columns:var(--calendar_gutter) 1fr; }
+		.calendar-times span { height:var(--calendar_hour); font-size:.7rem; }
+		.calendar-times .calendar-now-label { font-size:.6rem; width:auto; height:auto; border-radius:4px; padding:2px 5px; line-height:1; inset-inline-end:6px; white-space:nowrap; display:inline-block; }
+		.calendar-col { background-size:100% var(--calendar_hour); }
+		.calendar-event { font-size:.85rem; }
+		.phone-empty { position:sticky; top:8px; margin:0 14px; z-index:2; background:var(--color_bg-secondary); border-radius:var(--radius_pill); padding:6px 12px; text-align:center; font-size:.8rem; color:var(--color_text-muted); }
+	}
+}

@@ -1356,7 +1356,7 @@ function crmRenderTimeGrid(days) {
 	const head = document.querySelector('.calendar-head');
 	const grid = document.getElementById('calendar-grid');
 	const { startHour, endHour } = CRM_DATA.calendar;
-	const hourPx = parseFloat(getComputedStyle(document.getElementById('calendar')).getPropertyValue('--calendar_hour'));
+	const hourPx = parseFloat(getComputedStyle(grid).getPropertyValue('--calendar_hour'));
 	const y = h => (h - startHour) * hourPx;
 	const now = crmNow();
 	head.innerHTML = '<span></span>' + days.map(d => `<button type="button" class="calendar-day ${crmIsToday(d) ? 'is-today' : ''} ${crmIsWeekend(d) ? 'is-weekend' : ''}" data-action="open-day" data-date="${crmISO(d)}">${CRM_DOW[crmDowIndex(d)]} <strong>${d.getDate()}</strong></button>`).join('');
@@ -1958,12 +1958,22 @@ function crmRenderPhoneCalendar() {
 	/* agenda: the day, or search results across days */
 	const agenda = document.getElementById('phone-agenda');
 	if (crmCal.search.trim()) {
+		const grid = document.getElementById('calendar-grid'); if (grid.parentElement === agenda) document.getElementById('calendar-scroll').appendChild(grid);
 		const byDate = {};
 		events.forEach(e => { (byDate[e.date] = byDate[e.date] || []).push(e); });
 		const dates = Object.keys(byDate).sort();
 		agenda.innerHTML = dates.length ? dates.map(iso => { const d = crmDate(iso); const tmp = document.createElement('div'); crmRenderAgenda(d, tmp); tmp.querySelector('.agenda-head')?.remove(); return `<p class="agenda-date ${crmIsToday(d) ? 'is-today' : ''}">${crmFmt(d, 'long')}</p>${tmp.innerHTML}`; }).join('') : `<p class="agenda-empty"><i data-feather="search"></i>Nothing matches “${crmCal.search.trim()}”</p>`;
 	} else {
-		crmRenderAgenda(cursor, agenda);
+		/* iOS day mode: the hour grid (one column) lives inside the agenda area — moved out of the desktop markup once */
+		const grid = document.getElementById('calendar-grid');
+		if (grid.parentElement !== agenda) { agenda.innerHTML = ''; agenda.appendChild(grid); }
+		agenda.querySelectorAll(':scope > :not(#calendar-grid)').forEach(n => n.remove());
+		crmRenderTimeGrid([cursor]);
+		const hourPx = parseFloat(getComputedStyle(grid).getPropertyValue('--calendar_hour'));
+		const wh = CRM_DATA.calendar.workHours || [8, 19];
+		const target = crmIsToday(cursor) ? Math.max(0, (crmNow().getHours() - 1.5) * hourPx) : (wh[0] - CRM_DATA.calendar.startHour) * hourPx - 8;
+		if (crmCal._phoneScrolledFor !== crmISO(cursor)) { agenda.scrollTop = target; crmCal._phoneScrolledFor = crmISO(cursor); }
+		if (!crmEventsOn(cursor, events).length) agenda.insertAdjacentHTML('afterbegin', `<p class="agenda-empty phone-empty">Nothing scheduled</p>`);
 	}
 	/* event screen stays in sync */
 	if (document.body.dataset.screen === 'event') {
