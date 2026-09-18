@@ -1690,7 +1690,7 @@ body[data-device="phone"][data-view="pipeline"] {
 			&.is-selected { background:var(--color_text); color:#fff; .stage-dot { background:var(--stage_color, #fff); } } }
 	}
 	/* BOARD mode: the same columns as desktop — grey, the next one peeking so you know to swipe, each scrolling on its own */
-	.pipeline { display:flex; flex:1; min-height:0; height:auto; gap:10px; overflow-x:auto; overflow-y:hidden; padding:10px 14px calc(env(safe-area-inset-bottom) + 6px); scroll-snap-type:x proximity; scrollbar-width:none; cursor:default; touch-action:pan-x pan-y; -webkit-overflow-scrolling:touch; &::-webkit-scrollbar { display:none; } &[hidden] { display:none; }
+	.pipeline { display:flex; flex:1; min-height:0; height:auto; gap:10px; overflow-x:auto; overflow-y:hidden; padding:10px 14px calc(env(safe-area-inset-bottom) + 6px); scroll-snap-type:none; scrollbar-width:none; cursor:grab; touch-action:pan-x pan-y; @media (pointer:coarse) { scroll-snap-type:x proximity; } &.is-panning { scroll-snap-type:none; cursor:grabbing; } -webkit-overflow-scrolling:touch; &::-webkit-scrollbar { display:none; } &[hidden] { display:none; }
 		.pipeline-column { flex:0 0 min(84vw, 360px); max-width:none; scroll-snap-align:start; padding:12px 10px; .column-header { margin-block-end:10px; } &.is-collapsed { flex-basis:min(84vw, 360px); .column-body { display:flex; } } .column-header .feather:last-child { display:none; } }
 		.lead-card { cursor:pointer; }
 	}
