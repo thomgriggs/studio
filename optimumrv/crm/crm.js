@@ -423,7 +423,7 @@ function crmInitPipeline(params) {
 	crmRenderBoard(desk);
 	crmBindBoardPan();
 	document.getElementById('global-search-input').addEventListener('input', e => { crmBoard.search = e.target.value; crmRenderBoard(desk); });
-	if (document.body.dataset.device === 'phone') crmInitPhoneBoard(desk, params);
+	if (document.body.dataset.device === 'phone') { crmInitPhoneBoard(desk, params); crmBindTouchDrag(desk); }
 }
 
 function crmLeadStore(lead) { const m = (lead.location || '').match(/· ([A-Z]{3})$/); if (m) return m[1]; const st = CRM_DATA.stores.find(x => (lead.location || '').startsWith(x.name)); return st ? st.code : 'OCA'; }
@@ -642,6 +642,59 @@ function crmInitPhoneBoard(desk, params) {
 	if (params.get('lead') && desk.leads.some(l => l.id === params.get('lead'))) crmPhoneLeadScreen(params.get('lead'), false); else crmShowScreen('board', false);
 }
 function crmCenterInStrip(el) { if (!el) return; const strip = el.parentElement; strip.scrollTo({ left:el.offsetLeft - (strip.clientWidth - el.offsetWidth) / 2, behavior:'smooth' }); } /* scrollIntoView would also drag overflow-hidden ancestors */
+/* Phone drag: long-press a card to lift it, drag across columns (the board auto-scrolls at the edges), drop on a column →
+   the same confirm-on-drop quick edit as desktop. Before the lift, a touch just scrolls like normal. */
+function crmBindTouchDrag(desk) {
+	const board = document.getElementById('pipeline');
+	if (board.dataset.touchDrag) return; board.dataset.touchDrag = '1';
+	let press = null, drag = null, raf = null;
+	const cancelPress = () => { if (press) { clearTimeout(press.timer); press = null; } };
+	const lift = (card, t) => {
+		const r = card.getBoundingClientRect();
+		const ghost = card.cloneNode(true); ghost.className = 'lead-card drag-ghost'; ghost.style.width = `${r.width}px`; ghost.style.left = `${r.left}px`; ghost.style.top = `${r.top}px`;
+		document.body.appendChild(ghost);
+		card.classList.add('is-dragging');
+		drag = { card, ghost, dx:t.clientX - r.left, dy:t.clientY - r.top, x:t.clientX, y:t.clientY, over:null };
+		board.classList.add('is-touch-dragging');
+		if (navigator.vibrate) navigator.vibrate(12);
+		const tick = () => { if (!drag) return; const edge = 48, w = board.clientWidth; if (drag.x < edge) board.scrollLeft -= 8; else if (drag.x > w - edge) board.scrollLeft += 8; raf = requestAnimationFrame(tick); };
+		raf = requestAnimationFrame(tick);
+	};
+	const moveTo = (x, y) => {
+		drag.x = x; drag.y = y;
+		drag.ghost.style.transform = `translate(${x - drag.dx - parseFloat(drag.ghost.style.left)}px, ${y - drag.dy - parseFloat(drag.ghost.style.top)}px) scale(1.04)`;
+		drag.ghost.hidden = true; const col = document.elementFromPoint(x, y)?.closest('.pipeline-column'); drag.ghost.hidden = false;
+		if (col !== drag.over) { drag.over?.classList.remove('is-drop-target'); drag.over = col; col?.classList.add('is-drop-target'); }
+	};
+	const drop = () => {
+		if (!drag) return;
+		cancelAnimationFrame(raf);
+		const { card, ghost, over } = drag; drag = null;
+		board.classList.remove('is-touch-dragging'); card.classList.remove('is-dragging'); over?.classList.remove('is-drop-target'); ghost.remove();
+		board.dataset.suppressClick = '1'; setTimeout(() => delete board.dataset.suppressClick, 300);
+		const lead = desk.leads.find(l => l.id === card.dataset.lead);
+		if (lead && over && over.dataset.stage && over.dataset.stage !== lead.stage) crmQuickEdit(lead, { proposeStage:over.dataset.stage });
+	};
+	board.addEventListener('touchstart', e => {
+		const card = e.target.closest('.lead-card'); if (!card || e.touches.length !== 1) return;
+		if (card.dataset.stage === 'lost' && crmState.role === 'sales') return;
+		const t = e.touches[0];
+		press = { card, x:t.clientX, y:t.clientY, timer:setTimeout(() => { const p = press; press = null; lift(p.card, t); }, 320) };
+	}, { passive:true });
+	board.addEventListener('touchmove', e => {
+		const t = e.touches[0];
+		if (press && Math.hypot(t.clientX - press.x, t.clientY - press.y) > 8) cancelPress(); /* it's a scroll, not a press */
+		if (drag) { e.preventDefault(); moveTo(t.clientX, t.clientY); }
+	}, { passive:false });
+	board.addEventListener('touchend', () => { cancelPress(); drop(); });
+	board.addEventListener('touchcancel', () => { cancelPress(); drop(); });
+	/* mouse on a phone-sized window: plain drag (no long press) so it can be tried on a desktop */
+	board.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse' || document.body.dataset.device !== 'phone') return; const card = e.target.closest('.lead-card'); if (!card) return; press = { card, x:e.clientX, y:e.clientY, timer:0 }; });
+	board.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || document.body.dataset.device !== 'phone') return; if (press && !drag && Math.hypot(e.clientX - press.x, e.clientY - press.y) > 6) { const p = press; press = null; lift(p.card, e); } if (drag) moveTo(e.clientX, e.clientY); });
+	board.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') return; if (press) press = null; if (drag) { drop(); e.preventDefault(); } });
+	board.addEventListener('click', e => { if (board.dataset.suppressClick) { e.stopPropagation(); e.preventDefault(); delete board.dataset.suppressClick; } }, true);
+}
+
 function crmRenderPhoneBoard(desk) {
 	const wrap = document.querySelector('.phone-board'); if (!wrap) return;
 	const leads = crmBoardLeads(desk);

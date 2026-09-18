@@ -1708,3 +1708,9 @@ body[data-device="phone"][data-view="pipeline"] {
 	.modal .overlay { align-items:stretch; flex-direction:column; justify-content:flex-end; padding:0; }
 	.modal .modal-window { border-radius:var(--radius-large) var(--radius-large) 0 0; max-height:92dvh; width:100%; max-width:100%; }
 }
+/* phone drag: the lifted card follows the finger; its column slot dims; the target column highlights */
+body[data-device="phone"][data-view="pipeline"] {
+	.drag-ghost { position:fixed; z-index:60; pointer-events:none; margin:0; box-shadow:0 18px 40px rgba(0,0,0,.28); transform-origin:center; opacity:.96; }
+	.pipeline.is-touch-dragging { scroll-snap-type:none; .lead-card.is-dragging { opacity:.3; } .pipeline-column.is-drop-target { outline:2px dashed var(--color_brand-secondary); outline-offset:-2px; background:color-mix(in srgb, var(--stage_color), #fff 88%); } }
+	.pipeline .lead-card { -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; }
+}
