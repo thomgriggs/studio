@@ -1196,6 +1196,7 @@ function crmFmt(d, style) {
 	if (style === 'month') return `${mo} ${d.getFullYear()}`;
 	if (style === 'short') return `${CRM_DOW[crmDowIndex(d)]}, ${sh} ${d.getDate()}`;
 	if (style === 'long') return `${CRM_DOW_LONG[crmDowIndex(d)]}, ${mo} ${d.getDate()}`;
+	if (style === 'full') return `${mo} ${d.getDate()}, ${d.getFullYear()}`;
 	if (style === 'year') return String(d.getFullYear());
 	if (style === 'week') {
 		const s = crmStartOfWeek(d), e = crmAddDays(s, 6);
@@ -1336,7 +1337,7 @@ function crmRenderCalendar() {
 	cal.dataset.mode = mode;
 	const narrow = matchMedia('(max-width: 860px)').matches;
 	cal.classList.toggle('is-sidebar-collapsed', narrow ? crmCal.sidebarNarrow !== true : !crmCal.sidebar); /* narrow window: closed by default, the button opens it as an overlay */
-	document.querySelector('.calendar-title').textContent = { day:crmFmt(crmCal.cursor, 'long'), week:crmFmt(crmCal.cursor, 'week'), month:crmFmt(crmCal.cursor, 'month'), year:crmFmt(crmCal.cursor, 'year') }[mode];
+	document.querySelector('.calendar-title').textContent = { day:crmFmt(crmCal.cursor, 'full'), week:crmFmt(crmCal.cursor, 'month'), month:crmFmt(crmCal.cursor, 'month'), year:crmFmt(crmCal.cursor, 'year') }[mode]; /* day: September 18, 2026 · week + month: September 2026 · year: 2026 */
 	document.querySelectorAll('.calendar-modes button').forEach(x => { const on = x.dataset.mode === mode; x.classList.toggle('is-active', on); x.classList.toggle('is-brand', on); });
 	history.replaceState(null, '', `calendar.html${crmQuery({ mode, date:crmISO(crmCal.cursor) })}`);
 	if (!crmPop.draft) crmClosePopover();
