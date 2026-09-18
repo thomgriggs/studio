@@ -1591,3 +1591,9 @@ body[data-device="phone"][data-view="calendar"] {
 	.phone-topbar .phone-month-title .feather { transform-origin:center; }
 	.phone-agenda .agenda-head .btn.week-today { display:inline-flex; height:28px; padding-inline:12px; font-size:.8rem; }
 }
+/* phone calendar: scrolling month stack (iOS), Today in the bottom bar */
+body[data-device="phone"][data-view="calendar"] {
+	.phone-cal.is-months { .phone-week, .phone-agenda { display:none; } .phone-month { flex:1; min-height:0; overflow:auto; -webkit-overflow-scrolling:touch; padding:0 14px; border:0; animation:none; } }
+	.phone-month-block { padding:16px 0 8px; border-block-end:1px solid var(--color_line); .mini-month { gap:8px; } .mini-head { justify-content:flex-start; } .mini-title { font-family:var(--font_name-secondary); font-size:1.4rem; font-weight:var(--font_weight-extra-bold-primary); padding:0; pointer-events:none; } &.is-current .mini-title { color:var(--color_brand-secondary); } .mini-month .mini-grid { gap:6px 0; } .mini-month .mini-day .mini-num { width:38px; height:38px; font-size:1rem; } .mini-month .mini-day.is-today:not(.is-selected) .mini-num { background:transparent; color:var(--color_brand-secondary); box-shadow:inset 0 0 0 1.5px var(--color_brand-secondary); } .mini-month .mini-day.is-past { color:var(--color_text-soft); } }
+	.phone-bottombar .phone-today { height:40px; padding-inline:14px; border:0; background:var(--color_bg-secondary); font-size:.95rem; flex:none; &.is-away { color:var(--color_brand-secondary); } }
+}

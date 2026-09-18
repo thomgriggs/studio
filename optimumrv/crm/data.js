@@ -574,35 +574,37 @@ window.CRM_DATA = (function () {
 	/* CALENDAR — week of Mon Aug 17 2026 (today = Wed 19, 11:35 AM)          */
 	/* event.kind: 'appointment' | 'followup'; start/end in decimal hours      */
 	/* ---------------------------------------------------------------------- */
-	const CALENDAR = { now:'2026-08-19T11:36', startHour:0, endHour:24, workHours:[8, 19] }; /* `now` is frozen so the demo is stable — the developer swaps it for new Date() */
+	/* the sample week floats with the real date: the mock "Wednesday" is always today, so the demo never goes stale */
+	const REL = n => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + (n - 2)); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+	const CALENDAR = { startHour:0, endHour:24, workHours:[8, 19] };
 	const salesEvents = [
-		{ id:'ev-dana',     kind:'appointment', date:'2026-08-17', start:16, end:17,     lead:'dana-whitfield',    name:'Dana Whitfield',      unit:'2019 Grand Design Reflection 315RLTS', type:'Sales Visit', image:null, svg:'rv-trailer', owner:'Riley Morgan', state:'past' },
-		{ id:'ev-hector-1', kind:'appointment', date:'2026-08-18', start:14, end:15,     lead:'hector-alvarez',    name:'Hector Alvarez',      type:'Be-Back', timeLabel:'2 – 3 PM', owner:'Sam Okafor', state:'cancelled' },
-		{ id:'fu-elaine',   kind:'followup',    date:'2026-08-19', start:9.5,            lead:'elaine-kowalski',   label:'Call Elaine Kowalski' },
-		{ id:'fu-hector',   kind:'followup',    date:'2026-08-19', start:10,             lead:'hector-alvarez',    label:'Text Hector Alvarez', status:'overdue' },
-		{ id:'ev-marcus',   kind:'appointment', date:'2026-08-19', start:13.5, end:14.5, lead:'marcus-trent',      name:'Marcus Trent',        unit:'2022 Thor ACE 32.3', type:'Sales Visit', image:IMG.thor, owner:'Riley Morgan', done:true },
-		{ id:'ev-baxter',   kind:'appointment', date:'2026-08-19', start:16.5, end:17.5, lead:'rob-cheryl-baxter', name:'Rob & Cheryl Baxter', type:'Delivery', timeLabel:'4:30 – 5:30 PM', owner:'Riley Morgan', tone:'ok', done:true },
-		{ id:'fu-renee',    kind:'followup',    date:'2026-08-20', start:10,             lead:'renee-fontaine',    label:'Call Renee Fontaine' },
-		{ id:'ev-hector-2', kind:'appointment', date:'2026-08-20', start:15, end:16,     lead:'hector-alvarez',    name:'Hector Alvarez',      type:'Be-Back', timeLabel:'3 – 4 PM', owner:'Sam Okafor', tone:'working' },
-		{ id:'fu-marcus',   kind:'followup',    date:'2026-08-21', start:9,              lead:'marcus-trent',      label:'Email Marcus Trent' },
-		{ id:'ev-priscilla',kind:'appointment', date:'2026-08-21', start:10, end:11,     lead:'priscilla-nguyen',  name:'Priscilla Nguyen',    unit:'2023 Jayco Redhawk 26XD', type:'Sales Visit', image:IMG.redhawk, owner:'Sam Okafor' },
-		{ id:'ev-tom',      kind:'appointment', date:'2026-08-22', start:11, end:12,     lead:'tom-gallagher',     name:'Tom Gallagher',       unit:'2020 Newmar Bay Star 3226', type:'Sales Visit', image:IMG.redhawk, owner:'Sam Okafor' }
+		{ id:'ev-dana',     kind:'appointment', date:REL(0), start:16, end:17,     lead:'dana-whitfield',    name:'Dana Whitfield',      unit:'2019 Grand Design Reflection 315RLTS', type:'Sales Visit', image:null, svg:'rv-trailer', owner:'Riley Morgan', state:'past' },
+		{ id:'ev-hector-1', kind:'appointment', date:REL(1), start:14, end:15,     lead:'hector-alvarez',    name:'Hector Alvarez',      type:'Be-Back', timeLabel:'2 – 3 PM', owner:'Sam Okafor', state:'cancelled' },
+		{ id:'fu-elaine',   kind:'followup',    date:REL(2), start:9.5,            lead:'elaine-kowalski',   label:'Call Elaine Kowalski' },
+		{ id:'fu-hector',   kind:'followup',    date:REL(2), start:10,             lead:'hector-alvarez',    label:'Text Hector Alvarez', status:'overdue' },
+		{ id:'ev-marcus',   kind:'appointment', date:REL(2), start:13.5, end:14.5, lead:'marcus-trent',      name:'Marcus Trent',        unit:'2022 Thor ACE 32.3', type:'Sales Visit', image:IMG.thor, owner:'Riley Morgan', done:true },
+		{ id:'ev-baxter',   kind:'appointment', date:REL(2), start:16.5, end:17.5, lead:'rob-cheryl-baxter', name:'Rob & Cheryl Baxter', type:'Delivery', timeLabel:'4:30 – 5:30 PM', owner:'Riley Morgan', tone:'ok', done:true },
+		{ id:'fu-renee',    kind:'followup',    date:REL(3), start:10,             lead:'renee-fontaine',    label:'Call Renee Fontaine' },
+		{ id:'ev-hector-2', kind:'appointment', date:REL(3), start:15, end:16,     lead:'hector-alvarez',    name:'Hector Alvarez',      type:'Be-Back', timeLabel:'3 – 4 PM', owner:'Sam Okafor', tone:'working' },
+		{ id:'fu-marcus',   kind:'followup',    date:REL(4), start:9,              lead:'marcus-trent',      label:'Email Marcus Trent' },
+		{ id:'ev-priscilla',kind:'appointment', date:REL(4), start:10, end:11,     lead:'priscilla-nguyen',  name:'Priscilla Nguyen',    unit:'2023 Jayco Redhawk 26XD', type:'Sales Visit', image:IMG.redhawk, owner:'Sam Okafor' },
+		{ id:'ev-tom',      kind:'appointment', date:REL(5), start:11, end:12,     lead:'tom-gallagher',     name:'Tom Gallagher',       unit:'2020 Newmar Bay Star 3226', type:'Sales Visit', image:IMG.redhawk, owner:'Sam Okafor' }
 	];
 	const consignmentEvents = [
-		{ id:'fu-baxter-60', kind:'followup',    date:'2026-08-19', start:9.5,           lead:'rob-cheryl-baxter-bo', label:'Send 60-day update — Baxters', status:'overdue' },
-		{ id:'fu-anita',     kind:'followup',    date:'2026-08-19', start:10,            lead:'anita-brookshire',     label:'Text Anita Brookshire — term' },
-		{ id:'ev-priscilla-pickup', kind:'appointment', date:'2026-08-19', start:14, end:15, lead:'priscilla-nguyen-bo', name:'Priscilla Nguyen', unit:'2017 Jayco Eagle 330RSTS', type:'Pickup', svg:'rv-trailer', owner:'Riley Morgan', tone:'ok' },
-		{ id:'ev-gerald',    kind:'appointment', date:'2026-08-19', start:15, end:16,    lead:'gerald-whitcomb',      name:'Gerald Whitcomb',  unit:'2019 Coachmen Catalina 263BHSCK', type:'Condition re-evaluation', svg:'rv-trailer', owner:'Sam Okafor', tone:'working' },
-		{ id:'fu-nadia',     kind:'followup',    date:'2026-08-20', start:9.5,           lead:'nadia-petrov',         label:'Call Nadia Petrov — payoff letter' },
-		{ id:'ev-elena',     kind:'appointment', date:'2026-08-20', start:10, end:11,    lead:'elena-vasquez',        name:'Elena Vasquez',    unit:'2020 Winnebago Minnie 2301BHS', type:'Drop-off', svg:'rv-trailer', owner:'Riley Morgan' },
-		{ id:'ev-harold',    kind:'appointment', date:'2026-08-21', start:11, end:12,    lead:'harold-brenner',       store:'TAL', name:'Harold Brenner',   unit:'2016 Forest River Georgetown 364TS', type:'Pickup', svg:'rv-motorhome', owner:'Devon Marsh', tone:'ok' }
+		{ id:'fu-baxter-60', kind:'followup',    date:REL(2), start:9.5,           lead:'rob-cheryl-baxter-bo', label:'Send 60-day update — Baxters', status:'overdue' },
+		{ id:'fu-anita',     kind:'followup',    date:REL(2), start:10,            lead:'anita-brookshire',     label:'Text Anita Brookshire — term' },
+		{ id:'ev-priscilla-pickup', kind:'appointment', date:REL(2), start:14, end:15, lead:'priscilla-nguyen-bo', name:'Priscilla Nguyen', unit:'2017 Jayco Eagle 330RSTS', type:'Pickup', svg:'rv-trailer', owner:'Riley Morgan', tone:'ok' },
+		{ id:'ev-gerald',    kind:'appointment', date:REL(2), start:15, end:16,    lead:'gerald-whitcomb',      name:'Gerald Whitcomb',  unit:'2019 Coachmen Catalina 263BHSCK', type:'Condition re-evaluation', svg:'rv-trailer', owner:'Sam Okafor', tone:'working' },
+		{ id:'fu-nadia',     kind:'followup',    date:REL(3), start:9.5,           lead:'nadia-petrov',         label:'Call Nadia Petrov — payoff letter' },
+		{ id:'ev-elena',     kind:'appointment', date:REL(3), start:10, end:11,    lead:'elena-vasquez',        name:'Elena Vasquez',    unit:'2020 Winnebago Minnie 2301BHS', type:'Drop-off', svg:'rv-trailer', owner:'Riley Morgan' },
+		{ id:'ev-harold',    kind:'appointment', date:REL(4), start:11, end:12,    lead:'harold-brenner',       store:'TAL', name:'Harold Brenner',   unit:'2016 Forest River Georgetown 364TS', type:'Pickup', svg:'rv-motorhome', owner:'Devon Marsh', tone:'ok' }
 	];
 	const APPOINTMENT_TYPES = { sales:['Sales Visit', 'Be-Back', 'Delivery', 'Test Drive', 'Trade Appraisal'], consignment:['Drop-off', 'Pickup', 'Inspection', 'Condition re-evaluation', 'Signing'] };
 
 	return {
 		locations: LOCATIONS,
 		stores: STORES,
-		calendar: { now:CALENDAR.now, startHour:CALENDAR.startHour, endHour:CALENDAR.endHour, workHours:CALENDAR.workHours, events:{ sales:salesEvents, management:salesEvents, consignment:consignmentEvents }, types:APPOINTMENT_TYPES },
+		calendar: { startHour:CALENDAR.startHour, endHour:CALENDAR.endHour, workHours:CALENDAR.workHours, events:{ sales:salesEvents, management:salesEvents, consignment:consignmentEvents }, types:APPOINTMENT_TYPES },
 		roles: {
 			sales: {
 				label:'Salesperson',
