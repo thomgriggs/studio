@@ -1304,7 +1304,7 @@ function crmBindBoardPan() {
 	const board = document.getElementById('pipeline');
 	let pan = null;
 	board.addEventListener('pointerdown', e => {
-		if (e.pointerType !== 'mouse' || document.body.dataset.device === 'phone') return; /* touch scrolls natively — the pan is a mouse aid */
+		if (e.pointerType !== 'mouse') return; /* touch scrolls natively — the pan is a mouse aid, on the phone layout too */
 		if (e.button !== 0 || e.target.closest('.lead-card, button, a, select, input, .forsale-summary')) return;
 		pan = { x:e.clientX, left:board.scrollLeft, moved:false, id:e.pointerId };
 		board.classList.add('is-panning');
