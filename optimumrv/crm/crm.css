@@ -1620,12 +1620,13 @@ body[data-device="phone"][data-view="calendar"] {
 }
 /* phone calendar: day mode is the hour grid, one column, like iOS */
 body[data-device="phone"][data-view="calendar"] {
-	.phone-agenda { --calendar_hour:72px; --calendar_gutter:58px; --calendar_days:1; position:relative; padding:0;
+	.phone-agenda { --calendar_hour:100px; --calendar_gutter:58px; --calendar_days:1; position:relative; padding:0;
 		.calendar-grid { --calendar_days:1; grid-template-columns:var(--calendar_gutter) 1fr; }
 		.calendar-times span { height:var(--calendar_hour); font-size:.7rem; }
 		.calendar-times .calendar-now-label { font-size:.6rem; width:auto; height:auto; border-radius:4px; padding:2px 5px; line-height:1; inset-inline-end:6px; white-space:nowrap; display:inline-block; }
 		.calendar-col { background-size:100% var(--calendar_hour); }
-		.calendar-event { font-size:.85rem; }
+		/* cards fit their hour: one-line unit, one-line meta (type · time · store), small thumb, slim owner stripe */
+		.calendar-event { font-size:.85rem; .event-body { gap:8px; align-items:flex-start; } .thumb { width:44px; height:30px; } .event-text { gap:1px; min-width:0; } .event-name { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .event-unit { font-size:.78rem; } .event-meta { font-size:.74rem; br { display:none; } .feather { width:12px; height:12px; margin-inline-start:6px; } } .event-owner { font-size:.6rem; padding-block:2px; } }
 		.phone-empty { position:sticky; top:8px; margin:0 14px; z-index:2; background:var(--color_bg-secondary); border-radius:var(--radius_pill); padding:6px 12px; text-align:center; font-size:.8rem; color:var(--color_text-muted); }
 	}
 }
