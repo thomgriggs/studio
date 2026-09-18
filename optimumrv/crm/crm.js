@@ -1828,6 +1828,11 @@ Object.assign(CRM_ACTIONS, {
 			actions:[{ label:'Close', primary:true }]
 		}).querySelectorAll('[data-detail-pick]').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.detailPick; crmClose(); if (i === 0) CRM_ACTIONS.call(); if (i === 1) CRM_ACTIONS.email(); }));
 	},
+	'dictate-compose': () => {
+		const lead = crmLeadOrPick();
+		const m = crmSheet({ title:'Dictate', reason:'Talk instead of type — on a device this is native dictation (Web Speech API); the prototype fakes it.', body:`<p class="sheet-big"><span class="dictate-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><small id="dictate-text">Listening…</small></p>`, actions:[{ label:'Cancel' }, { label:'Use text', primary:true, run:() => { const input = document.getElementById('composer-input'); input.value = `Hi ${crmFirst(lead)}, running about ten minutes behind — see you shortly.`; input.dispatchEvent(new Event('input')); input.focus(); } }] });
+		setTimeout(() => { const t = m.querySelector('#dictate-text'); if (t) t.textContent = '“Hi ' + crmFirst(lead) + ', running about ten minutes behind…”'; }, 1400);
+	},
 	'dictate': () => {
 		const m = crmSheet({
 			title:'Dictate',
