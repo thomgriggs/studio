@@ -251,6 +251,7 @@ function crmOpenLead(id) {
 	const header = document.querySelector('.lead-header');
 	header.dataset.stage = lead.stage;
 	crmFill(header, lead);
+	const phoneBar = document.querySelector('.conversation .phone-topbar'); if (phoneBar) crmFill(phoneBar, lead);
 
 	/* badges next to the name */
 	const badges = header.querySelector('.lead-badges');
