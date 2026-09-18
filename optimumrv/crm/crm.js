@@ -1907,13 +1907,28 @@ function crmPhoneZoom(level) {
 	wrap.querySelector('[data-action="phone-month-toggle"]').setAttribute('aria-expanded', String(level !== 'day'));
 	if (level === 'month') {
 		const base = new Date(crmCal.cursor.getFullYear(), crmCal.cursor.getMonth(), 1);
-		pm.innerHTML = `<div class="phone-dow">${CRM_DOW.map(d => `<span>${d[0]}</span>`).join('')}</div>` + Array.from({ length:25 }, (_, i) => crmAddMonths(base, i - 12)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}">${crmMiniMonth(m, { selected:crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
+		pm.innerHTML = `<div class="phone-dow">${CRM_DOW.map(d => `<span>${d[0]}</span>`).join('')}</div>` + Array.from({ length:25 }, (_, i) => crmAddMonths(base, i - 12)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}" data-date="${crmISO(m)}">${crmMiniMonth(m, { selected:crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
 	} else if (level === 'year') {
 		/* compact months (no nested buttons — the whole month is one tap target) */
 		const y = crmCal.cursor.getFullYear(), now = crmNow();
 		const busy = new Set(crmVisibleEvents().map(e => e.date));
 		const mini = first => { const start = crmStartOfWeek(first); return `<span class="year-grid">${Array.from({ length:42 }, (_, i) => crmAddDays(start, i)).map(d => `<span class="year-day ${d.getMonth() !== first.getMonth() ? 'is-outside' : ''} ${crmIsToday(d) ? 'is-today' : ''} ${busy.has(crmISO(d)) ? 'has-events' : ''}">${d.getDate()}</span>`).join('')}</span>`; };
-		pm.innerHTML = Array.from({ length:5 }, (_, i) => y - 2 + i).map(yy => `<div class="phone-year-block ${yy === y ? 'is-current' : ''}"><h2 class="phone-year-title">${yy}</h2><div class="phone-year-grid">${Array.from({ length:12 }, (_, m) => { const first = new Date(yy, m, 1); return `<button type="button" class="phone-year-month ${m === now.getMonth() && yy === now.getFullYear() ? 'is-today' : ''}" data-action="phone-year-month" data-date="${crmISO(first)}"><strong>${CRM_MONTHS[m]}</strong>${mini(first)}</button>`; }).join('')}</div></div>`).join('');
+		pm.innerHTML = Array.from({ length:5 }, (_, i) => y - 2 + i).map(yy => `<div class="phone-year-block ${yy === y ? 'is-current' : ''}" data-date="${yy}-01-01"><h2 class="phone-year-title">${yy}</h2><div class="phone-year-grid">${Array.from({ length:12 }, (_, m) => { const first = new Date(yy, m, 1); return `<button type="button" class="phone-year-month ${m === now.getMonth() && yy === now.getFullYear() ? 'is-today' : ''}" data-action="phone-year-month" data-date="${crmISO(first)}"><strong>${CRM_MONTHS[m]}</strong>${mini(first)}</button>`; }).join('')}</div></div>`).join('');
+	}
+	if (!pm.dataset.scrollBound) {
+		pm.dataset.scrollBound = '1';
+		/* iOS: the back label tracks whichever month / year is at the top of the scroll */
+		pm.addEventListener('scroll', () => {
+			if (crmCal.level === 'day') return;
+			const top = pm.getBoundingClientRect().top + 40;
+			const blocks = [...pm.querySelectorAll('.phone-month-block, .phone-year-block')];
+			const cur = blocks.reverse().find(b => b.getBoundingClientRect().top <= top) || blocks[blocks.length - 1];
+			if (!cur || !cur.dataset.date) return;
+			const d = crmDate(cur.dataset.date);
+			const label = document.querySelector('.phone-cal [data-field="calendar.month"]');
+			label.textContent = crmCal.level === 'month' ? String(d.getFullYear()) : String(d.getFullYear());
+			crmCal.mini = d;
+		}, { passive:true });
 	}
 	crmRenderPhoneCalendar();
 	if (level !== 'day') { crmIcons(); const cur = pm.querySelector('.is-current'); if (cur) pm.scrollTop = cur.getBoundingClientRect().top - pm.getBoundingClientRect().top + pm.scrollTop - (level === 'month' ? 30 : 0); }
