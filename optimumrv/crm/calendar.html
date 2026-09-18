@@ -117,6 +117,41 @@
 		</div>
 	</main>
 
+	<!-- ===== PHONE CALENDAR : iOS Calendar day mode — top bar · week strip · agenda · bottom bar ===== -->
+	<section class="phone-cal" data-phone aria-label="Calendar">
+		<header class="phone-topbar">
+			<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
+			<button type="button" class="phone-month-title" data-action="phone-month-toggle" aria-expanded="false"><span data-field="calendar.month">August 2026</span><i data-feather="chevron-down"></i></button>
+			<span class="phone-actions">
+				<button type="button" class="menu-btn phone-cal-filter" data-action="phone-cal-filter" aria-label="Filter" aria-haspopup="menu"><i data-feather="filter"></i><span class="phone-filter-dot" hidden></span></button>
+				<button type="button" class="menu-btn" data-action="new-event" aria-label="New appointment"><i data-feather="plus"></i></button>
+			</span>
+		</header>
+		<!-- PHONE MONTH : drops down from the title; pick a day, it collapses -->
+		<div class="phone-month" id="phone-month" hidden></div>
+		<!-- PHONE WEEK : Sun–Sat strip; swipe for the next week; Today pill when you're away from today -->
+		<div class="phone-week" id="phone-week"></div>
+		<!-- PHONE AGENDA : the selected day's items in order; swipe left/right for the next/previous day -->
+		<section class="phone-agenda" id="phone-agenda"></section>
+		<footer class="phone-bottombar">
+			<form class="field phone-search" role="search" onsubmit="return false">
+				<i data-feather="search"></i>
+				<label class="sr-only" for="phone-cal-search">Search</label>
+				<input id="phone-cal-search" type="search" placeholder="Search" autocomplete="off" data-action="search-calendar">
+			</form>
+			<button type="button" class="btn btn-icon phone-compose" data-action="new-event" aria-label="New appointment"><i data-feather="edit"></i></button>
+		</footer>
+	</section>
+	<!-- ===== PHONE EVENT : full-screen event card (the same inline-editable card as the desktop popover) ===== -->
+	<section class="phone-event" data-phone aria-label="Event">
+		<header class="phone-topbar">
+			<button type="button" class="menu-btn phone-back" data-action="phone-back" aria-label="Back to the day"><i data-feather="chevron-left"></i></button>
+			<button type="button" class="phone-lead" data-action="open-lead-details"><span class="avatar avatar-small" data-field="initials"></span><span class="phone-lead-name" data-field="name"></span></button>
+			<span class="phone-actions"><button type="button" class="menu-btn" data-action="phone-event-more" aria-label="More actions" aria-haspopup="menu"><i data-feather="more-horizontal"></i></button></span>
+		</header>
+		<div class="phone-event-body" id="phone-event-body"></div>
+	</section>
+
 	<!-- ===== EVENT POPOVER : iCal-style card anchored to the clicked event ===== -->
 	<div class="event-popover" id="event-popover" hidden role="dialog" aria-label="Event"></div>
 

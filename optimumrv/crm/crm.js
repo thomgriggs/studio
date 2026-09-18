@@ -119,6 +119,9 @@ function crmBindDrawer() {
 	document.querySelectorAll('[data-action="close-menu"]').forEach(b => b.addEventListener('click', () => set(false)));
 	overlay.addEventListener('click', () => set(false));
 	document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+	let dx = null;
+	drawer.addEventListener('touchstart', e => { dx = e.touches[0].clientX; }, { passive:true });
+	drawer.addEventListener('touchmove', e => { if (dx !== null && dx - e.touches[0].clientX > 60) { dx = null; set(false); } }, { passive:true });
 }
 
 /* ---------- dev labels overlay ------------------------------------------ */
@@ -126,7 +129,7 @@ const CRM_BLOCKS = [
 	'topbar', 'sidebar-navigation', 'pipeline-toggle', 'pipeline-filters', 'filter-control',
 	'calendar', 'calendar-nav', 'calendar-modes', 'calendar-sidebar', 'mini-month', 'calendar-list', 'calendar-main', 'calendar-head', 'calendar-grid', 'calendar-now', 'calendar-event', 'followup-task', 'day-agenda', 'agenda-item', 'calendar-month', 'calendar-year', 'event-popover', 'event-editor',
 	'pipeline', 'pipeline-column', 'column-header', 'column-lane', 'lead-card', 'card-owner', 'card-flag', 'forsale-summary', 'quick-edit', 'stage-picker',
-	'phone-topbar', 'phone-focus', 'phone-bottombar', 'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
+	'phone-topbar', 'phone-focus', 'phone-bottombar', 'phone-cal', 'phone-week', 'phone-month', 'phone-agenda', 'phone-event', 'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
 	'detail-panel', 'detail-section', 'thread', 'thread-day', 'thread-event', 'thread-message', 'thread-call', 'thread-note', 'thread-email', 'thread-image', 'composer'
 ];
 
@@ -1261,7 +1264,8 @@ function crmInitCalendar(params) {
 	document.addEventListener('keydown', e => { if (e.key === 'Escape') { if (crmPop.editing) { const ev = crmEventById(crmPop.eventId); if (ev) crmOpenPopover(ev, crmPopoverAnchor(ev.id), { editing:null }); } else crmClosePopover(); } });
 	document.addEventListener('click', e => { if (document.contains(e.target) && !e.target.closest('.event-popover, .calendar-event, .followup-task, .agenda-item, .month-event, .month-more, [data-action="new-event"], [data-action="new-event-on"], [data-action="edit-field"], [data-action="event-add-followup"], .modal')) crmClosePopover(); });
 	crmRenderCalendar();
-	setInterval(() => { if ((crmCal.mode === 'week' || crmCal.mode === 'day') && !crmPop.eventId && !crmPop.draft) crmRenderCalendar(); }, 60000);
+	crmInitPhoneCalendar(params);
+	setInterval(() => { if (document.body.dataset.device !== 'phone' && (crmCal.mode === 'week' || crmCal.mode === 'day') && !crmPop.eventId && !crmPop.draft) crmRenderCalendar(); }, 60000);
 }
 
 /* ---- filter menus: checkbox dropdowns, shared by the calendar and the pipeline ----
@@ -1322,6 +1326,7 @@ function crmEventById(id) { if (crmPop.draft && crmPop.draft.id === id) return c
 /* CALENDAR — render: title, sidebar, then the active mode                   */
 /* ========================================================================== */
 function crmRenderCalendar() {
+	if (document.body.dataset.device === 'phone') { crmRenderPhoneCalendar(); return; }
 	const cal = document.getElementById('calendar');
 	const mode = crmCal.mode;
 	cal.dataset.mode = mode;
@@ -1432,8 +1437,8 @@ function crmFollowupTask(e, y) {
 }
 
 /* ---- day: agenda list ---------------------------------------------------- */
-function crmRenderAgenda(date) {
-	const wrap = document.getElementById('day-agenda');
+function crmRenderAgenda(date, target) {
+	const wrap = target || document.getElementById('day-agenda');
 	const items = crmEventsOn(date);
 	const showOwner = !!CRM_DATA.roles[crmState.role].owners;
 	wrap.innerHTML = `<header class="agenda-head"><h2>${crmIsToday(date) ? 'Today' : crmFmt(date, 'long')}</h2><span class="column-count">${items.length}</span><button type="button" class="btn" data-action="new-event-on" data-date="${crmISO(date)}"><i data-feather="plus"></i>Add</button></header>` +
@@ -1563,6 +1568,7 @@ function crmOpenPopover(e, anchor, opts = {}) {
 				<button type="button" class="btn btn-quiet" data-action="event-delete" data-event="${e.id}" aria-label="Delete"><i data-feather="trash-2"></i></button>
 			</footer>`}`;
 	}
+	if (document.body.dataset.device === 'phone' && document.body.dataset.view === 'calendar' && !opts.list && !e._draft) { crmPhoneEventScreen(e, body); return; }
 	pop.innerHTML = (opts.list ? `<button type="button" class="menu-btn popover-close" data-action="close-popover" aria-label="Close"><i data-feather="x"></i></button>` : '') + body;
 	pop.hidden = false;
 	crmIcons();
@@ -1581,6 +1587,7 @@ function crmClosePopover() { const pop = document.getElementById('event-popover'
 /* re-render the calendar and keep the same card open, anchored to the same event */
 function crmRefreshPopover(id, editing) {
 	if (crmPop.draft && crmPop.draft.id === id) { crmOpenPopover(crmPop.draft, crmPop.draftAnchor, { editing }); return; }
+	if (document.body.dataset.device === 'phone' && document.body.dataset.view === 'calendar') { crmPop.eventId = id; crmPop.editing = editing || null; crmPersist(); crmRenderCalendar(); return; }
 	crmPersist();
 	crmRenderCalendar();
 	const ev = crmEventById(id);
@@ -1677,9 +1684,9 @@ Object.assign(CRM_ACTIONS, {
 	'calendar-mode-day': () => crmSetMode('day'), 'calendar-mode-week': () => crmSetMode('week'), 'calendar-mode-month': () => crmSetMode('month'), 'calendar-mode-year': () => crmSetMode('year'),
 	'open-day': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('day'); },
 	'open-month': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('month'); },
-	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmRenderCalendar(); },
-	'mini-prev': () => { crmCal.mini = crmAddMonths(crmCal.mini, -1); document.getElementById('mini-month').innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
-	'mini-next': () => { crmCal.mini = crmAddMonths(crmCal.mini, 1); document.getElementById('mini-month').innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
+	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; const pm = document.getElementById('phone-month'); if (pm && !pm.hidden) { pm.hidden = true; document.querySelector('[data-action="phone-month-toggle"]')?.setAttribute('aria-expanded', 'false'); } crmRenderCalendar(); },
+	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
+	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'toggle-sidebar': () => { crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
@@ -1763,8 +1770,9 @@ function crmPhoneApply() {
 function crmShowScreen(screen, push) {
 	crmPhone.screen = screen;
 	document.body.dataset.screen = screen;
-	if (push) history.pushState({ screen }, '', `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
+	if (push) history.pushState({ screen }, '', document.body.dataset.view === 'calendar' ? `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor), event:crmPop.eventId || '' })}` : `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
 	if (screen === 'inbox') { crmCloseDetail(); crmClose(); history.replaceState(history.state, '', `daily-view.html${crmQuery({ tab:crmState.tab })}`); }
+	if (screen === 'agenda') { crmClose(); crmPop.eventId = null; crmPop.editing = null; history.replaceState(history.state, '', `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor) })}`); }
 	else requestAnimationFrame(() => { const t = document.getElementById('thread'); if (t) t.scrollTop = t.scrollHeight; });
 }
 
@@ -1788,7 +1796,7 @@ function crmRenderFocus(desk) {
 }
 
 Object.assign(CRM_ACTIONS, {
-	'phone-back': () => { if (history.state && history.state.screen === 'conversation') history.back(); else crmShowScreen('inbox', false); },
+	'phone-back': () => { const home = document.body.dataset.view === 'calendar' ? 'agenda' : 'inbox'; const sub = home === 'agenda' ? 'event' : 'conversation'; if (history.state && history.state.screen === sub) history.back(); else crmShowScreen(home, false); },
 	'open-focus': el => { crmOpenLead(el.dataset.lead); crmShowScreen('conversation', true); },
 	'phone-filter': el => {
 		const desk = crmDesk();
@@ -1861,5 +1869,114 @@ Object.assign(CRM_ACTIONS, {
 			], 'data-detail-pick'),
 			actions:[{ label:'Close', primary:true }]
 		}).querySelectorAll('[data-detail-pick]').forEach(b => b.addEventListener('click', () => { const i = +b.dataset.detailPick; crmClose(); if (i === 0) CRM_ACTIONS.call(); if (i === 1) CRM_ACTIONS.email(); }));
+	}
+});
+
+/* ========================================================================== */
+/* PHONE — Calendar: week strip + agenda (iOS Calendar day mode)             */
+/* ========================================================================== */
+const crmPhoneCal = { bound:false };
+
+function crmInitPhoneCalendar(params) {
+	if (crmPhoneCal.bound || !document.querySelector('.phone-cal')) return;
+	crmPhoneCal.bound = true;
+	const search = document.getElementById('phone-cal-search');
+	if (search) search.addEventListener('input', e => { crmCal.search = e.target.value; crmRenderCalendar(); });
+	addEventListener('popstate', e => { if (document.body.dataset.device !== 'phone' || document.body.dataset.view !== 'calendar') return; crmShowScreen((e.state && e.state.screen) || 'agenda', false); });
+	/* swipes: week strip → ±7 days, agenda → ±1 day, left edge on the event screen → back */
+	let sw = null;
+	document.addEventListener('touchstart', e => { const t = e.touches[0]; const zone = e.target.closest('.phone-week') ? 'week' : e.target.closest('.phone-agenda') ? 'agenda' : (document.body.dataset.screen === 'event' && t.clientX < 28) ? 'edge' : null; sw = zone ? { zone, x:t.clientX, y:t.clientY } : null; }, { passive:true });
+	document.addEventListener('touchend', e => { if (!sw) return; const t = e.changedTouches[0]; const dx = t.clientX - sw.x, dy = t.clientY - sw.y; const z = sw.zone; sw = null; if (Math.abs(dx) < 50 || Math.abs(dy) > 60) return; if (z === 'edge') { if (dx > 0) CRM_ACTIONS['phone-back'](); return; } const days = z === 'week' ? 7 : 1; crmCal.cursor = crmAddDays(crmCal.cursor, dx < 0 ? days : -days); crmCal.mini = crmCal.cursor; crmRenderCalendar(); }, { passive:true });
+	if (document.body.dataset.device === 'phone') {
+		const ev = params.get('event') && crmEventById(params.get('event'));
+		crmShowScreen(ev ? 'event' : 'agenda', false);
+		crmRenderCalendar();
+		if (ev) crmOpenPopover(ev, null);
+	}
+}
+
+function crmRenderPhoneCalendar() {
+	const wrap = document.querySelector('.phone-cal'); if (!wrap) return;
+	const cursor = crmCal.cursor;
+	wrap.querySelector('[data-field="calendar.month"]').textContent = crmFmt(cursor, 'month');
+	/* week strip */
+	const start = crmStartOfWeek(cursor);
+	const events = crmVisibleEvents();
+	const busy = new Set(events.map(e => e.date));
+	const week = document.getElementById('phone-week');
+	week.innerHTML = Array.from({ length:7 }, (_, i) => crmAddDays(start, i)).map(d => `<button type="button" class="week-day ${crmIsToday(d) ? 'is-today' : ''} ${crmSameDay(d, cursor) ? 'is-selected' : ''} ${crmIsWeekend(d) ? 'is-weekend' : ''} ${busy.has(crmISO(d)) ? 'has-events' : ''}" data-action="phone-day-pick" data-date="${crmISO(d)}"><small>${CRM_DOW[crmDowIndex(d)][0]}</small><span class="mini-num">${d.getDate()}</span></button>`).join('')
+		;
+	/* month drop-down (only re-render while open) */
+	const pm = document.getElementById('phone-month');
+	if (pm && !pm.hidden) pm.innerHTML = crmMiniMonth(crmCal.mini, { selected:cursor, nav:true });
+	/* filter dot */
+	const dot = wrap.querySelector('.phone-filter-dot');
+	if (dot) { const allCats = crmCal.show.appointment && crmCal.show.logistics && crmCal.show.followup; const allOwners = !crmCal.owners || crmCal.owners.size === crmStoreReps(crmCal.stores || new Set(['OCA'])).length; dot.hidden = allCats && allOwners; }
+	/* agenda: the day, or search results across days */
+	const agenda = document.getElementById('phone-agenda');
+	if (crmCal.search.trim()) {
+		const byDate = {};
+		events.forEach(e => { (byDate[e.date] = byDate[e.date] || []).push(e); });
+		const dates = Object.keys(byDate).sort();
+		agenda.innerHTML = dates.length ? dates.map(iso => { const d = crmDate(iso); const tmp = document.createElement('div'); crmRenderAgenda(d, tmp); tmp.querySelector('.agenda-head')?.remove(); return `<p class="agenda-date ${crmIsToday(d) ? 'is-today' : ''}">${crmFmt(d, 'long')}</p>${tmp.innerHTML}`; }).join('') : `<p class="agenda-empty"><i data-feather="search"></i>Nothing matches “${crmCal.search.trim()}”</p>`;
+	} else {
+		crmRenderAgenda(cursor, agenda);
+		if (!crmIsToday(cursor)) agenda.querySelector('.agenda-head')?.insertAdjacentHTML('beforeend', `<button type="button" class="btn week-today" data-action="cal-today">Today</button>`);
+	}
+	/* event screen stays in sync */
+	if (document.body.dataset.screen === 'event') {
+		const ev = crmPop.eventId && crmEventById(crmPop.eventId);
+		if (ev) crmOpenPopover(ev, null, { editing:crmPop.editing }); else crmShowScreen('agenda', false);
+	}
+	crmIcons();
+}
+
+/* the event card, full screen: same body as the popover, minus its chrome */
+function crmPhoneEventScreen(e, body) {
+	const screen = document.querySelector('.phone-event');
+	const lead = crmDesk().leads.find(l => l.id === e.lead);
+	crmPop.eventId = e.id;
+	crmFill(screen.querySelector('.phone-topbar'), { initials:lead ? lead.initials : '·', name:lead ? lead.name : (e.kind === 'followup' ? e.label : 'Event') });
+	const st = crmStatus(e);
+	const host = document.getElementById('phone-event-body');
+	host.innerHTML = `<p class="phone-event-status" data-status="${st}">${crmStatusGlyph(e)}${{ done:'Completed', cancelled:'Cancelled', overdue:'Overdue', past:'Past — not recorded' }[st] || (e.kind === 'followup' ? 'Follow-up' : 'Upcoming')}</p>` + body + (lead ? `<button type="button" class="btn phone-event-conversation" data-action="event-open-conversation" data-event="${e.id}"><i data-feather="message-circle"></i>Open conversation</button>` : '');
+	host.querySelector('.editor-head')?.remove();
+	crmIcons();
+	const ta = host.querySelector('.inline-picker textarea'); if (ta) { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); }
+	if (document.body.dataset.screen !== 'event') crmShowScreen('event', true);
+}
+
+Object.assign(CRM_ACTIONS, {
+	'phone-day-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmRenderCalendar(); },
+	'phone-month-toggle': el => { const pm = document.getElementById('phone-month'); pm.hidden = !pm.hidden; el.setAttribute('aria-expanded', String(!pm.hidden)); if (!pm.hidden) { crmCal.mini = crmCal.cursor; pm.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); } },
+	'phone-cal-filter': el => {
+		let menu = document.getElementById('phone-cal-filter-menu');
+		if (menu) { menu.remove(); return; }
+		const roleData = CRM_DATA.roles[crmState.role];
+		menu = document.createElement('div');
+		menu.id = 'phone-cal-filter-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = `<p class="phone-menu-label">Show</p>
+			<label><input type="checkbox" ${crmCal.show.appointment ? 'checked' : ''} data-action="toggle-calendar" data-category="appointment"><span class="swatch" data-category="appointment"></span>Appointments</label>
+			<label><input type="checkbox" ${crmCal.show.logistics ? 'checked' : ''} data-action="toggle-calendar" data-category="logistics"><span class="swatch" data-category="logistics"></span>Deliveries &amp; drop-offs</label>
+			<label><input type="checkbox" ${crmCal.show.followup ? 'checked' : ''} data-action="toggle-followups" data-category="followup"><span class="swatch" data-category="followup"></span>Follow-ups</label>`
+			+ (roleData.owners && crmCal.owners ? `<p class="phone-menu-label">Salespeople</p>` + crmStoreReps(crmCal.stores || new Set(['OCA'])).map(o => `<label><input type="checkbox" ${crmCal.owners.has(o) ? 'checked' : ''} data-action="toggle-owner" data-owner="${o}"><span class="swatch" data-owner="${o}"></span>${o}</label>`).join('') : '');
+		el.closest('.phone-topbar').appendChild(menu);
+		const close = e => { if (!e.target.closest('#phone-cal-filter-menu, [data-action="phone-cal-filter"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true), 0);
+	},
+	'phone-event-more': el => {
+		const e = crmEventById(crmPop.eventId); if (!e) return;
+		let menu = document.getElementById('phone-event-menu');
+		if (menu) { menu.remove(); return; }
+		const items = e.kind === 'followup'
+			? [{ action:'event-complete', icon:'check', label:e.done ? 'Undo done' : 'Mark done' }, { action:'event-snooze', icon:'clock', label:'Move to tomorrow' }, { action:'event-delete', icon:'trash-2', label:'Delete', tone:'muted' }]
+			: [{ action:'event-complete', icon:'check', label:e.done ? 'Undo complete' : 'Mark complete', tone:'ok' }, { action:'event-cancel', icon:'x-circle', label:e.state === 'cancelled' ? 'Restore' : 'Cancel appointment' }, { action:'event-delete', icon:'trash-2', label:'Delete', tone:'muted' }];
+		menu = document.createElement('div');
+		menu.id = 'phone-event-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = items.map(it => `<button type="button" role="menuitem" data-action="${it.action}" data-event="${e.id}" data-tone="${it.tone || ''}"><span>${it.label}</span>${crmIcon(it.icon)}</button>`).join('');
+		el.closest('.phone-topbar').appendChild(menu);
+		crmIcons();
+		const close = ev => { if (!ev.target.closest('[data-action="phone-event-more"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true), 0);
 	}
 });
