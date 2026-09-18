@@ -1380,8 +1380,8 @@ body[data-device="phone"][data-view="daily-view"] {
 	}
 
 	/* --- inbox screen --- */
-	.inbox-header, .inbox-search { display:none; }
-	.inbox-tabs { padding:8px 14px 6px; .segmented { width:100%; } }
+	.inbox-header, .inbox-search, .inbox-tabs { display:none; }
+	.phone-filter { position:relative; .phone-filter-dot { position:absolute; top:6px; inset-inline-end:6px; width:8px; height:8px; border-radius:50%; background:var(--color_brand-secondary); } }
 	.phone-focus { display:flex !important; flex:none; gap:14px; overflow-x:auto; padding:8px 14px 10px; scrollbar-width:none; &::-webkit-scrollbar { display:none; }
 		.focus-item { align-items:center; display:flex; flex-direction:column; flex:none; gap:6px; width:64px; .avatar { width:56px; height:56px; font-size:1.05rem; position:relative; } .focus-dot { border:2px solid #fff; border-radius:50%; height:14px; position:absolute; inset-block-end:0; inset-inline-end:0; width:14px; background:var(--stage_assigned); &[data-status="overdue"], &[data-status="urgent"] { background:var(--status_overdue); } &[data-status="appointment"] { background:var(--status_ok); } } small { color:var(--color_text); font-size:.72rem; font-weight:var(--font_weight-bold-primary); max-width:64px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } }
 	}

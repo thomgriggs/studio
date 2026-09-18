@@ -1786,12 +1786,17 @@ function crmRenderFocus(desk) {
 	const fires = desk.leads.filter(l => l.tabs.length && (l.unread === 'overdue' || (l.pill && ['urgent', 'overdue'].includes(l.pill.status)))).length;
 	const badge = document.getElementById('phone-badge');
 	if (badge) { badge.hidden = !fires; badge.textContent = fires; }
+	const fdot = document.querySelector('.phone-filter-dot'); if (fdot) fdot.hidden = crmState.tab === desk.defaultTab;
 }
 
 Object.assign(CRM_ACTIONS, {
 	'phone-back': () => { if (history.state && history.state.screen === 'conversation') history.back(); else crmShowScreen('inbox', false); },
 	'open-focus': el => { crmOpenLead(el.dataset.lead); crmShowScreen('conversation', true); },
-	'open-pipeline': el => { location.href = `pipeline.html${crmQuery()}`; },
+	'phone-filter': el => {
+		const desk = crmDesk();
+		const m = crmSheet({ title:'Show', body:crmRows(desk.tabs.map(t => ({ icon:t.id === crmState.tab ? 'check-circle' : 'circle', title:t.label, sub:`${desk.leads.filter(l => l.tabs.includes(t.id)).length} conversations` }))) });
+		m.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => { const t = desk.tabs[+b.dataset.pick]; crmState.tab = t.id; document.querySelectorAll('.inbox-tabs button').forEach(x => x.classList.toggle('is-active', x.dataset.tab === t.id)); crmRenderInbox(desk, document.getElementById('phone-search-input').value); crmClose(); }));
+	},
 	'open-lead-details': () => {
 		const lead = crmLeadOrPick(); if (!lead) return;
 		const desk = crmDesk();
