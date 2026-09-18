@@ -1495,3 +1495,5 @@ body[data-device="phone"] .modal { .overlay { flex-direction:column; justify-con
 /* the modal frame must not be a box of its own (the earlier rule was lost in a cleanup) */
 .modal .modal-frame { display:contents; }
 body[data-device="phone"][data-view="daily-view"] .modal .overlay { align-items:stretch; flex-direction:column; justify-content:flex-end; }
+/* back chevron: no button shape on tap/focus — it's a glyph, like iOS */
+body[data-device="phone"][data-view="daily-view"] .phone-topbar .phone-back { background:transparent !important; border-radius:0; box-shadow:none; &:hover, &:active, &:focus, &:focus-visible { background:transparent !important; outline:none; } &:active .feather { opacity:.5; } }
