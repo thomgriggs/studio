@@ -1680,11 +1680,11 @@ Object.assign(CRM_ACTIONS, {
 	/* navigation */
 	'cal-prev': () => crmGo(-1),
 	'cal-next': () => crmGo(1),
-	'cal-today': () => { crmCal.cursor = crmNow(); crmCal.mini = crmNow(); const pm = document.getElementById('phone-month'); if (pm && !pm.hidden) { pm.hidden = true; document.querySelector('[data-action="phone-month-toggle"]')?.setAttribute('aria-expanded', 'false'); document.querySelector('.phone-cal')?.classList.remove('is-months'); } crmRenderCalendar(); },
+	'cal-today': () => { crmCal.cursor = crmNow(); crmCal.mini = crmNow(); if (document.body.dataset.device === 'phone' && document.querySelector('.phone-cal')) { crmPhoneZoom(crmCal.level === 'year' ? 'month' : 'day'); return; } crmRenderCalendar(); }, /* phone: zoom IN year → month → day */
 	'calendar-mode-day': () => crmSetMode('day'), 'calendar-mode-week': () => crmSetMode('week'), 'calendar-mode-month': () => crmSetMode('month'), 'calendar-mode-year': () => crmSetMode('year'),
 	'open-day': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('day'); },
 	'open-month': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('month'); },
-	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; const pm = document.getElementById('phone-month'); if (pm && !pm.hidden) { pm.hidden = true; document.querySelector('[data-action="phone-month-toggle"]')?.setAttribute('aria-expanded', 'false'); document.querySelector('.phone-cal')?.classList.remove('is-months'); } crmRenderCalendar(); },
+	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'toggle-sidebar': () => { crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
@@ -1895,10 +1895,36 @@ function crmInitPhoneCalendar(params) {
 	}
 }
 
+
+/* Phone zoom levels — iOS Calendar: the title zooms out (day → month → year), Today zooms in (year → month → day) */
+function crmPhoneZoom(level) {
+	crmCal.level = level;
+	const wrap = document.querySelector('.phone-cal'); if (!wrap) return;
+	const pm = document.getElementById('phone-month');
+	wrap.classList.toggle('is-months', level !== 'day');
+	wrap.dataset.level = level;
+	pm.hidden = level === 'day';
+	wrap.querySelector('[data-action="phone-month-toggle"]').setAttribute('aria-expanded', String(level !== 'day'));
+	if (level === 'month') {
+		const base = new Date(crmCal.cursor.getFullYear(), crmCal.cursor.getMonth(), 1);
+		pm.innerHTML = Array.from({ length:25 }, (_, i) => crmAddMonths(base, i - 12)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}">${crmMiniMonth(m, { selected:crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
+	} else if (level === 'year') {
+		/* compact months (no nested buttons — the whole month is one tap target) */
+		const y = crmCal.cursor.getFullYear(), now = crmNow();
+		const busy = new Set(crmVisibleEvents().map(e => e.date));
+		const mini = first => { const start = crmStartOfWeek(first); return `<span class="year-grid">${Array.from({ length:42 }, (_, i) => crmAddDays(start, i)).map(d => `<span class="year-day ${d.getMonth() !== first.getMonth() ? 'is-outside' : ''} ${crmIsToday(d) ? 'is-today' : ''} ${busy.has(crmISO(d)) ? 'has-events' : ''}">${d.getDate()}</span>`).join('')}</span>`; };
+		pm.innerHTML = Array.from({ length:5 }, (_, i) => y - 2 + i).map(yy => `<div class="phone-year-block ${yy === y ? 'is-current' : ''}"><h2 class="phone-year-title">${yy}</h2><div class="phone-year-grid">${Array.from({ length:12 }, (_, m) => { const first = new Date(yy, m, 1); return `<button type="button" class="phone-year-month ${m === now.getMonth() && yy === now.getFullYear() ? 'is-today' : ''}" data-action="phone-year-month" data-date="${crmISO(first)}"><strong>${CRM_MONTHS[m]}</strong>${mini(first)}</button>`; }).join('')}</div></div>`).join('');
+	}
+	crmRenderPhoneCalendar();
+	if (level !== 'day') { crmIcons(); const cur = pm.querySelector('.is-current'); if (cur) pm.scrollTop = cur.offsetTop - 8; }
+}
+
 function crmRenderPhoneCalendar() {
 	const wrap = document.querySelector('.phone-cal'); if (!wrap) return;
 	const cursor = crmCal.cursor;
-	wrap.querySelector('[data-field="calendar.month"]').textContent = crmFmt(cursor, 'month');
+	const level = crmCal.level || 'day';
+	wrap.querySelector('[data-field="calendar.month"]').textContent = level === 'day' ? crmFmt(cursor, 'month') : level === 'month' ? String(cursor.getFullYear()) : 'Calendar';
+	wrap.querySelector('[data-action="phone-month-toggle"]').disabled = level === 'year';
 	const tb = wrap.querySelector('.phone-today'); if (tb) tb.classList.toggle('is-away', !crmIsToday(cursor));
 	/* week strip */
 	const start = crmStartOfWeek(cursor);
@@ -1947,19 +1973,8 @@ function crmPhoneEventScreen(e, body) {
 
 Object.assign(CRM_ACTIONS, {
 	'phone-day-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmRenderCalendar(); },
-	'phone-month-toggle': el => {
-		const pm = document.getElementById('phone-month');
-		pm.hidden = !pm.hidden;
-		el.setAttribute('aria-expanded', String(!pm.hidden));
-		document.querySelector('.phone-cal').classList.toggle('is-months', !pm.hidden);
-		if (!pm.hidden) {
-			const base = new Date(crmCal.cursor.getFullYear(), crmCal.cursor.getMonth(), 1);
-			pm.innerHTML = Array.from({ length:19 }, (_, i) => crmAddMonths(base, i - 6)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}" data-month="${crmISO(m).slice(0, 7)}">${crmMiniMonth(m, { selected:crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
-			crmIcons();
-			const cur = pm.querySelector('.phone-month-block.is-current');
-			if (cur) pm.scrollTop = cur.offsetTop - 8;
-		}
-	},
+	'phone-month-toggle': () => { crmPhoneZoom((crmCal.level || 'day') === 'day' ? 'month' : 'year'); }, /* zoom OUT: day → month → year */
+	'phone-year-month': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmPhoneZoom('month'); },
 	'phone-cal-filter': el => {
 		let menu = document.getElementById('phone-cal-filter-menu');
 		if (menu) { menu.remove(); return; }
