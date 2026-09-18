@@ -45,7 +45,7 @@ function crmDevice() {
 function crmInit() {
 	crmHydrate();
 	crmDevice();
-	let resizeTimer; addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (crmDevice() && document.body.dataset.view === 'daily-view') crmPhoneApply(); }, 120); });
+	let resizeTimer; addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (crmDevice()) location.reload(); else if (document.body.dataset.view === 'calendar' && document.body.dataset.device === 'desktop') crmRenderCalendar(); }, 120); });
 	const params = new URLSearchParams(location.search);
 	const role = CRM_DATA.roles[params.get('role')] ? params.get('role') : 'sales';
 	const roleData = CRM_DATA.roles[role];
@@ -1330,7 +1330,8 @@ function crmRenderCalendar() {
 	const cal = document.getElementById('calendar');
 	const mode = crmCal.mode;
 	cal.dataset.mode = mode;
-	cal.classList.toggle('is-sidebar-collapsed', !crmCal.sidebar);
+	const narrow = matchMedia('(max-width: 860px)').matches;
+	cal.classList.toggle('is-sidebar-collapsed', narrow ? crmCal.sidebarNarrow !== true : !crmCal.sidebar); /* narrow window: closed by default, the button opens it as an overlay */
 	document.querySelector('.calendar-title').textContent = { day:crmFmt(crmCal.cursor, 'long'), week:crmFmt(crmCal.cursor, 'week'), month:crmFmt(crmCal.cursor, 'month'), year:crmFmt(crmCal.cursor, 'year') }[mode];
 	document.querySelectorAll('.calendar-modes button').forEach(x => { const on = x.dataset.mode === mode; x.classList.toggle('is-active', on); x.classList.toggle('is-brand', on); });
 	history.replaceState(null, '', `calendar.html${crmQuery({ mode, date:crmISO(crmCal.cursor) })}`);
@@ -1687,7 +1688,7 @@ Object.assign(CRM_ACTIONS, {
 	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
-	'toggle-sidebar': () => { crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
+	'toggle-sidebar': () => { if (matchMedia('(max-width: 860px)').matches) { crmCal.sidebarNarrow = !crmCal.sidebarNarrow; crmRenderCalendar(); return; } crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
 	'menu-all': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; m.selected = new Set(el.checked ? m.items().map(i => i.value) : []); crmRenderFilterMenus(); m.onChange(); },
