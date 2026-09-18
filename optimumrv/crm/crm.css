@@ -1453,3 +1453,4 @@ body[data-device="phone"][data-view="daily-view"] .conversation { min-height:0; 
 }
 /* phone top bar: round grey buttons at both ends, title centered between them */
 body[data-device="phone"][data-view="daily-view"] .phone-topbar { grid-template-columns:44px 1fr 44px; .menu-btn { background:var(--color_bg-secondary); border-radius:50%; width:40px; height:40px; .feather { width:20px; height:20px; } &:active { background:var(--color_bg-secondary-darkest); } } .phone-title { justify-self:center; } .phone-filter .phone-filter-dot { top:2px; inset-inline-end:2px; border:2px solid #fff; width:10px; height:10px; } .phone-back { background:transparent; .feather { width:28px; height:28px; } } }
+body[data-device="phone"][data-view="daily-view"] .phone-topbar { justify-content:space-between; .phone-title, .phone-lead { flex:1; justify-content:center; text-align:center; } .menu-btn { flex:none; } }
