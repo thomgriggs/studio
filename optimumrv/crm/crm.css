@@ -1486,3 +1486,5 @@ body[data-device="phone"][data-view="daily-view"] .composer { position:relative;
 	.composer-mode-btn { grid-row:2; grid-column:2; width:36px; height:36px; border-radius:50%; background:var(--color_bg-secondary); display:inline-flex !important; align-items:center; justify-content:center; color:var(--color_brand-secondary); .feather { width:18px; height:18px; } }
 	.phone-menu.is-up { top:auto; inset-block-end:calc(100% - 4px); inset-inline-start:8px; inset-inline-end:auto; transform-origin:bottom left; button span .feather { width:16px; height:16px; color:var(--color_text-muted); } }
 }
+/* conversation top bar: equal side widths so the person stays dead center */
+body[data-device="phone"][data-view="daily-view"] .conversation .phone-topbar { .phone-back { width:88px; justify-content:flex-start; border-radius:var(--radius_pill); } .phone-actions { width:88px; justify-content:flex-end; } .phone-lead { flex:1; } }
