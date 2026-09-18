@@ -1,2 +1,5 @@
 .DS_Store
 .wrangler/
+
+# Standalone nested repos (deployed independently, not part of this monorepo)
+reliancecpa/current-site/

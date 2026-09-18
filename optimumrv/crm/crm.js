@@ -1923,7 +1923,7 @@ function crmRenderPhoneCalendar() {
 	const wrap = document.querySelector('.phone-cal'); if (!wrap) return;
 	const cursor = crmCal.cursor;
 	const level = crmCal.level || 'day';
-	wrap.querySelector('[data-field="calendar.month"]').textContent = level === 'day' ? CRM_MONTHS[cursor.getMonth()] : level === 'month' ? String(cursor.getFullYear()) : 'Calendar';
+	wrap.querySelector('[data-field="calendar.month"]').textContent = level === 'day' ? CRM_MONTHS[cursor.getMonth()] : String(cursor.getFullYear());
 	wrap.querySelector('[data-action="phone-month-toggle"]').disabled = level === 'year';
 	const tb = wrap.querySelector('.phone-today'); if (tb) tb.classList.toggle('is-away', !crmIsToday(cursor));
 	/* week strip */
