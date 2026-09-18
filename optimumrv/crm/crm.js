@@ -574,6 +574,8 @@ function crmForSaleSummary(summary) {
 /* everything here either performs a prototype-level version of the action   */
 /* or opens a sheet that states WHY the control exists and what it would do. */
 /* ========================================================================== */
+document.addEventListener('focusout', e => { const f = e.target.closest?.('.global-search'); if (f && !e.target.value) setTimeout(() => { if (!f.contains(document.activeElement)) { f.classList.remove('is-open'); f.querySelector('.global-search-toggle').setAttribute('aria-expanded', 'false'); } }, 80); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && e.target.closest?.('.global-search')) { e.target.value = ''; e.target.dispatchEvent(new Event('input', { bubbles:true })); e.target.blur(); } });
 document.addEventListener('click', e => {
 	const el = e.target.closest('[data-action]');
 	if (!el) return;
@@ -1694,6 +1696,7 @@ Object.assign(CRM_ACTIONS, {
 	'mini-pick': el => { crmCal.noSelect = false; crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
+	'search-expand': el => { const f = el.closest('.global-search'); const inp = f.querySelector('input'); if (f.classList.contains('is-open') && !inp.value) { f.classList.remove('is-open'); el.setAttribute('aria-expanded', 'false'); return; } f.classList.add('is-open'); el.setAttribute('aria-expanded', 'true'); inp.focus(); },
 	'toggle-sidebar': () => { if (matchMedia('(max-width: 860px)').matches) { crmCal.sidebarNarrow = !crmCal.sidebarNarrow; crmRenderCalendar(); return; } crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },

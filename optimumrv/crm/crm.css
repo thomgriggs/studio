@@ -244,7 +244,12 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 	.page-title { font-size:var(--font_size-title); font-weight:var(--font_weight-extra-bold-primary); }
 	.topbar-context { display:flex; align-items:center; gap:var(--gutter-small); margin-inline-start:auto; }
 	.calendar-modes { .segmented > button { padding-inline:18px; } }
-	.global-search { width:min(300px, 30vw); }
+	/* macOS-style: a lone magnifier that expands into the field when clicked; collapses again when left empty */
+	.global-search { width:36px; height:36px; padding:0; border-color:transparent; background:transparent; overflow:hidden; transition:width var(--motion), background var(--motion), border-color var(--motion); justify-content:flex-start;
+		.global-search-toggle { flex:none; width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border:0; background:transparent; border-radius:50%; color:var(--color_text-muted); cursor:pointer; &:hover { background:var(--color_bg-secondary); } .feather { width:18px; height:18px; } }
+		input { opacity:0; width:0; min-width:0; padding:0; transition:opacity var(--motion); }
+		&.is-open { width:min(300px, 30vw); background:var(--color_bg-primary); border-color:var(--color_line); input { opacity:1; width:auto; flex:1; padding-inline-end:10px; } .global-search-toggle:hover { background:transparent; } }
+	}
 }
 .menu-btn {
 	align-items:center;
