@@ -1681,11 +1681,11 @@ Object.assign(CRM_ACTIONS, {
 	/* navigation */
 	'cal-prev': () => crmGo(-1),
 	'cal-next': () => crmGo(1),
-	'cal-today': () => { crmCal.cursor = crmNow(); crmCal.mini = crmNow(); if (document.body.dataset.device === 'phone' && document.querySelector('.phone-cal')) { crmPhoneZoom(crmCal.level === 'year' ? 'month' : 'day'); return; } crmRenderCalendar(); }, /* phone: zoom IN year → month → day */
+	'cal-today': () => { crmCal.noSelect = false; crmCal.cursor = crmNow(); crmCal.mini = crmNow(); if (document.body.dataset.device === 'phone' && document.querySelector('.phone-cal')) { crmPhoneZoom(crmCal.level === 'year' ? 'month' : 'day'); return; } crmRenderCalendar(); }, /* phone: zoom IN year → month → day */
 	'calendar-mode-day': () => crmSetMode('day'), 'calendar-mode-week': () => crmSetMode('week'), 'calendar-mode-month': () => crmSetMode('month'), 'calendar-mode-year': () => crmSetMode('year'),
 	'open-day': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('day'); },
 	'open-month': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmSetMode('month'); },
-	'mini-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
+	'mini-pick': el => { crmCal.noSelect = false; crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'toggle-sidebar': () => { if (matchMedia('(max-width: 860px)').matches) { crmCal.sidebarNarrow = !crmCal.sidebarNarrow; crmRenderCalendar(); return; } crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
@@ -1939,7 +1939,7 @@ function crmPhoneZoom(level) {
 	wrap.querySelector('[data-action="phone-month-toggle"]').setAttribute('aria-expanded', String(level !== 'day'));
 	if (level === 'month') {
 		const base = new Date(crmCal.cursor.getFullYear(), crmCal.cursor.getMonth(), 1);
-		pm.innerHTML = `<div class="phone-dow">${CRM_DOW.map(d => `<span>${d[0]}</span>`).join('')}</div>` + Array.from({ length:25 }, (_, i) => crmAddMonths(base, i - 12)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}" data-date="${crmISO(m)}">${crmMiniMonth(m, { selected:crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
+		pm.innerHTML = `<div class="phone-dow">${CRM_DOW.map(d => `<span>${d[0]}</span>`).join('')}</div>` + Array.from({ length:25 }, (_, i) => crmAddMonths(base, i - 12)).map(m => `<div class="phone-month-block ${m.getMonth() === crmCal.cursor.getMonth() && m.getFullYear() === crmCal.cursor.getFullYear() ? 'is-current' : ''}" data-date="${crmISO(m)}">${crmMiniMonth(m, { selected:crmCal.noSelect ? null : crmCal.cursor, pick:'mini-pick', pickEvent:'' })}</div>`).join('');
 	} else if (level === 'year') {
 		/* compact months (no nested buttons — the whole month is one tap target) */
 		const y = crmCal.cursor.getFullYear(), now = crmNow();
@@ -2032,7 +2032,7 @@ function crmPhoneEventScreen(e, body) {
 Object.assign(CRM_ACTIONS, {
 	'phone-day-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmRenderCalendar(); },
 	'phone-month-toggle': () => { crmPhoneZoom((crmCal.level || 'day') === 'day' ? 'month' : 'year'); }, /* zoom OUT: day → month → year */
-	'phone-year-month': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmPhoneZoom('month'); },
+	'phone-year-month': el => { const m = crmDate(el.dataset.date), now = crmNow(); crmCal.cursor = m.getMonth() === now.getMonth() && m.getFullYear() === now.getFullYear() ? now : m; crmCal.mini = crmCal.cursor; crmCal.noSelect = !crmIsToday(crmCal.cursor); /* iOS: coming from the year, no day is picked yet */ crmPhoneZoom('month'); },
 	'phone-cal-filter': el => {
 		let menu = document.getElementById('phone-cal-filter-menu');
 		if (menu) { menu.remove(); return; }
