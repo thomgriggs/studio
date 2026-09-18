@@ -1497,3 +1497,5 @@ body[data-device="phone"] .modal { .overlay { flex-direction:column; justify-con
 body[data-device="phone"][data-view="daily-view"] .modal .overlay { align-items:stretch; flex-direction:column; justify-content:flex-end; }
 /* back chevron: no button shape on tap/focus — it's a glyph, like iOS */
 body[data-device="phone"][data-view="daily-view"] .phone-topbar .phone-back { background:transparent !important; border-radius:0; box-shadow:none; &:hover, &:active, &:focus, &:focus-visible { background:transparent !important; outline:none; } &:active .feather { opacity:.5; } }
+/* both phone top bars share one height */
+body[data-device="phone"][data-view="daily-view"] .phone-topbar { --phone_topbar:64px; height:calc(max(env(safe-area-inset-top), var(--safe_top, 0px)) + var(--phone_topbar)); min-height:0; padding-block:0; padding-block-start:max(env(safe-area-inset-top), var(--safe_top, 0px)); align-items:center; .phone-lead { gap:1px; .avatar-small { width:32px; height:32px; font-size:.75rem; } .phone-lead-name { font-size:.75rem; line-height:1.1; } } }
