@@ -1794,8 +1794,22 @@ Object.assign(CRM_ACTIONS, {
 	'open-focus': el => { crmOpenLead(el.dataset.lead); crmShowScreen('conversation', true); },
 	'phone-filter': el => {
 		const desk = crmDesk();
-		const m = crmSheet({ title:'Show', body:crmRows(desk.tabs.map(t => ({ icon:t.id === crmState.tab ? 'check-circle' : 'circle', title:t.label, sub:`${desk.leads.filter(l => l.tabs.includes(t.id)).length} conversations` }))) });
-		m.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => { const t = desk.tabs[+b.dataset.pick]; crmState.tab = t.id; document.querySelectorAll('.inbox-tabs button').forEach(x => x.classList.toggle('is-active', x.dataset.tab === t.id)); crmRenderInbox(desk, document.getElementById('phone-search-input').value); crmClose(); }));
+		let menu = document.getElementById('phone-filter-menu');
+		if (menu) { menu.remove(); return; }
+		menu = document.createElement('div');
+		menu.id = 'phone-filter-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = desk.tabs.map(t => `<button type="button" role="menuitemradio" aria-checked="${t.id === crmState.tab}" data-action="phone-filter-pick" data-tab="${t.id}"><span>${t.label}<small>${desk.leads.filter(l => l.tabs.includes(t.id)).length}</small></span>${t.id === crmState.tab ? crmIcon('check') : ''}</button>`).join('');
+		el.closest('.phone-topbar').appendChild(menu);
+		crmIcons();
+		const close = e => { if (!e.target.closest('#phone-filter-menu, [data-action="phone-filter"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true), 0);
+	},
+	'phone-filter-pick': el => {
+		const desk = crmDesk();
+		crmState.tab = el.dataset.tab;
+		document.querySelectorAll('.inbox-tabs button').forEach(x => x.classList.toggle('is-active', x.dataset.tab === crmState.tab));
+		crmRenderInbox(desk, document.getElementById('phone-search-input').value);
+		document.getElementById('phone-filter-menu')?.remove();
 	},
 	'open-lead-details': () => {
 		const lead = crmLeadOrPick(); if (!lead) return;

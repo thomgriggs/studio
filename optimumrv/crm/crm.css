@@ -1446,3 +1446,8 @@ body[data-device="phone"][data-view="daily-view"] {
 body[data-device="phone"][data-view="daily-view"] .lead-header .stage-stepper { align-self:stretch; width:100%; ol { width:100%; } li { font-size:.64rem; letter-spacing:-.01em; } }
 body[data-device="phone"][data-view="daily-view"] .inbox .inbox-list { max-height:none; }
 body[data-device="phone"][data-view="daily-view"] .conversation { min-height:0; }
+
+/* PHONE MENU — iOS-style dropdown hanging off a top-bar button */
+.phone-menu { background:color-mix(in srgb, var(--color_bg-primary), transparent 6%); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-radius:14px; box-shadow:0 12px 40px rgba(0,0,0,.22), 0 0 0 .5px rgba(0,0,0,.08); display:grid; inset-inline-end:10px; min-width:200px; overflow:hidden; position:absolute; top:calc(100% - 4px); z-index:50; animation:crm-rise var(--motion) both; transform-origin:top right;
+	button { align-items:center; display:flex; gap:12px; justify-content:space-between; padding:12px 16px; font-size:1rem; text-align:start; span { display:flex; align-items:baseline; gap:8px; } small { color:var(--color_text-muted); font-size:.8rem; } .feather { width:18px; height:18px; color:var(--color_text); } & + button { border-block-start:.5px solid var(--color_line); } &:active { background:var(--color_bg-secondary); } }
+}
