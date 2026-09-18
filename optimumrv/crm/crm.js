@@ -458,12 +458,13 @@ function crmBoardLeads(desk) {
 }
 
 function crmRenderBoard(desk) {
-	if (document.body.dataset.device === 'phone') { crmRenderPhoneBoard(desk); return; }
+	const phone = document.body.dataset.device === 'phone';
+	if (phone) { crmRenderPhoneBoard(desk); if (crmBoard.mode === 'list') return; }
 	const table = document.getElementById('lead-table');
 	document.querySelectorAll('.board-modes button').forEach(b => { const on = b.dataset.mode === crmBoard.mode; b.classList.toggle('is-active', on); b.classList.toggle('is-brand', on); });
 	if (table) table.hidden = crmBoard.mode !== 'list';
 	document.getElementById('pipeline').hidden = crmBoard.mode === 'list';
-	if (crmBoard.mode === 'list') { crmRenderLeadTable(desk); return; }
+	if (crmBoard.mode === 'list' && !phone) { crmRenderLeadTable(desk); return; }
 	const board = document.getElementById('pipeline');
 	const lanes = (desk.board && desk.board.lanes) || {};
 	const summary = desk.board && desk.board.summary;
@@ -487,7 +488,7 @@ function crmRenderBoard(desk) {
 		const inStage = leads.filter(l => l.stage === stage.id);
 		col.querySelector('[data-field="stage.count"]').textContent = inStage.length;
 		if (stage.terminal) {
-			col.classList.toggle('is-collapsed', !crmBoard.showLost);
+			col.classList.toggle('is-collapsed', !crmBoard.showLost && !phone);
 			const head = col.querySelector('.column-header');
 			head.dataset.action = 'toggle-column';
 			head.insertAdjacentHTML('beforeend', `<i data-feather="${crmBoard.showLost ? 'chevron-left' : 'chevron-right'}"></i>`);
@@ -530,7 +531,7 @@ function crmLeadCard(lead, desk) {
 	if (c.unread || lead.unread) el.classList.add('is-unread');
 	crmFill(el, lead);
 
-	el.draggable = lead.stage !== 'lost' || crmState.role !== 'sales';
+	el.draggable = document.body.dataset.device !== 'phone' && (lead.stage !== 'lost' || crmState.role !== 'sales');
 	el.addEventListener('dragstart', e => { e.dataTransfer.setData('text/plain', lead.id); e.dataTransfer.effectAllowed = 'move'; el.classList.add('is-dragging'); });
 	el.addEventListener('dragend', () => el.classList.remove('is-dragging'));
 
@@ -632,7 +633,7 @@ function crmInitPhoneBoard(desk, params) {
 	addEventListener('popstate', e => { const sc = e.state && e.state.screen; if (sc === 'lead' && crmPhone.leadId) crmPhoneLeadScreen(crmPhone.leadId, false); else crmShowScreen('board', false); });
 	/* swipes: the list moves a stage, the left edge on the lead screen goes back */
 	let sw = null;
-	const begin = (t, x, y) => { const zone = t.closest('.phone-leads, .phone-stages') ? 'list' : (document.body.dataset.screen === 'lead' && x < 28) ? 'edge' : null; sw = zone ? { zone, x, y } : null; };
+	const begin = (t, x, y) => { const zone = t.closest('.phone-leads') ? 'list' : (document.body.dataset.screen === 'lead' && x < 28) ? 'edge' : null; sw = zone ? { zone, x, y } : null; };
 	const finish = (x, y) => { if (!sw) return; const dx = x - sw.x, dy = y - sw.y, z = sw.zone; sw = null; if (Math.abs(dx) < 50 || Math.abs(dy) > 60) return; if (z === 'edge') { if (dx > 0) CRM_ACTIONS['phone-back'](); return; } const i = desk.stages.findIndex(st => st.id === crmBoard.stage); const n = i + (dx < 0 ? 1 : -1); if (n < 0 || n >= desk.stages.length) return; crmBoard.stage = desk.stages[n].id; crmPhoneSlide([document.getElementById('phone-leads')], dx < 0 ? 1 : -1, () => crmRenderBoard(desk)); };
 	document.addEventListener('touchstart', e => { const t = e.touches[0]; begin(e.target, t.clientX, t.clientY); }, { passive:true });
 	document.addEventListener('touchend', e => { const t = e.changedTouches[0]; finish(t.clientX, t.clientY); }, { passive:true });
@@ -649,6 +650,19 @@ function crmRenderPhoneBoard(desk) {
 	const sel = strip.querySelector('.is-selected'); if (sel) sel.scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' });
 	const list = document.getElementById('phone-leads');
 	const stage = desk.stages.find(st => st.id === crmBoard.stage) || desk.stages[0];
+	const board = document.getElementById('pipeline');
+	if (board.parentElement !== wrap) wrap.insertBefore(board, list.nextSibling);
+	const modeBtn = wrap.querySelector('.phone-board-mode');
+	modeBtn.innerHTML = `<i data-feather="${crmBoard.mode === 'board' ? 'list' : 'columns'}"></i>`; modeBtn.setAttribute('aria-label', crmBoard.mode === 'board' ? 'Switch to list' : 'Switch to board');
+	list.hidden = crmBoard.mode === 'board'; board.hidden = crmBoard.mode !== 'board';
+	if (crmBoard.mode === 'board') {
+		/* the columns are rendered by crmRenderBoard right after this; snap to the selected stage once they exist */
+		requestAnimationFrame(() => { const col = board.querySelector(`.pipeline-column[data-stage="${crmBoard.stage}"]`); if (col && !crmBoard._syncing) board.scrollTo({ left:col.offsetLeft - 14, behavior:'auto' }); });
+		if (!board.dataset.phoneBound) { board.dataset.phoneBound = '1'; board.addEventListener('scroll', () => { const x = board.scrollLeft + board.clientWidth * .4; const cols = [...board.querySelectorAll('.pipeline-column')]; const cur = cols.reverse().find(c => c.offsetLeft - 14 <= x) || cols[cols.length - 1]; if (cur && cur.dataset.stage !== crmBoard.stage) { crmBoard.stage = cur.dataset.stage; strip.querySelectorAll('.stage-pill').forEach(p => p.classList.toggle('is-selected', p.dataset.stage === crmBoard.stage)); strip.querySelector('.is-selected')?.scrollIntoView({ inline:'center', block:'nearest', behavior:'smooth' }); } }, { passive:true }); }
+		crmIcons();
+		if (document.body.dataset.screen === 'lead' && crmPhone.leadId) crmPhoneLeadScreen(crmPhone.leadId, false);
+		return;
+	}
 	if (crmBoard.search.trim()) {
 		list.innerHTML = desk.stages.map(st => { const inStage = leads.filter(l => l.stage === st.id); return inStage.length ? `<p class="agenda-date">${st.label}</p>${inStage.map(l => crmLeadRow(l, desk)).join('')}` : ''; }).join('') || `<p class="column-empty"><i data-feather="search"></i>Nothing matches “${crmBoard.search.trim()}”</p>`;
 	} else if (summary && summary.stage === stage.id) {
@@ -1150,15 +1164,16 @@ function crmQuickEdit(lead, opts = {}) {
 }
 
 Object.assign(CRM_ACTIONS, {
-	'quick-edit': el => { if (el.dataset.lead && !el.closest('.lead-card')) { const ld = crmDesk().leads.find(l => l.id === el.dataset.lead); if (ld) { crmQuickEdit(ld); return; } } const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
+	'quick-edit': el => { const card = el.closest('.lead-card'); if (card && document.body.dataset.device === 'phone') { crmPhoneLeadScreen(card.dataset.lead, true); return; } if (el.dataset.lead && !el.closest('.lead-card')) { const ld = crmDesk().leads.find(l => l.id === el.dataset.lead); if (ld) { crmQuickEdit(ld); return; } } const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
 	'quick-stage': () => {},      /* handled inside crmQuickEdit */
 	'quick-reassign': () => {},   /* handled inside crmQuickEdit */
 	'quick-followup': () => {},   /* handled inside crmQuickEdit */
 	'toggle-column': () => { crmBoard.showLost = !crmBoard.showLost; crmRenderBoard(crmDesk()); },
+	'phone-board-mode': () => { crmBoard.mode = crmBoard.mode === 'board' ? 'list' : 'board'; try { sessionStorage.setItem('optimumrv-crm-board-mode', crmBoard.mode); } catch (e) {} crmRenderBoard(crmDesk()); },
 	'board-mode': el => { crmBoard.mode = el.dataset.mode; try { sessionStorage.setItem('optimumrv-crm-board-mode', crmBoard.mode); } catch (e) {} crmRenderBoard(crmDesk()); },
 	'table-sort': el => { const k = el.dataset.key; crmBoard.sort = { key:k, dir:crmBoard.sort.key === k ? -crmBoard.sort.dir : 1 }; crmRenderBoard(crmDesk()); },
 	'open-lead-row': el => { if (document.body.dataset.device === 'phone') crmPhoneLeadScreen(el.dataset.lead, true); else { const lead = crmDesk().leads.find(l => l.id === el.dataset.lead); if (lead) crmQuickEdit(lead); } },
-	'phone-stage-pick': el => { const desk = crmDesk(); const from = desk.stages.findIndex(st => st.id === crmBoard.stage), to = desk.stages.findIndex(st => st.id === el.dataset.stage); if (from === to) return; crmBoard.stage = el.dataset.stage; crmPhoneSlide([document.getElementById('phone-leads')], to > from ? 1 : -1, () => crmRenderBoard(desk)); },
+	'phone-stage-pick': el => { if (crmBoard.mode === 'board') { const col = document.querySelector(`#pipeline .pipeline-column[data-stage="${el.dataset.stage}"]`); if (col) document.getElementById('pipeline').scrollTo({ left:col.offsetLeft - 14, behavior:'smooth' }); return; } const desk = crmDesk(); const from = desk.stages.findIndex(st => st.id === crmBoard.stage), to = desk.stages.findIndex(st => st.id === el.dataset.stage); if (from === to) return; crmBoard.stage = el.dataset.stage; crmPhoneSlide([document.getElementById('phone-leads')], to > from ? 1 : -1, () => crmRenderBoard(desk)); },
 	'phone-board-filter': el => {
 		let menu = document.getElementById('phone-board-filter-menu');
 		if (menu) { menu.remove(); return; }

@@ -81,6 +81,7 @@
 			<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
 			<span class="phone-title"></span>
 			<span class="phone-actions">
+				<button type="button" class="menu-btn phone-board-mode" data-action="phone-board-mode" aria-label="Switch to list"><i data-feather="list"></i></button>
 				<button type="button" class="menu-btn phone-board-stores" data-action="phone-board-stores" aria-label="Stores" aria-haspopup="menu" hidden><i data-feather="map-pin"></i></button>
 				<button type="button" class="menu-btn phone-board-filter" data-action="phone-board-filter" aria-label="Filter" aria-haspopup="menu" hidden><i data-feather="filter"></i><span class="phone-filter-dot" hidden></span></button>
 				<button type="button" class="menu-btn" data-action="new-lead" aria-label="New lead"><i data-feather="plus"></i></button>
@@ -91,7 +92,7 @@
 		<!-- PHONE STAGES : one pill per stage with its count; tap or swipe the list to change stage -->
 		<div class="phone-stages" id="phone-stages"></div>
 		<!-- PHONE LEADS : the selected stage's leads as rows; tap a row for the lead screen -->
-		<section class="phone-leads" id="phone-leads"></section>
+		<section class="phone-leads" id="phone-leads" hidden></section>
 		<footer class="phone-bottombar">
 			<form class="field phone-search" role="search" onsubmit="return false">
 				<i data-feather="search"></i>
