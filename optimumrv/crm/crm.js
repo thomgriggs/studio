@@ -1805,6 +1805,24 @@ Object.assign(CRM_ACTIONS, {
 		const close = e => { if (!e.target.closest('#phone-filter-menu, [data-action="phone-filter"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
 		setTimeout(() => document.addEventListener('click', close, true), 0);
 	},
+	'phone-more': el => {
+		const lead = crmLeadOrPick(); if (!lead) return;
+		let menu = document.getElementById('phone-more-menu');
+		if (menu) { menu.remove(); return; }
+		const items = [];
+		items.push({ action:'schedule', icon:'calendar', label:'Schedule' });
+		if (lead.cta && lead.stage !== 'lost') items.push({ action:lead.cta.action, icon:lead.cta.icon, label:lead.cta.label });
+		if (lead.stage === 'working' && !['consign', 'backoffice'].includes(crmState.desk)) items.push({ action:'mark-agreed', icon:'check-circle', label:'Mark agreed', tone:'ok' });
+		if (lead.stage === 'lost') items.push({ action:'reopen-lead', icon:'rotate-ccw', label:'Reopen' });
+		else if (lead.stage !== 'agreed' && crmState.desk !== 'backoffice') items.push({ action:'mark-lost', icon:'x-circle', label:'Mark lost', tone:'muted' });
+		menu = document.createElement('div');
+		menu.id = 'phone-more-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = items.map(it => `<button type="button" role="menuitem" data-action="${it.action}" data-tone="${it.tone || ''}"><span>${it.label}</span>${crmIcon(it.icon)}</button>`).join('');
+		el.closest('.phone-topbar').appendChild(menu);
+		crmIcons();
+		const close = e => { if (!e.target.closest('[data-action="phone-more"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true), 0);
+	},
 	'phone-filter-pick': el => {
 		const desk = crmDesk();
 		crmState.tab = el.dataset.tab;

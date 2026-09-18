@@ -1470,3 +1470,12 @@ body[data-device="phone"][data-view="daily-view"] .composer {
 body[data-device="phone"][data-view="daily-view"] .composer { grid-template-rows:auto auto; .composer-status { grid-row:1; margin:0 0 2px; } .composer-add, .composer-mode, .composer-input, .composer-dictate, .composer-send { grid-row:2; } }
 /* phone composer: disclaimer sits above the composer's top border */
 body[data-device="phone"][data-view="daily-view"] .composer { border-block-start:0; padding-block-start:0; .composer-status { border-block-end:1px solid var(--color_line); margin:0 -8px 6px; padding:6px 8px; background:var(--color_bg-primary); } }
+
+/* phone conversation: call + ⋯ on the right; the action strip is gone (it's all in the menu) */
+body[data-device="phone"][data-view="daily-view"] {
+	.phone-actions { display:flex; gap:8px; flex:none; }
+	.phone-topbar .phone-lead { flex:1; }
+	.lead-header .lead-actions { display:none; }
+	.phone-menu button[data-tone="ok"] { color:var(--status_ok); .feather { color:var(--status_ok); } }
+	.phone-menu button[data-tone="muted"] { color:var(--color_text-muted); .feather { color:var(--color_text-muted); } }
+}
