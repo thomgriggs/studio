@@ -1490,3 +1490,5 @@ body[data-device="phone"][data-view="daily-view"] .composer { position:relative;
 body[data-device="phone"][data-view="daily-view"] .conversation .phone-topbar { .phone-back { width:88px; justify-content:flex-start; border-radius:var(--radius_pill); } .phone-actions { width:88px; justify-content:flex-end; } .phone-lead { flex:1; } }
 /* conversation screen: the thread takes all the room so the composer is always at the bottom */
 body[data-device="phone"][data-view="daily-view"] .conversation { .thread { flex:1 1 auto; min-height:0; } .lead-header, .phone-topbar, .composer { flex:none; } }
+/* phone sheets: always full width from the bottom, whatever the content */
+body[data-device="phone"] .modal { .overlay { flex-direction:column; justify-content:flex-end; align-items:stretch; padding:0; } .modal-window { width:100%; max-width:100%; flex:0 0 auto; border-radius:var(--radius-large) var(--radius-large) 0 0; max-height:92dvh; } .modal-footer { padding-block-end:calc(env(safe-area-inset-bottom) + 14px); } }
