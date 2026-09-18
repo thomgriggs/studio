@@ -1588,7 +1588,6 @@ body[data-device="phone"][data-view="calendar"] { position:relative; .topbar { d
 /* phone calendar polish: today ring in the month drop-down, chevron flip, Today pill in the agenda head */
 body[data-device="phone"][data-view="calendar"] {
 	.phone-month .mini-month .mini-day.is-today:not(.is-selected) .mini-num { background:transparent; color:var(--color_brand-secondary); box-shadow:inset 0 0 0 1.5px var(--color_brand-secondary); }
-	.phone-topbar .phone-month-title .feather { transform-origin:center; }
 	.phone-agenda .agenda-head .btn.week-today { display:inline-flex; height:28px; padding-inline:12px; font-size:.8rem; }
 }
 /* phone calendar: scrolling month stack (iOS), Today in the bottom bar */
