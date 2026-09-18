@@ -579,7 +579,7 @@ document.addEventListener('click', e => {
 	if (!el) return;
 	const fn = CRM_ACTIONS[el.dataset.action];
 	if (!fn) return;
-	e.preventDefault();
+	if (!(el.matches('input[type="checkbox"], input[type="radio"]'))) e.preventDefault(); /* preventDefault would undo a checkbox's toggle */
 	fn(el, e);
 });
 
@@ -1246,8 +1246,11 @@ function crmInitCalendar(params) {
 		wrap.innerHTML = `<div class="filter-menu" data-menu="stores"></div><div class="filter-menu" data-menu="reps"></div>`;
 		crmRenderFilterMenus();
 	} else {
+		/* a salesperson is assigned one store — no store picker, just where they are */
+		crmCal.stores = null;
 		wrap.innerHTML = `<span class="context-pill"><i data-feather="map-pin"></i><span data-field="user.location">${roleData.user.location}</span></span>`;
 	}
+	document.querySelectorAll('[data-action="phone-cal-stores"]').forEach(b => { b.hidden = !roleData.owners; });
 
 	/* time gutter */
 	const times = document.querySelector('.calendar-times');
@@ -1292,6 +1295,7 @@ function crmRenderFilterMenus() {
 	crmIcons();
 }
 function crmStoreReps(stores) { return [...new Set(CRM_DATA.stores.filter(st => stores.has(st.code)).flatMap(st => st.reps || []))]; }
+function crmStoreName(e) { if (e.kind === 'followup') return ''; const st = CRM_DATA.stores.find(x => x.code === (e.store || 'OCA')); return st ? st.name : ''; }
 function crmStoreItems() { return CRM_DATA.stores.map(st => ({ value:st.code, label:st.name, sub:(st.reps || []).length ? `${st.reps.length} rep${st.reps.length > 1 ? 's' : ''}` : '', swatch:'data-store' })); }
 function crmRepItems(stores) { return crmStoreReps(stores).map(r => ({ value:r, label:r, sub:CRM_DATA.stores.filter(st => (st.reps || []).includes(r) && stores.has(st.code)).map(st => st.code).join(' · '), swatch:`data-owner="${r}"` })); }
 document.addEventListener('click', e => { if (document.contains(e.target) && !e.target.closest('.filter-menu')) document.querySelectorAll('.filter-menu.is-open').forEach(m => { m.classList.remove('is-open'); m.querySelector('.filter-menu-panel').hidden = true; m.querySelector('[data-action="toggle-menu"]').setAttribute('aria-expanded', 'false'); }); });
@@ -1422,6 +1426,7 @@ function crmCalendarEvent(e, y) {
 	if (e.unit) thumb.innerHTML = e.image ? `<img src="${e.image}" alt="">` : `<svg><use href="#${e.svg || 'rv-trailer'}"/></svg>`; else thumb.remove();
 	if (!e.unit) el.querySelector('.event-unit').remove();
 	if (e.timeLabel) el.querySelector('.event-meta').innerHTML = `<span data-field="type">${e.type}</span><br><i data-feather="clock"></i><span data-field="timeLabel">${e.timeLabel}</span>`;
+	const storeName = crmStoreName(e); if (storeName) el.querySelector('.event-meta').insertAdjacentHTML('beforeend', `<br><i data-feather="map-pin"></i><span data-field="store">${storeName}</span>`);
 	el.querySelector('.event-name').insertAdjacentHTML('afterbegin', crmStatusGlyph(e));
 	el.querySelector('.event-done').remove();
 	return el;
@@ -1449,7 +1454,7 @@ function crmRenderAgenda(date, target) {
 			return `<li class="agenda-item" data-status="${st}" data-event="${e.id}" data-category="${cat}" data-action="open-event">
 				<time>${crmHourLabel(e.start)}${e.end ? `<small>${crmHourLabel(e.end)}</small>` : ''}</time>
 				<span class="agenda-dot" data-category="${cat}" data-tone="${e.tone || ''}"></span>
-				<span class="agenda-text"><strong>${e.kind === 'followup' ? `<input type="checkbox" class="agenda-check" ${e.done ? 'checked' : ''} data-action="event-complete" data-event="${e.id}" aria-label="Done">` : crmStatusGlyph(e)}${e.kind === 'followup' ? e.label : e.name}</strong><small>${e.kind === 'followup' ? 'Follow-up' : [e.type, e.unit, showOwner ? e.owner : ''].filter(Boolean).join(' · ')}</small></span>
+				<span class="agenda-text"><strong>${e.kind === 'followup' ? `<input type="checkbox" class="agenda-check" ${e.done ? 'checked' : ''} data-action="event-complete" data-event="${e.id}" aria-label="Done">` : crmStatusGlyph(e)}${e.kind === 'followup' ? e.label : e.name}</strong><small>${e.kind === 'followup' ? 'Follow-up' : [e.type, e.unit, crmStoreName(e), showOwner ? e.owner : ''].filter(Boolean).join(' · ')}</small></span>
 				<span class="agenda-actions">
 					<button type="button" class="btn btn-round" data-action="event-open-conversation" data-event="${e.id}" aria-label="Open conversation" title="Open conversation"><i data-feather="message-circle"></i></button>
 					<button type="button" class="btn btn-round" data-action="event-complete" data-event="${e.id}" aria-label="Complete" title="Complete"><i data-feather="check"></i></button>
@@ -1984,7 +1989,7 @@ function crmRenderPhoneCalendar() {
 	/* month drop-down (only re-render while open) */
 
 	/* filter dot */
-	const dot = wrap.querySelector('.phone-filter-dot');
+	const dot = wrap.querySelector('.phone-cal-filter:not(.phone-cal-stores) .phone-filter-dot');
 	if (dot) { const allCats = crmCal.show.appointment && crmCal.show.logistics && crmCal.show.followup; const allOwners = !crmCal.owners || crmCal.owners.size === crmStoreReps(crmCal.stores || new Set(['OCA'])).length; dot.hidden = allCats && allOwners; }
 	/* agenda: the day, or search results across days */
 	const agenda = document.getElementById('phone-agenda');
@@ -2033,13 +2038,26 @@ Object.assign(CRM_ACTIONS, {
 	'phone-day-pick': el => { crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; crmRenderCalendar(); },
 	'phone-month-toggle': () => { crmPhoneZoom((crmCal.level || 'day') === 'day' ? 'month' : 'year'); }, /* zoom OUT: day → month → year */
 	'phone-year-month': el => { const m = crmDate(el.dataset.date), now = crmNow(); crmCal.cursor = m.getMonth() === now.getMonth() && m.getFullYear() === now.getFullYear() ? now : m; crmCal.mini = crmCal.cursor; crmCal.noSelect = !crmIsToday(crmCal.cursor); /* iOS: coming from the year, no day is picked yet */ crmPhoneZoom('month'); },
+	'phone-cal-stores': el => {
+		let menu = document.getElementById('phone-cal-stores-menu');
+		if (menu) { menu.remove(); return; }
+		document.getElementById('phone-cal-filter-menu')?.remove();
+		menu = document.createElement('div');
+		menu.id = 'phone-cal-stores-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
+		menu.innerHTML = `<p class="phone-menu-label">Stores</p>` + CRM_DATA.stores.map(st => `<label><input type="checkbox" ${crmCal.stores.has(st.code) ? 'checked' : ''} data-action="toggle-store" data-store="${st.code}"><span class="swatch" data-store="${st.code}"></span>${st.name}</label>`).join('');
+		el.closest('.phone-topbar').appendChild(menu);
+		const close = e => { if (!e.target.closest('#phone-cal-stores-menu, [data-action="phone-cal-stores"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
+		setTimeout(() => document.addEventListener('click', close, true));
+	},
+	'toggle-store': el => { const v = new Set(crmCal.stores); el.checked ? v.add(el.dataset.store) : v.delete(el.dataset.store); CRM_MENUS.stores.selected = v; crmRenderCalendar(); },
 	'phone-cal-filter': el => {
+		document.getElementById('phone-cal-stores-menu')?.remove();
 		let menu = document.getElementById('phone-cal-filter-menu');
 		if (menu) { menu.remove(); return; }
 		const roleData = CRM_DATA.roles[crmState.role];
 		menu = document.createElement('div');
 		menu.id = 'phone-cal-filter-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
-		menu.innerHTML = `<p class="phone-menu-label">Show</p>
+		menu.innerHTML = `<p class="phone-menu-label">Activity</p>
 			<label><input type="checkbox" ${crmCal.show.appointment ? 'checked' : ''} data-action="toggle-calendar" data-category="appointment"><span class="swatch" data-category="appointment"></span>Appointments</label>
 			<label><input type="checkbox" ${crmCal.show.logistics ? 'checked' : ''} data-action="toggle-calendar" data-category="logistics"><span class="swatch" data-category="logistics"></span>Deliveries &amp; drop-offs</label>
 			<label><input type="checkbox" ${crmCal.show.followup ? 'checked' : ''} data-action="toggle-followups" data-category="followup"><span class="swatch" data-category="followup"></span>Follow-ups</label>`

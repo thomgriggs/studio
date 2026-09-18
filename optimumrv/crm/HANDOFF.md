@@ -178,3 +178,6 @@ The `sheet-reason` text on each action is the current best guess at the business
 - `assets/optimumrvlogo.svg` / `-alt.svg` — live wordmarks from optimumrv.com.
 - `assets/unit-*.webp` — placeholder RV photos from the website; `#rv-trailer` / `#rv-motorhome` inline SVG symbols are the no-photo fallback.
 - `js/feather.min.js`, `js/micromodal.min.js` — same builds as the website. Icons are `<i data-feather="name">` replaced on load.
+
+
+**Calendar location.** Every appointment / delivery carries a `store`; it shows on the event card (`data-field="store"`) and the agenda line. The sidebar's *Activity* list is the kind of interaction the salesperson is having, not separate calendars. A salesperson is assigned one store, so they get no store picker (just the *Ocala, FL* pill). Management can see many: the store filter (`CRM_MENUS.stores`, the same checkbox dropdown as the pipeline) plus the salespeople filter that follows it. On the phone the store picker is the pin button (`phone-cal-stores`, `toggle-store`) beside the funnel, shown for management only; the funnel's red dot marks when activity or salespeople are being narrowed.
