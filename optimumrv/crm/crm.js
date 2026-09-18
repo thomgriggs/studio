@@ -1587,7 +1587,7 @@ function crmClosePopover() { const pop = document.getElementById('event-popover'
 /* re-render the calendar and keep the same card open, anchored to the same event */
 function crmRefreshPopover(id, editing) {
 	if (crmPop.draft && crmPop.draft.id === id) { crmOpenPopover(crmPop.draft, crmPop.draftAnchor, { editing }); return; }
-	if (document.body.dataset.device === 'phone' && document.body.dataset.view === 'calendar') { crmPop.eventId = id; crmPop.editing = editing || null; crmPersist(); crmRenderCalendar(); return; }
+	if (document.body.dataset.device === 'phone' && document.body.dataset.view === 'calendar') { const ed = editing || null; crmClosePopover(); crmPersist(); crmPop.eventId = id; crmPop.editing = ed; crmRenderCalendar(); if (document.body.dataset.screen !== 'event') { const ev = crmEventById(id); if (ev) crmOpenPopover(ev, null, { editing:ed }); } return; }
 	crmPersist();
 	crmRenderCalendar();
 	const ev = crmEventById(id);
