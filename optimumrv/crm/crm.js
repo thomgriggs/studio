@@ -1886,8 +1886,28 @@ function crmInitPhoneCalendar(params) {
 	addEventListener('popstate', e => { if (document.body.dataset.device !== 'phone' || document.body.dataset.view !== 'calendar') return; crmShowScreen((e.state && e.state.screen) || 'agenda', false); });
 	/* swipes: week strip → ±7 days, agenda → ±1 day, left edge on the event screen → back */
 	let sw = null;
-	document.addEventListener('touchstart', e => { const t = e.touches[0]; const zone = e.target.closest('.phone-week') ? 'week' : e.target.closest('.phone-agenda') ? 'agenda' : (document.body.dataset.screen === 'event' && t.clientX < 28) ? 'edge' : null; sw = zone ? { zone, x:t.clientX, y:t.clientY } : null; }, { passive:true });
-	document.addEventListener('touchend', e => { if (!sw) return; const t = e.changedTouches[0]; const dx = t.clientX - sw.x, dy = t.clientY - sw.y; const z = sw.zone; sw = null; if (Math.abs(dx) < 50 || Math.abs(dy) > 60) return; if (z === 'edge') { if (dx > 0) CRM_ACTIONS['phone-back'](); return; } const days = z === 'week' ? 7 : 1; crmCal.cursor = crmAddDays(crmCal.cursor, dx < 0 ? days : -days); crmCal.mini = crmCal.cursor; crmRenderCalendar(); }, { passive:true });
+	const zoneOf = (target, x) => target.closest('.phone-week') ? 'week' : target.closest('.phone-agenda') ? 'agenda' : (document.body.dataset.screen === 'event' && x < 28) ? 'edge' : null;
+	const begin = (target, x, y) => { const zone = zoneOf(target, x); sw = zone ? { zone, x, y } : null; };
+	const finish = (x, y) => {
+		if (!sw) return; const dx = x - sw.x, dy = y - sw.y; const z = sw.zone; sw = null;
+		if (Math.abs(dx) < 50 || Math.abs(dy) > 60) return;
+		if (z === 'edge') { if (dx > 0) CRM_ACTIONS['phone-back'](); return; }
+		if (crmCal.level && crmCal.level !== 'day') return;
+		const days = z === 'week' ? 7 : 1, dir = dx < 0 ? 1 : -1;
+		const before = crmStartOfWeek(crmCal.cursor).getTime();
+		crmCal.cursor = crmAddDays(crmCal.cursor, dir * days); crmCal.mini = crmCal.cursor;
+		const weekChanged = crmStartOfWeek(crmCal.cursor).getTime() !== before;
+		/* iOS-style slide: the strip slides when the week changes, the day slides when the day changes */
+		const targets = [];
+		if (weekChanged) targets.push(document.getElementById('phone-week'));
+		if (z === 'agenda') targets.push(document.getElementById('phone-agenda'));
+		crmPhoneSlide(targets, dir, () => { crmCal._phoneScrolledFor = null; crmRenderCalendar(); });
+	};
+	document.addEventListener('touchstart', e => { const t = e.touches[0]; begin(e.target, t.clientX, t.clientY); }, { passive:true });
+	document.addEventListener('touchend', e => { const t = e.changedTouches[0]; finish(t.clientX, t.clientY); }, { passive:true });
+	/* mouse drag does the same, so the gesture can be tried in a desktop browser */
+	document.addEventListener('pointerdown', e => { if (e.pointerType === 'mouse' && e.button === 0) begin(e.target, e.clientX, e.clientY); });
+	document.addEventListener('pointerup', e => { if (e.pointerType === 'mouse') finish(e.clientX, e.clientY); });
 	if (document.body.dataset.device === 'phone') {
 		const ev = params.get('event') && crmEventById(params.get('event'));
 		crmShowScreen(ev ? 'event' : 'agenda', false);
@@ -1898,6 +1918,17 @@ function crmInitPhoneCalendar(params) {
 
 
 /* Phone zoom levels — iOS Calendar: the title zooms out (day → month → year), Today zooms in (year → month → day) */
+/* slide the given panels out in the swipe direction, re-render, slide the new content in from the other side */
+function crmPhoneSlide(els, dir, render) {
+	els = els.filter(Boolean);
+	const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+	if (!els.length || reduce || !els[0].animate) { render(); return; }
+	Promise.all(els.map(el => el.animate([{ transform:'translateX(0)', opacity:1 }, { transform:`translateX(${dir * -30}%)`, opacity:0 }], { duration:130, easing:'ease-in', fill:'forwards' }).finished)).then(() => {
+		render();
+		els.forEach(el => { el.getAnimations().forEach(a => a.cancel()); el.animate([{ transform:`translateX(${dir * 30}%)`, opacity:0 }, { transform:'translateX(0)', opacity:1 }], { duration:200, easing:'ease-out' }); });
+	});
+}
+
 function crmPhoneZoom(level) {
 	crmCal.level = level;
 	const wrap = document.querySelector('.phone-cal'); if (!wrap) return;
