@@ -359,7 +359,7 @@ body.nav-scroll { overflow:hidden; }
 	min-height:0;
 	.inbox-header { align-items:center; display:flex; gap:var(--gutter-small); justify-content:space-between; padding:var(--gutter-small) var(--gutter); }
 	.inbox-tabs { padding:0 var(--gutter) var(--gutter-small); .segmented { display:flex; > button { flex:1; } } }
-	.inbox-search { padding:0 var(--gutter) var(--gutter-small); }
+	.inbox-search { order:10; padding:var(--gutter-small) var(--gutter); border-block-start:1px solid var(--color_line); } /* bottom of the column, like the phone's bottom bar */
 	.inbox-list { flex:1; min-height:0; overflow:auto; border-block-start:1px solid var(--color_line); }
 	.inbox-empty { color:var(--color_text-soft); padding:var(--gutter-large); text-align:center; }
 }
