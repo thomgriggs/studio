@@ -127,7 +127,7 @@ function crmBindDrawer() {
 /* ---------- dev labels overlay ------------------------------------------ */
 const CRM_BLOCKS = [
 	'topbar', 'sidebar-navigation', 'pipeline-toggle', 'pipeline-filters', 'filter-control',
-	'calendar', 'calendar-nav', 'calendar-modes', 'calendar-sidebar', 'mini-month', 'calendar-list', 'calendar-main', 'calendar-head', 'calendar-grid', 'calendar-now', 'calendar-event', 'followup-task', 'day-agenda', 'agenda-item', 'calendar-month', 'calendar-year', 'event-popover', 'event-editor',
+	'calendar', 'calendar-nav', 'calendar-modes', 'calendar-sidebar', 'sidebar-nav', 'mini-month', 'calendar-list', 'calendar-main', 'calendar-head', 'calendar-grid', 'calendar-now', 'calendar-event', 'followup-task', 'day-agenda', 'agenda-item', 'calendar-month', 'calendar-year', 'event-popover', 'event-editor',
 	'pipeline', 'pipeline-column', 'column-header', 'column-lane', 'lead-card', 'card-owner', 'card-flag', 'forsale-summary', 'quick-edit', 'stage-picker',
 	'phone-topbar', 'phone-focus', 'phone-bottombar', 'phone-cal', 'phone-week', 'phone-month', 'phone-agenda', 'phone-event', 'inbox', 'inbox-item', 'conversation', 'lead-header', 'lead-identity', 'lead-actions', 'stage-stepper', 'lead-summary', 'summary-card',
 	'detail-panel', 'detail-section', 'thread', 'thread-day', 'thread-event', 'thread-message', 'thread-call', 'thread-note', 'thread-email', 'thread-image', 'composer'
@@ -1506,14 +1506,13 @@ function crmSlotsFor(store, date, excludeId) {
 /* ========================================================================== */
 /* CALENDAR — state, init, navigation                                        */
 /* ========================================================================== */
-const crmCal = { mode:'week', cursor:null, mini:null, show:{ appointment:true, logistics:true, followup:true }, owners:null, stores:null, search:'', sidebar:true };
+const crmCal = { mode:'week', cursor:null, mini:null, show:{ appointment:true, logistics:true, followup:true }, owners:null, stores:null, search:'' };
 
 function crmInitCalendar(params) {
 	const roleData = CRM_DATA.roles[crmState.role];
 	crmCal.cursor = crmNow(); crmCal.mini = crmNow();
 	if (['day', 'week', 'month', 'year'].includes(params.get('mode'))) crmCal.mode = params.get('mode');
 	if (params.get('date')) crmCal.cursor = crmDate(params.get('date'));
-	try { const pref = sessionStorage.getItem('optimumrv-crm-cal-sidebar'); crmCal.sidebar = pref ? pref !== 'closed' : innerWidth > 860; } catch (e) { crmCal.sidebar = innerWidth > 860; }
 
 	/* management: store + salesperson filter menus in the topbar */
 	const wrap = document.querySelector('.calendar-filters');
@@ -1539,7 +1538,7 @@ function crmInitCalendar(params) {
 
 	document.getElementById('global-search-input').addEventListener('input', e => { crmCal.search = e.target.value; crmRenderCalendar(); });
 	document.addEventListener('keydown', e => {
-		if (e.target.matches('input, select, textarea') || document.querySelector('.modal.is-open')) return;
+		if (e.target.matches?.('input, select, textarea') || document.querySelector('.modal.is-open')) return;
 		if (e.key === 'ArrowLeft') CRM_ACTIONS['cal-prev'](); else if (e.key === 'ArrowRight') CRM_ACTIONS['cal-next']();
 		else if (e.key === 't') CRM_ACTIONS['cal-today'](); else if ('dwmy'.includes(e.key) && e.key.length === 1) crmSetMode({ d:'day', w:'week', m:'month', y:'year' }[e.key]);
 	});
@@ -1613,8 +1612,6 @@ function crmRenderCalendar() {
 	const cal = document.getElementById('calendar');
 	const mode = crmCal.mode;
 	cal.dataset.mode = mode;
-	const narrow = matchMedia('(max-width: 860px)').matches;
-	cal.classList.toggle('is-sidebar-collapsed', narrow ? crmCal.sidebarNarrow !== true : !crmCal.sidebar); /* narrow window: closed by default, the button opens it as an overlay */
 	document.querySelector('.calendar-title').textContent = { day:crmFmt(crmCal.cursor, 'full'), week:crmFmt(crmCal.cursor, 'month'), month:crmFmt(crmCal.cursor, 'month'), year:crmFmt(crmCal.cursor, 'year') }[mode]; /* day: September 18, 2026 · week + month: September 2026 · year: 2026 */
 	document.querySelectorAll('.calendar-modes button').forEach(x => { const on = x.dataset.mode === mode; x.classList.toggle('is-active', on); x.classList.toggle('is-brand', on); });
 	history.replaceState(null, '', `calendar.html${crmQuery({ mode, date:crmISO(crmCal.cursor) })}`);
@@ -1974,7 +1971,6 @@ Object.assign(CRM_ACTIONS, {
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'search-expand': el => { const f = el.closest('.global-search'); const inp = f.querySelector('input'); if (f.classList.contains('is-open') && !inp.value) { f.classList.remove('is-open'); el.setAttribute('aria-expanded', 'false'); return; } f.classList.add('is-open'); el.setAttribute('aria-expanded', 'true'); inp.focus(); },
 	'summary-scroll': el => { const wrap = el.closest('.lead-summary').querySelector('.summary-track'); const card = wrap.querySelector('.summary-card'); const step = card ? card.getBoundingClientRect().width + 12 : 240; wrap.scrollBy({ left:step * +el.dataset.dir, behavior:'smooth' }); },
-	'toggle-sidebar': () => { if (matchMedia('(max-width: 860px)').matches) { crmCal.sidebarNarrow = !crmCal.sidebarNarrow; crmRenderCalendar(); return; } crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
 	'menu-all': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; m.selected = new Set(el.checked ? m.items().map(i => i.value) : []); crmRenderFilterMenus(); m.onChange(); },

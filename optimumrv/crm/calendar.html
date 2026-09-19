@@ -51,18 +51,12 @@
 	</aside>
 	<div class="global-overlay"></div>
 
-	<!-- ===== TOPBAR : menu · sidebar toggle · title · ‹ Today › · new · view modes · context · search ===== -->
+	<!-- ===== TOPBAR : menu · title · new · view modes · context · search ===== -->
 	<header class="topbar">
 		<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
-		<button type="button" class="menu-btn" data-action="toggle-sidebar" aria-label="Show or hide the calendar sidebar" title="Sidebar"><i data-feather="sidebar"></i></button>
 		<h1 class="page-title sr-only">Calendar</h1>
-		<!-- CALENDAR NAV : previous / today / next, and the title for the current range -->
-		<div class="calendar-nav">
-			<button type="button" class="menu-btn" data-action="cal-prev" aria-label="Previous"><i data-feather="chevron-left"></i></button>
-			<button type="button" class="btn" data-action="cal-today">Today</button>
-			<button type="button" class="menu-btn" data-action="cal-next" aria-label="Next"><i data-feather="chevron-right"></i></button>
-			<span class="calendar-title" data-field="calendar.title">August 2026</span>
-		</div>
+		<!-- CALENDAR TITLE : the current range (‹ Today › live in the sidebar) -->
+		<div class="calendar-nav"><span class="calendar-title" data-field="calendar.title">September 2026</span></div>
 		<button type="button" class="btn btn-primary btn-round" data-action="new-event" aria-label="New appointment or follow-up"><i data-feather="plus"></i></button>
 		<!-- CALENDAR MODES : Day / Week / Month / Year (keys d w m y) -->
 		<div class="calendar-modes">
@@ -85,6 +79,12 @@
 
 		<!-- CALENDAR SIDEBAR : mini month for jumping dates, and the calendars you can show/hide -->
 		<aside class="calendar-sidebar" aria-label="Calendar sidebar">
+			<!-- SIDEBAR NAV : previous / today / next for the current range (day, week, month or year) -->
+			<div class="sidebar-nav">
+				<button type="button" class="menu-btn" data-action="cal-prev" aria-label="Previous"><i data-feather="chevron-left"></i></button>
+				<button type="button" class="btn" data-action="cal-today">Today</button>
+				<button type="button" class="menu-btn" data-action="cal-next" aria-label="Next"><i data-feather="chevron-right"></i></button>
+			</div>
 			<div id="mini-month"></div>
 			<section class="calendar-list-group">
 				<h3>Activity</h3>
