@@ -344,7 +344,7 @@ body.nav-scroll { overflow:hidden; }
 /* ========================================================================== */
 .daily-view {
 	display:grid;
-	grid-template-columns:var(--inbox_width) 1fr;
+	grid-template-columns:var(--inbox_width) minmax(0, 1fr); /* minmax(0,…) so the conversation can never push past the viewport */
 	height:100dvh;
 	min-height:0;
 }
@@ -397,8 +397,10 @@ body.nav-scroll { overflow:hidden; }
 /* ========================================================================== */
 .conversation {
 	display:grid;
+	grid-template-columns:minmax(0, 1fr); /* the implicit column would otherwise size to the header's content and overflow the track */
 	grid-template-rows:auto 1fr auto;
 	min-height:0;
+	min-width:0;
 }
 
 /* ========================================================================== */
@@ -409,7 +411,8 @@ body.nav-scroll { overflow:hidden; }
 	display:grid;
 	gap:var(--gutter-small) var(--gutter);
 	grid-template-areas:"identity actions" "stepper stepper" "summary summary";
-	grid-template-columns:1fr auto;
+	grid-template-columns:minmax(0, 1fr) auto;
+	min-width:0;
 	padding:var(--gutter-small) var(--gutter) var(--gutter);
 	.lead-identity { grid-area:identity; display:flex; gap:var(--gutter); align-items:center; min-width:0; }
 	.lead-name { align-items:center; display:flex; flex-wrap:wrap; gap:10px; font-size:var(--font_size-title); font-weight:var(--font_weight-extra-bold-primary); }
@@ -460,7 +463,7 @@ body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header 
 .lead-summary {
 	display:grid;
 	gap:var(--gutter-small);
-	grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+	grid-template-columns:repeat(auto-fit, minmax(min(230px, 100%), 1fr));
 }
 .summary-card {
 	align-items:center;
@@ -565,11 +568,12 @@ body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header 
 	border-block-start:1px solid var(--color_line);
 	display:grid;
 	gap:10px var(--gutter-small);
-	grid-template-columns:auto auto 1fr auto;
+	grid-template-columns:auto auto minmax(0, 1fr) auto; /* the field gives way first; nothing pushes the send button off-screen */
+	min-width:0;
 	padding:var(--gutter-small) var(--gutter);
 	.composer-add { background:var(--color_bg-secondary); }
 	.composer-mode .segmented > button.is-active { color:var(--color_brand-secondary); }
-	.composer-input { border:1px solid var(--color_line-strong); border-radius:var(--radius_pill); background:#fff; padding-inline:20px 12px; input { height:52px; font-size:1.05rem; } &:focus-within { border-color:var(--color_text-muted); } }
+	.composer-input { border:1px solid var(--color_line-strong); border-radius:var(--radius_pill); background:#fff; min-width:0; padding-inline:20px 12px; input { height:52px; font-size:1.05rem; min-width:0; width:100%; } &:focus-within { border-color:var(--color_text-muted); } }
 	.composer-tools { display:flex; gap:4px; color:var(--color_text-muted); button { padding:8px; border-radius:50%; &:hover { background:var(--color_bg-secondary); } } }
 	.composer-send { background:var(--thread_outbound); color:#fff; height:48px; width:48px; border:0; &:hover { background:color-mix(in srgb, var(--thread_outbound), #000 12%); } }
 	.composer-status { grid-column:1 / -1; align-items:center; color:var(--color_text-muted); display:flex; font-size:var(--font_size-xsmall); gap:6px; justify-content:flex-end; .feather { color:var(--status_ok); } }
@@ -714,7 +718,7 @@ body:not([data-role="sales"]) .lead-card { border-inline-start-width:0; }
 	max-width:960px;
 	padding:clamp(24px, 6vw, 72px) var(--gutter);
 	.picker-head { display:grid; gap:12px; img { height:44px; width:auto; } h1 { font-size:clamp(1.8rem, 1.2rem + 2vw, 2.6rem); font-weight:var(--font_weight-extra-bold-primary); } p { color:var(--color_text-muted); max-width:60ch; } }
-	.picker-grid { display:grid; gap:var(--gutter); grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
+	.picker-grid { display:grid; gap:var(--gutter); grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
 	.picker-card { background:var(--color_bg-primary); border:1px solid var(--color_line); border-radius:var(--radius); box-shadow:var(--shadow_card); display:grid; gap:12px; padding:var(--gutter); h2 { font-size:1.4rem; } p { color:var(--color_text-muted); font-size:var(--font_size-small); } .picker-links { display:grid; gap:6px; margin-block-start:auto; } .picker-links a { align-items:center; display:flex; gap:10px; padding:10px 12px; border-radius:var(--radius_small); background:var(--color_bg-secondary); font-weight:var(--font_weight-bold-primary); &:hover { background:var(--color_bg-secondary-darkest); } .feather { color:var(--color_brand-secondary); } &.is-stub { color:var(--color_text-soft); .feather { color:currentColor; } } } }
 	.picker-note { color:var(--color_text-muted); font-size:var(--font_size-small); }
 }
@@ -744,7 +748,8 @@ body.show-labels [data-dev-labeled] { outline:1px dashed rgba(0,0,0,.25); outlin
 /* MEDIA QUERY                                                                */
 /* ========================================================================== */
 @media (max-width:1100px) {
-	body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header { grid-template-areas:"identity actions" "stepper stepper" "summary summary"; grid-template-columns:1fr auto; }
+	body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header { grid-template-areas:"identity actions" "stepper stepper" "summary summary"; grid-template-columns:minmax(0, 1fr) auto; }
+	.lead-header .lead-actions { flex-wrap:wrap; justify-content:flex-end; }
 	.thread-message { max-width:85%; }
 }
 @media (max-width:860px) {
