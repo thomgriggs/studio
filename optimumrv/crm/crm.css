@@ -949,7 +949,7 @@ body[data-view="pipeline"] .pipeline, body[data-view="calendar"] .calendar, body
 	gap:var(--gutter);
 	overflow:auto;
 	padding:var(--gutter-small) var(--gutter-small) var(--gutter);
-	.sidebar-nav { align-items:center; display:flex; gap:6px; .btn { flex:1; height:36px; justify-content:center; } .menu-btn { width:36px; height:36px; } }
+	.sidebar-nav { align-items:center; display:flex; gap:6px; .btn { flex:1; height:36px; justify-content:center; background:transparent; border:1px solid var(--color_line); &:hover { background:var(--color_bg-secondary); } } .menu-btn { width:36px; height:36px; background:transparent; &:hover { background:var(--color_bg-secondary); } } }
 	/* the mini month anchors to the bottom; the lists sit under the nav and the gap absorbs the rest */
 	#mini-month { order:9; margin-block-start:auto; flex:none; border-block-start:1px solid var(--color_line); padding-block-start:var(--gutter-small); margin-inline:calc(-1 * var(--gutter-small)); padding-inline:var(--gutter-small); }
 	.calendar-list-group { flex:none; }
