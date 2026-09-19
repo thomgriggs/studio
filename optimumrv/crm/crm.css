@@ -636,7 +636,8 @@ body[data-device="phone"] {
 }
 .pipeline-column {
 	--stage_color:var(--color_text-muted);
-	background:#ebebee; /* a notch darker than the page grey so the tinted cards sit clearly on it */
+	background:#fafafb; /* near-white column with a hairline; the cards' colour tint is what separates them, not a darker grey */
+	border:1px solid var(--color_line);
 	border-radius:var(--radius);
 	display:flex;
 	flex:1 0 clamp(280px, 22vw, 340px);
@@ -659,7 +660,7 @@ body[data-device="phone"] {
 /* ========================================================================== */
 .lead-card {
 	/* white on the grey column so the card reads as an object, not a patch of the same grey; the stage lives in the edge + stripe */
-	background:color-mix(in srgb, var(--stage_color), #fff 92%); /* the original tint — the column behind it is what changed */
+	background:color-mix(in srgb, var(--stage_color), #fff 90%); /* a touch more hue so the card reads against the near-white column */
 	border-inline-start:4px solid var(--stage_color);
 	border-radius:var(--radius_small);
 	color:color-mix(in srgb, var(--stage_color), #000 20%);
