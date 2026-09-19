@@ -944,12 +944,15 @@ body[data-view="pipeline"] .pipeline, body[data-view="calendar"] .calendar, body
 /* ========================================================================== */
 .calendar-sidebar {
 	border-inline-end:1px solid var(--color_line);
-	display:grid;
-	align-content:start;
+	display:flex;
+	flex-direction:column;
 	gap:var(--gutter);
 	overflow:auto;
 	padding:var(--gutter-small) var(--gutter-small) var(--gutter);
 	.sidebar-nav { align-items:center; display:flex; gap:6px; .btn { flex:1; height:36px; justify-content:center; } .menu-btn { width:36px; height:36px; } }
+	/* the mini month anchors to the bottom; the lists sit under the nav and the gap absorbs the rest */
+	#mini-month { order:9; margin-block-start:auto; flex:none; }
+	.calendar-list-group { flex:none; }
 	.calendar-list-group { display:grid; gap:8px; h3 { color:var(--color_text-muted); font-family:var(--font_name-primary); font-size:var(--font_size-xsmall); font-weight:var(--font_weight-bold-primary); letter-spacing:.06em; text-transform:uppercase; padding-inline:6px; } }
 }
 .calendar-list { display:grid; gap:2px; }
