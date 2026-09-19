@@ -726,7 +726,18 @@ function crmRenderPhoneBoard(desk) {
 	if (crmBoard.mode === 'board') {
 		/* the columns are rendered by crmRenderBoard right after this; snap to the selected stage once they exist */
 		requestAnimationFrame(() => { const col = board.querySelector(`.pipeline-column[data-stage="${crmBoard.stage}"]`); if (col && !crmBoard._syncing) board.scrollTo({ left:col.offsetLeft - 14, behavior:'auto' }); });
-		if (!board.dataset.phoneBound) { board.dataset.phoneBound = '1'; board.addEventListener('scroll', () => { const x = board.scrollLeft + board.clientWidth * .4; const cols = [...board.querySelectorAll('.pipeline-column')]; const atEnd = board.scrollLeft >= board.scrollWidth - board.clientWidth - 2; const cur = atEnd ? cols[cols.length - 1] : (cols.slice().reverse().find(c => c.offsetLeft - 14 <= x) || cols[0]); if (cur && cur.dataset.stage !== crmBoard.stage) { crmBoard.stage = cur.dataset.stage; strip.querySelectorAll('.stage-pill').forEach(p => p.classList.toggle('is-selected', p.dataset.stage === crmBoard.stage)); crmCenterInStrip(strip.querySelector('.is-selected')); } }, { passive:true }); }
+		if (!board.dataset.phoneBound) { board.dataset.phoneBound = '1'; let settle; board.addEventListener('scroll', () => {
+			/* a pill tap sets crmBoard._target; while that programmatic scroll is in flight the strip stays put */
+			clearTimeout(settle);
+			settle = setTimeout(() => {
+				const cols = [...board.querySelectorAll('.pipeline-column')];
+				const visible = c => c.offsetLeft - 14 >= board.scrollLeft - 8 && c.offsetLeft - 14 <= board.scrollLeft + board.clientWidth - 40;
+				let cur;
+				if (crmBoard._target) { const t = cols.find(c => c.dataset.stage === crmBoard._target); if (t && visible(t)) cur = t; crmBoard._target = null; }
+				if (!cur) cur = cols.reduce((best, c) => Math.abs(c.offsetLeft - 14 - board.scrollLeft) < Math.abs(best.offsetLeft - 14 - board.scrollLeft) ? c : best, cols[0]); /* nearest column to the left edge */
+				if (cur && cur.dataset.stage !== crmBoard.stage) { crmBoard.stage = cur.dataset.stage; strip.querySelectorAll('.stage-pill').forEach(p => p.classList.toggle('is-selected', p.dataset.stage === crmBoard.stage)); crmCenterInStrip(strip.querySelector('.is-selected')); }
+			}, 90);
+		}, { passive:true }); }
 		crmIcons();
 		if (document.body.dataset.screen === 'lead' && crmPhone.leadId) crmPhoneLeadScreen(crmPhone.leadId, false);
 		return;
@@ -1241,7 +1252,7 @@ Object.assign(CRM_ACTIONS, {
 	'board-mode': el => { crmBoard.mode = el.dataset.mode; try { sessionStorage.setItem('optimumrv-crm-board-mode', crmBoard.mode); } catch (e) {} crmRenderBoard(crmDesk()); },
 	'table-sort': el => { const k = el.dataset.key; crmBoard.sort = { key:k, dir:crmBoard.sort.key === k ? -crmBoard.sort.dir : 1 }; crmRenderBoard(crmDesk()); },
 	'open-lead-row': el => { if (document.body.dataset.device === 'phone') crmPhoneLeadScreen(el.dataset.lead, true); else { const lead = crmDesk().leads.find(l => l.id === el.dataset.lead); if (lead) crmQuickEdit(lead); } },
-	'phone-stage-pick': el => { if (crmBoard.mode === 'board') { const col = document.querySelector(`#pipeline .pipeline-column[data-stage="${el.dataset.stage}"]`); crmBoard.stage = el.dataset.stage; el.parentElement.querySelectorAll('.stage-pill').forEach(p => p.classList.toggle('is-selected', p === el)); crmCenterInStrip(el); if (col) document.getElementById('pipeline').scrollTo({ left:col.offsetLeft - 14, behavior:'smooth' }); return; } const desk = crmDesk(); const from = desk.stages.findIndex(st => st.id === crmBoard.stage), to = desk.stages.findIndex(st => st.id === el.dataset.stage); if (from === to) return; crmBoard.stage = el.dataset.stage; crmPhoneSlide([document.getElementById('phone-leads')], to > from ? 1 : -1, () => crmRenderBoard(desk)); },
+	'phone-stage-pick': el => { if (crmBoard.mode === 'board') { const col = document.querySelector(`#pipeline .pipeline-column[data-stage="${el.dataset.stage}"]`); crmBoard.stage = el.dataset.stage; crmBoard._target = el.dataset.stage; el.parentElement.querySelectorAll('.stage-pill').forEach(p => p.classList.toggle('is-selected', p === el)); crmCenterInStrip(el); if (col) document.getElementById('pipeline').scrollTo({ left:col.offsetLeft - 14, behavior:'smooth' }); return; } const desk = crmDesk(); const from = desk.stages.findIndex(st => st.id === crmBoard.stage), to = desk.stages.findIndex(st => st.id === el.dataset.stage); if (from === to) return; crmBoard.stage = el.dataset.stage; crmPhoneSlide([document.getElementById('phone-leads')], to > from ? 1 : -1, () => crmRenderBoard(desk)); },
 	'phone-board-filter': el => {
 		let menu = document.getElementById('phone-board-filter-menu');
 		if (menu) { menu.remove(); return; }
