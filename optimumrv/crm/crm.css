@@ -1750,3 +1750,9 @@ body[data-device="phone"][data-view="pipeline"] {
 		.phone-menu.is-up { top:auto; inset-block-end:calc(100% - 4px); inset-inline-start:8px; inset-inline-end:auto; transform-origin:bottom left; button span .feather { width:16px; height:16px; color:var(--color_text-muted); } }
 	}
 }
+
+/* < 1024px: the lead action strip condenses to Call + ⋯ (the phone's pattern) */
+.lead-actions-compact { display:none; position:relative; gap:8px; .menu-btn { background:var(--color_bg-secondary); border-radius:50%; width:40px; height:40px; flex:none; .feather { width:20px; height:20px; } &[data-action="call"] { color:var(--color_brand-secondary); } } .phone-menu { top:calc(100% + 6px); inset-inline-end:0; } }
+@media (max-width:1024px) {
+	body[data-device="desktop"] .lead-header .lead-actions { > .action-button, > .reopen-lead, > .lead-cta { display:none !important; } .lead-actions-compact { display:inline-flex; } }
+}

@@ -2099,7 +2099,7 @@ Object.assign(CRM_ACTIONS, {
 		menu = document.createElement('div');
 		menu.id = 'phone-more-menu'; menu.className = 'phone-menu'; menu.setAttribute('role', 'menu');
 		menu.innerHTML = items.map(it => `<button type="button" role="menuitem" data-action="${it.action}" data-tone="${it.tone || ''}"><span>${it.label}</span>${crmIcon(it.icon)}</button>`).join('');
-		el.closest('.phone-topbar').appendChild(menu);
+		(el.closest('.phone-topbar') || el.closest('.lead-actions-compact')).appendChild(menu);
 		crmIcons();
 		const close = e => { if (!e.target.closest('[data-action="phone-more"]')) { menu.remove(); document.removeEventListener('click', close, true); } };
 		setTimeout(() => document.addEventListener('click', close, true), 0);

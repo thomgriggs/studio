@@ -128,6 +128,11 @@
 					<button type="button" class="btn waiting-pill reopen-lead" data-action="reopen-lead"><i data-feather="rotate-ccw"></i>Reopen</button>
 					<!-- LEAD CTA : role-specific primary action (Mark price agreed, Send 60-day update, Waiting on …) -->
 					<div class="lead-cta" hidden></div>
+					<!-- COMPACT ACTIONS (< 1024px) : Call + ⋯, the phone's pattern — the menu carries Schedule / CTA / Agreed / Lost / Reopen -->
+					<span class="lead-actions-compact">
+						<button type="button" class="menu-btn" data-action="call" aria-label="Call"><i data-feather="phone"></i></button>
+						<button type="button" class="menu-btn" data-action="phone-more" aria-label="More actions" aria-haspopup="menu"><i data-feather="more-horizontal"></i></button>
+					</span>
 				</div>
 
 				<!-- LEAD SUMMARY : KPI cards — unit(s), pricing, payoff/trade, appointment/term -->
