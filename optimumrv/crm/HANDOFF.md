@@ -196,4 +196,4 @@ Tap a row → **lead screen** (`.phone-lead-screen`, `crmPhoneLeadScreen`, histo
 
 **Narrow desktop (< 1100px).** The Daily View keeps the thread tall: the lead summary cards get compact, and the composer's Text / Email / Note control collapses into the phone's single mode icon with its dropdown (`composer-mode-menu`).
 
-**Lead summary is always one row.** `.lead-summary` is a sideways-scrolling flex row at every width — the moment it stacks there is no room left to message.
+**Lead summary is always one row.** `.lead-summary` is a single flex row at every width — the moment it stacks there is no room left to message. No scrollbar: when the row overflows, round arrows appear at its edges (`summary-scroll`, `.summary-arrow`, `has-prev`/`has-next` classes kept current by `crmSummaryArrows`) and each click pages one card.

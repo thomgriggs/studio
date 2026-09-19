@@ -461,14 +461,20 @@ body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header 
 /* LEAD SUMMARY — KPI cards: unit, pricing, payoff/trade, appointment/term   */
 /* ========================================================================== */
 .lead-summary {
-	/* always ONE row — when it stacks there's no room left to message; extra cards scroll sideways */
+	/* always ONE row — when it stacks there's no room left to message; extra cards page with the arrows (no scrollbar) */
 	display:flex;
 	gap:var(--gutter-small);
 	overflow-x:auto;
-	padding-block-end:4px;
-	scroll-snap-type:x proximity;
-	scrollbar-width:thin;
+	position:relative;
+	scroll-snap-type:x mandatory;
+	scrollbar-width:none;
+	&::-webkit-scrollbar { display:none; }
 	.summary-card { flex:1 0 230px; min-width:230px; scroll-snap-align:start; }
+	.summary-arrow { position:sticky; top:50%; align-self:center; flex:none; width:30px; height:30px; border-radius:50%; border:1px solid var(--color_line); background:color-mix(in srgb, var(--color_bg-primary), transparent 8%); backdrop-filter:blur(6px); box-shadow:var(--shadow_float); color:var(--color_text); display:none; align-items:center; justify-content:center; cursor:pointer; z-index:2; margin-inline:-30px 0; .feather { width:16px; height:16px; } &:hover { background:var(--color_bg-primary); }
+		&.is-prev { inset-inline-start:0; order:-1; margin-inline:0 -30px; }
+		&.is-next { inset-inline-end:0; } }
+	&.has-prev .summary-arrow.is-prev { display:inline-flex; }
+	&.has-next .summary-arrow.is-next { display:inline-flex; }
 }
 .summary-card {
 	align-items:center;

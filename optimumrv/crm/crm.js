@@ -295,6 +295,12 @@ function crmRenderStepper(desk, lead) {
 	document.querySelector('.stepper-status').textContent = lead.lost ? `Lost · ${lead.lost.reason} · ${lead.lost.when}` : (lead.stageNote || '');
 }
 
+function crmSummaryArrows() {
+	const wrap = document.querySelector('.lead-summary'); if (!wrap) return;
+	const max = wrap.scrollWidth - wrap.clientWidth;
+	wrap.classList.toggle('has-prev', wrap.scrollLeft > 4);
+	wrap.classList.toggle('has-next', max - wrap.scrollLeft > 4);
+}
 function crmRenderSummary(lead) {
 	const wrap = document.querySelector('.lead-summary');
 	wrap.innerHTML = '';
@@ -317,6 +323,12 @@ function crmRenderSummary(lead) {
 		if (!card.status || !card.status.length) status.remove();
 		wrap.appendChild(el);
 	});
+	/* arrows instead of a scrollbar: shown only when the row overflows; each click moves one card */
+	if (document.body.dataset.device !== 'phone') {
+		wrap.insertAdjacentHTML('beforeend', `<button type="button" class="summary-arrow is-prev" data-action="summary-scroll" data-dir="-1" aria-label="Previous cards">${crmIcon('chevron-left')}</button><button type="button" class="summary-arrow is-next" data-action="summary-scroll" data-dir="1" aria-label="More cards">${crmIcon('chevron-right')}</button>`);
+		crmSummaryArrows();
+		if (!wrap.dataset.arrowsBound) { wrap.dataset.arrowsBound = '1'; wrap.addEventListener('scroll', crmSummaryArrows, { passive:true }); addEventListener('resize', crmSummaryArrows); }
+	}
 }
 
 function crmRenderThread(lead) {
@@ -1948,6 +1960,7 @@ Object.assign(CRM_ACTIONS, {
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'search-expand': el => { const f = el.closest('.global-search'); const inp = f.querySelector('input'); if (f.classList.contains('is-open') && !inp.value) { f.classList.remove('is-open'); el.setAttribute('aria-expanded', 'false'); return; } f.classList.add('is-open'); el.setAttribute('aria-expanded', 'true'); inp.focus(); },
+	'summary-scroll': el => { const wrap = el.closest('.lead-summary'); const card = wrap.querySelector('.summary-card'); const step = card ? card.getBoundingClientRect().width + 12 : 240; wrap.scrollBy({ left:step * +el.dataset.dir, behavior:'smooth' }); },
 	'toggle-sidebar': () => { if (matchMedia('(max-width: 860px)').matches) { crmCal.sidebarNarrow = !crmCal.sidebarNarrow; crmRenderCalendar(); return; } crmCal.sidebar = !crmCal.sidebar; try { sessionStorage.setItem('optimumrv-crm-cal-sidebar', crmCal.sidebar ? 'open' : 'closed'); } catch (e) {} crmRenderCalendar(); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
