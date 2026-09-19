@@ -658,16 +658,19 @@ body[data-device="phone"] {
 /* LEAD CARD — one lead on the board; tinted by its column's stage           */
 /* ========================================================================== */
 .lead-card {
-	background:color-mix(in srgb, var(--stage_color), #fff 92%);
+	/* white on the grey column so the card reads as an object, not a patch of the same grey; the stage lives in the edge + stripe */
+	background:var(--color_bg-primary);
+	border:1px solid color-mix(in srgb, var(--stage_color), #fff 70%);
 	border-inline-start:4px solid var(--stage_color);
 	border-radius:var(--radius_small);
+	box-shadow:0 1px 2px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04);
 	color:color-mix(in srgb, var(--stage_color), #000 20%);
 	display:flex;
 	flex-direction:column;
 	overflow:hidden;
 	position:relative;
 	transition:box-shadow var(--motion), transform var(--motion);
-	&:hover { box-shadow:0 6px 16px rgba(0,0,0,.08); transform:translateY(-1px); }
+	&:hover { box-shadow:0 6px 16px rgba(0,0,0,.10); transform:translateY(-1px); }
 	.card-owner { background:var(--stage_color); color:#fff; font-size:.68rem; font-weight:var(--font_weight-extra-bold-primary); letter-spacing:.06em; padding:4px 12px; text-transform:uppercase; }
 	.card-body { display:grid; gap:6px; padding:12px 12px 12px 10px; color:inherit; }
 	.card-head { align-items:center; display:flex; gap:10px; }
@@ -682,7 +685,7 @@ body[data-device="phone"] {
 	&.is-unread .card-name { font-weight:var(--font_weight-extra-bold-primary); }
 }
 body[data-role="sales"] .lead-card .card-owner { display:none; }
-body:not([data-role="sales"]) .lead-card { border-inline-start-width:0; }
+body:not([data-role="sales"]) .lead-card { border-inline-start-width:1px; }
 
 /* ========================================================================== */
 /* FOR-SALE SUMMARY — aggregate column: days-on-lot buckets and queues       */
