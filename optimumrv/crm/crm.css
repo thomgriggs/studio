@@ -462,17 +462,18 @@ body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header 
 /* ========================================================================== */
 .lead-summary {
 	/* always ONE row — when it stacks there's no room left to message; extra cards page with the arrows (no scrollbar) */
-	display:flex;
-	gap:var(--gutter-small);
-	overflow-x:auto;
 	position:relative;
-	scroll-snap-type:x mandatory;
-	scrollbar-width:none;
-	&::-webkit-scrollbar { display:none; }
+	.summary-track { display:flex; gap:var(--gutter-small); overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; &::-webkit-scrollbar { display:none; } }
 	.summary-card { flex:1 0 230px; min-width:230px; scroll-snap-align:start; }
-	.summary-arrow { position:sticky; top:50%; align-self:center; flex:none; width:30px; height:30px; border-radius:50%; border:1px solid var(--color_line); background:color-mix(in srgb, var(--color_bg-primary), transparent 8%); backdrop-filter:blur(6px); box-shadow:var(--shadow_float); color:var(--color_text); display:none; align-items:center; justify-content:center; cursor:pointer; z-index:2; margin-inline:-30px 0; .feather { width:16px; height:16px; } &:hover { background:var(--color_bg-primary); }
-		&.is-prev { inset-inline-start:0; order:-1; margin-inline:0 -30px; }
-		&.is-next { inset-inline-end:0; } }
+	/* fade over the clipped edge so the cut-off reads as "more this way" */
+	&::before, &::after { content:""; position:absolute; top:0; bottom:0; width:56px; pointer-events:none; opacity:0; transition:opacity var(--motion); z-index:1; }
+	&::before { inset-inline-start:0; background:linear-gradient(to right, var(--color_bg-primary), transparent); }
+	&::after { inset-inline-end:0; background:linear-gradient(to left, var(--color_bg-primary), transparent); }
+	&.has-prev::before, &.has-next::after { opacity:1; }
+	/* the arrows sit half outside the row, dead-centre vertically */
+	.summary-arrow { position:absolute; top:50%; transform:translateY(-50%); width:32px; height:32px; border-radius:50%; border:1px solid var(--color_line); background:var(--color_bg-primary); box-shadow:0 4px 14px rgba(0,0,0,.14); color:var(--color_text); display:none; align-items:center; justify-content:center; cursor:pointer; z-index:2; padding:0; .feather { width:16px; height:16px; } &:hover { border-color:var(--color_text); }
+		&.is-prev { inset-inline-start:-16px; }
+		&.is-next { inset-inline-end:-16px; } }
 	&.has-prev .summary-arrow.is-prev { display:inline-flex; }
 	&.has-next .summary-arrow.is-next { display:inline-flex; }
 }
@@ -1442,7 +1443,7 @@ body[data-device="phone"][data-view="daily-view"] {
 	.lead-header { border:0; display:flex; flex-direction:column; padding:6px 0 0;
 		.lead-identity { display:none; }
 		.lead-summary { order:1; } .stage-stepper { order:2; } .lead-actions { order:3; }
-		.lead-summary { display:flex; gap:10px; overflow-x:auto; padding:6px 14px 10px; scrollbar-width:none; &::-webkit-scrollbar { display:none; } }
+		.lead-summary { padding:6px 0 10px; &::before, &::after { display:none; } .summary-track { gap:10px; padding-inline:14px; scroll-snap-type:none; } }
 		.summary-card { flex:0 0 232px; padding:10px; gap:10px; .thumb { width:64px; height:48px; } .summary-title { font-size:.92rem; } .summary-meta { font-size:.78rem; } .summary-meta2 { display:none; } .summary-status .pill { font-size:.62rem; } }
 		.stage-stepper { border-block:1px solid var(--color_line); padding:8px 14px; gap:10px; ol { flex:1; justify-content:space-between; } li { min-width:0; flex:1; font-size:.68rem; gap:4px; .step-dot { width:18px; height:18px; .feather { width:11px; height:11px; } &::after { width:8px; height:8px; } } &::before { top:8px; inset-inline-start:calc(50% + 11px); width:calc(100% - 22px); } } .stepper-status { display:none; } }
 		.lead-actions { display:flex; gap:6px; overflow-x:auto; padding:8px 14px; scrollbar-width:none; &::-webkit-scrollbar { display:none; }
@@ -1740,7 +1741,7 @@ body[data-device="phone"][data-view="pipeline"] {
 /* ========================================================================== */
 @media (max-width:1100px) {
 	/* summary cards: compact so more of the row fits */
-	body[data-device="desktop"] .lead-header .lead-summary { gap:10px; .summary-card { flex:0 0 232px; padding:10px; gap:10px; .thumb { width:64px; height:48px; } .summary-title { font-size:.92rem; } .summary-meta { font-size:.78rem; } .summary-meta2 { display:none; } .summary-status .pill { font-size:.62rem; } } }
+	body[data-device="desktop"] .lead-header .lead-summary { .summary-track { gap:10px; } .summary-card { flex:0 0 232px; padding:10px; gap:10px; .thumb { width:64px; height:48px; } .summary-title { font-size:.92rem; } .summary-meta { font-size:.78rem; } .summary-meta2 { display:none; } .summary-status .pill { font-size:.62rem; } } }
 	/* inbox rows: smaller name so the preview and timer fit beside it */
 	body[data-device="desktop"] .inbox-item .item-name { font-size:1rem; }
 	/* composer: Text / Email / Note collapse into the one mode icon + dropdown, like the phone */
