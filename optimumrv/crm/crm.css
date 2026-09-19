@@ -1728,6 +1728,8 @@ body[data-device="phone"][data-view="pipeline"] {
 	/* summary cards: one row that scrolls sideways, never two-and-two */
 	body[data-device="desktop"] .lead-header .lead-summary { display:flex; gap:10px; overflow-x:auto; padding-block-end:4px; scrollbar-width:thin; scroll-snap-type:x proximity;
 		.summary-card { flex:0 0 232px; scroll-snap-align:start; padding:10px; gap:10px; .thumb { width:64px; height:48px; } .summary-title { font-size:.92rem; } .summary-meta { font-size:.78rem; } .summary-meta2 { display:none; } .summary-status .pill { font-size:.62rem; } } }
+	/* inbox rows: smaller name so the preview and timer fit beside it */
+	body[data-device="desktop"] .inbox-item .item-name { font-size:1rem; }
 	/* composer: Text / Email / Note collapse into the one mode icon + dropdown, like the phone */
 	body[data-device="desktop"] .composer { position:relative;
 		.composer-mode { display:none; }
