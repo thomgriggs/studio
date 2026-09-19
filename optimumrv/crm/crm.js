@@ -721,7 +721,7 @@ function crmRenderPhoneBoard(desk) {
 	const board = document.getElementById('pipeline');
 	if (board.parentElement !== wrap) wrap.insertBefore(board, list.nextSibling);
 	const modeBtn = wrap.querySelector('.phone-board-mode');
-	modeBtn.innerHTML = `<i data-feather="${crmBoard.mode === 'board' ? 'list' : 'columns'}"></i>`; modeBtn.setAttribute('aria-label', crmBoard.mode === 'board' ? 'Switch to list' : 'Switch to board');
+	modeBtn.innerHTML = `<i data-feather="${crmBoard.mode === 'board' ? 'server' : 'columns'}"></i>`; modeBtn.setAttribute('aria-label', crmBoard.mode === 'board' ? 'Switch to list' : 'Switch to board');
 	list.hidden = crmBoard.mode === 'board'; board.hidden = crmBoard.mode !== 'board';
 	if (crmBoard.mode === 'board') {
 		/* the columns are rendered by crmRenderBoard right after this; snap to the selected stage once they exist */
