@@ -636,7 +636,7 @@ body[data-device="phone"] {
 }
 .pipeline-column {
 	--stage_color:var(--color_text-muted);
-	background:var(--color_bg-secondary);
+	background:#ebebee; /* a notch darker than the page grey so the tinted cards sit clearly on it */
 	border-radius:var(--radius);
 	display:flex;
 	flex:1 0 clamp(280px, 22vw, 340px);
@@ -659,11 +659,9 @@ body[data-device="phone"] {
 /* ========================================================================== */
 .lead-card {
 	/* white on the grey column so the card reads as an object, not a patch of the same grey; the stage lives in the edge + stripe */
-	background:color-mix(in srgb, var(--stage_color), #fff 96%); /* a whisper of the stage colour, lighter than the column grey */
-	border:1px solid color-mix(in srgb, var(--stage_color), #fff 78%);
+	background:color-mix(in srgb, var(--stage_color), #fff 92%); /* the original tint — the column behind it is what changed */
 	border-inline-start:4px solid var(--stage_color);
 	border-radius:var(--radius_small);
-	box-shadow:0 1px 2px rgba(0,0,0,.04);
 	color:color-mix(in srgb, var(--stage_color), #000 20%);
 	display:flex;
 	flex-direction:column;
@@ -685,7 +683,7 @@ body[data-device="phone"] {
 	&.is-unread .card-name { font-weight:var(--font_weight-extra-bold-primary); }
 }
 body[data-role="sales"] .lead-card .card-owner { display:none; }
-body:not([data-role="sales"]) .lead-card { border-inline-start-width:1px; }
+body:not([data-role="sales"]) .lead-card { border-inline-start-width:0; }
 
 /* ========================================================================== */
 /* FOR-SALE SUMMARY — aggregate column: days-on-lot buckets and queues       */
