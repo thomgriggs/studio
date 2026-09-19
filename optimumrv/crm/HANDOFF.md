@@ -194,4 +194,6 @@ Same shell as the other two views. **Top bar**: round hamburger · nothing in th
 
 Tap a row → **lead screen** (`.phone-lead-screen`, `crmPhoneLeadScreen`, history push like the others): back chevron · avatar + name (tap → lead details sheet) · **⋯** (`phone-lead-more`: Mark agreed / Mark lost / Reopen / Schedule — the stage ones open the quick-edit sheet with that stage proposed, so the confirm-and-reason rules still apply). Body: unit + price, flag, then a grouped list — **Stage** (tap → quick-edit bottom sheet), Owner, Waiting on, Store + source, **Next follow-up** (tap → quick-edit, add one) — the last activity, and two buttons: **Open conversation** (deep-links to the Daily View) and **Call**. Drag (long-press) and every other stage change go through the quick-edit sheet's confirm.
 
-**Narrow desktop (< 1100px).** The Daily View keeps the thread tall: the lead summary cards become one sideways-scrolling row instead of stacking two-and-two, and the composer's Text / Email / Note control collapses into the phone's single mode icon with its dropdown (`composer-mode-menu`).
+**Narrow desktop (< 1100px).** The Daily View keeps the thread tall: the lead summary cards get compact, and the composer's Text / Email / Note control collapses into the phone's single mode icon with its dropdown (`composer-mode-menu`).
+
+**Lead summary is always one row.** `.lead-summary` is a sideways-scrolling flex row at every width — the moment it stacks there is no room left to message.
