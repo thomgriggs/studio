@@ -949,8 +949,7 @@ body[data-view="pipeline"] .pipeline, body[data-view="calendar"] .calendar, body
 	gap:var(--gutter);
 	overflow:auto;
 	padding:var(--gutter-small) var(--gutter-small) var(--gutter);
-	/* full-bleed row the same height as the calendar's day header (56px + 1px line), so the two lines meet at the divider */
-	.sidebar-nav { align-items:center; display:flex; gap:6px; flex:none; height:57px; box-sizing:border-box; margin:calc(-1 * var(--gutter-small)) calc(-1 * var(--gutter-small)) 0; padding-inline:var(--gutter-small); border-block-end:1px solid var(--color_line); .btn { flex:1; height:36px; justify-content:center; background:transparent; border:1px solid var(--color_line); &:hover { background:var(--color_bg-secondary); } } .menu-btn { width:36px; height:36px; background:transparent; &:hover { background:var(--color_bg-secondary); } } }
+	.sidebar-nav { align-items:center; display:flex; gap:6px; .btn { flex:1; height:36px; justify-content:center; background:transparent; border:1px solid var(--color_line); &:hover { background:var(--color_bg-secondary); } } .menu-btn { width:36px; height:36px; background:transparent; &:hover { background:var(--color_bg-secondary); } } }
 	/* the mini month anchors to the bottom; the lists sit under the nav and the gap absorbs the rest */
 	#mini-month { order:9; margin-block-start:auto; flex:none; border-block-start:1px solid var(--color_line); padding-block-start:var(--gutter-small); margin-inline:calc(-1 * var(--gutter-small)); padding-inline:var(--gutter-small); }
 	.calendar-list-group { flex:none; }
