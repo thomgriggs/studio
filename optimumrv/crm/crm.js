@@ -98,7 +98,7 @@ function crmQuery(extra = {}) {
 /* ---------- shell: role switch, sidebar, nav hrefs ---------------------- */
 function crmRenderShell(roleData) {
 	crmFill(document, { user:roleData.user });
-	document.querySelectorAll('.sidebar-navigation .nav-item, .role-picker a[data-view]').forEach(a => {
+	document.querySelectorAll('.sidebar-navigation .nav-item[data-view], .role-picker a[data-view]').forEach(a => { /* only the view links — Settings / Help / Sign out keep their own hrefs */
 		const view = a.dataset.view;
 		a.href = `${view}.html${crmQuery()}`;
 		a.classList.toggle('is-active', view === document.body.dataset.view);
