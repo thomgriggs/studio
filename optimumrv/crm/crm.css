@@ -120,6 +120,11 @@
 /* keyboard focus — one ring for everything interactive; invisible to mouse and touch (:focus-visible) */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline:2px solid var(--color_brand-secondary); outline-offset:2px; border-radius:inherit; }
 :where(input[type="checkbox"], input[type="radio"]):focus-visible { outline-offset:1px; }
+/* touch / pointer targets — 24px minimum (WCAG 2.5.8): inline text links get a taller hit area without moving the layout;
+   checkboxes are 20px with 2px clear space around them (the spacing allowance) */
+:where(a[href], button):where(:not(.btn):not(.menu-btn):not(.action-button):not(.lead-card):not(.inbox-item)) { min-height:24px; }
+:where(p, span, small, li) > a[href]:not(.btn) { display:inline-flex; align-items:center; min-height:24px; margin-block:-2px; }
+input[type="checkbox"], input[type="radio"] { width:20px; height:20px; margin:2px; flex:none; cursor:pointer; }
 :where(input[type="text"], input[type="search"], input[type="email"], textarea):focus-visible { outline-offset:0; }
 html { -webkit-text-size-adjust:100%; }
 body {
@@ -434,7 +439,7 @@ body.nav-scroll { overflow:hidden; }
 	padding:var(--gutter-small) var(--gutter) var(--gutter);
 	.lead-identity { grid-area:identity; display:flex; gap:var(--gutter); align-items:center; min-width:0; }
 	.lead-name { align-items:center; display:flex; flex-wrap:wrap; gap:10px; font-size:var(--font_size-title); font-weight:var(--font_weight-extra-bold-primary); }
-	.lead-contact { color:var(--color_text-muted); display:flex; flex-wrap:wrap; gap:6px 18px; margin-block-start:4px; span { align-items:center; display:inline-flex; gap:6px; } }
+	.lead-contact { color:var(--color_text-muted); display:flex; flex-wrap:wrap; gap:4px 18px; margin-block-start:2px; span { align-items:center; display:inline-flex; gap:6px; min-height:26px; } a { display:inline-flex; align-items:center; min-height:26px; } }
 	.lead-actions { grid-area:actions; align-items:center; display:flex; gap:var(--gutter-small); .lead-cta { margin-inline-start:6px; padding-inline-start:18px; border-inline-start:1px solid var(--color_line); display:flex; } }
 	.stage-stepper { grid-area:stepper; }
 	.lead-summary { grid-area:summary; }
@@ -562,7 +567,7 @@ body[data-role="sales"] .lead-header, body[data-role="management"] .lead-header 
 	.call-icon { align-items:center; background:#fff; border-radius:50%; color:var(--color_text-muted); display:inline-flex; height:40px; justify-content:center; width:40px; }
 	.call-body { min-width:0; display:grid; gap:2px; }
 	.call-title { display:flex; gap:12px; align-items:baseline; font-weight:var(--font_weight-bold-primary); }
-	.call-links { display:flex; gap:12px; margin-inline-start:auto; font-weight:var(--font_weight-bold-primary); font-size:var(--font_size-small); color:var(--thread_outbound); a { align-items:center; display:inline-flex; gap:4px; } }
+	.call-links { display:flex; gap:12px; margin-inline-start:auto; font-weight:var(--font_weight-bold-primary); font-size:var(--font_size-small); color:var(--thread_outbound); a { min-height:24px; margin-block:-2px; align-items:center; display:inline-flex; gap:4px; } }
 	.call-summary { color:var(--color_text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 }
 .thread-note {
@@ -1612,7 +1617,7 @@ body[data-device="phone"][data-view="calendar"] {
 			.agenda-dot { width:4px; height:auto; border-radius:2px; align-self:stretch; }
 			.agenda-text strong { font-size:var(--font_size-primary); } .agenda-text small { white-space:normal; }
 			.agenda-actions { display:none; }
-			.agenda-check { width:18px; height:18px; }
+			.agenda-check { width:20px; height:20px; }
 			&:active { background:var(--color_bg-secondary); }
 		}
 		.agenda-empty { padding:48px var(--gutter); }

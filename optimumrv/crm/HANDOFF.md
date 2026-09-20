@@ -232,3 +232,7 @@ One global rule at the top of `crm.css`: anything interactive gets a 2px `--colo
 ## Contrast
 
 Small text meets WCAG AA (4.5:1) on the surfaces it sits on: `--color_text-muted` is `#6b6b6b` (timestamps, meta, labels — 4.85 on the grey list, 5.3 on white); avatar initials sit on `#6a6a6a`; pill *text* uses the `--status_*-text` tokens (one step darker than the tone) while dots, icons and stripes keep the brighter `--status_*` tone (3:1 is the bar for non-text). If a new tinted pill is added, give it a `-text` token rather than reusing the tone.
+
+## Target sizes
+
+Every pointer target is at least 24×24 (WCAG 2.5.8): inline text links (contact lines, Recording / Transcript) get a 24px hit area via padding that doesn't move the layout; checkboxes are 20px with 2px clear space and, where possible, a clickable label around them. Keep new controls on `.btn` / `.menu-btn` (36–40px) rather than bare links.
