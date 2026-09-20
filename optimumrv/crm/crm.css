@@ -924,7 +924,7 @@ body[data-view="pipeline"] .pipeline, body[data-view="calendar"] .calendar, body
 .detail-panel .detail-hero { aspect-ratio:auto; height:240px; flex:none; }
 
 /* INBOX TINT — the tray sits on a light grey so the conversation reads as the page */
-.inbox { background:var(--color_bg-secondary); .inbox-search .field { background:var(--color_bg-primary); border-color:var(--color_line); } .segmented { background:var(--color_bg-secondary-darkest); } }
+.inbox { background:#fafafa; .inbox-search .field { background:var(--color_bg-primary); border-color:var(--color_line); } .segmented { background:var(--color_bg-secondary-darkest); } }
 .inbox-item { &:hover { background:var(--color_bg-secondary-darkest); } &.is-active:hover { background:var(--color_brand-secondary); } }
 
 /* ========================================================================== */
