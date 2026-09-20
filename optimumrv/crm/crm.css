@@ -184,9 +184,11 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 }
 .avatar {
 	align-items:center;
-	background:#6a6a6a; /* was #8d8d8d — white initials now 5.4:1 */
+	/* stage-tinted: a pale wash of the lead's stage colour with darker initials of the same hue — the inbox shows pipeline position at a glance;
+	   no stage in scope → neutral grey. Light disc + dark text keeps the squint-test weight on the names, not the circles */
+	background:color-mix(in srgb, var(--stage_color, #8d8d8d), #fff 72%);
 	border-radius:50%;
-	color:#fff;
+	color:color-mix(in srgb, var(--stage_color, #585858), #000 35%);
 	display:inline-flex;
 	flex:none;
 	font-family:var(--font_name-secondary);
@@ -1450,7 +1452,7 @@ body[data-device="phone"][data-view="daily-view"] {
 		.item-unit { grid-column:3; font-size:var(--font_size-small); }
 		.item-preview { grid-column:3; font-size:var(--font_size-small); display:grid; grid-template-columns:1fr auto; span { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .pill { font-size:var(--font_size-tiny); padding:4px 7px; } }
 		.item-chevron { grid-column:4; grid-row:1 / span 3; align-self:center; color:var(--color_text-soft); width:18px; height:18px; }
-		&.is-active { background:transparent; color:inherit; .item-unit, .item-preview, .item-name time { color:var(--color_text-muted); } .avatar { background:#8d8d8d; } .item-unread { background:var(--stage_assigned); &[data-status=""] { background:transparent; } &[data-status="overdue"] { background:var(--status_overdue); } } .pill { background:var(--status_neutral-bg); color:var(--status_neutral); &[data-status="overdue"], &[data-status="urgent"] { background:var(--status_overdue-bg); color:var(--status_overdue); } &[data-status="info"], &[data-status="appointment"] { background:var(--status_info-bg); color:var(--status_info); } } }
+		&.is-active { background:transparent; color:inherit; .item-unit, .item-preview, .item-name time { color:var(--color_text-muted); } .avatar { background:color-mix(in srgb, var(--stage_color, #8d8d8d), #fff 72%); color:color-mix(in srgb, var(--stage_color, #585858), #000 35%); } /* the phone's selected row is transparent, so the disc keeps its tint */ .item-unread { background:var(--stage_assigned); &[data-status=""] { background:transparent; } &[data-status="overdue"] { background:var(--status_overdue); } } .pill { background:var(--status_neutral-bg); color:var(--status_neutral); &[data-status="overdue"], &[data-status="urgent"] { background:var(--status_overdue-bg); color:var(--status_overdue); } &[data-status="info"], &[data-status="appointment"] { background:var(--status_info-bg); color:var(--status_info); } } }
 		&:active { background:var(--color_bg-secondary); }
 	}
 	.phone-bottombar { align-items:center; background:color-mix(in srgb, var(--color_bg-primary), transparent 8%); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-block-start:1px solid var(--color_line); display:flex !important; flex:none; gap:10px; padding:8px 12px calc(env(safe-area-inset-bottom) + 8px);

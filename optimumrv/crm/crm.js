@@ -2091,7 +2091,7 @@ function crmRenderFocus(desk) {
 	if (!wrap) return;
 	const picks = desk.leads.filter(l => l.tabs.length && l.stage !== 'lost').map(l => ({ l, s:crmFocusScore(l) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 6).map(x => x.l);
 	wrap.hidden = !picks.length;
-	wrap.innerHTML = picks.map(l => `<button type="button" class="focus-item" data-action="open-focus" data-lead="${l.id}"><span class="avatar" data-field="initials">${l.initials}<span class="focus-dot" data-status="${l.unread === 'overdue' ? 'overdue' : (l.pill && l.pill.status) || 'unread'}"></span></span><small data-field="name">${l.name.split(' ')[0]}</small></button>`).join('');
+	wrap.innerHTML = picks.map(l => `<button type="button" class="focus-item" data-action="open-focus" data-lead="${l.id}" data-stage="${l.stage}"><span class="avatar" data-field="initials">${l.initials}<span class="focus-dot" data-status="${l.unread === 'overdue' ? 'overdue' : (l.pill && l.pill.status) || 'unread'}"></span></span><small data-field="name">${l.name.split(' ')[0]}</small></button>`).join('');
 	const fdot = document.querySelector('.phone-filter-dot'); if (fdot) fdot.hidden = crmState.tab === desk.defaultTab;
 }
 
