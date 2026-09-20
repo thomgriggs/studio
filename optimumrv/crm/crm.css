@@ -640,6 +640,17 @@ body[data-device="phone"] {
 	.phone-menu button[data-tone="muted"] { color:var(--color_text-muted); .feather { color:var(--color_text-muted); } }
 }
 
+/* the checkbox takes the colour of the swatch beside it */
+label:has(> .swatch) { --swatch_color:var(--stage_assigned); }
+label:has(> .swatch[data-category="logistics"]) { --swatch_color:var(--stage_agreed); }
+label:has(> .swatch[data-category="followup"]) { --swatch_color:var(--color_text-soft); }
+label:has(> .swatch[data-owner]) { --swatch_color:var(--stage_working); }
+label:has(> .swatch[data-owner="Riley Morgan"]) { --swatch_color:var(--stage_assigned); }
+label:has(> .swatch[data-owner="Sam Okafor"]) { --swatch_color:var(--stage_attempting); }
+label:has(> .swatch[data-owner="Devon Marsh"]) { --swatch_color:var(--stage_motility); }
+label:has(> .swatch) > input[type="checkbox"] { accent-color:var(--swatch_color); }
+label:has(> .swatch[data-store]) { --swatch_color:var(--color_text-soft); }
+label:has(> .swatch[data-all]) { --swatch_color:var(--color_text); }
 /* stage colour map — anything carrying data-stage gets --stage_color (columns, chips, pills, rows) */
 [data-stage] {
 	--stage_color:var(--color_text-muted);
