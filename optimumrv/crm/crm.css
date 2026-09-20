@@ -1645,7 +1645,7 @@ body[data-device="phone"][data-view="calendar"] {
 body[data-device="phone"][data-view="calendar"] {
 	.phone-agenda { --calendar_hour:100px; --calendar_gutter:58px; --calendar_days:1; position:relative; padding:0;
 		.calendar-grid { --calendar_days:1; grid-template-columns:var(--calendar_gutter) 1fr; }
-		.calendar-times span { height:var(--calendar_hour); font-size:.7rem; }
+		.calendar-times span { height:var(--calendar_hour); font-size:.7rem; &.is-last { height:0; } } /* the closing 12 AM label takes no row */
 		.calendar-times .calendar-now-label { font-size:.6rem; width:auto; height:auto; border-radius:4px; padding:2px 5px; line-height:1; inset-inline-end:6px; white-space:nowrap; display:inline-block; }
 		.calendar-col { background-size:100% var(--calendar_hour); }
 		/* cards fit their hour: one-line unit, one-line meta (type · time · store), small thumb, slim owner stripe */
