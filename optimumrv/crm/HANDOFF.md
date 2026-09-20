@@ -235,4 +235,4 @@ Small text meets WCAG AA (4.5:1) on the surfaces it sits on: `--color_text-muted
 
 ## Target sizes
 
-Every pointer target is at least 24×24 (WCAG 2.5.8): inline text links (contact lines, Recording / Transcript) get a 24px hit area via padding that doesn't move the layout; checkboxes are 20px with 2px clear space and, where possible, a clickable label around them. Keep new controls on `.btn` / `.menu-btn` (36–40px) rather than bare links.
+Every pointer target is at least 24×24 (WCAG 2.5.8): inline text links (contact lines, Recording / Transcript) get a 24px hit area via padding that doesn't move the layout; checkboxes stay their native 16px with 4px clear space (the standard's spacing allowance) and, where possible, a clickable label around them. Keep new controls on `.btn` / `.menu-btn` (36–40px) rather than bare links.
