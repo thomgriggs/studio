@@ -228,3 +228,7 @@ One global rule at the top of `crm.css`: anything interactive gets a 2px `--colo
 2. **Every layer returns focus to what opened it.** Sheets (`crmSheet` → MicroModal `onClose`), the drawer, the details panel and the calendar event popover all remember `document.activeElement` on open and focus it again on close. Sheets trap Tab inside (MicroModal); Escape closes every layer.
 3. **Tab order is reading order, region by region**: top bar → (Daily View) tabs → inbox rows → lead header → thread → composer; (Calendar) top bar → sidebar nav → mini month → activity → grid; (Pipeline) top bar → filters → columns left-to-right, cards top-to-bottom.
 4. **Still to build (developer):** roving-tabindex groups for the inbox list, week strip, stage strip and segmented controls (Tab lands on the current item, arrows move within); a skip link per page; a `?` sheet listing the calendar shortcuts (← → t d w m y).
+
+## Contrast
+
+Small text meets WCAG AA (4.5:1) on the surfaces it sits on: `--color_text-muted` is `#6b6b6b` (timestamps, meta, labels — 4.85 on the grey list, 5.3 on white); avatar initials sit on `#6a6a6a`; pill *text* uses the `--status_*-text` tokens (one step darker than the tone) while dots, icons and stripes keep the brighter `--status_*` tone (3:1 is the bar for non-text). If a new tinted pill is added, give it a `-text` token rather than reusing the tone.

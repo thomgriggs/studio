@@ -11,7 +11,7 @@
 	/* palette — shared with optimumrv.com */
 	--color_white:#fff;
 	--color_light-grey:#fbfbfb;
-	--color_medium-grey:#777;
+	--color_medium-grey:#6b6b6b; /* was #777 — 4.85:1 on the grey list, 5.3:1 on white */
 	--color_dark-grey:#585858;
 	--color_black:#000;
 	--color_red:#d02030;
@@ -61,6 +61,11 @@
 	--status_ok-bg:#e6f5ea;
 	--status_neutral:#585858;
 	--status_neutral-bg:#ececec;
+	/* pill TEXT on the tinted pill backgrounds — one step darker than the tone so small labels clear 4.5:1; dots and icons keep the tone */
+	--status_overdue-text:#b8430f;
+	--status_flag-text:#9e5508;
+	--status_info-text:#1a6cc4;
+	--status_ok-text:#1f7a3c;
 
 	/* messaging thread */
 	--thread_outbound:#1a6ff0;
@@ -170,16 +175,16 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 	padding:6px 9px;
 	white-space:nowrap;
 	.feather { width:.95em; height:.95em; }
-	&[data-status="overdue"], &[data-status="urgent"] { background:var(--status_overdue-bg); color:var(--status_overdue); }
-	&[data-status="flagged"], &[data-status="fee-due"], &[data-status="hold"], &[data-status="pending"] { background:var(--status_flag-bg); color:var(--status_flag); }
-	&[data-status="info"], &[data-status="appointment"] { background:var(--status_info-bg); color:var(--status_info); }
-	&[data-status="ok"], &[data-status="confirmed"], &[data-status="ready"] { background:var(--status_ok-bg); color:var(--status_ok); }
+	&[data-status="overdue"], &[data-status="urgent"] { background:var(--status_overdue-bg); color:var(--status_overdue-text); }
+	&[data-status="flagged"], &[data-status="fee-due"], &[data-status="hold"], &[data-status="pending"] { background:var(--status_flag-bg); color:var(--status_flag-text); }
+	&[data-status="info"], &[data-status="appointment"] { background:var(--status_info-bg); color:var(--status_info-text); }
+	&[data-status="ok"], &[data-status="confirmed"], &[data-status="ready"] { background:var(--status_ok-bg); color:var(--status_ok-text); }
 	&[data-status="dark"] { background:#3a3a3a; color:#fff; }
 	&.pill-tag { text-transform:uppercase; letter-spacing:.04em; font-size:var(--font_size-tiny); padding:5px 8px; border-radius:6px; }
 }
 .avatar {
 	align-items:center;
-	background:#8d8d8d;
+	background:#6a6a6a; /* was #8d8d8d — white initials now 5.4:1 */
 	border-radius:50%;
 	color:#fff;
 	display:inline-flex;
