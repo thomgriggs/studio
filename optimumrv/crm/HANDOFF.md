@@ -199,3 +199,21 @@ Tap a row → **lead screen** (`.phone-lead-screen`, `crmPhoneLeadScreen`, histo
 **Lead summary is always one row.** `.lead-summary` is a single flex row at every width — the moment it stacks there is no room left to message. No scrollbar: when the row overflows, round arrows appear at its edges (`summary-scroll`, `.summary-arrow`, `has-prev`/`has-next` classes kept current by `crmSummaryArrows`) and each click pages one card.
 
 **Lead actions under 1024px.** The Call / Schedule / Agreed / Lost strip condenses to the phone's pattern: a round **Call** and a round **⋯** (`.lead-actions-compact`) whose menu (`phone-more`) carries Schedule, the role CTA, Mark agreed / Mark lost / Reopen.
+
+## Type scale
+
+Nine steps, all tokens in `:root`; every `font-size` in `crm.css` uses one of them (the only exceptions are one relative `.85em` and the start page's hero clamp):
+
+| token | size | used for |
+|---|---|---|
+| `--font_size-display` | 2rem | phone year heading, big numbers |
+| `--font_size-title` | clamp(1.5–1.9rem) | page/lead titles |
+| `--font_size-large` | 1.375rem | section titles, month headings, phone month title |
+| `--font_size-medium` | 1.125rem | column headings, calendar title, list names |
+| `--font_size-primary` | 1rem | body, inputs, card names |
+| `--font_size-small` | .875rem | secondary lines, meta, pills |
+| `--font_size-xsmall` | .75rem | labels, timestamps, counts |
+| `--font_size-tiny` | .6875rem | owner stripes, mini-month weekdays, dense chrome |
+| `--font_size-micro` | .625rem | year-view day numbers, now-label |
+
+Add a size by picking the nearest step, not by writing a new rem.
