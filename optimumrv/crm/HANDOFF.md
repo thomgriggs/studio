@@ -217,3 +217,7 @@ Nine steps, all tokens in `:root`; every `font-size` in `crm.css` uses one of th
 | `--font_size-micro` | .625rem | year-view day numbers, now-label |
 
 Add a size by picking the nearest step, not by writing a new rem.
+
+## Keyboard focus
+
+One global rule at the top of `crm.css`: anything interactive gets a 2px `--color_brand-secondary` ring on `:focus-visible` (keyboard only — mouse and touch never show it). Text fields hand the ring to their `.field` / `.composer-input` wrapper. Don't add `outline:none` to interactive elements; if a component needs a different ring, override `:focus-visible` on it.

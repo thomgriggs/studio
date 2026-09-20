@@ -112,6 +112,10 @@
 /* ========================================================================== */
 *, *::before, *::after { box-sizing:border-box; }
 * { margin:0; }
+/* keyboard focus — one ring for everything interactive; invisible to mouse and touch (:focus-visible) */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline:2px solid var(--color_brand-secondary); outline-offset:2px; border-radius:inherit; }
+:where(input[type="checkbox"], input[type="radio"]):focus-visible { outline-offset:1px; }
+:where(input[type="text"], input[type="search"], input[type="email"], textarea):focus-visible { outline-offset:0; }
 html { -webkit-text-size-adjust:100%; }
 body {
 	min-height:100dvh;
@@ -215,8 +219,9 @@ h1, h2, h3 { font-family:var(--font_name-secondary); line-height:1.2; text-wrap:
 	gap:10px;
 	padding-inline:14px;
 	.feather { color:var(--color_text-soft); }
-	input { background:none; border:0; flex:1; height:42px; min-width:0; outline:none; &::placeholder { color:var(--color_text-soft); } }
+	input { background:none; border:0; flex:1; height:42px; min-width:0; outline:none; /* the .field wrapper carries the ring */ &::placeholder { color:var(--color_text-soft); } }
 	&:focus-within { border-color:var(--color_line-strong); background:#fff; }
+	&:has(input:focus-visible) { outline:2px solid var(--color_brand-secondary); outline-offset:2px; }
 }
 .thumb {
 	background:var(--color_bg-secondary-darker);
