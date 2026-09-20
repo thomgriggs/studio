@@ -221,3 +221,10 @@ Add a size by picking the nearest step, not by writing a new rem.
 ## Keyboard focus
 
 One global rule at the top of `crm.css`: anything interactive gets a 2px `--color_brand-secondary` ring on `:focus-visible` (keyboard only — mouse and touch never show it). Text fields hand the ring to their `.field` / `.composer-input` wrapper. Don't add `outline:none` to interactive elements; if a component needs a different ring, override `:focus-visible` on it.
+
+## Keyboard rules (layers)
+
+1. **If you can't see it, you can't tab to it.** Off-canvas layers carry `inert`: the drawer when closed, the details panel when closed, and on the phone the screen that isn't current (`crmShowScreen` toggles it). Nothing hidden by a transform is ever left in the tab order.
+2. **Every layer returns focus to what opened it.** Sheets (`crmSheet` → MicroModal `onClose`), the drawer, the details panel and the calendar event popover all remember `document.activeElement` on open and focus it again on close. Sheets trap Tab inside (MicroModal); Escape closes every layer.
+3. **Tab order is reading order, region by region**: top bar → (Daily View) tabs → inbox rows → lead header → thread → composer; (Calendar) top bar → sidebar nav → mini month → activity → grid; (Pipeline) top bar → filters → columns left-to-right, cards top-to-bottom.
+4. **Still to build (developer):** roving-tabindex groups for the inbox list, week strip, stage strip and segmented controls (Tab lands on the current item, arrows move within); a skip link per page; a `?` sheet listing the calendar shortcuts (← → t d w m y).

@@ -109,13 +109,19 @@ function crmBindDrawer() {
 	const drawer = document.querySelector('.sidebar-navigation');
 	const overlay = document.querySelector('.global-overlay');
 	if (!drawer) return;
+	let opener = null;
 	const set = open => {
+		const was = drawer.classList.contains('is-open');
 		drawer.classList.toggle('is-open', open);
 		overlay.classList.toggle('is-open', open);
 		document.body.classList.toggle('nav-scroll', open);
 		drawer.setAttribute('aria-hidden', String(!open));
+		drawer.toggleAttribute('inert', !open); /* closed = off-canvas = out of the tab order */
+		if (open) drawer.querySelector('[data-action="close-menu"]')?.focus();
+		else if (was && opener) { opener.focus(); opener = null; }
 	};
-	document.querySelectorAll('[data-action="open-menu"]').forEach(b => b.addEventListener('click', () => set(true)));
+	drawer.toggleAttribute('inert', true);
+	document.querySelectorAll('[data-action="open-menu"]').forEach(b => b.addEventListener('click', () => { opener = b; set(true); }));
 	document.querySelectorAll('[data-action="close-menu"]').forEach(b => b.addEventListener('click', () => set(false)));
 	overlay.addEventListener('click', () => set(false));
 	document.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
@@ -841,7 +847,8 @@ function crmSheet({ title, reason, body = '', actions = [] }) {
 	f.innerHTML = actions.map((a, i) => `<button type="button" class="btn ${a.primary ? 'btn-primary' : ''}" data-sheet-action="${i}">${a.label}</button>`).join('');
 	f.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => { const r = actions[i].run ? actions[i].run(m) : undefined; if (r !== false) MicroModal.close('crm-modal'); }));
 	crmIcons();
-	MicroModal.show('crm-modal', { disableScroll:true, awaitCloseAnimation:false });
+	const opener = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
+	MicroModal.show('crm-modal', { disableScroll:true, awaitCloseAnimation:false, onClose:() => { if (opener && document.contains(opener)) opener.focus(); } });
 	return m;
 }
 function crmClose() { if (document.getElementById('crm-modal')?.classList.contains('is-open')) MicroModal.close('crm-modal'); }
@@ -1358,6 +1365,8 @@ function crmDetailKind(card) {
 
 function crmOpenDetail(lead, card) {
 	const panel = document.getElementById('detail-panel');
+	panel._opener = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
+	panel.toggleAttribute('inert', false);
 	const kind = crmDetailKind(card);
 	const first = crmFirst(lead);
 	const store = CRM_DATA.stores.find(st => (lead.location || '').startsWith(st.name.split(',')[0])) || CRM_DATA.stores[0];
@@ -1443,7 +1452,8 @@ function crmOpenDetail(lead, card) {
 function crmCloseDetail() {
 	const panel = document.getElementById('detail-panel');
 	if (!panel) return;
-	panel.classList.remove('is-open'); panel.setAttribute('aria-hidden', 'true');
+	panel.classList.remove('is-open'); panel.setAttribute('aria-hidden', 'true'); panel.toggleAttribute('inert', true);
+	if (panel._opener && document.contains(panel._opener)) { panel._opener.focus(); panel._opener = null; }
 	document.querySelector('.detail-overlay').classList.remove('is-open');
 }
 Object.assign(CRM_ACTIONS, {
@@ -1798,6 +1808,7 @@ function crmPopoverAnchor(id) { if (crmPop.draft && crmPop.draft.id === id) retu
 
 function crmOpenPopover(e, anchor, opts = {}) {
 	const pop = document.getElementById('event-popover');
+	if (pop.hidden && document.activeElement && document.activeElement !== document.body && !pop.contains(document.activeElement)) pop._opener = document.activeElement;
 	crmPop.eventId = e.id || null; crmPop.editing = opts.editing || null;
 	const showOwner = !!CRM_DATA.roles[crmState.role].owners;
 	let body;
@@ -1865,7 +1876,7 @@ function crmPlacePopover(pop, anchor) {
 	let top = r.top; if (top + ph > innerHeight - 12) top = Math.max(12, innerHeight - ph - 12);
 	pop.style.left = `${left}px`; pop.style.top = `${top}px`;
 }
-function crmClosePopover() { const pop = document.getElementById('event-popover'); if (pop) { pop.hidden = true; pop.classList.remove('is-open'); } crmPop.eventId = null; crmPop.editing = null; crmPop.draft = null; crmPop.draftAnchor = null; }
+function crmClosePopover() { const pop = document.getElementById('event-popover'); if (pop && !pop.hidden && pop._opener && document.contains(pop._opener) && pop.contains(document.activeElement)) { const o = pop._opener; setTimeout(() => o.focus(), 0); } if (pop) { pop._opener = null; pop.hidden = true; pop.classList.remove('is-open'); } crmPop.eventId = null; crmPop.editing = null; crmPop.draft = null; crmPop.draftAnchor = null; }
 /* re-render the calendar and keep the same card open, anchored to the same event */
 function crmRefreshPopover(id, editing) {
 	if (crmPop.draft && crmPop.draft.id === id) { crmOpenPopover(crmPop.draft, crmPop.draftAnchor, { editing }); return; }
@@ -2053,6 +2064,10 @@ function crmPhoneApply() {
 function crmShowScreen(screen, push) {
 	crmPhone.screen = screen;
 	document.body.dataset.screen = screen;
+	/* the off-screen layer leaves the tab order */
+	const pairs = { inbox:['.inbox', '.conversation'], conversation:['.conversation', '.inbox'], agenda:['.phone-cal', '.phone-event'], event:['.phone-event', '.phone-cal'], board:['.phone-board', '.phone-lead-screen'], lead:['.phone-lead-screen', '.phone-board'] }[screen];
+	if (pairs && document.body.dataset.device === 'phone') { document.querySelector(pairs[0])?.toggleAttribute('inert', false); document.querySelector(pairs[1])?.toggleAttribute('inert', true); }
+	else if (pairs) { document.querySelector(pairs[0])?.toggleAttribute('inert', false); document.querySelector(pairs[1])?.toggleAttribute('inert', false); } /* desktop shows both panes */
 	const view = document.body.dataset.view;
 	if (push) history.pushState({ screen }, '', view === 'calendar' ? `calendar.html${crmQuery({ mode:'day', date:crmISO(crmCal.cursor), event:crmPop.eventId || '' })}` : view === 'pipeline' ? `pipeline.html${crmQuery({ lead:crmPhone.leadId || '' })}` : `daily-view.html${crmQuery({ tab:crmState.tab, lead:crmState.leadId })}`);
 	if (screen === 'board') { crmClose(); crmPhone.leadId = null; history.replaceState(history.state, '', `pipeline.html${crmQuery({})}`); return; }
