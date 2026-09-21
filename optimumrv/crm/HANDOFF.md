@@ -273,3 +273,21 @@ Write down anything that was silent, read twice, or read in the wrong order.
 ## Toast (confirmation)
 
 `crmToast(message, { tone:'warn', undo:fn })` — a dark pill, bottom-centre (above the composer on the Daily View, above the bottom bar on the phone), gone after 4 s (6 s with Undo) or on click. The stack is a `role="status"` live region, so the same words are announced to screen readers. Wired to: stage changes (with Undo), Text/Email/Note sent, empty Send ("Type a message first", amber), appointment/follow-up saved (Undo), complete/reopen, cancel (Undo), delete (Undo), follow-up added from quick-edit, filter select-all. Try them on `toast-preview.html`. Rule: any action that changes data and isn't visible where the user is looking gets a toast; an action whose result *is* what you're looking at (opening a sheet, switching a tab) does not.
+
+## States — loading, offline, failed send, no results (and how to tie in)
+
+**Try it:** Settings → *Connection* → Normal · Slow · Offline (remembered for the session, so it follows you between views).
+- **Slow** — reload any view: skeleton placeholders (`crmShowLoading(el, kind)`, kinds `list` `thread` `board` `grid` `agenda`) sit where the data will be, then the real content renders. Send shows *Sending…* for a beat, then *Delivered*.
+- **Offline** — an amber banner (`.net-banner`, `role=status`) sits under every top bar: "You're offline — showing what was loaded last…" with **Retry**. Loads still show the last data. Sends land in the thread as **Not sent · Retry** (red bubble); stage changes and appointment saves are refused with a warning toast and nothing changes. Retry re-checks; when the connection is back the banner goes and a toast says *Back online*.
+- **No results** — searching the inbox or the board with no match shows "No leads match “…”" with a **Clear search** button (`clear-search`, `data-target` = the input's id); an empty tab/column without a search keeps its own empty state.
+
+**The seam.** Every load and every write goes through one function:
+
+```js
+crmRequest(label, work) → Promise   // crm.js, top of file
+```
+In the prototype it resolves `work()` from memory (Slow adds 1.4 s; Offline rejects with `{ offline:true }`). **To connect the real backend, replace the body of `crmRequest` with a fetch and leave the callers alone** — skeletons, the banner, message states, refused saves and toasts all already key off its promise. Call sites today: initial loads in `crmInitDailyView` / `crmInitPipeline` / `crmInitCalendar` (`'load leads'`, `'load board'`, `'load calendar'`), `crmDeliver` (`'send message'`), `net-retry` (`'reconnect'`). Writes that must refuse when offline check `crmNet.offline` at the top of `crmSetStage` and `crmCommitEvent`; a real API would instead surface the request's rejection the same way (warn toast, state unchanged).
+
+**Message states** are on the thread entry: `pending` → *Sending…*, then `meta:'Delivered'`, or `failed:true` → *Not sent* with `retry-send` (re-runs `crmDeliver`). Each rendered message carries `data-index` so a state change re-paints just that bubble.
+
+**What isn't simulated** (call it out to the client): partial failures (some items load, one doesn't), conflicts (two people editing the same lead), and background sync of changes made while offline — the prototype refuses offline writes rather than queueing them, which is the simpler rule to explain on the lot.

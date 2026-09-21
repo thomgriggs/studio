@@ -59,6 +59,7 @@ function crmInit() {
 	crmRenderShell(roleData);
 	crmBindDrawer();
 	crmBindLabels();
+	crmNetBanner();
 
 	const view = document.body.dataset.view;
 	if (view === 'daily-view') crmInitDailyView(params);
@@ -110,6 +111,54 @@ function crmToast(message, opts = {}) {
 	const timer = setTimeout(close, opts.undo ? 6000 : 4000);
 	t.addEventListener('click', e => { clearTimeout(timer); if (e.target.closest('.toast-undo') && opts.undo) opts.undo(); close(); });
 	return t;
+}
+
+/* ========================================================================== */
+/* CONNECTION — the one seam between this prototype and a real API.          */
+/* Every load and every write goes through crmRequest(). In the prototype it  */
+/* resolves from memory, honouring the simulated connection chosen in         */
+/* Settings (Normal · Slow · Offline). The developer replaces the body of     */
+/* crmRequest with a fetch and nothing else has to change: skeletons, the     */
+/* offline banner, message states and failed-save handling all key off it.   */
+/* ========================================================================== */
+const CRM_NET_KEY = 'optimumrv-crm-net';
+const crmNet = {
+	get mode() { try { return sessionStorage.getItem(CRM_NET_KEY) || 'normal'; } catch (e) { return 'normal'; } },
+	set mode(v) { try { sessionStorage.setItem(CRM_NET_KEY, v); } catch (e) {} crmNetBanner(); },
+	get offline() { return this.mode === 'offline'; }
+};
+function crmRequest(label, work = () => null) {
+	return new Promise((resolve, reject) => {
+		const mode = crmNet.mode;
+		if (mode === 'offline') { setTimeout(() => reject(Object.assign(new Error(`${label}: offline`), { offline:true })), 400); return; }
+		const run = () => { try { resolve(work()); } catch (e) { reject(e); } };
+		if (mode === 'slow') setTimeout(run, 1400); else queueMicrotask(run);
+	});
+}
+/* loading veil: skeleton placeholders over a container while its data is on the way */
+function crmShowLoading(el, kind) {
+	if (!el || el.querySelector(':scope > .loading-veil')) return;
+	const row = '<div class="sk-row"><span class="skeleton sk-circle"></span><span class="sk-lines"><span class="skeleton sk-line" style="width:46%"></span><span class="skeleton sk-line" style="width:78%"></span></span></div>';
+	const card = n => `<div class="sk-card"><span class="skeleton sk-line" style="width:55%"></span><span class="skeleton sk-line" style="width:85%"></span>${n ? '<span class="skeleton sk-line" style="width:40%"></span>' : ''}</div>`;
+	const html = {
+		list:   row.repeat(7),
+		thread: '<div class="sk-bubble in"></div><div class="sk-bubble out"></div><div class="sk-bubble in wide"></div><div class="sk-bubble out"></div><div class="sk-bubble in"></div>',
+		board:  `<div class="sk-columns">${[2, 1, 3, 1].map(n => `<div class="sk-column">${Array.from({ length:n }, (_, i) => card(i % 2)).join('')}</div>`).join('')}</div>`,
+		grid:   '<div class="sk-grid">' + [[14, 22, 8], [42, 10, 12], [58, 36, 9], [71, 55, 10], [28, 70, 12]].map(([x, y, h]) => `<span class="skeleton sk-block" style="left:${x}%; top:${y}%; height:${h}%"></span>`).join('') + '</div>',
+		agenda: row.repeat(5)
+	}[kind] || row.repeat(5);
+	el.classList.add('is-loading'); el.setAttribute('aria-busy', 'true');
+	el.insertAdjacentHTML('beforeend', `<div class="loading-veil" data-kind="${kind}" aria-hidden="true">${html}</div>`);
+}
+function crmHideLoading(el) { if (!el) return; el.classList.remove('is-loading'); el.removeAttribute('aria-busy'); el.querySelectorAll(':scope > .loading-veil').forEach(v => v.remove()); }
+/* offline banner: shown under the top bar of every screen while the connection is off; Retry re-checks */
+function crmNetBanner() {
+	document.querySelectorAll('.net-banner').forEach(b => b.remove());
+	if (!crmNet.offline) return;
+	const html = `<div class="net-banner" role="status"><i data-feather="wifi-off"></i><span>You're offline — showing what was loaded last. Changes won't save until you're back.</span><button type="button" class="btn" data-action="net-retry">Retry</button></div>`;
+	if (document.body.dataset.device === 'phone') { document.querySelectorAll('.phone-topbar, .inbox-header').forEach(t => { if (t.getBoundingClientRect().height > 0 && !t.nextElementSibling?.classList.contains('net-banner')) t.insertAdjacentHTML('afterend', html); }); }
+	else { const main = document.querySelector('main.daily-view, main#pipeline, main#lead-table, main#calendar'); if (main) main.insertAdjacentHTML('beforebegin', html); else document.body.insertAdjacentHTML('afterbegin', html); }
+	crmIcons();
 }
 
 /* ---------- shell: role switch, sidebar, nav hrefs ---------------------- */
@@ -203,10 +252,14 @@ function crmInitDailyView(params) {
 	crmState.tab = desk.tabs.some(t => t.id === params.get('tab')) ? params.get('tab') : desk.defaultTab;
 	crmRenderTabs(desk);
 
-	/* inbox + first lead */
-	crmRenderInbox(desk);
+	/* inbox + first lead — through the connection seam, so Slow shows skeletons and Offline shows the banner + last data */
 	const wanted = params.get('lead');
-	crmOpenLead(desk.leads.some(l => l.id === wanted) ? wanted : desk.defaultLead);
+	const first = () => { crmRenderInbox(desk); crmOpenLead(desk.leads.some(l => l.id === wanted) ? wanted : desk.defaultLead); };
+	if (crmNet.mode === 'normal') first();
+	else {
+		crmShowLoading(document.getElementById('inbox-list'), 'list'); crmShowLoading(document.getElementById('thread'), 'thread');
+		crmRequest('load leads').catch(() => {}).finally(() => { crmHideLoading(document.getElementById('inbox-list')); crmHideLoading(document.getElementById('thread')); first(); });
+	}
 
 	/* search filters the inbox by name/unit/preview */
 	document.getElementById('inbox-search-input').addEventListener('input', e => crmRenderInbox(desk, e.target.value));
@@ -240,7 +293,7 @@ function crmRenderInbox(desk, search = '') {
 		.filter(l => !q || [l.name, l.unit, l.preview].join(' ').toLowerCase().includes(q));
 	list.innerHTML = '';
 	if (!leads.length) {
-		list.innerHTML = `<p class="inbox-empty">${crmIcon('inbox')}<br>Nothing here right now</p>`;
+		list.innerHTML = q ? `<p class="inbox-empty no-results">${crmIcon('search')}<br>No leads match “${search.trim()}”<br><button type="button" class="btn" data-action="clear-search" data-target="inbox-search-input">Clear search</button></p>` : `<p class="inbox-empty">${crmIcon('inbox')}<br>Nothing here right now</p>`;
 		crmIcons();
 		return;
 	}
@@ -359,11 +412,14 @@ function crmRenderSummary(lead) {
 function crmRenderThread(lead) {
 	const thread = document.getElementById('thread');
 	thread.innerHTML = '';
-	(lead.thread || []).forEach(entry => thread.appendChild(crmThreadEntry(entry)));
+	(lead.thread || []).forEach((entry, i) => thread.appendChild(crmThreadEntry(entry, i)));
 	requestAnimationFrame(() => { thread.scrollTop = thread.scrollHeight; });
 }
 
-function crmThreadEntry(entry) {
+function crmThreadEntry(entry, index) {
+	const built = crmThreadEntryBuild(entry, index); if (built && index !== undefined) built.dataset.index = index; return built;
+}
+function crmThreadEntryBuild(entry, index) {
 	let el;
 	switch (entry.type) {
 		case 'day':
@@ -384,7 +440,9 @@ function crmThreadEntry(entry) {
 			if (entry.label) label.innerHTML = `${crmIcon(entry.labelIcon)}<span data-field="message.author">${entry.label}</span>`; else label.remove();
 			el.querySelector('.message-body').textContent = entry.text;
 			const meta = el.querySelector('.message-meta');
-			if (entry.meta) meta.textContent = entry.meta; else meta.remove();
+			if (entry.failed) { el.dataset.status = 'failed'; meta.innerHTML = `${crmIcon('alert-circle')}<span>Not sent</span> · <button type="button" class="link-btn" data-action="retry-send" data-index="${index}">Retry</button>`; }
+			else if (entry.meta) { meta.textContent = entry.meta; if (entry.pending) el.dataset.status = 'pending'; }
+			else meta.remove();
 			break;
 		case 'call':
 			el = crmTemplate('tpl-thread-call');
@@ -425,15 +483,30 @@ function crmSendStub(e) {
 	const entry = mode === 'note' ? { type:'note', author:CRM_DATA.roles[crmState.role].user.name, text }
 		: mode === 'email' ? { type:'email', time:'Email · just now', subject:text, preview:'Draft — the developer wires this to the mail service.', opened:false }
 		: { type:'message', dir:'out', text, meta:'Sending…' };
+	entry.pending = true;
 	lead.thread.push(entry);
 	const thread = document.getElementById('thread');
-	thread.appendChild(crmThreadEntry(entry));
+	thread.appendChild(crmThreadEntry(entry, lead.thread.length - 1));
 	crmIcons();
 	thread.scrollTop = thread.scrollHeight;
 	input.value = '';
 	crmPersist();
-	crmToast(mode === 'note' ? 'Note added' : mode === 'email' ? 'Email sent' : 'Text sent');
-	if (mode !== 'note' && lead.stage === 'assigned') crmSetStage(lead, 'attempting', { by:'system' });
+	if (mode === 'note') { entry.pending = false; entry.meta = 'Saved'; crmToast('Note added'); return; }
+	crmDeliver(lead, entry, mode);
+	if (lead.stage === 'assigned') crmSetStage(lead, 'attempting', { by:'system' });
+}
+
+/* a message's life after Send: Sending… → Delivered, or Not sent (Retry) when the request fails */
+function crmDeliver(lead, entry, mode) {
+	const paint = () => { const idx = lead.thread.indexOf(entry); const el = document.querySelector(`#thread .thread-message[data-index="${idx}"]`); if (el) { const fresh = crmThreadEntry(entry, idx); el.replaceWith(fresh); crmIcons(); } };
+	entry.pending = true; entry.failed = false; entry.meta = 'Sending…'; paint();
+	crmRequest('send message').then(() => {
+		entry.pending = false; entry.meta = 'Delivered'; paint(); crmPersist();
+		crmToast(mode === 'email' ? 'Email sent' : 'Text sent');
+	}).catch(() => {
+		entry.pending = false; entry.failed = true; entry.meta = 'Not sent'; paint(); crmPersist();
+		crmToast("Not sent — you're offline. Retry when you're back.", { tone:'warn' });
+	});
 }
 
 /* ========================================================================== */
@@ -458,7 +531,8 @@ function crmInitPipeline(params) {
 
 	crmRenderBoardFilters(roleData, desk);
 	crmBoard.stage = (desk.stages.find(st => st.id === params.get('stage')) || desk.stages.find(st => desk.leads.some(l => l.card && l.stage === st.id)) || desk.stages[0]).id;
-	crmRenderBoard(desk);
+	if (crmNet.mode === 'normal') crmRenderBoard(desk);
+	else { const host = document.getElementById('pipeline'); host.innerHTML = ''; crmShowLoading(host, 'board'); crmRequest('load board').catch(() => {}).finally(() => { crmHideLoading(host); crmRenderBoard(desk); }); }
 	crmBindBoardPan();
 	document.getElementById('global-search-input').addEventListener('input', e => { crmBoard.search = e.target.value; crmRenderBoard(desk); });
 	if (document.body.dataset.device === 'phone') { crmInitPhoneBoard(desk, params); crmBindTouchDrag(desk); }
@@ -654,7 +728,7 @@ function crmRenderLeadTable(desk) {
 			<td class="cell-age"><time>${c.age || ''}</time></td>
 			<td class="cell-timer">${crmLeadTimer(l)}</td>
 		</tr>`; }).join('')}</tbody></table>
-		${leads.length ? '' : '<p class="pipeline-empty">Nothing matches.</p>'}
+		${leads.length ? '' : `<p class="pipeline-empty no-results">${crmIcon('search')}<br>${crmBoard.search.trim() ? `No leads match “${crmBoard.search.trim()}”` : 'Nothing matches these filters'}<br>${crmBoard.search.trim() ? '<button type="button" class="btn" data-action="clear-search" data-target="global-search-input">Clear search</button>' : ''}</p>`}
 		<p class="lead-table-foot"><label><input type="checkbox" ${crmBoard.showLost ? 'checked' : ''} data-action="toggle-column"> Show lost</label><span>${leads.length} lead${leads.length === 1 ? '' : 's'}</span></p>`;
 	crmIcons();
 }
@@ -1128,7 +1202,7 @@ const CRM_ACTIONS = {
 				{ icon:'clock', title:'Working hours', sub:'Mon–Sat 8 AM – 7 PM · automated texts pause outside', static:true, right:'<label class="calendar-toggle"><input type="checkbox" checked></label>' },
 				{ icon:'smartphone', title:'Phone preview', sub:'Prototype only — show the phone layout in this window', right:`<span class="pill">${document.body.dataset.device === 'phone' ? 'On' : 'Off'}</span>` },
 				{ icon:'refresh-cw', title:'Reset demo data', sub:'Prototype only — undo every change made in this browser session', right:'<span class="pill">Prototype</span>' }
-			], 'data-settings-pick'),
+			], 'data-settings-pick') + `<div class="sheet-list"><div class="sheet-row is-static">${crmIcon('wifi')}<span class="sheet-row-text"><strong>Connection</strong><small>Prototype only — simulate how the app behaves while loading, or with no signal on the lot</small></span><span class="segmented segmented-small" role="group" aria-label="Simulated connection">${['normal', 'slow', 'offline'].map(m => `<button type="button" data-action="net-mode" data-mode="${m}" class="${crmNet.mode === m ? 'is-active' : ''}">${m[0].toUpperCase() + m.slice(1)}</button>`).join('')}</span></div></div>`,
 			actions:[{ label:'Done', primary:true }]
 		});
 		m.querySelector('[data-settings-pick="4"]').addEventListener('click', () => { try { const on = document.body.dataset.device === 'phone'; sessionStorage.setItem('optimumrv-crm-device', on ? 'desktop' : 'phone'); } catch (e) {} const u = new URL(location.href); u.searchParams.delete('device'); location.href = u.toString(); });
@@ -1170,6 +1244,7 @@ function crmCanSetStage(lead, stage) {
 function crmSetStage(lead, stage, opts = {}) {
 	const desk = crmDesk();
 	if (lead.stage === stage) return;
+	if (crmNet.offline && opts.by !== 'system') { crmToast("Couldn't save — you're offline", { tone:'warn' }); return false; }
 	const from = desk.stages.find(s => s.id === lead.stage), to = desk.stages.find(s => s.id === stage);
 	if (!to) return;
 	const backward = (from && from.terminal) || (!to.terminal && from && crmStageIndex(desk, stage) < crmStageIndex(desk, lead.stage));
@@ -1580,7 +1655,8 @@ function crmInitCalendar(params) {
 	});
 	document.addEventListener('keydown', e => { if (e.key === 'Escape') { if (crmPop.editing) { const ev = crmEventById(crmPop.eventId); if (ev) crmOpenPopover(ev, crmPopoverAnchor(ev.id), { editing:null }); } else crmClosePopover(); } });
 	document.addEventListener('click', e => { if (document.contains(e.target) && !e.target.closest('.event-popover, .calendar-event, .followup-task, .agenda-item, .month-event, .month-more, [data-action="new-event"], [data-action="new-event-on"], [data-action="edit-field"], [data-action="event-add-followup"], .modal')) crmClosePopover(); });
-	crmRenderCalendar();
+	if (crmNet.mode === 'normal') crmRenderCalendar();
+	else { const host = document.body.dataset.device === 'phone' ? document.getElementById('phone-agenda') : document.getElementById('calendar-scroll'); crmShowLoading(host, document.body.dataset.device === 'phone' ? 'agenda' : 'grid'); crmRequest('load calendar').catch(() => {}).finally(() => { crmHideLoading(host); crmRenderCalendar(); }); }
 	crmInitPhoneCalendar(params);
 	setInterval(() => { if (document.body.dataset.device !== 'phone' && (crmCal.mode === 'week' || crmCal.mode === 'day') && !crmPop.eventId && !crmPop.draft) crmRenderCalendar(); }, 60000);
 }
@@ -1990,6 +2066,7 @@ function crmCreateEvent(opts = {}) {
 	crmOpenPopover(ev, crmPop.draftAnchor, { editing:null });
 }
 function crmCommitEvent(ev) {
+	if (crmNet.offline) { crmToast("Couldn't save — you're offline", { tone:'warn' }); return; }
 	delete ev._draft;
 	crmPop.draft = null; crmPop.draftAnchor = null;
 	(CRM_DATA.calendar.events[crmState.role] = CRM_DATA.calendar.events[crmState.role] || []).push(ev);
@@ -2011,6 +2088,10 @@ Object.assign(CRM_ACTIONS, {
 	'mini-pick': el => { crmCal.noSelect = false; crmCal.cursor = crmDate(el.dataset.date); crmCal.mini = crmCal.cursor; if (crmCal.level && crmCal.level !== 'day') { crmPhoneZoom('day'); return; } crmRenderCalendar(); },
 	'mini-prev': el => { crmCal.mini = crmAddMonths(crmCal.mini, -1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
 	'mini-next': el => { crmCal.mini = crmAddMonths(crmCal.mini, 1); const box = el.closest('#mini-month, #phone-month') || document.getElementById('mini-month'); box.innerHTML = crmMiniMonth(crmCal.mini, { selected:crmCal.cursor, nav:true }); crmIcons(); },
+	'clear-search': el => { const i = document.getElementById(el.dataset.target); if (!i) return; i.value = ''; i.dispatchEvent(new Event('input', { bubbles:true })); const f = i.closest('.global-search'); if (f) { f.classList.remove('is-open'); f.querySelector('.global-search-toggle')?.setAttribute('aria-expanded', 'false'); } },
+	'retry-send': el => { const lead = crmCurrentLead(); const entry = lead && lead.thread[+el.dataset.index]; if (!entry) return; crmDeliver(lead, entry, entry.type === 'email' ? 'email' : 'text'); },
+	'net-retry': () => { crmRequest('reconnect').then(() => { crmNetBanner(); crmToast('Back online'); }).catch(() => crmToast('Still offline — check your connection', { tone:'warn' })); },
+	'net-mode': el => { const was = crmNet.mode; crmNet.mode = el.dataset.mode; el.closest('.segmented').querySelectorAll('button').forEach(b => b.classList.toggle('is-active', b === el)); if (was === 'offline' && el.dataset.mode !== 'offline') crmToast('Back online'); else if (el.dataset.mode === 'offline') crmToast("Offline — loads show the last data, saves are refused", { tone:'warn' }); else if (el.dataset.mode === 'slow') crmToast('Slow connection — reload a view to see it load'); else crmToast('Normal connection'); },
 	'search-expand': el => { const f = el.closest('.global-search'); const inp = f.querySelector('input'); if (f.classList.contains('is-open') && !inp.value) { f.classList.remove('is-open'); el.setAttribute('aria-expanded', 'false'); return; } f.classList.add('is-open'); el.setAttribute('aria-expanded', 'true'); inp.focus(); },
 	'summary-scroll': el => { const wrap = el.closest('.lead-summary').querySelector('.summary-track'); const card = wrap.querySelector('.summary-card'); const step = card ? card.getBoundingClientRect().width + 12 : 240; wrap.scrollBy({ left:step * +el.dataset.dir, behavior:'smooth' }); },
 	/* filter menus (shared) */

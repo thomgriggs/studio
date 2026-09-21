@@ -1820,3 +1820,41 @@ body[data-device="phone"] .toast-stack { bottom:calc(env(safe-area-inset-bottom)
 @keyframes toast-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
 @keyframes toast-out { to { opacity:0; transform:translateY(6px); } }
 @media (prefers-reduced-motion:reduce) { .toast, .toast.is-leaving { animation:none; } }
+
+/* ========================================================================== */
+/* STATES — loading, offline, failed send, no results                        */
+/* (all driven by crmRequest(); Settings → Connection simulates them)        */
+/* ========================================================================== */
+/* loading veil + skeletons */
+.is-loading { position:relative; }
+.loading-veil { position:absolute; inset:0; background:var(--color_bg-primary); z-index:5; overflow:hidden; padding:var(--gutter-small) var(--gutter); display:grid; align-content:start; gap:14px; }
+.skeleton { background:linear-gradient(90deg, var(--color_bg-secondary) 0%, color-mix(in srgb, var(--color_bg-secondary), #fff 50%) 50%, var(--color_bg-secondary) 100%); background-size:200% 100%; animation:sk-shimmer 1.4s linear infinite; border-radius:var(--radius_small); display:block; }
+@keyframes sk-shimmer { from { background-position:200% 0; } to { background-position:-200% 0; } }
+@media (prefers-reduced-motion:reduce) { .skeleton { animation:none; } }
+.sk-row { display:grid; grid-template-columns:44px 1fr; gap:12px; align-items:center; }
+.sk-circle { width:44px; height:44px; border-radius:50%; }
+.sk-lines { display:grid; gap:8px; }
+.sk-line { height:12px; }
+.sk-bubble { height:44px; width:52%; border-radius:18px; background:var(--color_bg-secondary); &.out { margin-inline-start:auto; background:color-mix(in srgb, var(--thread_outbound), #fff 80%); } &.wide { width:68%; } }
+.sk-columns { display:flex; gap:var(--gutter-small); height:100%; }
+.sk-column { flex:1 0 clamp(280px, 22vw, 340px); max-width:460px; background:var(--color_bg-secondary); border-radius:var(--radius); padding:14px 12px; display:grid; align-content:start; gap:10px; }
+.sk-card { background:var(--color_bg-primary); border-radius:var(--radius_small); padding:14px 12px; display:grid; gap:10px; }
+.sk-grid { position:absolute; inset:0 0 0 var(--calendar_gutter, 64px); }
+.sk-block { position:absolute; width:12%; border-radius:var(--radius_small); }
+body[data-device="phone"] .loading-veil { padding-inline:14px; }
+body[data-device="phone"] .sk-columns { gap:10px; } body[data-device="phone"] .sk-column { flex:0 0 84vw; }
+
+/* offline banner */
+.net-banner { align-items:center; background:var(--status_flag-bg); border-block-end:1px solid color-mix(in srgb, var(--status_flag), #fff 60%); color:var(--status_flag-text); display:flex; flex:none; font-size:var(--font_size-small); font-weight:var(--font_weight-bold-primary); gap:10px; padding:8px var(--gutter); z-index:4;
+	.feather { width:16px; height:16px; flex:none; } span { flex:1; min-width:0; } .btn { height:30px; padding-inline:12px; font-size:var(--font_size-xsmall); background:var(--color_bg-primary); border:1px solid color-mix(in srgb, var(--status_flag), #fff 50%); color:inherit; } }
+body[data-device="phone"] .net-banner { padding-inline:14px; }
+
+/* message states */
+.thread-message[data-status="pending"] { opacity:.85; }
+.thread-message[data-status="failed"] { .message-body { background:var(--status_overdue-bg); color:var(--status_overdue-text); } .message-meta { color:var(--status_overdue-text); display:flex; align-items:center; gap:4px; justify-content:flex-end; .feather { width:13px; height:13px; } } }
+.link-btn { background:none; border:0; color:inherit; font:inherit; font-weight:var(--font_weight-extra-bold-primary); text-decoration:underline; padding:2px 4px; cursor:pointer; border-radius:var(--radius_small); }
+
+/* no results */
+.no-results { display:grid; justify-items:center; gap:8px; color:var(--color_text-muted); .feather { width:28px; height:28px; color:var(--color_text-soft); } .btn { margin-block-start:4px; } br { display:none; } }
+.segmented.segmented-small { padding:3px; > button { padding:5px 10px; font-size:var(--font_size-xsmall); } }
+.sheet-row.is-static .segmented { margin-inline-start:auto; flex:none; }
