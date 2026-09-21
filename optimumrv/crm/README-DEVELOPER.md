@@ -5,6 +5,9 @@ Everything in this folder is the prototype the client has reviewed. It is a **cl
 ## Run it
 Any static server from this folder, e.g. `python3 -m http.server 8765` → http://localhost:8765/index.html. (`file://` works but fonts/icons need network.) The live copy is https://studio.thomgriggs.com/optimumrv/crm/.
 
+## If you're using Claude Code
+Open this folder and `CLAUDE.md` loads automatically: the conventions, a map of `crm.js`, the derived-data rules a backend must reproduce, test recipes, and six first-task prompts sized to this codebase.
+
 ## Read in this order
 1. **HANDOFF.md** — the contract. Start with *Naming contract*, *data.js shape*, *How a lead's status changes*, then *Data contract (target shapes)*, *States — and how to tie in*, *AI agents*, and the two question lists.
 2. **actions.json** — every domain action (what it needs, what it changes, who must confirm) and the Assistant policy. Generated from `CRM_ACTIONS` in `crm.js`; regenerate when that changes.
@@ -22,4 +25,4 @@ Any static server from this folder, e.g. `python3 -m http.server 8765` → http:
 Real AI, an events feed, partial-failure/conflict states, offline queueing, bulk actions, notifications delivery, print/export, a build pipeline (see *Performance* in HANDOFF). Consign / Back Office ship as drawn by agreement.
 
 ## Files
-`index.html` `daily-view.html` `pipeline.html` `calendar.html` `phone.html` `toast-preview.html` · `crm.css` `crm.js` `data.js` `actions.json` · `js/` (Feather 4, MicroModal) · `assets/` (logo, sample photos) · `HANDOFF.md` · this file.
+`index.html` `daily-view.html` `pipeline.html` `calendar.html` `phone.html` `toast-preview.html` · `crm.css` `crm.js` `data.js` `actions.json` · `js/` (Feather 4, MicroModal) · `assets/` (logo, sample photos) · `HANDOFF.md` · `CLAUDE.md` · this file.
