@@ -354,7 +354,6 @@ function crmOpenLead(id) {
 
 	document.getElementById('composer-input').value = '';
 	document.getElementById('composer-input').placeholder = `Text ${lead.name.split(' ')[0]}…`;
-	document.querySelectorAll('.optin-shield').forEach(sh => { const ok = lead.textOptIn !== false; sh.dataset.optin = ok ? 'yes' : 'no'; sh.setAttribute('aria-label', ok ? 'Texting: opted in' : 'Texting: opt-in pending'); sh.setAttribute('title', ok ? 'Opted in to texting' : 'Text opt-in pending — texts wait until they reply'); });
 	crmIcons();
 }
 

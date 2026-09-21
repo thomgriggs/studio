@@ -302,4 +302,4 @@ Fast in use — total blocking time 0 ms, layout shift ≈ 0 on every view; all 
 
 1 + 2 alone should put mobile in the 90s. Nothing here changes how anything looks.
 
-**Text opt-in.** `lead.textOptIn` (boolean) shows as a filled shield beside the phone number in the lead header — and beside the name in the phone top bar — green when opted in, brand red when pending; the shield carries the state as `aria-label` and a tooltip. The old "Texting … — opted in" line under the composer is gone.
+**Text opt-in.** `lead.textOptIn` (boolean) is in the data and drives nothing visible yet — the old "Texting … — opted in" line under the composer was removed and no replacement has been chosen.
