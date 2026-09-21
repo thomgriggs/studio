@@ -251,9 +251,9 @@ Tab walk — every stop named, in reading order, nothing hidden: Daily View 33 s
 | Drawer: focus moves in · Esc closes · focus returns | pass | — |
 | Calendar shortcuts ← → t d w m y | pass | 1 each |
 
-Two gaps found, both small:
-1. **Draft card doesn't take focus.** Pressing + opens the event card but focus stays on the + button; a keyboard user has to Tab a long way to reach it (the card is at the end of the DOM). Fix: focus the card's first field on open (the phone event screen and sheets already do this).
-2. **Focus lost after a stage change.** After "Mark agreed" the opener button hides itself (it no longer applies), so the focus-return has nowhere to go and lands on `<body>`. Fix: fall back to the lead name / next visible action.
+Two gaps found and fixed the same day (`crmOpenPopover` focuses the card's first control when opened from the keyboard; `crmSheet`'s focus-return falls back to the visible lead name when the opener has hidden itself):
+1. ~~**Draft card doesn't take focus.**~~ Pressing + opens the event card but focus stays on the + button; a keyboard user has to Tab a long way to reach it (the card is at the end of the DOM). Fix: focus the card's first field on open (the phone event screen and sheets already do this).
+2. ~~**Focus lost after a stage change.**~~ After "Mark agreed" the opener button hides itself (it no longer applies), so the focus-return has nowhere to go and lands on `<body>`. Fix: fall back to the lead name / next visible action.
 
 ## VoiceOver script (10 minutes)
 

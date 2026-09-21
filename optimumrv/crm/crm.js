@@ -848,7 +848,13 @@ function crmSheet({ title, reason, body = '', actions = [] }) {
 	f.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => { const r = actions[i].run ? actions[i].run(m) : undefined; if (r !== false) MicroModal.close('crm-modal'); }));
 	crmIcons();
 	const opener = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
-	MicroModal.show('crm-modal', { disableScroll:true, awaitCloseAnimation:false, onClose:() => { if (opener && document.contains(opener)) opener.focus(); } });
+	MicroModal.show('crm-modal', { disableScroll:true, awaitCloseAnimation:false, onClose:() => {
+		const visible = el => el && document.contains(el) && el.getBoundingClientRect().width > 0 && !el.closest('[inert]');
+		if (visible(opener)) { opener.focus(); return; }
+		/* the opener hid itself (e.g. "Mark agreed" once the stage changed): fall back to the nearest landmark for that lead */
+		const fb = [...document.querySelectorAll('.lead-identity .lead-name, .phone-lead-screen .phone-lead, .calendar-title, .topbar .menu-btn')].find(el => el.getBoundingClientRect().width > 0 && !el.closest('[inert]'));
+		if (fb) { if (!fb.hasAttribute('tabindex')) fb.setAttribute('tabindex', '-1'); fb.focus({ preventScroll:true }); }
+	} });
 	return m;
 }
 function crmClose() { if (document.getElementById('crm-modal')?.classList.contains('is-open')) MicroModal.close('crm-modal'); }
@@ -1868,6 +1874,10 @@ function crmOpenPopover(e, anchor, opts = {}) {
 	crmPlacePopover(pop, anchor);
 	pop.classList.add('is-open');
 	const ta = pop.querySelector('.inline-picker textarea'); if (ta) { ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); }
+	else if (pop._opener && !pop.contains(document.activeElement)) { /* opened from the keyboard: move into the card so it isn't a long Tab away */
+		const first = pop.querySelector(e._draft ? '.draft-select, .editor-kind button' : '[data-action="edit-field"], .popover-head button, button');
+		if (first) first.focus({ preventScroll:true });
+	}
 }
 function crmPlacePopover(pop, anchor) {
 	const r = anchor ? anchor.getBoundingClientRect() : { left:innerWidth / 2, right:innerWidth / 2, top:120, bottom:120 };
