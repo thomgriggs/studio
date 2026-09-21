@@ -206,9 +206,8 @@ const CRM_BLOCKS = [
 ];
 
 function crmBindLabels() {
-	const toggle = document.querySelector('[data-action="toggle-labels"]');
-	if (!toggle) return;
-	toggle.addEventListener('change', () => crmToggleLabels(toggle.checked));
+	/* the sidebar toggle is gone; the overlay is still reachable for the developer with ?labels=1 */
+	if (new URLSearchParams(location.search).get('labels') === '1') crmToggleLabels(true);
 }
 
 function crmToggleLabels(on) {
