@@ -1,6 +1,6 @@
 # Optimum RV CRM — prototype handoff
 
-Static HTML/CSS/JS click-through of the CRM mockups in `screens/`. Nothing talks to a server; every screen renders from `data.js`. The point of this shell is the **naming**: every block, field and control is labeled so functionality can be wired without guessing.
+Static HTML/CSS/JS click-through of the Optimum RV CRM (built from the original AI-generated mockups, which stay in the studio repo under `crm/screens/` — not needed to build from). Nothing talks to a server; every screen renders from `data.js`. The point of this shell is the **naming**: every block, field and control is labeled so functionality can be wired without guessing.
 
 Open `index.html` through any static server (e.g. `python3 -m http.server` from the parent folder) — `file://` works too, but fonts and Feather icons need network access.
 
@@ -87,7 +87,7 @@ entry = { type:'day', label, time }
 
 Pipeline cards read `lead.card = { image|svg, unitTitle, source, type, loc, stock, price, lane, timer:{label,status,icon}, badges:[…], activity, activityIcon, age, flag:{text,tone,icon}, unread, muted }`. Board layout per desk is `desk.board = { filters:[…], lanes:{ stageId:[{id,label,count,collapsed}] }, summary:{…} }` (the Back Office "For Sale" aggregate column). Leads with `tabs:[]` sit on the board but not in today's inbox.
 
-Calendar reads `CRM_DATA.calendar = { week:{month,days,todayIndex,now,startHour,endHour}, events:{ role:[event] }, types:{…} }` where `event = { id, kind:'appointment'|'followup', day:0–6, start, end (decimal hours), lead, name, unit, type, image|svg, owner, tone, state:'past'|'cancelled', done, timeLabel, label, status }`.
+Calendar reads `CRM_DATA.calendar = { startHour, endHour, workHours:[open, close], events:{ role:[event] } }` where `event = { id, kind:'appointment'|'followup', date:'YYYY-MM-DD', start, end, lead, store, name, unit, type, owner, tone, state:'cancelled'|null, done, status:'overdue'|null, notes }`. Sample dates float with the real date (`REL()` in `data.js`) so the demo never goes stale; stores (`CRM_DATA.stores`) carry hours per weekday and reps, and `crmSlotsFor(store, date)` derives open slots from them.
 
 Repeated items are rendered by `crm.js` from the `<template>` elements at the bottom of each page — the template *is* the markup contract for that item.
 
@@ -154,7 +154,7 @@ Modeled on **iOS Calendar in day mode** — the view a salesperson uses on the l
 
 Decisions this prototype assumes that only Optimum RV can confirm:
 
-1. **Consign vs Back Office** — are these two jobs (salesperson lists the unit; an inventory/buy-in admin takes over after signing) or one? Intent behind the two boards in the mockups.
+1. **Consign vs Back Office** — are these two jobs (salesperson lists the unit; an inventory/buy-in admin takes over after signing) or one? *Parked by agreement with the developer: the two boards ship as drawn; the answer only changes labels and who may move stages.*
 2. **Response-time rule** — is there a real "reply within 15 minutes" expectation on new leads? It drives the `3m left` pills and the Assigned column.
 3. **Who assigns leads** — manager, round-robin, by store, whoever is on the floor?
 4. **Call recording / transcripts** — does the phone system record outbound calls?
@@ -162,6 +162,34 @@ Decisions this prototype assumes that only Optimum RV can confirm:
 6. **Do managers text customers?** — the prototype assumes managers supervise (note / reassign / take over) rather than reply.
 7. **Store hours** — Ocala verified from the site (Mon–Sat 8–7, Sun 11–5); other stores assumed the same.
 8. **Stage names** — does the floor already use words for these states (New / Contacted / Appointment / Sold / Lost)? Use theirs.
+9. **Who may move a consignment stage by hand?** A salesperson can only set Agreed / Lost (everything else moves from what they log); a manager can override with a reason. The consignment lister's quick-edit currently allows every stage with no reason. Trusted like a manager, or gated like sales? This decides how the four stage-change paths (drag, quick-edit, ⋯ menu, header buttons) consolidate.
+10. **What may the assistant do unattended?** `actions.json` proposes: draft and suggest freely; send, book, or change a stage only after a person confirms; never call, cancel, delete, mark Agreed/Lost or reassign. Confirm or move lines.
+11. **Texting compliance** — where does opt-in come from (web form, first inbound text, keyword)? The data has `textOptIn`; the contract below asks for *when* and *to which number*.
+
+## Questions for the developer
+
+1. **Stack and auth** — where do roles come from (SSO, the DMS, your own users)? The prototype's Salesperson / Management / Consignment map to permissions, not screens; the Assistant is a fourth actor (`CRM_DATA.assistant`).
+2. **Texting and email providers** — Twilio-style SMS with delivery receipts? Which mail provider, and does it report opens? Both decide which `status` values in the message contract are real.
+3. **Calendar of record** — does the store calendar live here, or sync to Google/Outlook? Decides whether `externalId` on events is required from day one.
+4. **Events feed** — push (websocket/SSE) or poll? The UI's triggers are listed in `actions.json → events_for_agents`; the live region and toast are ready to receive them.
+5. **The DMS / inventory system** — units (`stock`, `price`, photos) come from somewhere; the summary cards assume a lookup by stock number.
+6. **Build pipeline** — see *Performance*: thumbnails, minify, self-host fonts, prune Feather. Nothing in the prototype depends on a bundler.
+
+## Data contract (target shapes)
+
+What the UI renders today is on the left; what a real backend should store is on the right. The screens don't change — these are fields, not designs. Rules that matter more than any field: **every record has `id`, `createdAt`, `updatedAt`, `by`**, and **the thread is append-only** (corrections are new entries, never edits) — that's what makes provenance and the assistant trustworthy.
+
+| today (`data.js`) | target |
+|---|---|
+| `lead.phone`, `lead.email`, `lead.textOptIn` | `lead.contacts:[{ id, channel:'sms'\|'email'\|'phone', value, primary, optIn:{ status:'opted-in'\|'pending'\|'opted-out', at, source:'web-form'\|'inbound'\|'keyword'\|'manual' }, verified }]` — opt-in is *per number*, with a time and a source (TCPA asks for both) |
+| message `{ type:'message', dir, text, meta, by }` | `{ id, type:'message', channel:'sms'\|'email', dir:'in'\|'out', from, to, body, sentAt, status:'queued'\|'sent'\|'delivered'\|'read'\|'failed', failReason, providerId, by, sentBy, draftedBy }` — the UI's *Sending… / Delivered / Not sent · Retry* states read `status`, not a string |
+| email `{ subject, preview, opened }` | as message plus `subject, html, text, attachments:[{ id, name, size, url }], inReplyTo, messageId, openedAt` |
+| call `{ title, summary }` | `{ id, type:'call', dir, startedAt, duration, outcome, recordingUrl, transcript, by }` |
+| event `{ type:'event', icon, text, by }` | keep — this is the audit log; add `id, at, kind` (`stage.changed`, `assigned`, `followup.set`, …) so agents can subscribe by kind |
+| `event = { id, kind, date, start, end, lead, store, … }` | add `calendarId, externalId, updatedAt, attendees:[…], reminders:[…], createdBy`; keep appointments and follow-ups as one type with `kind` |
+| `lead.card` (timer, activity, age, flag) | derive server-side from the thread and rules (see *How a lead's status changes*) rather than storing; the prototype hard-codes them for the demo |
+| `lead.stage`, `stageNote` | `stage` plus `stageHistory:[{ from, to, at, by, reason }]` — the thread event is the human-readable copy |
+| `crmRequest(label, work)` | one API client; the label becomes the endpoint. Keep the rejection shape `{ offline:true }` so the banner and refused-save paths keep working |
 
 ## Every control responds
 
