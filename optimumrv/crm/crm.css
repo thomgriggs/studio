@@ -1861,7 +1861,7 @@ body[data-device="phone"] .net-banner { padding-inline:14px; }
 
 /* phone List mode: the desktop table, full-bleed, grab or swipe sideways; the row list is retired */
 body[data-device="phone"][data-view="pipeline"] .lead-table-wrap { flex:1; min-height:0; overflow:auto; padding:0; -webkit-overflow-scrolling:touch; cursor:grab; &[hidden] { display:none; } &.is-panning { cursor:grabbing; user-select:none; }
-	.lead-table { min-width:960px; border-radius:0; border-inline:0; th { top:0; } }
+	.lead-table { min-width:960px; border-radius:0; border-inline:0; th { top:0; } td:last-child, th:last-child { padding-inline-end:28px; } td:first-child, th:first-child { padding-inline-start:16px; } } /* the table is full-bleed, so the end cells carry the page gutter */
 	.lead-table-foot { padding:10px 14px calc(env(safe-area-inset-bottom) + 10px); }
 }
 .lead-table-wrap.is-panning { cursor:grabbing; user-select:none; }
