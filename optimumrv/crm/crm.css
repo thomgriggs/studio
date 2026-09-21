@@ -1858,3 +1858,5 @@ body[data-device="phone"] .net-banner { padding-inline:14px; }
 .no-results { display:grid; justify-items:center; gap:8px; color:var(--color_text-muted); .feather { width:28px; height:28px; color:var(--color_text-soft); } .btn { margin-block-start:4px; } br { display:none; } }
 .segmented.segmented-small { padding:3px; > button { padding:5px 10px; font-size:var(--font_size-xsmall); } }
 .sheet-row.is-static .segmented { margin-inline-start:auto; flex:none; }
+/* start page: a phone link and its landscape twin share one row */
+.picker-links .picker-row { display:flex; gap:6px; > a:first-child { flex:1; } .alt { flex:none; width:40px; justify-content:center; padding-inline:0; .feather { margin:0; } } }

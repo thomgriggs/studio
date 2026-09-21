@@ -16,16 +16,25 @@
 		/* PHONE FRAME : 390×844 viewport, the size of an iPhone 14/15 */
 		.phone-frame { background:var(--bezel); border-radius:54px; padding:14px; box-shadow:0 30px 70px rgba(0,0,0,.35), inset 0 0 0 2px #333; position:relative; width:418px; }
 		.phone-frame::before { content:""; position:absolute; top:26px; left:50%; transform:translateX(-50%); width:120px; height:34px; background:#000; border-radius:20px; z-index:2; }
-		.phone-screen { background:#fff; border-radius:42px; overflow:hidden; width:390px; height:844px; display:block; border:0; }
+		.phone-screen { background:#000; border-radius:42px; overflow:hidden; width:390px; height:844px; display:block; }
+		.phone-screen iframe { display:block; border:0; width:100%; height:100%; background:#fff; }
+		/* LANDSCAPE : 844×390, the notch on the left; the screen keeps a 48px safe strip beside it, as iOS does */
+		.phone-frame.is-landscape { width:872px; }
+		.phone-frame.is-landscape::before { top:50%; left:26px; transform:translateY(-50%); width:34px; height:120px; }
+		.phone-frame.is-landscape .phone-screen { width:844px; height:390px; }
+		.phone-frame.is-landscape .phone-screen iframe { width:calc(100% - 48px); margin-inline-start:48px; }
+		.orient { display:inline-flex; border:1px solid #ccc; border-radius:999px; padding:3px; background:#fff; gap:2px; button { border:0; background:transparent; font:inherit; padding:5px 12px; border-radius:999px; cursor:pointer; color:#444; &.is-active { background:#1f1f1f; color:#fff; } } }
 		.phone-note { display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:center; }
 		.phone-note a { color:#d02030; font-weight:500; }
 		.phone-note select { font:inherit; padding:6px 10px; border-radius:8px; border:1px solid #ccc; background:#fff; }
 		@media (max-width:460px) { .phone-frame { width:100%; padding:0; border-radius:0; box-shadow:none; background:transparent; } .phone-frame::before { display:none; } .phone-screen { width:100%; height:100dvh; border-radius:0; } }
+		@media (max-width:900px) { body { overflow-x:auto; } .phone-frame.is-landscape { max-width:none; } }
 	</style>
 </head>
 <body>
-	<div class="phone-frame"><iframe class="phone-screen" id="phone-screen" title="Phone preview" src="daily-view.html?role=sales&device=phone&inset=44"></iframe></div>
+	<div class="phone-frame" id="phone-frame"><div class="phone-screen"><iframe id="phone-screen" title="Phone preview" src="daily-view.html?role=sales&device=phone&inset=44"></iframe></div></div>
 	<p class="phone-note">
+		<span class="orient" role="group" aria-label="Orientation"><button type="button" data-orient="portrait" class="is-active">Portrait</button><button type="button" data-orient="landscape">Landscape</button></span>
 		<label>Role <select id="phone-role"><option value="sales">Salesperson</option><option value="management">Management</option><option value="consignment">Consignment</option></select></label>
 		<a id="phone-open" href="daily-view.html?role=sales&device=phone" target="_blank" rel="noopener">Open full size ↗</a>
 		<a href="index.html">Back to roles</a>
@@ -34,7 +43,12 @@
 		const frame = document.getElementById('phone-screen'), sel = document.getElementById('phone-role'), open = document.getElementById('phone-open');
 		const params = new URLSearchParams(location.search);
 		const src = params.get('src');
+		/* orientation: the frame rotates; the page inside keeps the phone layout (device=phone) and loses the notch inset in landscape */
+		const frameEl = document.getElementById('phone-frame');
+		const setOrient = o => { frameEl.classList.toggle('is-landscape', o === 'landscape'); document.querySelectorAll('[data-orient]').forEach(b => b.classList.toggle('is-active', b.dataset.orient === o)); const u = new URL(frame.src, location.href); u.searchParams.set('inset', o === 'landscape' ? '0' : '44'); const next = u.pathname.split('/').pop() + u.search; if (frame.getAttribute('src') !== next) frame.src = next; const page = new URL(location.href); page.searchParams.set('orient', o); history.replaceState(null, '', page); };
+		document.querySelectorAll('[data-orient]').forEach(b => b.addEventListener('click', () => setOrient(b.dataset.orient)));
 		if (src) { const u = new URL(src, location.href); u.searchParams.set('device', 'phone'); u.searchParams.set('inset', '44'); frame.src = u.pathname.split('/').pop() + u.search; open.href = frame.src; const r = u.searchParams.get('role'); if (r) sel.value = r; }
+		if (params.get('orient') === 'landscape') setOrient('landscape');
 		sel.addEventListener('change', () => { const u = new URL(frame.src, location.href); u.searchParams.set('role', sel.value); u.searchParams.delete('desk'); u.searchParams.delete('lead'); u.searchParams.delete('tab'); frame.src = u.pathname.split('/').pop() + u.search; open.href = frame.src; });
 	</script>
 </body>
