@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<title>Toast preview — Optimum RV CRM</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="crm.css">
+	<style>
+		/* ---- preview page only ---- */
+		body { display:grid; place-items:center; min-height:100dvh; padding:24px; }
+		.preview { display:grid; gap:14px; max-width:460px; width:100%; }
+		.preview h1 { font-family:var(--font_name-secondary); font-size:var(--font_size-large); }
+		.preview p { color:var(--color_text-muted); font-size:var(--font_size-small); }
+		.preview .btn { justify-content:flex-start; height:44px; }
+		.preview .row { display:flex; gap:10px; flex-wrap:wrap; }
+
+		/* ---- the toast itself (what would go into crm.css) ---- */
+		.toast-stack { position:fixed; inset-inline:0; bottom:calc(env(safe-area-inset-bottom) + 24px); display:grid; justify-items:center; gap:8px; pointer-events:none; z-index:120; }
+		.toast { align-items:center; background:var(--color_text); border-radius:var(--radius_pill); box-shadow:0 8px 24px rgba(0,0,0,.22); color:#fff; display:flex; font-size:var(--font_size-small); font-weight:var(--font_weight-bold-primary); gap:12px; padding:10px 12px 10px 18px; pointer-events:auto; animation:toast-in .22s ease-out;
+			.feather { width:16px; height:16px; color:#7ee2a3; flex:none; }
+			&[data-tone="warn"] .feather { color:#ffc36b; }
+			.toast-undo { background:transparent; border:0; color:#ffb3b9; font:inherit; font-weight:var(--font_weight-extra-bold-primary); padding:6px 8px; border-radius:var(--radius_pill); cursor:pointer; &:hover { background:rgba(255,255,255,.12); } }
+			&.is-leaving { animation:toast-out .18s ease-in forwards; }
+		}
+		@keyframes toast-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+		@keyframes toast-out { to { opacity:0; transform:translateY(6px); } }
+		@media (prefers-reduced-motion:reduce) { .toast, .toast.is-leaving { animation:none; } }
+	</style>
+</head>
+<body>
+	<main class="preview">
+		<h1>Toast preview</h1>
+		<p>Each button does what the real one would, then shows the confirmation. It fades after 4 seconds, or click it to dismiss. A screen reader hears the same words.</p>
+		<div class="row">
+			<button type="button" class="btn" data-msg="Marcus Trent moved to Agreed" data-undo="1"><i data-feather="check-circle"></i>Mark agreed</button>
+			<button type="button" class="btn" data-msg="Sent"><i data-feather="send"></i>Send message</button>
+			<button type="button" class="btn" data-msg="Appointment saved · Fri, Sep 25 · 3 PM" data-undo="1"><i data-feather="calendar"></i>Save appointment</button>
+			<button type="button" class="btn" data-msg="Follow-up done" data-undo="1"><i data-feather="check"></i>Complete follow-up</button>
+			<button type="button" class="btn" data-msg="Type a message first" data-tone="warn"><i data-feather="alert-circle"></i>Send (empty)</button>
+			<button type="button" class="btn" data-msg="Showing all stores"><i data-feather="filter"></i>Clear filters</button>
+		</div>
+		<p>Position: bottom-centre. On the Daily View it would sit just above the composer; on the phone, above the bottom bar.</p>
+	</main>
+
+	<!-- one live region for the page; every toast is announced from here -->
+	<div class="toast-stack" id="toast-stack" role="status" aria-live="polite"></div>
+
+	<script src="js/feather.min.js"></script>
+	<script>
+		function crmToast(message, opts = {}) {
+			const stack = document.getElementById('toast-stack');
+			const t = document.createElement('div');
+			t.className = 'toast'; t.dataset.tone = opts.tone || '';
+			t.innerHTML = `<i data-feather="${opts.tone === 'warn' ? 'alert-circle' : 'check'}"></i><span>${message}</span>${opts.undo ? '<button type="button" class="toast-undo">Undo</button>' : ''}`;
+			stack.appendChild(t); feather.replace();
+			const close = () => { t.classList.add('is-leaving'); setTimeout(() => t.remove(), 200); };
+			const timer = setTimeout(close, opts.undo ? 6000 : 4000);
+			t.addEventListener('click', e => { clearTimeout(timer); if (e.target.closest('.toast-undo') && opts.onUndo) opts.onUndo(); close(); });
+		}
+		document.querySelectorAll('[data-msg]').forEach(b => b.addEventListener('click', () => crmToast(b.dataset.msg, { undo:!!b.dataset.undo, tone:b.dataset.tone, onUndo:() => crmToast('Undone') })));
+		feather.replace();
+	</script>
+</body>
+</html>
