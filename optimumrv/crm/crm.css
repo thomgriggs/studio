@@ -1723,7 +1723,7 @@ body[data-device="phone"][data-view="calendar"] {
 /* ========================================================================== */
 body[data-device="phone"][data-view="pipeline"] {
 	height:100dvh; overflow:hidden;
-	.topbar, .lead-table-wrap { display:none !important; }
+	.topbar { display:none !important; }
 	.phone-board, .phone-lead-screen { background:var(--color_bg-primary); display:flex !important; flex-direction:column; inset:0; min-height:0; position:absolute; transition:transform 220ms ease; will-change:transform; }
 	.phone-board { transform:translateX(0); z-index:1; }
 	.phone-lead-screen { transform:translateX(100%); z-index:2; box-shadow:-12px 0 30px rgba(0,0,0,.12); }
@@ -1858,3 +1858,11 @@ body[data-device="phone"] .net-banner { padding-inline:14px; }
 
 /* provenance tag on system/assistant events in the thread */
 .thread-event .thread-by { margin-inline-start:6px; color:var(--color_text-soft); font-size:var(--font_size-tiny); display:inline-flex; align-items:center; gap:3px; .feather { width:11px; height:11px; } }
+
+/* phone List mode: the desktop table, full-bleed, grab or swipe sideways; the row list is retired */
+body[data-device="phone"][data-view="pipeline"] .lead-table-wrap { flex:1; min-height:0; overflow:auto; padding:0; -webkit-overflow-scrolling:touch; cursor:grab; &[hidden] { display:none; } &.is-panning { cursor:grabbing; user-select:none; }
+	.lead-table { min-width:960px; border-radius:0; border-inline:0; th { top:0; } }
+	.lead-table-foot { padding:10px 14px calc(env(safe-area-inset-bottom) + 10px); }
+}
+.lead-table-wrap.is-panning { cursor:grabbing; user-select:none; }
+.lead-table-wrap { cursor:grab; }

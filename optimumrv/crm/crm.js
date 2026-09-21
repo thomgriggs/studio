@@ -577,7 +577,7 @@ function crmBoardLeads(desk) {
 
 function crmRenderBoard(desk) {
 	const phone = document.body.dataset.device === 'phone';
-	if (phone) { crmRenderPhoneBoard(desk); if (crmBoard.mode === 'list') return; }
+	if (phone) { crmRenderPhoneBoard(desk); if (crmBoard.mode === 'list') { crmRenderLeadTable(desk); return; } }
 	const table = document.getElementById('lead-table');
 	document.querySelectorAll('.board-modes button').forEach(b => { const on = b.dataset.mode === crmBoard.mode; b.classList.toggle('is-active', on); b.classList.toggle('is-brand', on); });
 	if (table) table.hidden = crmBoard.mode !== 'list';
@@ -826,7 +826,11 @@ function crmRenderPhoneBoard(desk) {
 	if (board.parentElement !== wrap) wrap.insertBefore(board, list.nextSibling);
 	const modeBtn = wrap.querySelector('.phone-board-mode');
 	modeBtn.innerHTML = `<i data-feather="${crmBoard.mode === 'board' ? 'server' : 'columns'}"></i>`; modeBtn.setAttribute('aria-label', crmBoard.mode === 'board' ? 'Switch to list' : 'Switch to board');
-	list.hidden = crmBoard.mode === 'board'; board.hidden = crmBoard.mode !== 'board';
+	const table = document.getElementById('lead-table');
+	if (table && table.parentElement !== wrap) wrap.insertBefore(table, list.nextSibling);
+	list.hidden = true; /* the row list is retired on the phone — List mode is the same table as desktop */
+	if (table) table.hidden = crmBoard.mode !== 'list';
+	board.hidden = crmBoard.mode !== 'board';
 	if (crmBoard.mode === 'board') {
 		/* the columns are rendered by crmRenderBoard right after this; snap to the selected stage once they exist */
 		requestAnimationFrame(() => { const col = board.querySelector(`.pipeline-column[data-stage="${crmBoard.stage}"]`); if (col && !crmBoard._syncing) board.scrollTo({ left:col.offsetLeft - 14, behavior:'auto' }); });
@@ -1365,7 +1369,7 @@ function crmQuickEdit(lead, opts = {}) {
 }
 
 Object.assign(CRM_ACTIONS, {
-	'quick-edit': el => { const card = el.closest('.lead-card'); if (card && document.body.dataset.device === 'phone') { crmPhoneLeadScreen(card.dataset.lead, true); return; } if (el.dataset.lead && !el.closest('.lead-card')) { const ld = crmDesk().leads.find(l => l.id === el.dataset.lead); if (ld) { crmQuickEdit(ld); return; } } const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
+	'quick-edit': el => { const card = el.closest('.lead-card'); if (card && document.body.dataset.device === 'phone') { crmPhoneLeadScreen(card.dataset.lead, true); return; } if (el.classList.contains('lead-table-row') && document.body.dataset.device === 'phone') { crmPhoneLeadScreen(el.dataset.lead, true); return; } if (el.dataset.lead && !el.closest('.lead-card')) { const ld = crmDesk().leads.find(l => l.id === el.dataset.lead); if (ld) { crmQuickEdit(ld); return; } } const lead = crmDesk().leads.find(l => l.id === el.closest('.lead-card').dataset.lead); if (lead) crmQuickEdit(lead); },
 	'quick-stage': () => {},      /* handled inside crmQuickEdit */
 	'quick-reassign': () => {},   /* handled inside crmQuickEdit */
 	'quick-followup': () => {},   /* handled inside crmQuickEdit */
@@ -1447,12 +1451,14 @@ Object.assign(CRM_ACTIONS, {
 });
 
 /* click-and-drag on empty board space pans sideways (cards keep their own drag) */
-function crmBindBoardPan() {
-	const board = document.getElementById('pipeline');
+function crmBindBoardPan() { crmBindPan(document.getElementById('pipeline')); crmBindPan(document.getElementById('lead-table')); }
+/* grab-and-drag sideways with a mouse (touch already scrolls natively); clicks on controls still work */
+function crmBindPan(board) {
+	if (!board || board.dataset.panBound) return; board.dataset.panBound = '1';
 	let pan = null;
 	board.addEventListener('pointerdown', e => {
 		if (e.pointerType !== 'mouse') return; /* touch scrolls natively — the pan is a mouse aid, on the phone layout too */
-		if (e.button !== 0 || e.target.closest('.lead-card, button, a, select, input, .forsale-summary')) return;
+		if (e.button !== 0 || e.target.closest('.lead-card, button, a, select, input, .forsale-summary, th')) return;
 		pan = { x:e.clientX, left:board.scrollLeft, moved:false, id:e.pointerId };
 		board.classList.add('is-panning');
 	});
@@ -1462,7 +1468,8 @@ function crmBindBoardPan() {
 		if (Math.abs(dx) > 3 && !pan.moved) { pan.moved = true; board.setPointerCapture(pan.id); }
 		if (pan.moved) board.scrollLeft = pan.left - dx;
 	});
-	const end = () => { if (!pan) return; board.classList.remove('is-panning'); pan = null; };
+	const end = () => { if (!pan) return; board.classList.remove('is-panning'); if (pan.moved) { board.dataset.suppressClick = '1'; setTimeout(() => delete board.dataset.suppressClick, 250); } pan = null; };
+	board.addEventListener('click', e => { if (board.dataset.suppressClick) { e.stopPropagation(); e.preventDefault(); } }, true);
 	board.addEventListener('pointerup', end);
 	board.addEventListener('pointercancel', end);
 	board.addEventListener('pointerleave', end);
