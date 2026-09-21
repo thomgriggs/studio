@@ -55,7 +55,7 @@ shared: .btn(.btn-primary .btn-round .btn-icon)  .pill(.pill-tag)  .avatar  .seg
 | `data-stage` (columns) / `data-lane` | `.pipeline-column`, `.column-lane` | stage ids above; lanes `agreed collecting out signed approved fee progress funded buyin paid` |
 | `data-owner` | `.lead-card`, `.calendar-event` | salesperson / lister name |
 | `data-event` / `data-day` / `data-mode` / `data-kind` | calendar events & tasks, day columns, view mode, editor kind | ids from `data.js`; `0–6`; `day week month year`; `appointment followup` |
-| `data-field` | every dynamic text/image node | dotted path into the lead object — `name` `phone` `email` `location` `owner` `stageNote` `composerStatus` `initials` `time` `unit` `preview` `pill.label` `cta.label` `stage.label` `summary.title/meta/status` `message.body/author/status/image` `call.title/summary` `note.author/text` `email.time/subject/preview` `event.text` `day.label/time` `user.name/initials/location` `app.version` |
+| `data-field` | every dynamic text/image node | dotted path into the lead object — `name` `phone` `email` `location` `owner` `stageNote` `textOptIn` `initials` `time` `unit` `preview` `pill.label` `cta.label` `stage.label` `summary.title/meta/status` `message.body/author/status/image` `call.title/summary` `note.author/text` `email.time/subject/preview` `event.text` `day.label/time` `user.name/initials/location` `app.version` |
 | `data-stage` | `.lead-header`, `.inbox-item`, stepper `<li>` | sales: `assigned attempting working agreed` · consign: `+ documents contract processing` · backoffice: `motility checkin arrived forsale deals payout` |
 | `data-status` | `.pill`, `.item-unread`, summary tags | `urgent overdue flagged fee-due hold pending info appointment ok confirmed ready neutral dark unread` |
 | `data-tone` | `.thread-event`, `.summary-icon` | `warn alert info ok` |
@@ -75,7 +75,7 @@ lead = { id, name, initials, phone, email, location, owner, badges:[{label,statu
          stage, stageDone, stageNote, flag, cta:{label,action,icon,tone:'primary'|'waiting'},
          summary:[ {kind:'unit', image|svg, star, title, meta, meta2, status:[{label,status}]}
                  | {kind:'icon', icon, tone, title, meta, status:[…]} ],
-         composerStatus, thread:[entry] }
+         textOptIn, thread:[entry] }
 entry = { type:'day', label, time }
       | { type:'event', icon, tone, text }
       | { type:'message', dir:'out'|'in', text, label, labelIcon, meta }
@@ -301,3 +301,5 @@ Fast in use — total blocking time 0 ms, layout shift ≈ 0 on every view; all 
 3. **Fonts and icons** — self-host the two Roboto weights in use; prune `feather.min.js` (74 KB) to the ~40 icons the app uses.
 
 1 + 2 alone should put mobile in the 90s. Nothing here changes how anything looks.
+
+**Text opt-in.** `lead.textOptIn` (boolean) shows as a filled shield beside the phone number in the lead header — and beside the name in the phone top bar — green when opted in, brand red when pending; the shield carries the state as `aria-label` and a tooltip. The old "Texting … — opted in" line under the composer is gone.

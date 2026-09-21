@@ -354,7 +354,7 @@ function crmOpenLead(id) {
 
 	document.getElementById('composer-input').value = '';
 	document.getElementById('composer-input').placeholder = `Text ${lead.name.split(' ')[0]}…`;
-	document.querySelector('.composer-status span').textContent = lead.composerStatus;
+	document.querySelectorAll('.optin-shield').forEach(sh => { const ok = lead.textOptIn !== false; sh.dataset.optin = ok ? 'yes' : 'no'; sh.setAttribute('aria-label', ok ? 'Texting: opted in' : 'Texting: opt-in pending'); sh.setAttribute('title', ok ? 'Opted in to texting' : 'Text opt-in pending — texts wait until they reply'); });
 	crmIcons();
 }
 
@@ -1157,7 +1157,7 @@ const CRM_ACTIONS = {
 				const lead = { id, name, initials:name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase(), phone:m.querySelector('#nl-phone').value || '—', email:'—', location:roleData.user.location, owner:roleData.user.name,
 					tabs:[desk.tabs[0].id, desk.tabs[desk.tabs.length - 1].id], unread:'unread', time:'Just now', preview:`${source} · ${type} — logged by ${roleData.user.name}`, pill:{ label:'15m left', status:'urgent', icon:'clock' },
 					stage:desk.stages[0].id, stageNote:'Assigned · just now', waitingOn:'Lister', summary:[{ kind:'icon', icon:'map-pin', tone:'info', title:`${source} · ${type}`, meta:'Logged manually', status:[{ label:'New', status:'info' }] }],
-					composerStatus:'Text opt-in pending', thread:[{ type:'day', label:'Today', time:'now' }, { type:'event', icon:'inbox', text:`Lead logged — ${source} · ${type}` }, { type:'event', icon:'user', text:`Assigned to ${roleData.user.name}` }],
+					textOptIn:false, thread:[{ type:'day', label:'Today', time:'now' }, { type:'event', icon:'inbox', text:`Lead logged — ${source} · ${type}` }, { type:'event', icon:'user', text:`Assigned to ${roleData.user.name}` }],
 					card:{ source, type, timer:{ label:'15m left', status:'urgent', icon:'clock' }, activity:`Logged by ${roleData.user.name}`, activityIcon:'inbox', age:'now', unread:true } };
 				desk.leads.unshift(lead);
 				crmPersist();

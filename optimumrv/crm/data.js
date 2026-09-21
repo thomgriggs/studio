@@ -49,7 +49,7 @@ window.CRM_DATA = (function () {
 				{ kind:'unit', image:IMG.redhawk, title:'2020 Newmar Bay Star 3226', meta:'#5CR0812 · $118,000', status:[{ label:'Ready for sale', status:'ok' }] },
 				{ kind:'icon', icon:'globe', tone:'info', title:'Website · Get Lowest Price', meta:'Lead form · 12 minutes ago', status:[{ label:'Respond within 15m', status:'urgent' }] }
 			],
-			composerStatus:'Texting 352-555-0190 — opt-in pending',
+			textOptIn:false,
 			thread:[
 				{ type:'day', label:'Today', time:'9:26 AM' },
 				{ type:'event', icon:'inbox', text:'Lead received — Website · Get Lowest Price' },
@@ -66,7 +66,7 @@ window.CRM_DATA = (function () {
 				{ kind:'unit', image:IMG.redhawk, title:'2023 Jayco Redhawk 26XD', meta:'#5CR0797 · $74,900', status:[{ label:'Sale pending', status:'flagged' }] },
 				{ kind:'icon', icon:'message-square', tone:'info', title:'RVChat · Pre-Qualification', meta:'Chat transcript attached', status:[{ label:'Auto-reply sent', status:'neutral' }] }
 			],
-			composerStatus:'Texting 352-555-0163 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Today', time:'9:29 AM' },
 				{ type:'event', icon:'inbox', text:'Lead received — RVChat · Pre-Qualification' },
@@ -84,7 +84,7 @@ window.CRM_DATA = (function () {
 				{ kind:'unit', svg:'rv-trailer', title:'2021 Micro Minnie 2306BHS', meta:'$11,400–$17,600', status:[{ label:'Trade-in', status:'dark' }] },
 				{ kind:'icon', icon:'calendar', tone:'info', title:'Today · 1:30 PM', meta:'Ocala store', status:[{ label:'Confirmed', status:'confirmed' }] }
 			],
-			composerStatus:'Texting 352-555-0142 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'event', icon:'inbox', text:'Lead received — RVTrader.com · Get Lowest Price' },
 				{ type:'message', dir:'out', label:'Automated', labelIcon:'zap', text:'Hi Marcus — Riley at Optimum RV Ocala. The 2022 Thor ACE 32.3 is on the lot and ready to see — want to set up a time this week?' },
@@ -109,7 +109,7 @@ window.CRM_DATA = (function () {
 				{ kind:'icon', icon:'users', tone:'info', title:'Referral · General Info', meta:'Referred by Dana Whitfield', status:[{ label:'No unit yet', status:'neutral' }] },
 				{ kind:'icon', icon:'flag', tone:'warn', title:'Flagged for review', meta:'No contact logged in 24h', status:[{ label:'Manager notified', status:'flagged' }] }
 			],
-			composerStatus:'Texting 352-555-0118 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Yesterday', time:'3:40 PM' },
 				{ type:'event', icon:'inbox', text:'Lead received — Referral · General Info' },
@@ -128,7 +128,7 @@ window.CRM_DATA = (function () {
 				{ kind:'unit', image:IMG.redhawk, title:'2023 Jayco Redhawk 26XD', meta:'#5CR0797 · $74,900', status:[{ label:'Sale pending', status:'flagged' }] },
 				{ kind:'icon', icon:'calendar', tone:'ok', title:'Today · 4:30 PM', meta:'Delivery · Ocala store', status:[{ label:'Confirmed', status:'confirmed' }] }
 			],
-			composerStatus:'Texting 352-555-0177 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Yesterday', time:'5:10 PM' },
 				{ type:'event', icon:'tag', text:'Offer accepted — $74,900 · Walk-In · Make Offer' },
@@ -145,7 +145,7 @@ window.CRM_DATA = (function () {
 			summary:[
 				{ kind:'icon', icon:'map-pin', tone:'info', title:'Walk-In · General Info', meta:'Asked about a Keystone Montana', status:[{ label:'Follow-up overdue', status:'overdue' }] }
 			],
-			composerStatus:'Texting 352-555-0151 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Yesterday', time:'2:15 PM' },
 				{ type:'event', icon:'map-pin', text:'Walk-in logged — Ocala store' },
@@ -178,7 +178,7 @@ window.CRM_DATA = (function () {
 			summary:[
 				{ kind:'icon', icon:'phone', tone:'info', title:'Phone Call · General Info', meta:'Inbound call, 6 days ago', status:[{ label:'6d in stage', status:'flagged' }] }
 			],
-			composerStatus:'Texting 352-555-0107 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Tuesday', time:'10:20 AM' },
 				{ type:'call', title:'Outgoing call · 0:00', summary:'Left voicemail — try again Thursday' }
@@ -196,7 +196,7 @@ window.CRM_DATA = (function () {
 			preview:'Auto-reply sent — RVChat · Consignment', pill:{ label:'4m left', status:'info', icon:'clock' },
 			stage:'assigned', stageNote:'Assigned · 1m',
 			summary:[ { kind:'icon', icon:'message-square', tone:'info', title:'RVChat · Consignment', meta:'Unit not identified yet', status:[{ label:'Auto-reply sent', status:'neutral' }] } ],
-			composerStatus:'Texting 352-555-0171 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'11:34 AM' }, { type:'event', icon:'inbox', text:'Lead received — RVChat · Consignment' }, { type:'message', dir:'out', label:'Automated', labelIcon:'zap', text:'Hi Raymond — thanks for asking about consigning with Optimum RV. A lister will call you shortly.' } ]
 		},
 		{
@@ -205,7 +205,7 @@ window.CRM_DATA = (function () {
 			preview:'New lead — Website · Consignment', pill:{ label:'2m left', status:'urgent', icon:'clock' },
 			stage:'assigned', stageNote:'Assigned · 3m',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2019 Forest River Wildwood 26DBUD', meta:'Travel Trailer · Ocala, FL', status:[{ label:'New', status:'info' }] } ],
-			composerStatus:'Texting 352-555-0183 — opt-in pending',
+			textOptIn:false,
 			thread:[ { type:'day', label:'Today', time:'11:32 AM' }, { type:'event', icon:'inbox', text:'Lead received — Website · Consignment' } ]
 		},
 		{
@@ -214,7 +214,7 @@ window.CRM_DATA = (function () {
 			preview:'Price agreed — $89,900 · 120-day term', pill:null,
 			stage:'documents', stageNote:'Price Agreed · 25m',
 			summary:[ { kind:'unit', image:IMG.thor, title:'2022 Thor ACE 32.3', meta:'Class A · Ocala, FL', status:[{ label:'Converted from lead', status:'ok' }] }, { kind:'icon', icon:'tag', tone:'ok', title:'Agreed $89,900', meta:'120-day term', status:[{ label:'Price agreed', status:'ok' }] } ],
-			composerStatus:'Texting 352-555-0122 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'11:10 AM' }, { type:'event', icon:'tag', text:'Price agreed — $89,900 · 120-day term' }, { type:'event', icon:'check-circle', text:'Converted from lead — Sales Working → Consign Documents' } ]
 		},
 		{
@@ -223,7 +223,7 @@ window.CRM_DATA = (function () {
 			preview:'You: requested a new 10-day payoff letter', pill:{ label:'Payoff', status:'neutral', icon:'loader' },
 			stage:'documents', stageNote:'Collecting Documents · 40m', flag:'Bounced — payoff mismatch (4-point check)',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2019 Grand Design Reflection 315RLTS', meta:'Fifth Wheel · $42,500', status:[{ label:'Collecting documents', status:'neutral' }] }, { kind:'icon', icon:'file-text', tone:'warn', title:'Payoff letter', meta:'New 10-day payoff requested', status:[{ label:'Bounced — mismatch', status:'flagged' }] } ],
-			composerStatus:'Texting 352-555-0146 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'10:25 AM' }, { type:'event', icon:'rotate-ccw', tone:'warn', text:'Bounced — payoff mismatch (4-point check)' }, { type:'message', dir:'out', text:'Nadia — the payoff letter didn\'t match the lender\'s figure. Could you request a fresh 10-day payoff and send it over?', meta:'Delivered' } ]
 		},
 		{
@@ -237,7 +237,7 @@ window.CRM_DATA = (function () {
 				{ kind:'icon', icon:'book-open', title:'Asking $24,900', meta:'JD Power avg $21,400 · low $18,900', status:[{ label:'$3,500 over avg', status:'flagged' }] },
 				{ kind:'icon', icon:'file-text', title:'Payoff ~$15,000 · estimated', meta:'Suncoast CU · title with the lender', status:[{ label:'10-day payoff not pulled', status:'flagged' }] }
 			],
-			composerStatus:'Texting 813-555-0164 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'event', icon:'inbox', text:'Lead received — Referral · Consignment · referred by Dana Whitfield' },
 				{ type:'event', icon:'user', text:'Assigned to Riley Morgan' },
@@ -258,7 +258,7 @@ window.CRM_DATA = (function () {
 			preview:'Call — no answer (Day 1 of 321)', pill:{ label:'Day 1', status:'neutral', icon:'more-horizontal' },
 			stage:'attempting', stageNote:'Attempting · Day 1 of 321',
 			summary:[ { kind:'unit', svg:'rv-motorhome', title:'2015 Tiffin Allegro 32SA', meta:'Class A · RVTrader.com', status:[{ label:'Day 1 of 321', status:'neutral' }] } ],
-			composerStatus:'Texting 352-555-0139 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'9:35 AM' }, { type:'call', title:'Outgoing call · 0:00', summary:'No answer — Day 1 of 321-day cadence' } ]
 		},
 		{
@@ -267,7 +267,7 @@ window.CRM_DATA = (function () {
 			preview:'Fee link sent — $399 inspection fee', pill:{ label:'Fee', status:'neutral', icon:'loader' },
 			stage:'processing', stageNote:'Manager Approved · 2d',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2016 Airstream Flying Cloud 25FB', meta:'Travel Trailer · $52,000', status:[{ label:'Fee due', status:'fee-due' }] }, { kind:'icon', icon:'credit-card', tone:'warn', title:'Inspection fee $399', meta:'Entity #48127 · fee link sent', status:[{ label:'Awaiting payment', status:'flagged' }] } ],
-			composerStatus:'Texting 352-555-0155 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'7:35 AM' }, { type:'event', icon:'credit-card', text:'Inspection fee link sent — $399 · Entity #48127' } ]
 		},
 		{
@@ -276,7 +276,7 @@ window.CRM_DATA = (function () {
 			preview:'Contract signed — in the approval queue', pill:null,
 			stage:'contract', stageNote:'Contract Signed · 1d',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2018 Grand Design Solitude 310GK', meta:'Fifth Wheel · $46,500', status:[{ label:'Signed', status:'ok' }] } ],
-			composerStatus:'Texting 352-555-0112 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Yesterday', time:'4:48 PM' }, { type:'event', icon:'check', text:'Contract signed — Sheila Marchetti' }, { type:'event', icon:'shield', text:'Sent to approval queue — Ocala GM' } ]
 		},
 		{
@@ -292,7 +292,7 @@ window.CRM_DATA = (function () {
 				{ kind:'icon', icon:'file-text', tone:'ok', title:'No lien on the unit', meta:'Title year 2020', status:[{ label:'Title in hand', status:'ok' }] },
 				{ kind:'icon', icon:'calendar', tone:'info', title:'Thu Aug 20 · 10 AM', meta:'Drop-off · Ocala store', status:[{ label:'Confirmed', status:'confirmed' }] }
 			],
-			composerStatus:'Texting 352-555-0188 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Wed, Aug 5', time:'4:40 PM' },
 				{ type:'event', icon:'tag', text:'Price agreed — $22,900 · 120-day term' },
@@ -328,7 +328,7 @@ window.CRM_DATA = (function () {
 			stage:'forsale', stageNote:'Off Market · Pickup Pending · term ended Aug 18',
 			cta:{ label:'Schedule pickup', action:'schedule-pickup', icon:'truck', tone:'primary' },
 			summary:[ { kind:'unit', svg:'rv-motorhome', title:'2016 Forest River Georgetown 364TS', meta:'Class A · 5CR0733 · Tallahassee store', status:[{ label:'Off market', status:'neutral' }, { label:'Pickup pending', status:'flagged' }] }, { kind:'icon', icon:'calendar', tone:'warn', title:'Term ended Aug 18', meta:'Day 120 of 120', status:[{ label:'Clearance check pending', status:'flagged' }] } ],
-			composerStatus:'Texting 352-555-0104 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'11:15 AM' }, { type:'event', icon:'clock', tone:'warn', text:'Term ended — 120 days · listing removed' }, { type:'message', dir:'in', text:'I\'d like to pick up the Georgetown this week if it\'s clear.' } ]
 		},
 		{
@@ -375,7 +375,7 @@ window.CRM_DATA = (function () {
 				{ kind:'icon', icon:'file-text', tone:'warn', title:'Payoff $126,300', meta:'Through Aug 28 · $31.40/day', status:[{ label:'Hold · $8,300 short', status:'overdue' }] },
 				{ kind:'icon', icon:'briefcase', title:'Motility deal 48231', meta:'06. Approved · AppOne', status:[{ label:'Not funded', status:'flagged' }] }
 			],
-			composerStatus:'Texting 352-555-0131 — opted in',
+			textOptIn:true,
 			thread:[
 				{ type:'day', label:'Sunday', time:'6:05 AM' },
 				{ type:'event', icon:'briefcase', text:'Buyer deal detected — Motility deal 48231 · 01. Desking · Ocala' },
@@ -398,7 +398,7 @@ window.CRM_DATA = (function () {
 			stage:'arrived', stageNote:'Arrived On Lot · 1d', flag:'Check-in returned — condition differs from described',
 			cta:{ label:'Request re-evaluation', action:'request-reevaluation', icon:'refresh-cw', tone:'primary' },
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2019 Coachmen Catalina 263BHSCK', meta:'Travel Trailer · 5CR0829 · Zephyrhills store', status:[{ label:'Condition re-evaluation', status:'flagged' }] }, { kind:'icon', icon:'camera', title:'Walk-around done', meta:'32 photos · 3h ago', status:[{ label:'$19,900 listed', status:'neutral' }] } ],
-			composerStatus:'Texting 813-555-0119 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Today', time:'8:35 AM' }, { type:'event', icon:'camera', text:'Walk-around done — 32 photos' }, { type:'event', icon:'rotate-ccw', tone:'warn', text:'Check-in returned — condition differs from described' } ]
 		},
 		{
@@ -407,7 +407,7 @@ window.CRM_DATA = (function () {
 			preview:'Pickup today — fees cleared, release signed', pill:{ label:'2:00 PM · Ocala', status:'appointment', icon:'calendar' },
 			stage:'payout', stageNote:'Consignor Paid · pickup today',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2017 Jayco Eagle 330RSTS', meta:'Fifth Wheel · 5CR0702 · Ocala store', status:[{ label:'Released', status:'ok' }] }, { kind:'icon', icon:'calendar', tone:'info', title:'Today · 2:00 PM', meta:'Pickup · Ocala store', status:[{ label:'Confirmed', status:'confirmed' }] } ],
-			composerStatus:'Texting 352-555-0163 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Yesterday', time:'3:30 PM' }, { type:'event', icon:'check', text:'Fees cleared — release signed' }, { type:'message', dir:'out', text:'You\'re all set for pickup tomorrow at 2:00 PM.', meta:'Delivered' } ]
 		},
 		{
@@ -416,7 +416,7 @@ window.CRM_DATA = (function () {
 			preview:'Reminder sent — drop-off Thu 10:00 AM', pill:{ label:'Thu · Ocala', status:'appointment', icon:'calendar' },
 			stage:'checkin', stageNote:'Check-In Scheduled · 2d · stock pending',
 			summary:[ { kind:'unit', svg:'rv-trailer', title:'2020 Winnebago Minnie 2301BHS', meta:'Travel Trailer · Ocala, FL', status:[{ label:'Stock-pending', status:'flagged' }] }, { kind:'icon', icon:'calendar', tone:'info', title:'Thu Aug 20 · 10 AM', meta:'Drop-off · Ocala store', status:[{ label:'Reminder sent', status:'neutral' }] } ],
-			composerStatus:'Texting 352-555-0188 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Yesterday', time:'9:00 AM' }, { type:'message', dir:'out', label:'Automated', labelIcon:'zap', text:'Reminder: your Minnie\'s drop-off is Thursday, Aug 20 at 10:00 AM at Optimum RV Ocala.' } ]
 		},
 		{
@@ -425,7 +425,7 @@ window.CRM_DATA = (function () {
 			preview:'Buyer deal · 09. Paperwork Complete', pill:null,
 			stage:'deals', stageNote:'Sale In Progress · 5d',
 			summary:[ { kind:'unit', image:IMG.redhawk, title:'2023 Jayco Redhawk 26XD', meta:'Class C · 5CR0797 · Ocala store', status:[{ label:'$74,900', status:'neutral' }] }, { kind:'icon', icon:'briefcase', title:'Buyer deal', meta:'09. Paperwork Complete', status:[{ label:'Awaiting funding', status:'neutral' }] } ],
-			composerStatus:'Texting 352-555-0176 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Yesterday', time:'1:12 PM' }, { type:'event', icon:'briefcase', text:'Buyer deal — 09. Paperwork Complete' } ]
 		},
 		{
@@ -434,7 +434,7 @@ window.CRM_DATA = (function () {
 			preview:'On the CIT report — check held', pill:{ label:'CIT hold', status:'flagged', icon:'lock' },
 			stage:'payout', stageNote:'Buy-In Complete · 9d',
 			summary:[ { kind:'unit', svg:'rv-motorhome', title:'2015 Tiffin Allegro Bus 40SP', meta:'Class A · 5CR0776 · Tallahassee store', status:[{ label:'$139,000', status:'neutral' }, { label:'CIT hold', status:'flagged' }] } ],
-			composerStatus:'Texting 850-555-0148 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Monday', time:'10:05 AM' }, { type:'event', icon:'lock', tone:'warn', text:'On the CIT report — check held' } ]
 		},
 		{
@@ -443,7 +443,7 @@ window.CRM_DATA = (function () {
 			preview:'Consignor away until Labor Day — drop-off after', pill:{ label:'Drop-off', status:'neutral', icon:'loader' },
 			stage:'motility', stageNote:'Added to Motility · 12d',
 			summary:[ { kind:'unit', svg:'rv-motorhome', title:'2014 Newmar Ventana 3437', meta:'Class A · 5CR0851 · Oklahoma City store', status:[{ label:'$96,000', status:'neutral' }] } ],
-			composerStatus:'Texting 405-555-0161 — opted in',
+			textOptIn:true,
 			thread:[ { type:'day', label:'Monday', time:'8:40 AM' }, { type:'message', dir:'in', text:'We\'re out of town until Labor Day — can we drop it off after?' } ]
 		}
 	];
