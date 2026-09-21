@@ -1797,3 +1797,8 @@ body[data-device="phone"][data-view="pipeline"] {
 @media (max-width:1024px) {
 	body[data-device="desktop"] .lead-header .lead-actions { > .action-button, > .reopen-lead, > .lead-cta { display:none !important; } .lead-actions-compact { display:inline-flex; } }
 }
+
+/* iOS focus-zoom guard (bug fix, not a design change): Safari zooms any field under 16px on focus. Every phone input is
+   already 16px; the draft notes textarea is designed at 14px, so it renders at 16px and is scaled back to 14/16 —
+   pixel-identical, but Safari sees 16px and doesn't zoom. This replaced maximum-scale=1, which blocked pinch-zoom. */
+body[data-device="phone"] .inline-notes.is-draft { font-size:16px; transform:scale(.875); transform-origin:top left; width:calc(100% / .875); }
