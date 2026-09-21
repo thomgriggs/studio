@@ -1159,12 +1159,13 @@ body[data-role="management"] .calendar-event { border-inline-start-width:0; .eve
 	border-block-start:0; /* the topbar already draws the line above */
 	display:grid;
 	gap:1px;
-	grid-auto-rows:minmax(112px, 1fr);
+	grid-auto-rows:minmax(148px, 1fr);
 	grid-template-columns:repeat(7, 1fr);
 	min-height:0;
 	overflow:auto;
 	.month-dow { background:var(--color_bg-secondary); color:var(--color_text-muted); font-size:var(--font_size-xsmall); font-weight:var(--font_weight-bold-primary); padding:6px; text-align:center; }
 	.month-cell { background:var(--color_bg-primary); cursor:cell; display:flex; flex-direction:column; gap:3px; min-height:0; padding:6px; align-items:stretch;
+		> * { flex:none; min-height:24px; } /* chips never squash — the cell shows three, then "+n more" */
 		&.is-outside { background:var(--color_bg-secondary); .month-date { color:var(--color_text-soft); } }
 		&.is-weekend:not(.is-outside) { background:color-mix(in srgb, var(--color_bg-secondary), #fff 40%); }
 		&.is-today .month-date { background:var(--color_brand-secondary); color:#fff; }
@@ -1325,7 +1326,7 @@ body[data-role="management"] .calendar-event .event-owner { padding-inline-end:2
 .calendar-times span.is-last { height:0; transform:translateY(-1.2em); }
 .calendar-col { --offhours:color-mix(in srgb, var(--color_bg-secondary), #fff 45%); background-image:linear-gradient(var(--color_line) 1px, transparent 1px), linear-gradient(to bottom, var(--offhours) var(--work_start), transparent var(--work_start), transparent var(--work_end), var(--offhours) var(--work_end)); &.is-weekend { --offhours:var(--color_bg-secondary-darker); background-color:var(--color_bg-secondary); } &.is-today { --offhours:color-mix(in srgb, var(--color_brand-secondary), var(--color_bg-secondary) 95%); background-image:linear-gradient(var(--color_line) 1px, transparent 1px), linear-gradient(to bottom, var(--offhours) var(--work_start), color-mix(in srgb, var(--color_brand-secondary), #fff 97%) var(--work_start), color-mix(in srgb, var(--color_brand-secondary), #fff 97%) var(--work_end), var(--offhours) var(--work_end)); } }
 /* month: the Sun–Sat row is a thin header, not a day-sized cell */
-.calendar-month { grid-template-rows:auto repeat(6, minmax(112px, 1fr)); grid-auto-rows:minmax(112px, 1fr); .month-dow { padding:8px 6px; position:sticky; top:0; z-index:1; } }
+.calendar-month { grid-template-rows:auto repeat(6, minmax(148px, 1fr)); grid-auto-rows:minmax(148px, 1fr); .month-dow { padding:8px 6px; position:sticky; top:0; z-index:1; } }
 /* month: three clearly different tones — header strip, weekend, outside-month */
 .calendar-month {
 	.month-dow { background:var(--color_bg-secondary-darkest); color:var(--color_text); }
