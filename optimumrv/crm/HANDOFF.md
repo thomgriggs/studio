@@ -291,3 +291,13 @@ In the prototype it resolves `work()` from memory (Slow adds 1.4 s; Offline reje
 **Message states** are on the thread entry: `pending` → *Sending…*, then `meta:'Delivered'`, or `failed:true` → *Not sent* with `retry-send` (re-runs `crmDeliver`). Each rendered message carries `data-index` so a state change re-paints just that bubble.
 
 **What isn't simulated** (call it out to the client): partial failures (some items load, one doesn't), conflicts (two people editing the same lead), and background sync of changes made while offline — the prototype refuses offline writes rather than queueing them, which is the simpler rule to explain on the lot.
+
+## Performance (measured 2026-09-21, Lighthouse 13, local server)
+
+Fast in use — total blocking time 0 ms, layout shift ≈ 0 on every view; all data is in memory so interactions are instant. Load weight is the only issue, and only on mobile: ~940 KB per page → Lighthouse mobile 75–82 (desktop 91–100). Deliberately left as-is during development; the build pipeline should handle it:
+
+1. **Photos** — `assets/unit-*.webp` are full-size (243 KB + 106 KB) but drawn at 84×56 in the summary cards. Serve thumbnails (or `srcset`).
+2. **Minify + gzip** `crm.js` (198 KB) and `crm.css` (159 KB) → roughly 80 KB together.
+3. **Fonts and icons** — self-host the two Roboto weights in use; prune `feather.min.js` (74 KB) to the ~40 icons the app uses.
+
+1 + 2 alone should put mobile in the 90s. Nothing here changes how anything looks.
