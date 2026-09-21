@@ -269,3 +269,7 @@ Mac: ⌘F5 turns VoiceOver on/off. VO = Control+Option. iPhone: Settings → Acc
 8. **iPhone, Calendar.** Swipe to the month title: should read "September, button". Double-tap: should read the month stack. Find Today at the bottom.
 
 Write down anything that was silent, read twice, or read in the wrong order.
+
+## Toast (confirmation)
+
+`crmToast(message, { tone:'warn', undo:fn })` — a dark pill, bottom-centre (above the composer on the Daily View, above the bottom bar on the phone), gone after 4 s (6 s with Undo) or on click. The stack is a `role="status"` live region, so the same words are announced to screen readers. Wired to: stage changes (with Undo), Text/Email/Note sent, empty Send ("Type a message first", amber), appointment/follow-up saved (Undo), complete/reopen, cancel (Undo), delete (Undo), follow-up added from quick-edit, filter select-all. Try them on `toast-preview.html`. Rule: any action that changes data and isn't visible where the user is looking gets a toast; an action whose result *is* what you're looking at (opening a sheet, switching a tab) does not.

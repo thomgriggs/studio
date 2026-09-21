@@ -1802,3 +1802,21 @@ body[data-device="phone"][data-view="pipeline"] {
    already 16px; the draft notes textarea is designed at 14px, so it renders at 16px and is scaled back to 14/16 —
    pixel-identical, but Safari sees 16px and doesn't zoom. This replaced maximum-scale=1, which blocked pinch-zoom. */
 body[data-device="phone"] .inline-notes.is-draft { font-size:16px; transform:scale(.875); transform-origin:top left; width:calc(100% / .875); }
+
+/* ========================================================================== */
+/* TOAST — a brief confirmation after an action; the same words go to a       */
+/* screen reader through the stack's live region. Bottom-centre; on the       */
+/* Daily View it sits above the composer, on the phone above the bottom bar.  */
+/* ========================================================================== */
+.toast-stack { --toast_offset:24px; position:fixed; inset-inline:0; bottom:calc(env(safe-area-inset-bottom) + var(--toast_offset)); display:grid; justify-items:center; gap:8px; pointer-events:none; z-index:120; }
+body[data-view="daily-view"][data-device="desktop"] .toast-stack { inset-inline-start:var(--inbox_width); } /* centred on the thread; the offset above the composer is measured by crmToast */
+body[data-device="phone"] .toast-stack { bottom:calc(env(safe-area-inset-bottom) + var(--toast_offset) + var(--keyboard_offset, 0px)); }
+.toast { align-items:center; background:var(--color_text); border-radius:var(--radius_pill); box-shadow:0 8px 24px rgba(0,0,0,.22); color:#fff; display:flex; font-size:var(--font_size-small); font-weight:var(--font_weight-bold-primary); gap:12px; max-width:min(92vw, 520px); padding:10px 12px 10px 18px; pointer-events:auto; animation:toast-in .22s ease-out;
+	.feather { width:16px; height:16px; color:#7ee2a3; flex:none; }
+	&[data-tone="warn"] .feather { color:#ffc36b; }
+	.toast-undo { background:transparent; border:0; color:#ffb3b9; font:inherit; font-weight:var(--font_weight-extra-bold-primary); padding:6px 8px; border-radius:var(--radius_pill); cursor:pointer; &:hover { background:rgba(255,255,255,.12); } }
+	&.is-leaving { animation:toast-out .18s ease-in forwards; }
+}
+@keyframes toast-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+@keyframes toast-out { to { opacity:0; transform:translateY(6px); } }
+@media (prefers-reduced-motion:reduce) { .toast, .toast.is-leaving { animation:none; } }

@@ -18,20 +18,10 @@
 		.preview .btn { justify-content:flex-start; height:44px; }
 		.preview .row { display:flex; gap:10px; flex-wrap:wrap; }
 
-		/* ---- the toast itself (what would go into crm.css) ---- */
-		.toast-stack { position:fixed; inset-inline:0; bottom:calc(env(safe-area-inset-bottom) + 24px); display:grid; justify-items:center; gap:8px; pointer-events:none; z-index:120; }
-		.toast { align-items:center; background:var(--color_text); border-radius:var(--radius_pill); box-shadow:0 8px 24px rgba(0,0,0,.22); color:#fff; display:flex; font-size:var(--font_size-small); font-weight:var(--font_weight-bold-primary); gap:12px; padding:10px 12px 10px 18px; pointer-events:auto; animation:toast-in .22s ease-out;
-			.feather { width:16px; height:16px; color:#7ee2a3; flex:none; }
-			&[data-tone="warn"] .feather { color:#ffc36b; }
-			.toast-undo { background:transparent; border:0; color:#ffb3b9; font:inherit; font-weight:var(--font_weight-extra-bold-primary); padding:6px 8px; border-radius:var(--radius_pill); cursor:pointer; &:hover { background:rgba(255,255,255,.12); } }
-			&.is-leaving { animation:toast-out .18s ease-in forwards; }
-		}
-		@keyframes toast-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
-		@keyframes toast-out { to { opacity:0; transform:translateY(6px); } }
-		@media (prefers-reduced-motion:reduce) { .toast, .toast.is-leaving { animation:none; } }
+		/* the toast itself lives in crm.css / crm.js — this page only calls crmToast() */
 	</style>
 </head>
-<body>
+<body data-view="preview" data-device="desktop">
 	<main class="preview">
 		<h1>Toast preview</h1>
 		<p>Each button does what the real one would, then shows the confirmation. It fades after 4 seconds, or click it to dismiss. A screen reader hears the same words.</p>
@@ -46,22 +36,13 @@
 		<p>Position: bottom-centre. On the Daily View it would sit just above the composer; on the phone, above the bottom bar.</p>
 	</main>
 
-	<!-- one live region for the page; every toast is announced from here -->
-	<div class="toast-stack" id="toast-stack" role="status" aria-live="polite"></div>
 
 	<script src="js/feather.min.js"></script>
+	<script src="js/micromodal.min.js"></script>
+	<script src="data.js"></script>
+	<script src="crm.js"></script>
 	<script>
-		function crmToast(message, opts = {}) {
-			const stack = document.getElementById('toast-stack');
-			const t = document.createElement('div');
-			t.className = 'toast'; t.dataset.tone = opts.tone || '';
-			t.innerHTML = `<i data-feather="${opts.tone === 'warn' ? 'alert-circle' : 'check'}"></i><span>${message}</span>${opts.undo ? '<button type="button" class="toast-undo">Undo</button>' : ''}`;
-			stack.appendChild(t); feather.replace();
-			const close = () => { t.classList.add('is-leaving'); setTimeout(() => t.remove(), 200); };
-			const timer = setTimeout(close, opts.undo ? 6000 : 4000);
-			t.addEventListener('click', e => { clearTimeout(timer); if (e.target.closest('.toast-undo') && opts.onUndo) opts.onUndo(); close(); });
-		}
-		document.querySelectorAll('[data-msg]').forEach(b => b.addEventListener('click', () => crmToast(b.dataset.msg, { undo:!!b.dataset.undo, tone:b.dataset.tone, onUndo:() => crmToast('Undone') })));
+		document.querySelectorAll('[data-msg]').forEach(b => b.addEventListener('click', () => crmToast(b.dataset.msg, { tone:b.dataset.tone, undo:b.dataset.undo ? () => crmToast('Undone') : null })));
 		feather.replace();
 	</script>
 </body>

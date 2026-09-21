@@ -95,6 +95,23 @@ function crmQuery(extra = {}) {
 	return '?' + q.toString();
 }
 
+/* ---- toast: brief confirmation + screen-reader announcement ------------- */
+function crmToast(message, opts = {}) {
+	let stack = document.getElementById('toast-stack');
+	if (!stack) { stack = document.createElement('div'); stack.id = 'toast-stack'; stack.className = 'toast-stack'; stack.setAttribute('role', 'status'); stack.setAttribute('aria-live', 'polite'); document.body.appendChild(stack); }
+	const t = document.createElement('div');
+	t.className = 'toast'; t.dataset.tone = opts.tone || '';
+	t.innerHTML = `<i data-feather="${opts.tone === 'warn' ? 'alert-circle' : 'check'}"></i><span>${message}</span>${opts.undo ? '<button type="button" class="toast-undo">Undo</button>' : ''}`;
+	/* sit just above whatever bar is at the bottom of this view (composer / phone bottom bar), measured, not guessed */
+	const bar = [...document.querySelectorAll('.composer, .phone-bottombar')].filter(b => b.getBoundingClientRect().width > 0 && !b.closest('[inert]')).sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)[0];
+	if (bar) stack.style.setProperty('--toast_offset', `${Math.round(innerHeight - bar.getBoundingClientRect().top) + 12}px`); else stack.style.removeProperty('--toast_offset');
+	stack.appendChild(t); crmIcons();
+	const close = () => { t.classList.add('is-leaving'); setTimeout(() => t.remove(), 200); };
+	const timer = setTimeout(close, opts.undo ? 6000 : 4000);
+	t.addEventListener('click', e => { clearTimeout(timer); if (e.target.closest('.toast-undo') && opts.undo) opts.undo(); close(); });
+	return t;
+}
+
 /* ---------- shell: role switch, sidebar, nav hrefs ---------------------- */
 function crmRenderShell(roleData) {
 	crmFill(document, { user:roleData.user });
@@ -402,7 +419,7 @@ function crmSendStub(e) {
 	e.preventDefault();
 	const input = document.getElementById('composer-input');
 	const text = input.value.trim();
-	if (!text) return;
+	if (!text) { crmToast('Type a message first', { tone:'warn' }); input.focus(); return; }
 	const mode = document.querySelector('.composer-mode button.is-active').dataset.mode;
 	const lead = crmCurrentLead();
 	const entry = mode === 'note' ? { type:'note', author:CRM_DATA.roles[crmState.role].user.name, text }
@@ -415,6 +432,7 @@ function crmSendStub(e) {
 	thread.scrollTop = thread.scrollHeight;
 	input.value = '';
 	crmPersist();
+	crmToast(mode === 'note' ? 'Note added' : mode === 'email' ? 'Email sent' : 'Text sent');
 	if (mode !== 'note' && lead.stage === 'assigned') crmSetStage(lead, 'attempting', { by:'system' });
 }
 
@@ -1170,6 +1188,7 @@ function crmSetStage(lead, stage, opts = {}) {
 	const by = opts.by === 'system' ? 'System' : opts.by === 'manager' ? `${user} (Manager)` : user;
 	lead.thread.push({ type:'event', icon:'columns', tone:backward ? 'warn' : undefined, text:`Stage changed — ${from ? from.label : '—'} → ${to.label} · by ${by}${opts.reason ? ` · ${opts.reason}` : ''}` });
 	crmPersist();
+	if (opts.by !== 'system' && !opts.silent) crmToast(`${lead.name} moved to ${to.label}`, { undo:() => { crmSetStage(lead, from ? from.id : desk.stages[0].id, { by:opts.by, reason:'Undo', silent:true }); crmToast(`Back to ${from ? from.label : desk.stages[0].label}`); } });
 	const view = document.body.dataset.view;
 	if (view === 'pipeline') crmRenderBoard(desk);
 	if (view === 'daily-view') {
@@ -1241,6 +1260,7 @@ function crmQuickEdit(lead, opts = {}) {
 		const d = crmAddDays(crmNow(), 1);
 		(CRM_DATA.calendar.events[crmState.role] = CRM_DATA.calendar.events[crmState.role] || []).push({ id:'new-' + Date.now(), kind:'followup', date:crmISO(d), start:10, lead:lead.id, label:`Follow up with ${lead.name}` });
 		lead.thread.push({ type:'event', icon:'clock', text:`Follow-up set — ${crmFmt(d, 'short')} · 10 AM` });
+		crmToast(`Follow-up set · ${crmFmt(d, 'short')} · 10 AM`);
 		const row = m.querySelector('[data-action="quick-followup"]').closest('.sheet-row');
 		row.querySelector('strong').textContent = `Follow up with ${lead.name}`;
 		row.querySelector('small').textContent = `${crmFmt(d, 'short')} · 10 AM`;
@@ -1977,6 +1997,7 @@ function crmCommitEvent(ev) {
 	if (lead) lead.thread.push({ type:'event', icon:'calendar', text:`${ev.kind === 'followup' ? 'Follow-up set' : 'Appointment set'} — ${crmFmt(crmDate(ev.date), 'short')} · ${crmHourLabel(ev.start)}${ev.kind === 'followup' ? '' : ' · ' + ev.type}` });
 	crmCal.cursor = crmDate(ev.date); crmCal.mini = crmCal.cursor;
 	crmRefreshPopover(ev.id, null);
+	crmToast(`${ev.kind === 'followup' ? 'Follow-up' : 'Appointment'} saved · ${crmFmt(crmDate(ev.date), 'short')} · ${crmHourLabel(ev.start)}`, { undo:() => { const list = CRM_DATA.calendar.events[crmState.role]; const i = list.indexOf(ev); if (i > -1) list.splice(i, 1); crmClosePopover(); crmPersist(); crmRenderCalendar(); crmToast('Removed'); } });
 }
 
 Object.assign(CRM_ACTIONS, {
@@ -1994,7 +2015,7 @@ Object.assign(CRM_ACTIONS, {
 	'summary-scroll': el => { const wrap = el.closest('.lead-summary').querySelector('.summary-track'); const card = wrap.querySelector('.summary-card'); const step = card ? card.getBoundingClientRect().width + 12 : 240; wrap.scrollBy({ left:step * +el.dataset.dir, behavior:'smooth' }); },
 	/* filter menus (shared) */
 	'toggle-menu': el => { const m = el.closest('.filter-menu'); const open = !m.classList.contains('is-open'); document.querySelectorAll('.filter-menu.is-open').forEach(x => { if (x !== m) { x.classList.remove('is-open'); x.querySelector('.filter-menu-panel').hidden = true; } }); m.classList.toggle('is-open', open); m.querySelector('.filter-menu-panel').hidden = !open; el.setAttribute('aria-expanded', String(open)); },
-	'menu-all': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; m.selected = new Set(el.checked ? m.items().map(i => i.value) : []); crmRenderFilterMenus(); m.onChange(); },
+	'menu-all': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; m.selected = new Set(el.checked ? m.items().map(i => i.value) : []); crmRenderFilterMenus(); m.onChange(); crmToast(el.checked ? `Showing all ${m.noun}` : `Hiding all ${m.noun}`); },
 	'menu-pick': el => { const m = CRM_MENUS[el.dataset.menu]; if (!m) return; const sel = new Set(m.selected); if (el.checked) sel.add(el.dataset.value); else sel.delete(el.dataset.value); m.selected = sel; crmRenderFilterMenus(); m.onChange(); },
 	/* sidebar filters */
 	'toggle-calendar': el => { crmCal.show[el.dataset.category] = el.checked; crmRenderCalendar(); },
@@ -2005,13 +2026,13 @@ Object.assign(CRM_ACTIONS, {
 	'open-more': el => crmOpenPopover({}, el, { list:el.dataset.date }),
 	'close-popover': () => crmClosePopover(),
 	'event-open-conversation': el => { const e = crmEventById(el.dataset.event); if (e && e.lead) location.href = `daily-view.html${crmQuery({ lead:e.lead })}`; },
-	'event-complete': el => { const e = crmEventById(el.dataset.event); if (!e) return; const openId = el.closest('.event-popover') ? crmPop.eventId : null; e.done = !e.done; if (e.done) e.status = null; const lead = crmDesk().leads.find(l => l.id === e.lead); if (lead && e.done) lead.thread.push({ type:'event', icon:'check', text:`${e.kind === 'followup' ? 'Follow-up done' : 'Appointment completed'} — ${e.kind === 'followup' ? e.label : e.type + ' · ' + crmFmt(crmDate(e.date), 'short')}` }); crmPersist(); crmRenderCalendar(); if (openId) { const anchor = document.querySelector(`[data-event="${openId}"]`); const ev = crmEventById(openId); if (anchor && ev) crmOpenPopover(ev, anchor); } },
+	'event-complete': el => { const e = crmEventById(el.dataset.event); if (!e) return; const openId = el.closest('.event-popover') ? crmPop.eventId : null; e.done = !e.done; if (e.done) e.status = null; crmToast(e.done ? (e.kind === 'followup' ? 'Follow-up done' : 'Marked complete') : 'Reopened'); const lead = crmDesk().leads.find(l => l.id === e.lead); if (lead && e.done) lead.thread.push({ type:'event', icon:'check', text:`${e.kind === 'followup' ? 'Follow-up done' : 'Appointment completed'} — ${e.kind === 'followup' ? e.label : e.type + ' · ' + crmFmt(crmDate(e.date), 'short')}` }); crmPersist(); crmRenderCalendar(); if (openId) { const anchor = document.querySelector(`[data-event="${openId}"]`); const ev = crmEventById(openId); if (anchor && ev) crmOpenPopover(ev, anchor); } },
 	'event-snooze': el => { const e = crmEventById(el.dataset.event); if (!e) return; e.date = crmISO(crmAddDays(crmDate(e.date), 1)); e.status = null; crmPersist(); crmRenderCalendar(); },
 	'event-cancel': el => {
 		const e = crmEventById(el.dataset.event); if (!e) return;
-		if (e.state === 'cancelled') { e.state = null; crmPersist(); crmRenderCalendar(); return; }
+		if (e.state === 'cancelled') { e.state = null; crmPersist(); crmRenderCalendar(); crmToast('Appointment restored'); return; }
 		crmClosePopover();
-		crmSheet({ title:`Cancel ${e.type || 'appointment'} with ${e.name}`, reason:'A cancelled appointment stays on the calendar, struck through, and the reason lands on the lead\'s timeline — so nobody wonders whether the customer just didn\'t show.', body:`<div class="sheet-form"><label class="field"><span>Reason</span><select id="cx-reason"><option>Customer rescheduled</option><option>Customer no-show</option><option>Unit no longer available</option><option>Salesperson unavailable</option><option>Other</option></select></label></div>`, actions:[{ label:'Keep it' }, { label:'Cancel appointment', primary:true, run:m => { e.state = 'cancelled'; e.done = false; const lead = crmDesk().leads.find(l => l.id === e.lead); if (lead) lead.thread.push({ type:'event', icon:'x-circle', tone:'warn', text:`Appointment cancelled — ${e.type} · ${crmFmt(crmDate(e.date), 'short')} · ${m.querySelector('#cx-reason').value}` }); crmPersist(); crmRenderCalendar(); } }] });
+		crmSheet({ title:`Cancel ${e.type || 'appointment'} with ${e.name}`, reason:'A cancelled appointment stays on the calendar, struck through, and the reason lands on the lead\'s timeline — so nobody wonders whether the customer just didn\'t show.', body:`<div class="sheet-form"><label class="field"><span>Reason</span><select id="cx-reason"><option>Customer rescheduled</option><option>Customer no-show</option><option>Unit no longer available</option><option>Salesperson unavailable</option><option>Other</option></select></label></div>`, actions:[{ label:'Keep it' }, { label:'Cancel appointment', primary:true, run:m => { e.state = 'cancelled'; crmToast(`${e.type || 'Appointment'} with ${e.name} cancelled`, { undo:() => { e.state = null; crmPersist(); crmRenderCalendar(); crmToast('Appointment restored'); } }); e.done = false; const lead = crmDesk().leads.find(l => l.id === e.lead); if (lead) lead.thread.push({ type:'event', icon:'x-circle', tone:'warn', text:`Appointment cancelled — ${e.type} · ${crmFmt(crmDate(e.date), 'short')} · ${m.querySelector('#cx-reason').value}` }); crmPersist(); crmRenderCalendar(); } }] });
 	},
 	/* create + inline edit */
 	'new-event': () => crmCreateEvent({ date:crmISO(crmCal.cursor) }),
@@ -2030,7 +2051,7 @@ Object.assign(CRM_ACTIONS, {
 	'event-delete': el => {
 		const e = crmEventById(el.dataset.event); if (!e) return;
 		crmClosePopover();
-		crmSheet({ title:'Delete this item?', reason:'Delete is for mistakes — a wrong customer, a duplicate. If the customer backed out, use Cancel instead so the reason stays on the timeline.', actions:[{ label:'Keep' }, { label:'Delete', primary:true, run:() => { const list = CRM_DATA.calendar.events[crmState.role]; list.splice(list.indexOf(e), 1); crmPersist(); crmRenderCalendar(); } }] });
+		crmSheet({ title:'Delete this item?', reason:'Delete is for mistakes — a wrong customer, a duplicate. If the customer backed out, use Cancel instead so the reason stays on the timeline.', actions:[{ label:'Keep' }, { label:'Delete', primary:true, run:() => { const list = CRM_DATA.calendar.events[crmState.role]; const i = list.indexOf(e); list.splice(i, 1); crmPersist(); crmRenderCalendar(); crmToast('Deleted', { undo:() => { list.splice(Math.min(i, list.length), 0, e); crmPersist(); crmRenderCalendar(); crmToast('Restored'); } }); } }] });
 	},
 });
 
