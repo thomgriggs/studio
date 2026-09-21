@@ -1,0 +1,396 @@
+{
+  "$comment": "Optimum RV CRM — action manifest. Generated from the data-action registry in crm.js. 'assistant' is the policy for an AI agent acting as the Assistant role: allow = may do unattended; propose = may draft/suggest, a person confirms; deny = people only.",
+  "version": "1.2",
+  "actors": {
+    "sales": "Salesperson",
+    "management": "Management",
+    "consignment": "Consignment lister / back office",
+    "assistant": "AI assistant (see policy)"
+  },
+  "confirm_means": "The UI opens a sheet and a person presses Apply/Send. Actions marked confirm:true always pass through that sheet, whoever initiated them.",
+  "actions": [
+    {
+      "id": "send-message",
+      "description": "Send a text or email to the lead, or add an internal note.",
+      "needs": [
+        "lead",
+        "mode:text|email|note",
+        "text"
+      ],
+      "effect": "appends to lead.thread; first contact moves Assigned → Attempting",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "insert-template",
+      "description": "Insert a saved reply into the composer.",
+      "needs": [
+        "template"
+      ],
+      "effect": "composer text only — nothing sent",
+      "confirm": false,
+      "assistant": "allow"
+    },
+    {
+      "id": "call",
+      "description": "Start a call to the lead (logs the call and outcome).",
+      "needs": [
+        "lead"
+      ],
+      "effect": "appends a call entry to lead.thread",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "schedule",
+      "description": "Book an appointment at a store's open slot.",
+      "needs": [
+        "lead",
+        "store",
+        "date",
+        "start",
+        "type"
+      ],
+      "effect": "creates a calendar event; appends 'Appointment set' to lead.thread",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "new-event",
+      "description": "Create an appointment or follow-up from the calendar.",
+      "needs": [
+        "kind:appointment|followup",
+        "lead",
+        "date",
+        "start"
+      ],
+      "effect": "creates a calendar event",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "edit-field",
+      "description": "Change one field of an event (type, customer, store, date, start, duration, notes).",
+      "needs": [
+        "event",
+        "field",
+        "value"
+      ],
+      "effect": "updates the event in place",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "event-complete",
+      "description": "Mark an appointment or follow-up done (or undo).",
+      "needs": [
+        "event"
+      ],
+      "effect": "event.done toggles; appends 'done' to lead.thread",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "event-snooze",
+      "description": "Push a follow-up to tomorrow.",
+      "needs": [
+        "event"
+      ],
+      "effect": "event.date += 1 day",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "event-cancel",
+      "description": "Cancel an appointment with a reason.",
+      "needs": [
+        "event",
+        "reason"
+      ],
+      "effect": "event.state = cancelled; reason on lead.thread",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "event-delete",
+      "description": "Delete an event that was a mistake (use cancel for a customer backing out).",
+      "needs": [
+        "event"
+      ],
+      "effect": "removes the event",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "event-add-followup",
+      "description": "Add a follow-up for an event's lead.",
+      "needs": [
+        "event"
+      ],
+      "effect": "creates a follow-up tomorrow 10 AM",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "quick-followup",
+      "description": "Add a follow-up from the lead's quick-edit sheet.",
+      "needs": [
+        "lead"
+      ],
+      "effect": "creates a follow-up tomorrow 10 AM; appends to lead.thread",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "mark-agreed",
+      "description": "Move the lead to Agreed (a person's decision).",
+      "needs": [
+        "lead"
+      ],
+      "effect": "lead.stage = agreed; appends 'Stage changed' with by:",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "mark-lost",
+      "description": "Move the lead to Lost with a reason.",
+      "needs": [
+        "lead",
+        "reason"
+      ],
+      "effect": "lead.stage = lost; reason kept on the card and thread",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "reopen-lead",
+      "description": "Bring a Lost lead back to Working.",
+      "needs": [
+        "lead"
+      ],
+      "effect": "lead.stage = working",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "quick-stage",
+      "description": "Set any stage from the quick-edit sheet (manager override; backward moves need a reason).",
+      "needs": [
+        "lead",
+        "stage",
+        "reason?"
+      ],
+      "effect": "lead.stage; 'Stage changed … by …' on lead.thread",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "quick-reassign",
+      "description": "Reassign the lead to another salesperson (management).",
+      "needs": [
+        "lead",
+        "owner"
+      ],
+      "effect": "lead.owner; 'Reassigned' on lead.thread",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "new-lead",
+      "description": "Create a lead by hand (walk-in, phone-up).",
+      "needs": [
+        "name",
+        "phone",
+        "source",
+        "type",
+        "unit?"
+      ],
+      "effect": "adds a lead in Assigned with a first thread entry",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "mark-price-agreed",
+      "description": "Consignment: record that the consignor agreed the listing price.",
+      "needs": [
+        "lead"
+      ],
+      "effect": "stage → Documents",
+      "confirm": true,
+      "assistant": "deny"
+    },
+    {
+      "id": "send-60-day-update",
+      "description": "Consignment: send the periodic report to the consignor.",
+      "needs": [
+        "lead"
+      ],
+      "effect": "appends an automated email to lead.thread",
+      "confirm": false,
+      "assistant": "allow"
+    },
+    {
+      "id": "schedule-pickup",
+      "description": "Back office: book the unit's pickup.",
+      "needs": [
+        "lead",
+        "date"
+      ],
+      "effect": "creates a logistics event",
+      "confirm": true,
+      "assistant": "propose"
+    },
+    {
+      "id": "request-reevaluation",
+      "description": "Consignment: ask for a condition re-evaluation.",
+      "needs": [
+        "lead"
+      ],
+      "effect": "creates a follow-up for the lister",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "waiting-on",
+      "description": "Back office: set who a deal is waiting on.",
+      "needs": [
+        "lead",
+        "role"
+      ],
+      "effect": "lead.waitingOn",
+      "confirm": false,
+      "assistant": "propose"
+    },
+    {
+      "id": "retry-send",
+      "description": "Retry a message that failed to send.",
+      "needs": [
+        "lead",
+        "entry"
+      ],
+      "effect": "re-runs delivery",
+      "confirm": false,
+      "assistant": "allow"
+    }
+  ],
+  "reads": [
+    {
+      "id": "leads",
+      "where": "CRM_DATA.roles[role].desks[desk].leads",
+      "description": "Every lead the actor can see, with stage, owner, tabs, card (timer, flag, activity), textOptIn and the full thread."
+    },
+    {
+      "id": "thread",
+      "where": "lead.thread[]",
+      "description": "Typed log: message (dir in|out, text, meta, by), email, call (with recording/transcript), image, event (system/user actions), day markers."
+    },
+    {
+      "id": "events",
+      "where": "CRM_DATA.calendar.events[role]",
+      "description": "Appointments, deliveries/drop-offs and follow-ups: date, start/end, lead, store, type, state, done."
+    },
+    {
+      "id": "stages",
+      "where": "STAGES[desk]",
+      "description": "Ordered stages per desk; 'terminal' marks Lost. Stages move from logged activity; Agreed/Lost are human decisions."
+    },
+    {
+      "id": "stores",
+      "where": "CRM_DATA.stores",
+      "description": "Stores with hours per weekday and reps — the source for open slots (crmSlotsFor)."
+    },
+    {
+      "id": "focus",
+      "where": "crmFocusScore(lead)",
+      "description": "How the phone's focus row ranks leads: timers, overdue, today's appointments, unread."
+    }
+  ],
+  "ui_only": [
+    "open-help",
+    "open-settings",
+    "open-bucket",
+    "open-queue",
+    "toggle-column",
+    "phone-board-mode",
+    "board-mode",
+    "table-sort",
+    "open-lead-row",
+    "phone-stage-pick",
+    "phone-board-filter",
+    "phone-board-stores",
+    "phone-menu-pick",
+    "phone-lead-more",
+    "open-detail",
+    "close-detail",
+    "cal-prev",
+    "cal-next",
+    "cal-today",
+    "calendar-mode-day",
+    "open-day",
+    "open-month",
+    "mini-pick",
+    "mini-prev",
+    "mini-next",
+    "clear-search",
+    "net-retry",
+    "net-mode",
+    "search-expand",
+    "summary-scroll",
+    "toggle-menu",
+    "menu-all",
+    "menu-pick",
+    "toggle-calendar",
+    "toggle-followups",
+    "toggle-owner",
+    "open-event",
+    "open-more",
+    "close-popover",
+    "event-open-conversation",
+    "new-event-on",
+    "pick-inline",
+    "edit-notes",
+    "draft-lead",
+    "draft-field",
+    "draft-save",
+    "draft-kind",
+    "noop",
+    "inline-month-prev",
+    "inline-month-next",
+    "phone-back",
+    "open-focus",
+    "phone-filter",
+    "phone-more",
+    "composer-mode-menu",
+    "composer-mode-pick",
+    "phone-filter-pick",
+    "open-lead-details",
+    "phone-day-pick",
+    "phone-month-toggle",
+    "phone-year-month",
+    "phone-cal-stores",
+    "toggle-store",
+    "phone-cal-filter",
+    "phone-event-more",
+    "compose-new",
+    "play-recording",
+    "open-transcript",
+    "composer-add",
+    "text",
+    "email",
+    "quick-edit"
+  ],
+  "provenance": "Every thread entry may carry by: 'system' | 'assistant' | a person's name. Messages drafted by the assistant and sent by a person carry by:'assistant' and sentBy:'<name>'. The UI labels these; never strip them.",
+  "events_for_agents": [
+    "lead.created",
+    "lead.replied",
+    "message.failed",
+    "followup.overdue",
+    "appointment.today",
+    "stage.changed"
+  ],
+  "not_yet": [
+    "a real API behind crmRequest()",
+    "an events feed (the list above is computed in the UI today)",
+    "a schema for stages/timers/overdue rules (see HANDOFF → Status rules)"
+  ]
+}

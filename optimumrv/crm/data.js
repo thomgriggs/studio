@@ -605,6 +605,14 @@ window.CRM_DATA = (function () {
 		locations: LOCATIONS,
 		stores: STORES,
 		calendar: { startHour:CALENDAR.startHour, endHour:CALENDAR.endHour, workHours:CALENDAR.workHours, events:{ sales:salesEvents, management:salesEvents, consignment:consignmentEvents }, types:APPOINTMENT_TYPES },
+		/* ASSISTANT — an AI agent is one more actor with its own allow-list (mirrors actions.json). It never logs in;
+		   it works through the same actions people use, and anything marked propose/deny reaches a person's confirm sheet. */
+		assistant: {
+			label:'Assistant',
+			allow:['insert-template', 'send-60-day-update', 'retry-send'],
+			propose:['send-message', 'schedule', 'new-event', 'edit-field', 'event-complete', 'event-snooze', 'event-add-followup', 'quick-followup', 'new-lead', 'schedule-pickup', 'request-reevaluation', 'waiting-on'],
+			deny:['call', 'event-cancel', 'event-delete', 'mark-agreed', 'mark-lost', 'reopen-lead', 'quick-stage', 'quick-reassign', 'mark-price-agreed']
+		},
 		roles: {
 			sales: {
 				label:'Salesperson',

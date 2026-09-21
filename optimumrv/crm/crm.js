@@ -414,6 +414,13 @@ function crmRenderThread(lead) {
 	requestAnimationFrame(() => { thread.scrollTop = thread.scrollHeight; });
 }
 
+/* provenance: who produced a thread entry. Shown as the small label above a message; never hidden. */
+function crmProvenance(entry) {
+	if (entry.by === 'assistant') return { icon:'cpu', text:entry.sentBy ? `Drafted by assistant · sent by ${entry.sentBy.split(' ')[0]}` : 'Drafted by assistant' };
+	if (entry.label) return { icon:entry.labelIcon || 'zap', text:entry.label };
+	return null;
+}
+
 function crmThreadEntry(entry, index) {
 	const built = crmThreadEntryBuild(entry, index); if (built && index !== undefined) built.dataset.index = index; return built;
 }
@@ -428,14 +435,15 @@ function crmThreadEntryBuild(entry, index) {
 		case 'event':
 			el = crmTemplate('tpl-thread-event');
 			if (entry.tone) el.dataset.tone = entry.tone;
-			el.innerHTML = `${crmIcon(entry.icon)}<span data-field="event.text">${entry.text}</span>`;
+			el.innerHTML = `${crmIcon(entry.icon)}<span data-field="event.text">${entry.text}</span>${entry.by === 'assistant' ? `<span class="thread-by" data-by="assistant">${crmIcon('cpu')}assistant</span>` : ''}`;
 			break;
 		case 'message':
 			el = crmTemplate('tpl-thread-message');
 			el.classList.add(entry.dir === 'out' ? 'outbound' : 'inbound');
 			el.dataset.direction = entry.dir === 'out' ? 'outbound' : 'inbound';
 			const label = el.querySelector('.message-label');
-			if (entry.label) label.innerHTML = `${crmIcon(entry.labelIcon)}<span data-field="message.author">${entry.label}</span>`; else label.remove();
+			const prov = crmProvenance(entry); /* 'Automated' today; 'Drafted by assistant · sent by Riley' when an agent writes */
+			if (prov) label.innerHTML = `${crmIcon(prov.icon)}<span data-field="message.author">${prov.text}</span>`; else label.remove();
 			el.querySelector('.message-body').textContent = entry.text;
 			const meta = el.querySelector('.message-meta');
 			if (entry.failed) { el.dataset.status = 'failed'; meta.innerHTML = `${crmIcon('alert-circle')}<span>Not sent</span> · <button type="button" class="link-btn" data-action="retry-send" data-index="${index}">Retry</button>`; }
@@ -1234,15 +1242,23 @@ const CRM_LOST_REASONS = ['Bought elsewhere', 'No financing', 'Stopped respondin
 function crmStageIndex(desk, id) { return desk.stages.findIndex(s => s.id === id); }
 
 /* which stages a person may set by hand, per role */
-function crmCanSetStage(lead, stage) {
+function crmCanSetStage(lead, stage, actor) {
+	if ((actor || crmState.role) === 'assistant') return false; /* the assistant proposes; a person applies */
 	if (crmState.role === 'sales') return ['agreed', 'lost'].includes(stage) || (lead.stage === 'lost' && stage === 'working');
 	return true;
+}
+/* what an actor may do with a named action: 'allow' | 'propose' | 'deny' (people: allow, unless the role's own rules say otherwise) */
+function crmCanAct(action, actor = crmState.role) {
+	if (actor !== 'assistant') return 'allow';
+	const a = CRM_DATA.assistant || {};
+	return (a.allow || []).includes(action) ? 'allow' : (a.propose || []).includes(action) ? 'propose' : 'deny';
 }
 
 function crmSetStage(lead, stage, opts = {}) {
 	const desk = crmDesk();
 	if (lead.stage === stage) return;
 	if (crmNet.offline && opts.by !== 'system') { crmToast("Couldn't save — you're offline", { tone:'warn' }); return false; }
+	if (opts.by === 'assistant') { crmToast('The assistant can suggest a stage — a person applies it', { tone:'warn' }); return false; }
 	const from = desk.stages.find(s => s.id === lead.stage), to = desk.stages.find(s => s.id === stage);
 	if (!to) return;
 	const backward = (from && from.terminal) || (!to.terminal && from && crmStageIndex(desk, stage) < crmStageIndex(desk, lead.stage));
@@ -1258,7 +1274,7 @@ function crmSetStage(lead, stage, opts = {}) {
 		if (lead.card) Object.assign(lead.card, { muted:false, timer:null, activity:'Reopened', activityIcon:'rotate-ccw', age:'now' });
 	} else if (lead.card) { lead.card.lane = null; }
 	const user = CRM_DATA.roles[crmState.role].user.name;
-	const by = opts.by === 'system' ? 'System' : opts.by === 'manager' ? `${user} (Manager)` : user;
+	const by = opts.by === 'system' ? 'System' : opts.by === 'assistant' ? 'Assistant' : opts.by === 'manager' ? `${user} (Manager)` : user;
 	lead.thread.push({ type:'event', icon:'columns', tone:backward ? 'warn' : undefined, text:`Stage changed — ${from ? from.label : '—'} → ${to.label} · by ${by}${opts.reason ? ` · ${opts.reason}` : ''}` });
 	crmPersist();
 	if (opts.by !== 'system' && !opts.silent) crmToast(`${lead.name} moved to ${to.label}`, { undo:() => { crmSetStage(lead, from ? from.id : desk.stages[0].id, { by:opts.by, reason:'Undo', silent:true }); crmToast(`Back to ${from ? from.label : desk.stages[0].label}`); } });

@@ -303,3 +303,13 @@ Fast in use — total blocking time 0 ms, layout shift ≈ 0 on every view; all 
 1 + 2 alone should put mobile in the 90s. Nothing here changes how anything looks.
 
 **Text opt-in.** `lead.textOptIn` (boolean) is in the data and drives nothing visible yet — the old "Texting … — opted in" line under the composer was removed and no replacement has been chosen.
+
+## AI agents
+
+The build is shaped so an agent is one more actor, not a redesign. Three things make that concrete:
+
+1. **`actions.json` — the tool manifest.** Every domain action with what it needs, what it changes, whether a person must confirm, and the assistant policy (`allow` · `propose` · `deny`). UI-only actions (navigation, filters, pickers) are listed separately so an agent ignores them. Reads are listed too (leads, thread, events, stages, stores, focus ranking). Regenerate it whenever `CRM_ACTIONS` changes.
+2. **The Assistant actor.** `CRM_DATA.assistant` holds the allow-list; `crmCanAct(action, actor)` answers `allow | propose | deny`; `crmCanSetStage(lead, stage, 'assistant')` is always false and `crmSetStage` refuses `by:'assistant'` — the assistant *proposes* stages, a person applies them through the same quick-edit sheet. Nothing marked `confirm:true` bypasses the confirm sheet, whoever initiated it.
+3. **Provenance on every entry.** Thread entries carry `by:` (`'system'`, `'assistant'`, or a person). `crmProvenance()` renders it: the existing *Automated* label, and *Drafted by assistant · sent by Riley* when an agent wrote the words and a person sent them; system/assistant events get a small `assistant` tag. Sample data has no assistant entries yet, so nothing on screen changes until one exists — but the label is guaranteed to show when it does.
+
+**Where to plug an agent in first:** drafting replies (propose into the composer, person presses Send), follow-up triage (rank the Due tab / focus row), thread summaries before a call, and auto-logging (`by:'assistant'` entries). **Still the developer's:** a real API behind `crmRequest()`, an events feed for the triggers listed in `actions.json → events_for_agents`, and a small schema for stage/timer/overdue rules. **Still the client's:** what the assistant may do unattended — the same conversation as the lister stage rule.

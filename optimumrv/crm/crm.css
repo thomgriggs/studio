@@ -1855,3 +1855,6 @@ body[data-device="phone"] .net-banner { padding-inline:14px; }
 .sheet-row.is-static .segmented { margin-inline-start:auto; flex:none; }
 /* start page: a phone link and its landscape twin share one row */
 .picker-links .picker-row { display:flex; gap:6px; > a:first-child { flex:1; } .alt { flex:none; width:40px; justify-content:center; padding-inline:0; .feather { margin:0; } } }
+
+/* provenance tag on system/assistant events in the thread */
+.thread-event .thread-by { margin-inline-start:6px; color:var(--color_text-soft); font-size:var(--font_size-tiny); display:inline-flex; align-items:center; gap:3px; .feather { width:11px; height:11px; } }
