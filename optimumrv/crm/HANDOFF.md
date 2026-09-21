@@ -236,3 +236,36 @@ Small text meets WCAG AA (4.5:1) on the surfaces it sits on: `--color_text-muted
 ## Target sizes
 
 Every pointer target is at least 24×24 (WCAG 2.5.8): inline text links (contact lines, Recording / Transcript) get a 24px hit area via padding that doesn't move the layout; checkboxes stay their native 16px with 4px clear space (the standard's spacing allowance) and, where possible, a clickable label around them. Keep new controls on `.btn` / `.menu-btn` (36–40px) rather than bare links.
+
+## Keyboard scorecard (2026-09-21)
+
+Tab walk — every stop named, in reading order, nothing hidden: Daily View 33 stops · Pipeline 15 · Calendar 69 (35 are mini-month days; a roving group would make that one stop). One unnamed stop: the calendar search input (label is visually hidden — fine for screen readers, flagged only by the walk).
+
+| task, keyboard only | result | keystrokes |
+|---|---|---|
+| Reply to a lead (open row → type → Enter) | pass | ~50 incl. the message |
+| Mark a lead Agreed from the conversation | pass | 18 |
+| Move a card to Agreed on the board (no drag) | pass | 14 |
+| Create an appointment from + | pass* | ~19 |
+| Sheets: Tab stays inside · Esc closes · focus returns | pass | — |
+| Drawer: focus moves in · Esc closes · focus returns | pass | — |
+| Calendar shortcuts ← → t d w m y | pass | 1 each |
+
+Two gaps found, both small:
+1. **Draft card doesn't take focus.** Pressing + opens the event card but focus stays on the + button; a keyboard user has to Tab a long way to reach it (the card is at the end of the DOM). Fix: focus the card's first field on open (the phone event screen and sheets already do this).
+2. **Focus lost after a stage change.** After "Mark agreed" the opener button hides itself (it no longer applies), so the focus-return has nowhere to go and lands on `<body>`. Fix: fall back to the lead name / next visible action.
+
+## VoiceOver script (10 minutes)
+
+Mac: ⌘F5 turns VoiceOver on/off. VO = Control+Option. iPhone: Settings → Accessibility → VoiceOver, or triple-click the side button. Close your eyes for the run.
+
+1. **Daily View, inbox.** VO→ through the first three rows. You should hear: name, time, the preview, and the timer ("3 minutes left"). *If you hear only the name and time, the pill and the unread dot aren't being read — that's the colour-only gap.*
+2. **Open Marcus.** VO-Space on his row. You should hear the lead name announced and land in the conversation. Tab to the composer, type, Enter. Listen for the new message being read (the thread is a live region).
+3. **Stepper.** VO→ across "Assigned · Attempting · Working · Agreed". You should hear which one is current. *If all four sound the same, the current step is colour-only.*
+4. **Mark Agreed.** Activate it; you should hear "dialog, Mark agreed". Tab to Apply, activate. Listen for confirmation. *Expect silence here — that's item 5 (toast/announce) on the list.*
+5. **Pipeline.** VO→ across the column headings: you should hear "Assigned, 2" style counts. Then into a card: name, unit, last activity. *Does the stage colour get read? No — the column heading is the only cue.*
+6. **Calendar, week.** VO→ into the grid: an event should read as name, type, time, store. Tab to a follow-up checkbox and toggle it with Space.
+7. **iPhone, Daily View.** Swipe right through the focus row: each circle should read a name. Double-tap one. Swipe to the back button: should read "Back to inbox".
+8. **iPhone, Calendar.** Swipe to the month title: should read "September, button". Double-tap: should read the month stack. Find Today at the bottom.
+
+Write down anything that was silent, read twice, or read in the wrong order.
