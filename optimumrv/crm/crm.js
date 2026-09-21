@@ -1660,7 +1660,7 @@ function crmRenderTimeGrid(days) {
 		const nowY = y(now.getHours() + now.getMinutes() / 60);
 		const hh = now.getHours() % 12 || 12, mm = String(now.getMinutes()).padStart(2, '0');
 		times.insertAdjacentHTML('beforeend', `<span class="calendar-now-label" style="top:${nowY}px">${hh}:${mm} ${now.getHours() >= 12 ? 'PM' : 'AM'}</span>`);
-		grid.insertAdjacentHTML('beforeend', `<span class="calendar-now" style="top:${nowY}px; --now_today:${days.findIndex(crmIsToday)}; --now_days:${days.length}" aria-label="Current time"></span>`);
+		grid.insertAdjacentHTML('beforeend', `<span class="calendar-now" style="top:${nowY}px; --now_today:${days.findIndex(crmIsToday)}; --now_days:${days.length}" role="img" aria-label="Current time"></span>`);
 	}
 	const events = crmVisibleEvents();
 	days.forEach(d => {
@@ -2271,7 +2271,7 @@ function crmRenderPhoneCalendar() {
 	const level = crmCal.level || 'day';
 	wrap.querySelector('[data-field="calendar.month"]').textContent = level === 'day' ? CRM_MONTHS[cursor.getMonth()] : String(cursor.getFullYear());
 	wrap.querySelector('[data-action="phone-month-toggle"]').disabled = level === 'year';
-	const mt = wrap.querySelector('.phone-month-title'); if (mt) mt.setAttribute('aria-label', level === 'day' ? 'Back to months' : 'Back to years');
+	const mt = wrap.querySelector('.phone-month-title'); if (mt) mt.setAttribute('title', level === 'day' ? 'Show months' : 'Show years'); /* visible text is the accessible name */
 	const tb = wrap.querySelector('.phone-today'); if (tb) tb.classList.toggle('is-away', !crmIsToday(cursor));
 	/* week strip */
 	const start = crmStartOfWeek(cursor);

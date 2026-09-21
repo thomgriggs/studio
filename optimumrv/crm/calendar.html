@@ -87,7 +87,7 @@
 			</div>
 			<div id="mini-month"></div>
 			<section class="calendar-list-group">
-				<h3>Activity</h3>
+				<h2>Activity</h2>
 				<div class="calendar-list">
 					<label class="calendar-list-item"><input type="checkbox" checked data-action="toggle-calendar" data-category="appointment"><span class="swatch" data-category="appointment"></span>Appointments</label>
 					<label class="calendar-list-item"><input type="checkbox" checked data-action="toggle-calendar" data-category="logistics"><span class="swatch" data-category="logistics"></span>Deliveries &amp; drop-offs</label>
@@ -95,7 +95,7 @@
 				</div>
 			</section>
 			<section class="calendar-list-group" id="calendar-owners" hidden>
-				<h3>Salespeople</h3>
+				<h2>Salespeople</h2>
 				<div class="calendar-list"></div>
 			</section>
 		</aside>
@@ -118,10 +118,10 @@
 	</main>
 
 	<!-- ===== PHONE CALENDAR : iOS Calendar day mode — top bar · week strip · agenda · bottom bar ===== -->
-	<section class="phone-cal" data-phone aria-label="Calendar">
+	<main class="phone-cal" data-phone aria-label="Calendar">
 		<header class="phone-topbar">
 			<button type="button" class="menu-btn" data-action="open-menu" aria-label="Open menu" aria-controls="sidebar-navigation"><i data-feather="menu"></i></button>
-			<button type="button" class="phone-month-title" data-action="phone-month-toggle" aria-label="Zoom out"><i data-feather="chevron-left"></i><span data-field="calendar.month">September</span></button>
+			<button type="button" class="phone-month-title" data-action="phone-month-toggle"><i data-feather="chevron-left"></i><span data-field="calendar.month">September</span></button>
 			<span class="phone-actions">
 				<button type="button" class="menu-btn phone-cal-stores" data-action="phone-cal-stores" aria-label="Stores" aria-haspopup="menu" hidden><i data-feather="map-pin"></i></button>
 				<button type="button" class="menu-btn phone-cal-filter" data-action="phone-cal-filter" aria-label="Filter" aria-haspopup="menu"><i data-feather="filter"></i><span class="phone-filter-dot" hidden></span></button>
@@ -143,7 +143,7 @@
 			</form>
 			<button type="button" class="btn btn-icon phone-compose" data-action="new-event" aria-label="New appointment"><i data-feather="edit"></i></button>
 		</footer>
-	</section>
+	</main>
 	<!-- ===== PHONE EVENT : full-screen event card (the same inline-editable card as the desktop popover) ===== -->
 	<section class="phone-event" data-phone aria-label="Event">
 		<header class="phone-topbar">
