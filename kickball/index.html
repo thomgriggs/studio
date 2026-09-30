@@ -1,292 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kickball Tracker</title>
-    <meta name="studio:project" content="Kickball">
-    <meta name="studio:description" content="Kickball league scheduling and score tracking app.">
-    <meta name="theme-color" content="#0f2528">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="/assets/breadcrumb.css">
-    <script defer src="/assets/breadcrumb.js"></script>
-  </head>
-  <body>
-    <header class="app-header">
-      <div class="brand-block">
-        <p class="eyebrow">Liquid Breakfast Club</p>
-        <h1>Kickball Tracker</h1>
-        <p id="gameMeta" class="header-meta">Sunday game</p>
-      </div>
-      <div class="header-score" aria-label="Current score">
-        <div>
-          <span>Us</span>
-          <strong id="headerUs">0</strong>
-        </div>
-        <div>
-          <span>Them</span>
-          <strong id="headerThem">0</strong>
-        </div>
-      </div>
-    </header>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<meta name="studio:project" content="Kickball">
+	<meta name="studio:description" content="The ump's card, digital — score, outs, innings, lineups and stats. Sport is a config.">
+	<meta name="theme-color" content="#0b1220">
+	<title>Kickball Scorekeeper</title>
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="kb.css">
+	<script>
+		/* studio breadcrumb only when served inside the studio (it 404s on a standalone domain) */
+		if (location.pathname.startsWith('/kickball/')) {
+			document.write('<link rel="stylesheet" href="/assets/breadcrumb.css"><script defer src="/assets/breadcrumb.js"><\/script>');
+		}
+	</script>
+	<script defer src="data.js"></script>
+	<script defer src="kb.js"></script>
+</head>
+<body data-view="home">
 
-    <nav class="tabs" aria-label="App views">
-      <button class="tab active" data-view="score">Score</button>
-      <button class="tab" data-view="lineup">Lineup</button>
-      <button class="tab" data-view="defense">Defense</button>
-      <button class="tab" data-view="stats">Stats</button>
-      <button class="tab" data-view="admin">Setup</button>
-    </nav>
+	<!-- ===== HOME : what do I want to do? ===== -->
+	<main class="view home" data-view="home">
+		<p class="brand"><span class="brand-dot" aria-hidden="true"></span> Scorekeeper</p>
+		<h1>Keep score</h1>
 
-    <main>
-      <section id="score" class="view active">
-        <div class="score-layout">
-          <section class="score-hero">
-            <div class="game-state-strip">
-              <div>
-                <span class="label">Inning</span>
-                <strong id="inningLabel">Top 1</strong>
-              </div>
-              <div>
-                <span class="label">Outs</span>
-                <strong id="outsLabel">0 / 4</strong>
-              </div>
-              <div>
-                <span class="label">Runs</span>
-                <strong id="runsInningLabel">0</strong>
-              </div>
-            </div>
+		<button type="button" class="continue-card" data-action="go" data-to="ump" hidden>
+			<span class="card-eyebrow">Continue</span>
+			<span class="card-teams" data-field="teams"></span>
+			<span class="card-status" data-field="status"></span>
+		</button>
 
-            <div class="kicker-card">
-              <span class="label">At The Plate</span>
-              <h2 id="currentKicker">Set lineup first</h2>
-              <p id="nextKickers" class="next-kickers"></p>
-              <p id="scoreWarning" class="warning"></p>
-            </div>
+		<form class="new-game">
+			<h2>New game</h2>
+			<div class="field-pair">
+				<div class="field">
+					<label for="sport">Sport</label>
+					<select id="sport" name="sport" data-action="go" data-to="home"></select>
+				</div>
+				<div class="field">
+					<label for="mode">Game</label>
+					<select id="mode" name="mode"></select>
+				</div>
+			</div>
+			<div class="field-pair">
+				<div class="field">
+					<label for="away-team">Away / Team A</label>
+					<select id="away-team" name="away-team"></select>
+					<input id="away" name="away" autocomplete="off" placeholder="or type a name" aria-label="Away team name">
+				</div>
+				<div class="field">
+					<label for="home-team">Home / Team B</label>
+					<select id="home-team" name="home-team"></select>
+					<input id="home" name="home" autocomplete="off" placeholder="or type a name" aria-label="Home team name">
+				</div>
+			</div>
+			<button type="submit" class="key is-primary" data-action="new-game">Start</button>
+		</form>
 
-            <div class="diamond" aria-label="Base state">
-              <div class="base-card base-second" data-base-card="2">
-                <span>2B</span>
-                <strong id="base2">Empty</strong>
-                <div class="base-actions">
-                  <button data-runner-action="advance" data-base="2">Advance</button>
-                  <button data-runner-action="score" data-base="2">Score</button>
-                  <button data-runner-action="clear" data-base="2">Clear</button>
-                </div>
-              </div>
-              <div class="base-card base-third" data-base-card="3">
-                <span>3B</span>
-                <strong id="base3">Empty</strong>
-                <div class="base-actions">
-                  <button data-runner-action="advance" data-base="3">Advance</button>
-                  <button data-runner-action="score" data-base="3">Score</button>
-                  <button data-runner-action="clear" data-base="3">Clear</button>
-                </div>
-              </div>
-              <div class="plate">Home</div>
-              <div class="base-card base-first" data-base-card="1">
-                <span>1B</span>
-                <strong id="base1">Empty</strong>
-                <div class="base-actions">
-                  <button data-runner-action="advance" data-base="1">Advance</button>
-                  <button data-runner-action="score" data-base="1">Score</button>
-                  <button data-runner-action="clear" data-base="1">Clear</button>
-                </div>
-              </div>
-            </div>
-          </section>
+		<div class="home-links">
+			<button type="button" class="key is-ghost" data-action="teams">Teams &amp; rosters</button>
+		</div>
 
-          <aside class="score-side">
-            <section class="action-panel">
-              <div class="section-heading">
-                <h2>Result</h2>
-                <button id="undo" class="ghost">Undo</button>
-              </div>
-              <div class="result-grid">
-                <button class="primary-action" data-action="single">Single</button>
-                <button class="primary-action" data-action="double">Double</button>
-                <button class="primary-action" data-action="triple">Triple</button>
-                <button class="primary-action" data-action="homeRun">Home Run</button>
-                <button data-action="out">Out</button>
-                <button data-action="foulOut">Foul Out</button>
-                <button data-action="reachedError">Reached Error</button>
-                <button data-action="fieldersChoice">Fielder's Choice</button>
-                <button data-action="automaticOut">Auto Out</button>
-              </div>
-            </section>
+		<section class="recent-panel" aria-labelledby="recent-heading">
+			<h2 id="recent-heading">Recent games</h2>
+			<ul class="recent"></ul>
+		</section>
 
-            <section class="action-panel">
-              <h2>Score Adjust</h2>
-              <div class="score-adjust">
-                <button data-score-action="usMinus">- Us</button>
-                <button data-score-action="usPlus">+ Us</button>
-                <button data-score-action="themMinus">- Them</button>
-                <button data-score-action="themPlus">+ Them</button>
-              </div>
-            </section>
+		<p class="home-note">Everything is saved on this phone. Rules live in <code>data.js</code> — a sport is a config.</p>
+	</main>
 
-            <section class="action-panel">
-              <h2>Game Flow</h2>
-              <div class="button-row">
-                <button id="nextHalf">Next Half</button>
-                <button id="clearBases">Clear Bases</button>
-                <button id="resetGame" class="danger">Reset</button>
-              </div>
-            </section>
-          </aside>
-        </div>
+	<!-- ===== UMP : the card, digital — rendered by kbRenderUmp from the sport config ===== -->
+	<main class="view ump" data-view="ump" aria-live="polite"></main>
 
-        <section class="activity-panel">
-          <div class="section-heading">
-            <h2>Play Log</h2>
-            <span id="eventCount" class="pill">0 plays</span>
-          </div>
-          <ol id="eventLog" class="event-log"></ol>
-        </section>
-      </section>
+	<!-- ===== CAPTAIN : who's here → lineup → positions, for a side with a roster ===== -->
+	<main class="view captain page" data-view="captain"></main>
 
-      <section id="lineup" class="view">
-        <div class="screen-heading">
-          <div>
-            <p class="eyebrow dark">Pregame</p>
-            <h2>Kicking Lineup</h2>
-          </div>
-          <button id="balanceLineup" class="primary">Balance Lineup</button>
-        </div>
+	<!-- ===== TEAMS : list + create ===== -->
+	<main class="view teams page" data-view="teams"></main>
 
-        <section class="lineup-layout">
-          <div class="lineup-board">
-            <div class="section-heading">
-              <h3>Order</h3>
-              <span id="lineupCount" class="pill">0 active</span>
-            </div>
-            <div id="lineupValidation" class="warning-list"></div>
-            <div id="lineupList" class="lineup-list"></div>
-          </div>
+	<!-- ===== TEAM : one roster, edit players + designation ===== -->
+	<main class="view team page" data-view="team"></main>
 
-          <aside class="attendance-board">
-            <div class="section-heading">
-              <h3>Available Players</h3>
-              <span id="attendanceCount" class="pill">0 here</span>
-            </div>
-            <div id="attendanceList" class="attendance-list"></div>
-          </aside>
-        </section>
-      </section>
+	<!-- ===== STATS : season table for a team across saved games ===== -->
+	<main class="view stats page" data-view="stats"></main>
 
-      <section id="defense" class="view">
-        <div class="screen-heading">
-          <div>
-            <p class="eyebrow dark">Field</p>
-            <h2>Defense Board</h2>
-          </div>
-          <div class="count-stack">
-            <span id="fieldCount" class="pill">0 on field</span>
-            <span id="maleFieldCount" class="pill">0 men</span>
-          </div>
-        </div>
-
-        <div id="defenseValidation" class="warning-list"></div>
-        <section class="defense-layout">
-          <div id="positions" class="positions"></div>
-          <aside class="bench-panel">
-            <div class="section-heading">
-              <h3>Bench</h3>
-              <span id="benchCount" class="pill">0</span>
-            </div>
-            <div id="benchList" class="bench-list"></div>
-          </aside>
-        </section>
-      </section>
-
-      <section id="stats" class="view">
-        <div class="screen-heading">
-          <div>
-            <p class="eyebrow dark">Season</p>
-            <h2>Player Stats</h2>
-          </div>
-          <span id="teamSummary" class="pill">0 plate appearances</span>
-        </div>
-
-        <div class="metric-grid">
-          <div class="metric-card">
-            <span class="label">Hits</span>
-            <strong id="teamHits">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="label">Runs</span>
-            <strong id="teamRuns">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="label">Outs</span>
-            <strong id="teamOuts">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="label">OBP</span>
-            <strong id="teamObp">.000</strong>
-          </div>
-        </div>
-
-        <section class="table-panel">
-          <table>
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>PA</th>
-                <th>H</th>
-                <th>R</th>
-                <th>RBI</th>
-                <th>Out</th>
-                <th>OBP</th>
-              </tr>
-            </thead>
-            <tbody id="statsTable"></tbody>
-          </table>
-        </section>
-      </section>
-
-      <section id="admin" class="view">
-        <div class="screen-heading">
-          <div>
-            <p class="eyebrow dark">Setup</p>
-            <h2>Game And Roster</h2>
-          </div>
-          <button id="saveSetup" class="primary">Save Setup</button>
-        </div>
-
-        <section class="setup-grid">
-          <form id="gameSetup" class="form-panel">
-            <label>
-              Opponent
-              <input id="opponentInput" name="opponent" autocomplete="off">
-            </label>
-            <label>
-              Date
-              <input id="dateInput" name="date" type="date">
-            </label>
-            <label>
-              Location
-              <input id="locationInput" name="location" autocomplete="off">
-            </label>
-          </form>
-
-          <div class="form-panel">
-            <div class="section-heading">
-              <h3>Roster</h3>
-              <span id="rosterCount" class="pill">20 players</span>
-            </div>
-            <div id="rosterList" class="roster-list"></div>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <script src="app.js"></script>
-    <script>
-      if ("serviceWorker" in navigator && location.protocol !== "file:") {
-        navigator.serviceWorker.register("service-worker.js");
-      }
-    </script>
-  </body>
+	<script>
+		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");
+	</script>
+</body>
 </html>

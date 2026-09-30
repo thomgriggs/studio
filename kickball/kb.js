@@ -1,0 +1,835 @@
+/* ========================================================================== */
+/* KICKBALL — ump + captain behavior                                          */
+/* All helpers are `kb*`. No server. State = teams + games with EVENT LOGS;    */
+/* the scoreboard and every stat are derived by replaying a log through the    */
+/* sport's rules. Undo pops the last event. Corrections are events ('set').    */
+/* Spine: delegated [data-action] click → KB_ACTIONS[action](el, ev).          */
+/* ========================================================================== */
+
+const KB_KEY = 'kickball-v3';
+const kbState = {
+	teams:[], games:[], game:null,                       /* persisted */
+	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, /* ui */
+	pending:{ away:{ in:0, on:0 }, home:{ in:0, on:0 } }
+};
+let kbTicker = null;
+
+document.addEventListener('DOMContentLoaded', kbInit);
+
+function kbInit() {
+	kbLoad();
+	if (!kbState.teams.length) { kbState.teams = structuredClone(KB_SEED_TEAMS); kbSave(); }
+	document.addEventListener('click', kbOnClick);
+	document.addEventListener('change', kbOnChange);
+	document.addEventListener('submit', ev => { ev.preventDefault(); const b = ev.target.querySelector('[type="submit"][data-action]'); if (b) KB_ACTIONS[b.dataset.action](b, ev); });
+	/* a refresh puts you back where you were; screens that need a game fall back to home */
+	const needsGame = ['ump', 'captain'], needsTeam = ['team', 'stats'];
+	let view = kbState.ui.view || 'home';
+	if (needsGame.includes(view) && !kbState.game) view = 'home';
+	if (needsTeam.includes(view) && !kbTeam(kbState.teamId)) view = 'teams';
+	kbGo(view);
+}
+
+/* ---------- storage ------------------------------------------------------ */
+function kbLoad() {
+	kbState.ui = {};
+	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.ui = s.ui || {}; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; } } catch (e) {}
+}
+function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId } })); } catch (e) {} }
+
+/* ---------- toast + helpers --------------------------------------------- */
+let kbToastTimer;
+function kbToast(text) {
+	let el = document.querySelector('.toast');
+	if (!el) { el = document.createElement('div'); el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
+	el.textContent = text; el.classList.add('is-open');
+	clearTimeout(kbToastTimer); kbToastTimer = setTimeout(() => el.classList.remove('is-open'), 2200);
+}
+function kbEscape(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c])); }
+function kbSlug(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'x'; }
+function kbSport(g = kbState.game) { return g ? KB_SPORTS[g.sport] : null; }
+function kbTeam(id) { return kbState.teams.find(t => t.id === id); }
+function kbPlayer(team, id) { return team && team.roster.find(p => p.id === id); }
+function kbOther(side) { return side === 'away' ? 'home' : 'away'; }
+function kbFirst(name) { return String(name || '').split(' ')[0]; }
+function kbMMSS(ms) { const s = Math.max(0, Math.floor(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; }
+
+/* ---------- actions ------------------------------------------------------ */
+const KB_ACTIONS = {
+	'go':           (el) => kbGo(el.dataset.to),
+	'new-game':     (el) => kbNewGame(el.closest('form')),
+	'tap':          (el) => kbTap(el),
+	'runner':       (el) => kbRecord({ kind:'runner', base:Number(el.dataset.base), what:el.dataset.what, to:el.dataset.to ? Number(el.dataset.to) : undefined, rbi:el.dataset.rbi || undefined, side:kbBattingSide() }),
+	'resolve-done': () => { kbState.resolve = null; kbRender(); },
+	'fc-out':       (el) => { const p = kbState.fc; if (!p) return; kbState.fc = null; const ev = { ...p.ev }; if (el.dataset.runner) ev.outAt = { runner:el.dataset.runner, base:Number(el.dataset.base) }; kbRecord(ev); },
+	'fc-cancel':    () => { kbState.fc = null; kbRender(); },
+	'play-out':     (el) => kbPlayOut(el.dataset.runner, el.dataset.base),
+	'undo':         () => kbUndo(),
+	'toggle-log':   () => { kbState.showLog = !kbState.showLog; kbRender(); },
+	'end-half':     () => kbRecord({ kind:'halfEnd', side:kbBattingSide(), manual:true }),
+	'clock-start':  () => kbRecord({ kind:'clock', what:'start' }),
+	'fix-score':    (el) => { kbState.fix = kbState.fix === el.dataset.side ? null : el.dataset.side; kbRender(); },
+	'fix-outs':     () => { kbState.fix = kbState.fix === 'outs' ? null : 'outs'; kbRender(); },
+	'nudge':        (el) => kbNudge(el.dataset.what, el.dataset.side, Number(el.dataset.delta)),
+	'fix-done':     () => { kbState.fix = null; kbRender(); },
+	'bag':          (el) => kbBag(el.dataset.side, el.dataset.what, Number(el.dataset.delta)),
+	'score-round':  () => kbScoreRound(),
+	'end-game':     () => { if (kbState.game) { kbState.game.status = 'final'; kbSave(); kbRender(); kbToast('Final'); } },
+	'finish':       () => kbFinish(),
+	'abandon':      () => { kbState.game = null; kbSave(); kbGo('home'); kbToast('Game discarded'); },
+	/* captain */
+	'captain':      (el) => { kbState.side = el.dataset.side || kbState.side; kbState.tab = el.dataset.tab || 'here'; kbGo('captain'); },
+	'captain-tab':  (el) => { kbState.tab = el.dataset.tab; kbState.share = null; kbSave(); kbRender(); },
+	'captain-side': (el) => { kbState.side = el.dataset.side; kbState.share = null; kbSave(); kbRender(); },
+	'here':         (el) => kbToggleHere(el.dataset.player),
+	'move':         (el) => kbMoveLineup(Number(el.dataset.index), Number(el.dataset.delta)),
+	'balance':      () => kbBalance(),
+	'share':        (el) => kbShare(Number(el.dataset.index)),
+	'unshare':      (el) => kbUnshare(Number(el.dataset.index)),
+	'assign':       (el) => kbAssign(el.dataset.position, el.value),
+	/* teams */
+	'teams':        () => kbGo('teams'),
+	'team':         (el) => { kbState.teamId = el.dataset.team; kbGo('team'); },
+	'new-team':     (el) => kbNewTeam(el.closest('form')),
+	'add-player':   (el) => kbAddPlayer(el.closest('form')),
+	'gender':       (el) => kbSetGender(el.dataset.player, el.dataset.gender),
+	'remove-player':(el) => kbRemovePlayer(el.dataset.player),
+	'stats':        (el) => { kbState.teamId = el.dataset.team || kbState.teamId; kbGo('stats'); },
+	'coming-soon':  () => kbToast('Coming soon')
+};
+function kbOnClick(ev) {
+	const el = ev.target.closest('[data-action]'); if (!el || el.matches('select,input')) return;
+	if (el.tagName === 'A' && el.getAttribute('href') && el.getAttribute('href') !== '#') return;
+	ev.preventDefault(); (KB_ACTIONS[el.dataset.action] || KB_ACTIONS['coming-soon'])(el, ev);
+}
+function kbOnChange(ev) { const el = ev.target.closest('select[data-action],input[data-action]'); if (el) (KB_ACTIONS[el.dataset.action] || KB_ACTIONS['coming-soon'])(el, ev); }
+
+/* ---------- navigation --------------------------------------------------- */
+function kbGo(view) {
+	kbState.view = view; document.body.dataset.view = view;
+	kbSave(); /* remember the screen so a refresh lands here */
+	document.querySelectorAll('.view').forEach(v => v.classList.toggle('is-current', v.dataset.view === view));
+	window.scrollTo(0, 0);
+	kbRender();
+}
+
+/* ========================================================================== */
+/* GAME + EVENTS                                                              */
+/* ========================================================================== */
+function kbNewGame(form) {
+	const sport = form.querySelector('[name="sport"]').value, cfg = KB_SPORTS[sport];
+	const modeSel = form.querySelector('[name="mode"]');
+	const mode = modeSel && cfg.modes && cfg.modes[modeSel.value] ? modeSel.value : 'season';
+	const sideOf = (s) => {
+		const teamId = form.querySelector(`[name="${s}-team"]`).value || null;
+		const team = kbTeam(teamId);
+		const typed = form.querySelector(`[name="${s}"]`).value.trim();
+		return { name: typed || (team ? team.name : cfg.sides[s]), teamId,
+			attendance: team ? Object.fromEntries(team.roster.map(p => [p.id, true])) : {},
+			lineup: team ? kbBalancedLineup(team, team.roster.map(p => p.id)) : [],
+			assignments: {} };
+	};
+	kbState.game = { id:'g' + Date.now(), sport, mode, status:'live', startedAt:new Date().toISOString(), teams:{ away:sideOf('away'), home:sideOf('home') }, events:[] };
+	kbSave();
+	const anyTeam = kbState.game.teams.away.teamId || kbState.game.teams.home.teamId;
+	if (anyTeam) { kbState.side = kbState.game.teams.home.teamId ? 'home' : 'away'; kbState.tab = 'here'; kbGo('captain'); kbToast('Who’s here today?'); }
+	else { kbGo('ump'); kbToast('Play ball'); }
+}
+
+/* A tap on the pad. Plate-appearance events get the current kicker stamped   */
+/* on them so lineup edits later never rewrite history. The first play also    */
+/* starts the clock if the ump hasn't.                                         */
+function kbTap(el) {
+	const cfg = kbSport(), a = cfg.actions.find(x => x.id === el.dataset.id);
+	const side = kbBattingSide();
+	const ev = { kind:a.kind, value:a.value || 0, actionId:a.id, side };
+	if (a.hit) ev.hit = true;
+	if (a.pa === false) ev.pa = false;
+	const k = kbCurrentKicker(side);
+	if (k && a.pa !== false) ev.player = k.id;
+	if (a.menOnly && k && k.gender !== 'male') { kbToast(`${kbFirst(k.name)} may bunt — that’s a live ball`); return; }
+	if (cfg.clock && !kbState.game.events.some(e => e.kind === 'clock')) kbState.game.events.push({ t:Date.now(), by:'ump', kind:'clock', what:'start', auto:true });
+	const before = kbDerive();
+	kbState.resolve = null; kbState.fc = null;
+	/* fielder's choice with runners on: ask who was out before recording — one event for the whole play */
+	if (a.fc && before.bases.some(Boolean)) { kbState.fc = { ev, forced:kbForcedTargets(before.bases, a.value) }; kbRender(); return; }
+	/* after a hit that isn't a home run, if anyone besides the kicker is on base, offer the Runners row */
+	kbRecord(ev);
+	const after = kbDerive();
+	const forcedHome = after.lastPlay && after.lastPlay.forced.some(f => f.target >= 4);
+	if (a.kind === 'reach' && a.value < 4 && (after.bases.filter(Boolean).length > 1 || forcedHome) && !after.final && after.half === before.half) { kbState.resolve = { kicker:ev.player || null }; kbRender(); }
+}
+/* A forced runner was thrown out at the base he was forced to: rewrite the   */
+/* last play (one reach event) with outAt, so the record stays a single play  */
+/* and undo removes all of it.                                                 */
+function kbPlayOut(runner, base) {
+	const e = kbState.game.events.at(-1);
+	if (!e || e.kind !== 'reach') { kbToast('That play is no longer the last one'); return; }
+	e.outAt = { runner, base:Number(base) };
+	kbState.resolve = null;
+	const d = kbDerive();
+	if (d.final) { kbState.game.status = 'final'; kbToast(d.finalReason); }
+	kbSave(); kbRender();
+}
+function kbRecord(ev) {
+	if (!kbState.game || kbState.game.status !== 'live') return;
+	kbState.game.events.push({ t:Date.now(), by:'ump', ...ev });
+	const d = kbDerive();
+	if (d.final) { kbState.game.status = 'final'; kbToast(d.finalReason); }
+	else if (d.notice) kbToast(d.notice);
+	kbSave(); kbRender();
+}
+function kbUndo() {
+	if (!kbState.game || !kbState.game.events.length) return;
+	kbState.resolve = null;
+	const e = kbState.game.events.pop();
+	if (e.kind === 'clock' && e.auto) return kbUndo(); /* an auto clock-start isn't a play */
+	kbState.game.status = 'live';
+	kbSave(); kbRender(); kbToast(`Undid ${kbEventLabel(e)}`);
+}
+function kbFinish() {
+	const g = kbState.game; if (!g) return;
+	if (g.status === 'final') { kbState.games.unshift(g); kbState.games = kbState.games.slice(0, 200); }
+	kbState.game = null; kbSave(); kbGo('home');
+}
+function kbBattingSide() { const d = kbDerive(); return d && d.half === 'top' ? 'away' : 'home'; }
+
+/* ---------- corrections (events, so they're logged + undoable) ---------- */
+function kbNudge(what, side, delta) {
+	const d = kbDerive();
+	if (what === 'score') kbRecord({ kind:'set', what:'score', side, value:Math.max(0, d.score[side] + delta) });
+	if (what === 'outs') kbRecord({ kind:'set', what:'outs', value:Math.max(0, Math.min(kbSport().structure.outsPerHalf - 1, d.outs + delta)) });
+}
+
+/* ---------- cornhole round entry ---------------------------------------- */
+function kbBag(side, what, delta) {
+	const cfg = kbSport(); const p = kbState.pending[side];
+	const next = Math.max(0, p[what] + delta);
+	if (next + p[what === 'in' ? 'on' : 'in'] > cfg.structure.bagsPerSide) { kbToast(`Only ${cfg.structure.bagsPerSide} bags a side`); return; }
+	p[what] = next; kbRender();
+}
+function kbScoreRound() {
+	const p = kbState.pending;
+	kbRecord({ kind:'round', away:{ ...p.away }, home:{ ...p.home } });
+	kbState.pending = { away:{ in:0, on:0 }, home:{ in:0, on:0 } };
+	kbRender();
+}
+
+/* ========================================================================== */
+/* LINEUP — slots. A slot is a playerId, or { share:[a, b] } for two players  */
+/* alternating one spot (TBCS: "two men may share one kicking spot"). Who's   */
+/* up is derived: pass = floor(pa / slots), slot = pa % slots; a shared slot   */
+/* sends share[pass % 2].                                                      */
+/* ========================================================================== */
+function kbSlotIds(slot) { return typeof slot === 'string' ? [slot] : (slot && slot.share) || []; }
+function kbActiveLineup(side, g = kbState.game) {
+	const t = g.teams[side];
+	return (t.lineup || []).map(slot => { const ids = kbSlotIds(slot).filter(id => t.attendance[id]); return ids.length === 0 ? null : ids.length === 1 ? ids[0] : { share:ids }; }).filter(Boolean);
+}
+function kbSlotKicker(slot, pass) { return typeof slot === 'string' ? slot : slot.share[pass % slot.share.length]; }
+function kbKickerAt(side, pa, g = kbState.game) {
+	const team = kbTeam(g.teams[side].teamId); const lineup = kbActiveLineup(side, g);
+	if (!team || !lineup.length) return null;
+	return kbPlayer(team, kbSlotKicker(lineup[pa % lineup.length], Math.floor(pa / lineup.length)));
+}
+function kbCurrentKicker(side, g = kbState.game) { const d = kbDerive(g); return d ? kbKickerAt(side, d.pa[side], g) : null; }
+function kbNextKickers(side, n = 2, g = kbState.game) {
+	const d = kbDerive(g); const lineup = kbActiveLineup(side, g); if (!d || !lineup.length) return [];
+	return Array.from({ length:Math.min(n, lineup.length - 1) }, (_, i) => kbKickerAt(side, d.pa[side] + 1 + i, g)).filter(Boolean);
+}
+
+/* ========================================================================== */
+/* DERIVE — replay the log through the sport's rules                          */
+/* ========================================================================== */
+function kbDerive(g = kbState.game) {
+	const cfg = kbSport(g); if (!g) return null;
+	return cfg.structure.kind === 'innings' ? kbDeriveInnings(g, cfg) : kbDeriveRounds(g, cfg);
+}
+
+function kbDeriveInnings(g, cfg) {
+	const S = cfg.structure, R = cfg.rules || {}, K = cfg.clock, mode = g.mode || 'season';
+	const d = { mode, score:{ away:0, home:0 }, inning:1, half:'top', outs:0, bases:[null, null, null], runsThisHalf:0,
+		line:{ away:[], home:[] }, pa:{ away:0, home:0 }, stats:{ away:{}, home:{} }, lastOut:{ away:null, home:null }, lastOutBy:{ away:{}, home:{} },
+		clockStart:null, minute:0, official:false, lastInning:null, overtime:false, capOn:false,
+		final:false, finalReason:'', notice:'', log:[] };
+	const side = () => d.half === 'top' ? 'away' : 'home';
+	const stat = (s, id) => { if (!id || id === true) return null; return d.stats[s][id] || (d.stats[s][id] = { pa:0, h:0, r:0, rbi:0, out:0, reached:0 }); };
+	const lead = () => d.score[side()] - d.score[kbOther(side())];
+	const capApplies = () => { if (!R.runCap) return false; if (!K) return true; if (d.minute < K.capUntil) return true; return lead() >= (R.runCap.lateLeadException ?? Infinity); };
+	const run = (runnerId, kickerId, n = 1) => {
+		d.score[side()] += n; d.runsThisHalf += n; d.line[side()][d.inning - 1] = (d.line[side()][d.inning - 1] || 0) + n;
+		const r = stat(side(), runnerId); if (r) r.r += n;
+		const k = stat(side(), kickerId); if (k && kickerId !== undefined) k.rbi += n;
+	};
+	const endHalf = () => {
+		d.line[side()][d.inning - 1] = d.line[side()][d.inning - 1] || 0;
+		d.outs = 0; d.runsThisHalf = 0; d.bases = [null, null, null];
+		if (d.half === 'top') d.half = 'bottom'; else { d.half = 'top'; d.inning += 1; }
+		kbCheckEnd(d, cfg, g);
+		/* playoff overtime: each half starts with the last out on second */
+		if (!d.final && d.overtime && R.overtime && R.overtime[mode] && R.overtime[mode].runnerOnSecond) d.bases[1] = d.lastOut[side()] || true;
+	};
+	const recordOut = (e) => { if (e.player) { d.lastOut[side()] = e.player; const p = kbPlayer(kbTeam(g.teams[side()].teamId), e.player); if (p) d.lastOutBy[side()][p.gender] = e.player; } };
+	const endPA = (e, outcome) => { if (e.pa === false) return; d.pa[side()] += 1; const s = stat(side(), e.player); if (s) { s.pa += 1; if (outcome === 'out') s.out += 1; if (outcome === 'reach') s.reached += 1; if (e.hit) s.h += 1; } };
+	const out = (e) => { d.outs += 1; recordOut(e); endPA(e, 'out'); if (d.outs >= S.outsPerHalf) endHalf(); };
+	const afterRuns = () => { if (capApplies() && d.runsThisHalf >= R.runCap.runs) { d.notice = `${R.runCap.runs} runs — that’s the inning`; if (R.runCap.countsAsOut) d.outs = S.outsPerHalf; endHalf(); return true; } return false; };
+	/* A kick moves the kicker to base n and runners ONLY as far as the force   */
+	/* requires: a runner must vacate a base exactly when the runner behind him */
+	/* needs it. Everything past the force is the ump's call (runner events).   */
+	/* A home run scores everyone.                                              */
+	const reach = (e, n) => {
+		const b = d.bases, who = e.player || true;
+		if (n >= 4) { for (let i = 2; i >= 0; i--) { if (b[i]) { run(b[i], e.player); b[i] = null; } } run(e.player, e.player); endPA(e, 'reach'); afterRuns(); return; }
+		const next = [null, null, null];
+		let outRunner = null;
+		d.lastPlay = { forced:[] };
+		for (const { runner, from, target } of kbForcedTargets(b, n)) {
+			/* a forced runner may have been thrown out at the base he was forced to — no run, no base */
+			if (e.outAt && (e.outAt.runner === runner || (e.outAt.runner === 'anon' && runner === true)) && e.outAt.base === target) { outRunner = runner; continue; }
+			if (target !== from) d.lastPlay.forced.push({ runner, from, target });
+			if (target >= 4) run(runner, e.player); else next[target - 1] = runner;
+		}
+		next[n - 1] = who;
+		d.bases = next;
+		endPA(e, 'reach');
+		if (outRunner !== null) { d.outs += 1; recordOut({ player:outRunner === true ? null : outRunner }); if (d.outs >= S.outsPerHalf) { endHalf(); return; } }
+		afterRuns();
+	};
+
+	for (const e of g.events) {
+		if (d.final && e.kind !== 'set') continue;
+		if (d.clockStart != null && e.t) d.minute = (e.t - d.clockStart) / 60000;
+		if (K && d.clockStart != null) { d.official = d.minute >= K.officialAfter; if (d.lastInning == null && d.minute >= K.minutes) d.lastInning = d.inning; }
+		d.notice = ''; d.lastPlay = null;
+		switch (e.kind) {
+			case 'clock': if (e.what === 'start') { d.clockStart = e.t; d.minute = 0; } break;
+			case 'reach': reach(e, e.value); break;
+			case 'out': out(e); break;
+			case 'runner': { const i = e.base - 1; const r = d.bases[i]; if (!r) break;
+				if (e.what === 'courtesy') { const p = kbPlayer(kbTeam(g.teams[side()].teamId), r); const sub = p ? d.lastOutBy[side()][p.gender] : null; if (sub && sub !== r) { d.bases[i] = sub; d.notice = `${kbFirst(kbPlayer(kbTeam(g.teams[side()].teamId), sub).name)} runs for ${kbFirst(p.name)}`; } else d.notice = 'No one has made an out for that spot yet'; break; }
+				d.bases[i] = null;
+				/* e.rbi = the kicker whose play this runner movement belongs to (from the Runners row) */
+				if (e.what === 'score') { run(r, e.rbi); afterRuns(); }
+				else if (e.what === 'out') { d.outs += 1; recordOut({ player:r === true ? null : r }); if (d.outs >= S.outsPerHalf) endHalf(); }
+				else if (e.what === 'advance') { if (i + 1 >= 3) { run(r, e.rbi); afterRuns(); } else d.bases[i + 1] = r; }
+				else if (e.what === 'to') { const to = Number(e.to); if (to >= 4) { run(r, e.rbi); afterRuns(); } else if (to > i + 1 && !d.bases[to - 1]) d.bases[to - 1] = r; else d.bases[i] = r; }
+				break; }
+			case 'halfEnd': endHalf(); break;
+			case 'set': if (e.what === 'score') d.score[e.side] = e.value; if (e.what === 'outs') d.outs = e.value; break;
+		}
+		d.capOn = capApplies();
+		kbCheckWalkoff(d, cfg);
+		d.log.push({ ...e, label:kbEventLabel(e, g), after:`${d.score.away}–${d.score.home}` });
+	}
+	if (g.status === 'final' && !d.final) { d.final = true; d.finalReason = 'Final'; }
+	return d;
+}
+/* Bottom of the last inning (or overtime) and home takes the lead: game over. */
+function kbCheckWalkoff(d, cfg) {
+	if (d.final || d.half !== 'bottom') return;
+	const S = cfg.structure, K = cfg.clock;
+	const isLast = d.overtime || (K ? (d.lastInning != null && d.inning >= d.lastInning) : (S.innings != null && d.inning >= S.innings));
+	if (isLast && d.score.home > d.score.away) { d.final = true; d.finalReason = 'Final — home leads'; }
+}
+
+/* Where each runner is forced to when the kicker takes base n: a runner must  */
+/* vacate his base exactly when the runner behind him needs it. Runners not    */
+/* forced keep their base (target === current). Returns [{ runner, from,       */
+/* target }] in base order; target 4 = home.                                   */
+function kbForcedTargets(bases, n) {
+	const out = []; let behind = n;
+	for (let i = 0; i < 3; i++) { const r = bases[i]; if (!r) continue; const target = Math.max(i + 1, behind + 1); out.push({ runner:r, from:i + 1, target }); behind = target; }
+	return out;
+}
+
+/* Called right after a half ends. Decides mercy, time, ties and overtime.    */
+function kbCheckEnd(d, cfg, g) {
+	const S = cfg.structure, R = cfg.rules || {}, K = cfg.clock, mode = d.mode;
+	const diff = Math.abs(d.score.away - d.score.home), tie = diff === 0;
+	const completed = d.half === 'top' ? d.inning - 1 : 0;      /* a full inning just completed */
+	const homeLeads = d.score.home > d.score.away;
+	/* mercy tiers for this mode */
+	const tiers = R.mercy && R.mercy[mode];
+	if (tiers && completed && tiers.some(t => completed >= t.after && diff >= t.diff)) { d.final = true; d.finalReason = `Mercy rule — up ${diff} after ${completed}`; return; }
+	/* time: the inning in progress at the limit is the last, and is completed */
+	const timeUp = K ? (d.lastInning != null) : (S.innings != null && d.inning > S.innings);
+	const lastInningDone = K ? (d.lastInning != null && d.half === 'top' && d.inning > d.lastInning) : (S.innings != null && d.half === 'top' && d.inning > S.innings);
+	const ties = typeof S.tiesAllowed === 'object' ? S.tiesAllowed[mode] : !!S.tiesAllowed;
+	if (lastInningDone || (d.overtime && d.half === 'top')) {
+		if (!tie) { d.final = true; d.finalReason = 'Final'; return; }
+		if (ties) { d.final = true; d.finalReason = 'Final — tie'; return; }
+		if (R.overtime && R.overtime[mode]) { if (!d.overtime) d.notice = 'Tied — overtime, last out starts on second'; d.overtime = true; return; }
+		d.final = true; d.finalReason = 'Final — tie'; return;
+	}
+	/* bottom of the last inning and home already leads: no need to finish */
+	if (timeUp && d.half === 'bottom' && (d.lastInning == null || d.inning >= d.lastInning) && homeLeads) { d.final = true; d.finalReason = 'Final — home leads'; }
+}
+
+function kbDeriveRounds(g, cfg) {
+	const S = cfg.structure, R = cfg.rules || {};
+	const d = { mode:g.mode || 'season', score:{ away:0, home:0 }, round:1, rounds:[], pa:{ away:0, home:0 }, stats:{ away:{}, home:{} }, final:false, finalReason:'', notice:'', log:[] };
+	for (const e of g.events) {
+		if (d.final && e.kind !== 'set') continue;
+		if (e.kind === 'round') {
+			const pts = s => e[s].in * 3 + e[s].on * 1;
+			const a = pts('away'), h = pts('home');
+			let net = { away:0, home:0 };
+			if (cfg.scoring.mode === 'cancellation') { if (a > h) net.away = a - h; else if (h > a) net.home = h - a; } else net = { away:a, home:h };
+			for (const s of ['away', 'home']) { d.score[s] += net[s]; if (R.bust && R.bust.enabled && d.score[s] > S.pointsToWin) d.score[s] = R.bust.resetTo; }
+			d.rounds.push({ n:d.round, away:e.away, home:e.home, net, after:{ ...d.score } });
+			d.round += 1;
+			for (const s of ['away', 'home']) { const o = kbOther(s); if (d.score[s] >= S.pointsToWin && d.score[s] - d.score[o] >= S.winBy) { d.final = true; d.finalReason = `Final — ${g.teams[s].name} wins`; } }
+		}
+		if (e.kind === 'set' && e.what === 'score') d.score[e.side] = e.value;
+		d.log.push({ ...e, label:kbEventLabel(e, g), after:`${d.score.away}–${d.score.home}` });
+	}
+	if (g.status === 'final' && !d.final) { d.final = true; d.finalReason = 'Final'; }
+	return d;
+}
+
+function kbEventLabel(e, g = kbState.game) {
+	const cfg = kbSport(g); const a = cfg && cfg.actions.find(x => x.id === e.actionId);
+	const who = e.player ? (kbPlayer(kbTeam(g.teams[e.side]?.teamId), e.player)?.name || '') : '';
+	const pre = who ? `${kbFirst(who)}: ` : '';
+	if (a) { const o = e.outAt ? ` — ${e.outAt.runner === 'anon' ? 'runner' : kbFirst(kbPlayer(kbTeam(g.teams[e.side]?.teamId), e.outAt.runner)?.name || 'runner')} out at ${['', '1st', '2nd', '3rd', 'home'][e.outAt.base]}` : ''; return pre + a.label + o; }
+	if (e.kind === 'runner') return `Runner on ${e.base}: ${e.what}`;
+	if (e.kind === 'halfEnd') return 'End of half';
+	if (e.kind === 'clock') return 'Clock started';
+	if (e.kind === 'set') return `Set ${e.what} to ${e.value}`;
+	if (e.kind === 'round') return `Round: A ${e.away.in}/${e.away.on} · B ${e.home.in}/${e.home.on}`;
+	return e.kind;
+}
+
+/* ========================================================================== */
+/* SEASON STATS — aggregate a team's players across saved games              */
+/* ========================================================================== */
+function kbSeasonStats(teamId) {
+	const totals = {}; let games = 0;
+	for (const g of kbState.games) {
+		for (const s of ['away', 'home']) {
+			if (g.teams[s].teamId !== teamId) continue;
+			games += 1; const d = kbDerive(g);
+			for (const [pid, st] of Object.entries(d.stats[s])) { const t = totals[pid] || (totals[pid] = { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0 }); t.g += 1; for (const k of ['pa', 'h', 'r', 'rbi', 'out', 'reached']) t[k] += st[k]; }
+		}
+	}
+	return { games, totals };
+}
+function kbObp(s) { return s.pa ? (s.reached / s.pa).toFixed(3).replace(/^0/, '') : '.000'; }
+
+/* ========================================================================== */
+/* CAPTAIN — attendance, lineup (with shared slots), positions               */
+/* ========================================================================== */
+function kbToggleHere(pid) {
+	const t = kbState.game.teams[kbState.side];
+	t.attendance[pid] = !t.attendance[pid];
+	if (t.attendance[pid] && !t.lineup.some(slot => kbSlotIds(slot).includes(pid))) t.lineup.push(pid);
+	kbSave(); kbRender();
+}
+function kbSlotIndexOf(t, activeSlot) { const ids = kbSlotIds(activeSlot); return t.lineup.findIndex(slot => kbSlotIds(slot).some(id => ids.includes(id))); }
+function kbMoveLineup(index, delta) {
+	const t = kbState.game.teams[kbState.side]; const active = kbActiveLineup(kbState.side);
+	const a = active[index], b = active[index + delta]; if (!a || !b) return;
+	const ia = kbSlotIndexOf(t, a), ib = kbSlotIndexOf(t, b);
+	[t.lineup[ia], t.lineup[ib]] = [t.lineup[ib], t.lineup[ia]];
+	kbSave(); kbRender();
+}
+function kbBalancedLineup(team, ids) {
+	const w = ids.filter(id => kbPlayer(team, id)?.gender === 'female'), m = ids.filter(id => kbPlayer(team, id)?.gender === 'male');
+	const out = []; for (let i = 0; i < Math.max(w.length, m.length); i++) { if (w[i]) out.push(w[i]); if (m[i]) out.push(m[i]); } return out;
+}
+function kbBalance() {
+	const t = kbState.game.teams[kbState.side]; const team = kbTeam(t.teamId);
+	const activeIds = kbActiveLineup(kbState.side).flatMap(kbSlotIds), rest = t.lineup.flatMap(kbSlotIds).filter(id => !t.attendance[id]);
+	t.lineup = kbBalancedLineup(team, activeIds).concat(rest);
+	kbSave(); kbRender(); kbToast('Lineup balanced');
+}
+/* share: tap Share on a row, then tap the row to pair with; they become one slot */
+function kbShare(index) {
+	const t = kbState.game.teams[kbState.side]; const active = kbActiveLineup(kbState.side);
+	if (kbState.share == null) { kbState.share = index; kbRender(); kbToast('Now tap the spot to share with'); return; }
+	if (kbState.share === index) { kbState.share = null; kbRender(); return; }
+	const a = active[kbState.share], b = active[index];
+	const ids = [...kbSlotIds(a), ...kbSlotIds(b)];
+	if (ids.length > 2) { kbToast('A spot can be shared by two'); kbState.share = null; kbRender(); return; }
+	const ia = kbSlotIndexOf(t, a), ib = kbSlotIndexOf(t, b);
+	t.lineup[Math.min(ia, ib)] = { share:ids }; t.lineup.splice(Math.max(ia, ib), 1);
+	kbState.share = null; kbSave(); kbRender(); kbToast('Sharing one spot');
+}
+function kbUnshare(index) {
+	const t = kbState.game.teams[kbState.side]; const active = kbActiveLineup(kbState.side);
+	const slot = active[index]; const i = kbSlotIndexOf(t, slot); const ids = kbSlotIds(t.lineup[i]);
+	t.lineup.splice(i, 1, ...ids);
+	kbSave(); kbRender();
+}
+function kbAssign(position, pid) {
+	const t = kbState.game.teams[kbState.side];
+	for (const p of Object.keys(t.assignments)) if (t.assignments[p] === pid) delete t.assignments[p]; /* one spot per player */
+	if (pid) t.assignments[position] = pid; else delete t.assignments[position];
+	kbSave(); kbRender();
+}
+function kbLineupWarnings(side, g = kbState.game) {
+	const cfg = kbSport(g), T = cfg.team; if (!T) return [];
+	const team = kbTeam(g.teams[side].teamId); const active = kbActiveLineup(side, g); const w = [];
+	const ids = active.flatMap(kbSlotIds); const women = ids.filter(id => kbPlayer(team, id)?.gender === 'female').length;
+	if (ids.length < T.minPlayers) w.push({ text:`${ids.length} here — need ${T.minPlayers} to start`, rows:[] });
+	if (T.minWomen && women < T.minWomen) w.push({ text:`Need at least ${T.minWomen} woman to start`, rows:[] });
+	if (T.coed?.noBackToBackMen && active.length > 1) active.forEach((slot, i) => {
+		const next = active[(i + 1) % active.length];
+		const male = s => kbSlotIds(s).every(id => kbPlayer(team, id)?.gender === 'male');
+		if (male(slot) && male(next)) w.push({ text:`Back-to-back men: ${kbSlotIds(slot).map(id => kbFirst(kbPlayer(team, id).name)).join('/')} then ${kbSlotIds(next).map(id => kbFirst(kbPlayer(team, id).name)).join('/')} — an automatic out is recorded between them${T.coed.splitSlots ? '; or share one spot' : ''}`, rows:[i, (i + 1) % active.length] });
+	});
+	return w;
+}
+function kbDefenseWarnings(side, g = kbState.game) {
+	const cfg = kbSport(g), T = cfg.team; if (!T) return [];
+	const team = kbTeam(g.teams[side].teamId); const A = g.teams[side].assignments; const ids = Object.values(A).filter(Boolean); const w = [];
+	const men = ids.filter(id => kbPlayer(team, id)?.gender === 'male').length;
+	const infield = (T.infield || []).filter(pos => A[pos]).length;
+	if (ids.length > T.maxFielders) w.push(`${ids.length} on the field — max ${T.maxFielders}`);
+	if (T.maxMenOnField && men > T.maxMenOnField) w.push(`${men} men on the field — max ${T.maxMenOnField}`);
+	if (T.maxInfielders && infield > T.maxInfielders) w.push(`${infield} infielders — max ${T.maxInfielders} including the catcher`);
+	if (ids.length && ids.length < T.minPlayers) w.push(`${ids.length} fielders — need ${T.minPlayers}`);
+	return w;
+}
+
+/* ========================================================================== */
+/* TEAMS — rosters                                                            */
+/* ========================================================================== */
+function kbNewTeam(form) {
+	const name = form.querySelector('[name="name"]').value.trim(); if (!name) { kbToast('Give the team a name'); return; }
+	const id = kbSlug(name) + '-' + Date.now().toString(36).slice(-4);
+	kbState.teams.push({ id, name, short:name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 4), sport:form.querySelector('[name="sport"]').value, roster:[] });
+	form.reset(); kbState.teamId = id; kbSave(); kbGo('team');
+}
+function kbAddPlayer(form) {
+	const team = kbTeam(kbState.teamId); const name = form.querySelector('[name="name"]').value.trim(); if (!team || !name) return;
+	const gender = form.querySelector('[name="gender"]:checked')?.value || 'female';
+	team.roster.push({ id:kbSlug(name) + '-' + Date.now().toString(36).slice(-3), name, gender });
+	form.reset(); kbSave(); kbRender(); kbToast(`Added ${name}`);
+}
+function kbSetGender(pid, gender) { const p = kbPlayer(kbTeam(kbState.teamId), pid); if (p) { p.gender = gender; kbSave(); kbRender(); } }
+function kbRemovePlayer(pid) { const team = kbTeam(kbState.teamId); team.roster = team.roster.filter(p => p.id !== pid); kbSave(); kbRender(); }
+
+/* ========================================================================== */
+/* RENDER                                                                     */
+/* ========================================================================== */
+function kbRender() {
+	const v = kbState.view;
+	clearInterval(kbTicker); kbTicker = null;
+	if (v === 'home') kbRenderHome();
+	if (v === 'ump') kbRenderUmp();
+	if (v === 'captain') kbRenderCaptain();
+	if (v === 'teams') kbRenderTeams();
+	if (v === 'team') kbRenderTeam();
+	if (v === 'stats') kbRenderStats();
+}
+
+function kbRenderHome() {
+	const sel = document.querySelector('select[name="sport"]');
+	if (sel && !sel.options.length) Object.values(KB_SPORTS).forEach(s => sel.add(new Option(s.name, s.id)));
+	const modeSel = document.querySelector('select[name="mode"]');
+	if (modeSel && sel) { const cfg = KB_SPORTS[sel.value] || Object.values(KB_SPORTS)[0]; const cur = modeSel.value; modeSel.innerHTML = ''; Object.entries(cfg.modes || { season:'Regular season' }).forEach(([id, label]) => modeSel.add(new Option(label, id))); if ([...modeSel.options].some(o => o.value === cur)) modeSel.value = cur; }
+	['away', 'home'].forEach(s => {
+		const ts = document.querySelector(`select[name="${s}-team"]`); if (!ts) return;
+		const cur = ts.value; ts.innerHTML = '<option value="">No roster — just a name</option>';
+		kbState.teams.forEach(t => ts.add(new Option(t.name, t.id)));
+		ts.value = cur;
+	});
+	const cont = document.querySelector('.continue-card');
+	if (cont) {
+		const g = kbState.game; cont.hidden = !g;
+		if (g) { const d = kbDerive(); cont.querySelector('[data-field="teams"]').textContent = `${g.teams.away.name} ${d.score.away} – ${d.score.home} ${g.teams.home.name}`; cont.querySelector('[data-field="status"]').textContent = g.status === 'final' ? 'Final — tap to review' : (kbSport(g).structure.kind === 'innings' ? `${d.half === 'top' ? 'Top' : 'Bottom'} ${d.inning}` : `Round ${d.round}`); }
+	}
+	const recent = document.querySelector('.recent');
+	if (recent) recent.innerHTML = kbState.games.slice(0, 5).map(g => { const d = kbDerive(g); return `<li><span>${kbEscape(g.teams.away.name)} <strong>${d.score.away}</strong> – <strong>${d.score.home}</strong> ${kbEscape(g.teams.home.name)}</span><span class="recent-date">${new Date(g.startedAt).toLocaleDateString([], { month:'short', day:'numeric' })}</span></li>`; }).join('') || '<li class="is-empty">No games saved yet</li>';
+}
+
+function kbRenderUmp() {
+	const g = kbState.game, cfg = kbSport(), host = document.querySelector('.ump');
+	if (!g || !host) { if (host) host.innerHTML = '<p class="empty">No game. <button type="button" class="key is-ghost" data-action="go" data-to="home">Home</button></p>'; return; }
+	const d = kbDerive();
+	host.dataset.sport = g.sport; host.dataset.final = d.final;
+	host.innerHTML = cfg.structure.kind === 'innings' ? kbUmpInnings(g, cfg, d) : kbUmpRounds(g, cfg, d);
+	/* tick the clock without re-rendering the screen */
+	if (cfg.clock && d.clockStart != null && !d.final) {
+		const tick = () => { const el = document.querySelector('.clock-value'); if (!el) return; const ms = Date.now() - d.clockStart; el.textContent = kbMMSS(ms); const m = ms / 60000; el.closest('.state-item')?.classList.toggle('is-late', m >= cfg.clock.capUntil); el.closest('.state-item')?.classList.toggle('is-over', m >= cfg.clock.minutes); };
+		tick(); kbTicker = setInterval(tick, 1000);
+	}
+}
+
+function kbDots(n, max, cls) { return `<span class="dots ${cls}" aria-label="${n} of ${max}">${Array.from({ length:max }, (_, i) => `<i class="${i < n ? 'is-on' : ''}"></i>`).join('')}</span>`; }
+
+function kbFixRowHTML(d, g) {
+	const f = kbState.fix; if (!f) return '';
+	const label = f === 'outs' ? 'Outs' : `${g.teams[f].name} score`, value = f === 'outs' ? d.outs : d.score[f], what = f === 'outs' ? 'outs' : 'score';
+	return `<div class="fix-row" role="group" aria-label="Correct ${kbEscape(label)}">
+		<span class="fix-label">Fix ${kbEscape(label)}</span>
+		<button type="button" class="key is-fix" data-action="nudge" data-what="${what}" data-side="${f}" data-delta="-1" aria-label="minus one">−</button>
+		<strong class="fix-value">${value}</strong>
+		<button type="button" class="key is-fix" data-action="nudge" data-what="${what}" data-side="${f}" data-delta="1" aria-label="plus one">+</button>
+		<button type="button" class="key is-ghost" data-action="fix-done">Done</button>
+	</div>`;
+}
+/* RUNNERS ROW : shown right after a hit with runners on. The force has already */
+/* been applied; each runner defaults to "held". Taps are runner events tagged  */
+/* with the kicker so runs credit an RBI. Home runs never need this.            */
+function kbResolveHTML(g, d, batting) {
+	const R = kbState.resolve; if (!R || d.final) return '';
+	const team = kbTeam(g.teams[batting].teamId);
+	const name = (r) => r === true ? 'Runner' : (kbPlayer(team, r) ? kbFirst(kbPlayer(team, r).name) : 'Runner');
+	const rows = [3, 2, 1].map(b => ({ b, r:d.bases[b - 1] })).filter(x => x.r);
+	const forcedHome = (d.lastPlay && d.lastPlay.forced.filter(f => f.target >= 4)) || [];
+	if (rows.length < 2 && !forcedHome.length) return '';
+	const baseWord = ['', '1st', '2nd', '3rd', 'home'];
+	const rbi = R.kicker ? `data-rbi="${R.kicker}"` : '';
+	return `<div class="resolve" role="group" aria-label="Where did the runners end up?">
+		<p class="resolve-head">Runners on the play <span>held unless you say otherwise</span></p>
+		${forcedHome.map(f => `<div class="resolve-row is-forced">
+			<span class="resolve-who">${kbEscape(name(f.runner))} <em>scored on the force</em></span>
+			<span class="resolve-opts"><button type="button" class="is-out" data-action="play-out" data-runner="${f.runner === true ? 'anon' : f.runner}" data-base="4">Out at home</button></span>
+		</div>`).join('')}
+		${rows.map(({ b, r }) => `<div class="resolve-row">
+			<span class="resolve-who">${baseWord[b]} · ${kbEscape(name(r))}${R.kicker && r === R.kicker ? ' <em>kicker</em>' : ''}</span>
+			<span class="resolve-opts">
+				${[b + 1, b + 2].filter(to => to <= 3 && !d.bases[to - 1]).map(to => `<button type="button" data-action="runner" data-base="${b}" data-what="to" data-to="${to}" ${rbi}>${baseWord[to]}</button>`).join('')}
+				<button type="button" class="is-score" data-action="runner" data-base="${b}" data-what="score" ${rbi}>Scored</button>
+				<button type="button" class="is-out" data-action="runner" data-base="${b}" data-what="out">Out</button>
+			</span>
+		</div>`).join('')}
+		<button type="button" class="key is-ghost resolve-done" data-action="resolve-done">Done — all held</button>
+	</div>`;
+}
+/* FIELDER'S CHOICE : "who was out?" — the forced runners at the base they were  */
+/* forced to. One tap records the whole play as a single reach event.           */
+function kbFcHTML(g, d, batting) {
+	const P = kbState.fc; if (!P) return '';
+	const team = kbTeam(g.teams[batting].teamId);
+	const name = (r) => r === true ? 'Runner' : (kbPlayer(team, r) ? kbFirst(kbPlayer(team, r).name) : 'Runner');
+	const baseWord = ['', '1st', '2nd', '3rd', 'home'];
+	const forced = P.forced.filter(f => f.target !== f.from);
+	return `<div class="resolve is-fc" role="group" aria-label="Fielder's choice: who was out?">
+		<p class="resolve-head">Fielder’s choice <span>kicker safe at first — who was out?</span></p>
+		${forced.map(f => `<div class="resolve-row">
+			<span class="resolve-who">${kbEscape(name(f.runner))} <em>${baseWord[f.from]} → ${baseWord[f.target]}</em></span>
+			<span class="resolve-opts"><button type="button" class="is-out" data-action="fc-out" data-runner="${f.runner === true ? 'anon' : f.runner}" data-base="${f.target}">Out at ${baseWord[f.target]}</button></span>
+		</div>`).join('') || '<p class="hint">No runner was forced — this is just a reach.</p>'}
+		<div class="resolve-foot">
+			<button type="button" class="key is-ghost" data-action="fc-cancel">Cancel</button>
+			<button type="button" class="key is-ghost" data-action="fc-out">Nobody — all safe</button>
+		</div>
+	</div>`;
+}
+function kbBoxScoreHTML(g, d, side) {
+	const team = kbTeam(g.teams[side].teamId); if (!team) return '';
+	const rows = Object.entries(d.stats[side]).map(([pid, s]) => ({ p:kbPlayer(team, pid), s })).filter(r => r.p).sort((a, b) => b.s.pa - a.s.pa || a.p.name.localeCompare(b.p.name));
+	if (!rows.length) return '';
+	return `<details class="linescore box"><summary>${kbEscape(team.name)} box score</summary><table><thead><tr><th>Player</th><th>PA</th><th>H</th><th>R</th><th>RBI</th><th>OBP</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.p.name)}</th><td>${r.s.pa}</td><td>${r.s.h}</td><td>${r.s.r}</td><td>${r.s.rbi}</td><td>${kbObp(r.s)}</td></tr>`).join('')}</tbody></table></details>`;
+}
+
+function kbUmpInnings(g, cfg, d) {
+	const S = cfg.structure, K = cfg.clock, R = cfg.rules || {};
+	const batting = d.half === 'top' ? 'away' : 'home';
+	const innings = Math.max(S.innings || 7, d.inning);
+	const cell = (side, i) => { const v = d.line[side][i]; const cur = (i + 1 === d.inning && side === batting && !d.final); return `<td class="${cur ? 'is-current' : ''}">${v ?? (i + 1 < d.inning || (i + 1 === d.inning && side === 'away' && d.half === 'bottom') ? 0 : '')}</td>`; };
+	const kicker = kbCurrentKicker(batting), next = kbNextKickers(batting);
+	const team = (s) => kbTeam(g.teams[s].teamId);
+	const lw = team(batting) ? kbLineupWarnings(batting) : [];
+	const runnerName = (r) => r === true ? '' : (kbPlayer(team(batting), r)?.name ? kbFirst(kbPlayer(team(batting), r).name) : '');
+	const modeLabel = cfg.modes && cfg.modes[d.mode] ? cfg.modes[d.mode] : '';
+	const clockCell = K ? (d.clockStart == null
+		? `<button type="button" class="state-item" data-action="clock-start"><span class="state-label">Clock</span><strong class="state-value clock-value">Start</strong></button>`
+		: `<div class="state-item ${d.minute >= K.capUntil ? 'is-late' : ''} ${d.minute >= K.minutes ? 'is-over' : ''}"><span class="state-label">${d.official ? 'Official' : 'Clock'}</span><strong class="state-value clock-value">${kbMMSS(Date.now() - d.clockStart)}</strong></div>`) : '';
+	return `
+	<!-- ===== SCORE STRIP : both teams, tap a number to fix it ===== -->
+	<header class="score-strip">
+		${['away', 'home'].map(s => `
+		<button type="button" class="side ${batting === s && !d.final ? 'is-batting' : ''}" data-action="fix-score" data-side="${s}" aria-label="${kbEscape(g.teams[s].name)} ${d.score[s]}, tap to correct">
+			<span class="side-name">${kbEscape(g.teams[s].name)}</span>
+			<span class="side-score">${d.score[s]}</span>
+			<span class="side-tag">${batting === s && !d.final ? 'Kicking' : ''}</span>
+		</button>`).join('')}
+	</header>
+	${kbFixRowHTML(d, g)}
+
+	<!-- ===== STATE : inning · outs · clock · cap ===== -->
+	<div class="state">
+		<div class="state-item"><span class="state-label">${d.overtime ? 'OT' : 'Inning'}</span><strong class="state-value">${d.final ? 'F' : `${d.half === 'top' ? '▲' : '▼'} ${d.inning}`}</strong></div>
+		<button type="button" class="state-item" data-action="fix-outs" aria-label="${d.outs} outs, tap to correct"><span class="state-label">Outs</span>${kbDots(d.outs, S.outsPerHalf, 'is-out')}</button>
+		${clockCell}
+		${R.runCap ? `<div class="state-item ${d.capOn ? '' : 'is-off'}"><span class="state-label">Cap</span><strong class="state-value">${d.capOn ? `${d.runsThisHalf}/${R.runCap.runs}` : '—'}</strong></div>` : ''}
+	</div>
+	<p class="mode-line">${kbEscape(modeLabel)}${d.lastInning != null && !d.final ? ' · last inning' : ''}${d.overtime ? ' · overtime' : ''}</p>
+
+	<!-- ===== AT BAT : only when the kicking side has a lineup ===== -->
+	${kicker && !d.final ? `<div class="atbat">
+		<span class="atbat-label">Up</span>
+		<strong class="atbat-name">${kbEscape(kicker.name)}</strong>
+		<span class="atbat-next">${next.length ? 'Next: ' + next.map(p => kbEscape(kbFirst(p.name))).join(' · ') : ''}</span>
+		${lw.length ? `<span class="atbat-warn">${kbEscape(lw[0].text)}</span>` : ''}
+	</div>` : ''}
+
+	<!-- ===== BASES : tap a runner ===== -->
+	<div class="bases" role="group" aria-label="Runners">
+		${[3, 2, 1].map(b => { const r = d.bases[b - 1]; return `<div class="base base-${b} ${r ? 'is-on' : ''}">
+			<span class="base-name">${b}B${r && runnerName(r) ? ' · ' + kbEscape(runnerName(r)) : ''}</span>
+			${r ? `<span class="base-actions"><button type="button" data-action="runner" data-base="${b}" data-what="advance">+1</button><button type="button" data-action="runner" data-base="${b}" data-what="score">Score</button><button type="button" data-action="runner" data-base="${b}" data-what="out">Out</button>${R.courtesyRunner && r !== true ? `<button type="button" data-action="runner" data-base="${b}" data-what="courtesy" aria-label="courtesy runner">CR</button>` : ''}</span>` : ''}
+		</div>`; }).join('')}
+	</div>
+
+	${kbFcHTML(g, d, batting)}
+	${kbResolveHTML(g, d, batting)}
+	${d.final ? `<p class="final-banner">${kbEscape(d.finalReason)}</p>` : ''}
+
+	<!-- ===== LINE SCORE : the paper card, legible ===== -->
+	<details class="linescore">
+		<summary>Line score</summary>
+		<table>
+			<thead><tr><th></th>${Array.from({ length:innings }, (_, i) => `<th>${i + 1}</th>`).join('')}<th>R</th></tr></thead>
+			<tbody>
+				<tr><th>${kbEscape(g.teams.away.name)}</th>${Array.from({ length:innings }, (_, i) => cell('away', i)).join('')}<td class="total">${d.score.away}</td></tr>
+				<tr><th>${kbEscape(g.teams.home.name)}</th>${Array.from({ length:innings }, (_, i) => cell('home', i)).join('')}<td class="total">${d.score.home}</td></tr>
+			</tbody>
+		</table>
+	</details>
+	${kbBoxScoreHTML(g, d, 'away')}${kbBoxScoreHTML(g, d, 'home')}
+
+	<!-- ===== PAD : the buttons, under the thumb ===== -->
+	<div class="pad" role="group" aria-label="Record a play">
+		${cfg.actions.map(a => `<button type="button" class="key ${a.size ? 'is-' + a.size : ''} is-${a.kind}" data-action="tap" data-id="${a.id}" title="${kbEscape(a.note || '')}" ${d.final ? 'disabled' : ''}>${kbEscape(a.label)}</button>`).join('')}
+	</div>
+	<div class="pad-bar">
+		<button type="button" class="key is-undo" data-action="undo" ${g.events.some(e => !(e.kind === 'clock' && e.auto)) ? '' : 'disabled'}>Undo</button>
+		<button type="button" class="key is-ghost" data-action="end-half" ${d.final ? 'disabled' : ''}>End half</button>
+		<button type="button" class="key is-ghost" data-action="toggle-log" aria-expanded="${kbState.showLog}">Log · ${g.events.length}</button>
+		${(team('away') || team('home')) ? `<button type="button" class="key is-ghost" data-action="captain" data-side="${team(batting) ? batting : (team('home') ? 'home' : 'away')}">Lineups</button>` : ''}
+		<button type="button" class="key is-ghost" data-action="${d.final ? 'finish' : 'end-game'}">${d.final ? 'Save & done' : 'End game'}</button>
+	</div>
+	${kbLogHTML(d)}`;
+}
+
+function kbUmpRounds(g, cfg, d) {
+	const S = cfg.structure, p = kbState.pending;
+	const pts = s => p[s].in * 3 + p[s].on, bagsLeft = s => S.bagsPerSide - p[s].in - p[s].on;
+	return `
+	<header class="score-strip">
+		${['away', 'home'].map(s => `
+		<button type="button" class="side" data-action="fix-score" data-side="${s}" aria-label="${kbEscape(g.teams[s].name)} ${d.score[s]}, tap to correct">
+			<span class="side-name">${kbEscape(g.teams[s].name)}</span>
+			<span class="side-score">${d.score[s]}</span>
+			<span class="side-tag">to ${S.pointsToWin}</span>
+		</button>`).join('')}
+	</header>
+	${kbFixRowHTML(d, g)}
+	<div class="state"><div class="state-item"><span class="state-label">Round</span><strong class="state-value">${d.final ? 'F' : d.round}</strong></div></div>
+	${d.final ? `<p class="final-banner">${kbEscape(d.finalReason)}</p>` : ''}
+	<div class="round" role="group" aria-label="This round">
+		${['away', 'home'].map(s => `
+		<div class="round-side">
+			<h2 class="round-name">${kbEscape(g.teams[s].name)} <span class="round-pts">${pts(s)} pts · ${bagsLeft(s)} left</span></h2>
+			<div class="counter"><span>In the hole ×3</span><button type="button" data-action="bag" data-side="${s}" data-what="in" data-delta="-1" aria-label="fewer in the hole">−</button><strong>${p[s].in}</strong><button type="button" data-action="bag" data-side="${s}" data-what="in" data-delta="1" aria-label="more in the hole">+</button></div>
+			<div class="counter"><span>On the board ×1</span><button type="button" data-action="bag" data-side="${s}" data-what="on" data-delta="-1" aria-label="fewer on the board">−</button><strong>${p[s].on}</strong><button type="button" data-action="bag" data-side="${s}" data-what="on" data-delta="1" aria-label="more on the board">+</button></div>
+		</div>`).join('')}
+	</div>
+	<p class="round-net">${cfg.scoring.mode === 'cancellation' ? `Net this round: ${Math.abs(pts('away') - pts('home'))} to ${pts('away') === pts('home') ? 'nobody' : kbEscape(g.teams[pts('away') > pts('home') ? 'away' : 'home'].name)}` : ''}</p>
+	<details class="linescore"><summary>Rounds</summary>
+		<table><thead><tr><th>#</th><th>${kbEscape(g.teams.away.name)}</th><th>${kbEscape(g.teams.home.name)}</th><th>Score</th></tr></thead>
+		<tbody>${d.rounds.map(r => `<tr><td>${r.n}</td><td>${r.away.in}×3 + ${r.away.on} = ${r.away.in * 3 + r.away.on}</td><td>${r.home.in}×3 + ${r.home.on} = ${r.home.in * 3 + r.home.on}</td><td class="total">${r.after.away}–${r.after.home}</td></tr>`).join('') || '<tr><td colspan="4">No rounds yet</td></tr>'}</tbody></table>
+	</details>
+	<div class="pad pad-commit"><button type="button" class="key is-commit" data-action="score-round" ${d.final ? 'disabled' : ''}>Score round ${d.round}</button></div>
+	<div class="pad-bar">
+		<button type="button" class="key is-undo" data-action="undo" ${g.events.length ? '' : 'disabled'}>Undo</button>
+		<button type="button" class="key is-ghost" data-action="toggle-log" aria-expanded="${kbState.showLog}">Log · ${g.events.length}</button>
+		<button type="button" class="key is-ghost" data-action="${d.final ? 'finish' : 'end-game'}">${d.final ? 'Save & done' : 'End game'}</button>
+	</div>
+	${kbLogHTML(d)}`;
+}
+
+function kbLogHTML(d) {
+	if (!kbState.showLog) return '';
+	return `<ol class="log" aria-label="Play log">${d.log.slice().reverse().map(e => `<li><span>${kbEscape(e.label)}</span><span class="log-after">${e.after}</span></li>`).join('') || '<li>Nothing yet</li>'}</ol>`;
+}
+
+/* ---------- captain ------------------------------------------------------ */
+function kbRenderCaptain() {
+	const g = kbState.game, host = document.querySelector('.captain'); if (!host) return;
+	if (!g) { host.innerHTML = '<p class="empty">No game in progress.</p>'; return; }
+	const sides = ['away', 'home'].filter(s => kbTeam(g.teams[s].teamId));
+	if (!sides.length) { host.innerHTML = '<p class="empty">Neither side has a roster attached. Start a new game and pick a team.</p>'; return; }
+	if (!sides.includes(kbState.side)) kbState.side = sides[0];
+	const side = kbState.side, t = g.teams[side], team = kbTeam(t.teamId), cfg = kbSport(), T = cfg.team, tab = kbState.tab;
+	const active = kbActiveLineup(side), here = Object.values(t.attendance).filter(Boolean).length;
+	const lw = kbLineupWarnings(side), dw = kbDefenseWarnings(side), d = kbDerive();
+	const warnRows = new Set(lw.flatMap(w => w.rows));
+	const tabs = [['here', `Who’s here · ${here}`], ['lineup', `Lineup${lw.length ? ' ⚠' : ''}`], ['positions', `Positions${dw.length ? ' ⚠' : ''}`]];
+	const tag = (p) => `<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>`;
+	let body = '';
+	if (tab === 'here') body = `
+		<p class="hint">Tap everyone who's playing today. ${here < T.minPlayers ? `<strong>Need ${T.minPlayers}${T.minWomen ? `, at least ${T.minWomen} woman` : ''}.</strong>` : ''}</p>
+		<ul class="roster-list">${team.roster.map(p => `<li><button type="button" class="chip ${t.attendance[p.id] ? 'is-on' : ''}" data-action="here" data-player="${p.id}" aria-pressed="${!!t.attendance[p.id]}"><span class="chip-name">${kbEscape(p.name)}</span>${tag(p)}</button></li>`).join('')}</ul>
+		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="captain-tab" data-tab="lineup">Next: lineup</button></div>`;
+	if (tab === 'lineup') body = `
+		${lw.map(w => `<p class="warn">${kbEscape(w.text)}</p>`).join('')}
+		${kbState.share != null ? `<p class="hint is-accent">Sharing spot ${kbState.share + 1} — tap the other spot, or Share again to cancel.</p>` : ''}
+		<ol class="lineup-list">${active.map((slot, i) => { const ids = kbSlotIds(slot); const ps = ids.map(id => kbPlayer(team, id)); const up = !d.final && (d.pa[side] % active.length) === i; const shared = ids.length > 1; return `<li class="lineup-row ${warnRows.has(i) ? 'is-warn' : ''} ${up ? 'is-up' : ''} ${kbState.share === i ? 'is-picking' : ''} ${shared ? 'is-shared' : ''}">
+			<span class="lineup-n">${i + 1}</span>
+			<span class="lineup-name">${ps.map(p => kbEscape(p.name)).join(' <em class="lineup-slash">/</em> ')} ${up ? '<em>up</em>' : ''}</span>
+			<span class="lineup-tags">${ps.map(tag).join('')}</span>
+			<span class="lineup-move">
+				${T.coed?.splitSlots ? (shared ? `<button type="button" data-action="unshare" data-index="${i}" aria-label="stop sharing spot ${i + 1}">✕</button>` : `<button type="button" class="${kbState.share === i ? 'is-on' : ''}" data-action="share" data-index="${i}" aria-label="share spot ${i + 1}" aria-pressed="${kbState.share === i}">½</button>`) : ''}
+				<button type="button" data-action="move" data-index="${i}" data-delta="-1" aria-label="move spot ${i + 1} up" ${i === 0 ? 'disabled' : ''}>↑</button><button type="button" data-action="move" data-index="${i}" data-delta="1" aria-label="move spot ${i + 1} down" ${i === active.length - 1 ? 'disabled' : ''}>↓</button>
+			</span>
+		</li>`; }).join('') || '<li class="is-empty">Nobody marked here yet</li>'}</ol>
+		<div class="pad-bar is-2"><button type="button" class="key is-ghost" data-action="balance">Balance W/M</button><button type="button" class="key is-primary" data-action="captain-tab" data-tab="positions">Next: positions</button></div>`;
+	if (tab === 'positions') { const onField = Object.values(t.assignments).filter(Boolean); const ids = active.flatMap(kbSlotIds); const bench = ids.filter(id => !onField.includes(id)); body = `
+		${dw.map(w => `<p class="warn">${kbEscape(w)}</p>`).join('')}
+		<ul class="positions">${T.positions.map(pos => `<li class="position-row"><label for="pos-${kbSlug(pos)}">${kbEscape(pos)}${(T.infield || []).includes(pos) ? ' <small>IF</small>' : ''}</label><select id="pos-${kbSlug(pos)}" data-action="assign" data-position="${kbEscape(pos)}"><option value="">Open</option>${ids.map(id => { const p = kbPlayer(team, id); return `<option value="${id}" ${t.assignments[pos] === id ? 'selected' : ''}>${kbEscape(p.name)}</option>`; }).join('')}</select></li>`).join('')}</ul>
+		<p class="hint">Bench (${bench.length}): ${bench.map(id => kbEscape(kbFirst(kbPlayer(team, id).name))).join(', ') || '—'}</p>
+		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="ump">${g.events.length ? 'Back to the game' : 'Play ball'}</button></div>`; }
+	host.innerHTML = `
+	<header class="page-head">
+		<button type="button" class="key is-ghost back" data-action="go" data-to="ump" aria-label="Back to the game">←</button>
+		<div><p class="eyebrow">Captain</p><h1>${kbEscape(team.name)}</h1></div>
+		${sides.length > 1 ? `<div class="seg">${sides.map(s => `<button type="button" class="${s === side ? 'is-on' : ''}" data-action="captain-side" data-side="${s}">${kbEscape(kbTeam(g.teams[s].teamId).short)}</button>`).join('')}</div>` : ''}
+	</header>
+	<nav class="tabs" aria-label="Setup steps">${tabs.map(([id, label]) => `<button type="button" class="${tab === id ? 'is-on' : ''}" data-action="captain-tab" data-tab="${id}" aria-current="${tab === id ? 'step' : 'false'}">${label}</button>`).join('')}</nav>
+	${body}`;
+}
+
+/* ---------- teams -------------------------------------------------------- */
+function kbRenderTeams() {
+	const host = document.querySelector('.teams'); if (!host) return;
+	host.innerHTML = `
+	<header class="page-head"><button type="button" class="key is-ghost back" data-action="go" data-to="home" aria-label="Home">←</button><div><p class="eyebrow">Manage</p><h1>Teams</h1></div></header>
+	<ul class="team-list">${kbState.teams.map(t => `<li><button type="button" class="team-card" data-action="team" data-team="${t.id}"><strong>${kbEscape(t.name)}</strong><span>${KB_SPORTS[t.sport]?.name || t.sport} · ${t.roster.length} players</span></button></li>`).join('') || '<li class="is-empty">No teams yet</li>'}</ul>
+	<form class="new-game"><h2>New team</h2>
+		<div class="field"><label for="team-name">Name</label><input id="team-name" name="name" autocomplete="off" required></div>
+		<div class="field"><label for="team-sport">Sport</label><select id="team-sport" name="sport">${Object.values(KB_SPORTS).map(s => `<option value="${s.id}">${s.name}</option>`).join('')}</select></div>
+		<button type="submit" class="key is-primary" data-action="new-team">Create</button>
+	</form>`;
+}
+function kbRenderTeam() {
+	const host = document.querySelector('.team'), team = kbTeam(kbState.teamId); if (!host) return;
+	if (!team) { host.innerHTML = '<p class="empty">Team not found.</p>'; return; }
+	const w = team.roster.filter(p => p.gender === 'female').length, m = team.roster.length - w;
+	host.innerHTML = `
+	<header class="page-head"><button type="button" class="key is-ghost back" data-action="teams" aria-label="Teams">←</button><div><p class="eyebrow">${KB_SPORTS[team.sport]?.name || ''} · ${w} W · ${m} M</p><h1>${kbEscape(team.name)}</h1></div><button type="button" class="key is-ghost" data-action="stats" data-team="${team.id}">Stats</button></header>
+	<ul class="roster-list is-edit">${team.roster.map(p => `<li class="roster-row">
+		<span class="roster-name">${kbEscape(p.name)}</span>
+		<span class="seg"><button type="button" class="${p.gender === 'female' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="female" aria-pressed="${p.gender === 'female'}">W</button><button type="button" class="${p.gender === 'male' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="male" aria-pressed="${p.gender === 'male'}">M</button></span>
+		<button type="button" class="roster-remove" data-action="remove-player" data-player="${p.id}" aria-label="Remove ${kbEscape(p.name)}">×</button>
+	</li>`).join('') || '<li class="is-empty">No players yet</li>'}</ul>
+	<form class="new-game"><h2>Add player</h2>
+		<div class="field"><label for="player-name">Name</label><input id="player-name" name="name" autocomplete="off" required></div>
+		<div class="seg is-radio" role="radiogroup" aria-label="Designation"><label><input type="radio" name="gender" value="female" checked> W</label><label><input type="radio" name="gender" value="male"> M</label></div>
+		<button type="submit" class="key is-primary" data-action="add-player">Add</button>
+	</form>`;
+}
+function kbRenderStats() {
+	const host = document.querySelector('.stats'), team = kbTeam(kbState.teamId); if (!host) return;
+	if (!team) { host.innerHTML = '<p class="empty">Pick a team first.</p>'; return; }
+	const { games, totals } = kbSeasonStats(team.id);
+	const rows = Object.entries(totals).map(([pid, s]) => ({ p:kbPlayer(team, pid), s })).filter(r => r.p).sort((a, b) => b.s.h - a.s.h || b.s.pa - a.s.pa || a.p.name.localeCompare(b.p.name));
+	host.innerHTML = `
+	<header class="page-head"><button type="button" class="key is-ghost back" data-action="team" data-team="${team.id}" aria-label="Back">←</button><div><p class="eyebrow">${games} saved game${games === 1 ? '' : 's'}</p><h1>${kbEscape(team.name)}</h1></div></header>
+	${rows.length ? `<div class="linescore is-open"><table><thead><tr><th>Player</th><th>G</th><th>PA</th><th>H</th><th>R</th><th>RBI</th><th>OBP</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.p.name)}</th><td>${r.s.g}</td><td>${r.s.pa}</td><td>${r.s.h}</td><td>${r.s.r}</td><td>${r.s.rbi}</td><td>${kbObp(r.s)}</td></tr>`).join('')}</tbody></table></div>` : '<p class="empty">No saved games with this team yet. Finish a game with "Save & done" and the numbers show up here.</p>'}`;
+}

@@ -1,65 +1,35 @@
-# Kickball Design Iterations
+# Kickball — design iterations
 
-This folder tracks prototype directions so we can explore new designs without losing prior thinking.
+How the product got to its current shape. The root of this folder is always the current build; older directions are kept under `design-iterations/` as reference, never as live code.
 
-## Current Canonical Project
+## Purpose (Thom, 2026-09-30)
+> I umped a game and the tiny card I had was small and very hard to read and pay attention to. If I had a phone marking the score, that can be data-tracked and uploaded to see your progress as a player.
 
-Active working project:
+Priority order: (1) replace the paper card — legible, tallied correctly, one-handed; (2) because it's digital, every tally is data → player progress; (3) any sport that needs a scorekeeper, via config. Kickball first, cornhole second.
 
-```text
-~/Sites/studio/kickball
-```
+## iteration-01-midgame-scoreboard (June 2026) — reference only
+`design-iterations/iteration-01-midgame-scoreboard/`. The first prototype: five tabs (Score, Lineup, Defense, Stats, Setup), one 617-line `app.js`. Opened as if a game were in progress, with everyone "here" and a fake lineup; on a phone the result buttons sat ~900px below the fold; undo stored full JSON snapshots; no concept of a game record.
 
-## Iterations
+What it got right and what carried forward: the rules (4 outs, back-to-back men with wrap, >10 / >5 men on defense, balanced W/M lineup), the LBC roster, and the principle *each screen answers one question*.
 
-### iteration-01-midgame-scoreboard
+## inspiration (2026-09-30)
+`design-iterations/inspiration/` — screenshots and notes on ClickBall, Umpire Indicator Pro, iUmpire Elite, Kickball Coach, GameChanger, Sleeper, and what Tampa Bay Club Sport runs (League Lab, My Club Sport app, standings by run differential). Read `INSPIRATION.md`.
 
-Path:
+Direction chosen by Thom: **GameChanger's look** (professional, dark, high contrast) on **ClickBall's skeleton** (buttons under the thumb, count as dots), with Umpire Indicator Pro's line score.
 
-```text
-~/Sites/studio/kickball/design-iterations/iteration-01-midgame-scoreboard
-```
+## iteration-02-ump-first (2026-09-30) — promoted to root
+Built as `design-iterations/iteration-02-ump-first/`, verified, then moved to the root the same day; the old root was deleted. Its folder no longer exists — the root *is* iteration 02.
 
-Status: cataloged, not the preferred direction.
+What it established:
+- Sport as config (`data.js`), engine replays an event log (`kbDerive`), undo pops, corrections are events.
+- Ump screen: score strip (tap to fix), inning/outs/count dots, bases, line score, thumb pad.
+- Captain: who's here → lineup (rules inline) → positions. Plays carry the kicker; box score + season stats derive from the same log.
+- Cornhole as the proof that the abstraction holds.
 
-What it proves:
+## Design principle
+Each screen answers one question. On the ump screen that question is *what just happened?* and the answer must be one tap, without scrolling, in sunlight.
 
-- Core data requirements are being tracked.
-- The app knows about roster, lineup, defense, scoring, and stats.
-- Rule warnings exist for minimum players, back-to-back men, and defensive male limit.
-- There is a runnable phone-sized scoring surface.
-
-Why it is not good enough:
-
-- It starts as if a game is already in progress.
-- It overwhelms the user with too much operational information at once.
-- It does not make setup feel safe or guided.
-- It does not make player progress feel exciting.
-- It feels risky to edit because actions appear too close to live game state.
-- It is more useful for requirements inventory than product demonstration.
-
-## Next Design Directions
-
-Create separate iterations for distinct product bets:
-
-1. **Setup-first captain flow**
-   - Home screen, quick game, saved team, attendance, lineup, then scoring.
-
-2. **Player progress / team excitement flow**
-   - Starts with season progress, player cards, streaks, team story, and recent game recap.
-
-3. **Ump scorekeeper flow**
-   - Minimal live score, outs, inning, current kicker, bases, and final score.
-
-4. **Sleeper-inspired roster flow**
-   - Phone-first roster cards, availability, lineup confidence, quick adjustments, and live matchup feel.
-
-## Design Principle
-
-Each screen should answer one question:
-
-```text
-What is the most important thing this user needs to do right now?
-```
-
-Important information should be visible above the fold on a phone. Secondary details should be available but not visually competing with the primary action.
+## Next candidates
+- Game summary / share screen.
+- Player progress cards (GameChanger insight cards, Sleeper player cards).
+- Softball / dodgeball configs for the Club Sport pitch.

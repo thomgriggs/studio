@@ -1,15 +1,14 @@
 /*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
 
+# App files: always revalidate so phones get the current build (the service worker is network-first too).
+/index.html
+  Cache-Control: no-cache
+/kb.js
+  Cache-Control: no-cache
+/kb.css
+  Cache-Control: no-cache
+/data.js
+  Cache-Control: no-cache
 /service-worker.js
   Cache-Control: no-cache
-
-/app.js
-  Cache-Control: public, max-age=300
-
-/styles.css
-  Cache-Control: public, max-age=300
-
-/icons/*
-  Cache-Control: public, max-age=31536000, immutable

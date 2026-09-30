@@ -1,120 +1,25 @@
 # Deployment
 
-Target:
+Live on Cloudflare Pages, project **kickball**: https://kickball-1y4.pages.dev (stable). First deployed 2026-09-30.
 
-```text
-https://kickball.thomgriggs.com
-```
-
-## Current Status
-
-The app is committed locally in:
-
-```text
-~/Sites/studio/kickball
-```
-
-Cloudflare Pages project:
-
-```text
-kickball
-```
-
-Current production deployment:
-
-```text
-https://0263dbdf.kickball-1y4.pages.dev
-```
-
-Stable Pages hostname:
-
-```text
-https://kickball-1y4.pages.dev
-```
-
-Custom domain status:
-
-```text
-kickball.thomgriggs.com is attached to the Pages project, but pending DNS.
-Cloudflare reports: CNAME record not set.
-```
-
-The local GitHub CLI token is currently invalid, so the repository could not be created or pushed from Codex yet.
-
-Refresh auth with:
-
+## Deploy
 ```sh
-gh auth login -h github.com
+./scripts/deploy.sh
 ```
+Runs the tests, copies **only the app files** (`index.html kb.css kb.js data.js manifest.webmanifest service-worker.js _headers icons/`) to a temp folder and runs `wrangler pages deploy` on it. Docs, tests and `design-iterations/` never go public. Needs `CLOUDFLARE_API_TOKEN` in the environment (it is, on this Mac) or `npx wrangler login`.
 
-## Cloudflare Pages Path
+Before deploying, **bump `CACHE_NAME` in `service-worker.js`** whenever `kb.js`, `kb.css` or `data.js` changed. The worker is network-first and `_headers` sets `Cache-Control: no-cache` on the app files, so phones with signal get the new build on the next open; the bump guarantees offline caches roll over too.
 
-Cloudflare is the deployment target. GitHub is only the source repository.
+## Where the code lives
+`~/Sites/studio/kickball` is a folder inside the `~/Sites/studio` git repository (the studio is one repo). It is **not** its own repo, and Pages is not connected to git — deploys are pushed from this machine with the script above. If it ever leaves the studio (see `~/Sites/PROJECT_RULES.md`), move it to `~/Sites/kickball`, `git init`, and connect the repo to the Pages project instead.
 
-Recommended setup:
+## Custom domain
+`kickball.thomgriggs.com` is attached to the Pages project but DNS was never set. To finish: Cloudflare → Workers & Pages → kickball → Custom domains → it should offer to create the CNAME (`kickball` → `kickball-1y4.pages.dev`, proxied). Until then use the `pages.dev` URL.
 
-1. Push this local repo to GitHub as `thomgriggs/kickball`.
-2. In Cloudflare, go to Workers & Pages.
-3. Create a Pages project.
-4. Connect the `thomgriggs/kickball` GitHub repository.
-5. Use these build settings:
+## On a phone
+1. Open https://kickball-1y4.pages.dev, Share → **Add to Home Screen** (it's a PWA: standalone, dark theme, offline after first load).
+2. Start a game on cellular; refresh — the game is still there.
+3. Airplane mode; reopen — the app still loads.
+4. After a new deploy, pull-to-refresh once (or close and reopen) to pick up the build.
 
-```text
-Project name: kickball
-Production branch: main
-Framework preset: None
-Build command: none
-Build output directory: /
-Root directory: /
-```
-
-6. Add the custom domain:
-
-```text
-kickball.thomgriggs.com
-```
-
-If `thomgriggs.com` is already managed in Cloudflare DNS, Cloudflare can create the DNS record during custom domain setup.
-
-If adding the DNS record manually, create:
-
-```text
-Type: CNAME
-Name: kickball
-Target: kickball-1y4.pages.dev
-Proxy status: Proxied
-```
-
-## Push Source To GitHub
-
-From `~/Sites/studio/kickball`:
-
-```sh
-gh repo create thomgriggs/kickball --public --source=. --remote=origin --push
-```
-
-Or use the helper script:
-
-```sh
-./scripts/publish-github.sh
-```
-
-## Direct Wrangler Deploy Alternative
-
-If you want to deploy without GitHub integration:
-
-```sh
-npx wrangler pages deploy . --project-name=kickball
-```
-
-You will still add `kickball.thomgriggs.com` as a Cloudflare Pages custom domain.
-
-## After Deploy
-
-On a phone:
-
-1. Open `https://kickball.thomgriggs.com`.
-2. Add it to the home screen.
-3. Test scoring while on cellular.
-4. Confirm refresh keeps local game state.
-5. Put phone in airplane mode and confirm the app still opens after first visit.
+`_headers` keeps the site `noindex` — fine while it's a prototype.

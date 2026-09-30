@@ -1,70 +1,42 @@
-# Kickball Tracker
+# Kickball Scorekeeper
 
-Mobile-first kickball scoring and stats prototype for Liquid Breakfast Club.
+The ump's paper card, digital — score, outs, innings, count, lineups and player stats on a phone, tallied correctly. Kickball first (Liquid Breakfast Club, Tampa Bay Club Sport), but **a sport is a config**: cornhole ships as the second one, and the same engine is meant to cover any sport that needs a scorekeeper.
 
-Canonical local project path:
+Canonical path: `~/Sites/studio/kickball`. Studio project — not deployed yet.
 
-```text
-~/Sites/studio/kickball
-```
-
-## What It Does Now
-
-- Tracks a live game locally in the browser
-- Stores game state in local storage
-- Seeds the Liquid Breakfast Club roster
-- Tracks player gender designation for coed lineup rules
-- Warns for back-to-back men in the kicking lineup
-- Warns for more than 10 fielders or more than 5 men on defense
-- Tracks current kicker, inning, outs, bases, score, and recent events
-- Includes roster, lineup, defense, stats, and admin views
-
-## Open Locally
-
-Open `index.html` directly in a browser.
-
-For PWA/service-worker behavior, serve it over a local web server:
+## Run it
+Any static server from `~/Sites/studio` (the page uses the studio's `/assets/breadcrumb.*`):
 
 ```sh
-python3 -m http.server 8080
+cd ~/Sites/studio && python3 -m http.server 8765
+# → http://127.0.0.1:8765/kickball/
 ```
 
-Then visit:
+On a phone on the same Wi-Fi, use your Mac's IP instead of 127.0.0.1. Everything is saved in that browser (`localStorage` key `kickball-v3`).
 
-```text
-http://localhost:8080
-```
-
-Run that from:
-
+## Test it
 ```sh
-cd ~/Sites/studio/kickball
-python3 -m http.server 8080
+node --test tests/engine.test.mjs
 ```
 
-## Deploy Target
+## Read in this order
+1. `PROJECT_PLAN.md` — purpose, rules captured, what's next.
+2. `HANDOFF.md` — naming contract: blocks, `data-action`s, data shapes, the sport config.
+3. `CLAUDE.md` — working rulebook, code map, test recipes.
+4. `DESIGN_ITERATIONS.md` — how we got here; `design-iterations/inspiration/` has the references.
+5. `PITCH.md` — the angle for Tampa Bay Club Sport.
 
-Preferred public URL:
+## Files
+`index.html` · `kb.css` · `kb.js` · `data.js` (sport configs + seed team) · `tests/engine.test.mjs` · `manifest.webmanifest` · `service-worker.js` · `icons/` · `_headers` · `wrangler.jsonc`
 
-```text
-https://kickball.thomgriggs.com
-```
-
-This repo is static and should be hosted on Cloudflare Pages.
-
-Use these settings:
-
-- Build command: none
-- Build output directory: `/`
-- Custom domain: `kickball.thomgriggs.com`
-
-See `DEPLOYMENT.md` for the exact Cloudflare Pages and DNS path.
-
-## Known Prototype Limits
-
-- Data is device-local only
-- No accounts yet
-- No shared live game sync yet
-- Split lineup slots are planned but not interactive yet
-- Defensive plays are planned but not detailed yet
-- Voice scoring is a future feature
+## Status
+- [x] Ump screen: score strip, inning, outs, count as dots, bases, line score, thumb pad, undo, in-place corrections
+- [x] Sport as config (kickball, cornhole), score and stats derived from an event log
+- [x] Captain: who's here → lineup (coed rules inline) → positions
+- [x] Plays carry the kicker; box score per game; season stats across saved games
+- [x] Teams & rosters
+- [x] Rules from the Club Sport rules doc: no count, 55-min clock, 10-run cap = 4th out, playoff mercy tiers + overtime, shared slots, man-bunt out, courtesy runner (24 tests)
+- [ ] Use it at a real game; courtesy-runner limits (first base only, rest of game)
+- [ ] Game summary to share; export
+- [x] Deployed to Cloudflare Pages (private pages.dev URL) — see DEPLOYMENT.md
+- [ ] Sync / accounts
