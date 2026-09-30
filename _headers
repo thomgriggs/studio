@@ -1,2 +1,14 @@
 /*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+# Kickball app files: always revalidate (its own _headers only applies on the standalone domain)
+/kickball/index.html
+  Cache-Control: no-cache
+/kickball/kb.js
+  Cache-Control: no-cache
+/kickball/kb.css
+  Cache-Control: no-cache
+/kickball/data.js
+  Cache-Control: no-cache
+/kickball/service-worker.js
+  Cache-Control: no-cache
