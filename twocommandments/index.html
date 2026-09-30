@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<title>II Commandments — Design breakdown</title>
+	<link rel="icon" href="assets/logo-placeholder.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/breadcrumb.css">
+	<script defer src="/assets/breadcrumb.js"></script>
+	<style>
+		:root { color-scheme:light; --color_bg:#f6f4ef; --color_ink:#1a1a1a; --color_muted:#5f5b55; --color_line:#dcd7cf; --color_card:#fff; --color_quote:#faf3e3; --gutter:clamp(20px, 5vw, 64px); }
+		* { box-sizing:border-box; }
+		body { margin:0; background:var(--color_bg); color:var(--color_ink); font:16px/1.55 'Inter', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+		main { width:min(100%, 96rem); margin:0 auto; padding:48px var(--gutter) 96px; }
+		h1 { font-size:clamp(1.75rem, 3vw, 2.5rem); font-weight:600; letter-spacing:-.02em; margin:0 0 8px; }
+		h2 { font-size:1.375rem; font-weight:600; letter-spacing:-.01em; margin:64px 0 8px; }
+		h2 + p { color:var(--color_muted); max-width:70ch; margin:0 0 24px; }
+		.lede { color:var(--color_muted); max-width:70ch; margin:0 0 8px; }
+		.toc { display:flex; flex-wrap:wrap; gap:8px 20px; margin:16px 0 0; padding:0; list-style:none; font-size:.9rem; }
+		.toc a { color:var(--color_ink); }
+
+		/* ===== REFERENCE ROWS : screenshot · site · his words · the device · where it lands ===== */
+		.refs { list-style:none; margin:0; padding:0; display:grid; gap:16px; }
+		.ref { display:grid; grid-template-columns:minmax(200px, 1fr) minmax(0, 2fr); gap:0; background:var(--color_card); border:1px solid var(--color_line); border-radius:12px; overflow:hidden; }
+		.ref .shot { position:relative; background:#e9e5dc; border-right:1px solid var(--color_line); min-height:180px; }
+		.ref .shot img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+		.ref .shot .tag { position:absolute; left:12px; top:12px; background:var(--color_ink); color:#fff; font-size:.75rem; font-weight:600; letter-spacing:.06em; padding:3px 10px; border-radius:999px; }
+		.ref .body { padding:20px 24px; display:grid; gap:12px; align-content:start; }
+		.ref h3 { margin:0; font-size:1.125rem; font-weight:600; }
+		.ref h3 a { color:inherit; }
+		.ref h3 small { color:var(--color_muted); font-weight:400; font-size:.85rem; margin-left:8px; }
+		.ref blockquote { margin:0; padding:12px 16px; background:var(--color_quote); border-left:3px solid var(--color_ink); font-style:italic; }
+		.ref blockquote cite { display:block; font-style:normal; font-size:.8rem; color:var(--color_muted); margin-top:6px; }
+		.ref dl { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; margin:0; font-size:.95rem; }
+		.ref dt { color:var(--color_muted); font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; padding-top:3px; }
+		.ref dd { margin:0; }
+		.uses { display:inline-flex; gap:6px; flex-wrap:wrap; }
+		.uses span { font-size:.75rem; font-weight:600; padding:2px 10px; border-radius:999px; border:1px solid var(--color_line); }
+		.uses .c1 { background:#f4efe6; } .uses .c2 { background:#1a1a1a; color:#fff; border-color:#1a1a1a; } .uses .c3 { background:#ffd23f; }
+		@media (max-width:760px) { .ref { grid-template-columns:1fr; } .ref .shot { border-right:0; border-bottom:1px solid var(--color_line); min-height:140px; } }
+
+		/* ===== CONCEPTS ===== */
+		.concepts { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; list-style:none; margin:0; padding:0; }
+		.concept { display:grid; grid-template-rows:auto auto 1fr auto; gap:12px; background:var(--color_card); border:1px solid var(--color_line); border-radius:12px; overflow:hidden; }
+		.concept .preview { position:relative; aspect-ratio:4/3; overflow:hidden; background:#ddd; border-bottom:1px solid var(--color_line); }
+		.concept .preview iframe { position:absolute; inset:0; width:250%; height:250%; transform:scale(.4); transform-origin:0 0; border:0; pointer-events:none; }
+		.concept .body { padding:0 20px; }
+		.concept h3 { font-size:1.25rem; font-weight:600; margin:0; }
+		.concept .n { color:var(--color_muted); font-weight:400; margin-right:6px; }
+		.concept ul { margin:8px 0 0; padding-left:18px; font-size:.92rem; }
+		.concept li { margin-bottom:6px; }
+		.concept li b { font-weight:600; }
+		.concept .foot { display:flex; gap:12px; padding:0 20px 20px; }
+		.btn { display:inline-flex; align-items:center; min-height:44px; padding:8px 20px; border:1px solid var(--color_ink); border-radius:999px; color:var(--color_ink); text-decoration:none; font-weight:600; font-size:.9rem; }
+		.btn:hover { background:var(--color_ink); color:#fff; }
+		.status { margin:0 0 24px; padding:14px 18px; border:1px solid #e0c98a; background:#fff8e6; border-radius:10px; font-size:.95rem; max-width:80ch; }
+		.links { display:flex; flex-wrap:wrap; gap:12px; list-style:none; margin:0; padding:0; }
+		.links a { display:inline-flex; align-items:center; min-height:44px; padding:8px 16px; border:1px solid var(--color_line); border-radius:999px; color:var(--color_ink); text-decoration:none; font-size:.9rem; background:#fff; }
+		.links a:hover { border-color:var(--color_ink); }
+	</style>
+</head>
+<body>
+	<main>
+		<h1>II Commandments — design breakdown</h1>
+		<p class="lede">Everything here starts from the founder's own reference list (his Google Doc, "CALLING ALL CHRISTIANS"). For each site: a screenshot, <em>his words about it</em>, the specific device we take from it, and where that device lands in our site. The three concepts below are assembled from these devices — each one names which.</p>
+		<ul class="toc">
+			<li><a href="#message">References for the message</a></li>
+			<li><a href="#store">References for the store</a></li>
+			<li><a href="#studies">Studies — one per reference</a></li>
+			<li><a href="#concepts">The three concepts</a></li>
+			<li><a href="#build">Working build</a></li>
+			<li><a href="design-iterations/inspiration/INSPIRATION.md">Full notes</a></li>
+		</ul>
+
+		<!-- ===== MESSAGE REFERENCES ===== -->
+		<h2 id="message">References for the message (the home page)</h2>
+		<p>His "Design reference points // flow" and "Cinematic websites that tell a story." Screenshots are what a static capture shows; several of these are WebGL experiences behind a loader.</p>
+		<ol class="refs">
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/atterwasch-hero.jpg" alt="atterwasch: black-and-white photo of a kitchen table, the wordmark set across it" loading="lazy"><span class="tag">Most important</span></div>
+				<div class="body">
+					<h3><a href="https://www.atterwasch.net/">atterwasch</a><small>scroll-documentary</small></h3>
+					<blockquote>Possibly the best example of carrying a narrative.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>A full-bleed black-and-white photograph with the wordmark set <em>into</em> it; a stark chapter list (Future · Present · Episode 1–5 · Past) on black.</dd>
+						<dt>Lands in</dt><dd>Panel 1 — the verse on the image ("Jesus in the background" from the storyboard); panel 5 — the four Gospels as the chapter list.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c2">2 Documentary</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/bennos-light-entry.jpg" alt="Benno's Light entry screen with an 'access to the experience' button" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://bennos-light.org/">Benno's Light</a></h3>
+					<blockquote>Once you're 'in', click on 'Chapter Content'. I like that set up for row 11 on the excel 'related verses after'. Something to consider. I like the way it animates when you click on 'All Chapters'.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>A chapter index that slides open <em>over</em> the experience, from anywhere, and animates.</dd>
+						<dt>Lands in</dt><dd>Panel 11 — related verses as a drawer over the page, not another panel to scroll. (He named this one.)</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1 Paper</span><span class="c2">2 Documentary</span><span class="c3">3 Colour</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/nomadic-tribe-makemepulse.jpg" alt="Nomadic Tribe entry: a pale circle on slate blue" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://2019.makemepulse.com/">Nomadic Tribe</a><small>makemepulse</small></h3>
+					<blockquote>Great storytelling site. I like how it leads you from one part of the story to another. Def a reference point for us.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>One continuous scroll; each beat hands you to the next; you always sense where you are in the story.</dd>
+						<dt>Lands in</dt><dd>The spine of the home page — panels 1 → 12 as one scroll, no hard cuts, a "continue" cue at the bottom of each beat.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1</span><span class="c2">2</span><span class="c3">3</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/legend-of-santar-begin.jpg" alt="The Legend of Santar title with a red Begin button and 'best experienced with sound'" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://santar.webflow.io/">The Legend of Santar</a><small>ThreeSixtyEight</small></h3>
+					<blockquote>Highly animated.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>An explicit <b>Begin</b> gate ("best experienced with sound"), then a scroll-animated tale — built in Webflow, no WebGL.</dd>
+						<dt>Lands in</dt><dd>The "momentary experience when you reach the site" from the meeting notes; proof the animation can be done simply.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c2">2 Documentary</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/every-last-drop-scroll.jpg" alt="Every Last Drop: flat-illustrated bedroom scene, sun rising in the sky band" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://everylastdrop.co.uk/">Every Last Drop</a></h3>
+					<blockquote>Keeps you engaged through the whole story.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>The scene and the sky colour change as you scroll — the page moves through a day.</dd>
+						<dt>Lands in</dt><dd>Background changing per panel so scrolling feels like moving through the Gospels; each Gospel a colour.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c3">3 Colour</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/slavery-footprint-hero.jpg" alt="Slavery Footprint: 'How many slaves work for you?' in a serif, two choices, an arrow" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://slaveryfootprint.org/">Slavery Footprint</a></h3>
+					<blockquote>Still my favorite even though it doesn't scroll like it used to.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>One question, one serif line, centred, generous space, one thing to do next.</dd>
+						<dt>Lands in</dt><dd>The tone of panel 1 — the verse alone, and the two-part "If you love me…" beat.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1 Paper</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/sofi-health-word-hero.jpg" alt="sofi health: a single word 'Smart' huge in a grotesk, cycling" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://www.sofihealth.com/">sofi health</a><small>in his doc twice and in the storyboard</small></h3>
+					<blockquote>Like panel 6 from sofihealth.com — the one with the awesome graphic "plant powered".<cite>— storyboard, row 13 (church picker)</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>One word at a time, huge, morphing into the next; a floating mid-screen menu that shows a name in a beautiful face.</dd>
+						<dt>Lands in</dt><dd>Panel 1 hero as word-by-word; panel 13 church picker as the floating name.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1 Paper</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/pierre-herme-loader.jpg" alt="Pierre Hermé x Nicolas Buffe: a drawn creature as the loading screen on black" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="http://pierrehermenicolasbuffe.com/en/chapter-1">Pierre Hermé &amp; Nicolas Buffe</a><small>interactive adventure</small></h3>
+					<blockquote><cite>— on his "most important" list, no comment</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>Illustrated chapters; the loader is itself a drawing. Also <a href="https://jitter.video/">Jitter</a>'s "Blend Modes, Circle Stack" from the storyboard for the logo.</dd>
+						<dt>Lands in</dt><dd>Panel 2 — the II Commandments mark as a layered, moving transition device.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c2">2</span><span class="c3">3</span></dd>
+					</dl>
+				</div>
+			</li>
+		</ol>
+
+		<!-- ===== STORE REFERENCES ===== -->
+		<h2 id="store">References for the store (designers, church, shop)</h2>
+		<p>His "Store related — for consideration."</p>
+		<ol class="refs">
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/graza-type.jpg" alt="Graza: 'Olive oil so fresh, / you can taste it.' split across two lines with a drawn olive" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://www.graza.co/">Graza</a></h3>
+					<blockquote>I love this site. Let's just leave it as a reference. On the top menu, hover on 'Shop'. Pick 'Fancy Mayo' and then just scroll down. Maybe here we can put info about the designer? Something about the Church/non-profit?<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>A headline split across two lines with a hand-drawn mark between them; a product page that scrolls into its story; serif display + mono body on paper.</dd>
+						<dt>Lands in</dt><dd>The product page: design → the designer's story → the church it supports → buy. The split headline in panel 1.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1 Paper</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/de-la-calle-products.jpg" alt="De La Calle: three tepache flavours, each in its own colour, on a tile background" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://www.delacalle.mx/">De La Calle — Tepache</a></h3>
+					<blockquote>Love this site! and interwoven storytelling. When you're going from product to product it really feels like you're navigating.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>Each flavour is its own colour world; product → product feels like walking between rooms; condensed caps.</dd>
+						<dt>Lands in</dt><dd>Each Gospel (and each designer) as a colour room; the shop moves room to room.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c3">3 Colour</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/mack-and-pouya-hero.jpg" alt="Mack & Pouya: pink and yellow blocks, outlined display type, photos in cut-out shapes" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://www.mackandpouya.com">Mack &amp; Pouya</a></h3>
+					<blockquote>Love this site. Maybe a way to navigate through church, designer, etc.?<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>Loud colour blocks as navigation, outlined display type, polaroids and stickers, a horizontally scrolling gallery.</dd>
+						<dt>Lands in</dt><dd>Church / Designers / Shop as big playful blocks; designer profiles that feel like the designer.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c3">3 Colour</span></dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/bite-products.jpg" alt="Bite: clean white product grid" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://bitetoothpastebits.com/collections/featured-products">Bite</a></h3>
+					<blockquote>When you hover over the products, you get a short menu. Perhaps on ours, the menu lets you pick your Church/non-profit? Or other features (blurb about artist, etc).<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>Hover a product card → a quick-action menu on the card.</dd>
+						<dt>Lands in</dt><dd>Design cards in the shop: <em>Support: your church · About the designer · Add</em>.</dd>
+						<dt>Used by</dt><dd class="uses"><span class="c1">1</span><span class="c2">2</span><span class="c3">3</span> (shop, not yet built)</dd>
+					</dl>
+				</div>
+			</li>
+			<li class="ref">
+				<div class="shot"><img src="design-iterations/inspiration/screens/black-star-pastry.jpg" alt="Black Star Pastry: dense magazine-style shop with a featured cake" loading="lazy"></div>
+				<div class="body">
+					<h3><a href="https://blackstarpastry.com/">Black Star Pastry</a></h3>
+					<blockquote>I don't know what it is, but there's something here.<cite>— his doc</cite></blockquote>
+					<dl>
+						<dt>Device</dt><dd>A featured product hero with its story beside it; category tiles; a ticker.</dd>
+						<dt>Lands in</dt><dd>The shop landing: one featured design with the designer's line next to it.</dd>
+						<dt>Used by</dt><dd class="uses">(shop, not yet built)</dd>
+					</dl>
+				</div>
+			</li>
+		</ol>
+		<p style="color:var(--color_muted);font-size:.9rem;max-width:80ch">Also on his list, not shown: Anyday ("go all the way through on any product") and Ghia ("products strewn throughout") — both pop-up-gated in capture. Full list and notes: <a href="design-iterations/inspiration/INSPIRATION.md">INSPIRATION.md</a>.</p>
+
+		<!-- ===== STUDIES : one page per reference, doing what that site does with our words ===== -->
+		<h2 id="studies">Studies — one per reference</h2>
+		<p>Each study takes <em>one</em> site and does exactly what it does, with our verse and our store. Two beats each: the opening, and the device he commented on. These are the raw material; a concept is a combination of studies.</p>
+		<ol class="concepts studies">
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/atterwasch/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>atterwasch</h3><ul><li>The photograph as the whole frame; wordmark set into it; episode list; then a black page of chapters.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/atterwasch/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/bennos-light/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Benno's Light</h3><ul><li>Washed image, letterspaced caps, one entry button; "All chapters" index sliding over the experience — his row 11.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/bennos-light/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/nomadic-tribe/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Nomadic Tribe</h3><ul><li>The paper disc on slate; a progress rail; each beat hands off to the next; the disc becomes the window onto the image.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/nomadic-tribe/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/legend-of-santar/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Legend of Santar</h3><ul><li>String lights, the three-line title lockup, one red Begin, "best with sound", the story arriving word by word.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/legend-of-santar/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/every-last-drop/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Every Last Drop</h3><ul><li>A sky band that changes colour as you scroll, a sun that becomes a moon; flat scenes; the day is the four Gospels.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/every-last-drop/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/slavery-footprint/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Slavery Footprint</h3><ul><li>Cream, two-tone serif, one question, two italic choices, chain links at the edges; then the answer with the same restraint.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/slavery-footprint/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/sofi/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>sofi</h3><ul><li>One huge word at a time with a tiny index; then the floating card that shows your church's name in a beautiful face — storyboard row 13.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/sofi/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/jitter-logo/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Jitter circle stack</h3><ul><li>Four blended circles in the Gospel colours drifting under the mark; they become the four Gospel buttons — storyboard rows 2 and 5.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/jitter-logo/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/graza/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Graza</h3><ul><li>Split headline with a drawn mark between; the product stays while the story scrolls: design → designer → church → buy.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/graza/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/de-la-calle/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>De La Calle</h3><ul><li>Ticker, boxed nav, tilted can with a drip badge; tap a card and the whole room changes colour — Gospels as rooms.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/de-la-calle/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/mack-and-pouya/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Mack &amp; Pouya</h3><ul><li>Pink and yellow blocks, outlined "Hey there!", arch photo with stickers, polaroid + confetti, gallery; blocks as the navigation.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/mack-and-pouya/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/bite/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Bite</h3><ul><li>White grid, mint filter pill, black add button; hover a card and a short menu slides up: Support your church · About the designer.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/bite/">Open</a></div></li>
+			<li class="concept"><div class="preview" aria-hidden="true"><iframe src="design-iterations/studies/black-star-pastry/" title="" tabindex="-1" loading="lazy"></iframe></div><div class="body"><h3>Black Star Pastry</h3><ul><li>Ticker, category tiles, the big featured block with the designer's line beside the product, a signature row.</li></ul></div><div class="foot"><a class="btn" href="design-iterations/studies/black-star-pastry/">Open</a></div></li>
+		</ol>
+
+		<!-- ===== CONCEPTS ===== -->
+		<h2 id="concepts">The three concepts (earlier, superseded by the studies)</h2>
+		<p>Each concept is a different <em>combination</em> of the devices above. Same verses, same engine; the stylesheet and the devices differ.</p>
+		<p class="status"><b>Status — first draft.</b> These three are early builds of the devices, and they are not there yet: none has real imagery (his references are image-led; ours are still type on colour), the mark and the four Gospel symbols are placeholders, and the Graza split-headline, sofi word-morph, and De La Calle room-to-room moves are only partly in. They exist so the lineage above can be argued over, not so one can be picked today.</p>
+		<ol class="concepts">
+			<li class="concept">
+				<div class="preview" aria-hidden="true"><iframe src="design-iterations/concept-01-paper/" title="" tabindex="-1" loading="lazy"></iframe></div>
+				<div class="body">
+					<h3><span class="n">1</span>Paper</h3>
+					<ul>
+						<li><b>Slavery Footprint</b> — one serif line, centred, one thing to do next.</li>
+						<li><b>sofi</b> — the hero verse word by word; the church name in a floating menu.</li>
+						<li><b>Graza</b> — paper, serif display + working body; product page as story (to build).</li>
+						<li><b>Benno's Light</b> — related verses as a drawer.</li>
+					</ul>
+				</div>
+				<div class="foot"><a class="btn" href="design-iterations/concept-01-paper/">Open concept 1</a></div>
+			</li>
+			<li class="concept">
+				<div class="preview" aria-hidden="true"><iframe src="design-iterations/concept-02-documentary/" title="" tabindex="-1" loading="lazy"></iframe></div>
+				<div class="body">
+					<h3><span class="n">2</span>Documentary</h3>
+					<ul>
+						<li><b>atterwasch</b> — the verse on a full-bleed b&amp;w photograph; the Gospels as the stark chapter list. <em>Needs the photograph.</em></li>
+						<li><b>Legend of Santar</b> — a Begin moment; scroll animation without WebGL.</li>
+						<li><b>Benno's Light</b> — "All chapters" index sliding over the story.</li>
+						<li><b>Pierre Hermé / Jitter</b> — the mark as the transition device.</li>
+					</ul>
+				</div>
+				<div class="foot"><a class="btn" href="design-iterations/concept-02-documentary/">Open concept 2</a></div>
+			</li>
+			<li class="concept">
+				<div class="preview" aria-hidden="true"><iframe src="design-iterations/concept-03-colour/" title="" tabindex="-1" loading="lazy"></iframe></div>
+				<div class="body">
+					<h3><span class="n">3</span>Colour</h3>
+					<ul>
+						<li><b>De La Calle</b> — each Gospel a colour room; condensed caps; product → product as navigation.</li>
+						<li><b>Every Last Drop</b> — the page changes colour as you scroll.</li>
+						<li><b>Mack &amp; Pouya</b> — colour blocks, outlined type, stickers; designer pages as their own world (to build).</li>
+						<li><b>Benno's Light</b> — related verses as a drawer.</li>
+					</ul>
+				</div>
+				<div class="foot"><a class="btn" href="design-iterations/concept-03-colour/">Open concept 3</a></div>
+			</li>
+		</ol>
+
+		<!-- ===== WORKING BUILD ===== -->
+		<h2 id="build">Working build</h2>
+		<p>The structural skeleton — every page, real verse text, the Bible picker, the funnel mock. Currently wearing concept 1's stylesheet.</p>
+		<ul class="links">
+			<li><a href="home.html">Home page</a></li>
+			<li><a href="church.html">Your church</a></li>
+			<li><a href="designers.html">Designers</a></li>
+			<li><a href="shop.html">Shop (mock)</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="PROJECT_PLAN.md">Project plan</a></li>
+		</ul>
+	</main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Mack &amp; Pouya → the designer page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Mack & Pouya — "Love this site. Maybe a way to navigate     */
+		/* through church, designer, etc.?" The device: two loud colour      */
+		/* blocks (pink, yellow); a heavy display headline in coral and an   */
+		/* OUTLINED one in blue; photos in cut-out shapes (arch, rounded);   */
+		/* sparkle/smiley stickers; a tilted polaroid stack with confetti;   */
+		/* a horizontally scrolling gallery; a little CHAT bubble. Here it's */
+		/* a designer's page — and the blocks are the navigation he asked   */
+		/* about: Church / Designer / Shop.                                    */
+		/* ================================================================== */
+		:root { --pink:#ffb3c7; --yellow:#fff27a; --coral:#ff6a4d; --blue:#2f5bff; --ink:#1a1a1a; --font_heavy:'Rubik Mono One', Impact, sans-serif; --font_body:'Rubik', system-ui, sans-serif; --font_hand:'Caveat', cursive; }
+		* { box-sizing:border-box; }
+		body { margin:0; background:var(--pink); color:var(--ink); font:15px/1.55 var(--font_body); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--ink); color:#fff; font:12px/1.4 system-ui, sans-serif; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.top { display:flex; justify-content:space-between; align-items:center; padding:16px 28px; }
+		.top .brand { font:700 26px/1 var(--font_hand); transform:rotate(-4deg); display:inline-block; }
+		.top nav { display:flex; gap:22px; font:400 11px/1 var(--font_heavy); letter-spacing:.04em; }
+		.top nav a { color:var(--ink); text-decoration:none; }
+		.top nav a::before { content:'\2726 '; color:var(--coral); }
+
+		/* ---- block 1: pink — the headline and the cut-out photo ---- */
+		.b1 { padding:30px 28px 60px; position:relative; overflow:hidden; }
+		.b1 h1 { margin:0 0 30px; text-align:center; font:400 clamp(1.8rem, 5.2vw, 3.8rem)/1.05 var(--font_heavy); color:var(--coral); text-shadow:3px 3px 0 var(--yellow); }
+		.b1 .arch { width:min(72vw, 360px); aspect-ratio:3/4; margin:0 auto; border-radius:180px 180px 16px 16px; background:url("../../../assets/bloch-sermon-on-the-mount.jpg") center 20% / cover no-repeat; border:5px solid var(--yellow); box-shadow:12px 12px 0 var(--ink); position:relative; }
+		.sticker { position:absolute; font:400 12px/1 var(--font_heavy); background:#fff; border:3px solid var(--ink); border-radius:999px; padding:8px 12px; box-shadow:4px 4px 0 var(--ink); }
+		.b1 .s1 { left:8%; top:36%; transform:rotate(-10deg); background:var(--yellow); }
+		.b1 .s2 { right:8%; top:60%; transform:rotate(8deg); background:#7fe0ff; }
+		.b1 .spark { position:absolute; font-size:34px; color:var(--blue); }
+		.b1 .spark.a { left:14%; top:18%; } .b1 .spark.b { right:14%; top:22%; font-size:26px; color:var(--coral); }
+		.b1 .smile { position:absolute; right:10%; bottom:10%; width:120px; height:120px; border:3px solid var(--ink); border-radius:50%; background:#fff; display:grid; place-items:center; font:400 10px/1.2 var(--font_heavy); text-align:center; animation:spin 18s linear infinite; }
+		@keyframes spin { to { transform:rotate(360deg); } }
+
+		/* ---- block 2: yellow — the polaroid and the outlined "hey there" ---- */
+		.b2 { background:var(--yellow); padding:60px 28px; display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:40px; align-items:center; position:relative; }
+		.polaroid { position:relative; width:min(100%, 320px); justify-self:center; }
+		.polaroid .card { background:#fff; padding:14px 14px 52px; box-shadow:10px 10px 0 var(--pink), 10px 10px 0 3px var(--ink); transform:rotate(-6deg); border:3px solid var(--ink); }
+		.polaroid .card .img { aspect-ratio:1; background:#f1efe6; display:grid; place-items:center; font:400 4rem/1 var(--font_heavy); color:var(--ink); }
+		.polaroid .card .cap { position:absolute; left:20px; bottom:16px; font:700 22px/1 var(--font_hand); transform:rotate(-2deg); }
+		.polaroid .confetti { position:absolute; inset:-20px; pointer-events:none; background-image:radial-gradient(var(--coral) 3px, transparent 4px), radial-gradient(var(--blue) 3px, transparent 4px), radial-gradient(#fff 3px, transparent 4px); background-size:60px 70px, 80px 50px, 50px 90px; background-position:0 0, 30px 20px, 10px 40px; opacity:.7; }
+		.b2 h2 { margin:0 0 16px; font:400 clamp(2.4rem, 7vw, 6rem)/.95 var(--font_heavy); color:transparent; -webkit-text-stroke:3px var(--blue); }
+		.b2 p { max-width:46ch; margin:0 0 12px; color:#6b6b6b; }
+		.b2 .sig { font:700 22px/1 var(--font_hand); }
+		.b2 .sig b { display:block; font:400 14px/1 var(--font_heavy); color:var(--coral); margin-top:6px; }
+		.b2 .moon { position:absolute; width:40px; height:40px; border:3px solid var(--ink); border-radius:50%; background:var(--yellow); box-shadow:inset 10px -4px 0 0 var(--ink); }
+		.b2 .moon.l { left:40px; bottom:40px; } .b2 .moon.r { right:40px; bottom:40px; }
+
+		/* ---- block 3: the blocks ARE the navigation (his question) ---- */
+		.b3 { padding:60px 28px 100px; background:#fff; }
+		.b3 h3 { margin:0 0 20px; text-align:center; font:400 14px/1 var(--font_heavy); letter-spacing:.08em; }
+		.b3 .blocks { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:18px; }
+		.b3 .blocks a { display:grid; place-items:center; aspect-ratio:1.1; text-decoration:none; color:var(--ink); border:3px solid var(--ink); border-radius:24px; font:400 clamp(1.2rem, 3vw, 2rem)/1 var(--font_heavy); box-shadow:8px 8px 0 var(--ink); transition:transform .15s; text-align:center; padding:20px; }
+		.b3 .blocks a:hover { transform:translate(-3px, -3px) rotate(-1deg); }
+		.b3 .blocks .c { background:var(--pink); } .b3 .blocks .d { background:var(--yellow); } .b3 .blocks .s { background:#7fe0ff; }
+		.chat { position:fixed; right:24px; bottom:24px; width:74px; height:74px; border-radius:50%; background:var(--yellow); border:3px solid var(--ink); display:grid; place-items:center; font:400 11px/1 var(--font_heavy); box-shadow:4px 4px 0 var(--ink); }
+		/* gallery: horizontal scroll of designs */
+		.gallery { display:flex; gap:16px; overflow-x:auto; padding:20px 28px 40px; background:var(--pink); scroll-snap-type:x mandatory; }
+		.gallery > div { flex:0 0 220px; aspect-ratio:3/4; border-radius:16px; border:3px solid var(--ink); background:#fff; display:grid; place-items:center; font:400 3rem/1 var(--font_heavy); scroll-snap-align:start; }
+		.gallery > div:nth-child(odd) { border-radius:110px 110px 16px 16px; }
+		@media (max-width:760px) { .b2 { grid-template-columns:1fr; } }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid #ddd; font:12px/1.6 system-ui, sans-serif; color:#555; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#store">← Breakdown</a><span>Study · <strong>Mack &amp; Pouya</strong> · "Maybe a way to navigate through church, designer, etc.?"</span><a href="https://www.mackandpouya.com" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<header class="top"><span class="brand">Designer One</span><nav><a href="#">About</a><a href="#">Designs</a><a href="#">Church</a><a href="#">Shop</a></nav></header>
+
+	<!-- ===== block 1: pink ===== -->
+	<section class="b1">
+		<h1>Your cheerleader<br>with a Sharpie</h1>
+		<div class="arch" role="img" aria-label="stand-in image: Bloch, Sermon on the Mount">
+			<span class="sticker s1">love God</span>
+			<span class="sticker s2">love your neighbor</span>
+		</div>
+		<span class="spark a" aria-hidden="true">✦</span><span class="spark b" aria-hidden="true">✦</span>
+		<div class="smile" aria-hidden="true">hand<br>lettered<br>·<br>Tampa</div>
+	</section>
+
+	<!-- ===== block 2: yellow — polaroid + outlined headline ===== -->
+	<section class="b2">
+		<div class="polaroid"><div class="confetti" aria-hidden="true"></div><div class="card"><div class="img">II</div><span class="cap">first run, 2026</span></div></div>
+		<div>
+			<h2>Hey<br>there!</h2>
+			<p>I'm Designer One — hand-letterer, warm textures, professional over-thinker of two words. I make shirts about the two things Jesus said everything hangs on, and a third of each one goes to the church you pick.</p>
+			<p class="sig">Your designer,<b>Designer One</b></p>
+		</div>
+		<span class="moon l" aria-hidden="true"></span><span class="moon r" aria-hidden="true"></span>
+	</section>
+
+	<!-- ===== gallery: the designs, horizontally ===== -->
+	<div class="gallery" aria-label="Designs"><div>II</div><div>✦</div><div>II</div><div>✦</div><div>II</div></div>
+
+	<!-- ===== block 3: the blocks are the navigation ===== -->
+	<section class="b3">
+		<h3>WHERE TO NEXT</h3>
+		<div class="blocks"><a class="c" href="#">Pick your<br>church</a><a class="d" href="#">More<br>designers</a><a class="s" href="#">Shop this<br>design</a></div>
+	</section>
+	<div class="chat" aria-hidden="true">CHAT</div>
+	<p class="study-note">What's borrowed: the pink and yellow blocks; the coral heavy headline with a yellow drop and the blue <em>outlined</em> "Hey there!"; a photo in an arch cut-out with sticker labels; sparkles and a spinning badge; the tilted polaroid with confetti; a horizontal gallery; a CHAT bubble; and — his question — the coloured blocks as the navigation: church / designer / shop. Image stand-in: Bloch (public domain).</p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Jitter "Blend Modes, Circle Stack" → the II mark</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+	<style>
+		/* ================================================================== */
+		/* STUDY: Jitter — storyboard row 2: "Look at the 'Blend Modes, Circle */
+		/* Stack' template… different designs, one on top of the other."       */
+		/* The device: overlapping circles in a few colours with               */
+		/* mix-blend-mode, drifting slowly, so the overlaps make new colours;  */
+		/* the mark sits inside; then the stack fades to the four Gospel       */
+		/* buttons (row 5). Also Pierre Hermé: the loader is itself a drawing.  */
+		/* ================================================================== */
+		:root { --bg:#f3efe6; --ink:#1d1a16; --font_serif:'Fraunces', Georgia, serif; --font_body:'Inter', system-ui, sans-serif; }
+		* { box-sizing:border-box; }
+		body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 var(--font_body); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--ink); color:#fff; font-size:12px; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.stage { min-height:100svh; display:grid; place-items:center; text-align:center; padding:60px 24px; }
+		.stack { position:relative; width:min(78vw, 460px); aspect-ratio:1; isolation:isolate; }
+		.stack .c { position:absolute; width:62%; aspect-ratio:1; border-radius:50%; mix-blend-mode:multiply; opacity:.9; animation:orbit var(--t, 14s) ease-in-out infinite alternate; }
+		.stack .c1 { left:6%; top:8%; background:#2f6b45; --t:15s; }          /* Matthew */
+		.stack .c2 { right:6%; top:12%; background:#c0392b; --t:17s; animation-delay:-4s; }   /* Mark */
+		.stack .c3 { left:12%; bottom:6%; background:#2b6cb0; --t:19s; animation-delay:-8s; } /* Luke */
+		.stack .c4 { right:10%; bottom:8%; background:#d4a017; --t:13s; animation-delay:-2s; } /* John */
+		@keyframes orbit { from { transform:translate(0, 0) scale(1); } to { transform:translate(-6%, 8%) scale(1.08); } }
+		.stack .mark { position:absolute; inset:0; display:grid; place-items:center; font:300 clamp(5rem, 22vw, 12rem)/1 var(--font_serif); font-variation-settings:'opsz' 144; color:var(--bg); mix-blend-mode:screen; letter-spacing:-.04em; }
+		.stage h1 { margin:34px 0 6px; font:600 1.1rem/1 var(--font_serif); letter-spacing:.02em; }
+		.stage p { margin:0; font-size:12px; color:#6e675c; letter-spacing:.12em; text-transform:uppercase; }
+		/* the stack becomes the four buttons */
+		.four { min-height:70svh; display:grid; place-items:center; padding:40px 24px 100px; }
+		.four ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:14px; width:min(100%, 44rem); }
+		.four li a { display:grid; place-items:center; gap:10px; aspect-ratio:1; border-radius:50%; text-decoration:none; color:#fff; font:600 clamp(.8rem, 2vw, 1.05rem)/1 var(--font_serif); transition:transform .3s cubic-bezier(.16,1,.3,1); }
+		.four li a:hover { transform:scale(1.06); }
+		.four li a small { font:400 9px/1 var(--font_body); letter-spacing:.14em; text-transform:uppercase; opacity:.85; }
+		.four .m { background:#2f6b45; } .four .k { background:#c0392b; } .four .l { background:#2b6cb0; } .four .j { background:#d4a017; }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid #d9d0c1; font-size:13px; color:#6e675c; }
+		@media (prefers-reduced-motion: reduce) { .stack .c, .stack .mark { animation:none; } }
+	</style>
+</head>
+<body>
+	<nav class="study-bar"><a href="../../../#message">← Breakdown</a><span>Study · <strong>Jitter "Blend Modes, Circle Stack"</strong> + Pierre Hermé · storyboard rows 2 and 5</span><a href="https://jitter.video/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<!-- ===== the mark inside a drifting stack of blended circles ===== -->
+	<section class="stage">
+		<div>
+			<div class="stack" aria-label="II Commandments mark"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="mark" aria-hidden="true">II</div></div>
+			<h1>II Commandments</h1>
+			<p>Four colours · one mark · the overlaps make the rest</p>
+		</div>
+	</section>
+
+	<!-- ===== the stack resolves into the four Gospel buttons (row 5) ===== -->
+	<section class="four">
+		<ul>
+			<li><a class="m" href="#">Matthew<small>winged man</small></a></li>
+			<li><a class="k" href="#">Mark<small>lion</small></a></li>
+			<li><a class="l" href="#">Luke<small>ox</small></a></li>
+			<li><a class="j" href="#">John<small>eagle</small></a></li>
+		</ul>
+	</section>
+	<p class="study-note">What's borrowed: Jitter's circle-stack with blend modes — four discs in the four Gospel colours, multiplying where they overlap, drifting slowly; the mark set into them in a light serif; then the same four colours become the four Gospel buttons the storyboard asks for. This is a placeholder for the official logo — the device would carry whatever mark he supplies.</p>
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* ========================================================================== */
+/* II COMMANDMENTS — stylesheet                                               */
+/* Naming contract: `--group_name` tokens, flat block classes with descendant  */
+/* selectors, `.is-*` state classes. One banner per block, in DOM order.       */
+/* DESIGN PASS 01 (2026-09-30) — from design-iterations/inspiration:           */
+/*   paper, not black (Graza, atterwasch) · one serif line at a time (Slavery */
+/*   Footprint, sofi) · Gospels as chapters, each a colour world (atterwasch,  */
+/*   De La Calle, Every Last Drop) · related verses in a drawer (Benno's       */
+/*   Light) · the one dark beat is "If you love me".                          */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* TOKENS                                                                     */
+/* ========================================================================== */
+:root {
+	color-scheme: light;
+
+	/* palette — paper and ink, one warm accent, four gospel worlds */
+	--color_paper:#f4efe6;
+	--color_paper-deep:#ebe3d4;
+	--color_ink:#1d1a16;
+	--color_ink-soft:#4a443c;
+	--color_ink-muted:#6e675c;   /* 5.6:1 on paper */
+	--color_line:#d9d0c1;
+	--color_line-strong:#b9ad99;
+	--color_accent:#8a3b12;      /* burnt sienna — the one accent */
+	--color_accent-soft:color-mix(in srgb, var(--color_accent), var(--color_paper) 86%);
+	--color_white:#fff;
+	--color_bg-primary:var(--color_paper);
+	--color_bg-dark:var(--color_ink);
+	--color_text:var(--color_ink);
+	--color_text-muted:var(--color_ink-muted);
+	--color_text-on-dark:var(--color_paper);
+	--color_link:var(--color_accent);
+	--color_focus:var(--color_accent);
+	--color_card:#faf7f0;
+
+	/* gospels — colour worlds (storyboard: green, red, blue, gold), tuned to paper */
+	--gospel_matthew:#2f6b45;
+	--gospel_mark:#9c2f24;
+	--gospel_luke:#27507f;
+	--gospel_john:#8c6a12;
+	--gospel_matthew-soft:#e2ebe3;
+	--gospel_mark-soft:#f0dfda;
+	--gospel_luke-soft:#dde6ef;
+	--gospel_john-soft:#f0e7cf;
+
+	/* type — Google Fonts only: Fraunces (opsz) for display, Inter for the working text */
+	--font_name-primary:'Inter', system-ui, sans-serif;
+	--font_name-display:'Fraunces', Georgia, serif;
+	--font_size-xs:0.75rem;
+	--font_size-sm:0.875rem;
+	--font_size-md:1.0625rem;
+	--font_size-lg:1.375rem;
+	--font_size-xl:clamp(1.75rem, 3.2vw, 2.5rem);
+	--font_size-display:clamp(2.25rem, 6.5vw, 5.5rem);
+	--font_size-hero:clamp(2.5rem, 9vw, 8.5rem);
+	--line_height-body:1.6;
+	--line_height-display:1.02;
+	--tracking_display:-0.02em;
+
+	/* space */
+	--gutter:clamp(20px, 5vw, 64px);
+	--space_xs:4px;
+	--space_sm:8px;
+	--space_md:16px;
+	--space_lg:32px;
+	--space_xl:64px;
+	--space_2xl:112px;
+	--measure:60ch;
+
+	/* shape + motion */
+	--radius_sm:4px;
+	--radius_md:10px;
+	--radius_pill:999px;
+	--motion_fast:180ms;
+	--motion_slow:900ms;
+	--motion_ease:cubic-bezier(.2,.7,.2,1);
+	--motion_ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+/* ========================================================================== */
+/* BASE                                                                       */
+/* ========================================================================== */
+*, *::before, *::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+	margin:0;
+	background:var(--color_bg-primary);
+	color:var(--color_text);
+	font:var(--font_size-md)/var(--line_height-body) var(--font_name-primary);
+	-webkit-font-smoothing:antialiased;
+	transition:background-color var(--motion_slow) var(--motion_ease);
+}
+/* paper grain — a whisper, not a texture */
+body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.35;
+	background-image:radial-gradient(rgba(29,26,22,.06) 1px, transparent 1px); background-size:3px 3px; }
+main, header, footer { position:relative; z-index:1; }
+h1, h2, h3 { font-family:var(--font_name-display); font-weight:400; line-height:var(--line_height-display); letter-spacing:var(--tracking_display); margin:0 0 var(--space_md); font-variation-settings:'opsz' 144; }
+h1 { font-size:var(--font_size-display); }
+h2 { font-size:var(--font_size-xl); }
+h3 { font-size:var(--font_size-lg); }
+p { margin:0 0 var(--space_md); max-width:var(--measure); }
+a { color:var(--color_link); text-underline-offset:.15em; }
+img, svg { max-width:100%; height:auto; display:block; }
+button, select, input { font:inherit; color:inherit; }
+:focus-visible { outline:3px solid var(--color_focus); outline-offset:3px; }
+[hidden] { display:none !important; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip-link { position:absolute; left:var(--gutter); top:-100px; background:var(--color_ink); color:var(--color_paper); padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); z-index:100; }
+.skip-link:focus { top:var(--space_md); }
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior:auto; }
+	*, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+}
+
+/* ========================================================================== */
+/* SHARED CONTROLS                                                            */
+/* ========================================================================== */
+.btn {
+	display:inline-flex; align-items:center; gap:var(--space_sm);
+	min-height:48px; padding:var(--space_sm) var(--space_lg);
+	border:1px solid currentColor; border-radius:var(--radius_pill);
+	background:transparent; color:inherit; cursor:pointer;
+	font-size:var(--font_size-sm); letter-spacing:.02em; text-decoration:none;
+	transition:background var(--motion_fast), color var(--motion_fast), transform var(--motion_fast);
+}
+.btn:hover { background:var(--color_ink); color:var(--color_paper); border-color:var(--color_ink); }
+.btn-primary { background:var(--color_ink); color:var(--color_paper); border-color:var(--color_ink); }
+.btn-primary:hover { background:var(--color_accent); border-color:var(--color_accent); }
+.btn-ghost { border-color:transparent; }
+.btn-ghost:hover { background:transparent; color:var(--color_accent); border-color:transparent; text-decoration:underline; }
+.btn svg { width:18px; height:18px; }
+.panel.is-dark .btn { border-color:currentColor; color:inherit; }
+.panel.is-dark .btn:hover { background:var(--color_paper); color:var(--color_ink); }
+.panel.is-dark .btn-primary { background:var(--color_paper); color:var(--color_ink); border-color:var(--color_paper); }
+.panel.is-dark .btn-primary:hover { background:var(--color_white); }
+
+.field { display:grid; gap:var(--space_xs); margin-bottom:var(--space_md); max-width:var(--measure); }
+.field label { font-size:var(--font_size-xs); letter-spacing:.12em; text-transform:uppercase; color:var(--color_text-muted); }
+.field select, .field input { min-height:48px; padding:var(--space_sm) var(--space_md); border:1px solid var(--color_line-strong); border-radius:var(--radius_sm); background:var(--color_white); }
+
+.pill { display:inline-flex; align-items:center; gap:var(--space_xs); padding:2px var(--space_md); border:1px solid var(--color_line-strong); border-radius:var(--radius_pill); font-size:var(--font_size-sm); }
+.pill.is-hidden { display:none; }
+.eyebrow { font-size:var(--font_size-xs); letter-spacing:.16em; text-transform:uppercase; color:var(--color_text-muted); margin-bottom:var(--space_sm); }
+
+/* ========================================================================== */
+/* TOAST                                                                      */
+/* ========================================================================== */
+.toast {
+	position:fixed; left:50%; bottom:var(--space_lg); transform:translate(-50%, 20px);
+	padding:var(--space_sm) var(--space_lg); background:var(--color_ink); color:var(--color_paper);
+	border-radius:var(--radius_pill); font-size:var(--font_size-sm); opacity:0; pointer-events:none; z-index:90;
+	transition:opacity var(--motion_fast), transform var(--motion_fast) var(--motion_ease);
+}
+.toast.is-open { opacity:1; transform:translate(-50%, 0); }
+
+/* ========================================================================== */
+/* TOPBAR — hairline nav; on the home page it stays out of the way            */
+/* ========================================================================== */
+.topbar {
+	position:sticky; top:0; z-index:50;
+	display:flex; align-items:center; justify-content:space-between; gap:var(--space_md);
+	padding:var(--space_sm) var(--gutter);
+	background:color-mix(in srgb, var(--color_paper), transparent 12%); backdrop-filter:blur(10px);
+	border-bottom:1px solid transparent;
+	transition:border-color var(--motion_fast);
+}
+body.is-scrolled .topbar { border-bottom-color:var(--color_line); }
+.topbar .brand { font-family:var(--font_name-display); text-decoration:none; color:var(--color_ink); font-size:var(--font_size-lg); letter-spacing:-.01em; }
+.primary-navigation { display:flex; flex-wrap:wrap; gap:var(--space_md) var(--space_lg); margin:0; padding:0; list-style:none; }
+.primary-navigation a { color:var(--color_ink-muted); text-decoration:none; font-size:var(--font_size-sm); min-height:24px; display:inline-flex; align-items:center; letter-spacing:.02em; }
+.primary-navigation a:hover, .primary-navigation a.is-current { color:var(--color_ink); }
+.primary-navigation a.is-current { text-decoration:underline; text-underline-offset:.35em; }
+
+/* ========================================================================== */
+/* PANEL — every home-page beat is one full-viewport panel; each rises in     */
+/* ========================================================================== */
+.panel {
+	min-height:100svh; display:grid; place-items:center; text-align:center;
+	padding:var(--space_2xl) var(--gutter); position:relative;
+	transition:background-color var(--motion_slow) var(--motion_ease), color var(--motion_slow) var(--motion_ease);
+}
+.panel > .panel-inner { width:min(100%, 76rem); }
+.panel > .panel-inner > p { margin-inline:auto; }
+.panel.is-dark { background:var(--color_bg-dark); color:var(--color_text-on-dark); }
+.panel.is-dark .eyebrow { color:color-mix(in srgb, var(--color_paper), transparent 35%); }
+.panel-nav { position:absolute; bottom:var(--space_lg); left:50%; transform:translateX(-50%); }
+.panel-nav a { color:inherit; text-decoration:none; font-size:var(--font_size-xs); letter-spacing:.16em; text-transform:uppercase; display:inline-flex; flex-direction:column; align-items:center; gap:var(--space_sm); min-height:24px; opacity:.7; }
+.panel-nav a:hover { opacity:1; }
+.panel-nav svg { animation:tc-nudge 2.4s var(--motion_ease) infinite; }
+@keyframes tc-nudge { 0%, 100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
+
+/* rise-in for everything inside a panel (tcWatchPanels adds .is-seen) */
+.panel .panel-inner > * { opacity:0; transform:translateY(18px); transition:opacity var(--motion_slow) var(--motion_ease-out), transform var(--motion_slow) var(--motion_ease-out); }
+.panel.is-seen .panel-inner > * { opacity:1; transform:none; }
+.panel.is-seen .panel-inner > *:nth-child(2) { transition-delay:120ms; }
+.panel.is-seen .panel-inner > *:nth-child(3) { transition-delay:240ms; }
+.panel.is-seen .panel-inner > *:nth-child(4) { transition-delay:360ms; }
+.panel.is-seen .panel-inner > *:nth-child(n+5) { transition-delay:480ms; }
+@media (prefers-reduced-motion: reduce) { .panel .panel-inner > * { opacity:1; transform:none; } }
+
+/* ========================================================================== */
+/* VERSE — one styled scripture block; text is filled from verses.js         */
+/* ========================================================================== */
+.verse { margin:0 auto; max-width:var(--measure); text-align:left; }
+.verse .verse-text { font-family:var(--font_name-display); font-size:var(--font_size-lg); line-height:1.45; margin:0 0 var(--space_sm); font-variation-settings:'opsz' 72; }
+.verse .verse-text .verse-num { font-family:var(--font_name-primary); font-size:var(--font_size-xs); vertical-align:super; color:var(--color_text-muted); margin-right:2px; }
+.verse .verse-ref { display:block; font-family:var(--font_name-primary); font-style:normal; font-size:var(--font_size-xs); letter-spacing:.14em; text-transform:uppercase; color:var(--color_text-muted); }
+.panel.is-dark .verse .verse-ref, .panel.is-dark .verse .verse-num { color:color-mix(in srgb, var(--color_paper), transparent 35%); }
+.verse.is-hero { max-width:none; }
+.verse.is-hero .verse-text { font-size:var(--font_size-hero); text-align:center; line-height:.98; letter-spacing:-.03em; font-variation-settings:'opsz' 144, 'wght' 300; text-wrap:balance; }
+.verse.is-hero .verse-ref { text-align:center; margin-top:var(--space_lg); }
+.verse.is-display { max-width:none; }
+.verse.is-display .verse-text { font-size:var(--font_size-display); text-align:center; line-height:1.05; letter-spacing:-.02em; font-variation-settings:'opsz' 144, 'wght' 300; text-wrap:balance; }
+.verse.is-display .verse-ref { text-align:center; margin-top:var(--space_md); }
+.verse.is-loading .verse-text { opacity:.4; }
+
+/* animated words / letters (tcAnimateWords) */
+.verse .anim-unit { display:inline-block; opacity:0; transform:translateY(.25em) rotate(.5deg); filter:blur(4px); transition:opacity var(--motion_slow) var(--motion_ease-out), transform var(--motion_slow) var(--motion_ease-out), filter var(--motion_slow) var(--motion_ease-out); }
+.verse .anim-unit.is-in { opacity:1; transform:none; filter:blur(0); }
+.verse[data-anim="fade"] .verse-text { opacity:0; transition:opacity 1.4s var(--motion_ease); }
+.verse[data-anim="fade"].is-in .verse-text { opacity:1; }
+
+/* two-part reveal (John 14:15) — the second half arrives late, on purpose */
+.reveal .reveal-part { display:block; opacity:0; transform:translateY(.3em); transition:opacity 1.1s var(--motion_ease-out), transform 1.1s var(--motion_ease-out); }
+.reveal.is-revealed .reveal-part:nth-child(1) { opacity:1; transform:none; }
+.reveal.is-revealed .reveal-part:nth-child(2) { opacity:1; transform:none; transition-delay:1.4s; }
+.reveal .reveal-part:nth-child(2) { font-style:italic; }
+
+/* ========================================================================== */
+/* BIBLE PICKER — a quiet line of text with a select disguised as a link      */
+/* ========================================================================== */
+.bible-picker { display:inline-grid; gap:var(--space_xs); justify-items:center; margin-top:var(--space_xl); }
+.bible-picker label { font-size:var(--font_size-xs); letter-spacing:.16em; text-transform:uppercase; color:var(--color_text-muted); }
+.bible-picker select { min-height:44px; padding:var(--space_xs) var(--space_md); border:0; border-bottom:1px solid currentColor; border-radius:0; background:transparent; color:inherit; font-family:var(--font_name-display); font-size:var(--font_size-md); text-align:center; cursor:pointer; }
+.bible-picker .picker-note { font-size:var(--font_size-xs); color:var(--color_text-muted); margin:var(--space_xs) 0 0; }
+.panel.is-dark .bible-picker label, .panel.is-dark .bible-picker .picker-note { color:color-mix(in srgb, var(--color_paper), transparent 35%); }
+
+/* ========================================================================== */
+/* HERO — panel 1: the verse, and nothing else                                */
+/* ========================================================================== */
+.hero { background:var(--color_paper); }
+.hero .panel-inner { width:min(100%, 88rem); }
+
+/* ========================================================================== */
+/* LOGO — panel 2: the mark, small, breathing                                 */
+/* ========================================================================== */
+.logo { background:var(--color_paper-deep); }
+.logo-mark { width:min(38vw, 240px); margin:0 auto var(--space_lg); animation:tc-breathe 6s var(--motion_ease) infinite; }
+@keyframes tc-breathe { 0%, 100% { transform:scale(1); } 50% { transform:scale(1.03); } }
+
+/* ========================================================================== */
+/* LOVE — panel 3: the one dark beat                                          */
+/* ========================================================================== */
+.love { background:var(--color_ink); }
+
+/* ========================================================================== */
+/* GOSPELS — panel 5: four chapters, a list you can read (atterwasch),        */
+/* each in its own colour (De La Calle)                                       */
+/* ========================================================================== */
+.gospels { background:var(--color_paper); }
+.gospel-picker { display:grid; gap:0; margin:var(--space_lg) auto; max-width:56rem; text-align:left; border-top:1px solid var(--color_line-strong); }
+.gospel-btn {
+	display:grid; grid-template-columns:3ch 1fr auto; align-items:center; gap:var(--space_md);
+	width:100%; padding:var(--space_md) var(--space_sm); border:0; border-bottom:1px solid var(--color_line-strong);
+	background:transparent; color:var(--color_ink); cursor:pointer; text-align:left;
+	transition:background var(--motion_fast), padding-left var(--motion_fast) var(--motion_ease);
+}
+.gospel-btn:hover, .gospel-btn.is-active { background:var(--gospel_soft); padding-left:var(--space_md); }
+.gospel-btn img { display:none; }
+.gospel-btn .gospel-n { font-family:var(--font_name-display); font-size:var(--font_size-lg); color:var(--gospel_color); font-variation-settings:'opsz' 144; }
+.gospel-btn .gospel-name { font-family:var(--font_name-display); font-size:var(--font_size-xl); line-height:1; letter-spacing:-.01em; }
+.gospel-btn .gospel-symbol { font-size:var(--font_size-xs); letter-spacing:.14em; text-transform:uppercase; color:var(--gospel_color); }
+.gospel-btn.is-active .gospel-name::after { content:' \2192'; color:var(--gospel_color); }
+.gospel-btn[data-gospel="matthew"] { --gospel_color:var(--gospel_matthew); --gospel_soft:var(--gospel_matthew-soft); }
+.gospel-btn[data-gospel="mark"]    { --gospel_color:var(--gospel_mark);    --gospel_soft:var(--gospel_mark-soft); }
+.gospel-btn[data-gospel="luke"]    { --gospel_color:var(--gospel_luke);    --gospel_soft:var(--gospel_luke-soft); }
+.gospel-btn[data-gospel="john"]    { --gospel_color:var(--gospel_john);    --gospel_soft:var(--gospel_john-soft); }
+@media (max-width:560px) { .gospel-btn { grid-template-columns:2.5ch 1fr; } .gospel-btn .gospel-symbol { grid-column:2; } }
+
+/* ========================================================================== */
+/* VERSES — panel 6: the passages; the panel takes the chosen Gospel's colour  */
+/* ========================================================================== */
+.verses { background:var(--color_paper); }
+body[data-gospel="matthew"] .verses { background:var(--gospel_matthew-soft); }
+body[data-gospel="mark"] .verses    { background:var(--gospel_mark-soft); }
+body[data-gospel="luke"] .verses    { background:var(--gospel_luke-soft); }
+body[data-gospel="john"] .verses    { background:var(--gospel_john-soft); }
+.passages { display:grid; gap:var(--space_md); max-width:var(--measure); margin:var(--space_lg) auto 0; text-align:left; }
+.passage { border-top:1px solid var(--color_line-strong); background:transparent; }
+.passage[data-gospel="matthew"] { --gospel_color:var(--gospel_matthew); }
+.passage[data-gospel="mark"]    { --gospel_color:var(--gospel_mark); }
+.passage[data-gospel="luke"]    { --gospel_color:var(--gospel_luke); }
+.passage[data-gospel="john"]    { --gospel_color:var(--gospel_john); }
+.passage summary { cursor:pointer; padding:var(--space_md) 0; font-family:var(--font_name-display); font-size:var(--font_size-xl); letter-spacing:-.01em; list-style:none; display:flex; justify-content:space-between; align-items:baseline; color:var(--gospel_color); }
+.passage summary::-webkit-details-marker { display:none; }
+.passage summary::after { content:'+'; font-family:var(--font_name-primary); font-size:var(--font_size-md); color:var(--color_text-muted); }
+.passage[open] summary::after { content:'\2013'; }
+.passage .passage-body { padding:0 0 var(--space_lg); }
+.passage .passage-body .verse .verse-text { font-size:var(--font_size-lg); }
+.passage.is-chosen { order:-1; }
+.passage.is-chosen summary { font-size:var(--font_size-display); }
+
+/* ========================================================================== */
+/* DEEPER — panel 11 trigger: one line and a button; the verses live in the   */
+/* drawer (Benno's Light "All Chapters")                                      */
+/* ========================================================================== */
+.deeper { background:var(--color_paper-deep); min-height:60svh; }
+
+/* ========================================================================== */
+/* DRAWER — related verses as an index that opens over the page               */
+/* ========================================================================== */
+.drawer { position:fixed; inset:0; z-index:80; display:grid; grid-template-columns:1fr min(100%, 40rem); pointer-events:none; }
+.drawer-scrim { background:color-mix(in srgb, var(--color_ink), transparent 40%); opacity:0; transition:opacity var(--motion_fast); }
+.drawer-panel { background:var(--color_paper); color:var(--color_ink); overflow:auto; padding:var(--space_lg) var(--gutter) var(--space_2xl); transform:translateX(100%); transition:transform var(--motion_slow) var(--motion_ease-out); box-shadow:-24px 0 60px rgba(29,26,22,.25); }
+.drawer.is-open { pointer-events:auto; }
+.drawer.is-open .drawer-scrim { opacity:1; }
+.drawer.is-open .drawer-panel { transform:none; }
+.drawer-head { display:flex; justify-content:space-between; align-items:center; gap:var(--space_md); margin-bottom:var(--space_lg); }
+.drawer-head h2 { margin:0; }
+.drawer-close { min-width:44px; min-height:44px; display:inline-grid; place-items:center; border:1px solid var(--color_line-strong); border-radius:50%; background:transparent; cursor:pointer; }
+.related { display:grid; gap:0; text-align:left; border-top:1px solid var(--color_line-strong); }
+.related .related-card { padding:var(--space_md) 0; border-bottom:1px solid var(--color_line); }
+.related .related-card summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:baseline; gap:var(--space_md); font-family:var(--font_name-display); font-size:var(--font_size-lg); }
+.related .related-card summary::-webkit-details-marker { display:none; }
+.related .related-card summary::after { content:'+'; font-family:var(--font_name-primary); font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.related .related-card[open] summary::after { content:'\2013'; }
+.related .related-card .verse { margin-top:var(--space_md); }
+.related .related-card .verse .verse-text { font-size:var(--font_size-md); }
+@media (max-width:640px) { .drawer { grid-template-columns:1fr; } .drawer-scrim { display:none; } }
+
+/* ========================================================================== */
+/* SHARE — panel 12: the sending, and the way out                             */
+/* ========================================================================== */
+.share { background:var(--color_paper); }
+.share .verse .verse-text { font-variation-settings:'opsz' 144, 'wght' 300; }
+.share .share-actions { display:flex; flex-wrap:wrap; gap:var(--space_md); justify-content:center; margin-top:var(--space_xl); }
+
+/* ========================================================================== */
+/* PAGE — inner pages (church, designers, shop, about) share one frame       */
+/* ========================================================================== */
+.page { width:min(100%, 64rem); margin:0 auto; padding:var(--space_xl) var(--gutter) var(--space_2xl); }
+.page-head { margin-bottom:var(--space_xl); }
+.page-head .page-context { display:flex; flex-wrap:wrap; gap:var(--space_sm); margin-top:var(--space_md); }
+
+/* ========================================================================== */
+/* CHURCH PICKER — panel 13                                                   */
+/* ========================================================================== */
+.church-picker { display:grid; gap:var(--space_md); max-width:var(--measure); }
+.church-picker .church-name { font-family:var(--font_name-display); font-size:var(--font_size-display); min-height:1.2em; letter-spacing:-.02em; font-variation-settings:'opsz' 144, 'wght' 300; }
+.church-picker .church-name:empty::before { content:'\2014'; color:var(--color_text-muted); }
+.church-picker .church-actions { display:flex; flex-wrap:wrap; gap:var(--space_md); }
+
+/* ========================================================================== */
+/* DESIGNERS — grid of seed profiles + one profile view                       */
+/* ========================================================================== */
+.designer-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:var(--space_md); list-style:none; margin:0; padding:0; }
+.designer-card { display:grid; gap:var(--space_sm); padding:var(--space_lg); border:1px solid var(--color_line); border-radius:var(--radius_md); background:var(--color_card); }
+.designer-card a { color:inherit; text-decoration:none; }
+.designer-card .card-name { font-family:var(--font_name-display); font-size:var(--font_size-lg); }
+.designer-card .card-tags { display:flex; flex-wrap:wrap; gap:var(--space_xs); }
+.avatar { display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:var(--color_ink); color:var(--color_paper); font-weight:700; }
+.designer-profile { display:grid; gap:var(--space_lg); }
+.designer-profile .profile-head { display:flex; align-items:center; gap:var(--space_md); }
+.designer-profile .profile-story p { white-space:pre-line; }
+.design-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:var(--space_md); list-style:none; margin:0; padding:0; }
+.design-card { display:grid; gap:var(--space_sm); }
+.design-card img { aspect-ratio:1; width:100%; border:1px solid var(--color_line); border-radius:var(--radius_md); background:var(--color_white); }
+.design-card .btn { justify-self:start; }
+
+/* ========================================================================== */
+/* SHOP — panels 14–17 as one stepper (mock only, no cart)                   */
+/* ========================================================================== */
+.stepper { display:flex; flex-wrap:wrap; gap:var(--space_sm); list-style:none; margin:0 0 var(--space_xl); padding:0; counter-reset:step; }
+.stepper li { counter-increment:step; display:inline-flex; align-items:center; gap:var(--space_xs); padding:var(--space_xs) var(--space_md); border:1px solid var(--color_line-strong); border-radius:var(--radius_pill); font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.stepper li::before { content:counter(step); font-weight:700; }
+.stepper li.is-current { border-color:var(--color_ink); color:var(--color_ink); }
+.stepper li.is-done { text-decoration:line-through; }
+.shop-step { display:none; }
+.shop-step.is-current { display:block; }
+.shop-step .step-actions { display:flex; flex-wrap:wrap; gap:var(--space_md); margin-top:var(--space_lg); }
+.choice-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:var(--space_md); list-style:none; margin:0; padding:0; }
+.choice { display:grid; gap:var(--space_sm); padding:var(--space_md); border:2px solid var(--color_line); border-radius:var(--radius_md); background:var(--color_card); cursor:pointer; text-align:left; }
+.choice:hover { border-color:var(--color_line-strong); }
+.choice.is-active { border-color:var(--color_ink); }
+.choice img { aspect-ratio:1; width:100%; background:var(--color_white); border-radius:var(--radius_sm); }
+.choice .choice-title { font-family:var(--font_name-display); }
+.choice .choice-meta { font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.customize { display:grid; gap:var(--space_lg); grid-template-columns:1fr; }
+@media (min-width:860px) { .customize { grid-template-columns:1fr 1fr; } }
+.customize .customize-preview { aspect-ratio:1; display:grid; place-items:center; border:1px dashed var(--color_line-strong); border-radius:var(--radius_md); background:var(--color_white); color:var(--color_text-muted); }
+.order-summary { display:grid; gap:var(--space_md); max-width:var(--measure); padding:var(--space_lg); border:1px solid var(--color_line); border-radius:var(--radius_md); background:var(--color_card); }
+.order-summary dl { display:grid; grid-template-columns:auto 1fr; gap:var(--space_xs) var(--space_md); margin:0; }
+.order-summary dt { color:var(--color_text-muted); }
+.order-summary dd { margin:0; }
+
+/* ========================================================================== */
+/* SPLIT — the bar, used on shop + about                                      */
+/* ========================================================================== */
+.split { display:grid; gap:var(--space_sm); max-width:var(--measure); }
+.split .split-bar { display:flex; height:14px; border-radius:var(--radius_pill); overflow:hidden; border:1px solid var(--color_line-strong); }
+.split .split-seg { background:var(--color_ink); }
+.split .split-seg[data-split="church"]   { background:var(--gospel_matthew); }
+.split .split-seg[data-split="designer"] { background:var(--gospel_luke); }
+.split .split-seg[data-split="business"] { background:var(--gospel_john); }
+.split .split-seg[data-split="foundation"] { background:var(--gospel_mark); }
+.split .split-legend { display:flex; flex-wrap:wrap; gap:var(--space_md); list-style:none; margin:0; padding:0; font-size:var(--font_size-sm); }
+.split .split-legend li::before { content:''; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:var(--space_xs); background:var(--dot); }
+.split .split-legend li[data-split="church"]   { --dot:var(--gospel_matthew); }
+.split .split-legend li[data-split="designer"] { --dot:var(--gospel_luke); }
+.split .split-legend li[data-split="business"] { --dot:var(--gospel_john); }
+.split .split-legend li[data-split="foundation"] { --dot:var(--gospel_mark); }
+
+/* ========================================================================== */
+/* ABOUT                                                                      */
+/* ========================================================================== */
+.about-section { margin-bottom:var(--space_xl); }
+
+/* ========================================================================== */
+/* FOOTER                                                                     */
+/* ========================================================================== */
+.site-footer { padding:var(--space_xl) var(--gutter); border-top:1px solid var(--color_line); font-size:var(--font_size-sm); color:var(--color_text-muted); text-align:center; }
+.site-footer a { color:inherit; }

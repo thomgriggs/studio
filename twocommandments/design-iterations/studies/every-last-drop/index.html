@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Every Last Drop → II Commandments</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Every Last Drop — "Keeps you engaged through the whole       */
+		/* story." The device: a flat-illustrated scene, a SKY BAND across    */
+		/* the top whose colour changes as you scroll (morning → noon → dusk  */
+		/* → night), a sun/moon that moves, the wordmark stacked in the sky,  */
+		/* and each scene a flat colour room. The Gospels become the four     */
+		/* times of day.                                                       */
+		/* ================================================================== */
+		:root { --ink:#3b3b3b; --font_head:'Nunito', system-ui, sans-serif; --font_body:'Nunito Sans', system-ui, sans-serif; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; }
+		body { margin:0; color:#fff; font:16px/1.5 var(--font_body); background:#6b9fb0; }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:#fff; color:var(--ink); font-size:12px; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+
+		/* ---- the sky band: fixed, its colour follows the scene in view ---- */
+		.sky { position:fixed; top:28px; left:0; right:0; height:150px; z-index:5; transition:background-color 1.2s ease; background:var(--sky, #7fb3c2); display:flex; align-items:center; padding:0 40px; }
+		.sky .wordmark { font:900 34px/0.92 var(--font_head); text-transform:uppercase; letter-spacing:-.01em; display:grid; }
+		.sky .wordmark span { display:block; }
+		.sky .star { position:absolute; top:22px; left:var(--x, 70%); width:84px; height:84px; border-radius:50%; background:var(--star, #f4b942); transition:left 1.2s ease, background-color 1.2s ease, box-shadow 1.2s ease; box-shadow:0 0 0 12px rgba(255,255,255,.08); }
+		body[data-scene="morning"] .sky { --sky:#7fb3c2; } body[data-scene="morning"] .sky .star { --x:22%; --star:#f4b942; }
+		body[data-scene="noon"] .sky { --sky:#5fa8d3; } body[data-scene="noon"] .sky .star { --x:48%; --star:#ffd25a; }
+		body[data-scene="dusk"] .sky { --sky:#d98a6a; } body[data-scene="dusk"] .sky .star { --x:74%; --star:#ff8b4a; }
+		body[data-scene="night"] .sky { --sky:#2b3a5a; } body[data-scene="night"] .sky .star { --x:80%; --star:#f1efe6; box-shadow:0 0 0 12px rgba(255,255,255,.05), inset -22px -8px 0 0 #2b3a5a; }
+		.sky .stars { position:absolute; inset:0; opacity:0; transition:opacity 1.2s; background-image:radial-gradient(#fff 1px, transparent 1.5px); background-size:60px 40px; }
+		body[data-scene="night"] .sky .stars { opacity:.5; }
+
+		/* ---- scenes: flat colour rooms with a few flat objects ---- */
+		.scene { min-height:100svh; padding:220px 40px 120px; position:relative; overflow:hidden; display:grid; align-content:center; justify-items:center; text-align:center; }
+		.scene .room { width:min(100%, 44rem); }
+		.scene h2 { margin:0 0 10px; font:900 12px/1 var(--font_head); letter-spacing:.24em; text-transform:uppercase; opacity:.85; }
+		.scene .verse-text { margin:0 0 12px; font:700 clamp(1.4rem, 3.6vw, 2.4rem)/1.3 var(--font_head); }
+		.scene .verse-ref { font:600 11px/1 var(--font_body); letter-spacing:.2em; text-transform:uppercase; font-style:normal; opacity:.8; }
+		.scene.morning { background:#d89f92; }  /* the bedroom pink */
+		.scene.noon { background:#a7c48a; }
+		.scene.dusk { background:#c9865e; }
+		.scene.night { background:#3a4a6b; }
+		/* flat furniture, drawn in CSS so the study owns its illustration */
+		.prop { position:absolute; background:#4a3b31; }
+		.prop.bed { left:50%; bottom:80px; transform:translateX(-50%); width:280px; height:150px; border-radius:6px 6px 0 0; }
+		.prop.bed::before { content:''; position:absolute; left:14px; right:14px; top:26px; height:70px; background:#f1dd8a; }
+		.prop.bed::after { content:''; position:absolute; left:20px; top:8px; width:60px; height:22px; background:#f4e7b0; border-radius:4px; box-shadow:76px 0 0 #f4e7b0; }
+		.prop.plant { right:12%; bottom:80px; width:12px; height:60px; background:#6c8b5a; }
+		.prop.plant::before { content:''; position:absolute; left:-24px; top:-44px; width:60px; height:60px; border-radius:50%; background:#8fbf5e; }
+		.prop.plant::after { content:''; position:absolute; left:-18px; bottom:-18px; width:48px; height:24px; background:#7fb3c2; border-radius:0 0 8px 8px; }
+		.prop.rug { left:12%; bottom:60px; width:180px; height:60px; background:#7fb3c2; border-left:6px dotted #fff; border-right:6px dotted #fff; }
+		.prop.table { left:50%; bottom:80px; transform:translateX(-50%); width:220px; height:16px; }
+		.prop.table::before { content:''; position:absolute; left:20px; top:16px; width:14px; height:70px; background:inherit; box-shadow:166px 0 0 #4a3b31; }
+		.prop.hill { left:-10%; right:-10%; bottom:-40px; height:180px; border-radius:50% 50% 0 0; background:rgba(0,0,0,.12); }
+		.prop.window { right:14%; top:200px; width:120px; height:150px; background:#f1efe6; border:10px solid #4a3b31; }
+		.prop.window::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:10px; background:#4a3b31; transform:translateX(-50%); }
+		.prop.lamp { left:16%; bottom:140px; width:6px; height:120px; }
+		.prop.lamp::before { content:''; position:absolute; left:-28px; top:-40px; width:62px; height:44px; background:#f1efe6; clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
+		.scene .room { position:relative; z-index:2; }
+		.study-note { max-width:60ch; margin:0 auto; padding:40px 24px 80px; font-size:13px; opacity:.9; background:#3a4a6b; color:#fff; }
+		.study-note a { color:inherit; }
+	</style>
+</head>
+<body data-view="home" data-bible="web" data-scene="morning">
+	<nav class="study-bar"><a href="../../../#message">← Breakdown</a><span>Study · <strong>Every Last Drop</strong> · "Keeps you engaged through the whole story."</span><a href="https://everylastdrop.co.uk/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<!-- ===== the sky band: colour follows the scene ===== -->
+	<div class="sky" aria-hidden="true"><div class="stars"></div><div class="wordmark"><span>Two</span><span>Command</span><span>ments</span></div><div class="star"></div></div>
+
+	<!-- ===== morning — Matthew ===== -->
+	<section class="scene morning panel" data-scene="morning">
+		<div class="prop bed"></div><div class="prop plant"></div><div class="prop rug"></div><div class="prop lamp"></div>
+		<div class="room"><h2>Morning · Matthew</h2><blockquote class="verse" data-ref="matthew.22.36-40" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></div>
+	</section>
+	<!-- ===== noon — Mark ===== -->
+	<section class="scene noon panel" data-scene="noon">
+		<div class="prop hill"></div><div class="prop table"></div>
+		<div class="room"><h2>Noon · Mark</h2><blockquote class="verse" data-ref="mark.12.28-34" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></div>
+	</section>
+	<!-- ===== dusk — Luke ===== -->
+	<section class="scene dusk panel" data-scene="dusk">
+		<div class="prop window"></div><div class="prop rug"></div>
+		<div class="room"><h2>Dusk · Luke</h2><blockquote class="verse" data-ref="luke.10.25-37" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></div>
+	</section>
+	<!-- ===== night — John ===== -->
+	<section class="scene night panel" data-scene="night">
+		<div class="prop bed"></div><div class="prop lamp"></div>
+		<div class="room"><h2>Night · John</h2><blockquote class="verse" data-ref="john.13.34-35" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></div>
+	</section>
+
+	<p class="study-note">What's borrowed: the sky band whose colour changes as you scroll and a sun that moves across it and becomes a moon; a stacked heavy wordmark in the sky; flat colour scenes with a few flat objects; the sense of moving through a day. Here the day is the four Gospels, morning to night. Verse text is live from the engine (WEB); the illustration is CSS, nothing from the reference site.</p>
+	<script>
+		/* the sky follows whichever scene is most in view */
+		const scenes = [...document.querySelectorAll('.scene')];
+		const follow = () => { let best = 0, s = 'morning'; scenes.forEach(el => { const r = el.getBoundingClientRect(); const v = Math.max(0, Math.min(r.bottom, innerHeight) - Math.max(r.top, 0)); if (v > best) { best = v; s = el.dataset.scene; } }); document.body.dataset.scene = s; };
+		addEventListener('scroll', follow, { passive:true }); setInterval(follow, 300);
+	</script>
+</body>
+</html>

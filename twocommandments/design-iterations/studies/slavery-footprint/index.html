@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Slavery Footprint → II Commandments</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Slavery Footprint — "Still my favorite." The device: a      */
+		/* cream page; ONE QUESTION in a two-tone serif, centred; two small   */
+		/* italic choices ("What?" · "Take survey →") and a little arrow;     */
+		/* bright chain links drawn in flat colour floating at the edges;     */
+		/* a tiny wordmark top-left and social dots top-right. Nothing else.  */
+		/* ================================================================== */
+		:root { --cream:#f7f3e8; --olive:#9aa63a; --ink:#2f2f2f; --blue:#2a7fc9; --orange:#f26f3a; --yellow:#e2d54a; --font:'Libre Caslon Text', Georgia, serif; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; }
+		body { margin:0; background:var(--cream); color:var(--ink); font:17px/1.6 var(--font); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--ink); color:var(--cream); font:12px/1.4 system-ui, sans-serif; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.q { position:relative; min-height:100svh; display:grid; place-items:center; text-align:center; padding:80px 24px; overflow:hidden; }
+		.q .wordmark { position:absolute; top:22px; left:24px; font:400 12px/1 var(--font); color:var(--olive); }
+		.q .social { position:absolute; top:20px; right:24px; display:flex; gap:6px; }
+		.q .social i { width:14px; height:14px; border-radius:50%; background:var(--olive); display:block; }
+		.q h1 { margin:0 0 18px; font:400 clamp(2rem, 5vw, 3.6rem)/1.15 var(--font); color:var(--olive); max-width:20ch; }
+		.q h1 em { font-style:normal; color:var(--ink); }
+		.q .choices { display:flex; gap:22px; justify-content:center; align-items:baseline; font:italic 400 1rem/1 var(--font); }
+		.q .choices a { color:var(--ink); text-decoration:none; padding-bottom:4px; border-bottom:1px solid var(--ink); }
+		.q .choices a.go::after { content:'  \2192'; font-style:normal; }
+		.q .down { margin-top:22px; color:var(--blue); font-size:22px; animation:down 1.8s ease-in-out infinite; }
+		@keyframes down { 0%,100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
+		/* the chain links: flat, bright, floating in from the edges */
+		.chain { position:absolute; display:flex; gap:-6px; }
+		.chain i { display:block; width:64px; height:34px; border:8px solid var(--c); border-radius:20px; margin-left:-14px; transform:rotate(var(--r, 0deg)); }
+		.chain.left { left:-30px; top:52%; --r:-8deg; }
+		.chain.right { right:-30px; top:30%; --r:6deg; }
+		.chain.br { right:40px; bottom:80px; --r:-14deg; opacity:.6; }
+		.chain i:nth-child(1) { --c:var(--blue); } .chain i:nth-child(2) { --c:var(--orange); } .chain i:nth-child(3) { --c:var(--yellow); } .chain i:nth-child(4) { --c:var(--blue); }
+		/* the answer page: same restraint, one verse */
+		.a { min-height:100svh; display:grid; place-items:center; text-align:center; padding:80px 24px; }
+		.a .verse { max-width:36rem; }
+		.a .verse-text { margin:0 0 14px; font:400 clamp(1.5rem, 3.4vw, 2.4rem)/1.35 var(--font); color:var(--ink); }
+		.a .verse-ref { font:italic 400 .95rem/1 var(--font); color:var(--olive); font-style:italic; }
+		.a .then { margin-top:28px; font:italic 400 1rem/1 var(--font); }
+		.a .then a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--ink); padding-bottom:4px; }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid #ddd6c2; font:13px/1.6 system-ui, sans-serif; color:#5f5b55; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#message">← Breakdown</a><span>Study · <strong>Slavery Footprint</strong> · "Still my favorite even though it doesn't scroll like it used to."</span><a href="https://slaveryfootprint.org/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<!-- ===== one question ===== -->
+	<section class="q">
+		<div class="wordmark">iicommandments.org</div>
+		<div class="social" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+		<div class="chain left" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+		<div class="chain right" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+		<div class="chain br" aria-hidden="true"><i></i><i></i></div>
+		<div>
+			<h1>What does the whole <em>law</em> hang on?</h1>
+			<p class="choices"><a href="#answer">What?</a><a class="go" href="#answer">Two things</a></p>
+			<div class="down" aria-hidden="true">&darr;</div>
+		</div>
+	</section>
+
+	<!-- ===== the answer, with the same restraint ===== -->
+	<section class="a panel" id="answer">
+		<div>
+			<blockquote class="verse" data-ref="matthew.22.37-40" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote>
+			<p class="then"><a href="#">Keep reading →</a></p>
+		</div>
+	</section>
+	<p class="study-note">What's borrowed: the cream page and two-tone serif; a single question, centred, with two italic choices and a small arrow; bright flat chain links floating at the edges; a tiny lowercase URL as the wordmark; social dots; and then an answer page with the same restraint. The verse reference here is Matthew 22:37–40 — if that range isn't in the fetched set the block shows "not available"; it's one line in <code>scripts/fetch-verses.mjs</code>.</p>
+</body>
+</html>

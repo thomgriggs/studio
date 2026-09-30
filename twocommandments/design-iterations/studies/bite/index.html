@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Bite → the card menu</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Bite — "When you hover over the products, you get a short    */
+		/* menu. Perhaps on ours, the menu lets you pick your Church/non-      */
+		/* profit? Or other features (blurb about artist, etc)." The device:  */
+		/* a white page; a serif headline; a row of filter pills with one     */
+		/* lit in mint; product cards with the name top-left in small caps,  */
+		/* the product on white, a black full-width ADD TO BAG; and on hover  */
+		/* a short menu slides up over the card — here: Support your church,  */
+		/* About the designer, Add.                                            */
+		/* ================================================================== */
+		:root { --ink:#111; --grey:#777; --line:#e6e6e6; --mint:#9df0c8; --font_serif:'Cormorant', Georgia, serif; --font_body:'Inter', system-ui, sans-serif; }
+		* { box-sizing:border-box; }
+		body { margin:0; background:#fff; color:var(--ink); font:14px/1.5 var(--font_body); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--ink); color:#fff; font-size:12px; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.top { display:flex; justify-content:space-between; align-items:center; padding:18px 32px; }
+		.top .brand { font:500 24px/1 var(--font_serif); }
+		.top nav { display:flex; gap:26px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+		.top nav a { color:var(--ink); text-decoration:none; }
+		h1 { text-align:center; margin:30px 0 20px; font:400 clamp(1.8rem, 4vw, 2.8rem)/1.1 var(--font_serif); }
+		.pills { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:40px; }
+		.pills button { border:1px solid var(--ink); background:#fff; border-radius:3px; padding:8px 14px; font:500 10px/1 var(--font_body); letter-spacing:.14em; text-transform:uppercase; cursor:pointer; }
+		.pills button.is-on { background:var(--mint); }
+		h2 { text-align:center; margin:0 0 20px; font:400 1.4rem/1 var(--font_serif); }
+		.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:18px; padding:0 32px 100px; }
+		.card { position:relative; border:1px solid var(--line); background:#fff; display:grid; grid-template-rows:auto 1fr auto; min-height:360px; overflow:hidden; }
+		.card .name { padding:14px 14px 0; font:600 11px/1.3 var(--font_body); letter-spacing:.12em; text-transform:uppercase; }
+		.card .name small { display:block; color:var(--grey); font-weight:400; letter-spacing:.06em; text-transform:none; margin-top:4px; }
+		.card .pic { display:grid; place-items:center; padding:20px; }
+		.card .pic .tee { width:70%; aspect-ratio:1/1.05; background:#f4f4f4; border-radius:20px 20px 4px 4px; display:grid; place-items:center; font:400 3rem/1 var(--font_serif); position:relative; }
+		.card .pic .tee::after { content:''; position:absolute; width:10px; height:10px; border-radius:50%; background:#d9d9d9; right:-16px; top:30%; box-shadow:-6px 18px 0 -2px #d9d9d9, 8px 30px 0 -3px #d9d9d9; }
+		.card .add { background:var(--ink); color:#fff; border:0; padding:14px; font:600 11px/1 var(--font_body); letter-spacing:.16em; text-transform:uppercase; cursor:pointer; width:100%; }
+		/* the hover menu, the move he named */
+		.card .menu { position:absolute; left:0; right:0; bottom:44px; background:#fff; border-top:1px solid var(--line); transform:translateY(100%); opacity:0; transition:transform .25s cubic-bezier(.16,1,.3,1), opacity .2s; display:grid; }
+		.card:hover .menu, .card:focus-within .menu { transform:none; opacity:1; }
+		.card .menu button { background:#fff; border:0; border-bottom:1px solid var(--line); padding:12px 14px; text-align:left; font:500 11px/1 var(--font_body); letter-spacing:.1em; text-transform:uppercase; cursor:pointer; display:flex; justify-content:space-between; }
+		.card .menu button:hover { background:var(--mint); }
+		.card .menu button span { color:var(--grey); letter-spacing:.02em; text-transform:none; font-weight:400; }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid var(--line); font-size:12px; color:#666; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#store">← Breakdown</a><span>Study · <strong>Bite</strong> · "the menu lets you pick your Church/non-profit? Or a blurb about the artist"</span><a href="https://bitetoothpastebits.com/collections/featured-products" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<header class="top"><span class="brand">II Commandments</span><nav><a href="#">Shop</a><a href="#">Designers</a><a href="#">Churches</a><a href="#">About</a></nav></header>
+	<h1>Wear the two that hold everything.</h1>
+	<div class="pills"><button type="button" class="is-on">All</button><button type="button">Tees</button><button type="button">Hats</button><button type="button">Mugs</button><button type="button">Prints</button><button type="button">By designer</button></div>
+	<h2>Best sellers</h2>
+	<div class="grid">
+		<article class="card" tabindex="0"><div class="name">Love God<small>Designer One · tee</small></div><div class="pic"><div class="tee">II</div></div><div class="menu"><button type="button" data-action="coming-soon">Support your church <span>Sample Community ›</span></button><button type="button" data-action="coming-soon">About the designer <span>Tampa, FL</span></button></div><button type="button" class="add" data-action="coming-soon">Add to bag · $28</button></article>
+		<article class="card" tabindex="0"><div class="name">Neighbor<small>Designer One · tee</small></div><div class="pic"><div class="tee">II</div></div><div class="menu"><button type="button" data-action="coming-soon">Support your church <span>choose ›</span></button><button type="button" data-action="coming-soon">About the designer <span>Tampa, FL</span></button></div><button type="button" class="add" data-action="coming-soon">Add to bag · $28</button></article>
+		<article class="card" tabindex="0"><div class="name">Keep my commandments<small>Designer Two · hat</small></div><div class="pic"><div class="tee">✦</div></div><div class="menu"><button type="button" data-action="coming-soon">Support your church <span>choose ›</span></button><button type="button" data-action="coming-soon">About the designer <span>Nashville, TN</span></button></div><button type="button" class="add" data-action="coming-soon">Add to bag · $26</button></article>
+		<article class="card" tabindex="0"><div class="name">Lion<small>Designer Three · print</small></div><div class="pic"><div class="tee">II</div></div><div class="menu"><button type="button" data-action="coming-soon">Support your church <span>choose ›</span></button><button type="button" data-action="coming-soon">About the designer <span>Austin, TX</span></button></div><button type="button" class="add" data-action="coming-soon">Add to bag · $22</button></article>
+	</div>
+	<p class="study-note">What's borrowed: Bite's white grid; serif headline; filter pills with the active one in mint; product name top-left in small caps; the product alone on white; a black full-width add button; and the hover (or focus) menu that slides up over the card — filled, as he suggested, with <em>Support your church</em> and <em>About the designer</em>.</p>
+</body>
+</html>

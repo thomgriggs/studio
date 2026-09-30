@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<title>Designers — II Commandments</title>
+	<link rel="icon" href="assets/logo-placeholder.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tc.css">
+	<link rel="stylesheet" href="/assets/breadcrumb.css">
+	<script defer src="/assets/breadcrumb.js"></script>
+	<script defer src="verses.js"></script>
+	<script defer src="data.js"></script>
+	<script defer src="tc.js"></script>
+</head>
+<body data-view="designers" data-bible="web">
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<!-- ===== TOPBAR : site nav ===== -->
+	<header class="topbar">
+		<a class="brand" href="home.html">II Commandments</a>
+		<nav aria-label="Site">
+			<ul class="primary-navigation">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="designers.html" class="is-current" aria-current="page">Designers</a></li>
+				<li><a href="church.html">Your church</a></li>
+				<li><a href="shop.html">Shop</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main" class="page">
+
+		<!-- ===== PAGE HEAD : the seed designers ===== -->
+		<div class="page-head">
+			<p class="eyebrow">The people behind the work</p>
+			<h1>Designers</h1>
+			<p>Graphic designers inspired by the two commandments make the designs. A third of every sale is theirs. Ten seed designers are wanted before launch — three placeholders below.</p>
+			<div class="page-context">
+				<span class="pill" data-context="church"><span>Supporting</span> <strong data-field="church.name"></strong></span>
+			</div>
+		</div>
+
+		<!-- ===== DESIGNER GRID : one card per designer ===== -->
+		<ul class="designer-grid" aria-label="Designers"></ul>
+
+		<!-- ===== DESIGNER PROFILE : shown when ?designer=slug — their story, then their designs ===== -->
+		<article class="designer-profile" hidden>
+			<div class="profile-head">
+				<span class="avatar" aria-hidden="true" data-field="initials"></span>
+				<div>
+					<h1 data-field="name"></h1>
+					<p data-field="location" style="margin:0"></p>
+				</div>
+			</div>
+			<p class="eyebrow" data-field="tagline"></p>
+			<div class="card-tags" data-field="styles"></div>
+			<div class="profile-story" data-field="story"></div>
+			<h2>Designs</h2>
+			<ul class="design-grid" data-field="designs"></ul>
+			<p><a class="btn btn-ghost" href="designers.html">← All designers</a></p>
+		</article>
+
+	</main>
+
+	<!-- ===== FOOTER ===== -->
+	<footer class="site-footer">
+		<p style="margin:0 auto">Every purchase is split three ways — <a href="about.html">how it works</a>.</p>
+	</footer>
+</body>
+</html>

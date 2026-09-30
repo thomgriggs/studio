@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<title>Shop — II Commandments</title>
+	<link rel="icon" href="assets/logo-placeholder.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tc.css">
+	<link rel="stylesheet" href="/assets/breadcrumb.css">
+	<script defer src="/assets/breadcrumb.js"></script>
+	<script defer src="verses.js"></script>
+	<script defer src="data.js"></script>
+	<script defer src="tc.js"></script>
+</head>
+<body data-view="shop" data-bible="web">
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<!-- ===== TOPBAR : site nav ===== -->
+	<header class="topbar">
+		<a class="brand" href="home.html">II Commandments</a>
+		<nav aria-label="Site">
+			<ul class="primary-navigation">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="designers.html">Designers</a></li>
+				<li><a href="church.html">Your church</a></li>
+				<li><a href="shop.html" class="is-current" aria-current="page">Shop</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main" class="page">
+
+		<!-- ===== PAGE HEAD : panels 14–17 as one stepper (mock — no cart) ===== -->
+		<div class="page-head">
+			<p class="eyebrow">Panels 14–17 · mock, nothing is charged</p>
+			<h1>Make it yours</h1>
+			<div class="page-context">
+				<span class="pill" data-context="church"><span>Supporting</span> <strong data-field="church.name"></strong></span>
+			</div>
+		</div>
+
+		<!-- ===== STEPPER : where you are in the flow ===== -->
+		<ol class="stepper" aria-label="Steps">
+			<li>Choose your design</li>
+			<li>Edit &amp; customize</li>
+			<li>Choose your product</li>
+			<li>Quick order</li>
+		</ol>
+
+		<!-- ===== STEP DESIGN : panel 14 ===== -->
+		<section class="shop-step" data-step="design" aria-labelledby="step-design">
+			<h2 id="step-design">Choose your design</h2>
+			<ul class="choice-grid" data-choices="design" aria-label="Designs"></ul>
+			<div class="step-actions">
+				<button type="button" class="btn btn-primary" data-action="shop-next" data-to="customize">Next: customize</button>
+			</div>
+		</section>
+
+		<!-- ===== STEP CUSTOMIZE : panel 15 — placement, color, text (mock controls) ===== -->
+		<section class="shop-step" data-step="customize" aria-labelledby="step-customize">
+			<h2 id="step-customize">Edit &amp; customize</h2>
+			<div class="customize">
+				<div class="customize-preview" aria-live="polite">Choose a design to preview</div>
+				<div>
+					<div class="field">
+						<label for="cust-placement">Placement</label>
+						<select id="cust-placement" data-action="coming-soon"><option>Front, centered</option><option>Front, left chest</option><option>Back</option></select>
+					</div>
+					<div class="field">
+						<label for="cust-ink">Ink color</label>
+						<select id="cust-ink" data-action="coming-soon"><option>As designed</option><option>Black</option><option>White</option></select>
+					</div>
+					<div class="field">
+						<label for="cust-verse">Add a verse (optional)</label>
+						<select id="cust-verse" data-action="coming-soon"><option>None</option><option>Matthew 22:40</option><option>John 14:15</option><option>John 13:34</option></select>
+					</div>
+				</div>
+			</div>
+			<div class="step-actions">
+				<button type="button" class="btn btn-ghost" data-action="shop-back" data-to="design">Back</button>
+				<button type="button" class="btn btn-primary" data-action="shop-next" data-to="product">Next: choose a product</button>
+			</div>
+		</section>
+
+		<!-- ===== STEP PRODUCT : panel 16 — media types (upsell: shirts, hats, mugs, prints) ===== -->
+		<section class="shop-step" data-step="product" aria-labelledby="step-product">
+			<h2 id="step-product">Choose your product</h2>
+			<ul class="choice-grid" data-choices="product" aria-label="Products"></ul>
+			<div class="step-actions">
+				<button type="button" class="btn btn-ghost" data-action="shop-back" data-to="customize">Back</button>
+				<button type="button" class="btn btn-primary" data-action="shop-next" data-to="order">Next: quick order</button>
+			</div>
+		</section>
+
+		<!-- ===== STEP ORDER : panel 17 — summary + the split; ordering not wired ===== -->
+		<section class="shop-step" data-step="order" aria-labelledby="step-order">
+			<h2 id="step-order">Quick order</h2>
+			<div class="order-summary">
+				<dl>
+					<dt>Design</dt><dd data-field="order.design">—</dd>
+					<dt>Product</dt><dd data-field="order.product">—</dd>
+					<dt>Price</dt><dd data-field="order.price">—</dd>
+					<dt>Supports</dt><dd data-field="order.church">—</dd>
+				</dl>
+				<div class="split">
+					<p class="eyebrow" style="margin:0">Where your money goes</p>
+					<div class="split-bar"></div>
+					<ul class="split-legend"></ul>
+				</div>
+				<div class="step-actions" style="margin-top:0">
+					<button type="button" class="btn btn-ghost" data-action="shop-back" data-to="product">Back</button>
+					<button type="button" class="btn btn-primary" data-action="quick-order">Order</button>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- ===== FOOTER ===== -->
+	<footer class="site-footer">
+		<p style="margin:0 auto">Every purchase is split three ways — <a href="about.html">how it works</a>.</p>
+	</footer>
+</body>
+</html>

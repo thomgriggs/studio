@@ -1,0 +1,238 @@
+/* ========================================================================== */
+/* II COMMANDMENTS — CONCEPT 3: COLOUR                                        */
+/* References: De La Calle (saturated colour worlds, condensed caps, each     */
+/* flavour a room) · Mack & Pouya (colour blocks, outlined type, stickers)    */
+/* · Every Last Drop (the background changes as you scroll). Joyful,          */
+/* merch-first. Same blocks as root.                                          */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* TOKENS                                                                     */
+/* ========================================================================== */
+:root {
+	color-scheme: light;
+	--color_ink:#161616;
+	--color_cream:#fff6e5;
+	--color_yellow:#ffd23f;
+	--color_pink:#ff8fb1;
+	--color_orange:#ff6b2c;
+	--color_sky:#7fc8ff;
+	--color_white:#fff;
+	--color_bg-primary:var(--color_cream);
+	--color_text:var(--color_ink);
+	--color_text-muted:#5c574f;
+	--color_accent:var(--color_orange);
+	--color_link:var(--color_ink);
+	--color_focus:var(--color_ink);
+	--color_line:var(--color_ink);
+	--color_line-strong:var(--color_ink);
+	--color_card:var(--color_white);
+	--color_paper:var(--color_cream);
+	--color_paper-deep:var(--color_yellow);
+	--color_bg-dark:var(--color_ink);
+	--color_text-on-dark:var(--color_cream);
+
+	/* gospels — loud worlds; the -soft is the full panel colour, the main is the ink on it */
+	--gospel_matthew:#0b4d2c;  --gospel_matthew-soft:#7ddc9a;
+	--gospel_mark:#5a0e0e;     --gospel_mark-soft:#ff6b6b;
+	--gospel_luke:#0b2a5a;     --gospel_luke-soft:#7fc8ff;
+	--gospel_john:#4d3300;     --gospel_john-soft:#ffd23f;
+
+	--font_name-primary:'Inter', system-ui, sans-serif;
+	--font_name-display:'Anton', Impact, sans-serif;
+	--font_size-xs:0.75rem;
+	--font_size-sm:0.875rem;
+	--font_size-md:1.0625rem;
+	--font_size-lg:1.375rem;
+	--font_size-xl:clamp(2rem, 4vw, 3rem);
+	--font_size-display:clamp(2.75rem, 8vw, 7rem);
+	--font_size-hero:clamp(3rem, 11vw, 10.5rem);
+	--line_height-body:1.55;
+	--line_height-display:.95;
+	--tracking_display:.01em;
+
+	--gutter:clamp(20px, 5vw, 64px);
+	--space_xs:4px; --space_sm:8px; --space_md:16px; --space_lg:32px; --space_xl:64px; --space_2xl:112px;
+	--measure:58ch;
+	--radius_sm:6px; --radius_md:18px; --radius_pill:999px;
+	--border_thick:3px;
+	--motion_fast:160ms; --motion_slow:700ms;
+	--motion_ease:cubic-bezier(.2,.7,.2,1); --motion_ease-out:cubic-bezier(.34,1.56,.64,1); /* a little bounce */
+}
+
+/* ========================================================================== */
+/* BASE                                                                       */
+/* ========================================================================== */
+*, *::before, *::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--color_bg-primary); color:var(--color_text); font:var(--font_size-md)/var(--line_height-body) var(--font_name-primary); -webkit-font-smoothing:antialiased; }
+h1, h2, h3 { font-family:var(--font_name-display); font-weight:400; line-height:var(--line_height-display); letter-spacing:var(--tracking_display); text-transform:uppercase; margin:0 0 var(--space_md); }
+h1 { font-size:var(--font_size-display); }
+h2 { font-size:var(--font_size-xl); }
+h3 { font-size:var(--font_size-lg); }
+p { margin:0 0 var(--space_md); max-width:var(--measure); }
+a { color:var(--color_link); text-decoration-thickness:2px; text-underline-offset:.2em; }
+img, svg { max-width:100%; height:auto; display:block; }
+button, select, input { font:inherit; color:inherit; }
+:focus-visible { outline:3px solid var(--color_ink); outline-offset:3px; }
+[hidden] { display:none !important; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip-link { position:absolute; left:var(--gutter); top:-100px; background:var(--color_ink); color:var(--color_cream); padding:var(--space_sm) var(--space_md); z-index:100; }
+.skip-link:focus { top:var(--space_md); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
+
+/* ========================================================================== */
+/* SHARED CONTROLS — thick ink outlines, hard shadows                        */
+/* ========================================================================== */
+.btn { display:inline-flex; align-items:center; gap:var(--space_sm); min-height:52px; padding:var(--space_sm) var(--space_lg); border:var(--border_thick) solid var(--color_ink); border-radius:var(--radius_pill); background:var(--color_white); color:var(--color_ink); cursor:pointer; font-weight:800; font-size:var(--font_size-sm); letter-spacing:.04em; text-transform:uppercase; text-decoration:none; box-shadow:4px 4px 0 var(--color_ink); transition:transform var(--motion_fast), box-shadow var(--motion_fast); }
+.btn:hover { transform:translate(-2px, -2px); box-shadow:6px 6px 0 var(--color_ink); }
+.btn:active { transform:translate(2px, 2px); box-shadow:2px 2px 0 var(--color_ink); }
+.btn-primary { background:var(--color_orange); }
+.btn-ghost { background:transparent; box-shadow:none; border-color:transparent; }
+.eyebrow { display:inline-block; font-size:var(--font_size-xs); font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--color_ink); background:var(--color_white); border:2px solid var(--color_ink); border-radius:var(--radius_pill); padding:2px 10px; margin-bottom:var(--space_md); transform:rotate(-2deg); }
+.toast { position:fixed; left:50%; bottom:var(--space_lg); transform:translate(-50%, 20px); padding:var(--space_sm) var(--space_lg); background:var(--color_ink); color:var(--color_cream); border-radius:var(--radius_pill); font-weight:700; opacity:0; pointer-events:none; z-index:90; transition:opacity var(--motion_fast), transform var(--motion_fast) var(--motion_ease); }
+.toast.is-open { opacity:1; transform:translate(-50%, 0); }
+.concept-bar { position:sticky; top:0; z-index:60; display:flex; justify-content:space-between; gap:var(--space_md); padding:6px var(--gutter); background:var(--color_ink); color:var(--color_cream); font-size:var(--font_size-xs); letter-spacing:.06em; }
+.concept-bar a { color:inherit; }
+
+/* ========================================================================== */
+/* TOPBAR                                                                     */
+/* ========================================================================== */
+.topbar { position:sticky; top:28px; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:var(--space_md); padding:var(--space_sm) var(--gutter); background:var(--color_cream); border-bottom:var(--border_thick) solid var(--color_ink); }
+.topbar .brand { font-family:var(--font_name-display); text-transform:uppercase; text-decoration:none; color:var(--color_ink); font-size:var(--font_size-lg); letter-spacing:.02em; }
+.primary-navigation { display:flex; flex-wrap:wrap; gap:var(--space_md) var(--space_lg); margin:0; padding:0; list-style:none; }
+.primary-navigation a { color:var(--color_ink); text-decoration:none; font-weight:800; font-size:var(--font_size-sm); text-transform:uppercase; letter-spacing:.04em; min-height:24px; display:inline-flex; align-items:center; }
+.primary-navigation a:hover, .primary-navigation a.is-current { text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:.3em; text-decoration-color:var(--color_orange); }
+
+/* ========================================================================== */
+/* PANEL — each one is a colour block; the page changes colour as you go      */
+/* ========================================================================== */
+.panel { min-height:100svh; display:grid; place-items:center; text-align:center; padding:var(--space_2xl) var(--gutter); position:relative; overflow:hidden; border-bottom:var(--border_thick) solid var(--color_ink); transition:background-color var(--motion_slow) var(--motion_ease); }
+.panel > .panel-inner { width:min(100%, 80rem); position:relative; z-index:2; }
+.panel > .panel-inner > p { margin-inline:auto; }
+.panel-nav { position:absolute; bottom:var(--space_lg); left:50%; transform:translateX(-50%); z-index:2; }
+.panel-nav a { color:inherit; text-decoration:none; font-size:var(--font_size-xs); font-weight:800; letter-spacing:.14em; text-transform:uppercase; display:inline-flex; flex-direction:column; align-items:center; gap:var(--space_sm); }
+.panel-nav svg { animation:tc-nudge 1.6s var(--motion_ease) infinite; }
+@keyframes tc-nudge { 0%, 100% { transform:translateY(0); } 50% { transform:translateY(8px); } }
+.panel .panel-inner > * { opacity:0; transform:translateY(24px) scale(.98); transition:opacity var(--motion_slow) var(--motion_ease-out), transform var(--motion_slow) var(--motion_ease-out); }
+.panel.is-seen .panel-inner > * { opacity:1; transform:none; }
+.panel.is-seen .panel-inner > *:nth-child(2) { transition-delay:100ms; }
+.panel.is-seen .panel-inner > *:nth-child(3) { transition-delay:200ms; }
+.panel.is-seen .panel-inner > *:nth-child(n+4) { transition-delay:300ms; }
+@media (prefers-reduced-motion: reduce) { .panel .panel-inner > * { opacity:1; transform:none; } }
+
+/* stickers (Mack & Pouya) */
+.sticker { position:absolute; z-index:1; padding:6px 14px; background:var(--color_white); border:var(--border_thick) solid var(--color_ink); border-radius:var(--radius_pill); font-weight:800; font-size:var(--font_size-sm); text-transform:uppercase; letter-spacing:.06em; box-shadow:4px 4px 0 var(--color_ink); animation:tc-wobble 5s ease-in-out infinite alternate; }
+.sticker-a { top:18%; left:8%; transform:rotate(-8deg); background:var(--color_pink); }
+.sticker-b { bottom:22%; right:8%; transform:rotate(6deg); background:var(--color_sky); animation-delay:-2.5s; }
+@keyframes tc-wobble { from { translate:0 0; } to { translate:0 -8px; } }
+@media (max-width:700px) { .sticker { display:none; } }
+
+/* ========================================================================== */
+/* VERSE — condensed caps for display, Inter for reading                      */
+/* ========================================================================== */
+.verse { margin:0 auto; max-width:var(--measure); text-align:left; }
+.verse .verse-text { font-size:var(--font_size-lg); line-height:1.45; margin:0 0 var(--space_sm); font-weight:600; }
+.verse .verse-text .verse-num { font-size:var(--font_size-xs); vertical-align:super; font-weight:800; margin-right:2px; }
+.verse .verse-ref { display:block; font-style:normal; font-size:var(--font_size-xs); font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.verse.is-hero { max-width:none; }
+.verse.is-hero .verse-text { font-family:var(--font_name-display); font-weight:400; font-size:var(--font_size-hero); text-transform:uppercase; text-align:center; line-height:.92; letter-spacing:.005em; text-wrap:balance; }
+.verse.is-hero .verse-ref { text-align:center; margin-top:var(--space_lg); }
+.verse.is-display { max-width:none; }
+.verse.is-display .verse-text { font-family:var(--font_name-display); font-weight:400; font-size:var(--font_size-display); text-transform:uppercase; text-align:center; line-height:.98; text-wrap:balance; }
+.verse.is-display .verse-ref { text-align:center; margin-top:var(--space_md); }
+.verse.is-loading .verse-text { opacity:.4; }
+.verse .anim-unit { display:inline-block; opacity:0; transform:translateY(.4em) rotate(-2deg); transition:opacity .5s var(--motion_ease-out), transform .6s var(--motion_ease-out); }
+.verse .anim-unit.is-in { opacity:1; transform:none; }
+.verse[data-anim="fade"] .verse-text { opacity:0; transition:opacity .8s var(--motion_ease); }
+.verse[data-anim="fade"].is-in .verse-text { opacity:1; }
+.reveal .reveal-part { display:block; opacity:0; transform:translateY(.3em) scale(.96); transition:opacity .7s var(--motion_ease-out), transform .7s var(--motion_ease-out); }
+.reveal.is-revealed .reveal-part:nth-child(1) { opacity:1; transform:none; }
+.reveal.is-revealed .reveal-part:nth-child(2) { opacity:1; transform:none; transition-delay:1s; }
+.reveal .reveal-part:nth-child(2) { -webkit-text-stroke:2px var(--color_ink); color:transparent; } /* outlined second line (Mack & Pouya) */
+
+/* ========================================================================== */
+/* BIBLE PICKER                                                               */
+/* ========================================================================== */
+.bible-picker { display:inline-grid; gap:var(--space_xs); justify-items:center; margin-top:var(--space_xl); }
+.bible-picker label { font-size:var(--font_size-xs); font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.bible-picker select { min-height:48px; padding:var(--space_xs) var(--space_md); border:var(--border_thick) solid var(--color_ink); border-radius:var(--radius_pill); background:var(--color_white); color:var(--color_ink); font-weight:700; cursor:pointer; box-shadow:4px 4px 0 var(--color_ink); }
+
+/* ========================================================================== */
+/* THE COLOUR BLOCKS                                                          */
+/* ========================================================================== */
+.hero { background:var(--color_yellow); }
+.logo { background:var(--color_pink); }
+.logo-mark { width:min(40vw, 260px); margin:0 auto var(--space_lg); background:var(--color_white); border:var(--border_thick) solid var(--color_ink); border-radius:50%; box-shadow:8px 8px 0 var(--color_ink); transform:rotate(-4deg); }
+.love { background:var(--color_ink); color:var(--color_cream); }
+.love .reveal .reveal-part:nth-child(2) { -webkit-text-stroke:2px var(--color_yellow); color:transparent; }
+.gospels { background:var(--color_cream); }
+.deeper { background:var(--color_sky); min-height:60svh; }
+.share { background:var(--color_orange); }
+
+/* ========================================================================== */
+/* GOSPELS — four big blocks (De La Calle flavours)                           */
+/* ========================================================================== */
+.gospel-picker { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:var(--space_md); margin:var(--space_lg) auto; max-width:70rem; }
+.gospel-btn { display:grid; gap:var(--space_xs); justify-items:start; padding:var(--space_lg); min-height:200px; border:var(--border_thick) solid var(--color_ink); border-radius:var(--radius_md); background:var(--gospel_soft); color:var(--gospel_color); cursor:pointer; text-align:left; box-shadow:6px 6px 0 var(--color_ink); transition:transform var(--motion_fast) var(--motion_ease-out), box-shadow var(--motion_fast); }
+.gospel-btn:hover { transform:translate(-3px, -3px) rotate(-1deg); box-shadow:9px 9px 0 var(--color_ink); }
+.gospel-btn.is-active { transform:rotate(-2deg) scale(1.03); box-shadow:10px 10px 0 var(--color_ink); }
+.gospel-btn img { display:none; }
+.gospel-btn .gospel-n { font-family:var(--font_name-display); font-size:var(--font_size-xl); line-height:1; }
+.gospel-btn .gospel-name { font-family:var(--font_name-display); font-size:var(--font_size-display); text-transform:uppercase; line-height:.9; align-self:end; }
+.gospel-btn .gospel-symbol { font-weight:800; font-size:var(--font_size-xs); letter-spacing:.14em; text-transform:uppercase; }
+.gospel-btn[data-gospel="matthew"] { --gospel_color:var(--gospel_matthew); --gospel_soft:var(--gospel_matthew-soft); }
+.gospel-btn[data-gospel="mark"]    { --gospel_color:var(--gospel_mark);    --gospel_soft:var(--gospel_mark-soft); }
+.gospel-btn[data-gospel="luke"]    { --gospel_color:var(--gospel_luke);    --gospel_soft:var(--gospel_luke-soft); }
+.gospel-btn[data-gospel="john"]    { --gospel_color:var(--gospel_john);    --gospel_soft:var(--gospel_john-soft); }
+
+/* ========================================================================== */
+/* VERSES — the whole panel IS the Gospel's colour                            */
+/* ========================================================================== */
+.verses { background:var(--color_white); }
+body[data-gospel="matthew"] .verses { background:var(--gospel_matthew-soft); color:var(--gospel_matthew); }
+body[data-gospel="mark"] .verses    { background:var(--gospel_mark-soft);    color:var(--gospel_mark); }
+body[data-gospel="luke"] .verses    { background:var(--gospel_luke-soft);    color:var(--gospel_luke); }
+body[data-gospel="john"] .verses    { background:var(--gospel_john-soft);    color:var(--gospel_john); }
+.passages { display:grid; gap:var(--space_md); max-width:var(--measure); margin:var(--space_lg) auto 0; text-align:left; }
+.passage { border:var(--border_thick) solid currentColor; border-radius:var(--radius_md); background:var(--color_white); color:var(--color_ink); }
+.passage summary { cursor:pointer; padding:var(--space_md) var(--space_lg); font-family:var(--font_name-display); font-size:var(--font_size-xl); text-transform:uppercase; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+.passage summary::-webkit-details-marker { display:none; }
+.passage summary::after { content:'+'; font-family:var(--font_name-primary); font-weight:800; }
+.passage[open] summary::after { content:'\2013'; }
+.passage .passage-body { padding:0 var(--space_lg) var(--space_lg); }
+.passage.is-chosen { order:-1; box-shadow:8px 8px 0 currentColor; }
+
+/* ========================================================================== */
+/* DRAWER                                                                     */
+/* ========================================================================== */
+.drawer { position:fixed; inset:0; z-index:80; display:grid; grid-template-columns:1fr min(100%, 40rem); pointer-events:none; }
+.drawer-scrim { background:rgba(22,22,22,.45); opacity:0; transition:opacity var(--motion_fast); }
+.drawer-panel { background:var(--color_cream); color:var(--color_ink); overflow:auto; padding:var(--space_lg) var(--gutter) var(--space_2xl); transform:translateX(100%); transition:transform var(--motion_slow) var(--motion_ease-out); border-left:var(--border_thick) solid var(--color_ink); }
+.drawer.is-open { pointer-events:auto; }
+.drawer.is-open .drawer-scrim { opacity:1; }
+.drawer.is-open .drawer-panel { transform:none; }
+.drawer-head { display:flex; justify-content:space-between; align-items:center; gap:var(--space_md); margin-bottom:var(--space_lg); }
+.drawer-head h2 { margin:0; }
+.drawer-close { min-width:48px; min-height:48px; display:inline-grid; place-items:center; border:var(--border_thick) solid var(--color_ink); border-radius:50%; background:var(--color_yellow); cursor:pointer; box-shadow:3px 3px 0 var(--color_ink); }
+.related { display:grid; gap:var(--space_sm); text-align:left; }
+.related .related-card { padding:var(--space_md) var(--space_lg); border:var(--border_thick) solid var(--color_ink); border-radius:var(--radius_md); background:var(--color_white); }
+.related .related-card summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:var(--space_md); font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
+.related .related-card summary::-webkit-details-marker { display:none; }
+.related .related-card summary::after { content:'+'; font-weight:800; }
+.related .related-card[open] summary::after { content:'\2013'; }
+.related .related-card .verse { margin-top:var(--space_md); }
+.related .related-card .verse .verse-text { font-size:var(--font_size-md); font-weight:500; }
+@media (max-width:640px) { .drawer { grid-template-columns:1fr; } .drawer-scrim { display:none; } }
+
+/* ========================================================================== */
+/* SHARE                                                                      */
+/* ========================================================================== */
+.share .share-actions { display:flex; flex-wrap:wrap; gap:var(--space_md); justify-content:center; margin-top:var(--space_xl); }
+.share .btn-primary { background:var(--color_yellow); }
+
+/* ========================================================================== */
+/* FOOTER                                                                     */
+/* ========================================================================== */
+.site-footer { padding:var(--space_xl) var(--gutter); font-size:var(--font_size-sm); font-weight:600; text-align:center; background:var(--color_cream); }
+.site-footer a { color:inherit; }

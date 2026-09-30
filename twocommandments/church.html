@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<title>Your church — II Commandments</title>
+	<link rel="icon" href="assets/logo-placeholder.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="tc.css">
+	<link rel="stylesheet" href="/assets/breadcrumb.css">
+	<script defer src="/assets/breadcrumb.js"></script>
+	<script defer src="verses.js"></script>
+	<script defer src="data.js"></script>
+	<script defer src="tc.js"></script>
+</head>
+<body data-view="church" data-bible="web">
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<!-- ===== TOPBAR : site nav ===== -->
+	<header class="topbar">
+		<a class="brand" href="home.html">II Commandments</a>
+		<nav aria-label="Site">
+			<ul class="primary-navigation">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="designers.html">Designers</a></li>
+				<li><a href="church.html" class="is-current" aria-current="page">Your church</a></li>
+				<li><a href="shop.html">Shop</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main" class="page">
+
+		<!-- ===== PAGE HEAD : panel 13 — whose work do you support? ===== -->
+		<div class="page-head">
+			<p class="eyebrow">Panel 13</p>
+			<h1>Whose work do you support?</h1>
+			<p>A third of every purchase goes to the church or non-profit you choose here. Pick one from the list, or tell us who they are.</p>
+		</div>
+
+		<!-- ===== CHURCH PICKER : dropdown + free-text URL; the name shows large ===== -->
+		<section class="church-picker" aria-labelledby="church-heading">
+			<h2 id="church-heading" class="sr-only">Choose your church or non-profit</h2>
+			<p class="church-name" data-field="church.name" aria-live="polite"></p>
+
+			<div class="field">
+				<label for="church-select">Choose from the list</label>
+				<select id="church-select" data-action="pick-church">
+					<option value="">— pick one —</option>
+				</select>
+			</div>
+
+			<form class="field" data-form="church-url">
+				<label for="church-url">Or enter their website</label>
+				<input id="church-url" name="church-url" type="url" placeholder="https://yourchurch.org" autocomplete="url">
+				<div class="church-actions">
+					<button type="submit" class="btn btn-primary" data-action="church-url">Use this</button>
+					<button type="button" class="btn btn-ghost" data-action="clear-church">Clear</button>
+				</div>
+			</form>
+
+			<div class="church-actions">
+				<a class="btn" href="designers.html">Next: meet the designers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- ===== FOOTER ===== -->
+	<footer class="site-footer">
+		<p style="margin:0 auto">Every purchase is split three ways — <a href="about.html">how it works</a>.</p>
+	</footer>
+</body>
+</html>

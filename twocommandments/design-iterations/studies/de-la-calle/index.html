@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — De La Calle → rooms</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: De La Calle — "Love this site! and interwoven storytelling.  */
+		/* When you're going from product to product it really feels like    */
+		/* you're navigating." The device: a ticker bar; a hero with a big   */
+		/* product on a saturated colour with a drip badge; condensed caps;   */
+		/* a "best sellers" row of cards, each its own colour; and going      */
+		/* product → product changes the WHOLE ROOM's colour. Here the rooms  */
+		/* are the four Gospels (and later, the designers).                    */
+		/* ================================================================== */
+		:root { --ink:#1a1a1a; --cream:#fff3dc; --font_caps:'Bebas Neue', Impact, sans-serif; --font_mono:'Space Mono', ui-monospace, monospace; --room:#e8c15a; --room-ink:#4a3300; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; }
+		body { margin:0; background:var(--cream); color:var(--ink); font:13px/1.6 var(--font_mono); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--ink); color:#fff; font:12px/1.4 system-ui, sans-serif; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.ticker { background:var(--ink); color:#fff; font-size:12px; padding:6px 0; white-space:nowrap; overflow:hidden; }
+		.ticker span { display:inline-block; padding-left:100%; animation:tick 22s linear infinite; }
+		@keyframes tick { to { transform:translateX(-100%); } }
+		.nav { display:flex; justify-content:space-between; align-items:center; padding:12px 24px; border:2px solid var(--ink); margin:12px 24px; border-radius:12px; background:#fff; font:400 14px/1 var(--font_caps); letter-spacing:.08em; }
+		.nav .links { display:flex; gap:22px; }
+		.nav .brand { font-size:22px; }
+
+		/* ---- the room: the hero takes the colour of the current Gospel ---- */
+		.room { background:var(--room); color:var(--room-ink); transition:background-color .6s ease, color .6s ease; padding:40px 24px 60px; }
+		.hero { display:grid; grid-template-columns:minmax(0, 1.1fr) minmax(0, .9fr); gap:30px; align-items:center; min-height:62svh; }
+		.hero h1 { margin:0 0 12px; font:400 clamp(3rem, 8vw, 7rem)/.9 var(--font_caps); letter-spacing:.01em; text-transform:uppercase; }
+		.hero .verse-text { margin:0 0 10px; font:400 1.05rem/1.55 var(--font_mono); max-width:44ch; }
+		.hero .verse-ref { font:700 11px/1 var(--font_mono); letter-spacing:.1em; text-transform:uppercase; font-style:normal; }
+		.hero .shop { display:inline-block; margin-top:18px; padding:12px 22px; background:var(--ink); color:#fff; text-decoration:none; font:400 16px/1 var(--font_caps); letter-spacing:.1em; border-radius:6px; }
+		/* the product: a tall "can" card with the drip badge */
+		.can { position:relative; justify-self:center; width:min(100%, 300px); aspect-ratio:3/4.2; background:#fff; border:3px solid var(--ink); border-radius:18px; display:grid; place-items:center; box-shadow:10px 10px 0 var(--ink); transform:rotate(-4deg); }
+		.can .label { text-align:center; }
+		.can .label b { display:block; font:400 3.4rem/.9 var(--font_caps); text-transform:uppercase; color:var(--room-ink); }
+		.can .label small { font:700 11px/1.4 var(--font_mono); letter-spacing:.14em; text-transform:uppercase; }
+		.can .drip { position:absolute; top:-18px; left:-22px; background:#ffd23f; color:var(--ink); border:3px solid var(--ink); border-radius:50%; width:96px; height:96px; display:grid; place-items:center; text-align:center; font:400 13px/1.05 var(--font_caps); letter-spacing:.06em; transform:rotate(-12deg); }
+
+		/* ---- best sellers: each card is its own colour room; tap to change the room ---- */
+		.sellers { padding:40px 24px 100px; }
+		.sellers h2 { margin:0 0 16px; font:400 2rem/1 var(--font_caps); color:#c0392b; letter-spacing:.06em; }
+		.sellers ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; }
+		.sellers button { width:100%; text-align:left; background:var(--c); color:var(--ci); border:3px solid var(--ink); border-radius:16px; padding:18px 18px 16px; cursor:pointer; font:inherit; box-shadow:6px 6px 0 var(--ink); transition:transform .15s; }
+		.sellers button:hover { transform:translate(-2px, -2px); }
+		.sellers button.is-on { outline:4px solid var(--ink); outline-offset:3px; }
+		.sellers b { display:block; font:400 2.2rem/.9 var(--font_caps); text-transform:uppercase; margin-bottom:8px; }
+		.sellers small { display:block; font:400 12px/1.5 var(--font_mono); }
+		.sellers .m { --c:#7ddc9a; --ci:#0b4d2c; } .sellers .k { --c:#ff6b6b; --ci:#5a0e0e; } .sellers .l { --c:#7fc8ff; --ci:#0b2a5a; } .sellers .j { --c:#e8c15a; --ci:#4a3300; }
+		@media (max-width:760px) { .hero { grid-template-columns:1fr; } }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid #ddd; font:12px/1.6 system-ui, sans-serif; color:#555; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#store">← Breakdown</a><span>Study · <strong>De La Calle</strong> · "going from product to product really feels like you're navigating."</span><a href="https://www.delacalle.mx/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<div class="ticker" aria-hidden="true"><span>A third of every shirt goes to the church you choose &nbsp;·&nbsp; New designs every month &nbsp;·&nbsp; Ten designers at launch &nbsp;·&nbsp; A third of every shirt goes to the church you choose</span></div>
+	<div class="nav"><span class="links"><a>Shop</a><a>Designers</a><a>Churches</a></span><span class="brand">II Commandments</span><span class="links"><a>Account</a><a>Cart 0</a></span></div>
+
+	<!-- ===== the room: currently John (gold); tap a seller to move rooms ===== -->
+	<section class="room" id="room">
+		<div class="hero">
+			<div>
+				<h1 id="room-title">Gospel of John</h1>
+				<blockquote class="verse" id="room-verse" data-ref="john.13.34-35" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote>
+				<a class="shop" href="#sellers">Shop the designs</a>
+			</div>
+			<div class="can"><span class="drip">Print<br>per<br>order</span><div class="label"><b id="can-word">John</b><small>eagle · gold</small></div></div>
+		</div>
+	</section>
+
+	<!-- ===== best sellers: product → product = room → room ===== -->
+	<section class="sellers" id="sellers">
+		<h2>Four rooms</h2>
+		<ul>
+			<li><button type="button" class="m" data-room="matthew" data-title="Gospel of Matthew" data-ref="matthew.22.36-40" data-c="#7ddc9a" data-ci="#0b4d2c"><b>Matthew</b><small>Winged man · green<br>The greatest commandment</small></button></li>
+			<li><button type="button" class="k" data-room="mark" data-title="Gospel of Mark" data-ref="mark.12.28-34" data-c="#ff6b6b" data-ci="#5a0e0e"><b>Mark</b><small>Lion · red<br>Hear, O Israel</small></button></li>
+			<li><button type="button" class="l" data-room="luke" data-title="Gospel of Luke" data-ref="luke.10.25-37" data-c="#7fc8ff" data-ci="#0b2a5a"><b>Luke</b><small>Ox · blue<br>The Good Samaritan</small></button></li>
+			<li><button type="button" class="j is-on" data-room="john" data-title="Gospel of John" data-ref="john.13.34-35" data-c="#e8c15a" data-ci="#4a3300"><b>John</b><small>Eagle · gold<br>A new commandment</small></button></li>
+		</ul>
+	</section>
+	<p class="study-note">What's borrowed: the ticker bar; the boxed nav with the brand in the middle; a hero whose whole background is the product's colour, with the product as a tilted can-card and a drip badge; condensed caps everywhere; a best-sellers row of cards each in its own colour — and the room-to-room feeling: tap a card and the entire hero changes colour and content. The rooms here are the Gospels; for the store they'd be designers.</p>
+	<script>
+		document.querySelectorAll('.sellers button').forEach(b => b.addEventListener('click', () => {
+			document.querySelectorAll('.sellers button').forEach(x => x.classList.toggle('is-on', x === b));
+			const room = document.getElementById('room'); room.style.setProperty('--room', b.dataset.c); room.style.setProperty('--room-ink', b.dataset.ci);
+			document.getElementById('room-title').textContent = b.dataset.title; document.getElementById('can-word').textContent = b.querySelector('b').textContent;
+			document.querySelector('.can small').textContent = b.querySelector('small').textContent.split('\n')[0];
+			const v = document.getElementById('room-verse'); v.dataset.ref = b.dataset.ref; if (window.tcRenderVerses) tcRenderVerses(room);
+			room.scrollIntoView({ behavior:'smooth' });
+		}));
+	</script>
+</body>
+</html>

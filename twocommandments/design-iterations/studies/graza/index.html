@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Graza → the product page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Graza — "I love this site. Hover on 'Shop', pick 'Fancy      */
+		/* Mayo' and just scroll down. Maybe here we can put info about the   */
+		/* designer? Something about the Church?" The device: peach paper;   */
+		/* a condensed serif headline SPLIT across two lines, left then       */
+		/* right, with a small hand-drawn mark between; mono body; a sticky  */
+		/* product panel; the page scrolls INTO the story — here: design →   */
+		/* the designer → the church → buy.                                    */
+		/* ================================================================== */
+		:root { --peach:#f6e6d6; --olive:#2f3a1f; --olive-soft:#d9ddc6; --ink:#1f2418; --font_serif:'Fraunces', Georgia, serif; --font_mono:'IBM Plex Mono', ui-monospace, monospace; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; }
+		body { margin:0; background:var(--peach); color:var(--olive); font:14px/1.7 var(--font_mono); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--olive); color:var(--peach); font:12px/1.4 system-ui, sans-serif; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.top { display:flex; justify-content:space-between; align-items:center; padding:18px 40px; }
+		.top .brand { font:300 26px/1 var(--font_serif); font-variation-settings:'opsz' 144; letter-spacing:-.02em; color:var(--olive); text-decoration:none; }
+		.top nav { display:flex; gap:26px; font-size:13px; }
+		.top nav a { color:var(--olive); text-decoration:none; }
+		.top .cart { border:1px solid var(--olive); border-radius:999px; padding:6px 14px; font-size:12px; }
+
+		/* ---- the split headline with a drawn mark between ---- */
+		.split { padding:70px 40px 40px; }
+		.split h1 { margin:0; font:300 clamp(2.6rem, 8vw, 6.6rem)/1 var(--font_serif); font-variation-settings:'opsz' 144, 'wdth' 90; letter-spacing:-.03em; display:grid; }
+		.split h1 .l1 { justify-self:start; }
+		.split h1 .l2 { justify-self:end; margin-top:.35em; }
+		.split .drawn { width:64px; height:64px; margin:22px auto 0; }
+		.split .drawn svg { width:100%; height:100%; }
+
+		/* ---- the product page: sticky product, story scrolls beside it ---- */
+		.product { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:40px; padding:20px 40px 120px; align-items:start; }
+		.product .pane { position:sticky; top:60px; }
+		.product .shirt { aspect-ratio:4/5; background:#fff; border-radius:8px; display:grid; place-items:center; position:relative; overflow:hidden; box-shadow:0 20px 50px rgba(47,58,31,.12); }
+		.product .shirt .tee { width:70%; aspect-ratio:1/1.05; background:var(--olive-soft); border-radius:24px 24px 6px 6px; position:relative; }
+		.product .shirt .tee::before { content:'II'; position:absolute; inset:0; display:grid; place-items:center; font:300 6rem/1 var(--font_serif); color:var(--olive); }
+		.product .shirt .badge { position:absolute; left:16px; top:16px; font-size:11px; background:var(--olive); color:var(--peach); padding:6px 10px; border-radius:999px; }
+		.product .buy { display:flex; justify-content:space-between; align-items:center; margin-top:16px; }
+		.product .buy .price { font:300 1.6rem/1 var(--font_serif); }
+		.product .buy .add { background:var(--olive); color:var(--peach); border:0; border-radius:999px; padding:14px 26px; font:500 13px/1 var(--font_mono); cursor:pointer; }
+		.story > section { min-height:70svh; padding:40px 0; border-top:1px solid rgba(47,58,31,.25); }
+		.story h2 { margin:0 0 12px; font:300 clamp(1.6rem, 3.4vw, 2.6rem)/1.1 var(--font_serif); font-variation-settings:'opsz' 144; letter-spacing:-.02em; }
+		.story .kicker { font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin:0 0 10px; opacity:.7; }
+		.story p { margin:0 0 14px; max-width:48ch; }
+		.story .olives { width:120px; margin:10px 0 0; }
+		.story .verse-text { margin:0 0 8px; font:italic 300 1.35rem/1.5 var(--font_serif); }
+		.story .verse-ref { font:400 11px/1 var(--font_mono); letter-spacing:.14em; text-transform:uppercase; font-style:normal; opacity:.7; }
+		.story .church { display:inline-block; margin-top:8px; border:1px solid var(--olive); border-radius:999px; padding:10px 16px; }
+		@media (max-width:820px) { .product { grid-template-columns:1fr; } .product .pane { position:static; } .split h1 .l2 { justify-self:start; } }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid rgba(47,58,31,.25); font-size:12px; opacity:.85; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#store">← Breakdown</a><span>Study · <strong>Graza</strong> · "Pick 'Fancy Mayo' and just scroll down. Maybe here we can put info about the designer?"</span><a href="https://www.graza.co/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<header class="top"><a class="brand" href="#">II Commandments</a><nav><a href="#">Shop</a><a href="#">Designers</a><a href="#">Churches</a><a href="#">About</a></nav><span class="cart">Cart [0]</span></header>
+
+	<!-- ===== the split headline, a drawn mark between the lines ===== -->
+	<section class="split">
+		<h1><span class="l1">Love so whole,</span><span class="l2">you can wear it.</span></h1>
+		<div class="drawn" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#2f3a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c-8 8-14 14-14 24a14 14 0 0 0 28 0c0-10-6-16-14-24z"/><path d="M32 22v20M24 34h16"/></svg></div>
+	</section>
+
+	<!-- ===== the product page: the shirt stays; the story scrolls beside it ===== -->
+	<section class="product">
+		<div class="pane">
+			<div class="shirt"><span class="badge">Design 01 · Love God</span><div class="tee" aria-label="shirt with the II mark"></div></div>
+			<div class="buy"><span class="price">$28</span><button type="button" class="add" data-action="coming-soon">Add to cart</button></div>
+		</div>
+		<div class="story">
+			<section>
+				<p class="kicker">The design</p>
+				<h2>Two words, drawn by hand.</h2>
+				<p>Screen-printed on a heavyweight tee. The mark is hand-lettered, then cut by hand — no two runs sit exactly the same.</p>
+				<blockquote class="verse" data-ref="matthew.22.40" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote>
+			</section>
+			<section>
+				<p class="kicker">The designer</p>
+				<h2>Designer One, Tampa.</h2>
+				<p>Hand-lettering and warm, worn textures. This is where the designer tells, in their own words, how the two commandments show up in their work and their life. Two or three short paragraphs, first person.</p>
+				<svg class="olives" viewBox="0 0 120 60" fill="none" stroke="#2f3a1f" stroke-width="2" aria-hidden="true"><ellipse cx="40" cy="38" rx="16" ry="18"/><ellipse cx="78" cy="36" rx="16" ry="18"/><path d="M40 20c6-14 20-16 40-14M36 34l3 3M44 34l-3 3M74 32l3 3M82 32l-3 3"/><path d="M34 44q6 6 12 0M72 42q6 6 12 0"/></svg>
+			</section>
+			<section>
+				<p class="kicker">The church</p>
+				<h2>A third of this goes where you say.</h2>
+				<p>Pick your church or non-profit at checkout and a third of every shirt is theirs. No affiliation? Designer and II Commandments split it.</p>
+				<span class="church">Support: Sample Community Church ›</span>
+			</section>
+		</div>
+	</section>
+	<p class="study-note">What's borrowed: Graza's peach paper; the condensed light serif headline split left/right across two lines with a small hand-drawn mark between; mono body copy with hand-drawn illustrations; a product page whose product stays put while the story scrolls beside it — and, as he suggested, that story is the design → the designer → the church → buy.</p>
+</body>
+</html>

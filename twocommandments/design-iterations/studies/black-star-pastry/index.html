@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — Black Star Pastry → the shop landing</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: Black Star Pastry — "I don't know what it is, but there's    */
+		/* something here." The device: a black ticker; a black nav bar with */
+		/* the wordmark and small caps; a row of four category tiles with a   */
+		/* label overlaid; a big FEATURED product block — product image on a  */
+		/* colour field, copy beside it, one button, prev/next arrows; a       */
+		/* "signature" row of square tiles; dense, magazine-like, black on   */
+		/* white with one colour.                                              */
+		/* ================================================================== */
+		:root { --ink:#111; --paper:#fff; --grey:#f2f2f2; --field:#7a1f1f; --font_heavy:'Archivo Black', Impact, sans-serif; --font_body:'Archivo', system-ui, sans-serif; }
+		* { box-sizing:border-box; }
+		body { margin:0; background:var(--paper); color:var(--ink); font:13px/1.5 var(--font_body); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:#444; color:#fff; font-size:12px; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+		.ticker { background:var(--ink); color:#fff; font:600 10px/1 var(--font_body); letter-spacing:.16em; text-transform:uppercase; padding:7px 0; white-space:nowrap; overflow:hidden; }
+		.ticker span { display:inline-block; padding-left:100%; animation:tick 26s linear infinite; }
+		@keyframes tick { to { transform:translateX(-100%); } }
+		.nav { display:flex; justify-content:space-between; align-items:center; padding:14px 24px; border-bottom:1px solid #ddd; }
+		.nav .brand { font:400 18px/1 var(--font_heavy); letter-spacing:.06em; text-transform:uppercase; }
+		.nav .links { display:flex; gap:22px; font:600 10px/1 var(--font_body); letter-spacing:.16em; text-transform:uppercase; }
+		/* category tiles */
+		.tiles { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; padding:16px 24px; }
+		.tiles a { position:relative; aspect-ratio:1.35; background:var(--grey); display:grid; place-items:end start; padding:12px; text-decoration:none; color:var(--ink); font:400 12px/1 var(--font_heavy); letter-spacing:.06em; text-transform:uppercase; overflow:hidden; }
+		.tiles a::before { content:'II'; position:absolute; inset:0; display:grid; place-items:center; font:400 3rem/1 var(--font_heavy); color:#ddd; }
+		.tiles a span { position:relative; background:#fff; padding:6px 10px; }
+		/* the featured block */
+		.featured { margin:10px 24px; position:relative; display:grid; grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr); background:var(--field); color:#fff; min-height:420px; }
+		.featured .pic { display:grid; place-items:center; padding:40px; }
+		.featured .pic .tee { width:min(100%, 320px); aspect-ratio:1/1.05; background:#fff; border-radius:26px 26px 6px 6px; display:grid; place-items:center; font:400 6rem/1 var(--font_heavy); color:var(--field); box-shadow:0 30px 60px rgba(0,0,0,.35); }
+		.featured .copy { padding:60px 40px 60px 20px; display:grid; align-content:center; gap:14px; }
+		.featured .copy .kicker { font:600 10px/1 var(--font_body); letter-spacing:.2em; text-transform:uppercase; opacity:.8; }
+		.featured .copy h1 { margin:0; font:400 clamp(1.4rem, 3vw, 2.2rem)/1.1 var(--font_heavy); text-transform:uppercase; letter-spacing:.02em; }
+		.featured .copy p { margin:0; max-width:40ch; }
+		.featured .copy .verse-text { margin:0; font:italic 400 1rem/1.5 var(--font_body); opacity:.9; }
+		.featured .copy .verse-ref { font:600 10px/1 var(--font_body); letter-spacing:.16em; text-transform:uppercase; font-style:normal; opacity:.75; }
+		.featured .copy .btn { justify-self:start; background:#fff; color:var(--ink); border:0; padding:12px 18px; font:600 10px/1 var(--font_body); letter-spacing:.16em; text-transform:uppercase; cursor:pointer; }
+		.featured .arrow { position:absolute; top:50%; transform:translateY(-50%); width:40px; height:40px; border-radius:50%; background:#fff; color:var(--ink); border:0; display:grid; place-items:center; font-size:18px; cursor:pointer; }
+		.featured .arrow.l { left:-14px; } .featured .arrow.r { right:-14px; }
+		/* signature row */
+		h2 { margin:30px 24px 12px; font:400 14px/1 var(--font_heavy); letter-spacing:.06em; text-transform:uppercase; }
+		.row { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; padding:0 24px 100px; }
+		.row div { aspect-ratio:1; background:var(--grey); display:grid; place-items:center; font:400 2.4rem/1 var(--font_heavy); color:#ccc; position:relative; }
+		.row div small { position:absolute; left:10px; bottom:10px; font:600 10px/1 var(--font_body); color:var(--ink); letter-spacing:.1em; text-transform:uppercase; }
+		@media (max-width:760px) { .tiles, .row { grid-template-columns:repeat(2, 1fr); } .featured { grid-template-columns:1fr; } }
+		.study-note { max-width:60ch; margin:0 auto 60px; padding:20px 24px 0; border-top:1px solid #ddd; font-size:12px; color:#666; }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#store">← Breakdown</a><span>Study · <strong>Black Star Pastry</strong> · "I don't know what it is, but there's something here."</span><a href="https://blackstarpastry.com/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<div class="ticker" aria-hidden="true"><span>A third to your church · a third to the designer · print per order · ten designers at launch · A third to your church · a third to the designer · print per order</span></div>
+	<div class="nav"><span class="brand">II Commandments</span><span class="links"><a>Shop</a><a>Designers</a><a>Churches</a><a>About</a></span><span class="links"><a>Account</a><a>Bag 0</a></span></div>
+
+	<!-- ===== category tiles ===== -->
+	<div class="tiles"><a href="#"><span>Limited edition</span></a><a href="#"><span>Signature tees</span></a><a href="#"><span>Hats &amp; caps</span></a><a href="#"><span>Prints</span></a></div>
+
+	<!-- ===== the featured block: one design, the designer's line beside it ===== -->
+	<section class="featured">
+		<button type="button" class="arrow l" aria-label="previous">‹</button>
+		<div class="pic"><div class="tee">II</div></div>
+		<div class="copy">
+			<span class="kicker">Featured · Designer One · Tampa</span>
+			<h1>Love God — hand-lettered, screen-printed</h1>
+			<p>Two words, drawn by hand and cut by hand. Heavyweight cotton, printed per order. A third of this shirt goes to the church you choose at checkout.</p>
+			<blockquote class="verse" data-ref="matthew.22.40" data-plain="true"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote>
+			<button type="button" class="btn" data-action="coming-soon">Shop now</button>
+		</div>
+		<button type="button" class="arrow r" aria-label="next">›</button>
+	</section>
+
+	<!-- ===== signature row ===== -->
+	<h2>Signature designs</h2>
+	<div class="row"><div>II<small>Love God</small></div><div>✦<small>Neighbor</small></div><div>II<small>Keep</small></div><div>✦<small>Lion</small></div></div>
+	<p class="study-note">What's borrowed: the black ticker; the black-on-white nav with small caps; four category tiles with a white label in the corner; the big featured block — product on a deep colour field, copy and one button beside it, round prev/next arrows overhanging the edge; then a signature row of square tiles. Dense and magazine-like — the "something here" is probably that it feels like a real, busy shop.</p>
+</body>
+</html>

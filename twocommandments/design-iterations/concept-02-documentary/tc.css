@@ -1,0 +1,263 @@
+/* ========================================================================== */
+/* II COMMANDMENTS — CONCEPT 2: DOCUMENTARY                                   */
+/* References: atterwasch (b&w photo, serif on the image, stark chapter list) */
+/* Benno's Light (an index that opens over the story) · Nomadic Tribe (one    */
+/* continuous scroll). Black, photographic, cinematic. Same blocks as root.    */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* TOKENS                                                                     */
+/* ========================================================================== */
+:root {
+	color-scheme: dark;
+	--color_black:#0a0a0a;
+	--color_ink:#0a0a0a;
+	--color_paper:#ecebe7;
+	--color_paper-deep:#dcdad3;
+	--color_smoke:#1a1a1a;
+	--color_grey:#8f8d87;      /* 5.2:1 on black */
+	--color_line:#2a2a2a;
+	--color_line-strong:#3d3d3d;
+	--color_accent:#d9c8a3;    /* old gold, used once */
+	--color_white:#fff;
+	--color_bg-primary:var(--color_black);
+	--color_bg-dark:var(--color_black);
+	--color_text:var(--color_paper);
+	--color_text-muted:var(--color_grey);
+	--color_text-on-dark:var(--color_paper);
+	--color_link:var(--color_accent);
+	--color_focus:var(--color_accent);
+	--color_card:var(--color_smoke);
+
+	/* gospels — desaturated for black; the colour is a thread, not a room */
+	--gospel_matthew:#7fae8f;
+	--gospel_mark:#c47a72;
+	--gospel_luke:#7f9fc4;
+	--gospel_john:#d4b96a;
+	--gospel_matthew-soft:#0f1a13;
+	--gospel_mark-soft:#1c0f0e;
+	--gospel_luke-soft:#0e141c;
+	--gospel_john-soft:#1a160a;
+
+	--font_name-primary:'Inter', system-ui, sans-serif;
+	--font_name-display:'Playfair Display', Georgia, serif;
+	--font_size-xs:0.75rem;
+	--font_size-sm:0.875rem;
+	--font_size-md:1.0625rem;
+	--font_size-lg:1.375rem;
+	--font_size-xl:clamp(1.75rem, 3.2vw, 2.5rem);
+	--font_size-display:clamp(2.25rem, 6vw, 5rem);
+	--font_size-hero:clamp(2.5rem, 8vw, 7.5rem);
+	--line_height-body:1.6;
+	--line_height-display:1.05;
+	--tracking_display:-0.01em;
+
+	--gutter:clamp(20px, 5vw, 64px);
+	--space_xs:4px; --space_sm:8px; --space_md:16px; --space_lg:32px; --space_xl:64px; --space_2xl:112px;
+	--measure:60ch;
+	--radius_sm:2px; --radius_md:4px; --radius_pill:999px;
+	--motion_fast:200ms; --motion_slow:1200ms;
+	--motion_ease:cubic-bezier(.2,.7,.2,1); --motion_ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+/* ========================================================================== */
+/* BASE                                                                       */
+/* ========================================================================== */
+*, *::before, *::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--color_bg-primary); color:var(--color_text); font:var(--font_size-md)/var(--line_height-body) var(--font_name-primary); -webkit-font-smoothing:antialiased; }
+/* film grain */
+body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:5; opacity:.12; mix-blend-mode:screen;
+	background-image:radial-gradient(rgba(255,255,255,.35) 1px, transparent 1px), radial-gradient(rgba(255,255,255,.2) 1px, transparent 1px); background-size:4px 4px, 7px 7px; background-position:0 0, 2px 3px; }
+main, header, footer, .drawer { position:relative; z-index:1; }
+h1, h2, h3 { font-family:var(--font_name-display); font-weight:400; line-height:var(--line_height-display); letter-spacing:var(--tracking_display); margin:0 0 var(--space_md); }
+h1 { font-size:var(--font_size-display); }
+h2 { font-size:var(--font_size-xl); }
+h3 { font-size:var(--font_size-lg); }
+p { margin:0 0 var(--space_md); max-width:var(--measure); }
+a { color:var(--color_link); text-underline-offset:.15em; }
+img, svg { max-width:100%; height:auto; display:block; }
+button, select, input { font:inherit; color:inherit; }
+:focus-visible { outline:2px solid var(--color_accent); outline-offset:3px; }
+[hidden] { display:none !important; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip-link { position:absolute; left:var(--gutter); top:-100px; background:var(--color_paper); color:var(--color_ink); padding:var(--space_sm) var(--space_md); z-index:100; }
+.skip-link:focus { top:var(--space_md); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
+
+/* ========================================================================== */
+/* SHARED CONTROLS                                                            */
+/* ========================================================================== */
+.btn { display:inline-flex; align-items:center; gap:var(--space_sm); min-height:48px; padding:var(--space_sm) var(--space_lg); border:1px solid var(--color_line-strong); border-radius:0; background:transparent; color:inherit; cursor:pointer; font-size:var(--font_size-xs); letter-spacing:.18em; text-transform:uppercase; text-decoration:none; transition:background var(--motion_fast), color var(--motion_fast), border-color var(--motion_fast); }
+.btn:hover { border-color:var(--color_paper); background:var(--color_paper); color:var(--color_ink); }
+.btn-primary { background:var(--color_paper); color:var(--color_ink); border-color:var(--color_paper); }
+.btn-primary:hover { background:var(--color_accent); border-color:var(--color_accent); }
+.btn-ghost { border-color:transparent; }
+.eyebrow { font-size:var(--font_size-xs); letter-spacing:.24em; text-transform:uppercase; color:var(--color_text-muted); margin-bottom:var(--space_md); }
+.toast { position:fixed; left:50%; bottom:var(--space_lg); transform:translate(-50%, 20px); padding:var(--space_sm) var(--space_lg); background:var(--color_paper); color:var(--color_ink); font-size:var(--font_size-sm); opacity:0; pointer-events:none; z-index:90; transition:opacity var(--motion_fast), transform var(--motion_fast) var(--motion_ease); }
+.toast.is-open { opacity:1; transform:translate(-50%, 0); }
+.concept-bar { position:sticky; top:0; z-index:60; display:flex; justify-content:space-between; gap:var(--space_md); padding:6px var(--gutter); background:var(--color_paper); color:var(--color_ink); font-size:var(--font_size-xs); letter-spacing:.06em; }
+.concept-bar a { color:inherit; }
+
+/* ========================================================================== */
+/* TOPBAR — wordmark over the image; fades in a hairline once you scroll      */
+/* ========================================================================== */
+.topbar { position:sticky; top:28px; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:var(--space_md); padding:var(--space_md) var(--gutter); background:linear-gradient(to bottom, rgba(10,10,10,.75), rgba(10,10,10,0)); mix-blend-mode:normal; }
+body.is-scrolled .topbar { background:rgba(10,10,10,.85); backdrop-filter:blur(8px); border-bottom:1px solid var(--color_line); }
+.topbar .brand { font-family:var(--font_name-display); text-decoration:none; color:var(--color_paper); font-size:var(--font_size-lg); }
+.primary-navigation { display:flex; flex-wrap:wrap; gap:var(--space_md) var(--space_lg); margin:0; padding:0; list-style:none; }
+.primary-navigation a { color:var(--color_grey); text-decoration:none; font-size:var(--font_size-xs); letter-spacing:.18em; text-transform:uppercase; min-height:24px; display:inline-flex; align-items:center; }
+.primary-navigation a:hover, .primary-navigation a.is-current { color:var(--color_paper); }
+
+/* ========================================================================== */
+/* PANEL                                                                      */
+/* ========================================================================== */
+.panel { min-height:100svh; display:grid; place-items:center; text-align:center; padding:var(--space_2xl) var(--gutter); position:relative; overflow:hidden; transition:background-color var(--motion_slow) var(--motion_ease); }
+.panel > .panel-inner { width:min(100%, 76rem); position:relative; z-index:2; }
+.panel > .panel-inner > p { margin-inline:auto; }
+.panel-nav { position:absolute; bottom:var(--space_lg); left:50%; transform:translateX(-50%); z-index:2; }
+.panel-nav a { color:inherit; text-decoration:none; font-size:var(--font_size-xs); letter-spacing:.24em; text-transform:uppercase; display:inline-flex; flex-direction:column; align-items:center; gap:var(--space_sm); opacity:.8; }
+.panel-nav svg { animation:tc-nudge 2.6s var(--motion_ease) infinite; }
+@keyframes tc-nudge { 0%, 100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
+.panel .panel-inner > * { opacity:0; transform:translateY(14px); transition:opacity var(--motion_slow) var(--motion_ease-out), transform var(--motion_slow) var(--motion_ease-out); }
+.panel.is-seen .panel-inner > * { opacity:1; transform:none; }
+.panel.is-seen .panel-inner > *:nth-child(2) { transition-delay:200ms; }
+.panel.is-seen .panel-inner > *:nth-child(3) { transition-delay:400ms; }
+.panel.is-seen .panel-inner > *:nth-child(n+4) { transition-delay:600ms; }
+@media (prefers-reduced-motion: reduce) { .panel .panel-inner > * { opacity:1; transform:none; } }
+
+/* ========================================================================== */
+/* VERSE                                                                      */
+/* ========================================================================== */
+.verse { margin:0 auto; max-width:var(--measure); text-align:left; }
+.verse .verse-text { font-family:var(--font_name-display); font-size:var(--font_size-lg); line-height:1.5; margin:0 0 var(--space_sm); }
+.verse .verse-text .verse-num { font-family:var(--font_name-primary); font-size:var(--font_size-xs); vertical-align:super; color:var(--color_text-muted); margin-right:2px; }
+.verse .verse-ref { display:block; font-family:var(--font_name-primary); font-style:normal; font-size:var(--font_size-xs); letter-spacing:.24em; text-transform:uppercase; color:var(--color_text-muted); }
+.verse.is-hero { max-width:none; }
+.verse.is-hero .verse-text { font-size:var(--font_size-hero); text-align:center; line-height:1; letter-spacing:-.015em; font-style:italic; text-wrap:balance; text-shadow:0 2px 30px rgba(0,0,0,.6); }
+.verse.is-hero .verse-ref { text-align:center; margin-top:var(--space_lg); color:var(--color_paper); opacity:.7; }
+.verse.is-display { max-width:none; }
+.verse.is-display .verse-text { font-size:var(--font_size-display); text-align:center; line-height:1.08; text-wrap:balance; }
+.verse.is-display .verse-ref { text-align:center; margin-top:var(--space_md); }
+.verse.is-loading .verse-text { opacity:.4; }
+.verse .anim-unit { display:inline-block; opacity:0; transform:translateY(.2em); filter:blur(6px); transition:opacity 1.2s var(--motion_ease-out), transform 1.2s var(--motion_ease-out), filter 1.2s var(--motion_ease-out); }
+.verse .anim-unit.is-in { opacity:1; transform:none; filter:blur(0); }
+.verse[data-anim="fade"] .verse-text { opacity:0; transition:opacity 1.6s var(--motion_ease); }
+.verse[data-anim="fade"].is-in .verse-text { opacity:1; }
+.reveal .reveal-part { display:block; opacity:0; transform:translateY(.3em); transition:opacity 1.4s var(--motion_ease-out), transform 1.4s var(--motion_ease-out); }
+.reveal.is-revealed .reveal-part:nth-child(1) { opacity:1; transform:none; }
+.reveal.is-revealed .reveal-part:nth-child(2) { opacity:1; transform:none; transition-delay:1.8s; }
+
+/* ========================================================================== */
+/* BIBLE PICKER                                                               */
+/* ========================================================================== */
+.bible-picker { display:inline-grid; gap:var(--space_xs); justify-items:center; margin-top:var(--space_xl); }
+.bible-picker label { font-size:var(--font_size-xs); letter-spacing:.24em; text-transform:uppercase; color:var(--color_text-muted); }
+.bible-picker select { min-height:44px; padding:var(--space_xs) var(--space_md); border:0; border-bottom:1px solid currentColor; border-radius:0; background:transparent; color:inherit; font-family:var(--font_name-display); font-size:var(--font_size-md); text-align:center; cursor:pointer; }
+.bible-picker select option { color:var(--color_ink); }
+
+/* ========================================================================== */
+/* HERO — the photograph is the background; the verse sits on it             */
+/* ========================================================================== */
+.hero { background:var(--color_black); }
+/* placeholder for a full-bleed b&w photograph (Jesus speaking, from behind or in the crowd — see the storyboard) */
+.hero-photo { position:absolute; inset:0; z-index:0; filter:grayscale(1) contrast(1.15); opacity:.9;
+	background:
+		radial-gradient(ellipse 60% 50% at 50% 45%, rgba(236,235,231,.22), transparent 60%),
+		radial-gradient(ellipse 100% 80% at 30% 90%, rgba(236,235,231,.10), transparent 60%),
+		linear-gradient(180deg, #3a3a3a 0%, #151515 55%, #0a0a0a 100%);
+	animation:tc-drift 24s ease-in-out infinite alternate; }
+.hero-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(10,10,10,.15), rgba(10,10,10,.55) 70%, var(--color_black)); }
+@keyframes tc-drift { from { transform:scale(1.02) translateY(0); } to { transform:scale(1.08) translateY(-1.5%); } }
+.hero .panel-inner { width:min(100%, 84rem); }
+
+/* ========================================================================== */
+/* LOGO                                                                       */
+/* ========================================================================== */
+.logo { background:var(--color_black); }
+.logo-mark { width:min(30vw, 180px); margin:0 auto var(--space_lg); opacity:.9; }
+.logo h2 { letter-spacing:.3em; text-transform:uppercase; font-size:var(--font_size-sm); font-family:var(--font_name-primary); color:var(--color_text-muted); }
+
+/* ========================================================================== */
+/* LOVE — the one light beat                                                  */
+/* ========================================================================== */
+.love { background:var(--color_paper); color:var(--color_ink); }
+.love .verse .verse-ref { color:#5a5852; }
+.love .reveal .reveal-part:nth-child(2) { font-style:italic; }
+
+/* ========================================================================== */
+/* GOSPELS — the stark chapter list (atterwasch)                              */
+/* ========================================================================== */
+.gospels { background:var(--color_black); }
+.gospel-picker { display:grid; margin:var(--space_lg) auto; max-width:44rem; text-align:left; }
+.gospel-btn { display:grid; grid-template-columns:4ch 1fr auto; align-items:baseline; gap:var(--space_md); width:100%; padding:var(--space_md) 0; border:0; border-top:1px solid var(--color_line); background:transparent; color:var(--color_paper); cursor:pointer; text-align:left; transition:color var(--motion_fast), padding-left var(--motion_fast); }
+.gospel-btn:last-child { border-bottom:1px solid var(--color_line); }
+.gospel-btn:hover, .gospel-btn.is-active { color:var(--gospel_color); padding-left:var(--space_sm); }
+.gospel-btn img { display:none; }
+.gospel-btn .gospel-n { font-family:var(--font_name-primary); font-size:var(--font_size-xs); letter-spacing:.24em; color:var(--color_text-muted); }
+.gospel-btn .gospel-name { font-family:var(--font_name-display); font-size:var(--font_size-xl); }
+.gospel-btn .gospel-symbol { font-size:var(--font_size-xs); letter-spacing:.24em; text-transform:uppercase; color:var(--color_text-muted); }
+.gospel-btn.is-active .gospel-symbol { color:var(--gospel_color); }
+.gospel-btn[data-gospel="matthew"] { --gospel_color:var(--gospel_matthew); }
+.gospel-btn[data-gospel="mark"]    { --gospel_color:var(--gospel_mark); }
+.gospel-btn[data-gospel="luke"]    { --gospel_color:var(--gospel_luke); }
+.gospel-btn[data-gospel="john"]    { --gospel_color:var(--gospel_john); }
+@media (max-width:560px) { .gospel-btn { grid-template-columns:3ch 1fr; } .gospel-btn .gospel-symbol { grid-column:2; } }
+
+/* ========================================================================== */
+/* VERSES — black; the chosen Gospel's colour is the heading and a hairline    */
+/* ========================================================================== */
+.verses { background:var(--color_black); }
+body[data-gospel="matthew"] .verses { background:var(--gospel_matthew-soft); }
+body[data-gospel="mark"] .verses    { background:var(--gospel_mark-soft); }
+body[data-gospel="luke"] .verses    { background:var(--gospel_luke-soft); }
+body[data-gospel="john"] .verses    { background:var(--gospel_john-soft); }
+.passages { display:grid; gap:var(--space_md); max-width:var(--measure); margin:var(--space_lg) auto 0; text-align:left; }
+.passage { border-top:1px solid var(--color_line-strong); }
+.passage[data-gospel="matthew"] { --gospel_color:var(--gospel_matthew); }
+.passage[data-gospel="mark"]    { --gospel_color:var(--gospel_mark); }
+.passage[data-gospel="luke"]    { --gospel_color:var(--gospel_luke); }
+.passage[data-gospel="john"]    { --gospel_color:var(--gospel_john); }
+.passage summary { cursor:pointer; padding:var(--space_md) 0; font-family:var(--font_name-display); font-size:var(--font_size-xl); list-style:none; display:flex; justify-content:space-between; align-items:baseline; color:var(--gospel_color); }
+.passage summary::-webkit-details-marker { display:none; }
+.passage summary::after { content:'+'; font-family:var(--font_name-primary); font-size:var(--font_size-md); color:var(--color_text-muted); }
+.passage[open] summary::after { content:'\2013'; }
+.passage .passage-body { padding:0 0 var(--space_lg); }
+.passage .passage-body .eyebrow { color:var(--gospel_color); }
+.passage.is-chosen { order:-1; }
+.passage.is-chosen summary { font-size:var(--font_size-display); }
+
+/* ========================================================================== */
+/* DEEPER + DRAWER — the index over the story (Benno's Light)                */
+/* ========================================================================== */
+.deeper { background:var(--color_black); min-height:60svh; }
+.drawer { position:fixed; inset:0; z-index:80; display:grid; grid-template-columns:1fr min(100%, 40rem); pointer-events:none; }
+.drawer-scrim { background:rgba(10,10,10,.6); opacity:0; transition:opacity var(--motion_fast); }
+.drawer-panel { background:var(--color_smoke); color:var(--color_paper); overflow:auto; padding:var(--space_lg) var(--gutter) var(--space_2xl); transform:translateX(100%); transition:transform var(--motion_slow) var(--motion_ease-out); border-left:1px solid var(--color_line-strong); }
+.drawer.is-open { pointer-events:auto; }
+.drawer.is-open .drawer-scrim { opacity:1; }
+.drawer.is-open .drawer-panel { transform:none; }
+.drawer-head { display:flex; justify-content:space-between; align-items:center; gap:var(--space_md); margin-bottom:var(--space_lg); }
+.drawer-head h2 { margin:0; }
+.drawer-close { min-width:44px; min-height:44px; display:inline-grid; place-items:center; border:1px solid var(--color_line-strong); background:transparent; cursor:pointer; }
+.related { display:grid; text-align:left; border-top:1px solid var(--color_line-strong); }
+.related .related-card { padding:var(--space_md) 0; border-bottom:1px solid var(--color_line); }
+.related .related-card summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:baseline; gap:var(--space_md); font-family:var(--font_name-display); font-size:var(--font_size-lg); }
+.related .related-card summary::-webkit-details-marker { display:none; }
+.related .related-card summary::after { content:'+'; font-family:var(--font_name-primary); font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.related .related-card[open] summary::after { content:'\2013'; }
+.related .related-card .verse { margin-top:var(--space_md); }
+.related .related-card .verse .verse-text { font-size:var(--font_size-md); }
+@media (max-width:640px) { .drawer { grid-template-columns:1fr; } .drawer-scrim { display:none; } }
+
+/* ========================================================================== */
+/* SHARE                                                                      */
+/* ========================================================================== */
+.share { background:var(--color_black); }
+.share .share-actions { display:flex; flex-wrap:wrap; gap:var(--space_md); justify-content:center; margin-top:var(--space_xl); }
+
+/* ========================================================================== */
+/* FOOTER                                                                     */
+/* ========================================================================== */
+.site-footer { padding:var(--space_xl) var(--gutter); border-top:1px solid var(--color_line); font-size:var(--font_size-xs); letter-spacing:.06em; color:var(--color_text-muted); text-align:center; }
+.site-footer a { color:inherit; }

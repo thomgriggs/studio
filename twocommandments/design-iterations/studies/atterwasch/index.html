@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow">
+	<title>Study — atterwasch → II Commandments</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<script defer src="../../../verses.js"></script>
+	<script defer src="../../../data.js"></script>
+	<script defer src="../../../tc.js"></script>
+	<style>
+		/* ================================================================== */
+		/* STUDY: atterwasch — "Possibly the best example of carrying a        */
+		/* narrative." The device: a full-bleed b&w photograph with the       */
+		/* wordmark set INTO it, an italic subtitle, a small vertical episode */
+		/* list at the left, a scroll cue; then a black page whose only       */
+		/* content is the chapter list.                                        */
+		/* ================================================================== */
+		:root { --ink:#0a0a0a; --paper:#f1efe9; --grey:#9a9891; --font_display:'Libre Baskerville', Georgia, serif; --font_body:'Inter', system-ui, sans-serif; }
+		* { box-sizing:border-box; }
+		html { scroll-behavior:smooth; }
+		body { margin:0; background:var(--ink); color:var(--paper); font:15px/1.5 var(--font_body); }
+		.study-bar { position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; gap:12px; padding:6px 16px; background:var(--paper); color:var(--ink); font-size:12px; letter-spacing:.04em; }
+		.study-bar a { color:inherit; }
+
+		/* ---- the photograph, with everything set into it ---- */
+		.frame { position:relative; min-height:100svh; overflow:hidden; }
+		.frame .photo { position:absolute; inset:0; background:url("../../../assets/rembrandt-christ-preaching.jpg") center 40% / cover no-repeat; filter:grayscale(1) contrast(1.25) brightness(.85); animation:drift 30s ease-in-out infinite alternate; }
+		@keyframes drift { from { transform:scale(1); } to { transform:scale(1.06); } }
+		.frame .shade { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.05) 40%, rgba(0,0,0,.65)); }
+		.frame .mark { position:absolute; top:20px; left:24px; font:700 34px/1 var(--font_display); }
+		.frame .menu { position:absolute; top:26px; right:24px; font:600 12px/1 var(--font_body); letter-spacing:.2em; text-transform:uppercase; }
+		.frame .menu::after { content:' \25B6'; font-size:9px; }
+		.frame .episodes { position:absolute; left:24px; top:42%; margin:0; padding:0; list-style:none; font:400 12px/1.9 var(--font_display); letter-spacing:.02em; }
+		.frame .episodes li::before { content:'\2013  '; color:var(--grey); }
+		.frame .episodes a { color:var(--paper); text-decoration:none; }
+		.frame .title { position:absolute; left:50%; top:46%; transform:translate(-50%, -50%); text-align:center; width:min(92vw, 60rem); }
+		.frame .title h1 { margin:0; font:400 clamp(3rem, 12vw, 9rem)/.95 var(--font_display); letter-spacing:-.02em; text-shadow:0 2px 40px rgba(0,0,0,.55); }
+		.frame .title h1 span { display:inline-block; }
+		.frame .title .sub { margin:14px 0 0; font:italic 400 clamp(.95rem, 1.6vw, 1.2rem)/1.4 var(--font_display); opacity:.9; }
+		.frame .cue { position:absolute; left:50%; bottom:28px; transform:translateX(-50%); font:italic 400 12px/1 var(--font_display); opacity:.85; text-align:center; }
+		.frame .cue::after { content:''; display:block; width:1px; height:26px; margin:10px auto 0; background:var(--paper); animation:cue 1.8s ease-in-out infinite; }
+		@keyframes cue { 0%,100% { transform:scaleY(.4); transform-origin:top; opacity:.4; } 50% { transform:scaleY(1); opacity:1; } }
+		.frame .laurels { position:absolute; left:24px; bottom:26px; display:flex; gap:14px; font:600 9px/1.2 var(--font_body); letter-spacing:.14em; text-transform:uppercase; opacity:.7; }
+		.frame .laurels span { border:1px solid var(--paper); padding:6px 8px; border-radius:2px; }
+
+		/* ---- the black page: only the chapters ---- */
+		.chapters { padding:80px 24px 120px; }
+		.chapters ol { margin:0; padding:0; list-style:none; max-width:44rem; }
+		.chapters li { border-top:1px solid #2a2a2a; }
+		.chapters li:last-child { border-bottom:1px solid #2a2a2a; }
+		.chapters details summary { list-style:none; cursor:pointer; display:grid; grid-template-columns:5ch 1fr auto; gap:16px; align-items:baseline; padding:18px 0; font:400 12px/1 var(--font_body); letter-spacing:.2em; text-transform:uppercase; color:var(--grey); }
+		.chapters details summary::-webkit-details-marker { display:none; }
+		.chapters details summary strong { font:400 clamp(1.5rem, 3.4vw, 2.4rem)/1.1 var(--font_display); letter-spacing:0; text-transform:none; color:var(--paper); }
+		.chapters details summary:hover strong, .chapters details[open] summary strong { font-style:italic; }
+		.chapters .verse { margin:0 0 28px 5ch; max-width:38rem; padding-left:16px; }
+		.chapters .verse-text { margin:0 0 8px; font:400 1.05rem/1.7 var(--font_display); }
+		.chapters .verse-text .verse-num { font:400 .65rem/1 var(--font_body); vertical-align:super; color:var(--grey); margin-right:2px; }
+		.chapters .verse-ref { display:block; font:600 10px/1 var(--font_body); letter-spacing:.2em; text-transform:uppercase; color:var(--grey); font-style:normal; }
+		.study-note { max-width:60ch; margin:0 24px 60px; padding-top:20px; border-top:1px solid #2a2a2a; color:var(--grey); font-size:13px; }
+		.study-note a { color:var(--paper); }
+		@media (max-width:640px) { .frame .episodes { display:none; } .frame .mark { font-size:26px; } }
+	</style>
+</head>
+<body data-view="home" data-bible="web">
+	<nav class="study-bar"><a href="../../../#message">← Breakdown</a><span>Study · <strong>atterwasch</strong> · "Possibly the best example of carrying a narrative."</span><a href="https://www.atterwasch.net/" target="_blank" rel="noopener">the reference ↗</a></nav>
+
+	<!-- ===== the photograph, everything set into it (atterwasch's opening frame) ===== -->
+	<section class="frame">
+		<div class="photo" aria-hidden="true"></div>
+		<div class="shade" aria-hidden="true"></div>
+		<div class="mark">II.</div>
+		<div class="menu">menu</div>
+		<ol class="episodes" aria-label="Chapters">
+			<li><a href="#chapters">Matthew</a></li>
+			<li><a href="#chapters">Mark</a></li>
+			<li><a href="#chapters">Luke</a></li>
+			<li><a href="#chapters">John</a></li>
+			<li><a href="#chapters">Related</a></li>
+			<li><a href="#chapters">Wear it</a></li>
+		</ol>
+		<div class="title">
+			<h1>II Commandments.</h1>
+			<p class="sub">A scroll-story of the two on which all the Law and the Prophets hang.</p>
+		</div>
+		<p class="cue">scroll down</p>
+		<div class="laurels" aria-hidden="true"><span>Matthew 22:40</span><span>Mark 12:31</span><span>Luke 10:27</span><span>John 13:34</span></div>
+	</section>
+
+	<!-- ===== the black page: only the chapters (atterwasch's episode list) ===== -->
+	<section class="chapters" id="chapters">
+		<ol>
+			<li><details open><summary><span>I</span><strong>Matthew</strong><span>winged man</span></summary>
+				<blockquote class="verse" data-ref="matthew.22.36-40"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></details></li>
+			<li><details><summary><span>II</span><strong>Mark</strong><span>lion</span></summary>
+				<blockquote class="verse" data-ref="mark.12.28-34"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></details></li>
+			<li><details><summary><span>III</span><strong>Luke</strong><span>ox</span></summary>
+				<blockquote class="verse" data-ref="luke.10.25-37"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></details></li>
+			<li><details><summary><span>IV</span><strong>John</strong><span>eagle</span></summary>
+				<blockquote class="verse" data-ref="john.13.34-35"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></details></li>
+			<li><details><summary><span>&nbsp;</span><strong>If you love me</strong><span>John 14</span></summary>
+				<blockquote class="verse" data-ref="john.14.15"><p class="verse-text" data-field="text"></p><cite class="verse-ref" data-field="ref"></cite></blockquote></details></li>
+		</ol>
+	</section>
+	<p class="study-note">What's borrowed: the photograph as the whole opening frame; the wordmark and subtitle set into it; the small episode list top-left; the italic "scroll down" cue with a line; the laurels row; then a black page whose only content is the chapter list. Image: Rembrandt, <em>Christ Preaching</em> (CC0) as a stand-in — see <a href="../../../assets/ASSETS.md">assets/ASSETS.md</a>. Verse text is live from the engine (WEB).</p>
+</body>
+</html>
