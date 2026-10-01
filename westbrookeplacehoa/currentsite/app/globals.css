@@ -1,0 +1,6 @@
+/* Local snapshot plumbing only. Do not copy this file into HOA Express. */
+.snapshot_loading {
+  padding: 40px;
+  color: #555;
+  font: 14px Arial, sans-serif;
+}
