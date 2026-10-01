@@ -42,3 +42,12 @@ The attribute selectors, the token layer, the breakpoints, the `!important`s the
 ## Also
 - The concept's `tests/rendered-html.test.mjs` is a template placeholder (asserts the starter skeleton), not a regression test for the CSS. A real safety net would be the A/B script above, run on a fixed list of pages.
 - Ask the client for photos at the quality of the new home photo for the other banner pages; the Unsplash stock reads as stock beside it.
+
+## Validator pass (2026-10-01, later) — paste file is now W3C-clean
+HOA Express runs the **W3C CSS Validator (css3 profile)** on the Custom CSS field and refuses the paste on any error. Reproduce locally:
+`curl -F file=@concept1/custom-css/hoa-custom.css -F profile=css3 -F output=json https://jigsaw.w3.org/css-validator/validator`
+Result after this pass: **0 errors, 0 warnings**. What changed, and why it still looks the same:
+- **`paint-order` → text-shadow ring.** The title used `-webkit-text-stroke` behind the fill via `paint-order: stroke fill`. Removing paint-order alone made the stroke paint *over* the gold and thinned the letters (that is the "logo is not the same" you spotted). Replaced with `--wp-title-outline`: a 16-point ring of hard `text-shadow`s (0.016em) behind the fill. Stroke set to 0 in all four title rules.
+- **`pointer-events` → geometry.** The mobile-nav container was pulled over the top bar with `pointer-events: none` so taps reached the Welcome/bell buttons. Now the container and `TopRow` are zero-height and only the Menu button is positioned up into the bar. Verified at 400px and 900px: Welcome dropdown opens, bell reachable, Menu opens the drawer. The drawer scrim lost `pointer-events: none`; tap-outside never closed the drawer before either (tested), so no behaviour change.
+- **Native nesting (`& …`) flattened** by `concept1/scripts/flatten-css.mjs` — 145 nested rules → plain selectors, 0 computed-style diffs on Calendar / Pet Directory / Member Documents in the A/B.
+- `inset` → four edges; `text-wrap: balance` dropped.
