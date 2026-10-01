@@ -818,6 +818,12 @@
 ) [class*="mobile-navigation__MenuIcon"]::after {
   content: "";
 }
+/* HOA's own bars/chevron icon inside the Menu button. font-size: 0 collapses the <svg> box
+   but its <path> still paints a 448x256 hit area that sat over the open drawer and swallowed
+   taps on the first few links. Our icon is the ::before/::after below, so drop the svg. */
+[class*="mobile-navigation__MenuIcon"] svg {
+  display: none !important;
+}
 [class*="mobile-navigation__MenuIcon"]::before {
   position: absolute;
   top: 50%;
