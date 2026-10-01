@@ -628,13 +628,13 @@
 [class*="top-bar__Wrapper"] [class*="__DropdownMenu"] {
   position: absolute !important;
   z-index: 10020 !important;
-  top: calc(100% + 0.35rem) !important;
+  top: 100% !important; /* flush with the button, like the concept */
   right: 0 !important;
   left: auto !important;
   width: min(22rem, calc(100vw - 2.5rem)) !important;
   padding: 0.75rem 0.85rem !important;
   border: 0 !important;
-  border-radius: 0.55rem !important;
+  border-radius: 0.55rem 0 0.55rem 0.55rem !important; /* square where it meets the button */
   background: #fff !important;
   box-shadow: 0 1rem 2rem rgba(16, 45, 38, 0.16) !important;
   color: var(--wp-text-dark) !important;
@@ -643,6 +643,12 @@
   letter-spacing: 0 !important;
   text-align: left !important;
   white-space: normal !important;
+}
+/* Open button joins the card: square bottom corners, no shadow seam. */
+[class*="top-bar__Wrapper"] [class*="user-box__Container"][aria-expanded="true"],
+[class*="top-bar__Wrapper"] [class*="notification-box__Container"][aria-expanded="true"] {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 [class*="top-bar__Wrapper"] [class*="__DropdownMenu"] ul {
   margin: 0 !important;
