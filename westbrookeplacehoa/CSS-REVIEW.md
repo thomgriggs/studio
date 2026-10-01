@@ -31,7 +31,7 @@ For an override sheet on a platform you don't control, it is in good shape: a to
 
 ## What would actually help, in payoff order (none done)
 1. **Host the images.** 16 Unsplash `download?force=true` URLs are slow, uncached and can vanish. Do what we did for the home photo: pull the ones you're keeping, WebP at 2400/1200, serve from the studio (`studio.thomgriggs.com/westbrookeplacehoa/concept1/public/westbrookeplacehoa/images/…` is live once pushed) or upload as HOA Express banner photos and reference their URL. Note the live site cannot see `/westbrookeplacehoa/images/…` relative paths — the pasted CSS needs **absolute** URLs.
-2. **One copy of the file.** There are three (`custom-css/`, `public/westbrookeplacehoa/custom-css/`, `public/westbrookeplacehoa/concept1/custom-css/`), separate files kept equal by hand. In the concept the `public/…/concept1/…` copy is the one the page actually links; `app/layout.tsx` also imports `custom-css/`. Pick one, make the other a build step or delete it.
+2. ~~One copy of the file.~~ *Correction:* the two `public/…` paths are **symlinks** to `custom-css/hoa-custom.css`, so there is already only one file. Nothing to do.
 3. **Group by page.** Home is touched at lines ~210, ~1169 and ~2714. Since every page is targeted with the same `:has()` wrapper, collapsing each page into one block makes the whole treatment readable in one place. Mechanical, safe, worth doing before the next big change.
 4. **Dedupe** the one repeated Calendar block (and keep an eye out — the generator script flags them).
 5. **Docs.** This folder had none. Everything above (which copy is live, the no-JS constraint, the page-targeting convention, the paste marker) should live in a `CLAUDE.md` + short `README` so it survives six months.
