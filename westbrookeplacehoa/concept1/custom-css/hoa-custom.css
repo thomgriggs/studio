@@ -20,24 +20,25 @@
   --wp-forest-a90: rgba(23, 63, 53, 0.9);
   /* Title outline. Was `-webkit-text-stroke` + `paint-order: stroke fill`; HOA Express's W3C
      validator rejects paint-order, and without it the stroke paints over the gold fill and thins
-     the letters. A 16-point ring of hard text-shadows sits behind the fill instead. */
+     the letters. A 16-point ring of hard text-shadows sits behind the fill instead. In each title rule the
+     white highlight shadow is listed BEFORE the ring so the letterpress hairline stays on top. */
   --wp-title-outline:
-    0.0160em 0.0000em 0 var(--wp-forest-a90),
-    0.0148em 0.0061em 0 var(--wp-forest-a90),
-    0.0113em 0.0113em 0 var(--wp-forest-a90),
-    0.0061em 0.0148em 0 var(--wp-forest-a90),
-    0.0000em 0.0160em 0 var(--wp-forest-a90),
-    -0.0061em 0.0148em 0 var(--wp-forest-a90),
-    -0.0113em 0.0113em 0 var(--wp-forest-a90),
-    -0.0148em 0.0061em 0 var(--wp-forest-a90),
-    -0.0160em 0.0000em 0 var(--wp-forest-a90),
-    -0.0148em -0.0061em 0 var(--wp-forest-a90),
-    -0.0113em -0.0113em 0 var(--wp-forest-a90),
-    -0.0061em -0.0148em 0 var(--wp-forest-a90),
-    -0.0000em -0.0160em 0 var(--wp-forest-a90),
-    0.0061em -0.0148em 0 var(--wp-forest-a90),
-    0.0113em -0.0113em 0 var(--wp-forest-a90),
-    0.0148em -0.0061em 0 var(--wp-forest-a90);
+    0.0180em 0.0000em 0 var(--wp-forest-a90),
+    0.0166em 0.0069em 0 var(--wp-forest-a90),
+    0.0127em 0.0127em 0 var(--wp-forest-a90),
+    0.0069em 0.0166em 0 var(--wp-forest-a90),
+    0.0000em 0.0180em 0 var(--wp-forest-a90),
+    -0.0069em 0.0166em 0 var(--wp-forest-a90),
+    -0.0127em 0.0127em 0 var(--wp-forest-a90),
+    -0.0166em 0.0069em 0 var(--wp-forest-a90),
+    -0.0180em 0.0000em 0 var(--wp-forest-a90),
+    -0.0166em -0.0069em 0 var(--wp-forest-a90),
+    -0.0127em -0.0127em 0 var(--wp-forest-a90),
+    -0.0069em -0.0166em 0 var(--wp-forest-a90),
+    -0.0000em -0.0180em 0 var(--wp-forest-a90),
+    0.0069em -0.0166em 0 var(--wp-forest-a90),
+    0.0127em -0.0127em 0 var(--wp-forest-a90),
+    0.0166em -0.0069em 0 var(--wp-forest-a90);
   /* Zebra-stripe row backgrounds (directory/table listings) */
   --wp-zebra-odd: #f7f4ea;
   --wp-zebra-even: #f0f2ea;
@@ -3890,8 +3891,8 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
   -webkit-text-stroke: 0;
   transform: none !important;
   text-shadow:
-    var(--wp-title-outline),
     -0.015em 0.015em 0 rgba(255, 255, 255, 0.9),
+    var(--wp-title-outline),
     0 0 0.09em var(--wp-overlay-white-48),
     0 0.04em 0.14em rgba(16, 45, 38, 0.3) !important;
 }
@@ -3908,8 +3909,8 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
     -webkit-text-stroke: 0;
     transform: none !important;
     text-shadow:
-      var(--wp-title-outline),
       -0.018em 0.018em 0 rgba(255, 255, 255, 0.88),
+      var(--wp-title-outline),
       0 0 0.055em rgba(255, 255, 255, 0.34),
       0 0.035em 0.09em rgba(16, 45, 38, 0.26) !important;
   }
@@ -3953,8 +3954,8 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
     font-size: clamp(3.75rem, 8.5vw, 8.75rem) !important;
     -webkit-text-stroke: 0;
     text-shadow:
-      var(--wp-title-outline),
       -0.016em 0.016em 0 rgba(255, 255, 255, 0.9),
+      var(--wp-title-outline),
       0 0 0.07em rgba(255, 255, 255, 0.42),
       0 0.038em 0.115em rgba(16, 45, 38, 0.28) !important;
   }
