@@ -2627,14 +2627,14 @@ fieldset[class*="multi-checkbox-container__Container"] {
 
   /* Calendar */
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/FoKO4DpXamQ/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/Uu9eFAbJLFi2dGbC.jpeg");
       --wp-banner-position: center 48%;
       --wp-banner-photo-opacity: 0;
   }
 
   /* A clear monthly planner keeps the Calendar subject legible and unmistakable. */
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/FoKO4DpXamQ/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/Uu9eFAbJLFi2dGbC.jpeg");
       --wp-banner-position: center 48%;
   }
 
@@ -2720,22 +2720,11 @@ fieldset[class*="multi-checkbox-container__Container"] {
     [href$="/westbrookeplacehoa/concept1/"]
   )
 ) {
-  /* Client-supplied home photo (2026-10-01). Master: public/westbrookeplacehoa/images/home-banner-original.jpeg
-     (5712×4284); served as WebP at 2400px (1200px on phones). Positioned to keep the roofline and crepe myrtle under the title. */
-  --wp-banner-image: url("/westbrookeplacehoa/images/home-banner-2400.webp");
+  /* Client-supplied home photo (2026-10-01), uploaded to HOA Express. Master kept locally in
+     public/westbrookeplacehoa/images/home-banner-original.jpeg. Positioned to keep the roofline and crepe myrtle under the title. */
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/96MxXalEzBy6XCHy.jpeg");
   --wp-banner-position: center 42%;
   --wp-banner-photo-opacity: 0;
-}
-
-@media (max-width: 48rem) {
-  [class*="app__AppContainer"]:has(
-    a[aria-current="page"]:is(
-      [href="/"],
-      [href$="/westbrookeplacehoa/concept1/"]
-    )
-  ) {
-    --wp-banner-image: url("/westbrookeplacehoa/images/home-banner-1200.webp");
-  }
 }
 
 [class*="app__AppContainer"]:has(
@@ -2841,7 +2830,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 
 /* Map */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Map"]) {
-  --wp-banner-image: url("https://unsplash.com/photos/tU9n3Y0KCMk/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/J1JpR6gTV3XTjlpE.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -2852,7 +2841,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 [class*="app__AppContainer"]:has(
   a[aria-current="page"][href$="/p/Public-Documents-2"]
 ) {
-  --wp-banner-image: url("https://unsplash.com/photos/DDkyGrfvp40/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/sceJGt6TiIDUDgOW.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -2861,7 +2850,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 [class*="app__AppContainer"]:has(
   a[aria-current="page"][href$="/p/Member-Documents"]
 ) {
-  --wp-banner-image: url("https://unsplash.com/photos/8EzNkvLQosk/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/Cb5iUZuS8DEEpxRq.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -2873,7 +2862,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 /* Board Members */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Board-Members"]) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/WFItslWB89M/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/lfYnOX4tb1s1HZQM.jpeg");
       --wp-banner-position: center;
       --wp-banner-photo-opacity: 0;
   }
@@ -2950,7 +2939,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
   a[aria-current="page"][href$="/p/Community-Members"]
 ) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/qgHGDbbSNm8/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/oiqSugYsosCbTdov.jpeg");
       --wp-banner-position: center 40%;
       --wp-banner-photo-opacity: 0;
   }
@@ -3233,7 +3222,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 /* Pet Directory */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Pet-Directory"]) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/CdK2eYhWfQ0/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/qd8IZWhesQxbglRm.jpeg");
       --wp-banner-position: center 52%;
       --wp-banner-photo-opacity: 0;
   }
@@ -3520,7 +3509,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 /* Recipes */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Recipes"]) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/yjYxtxLOiF4/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/jQo46ZtJIfUz74JD.jpeg");
       --wp-banner-position: center 52%;
       --wp-banner-photo-opacity: 0;
   }
@@ -3686,7 +3675,7 @@ fieldset[class*="multi-checkbox-container__Container"] {
 /* Discussion Forum */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Discussion-Forum"]) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/ETRPjvb0KM0/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/26iEBgITfWNjlid7.jpeg");
       --wp-banner-position: center;
       --wp-banner-photo-opacity: 0;
   }
@@ -4017,7 +4006,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
 /* Contact Us */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Contact-Us"]) {
   & {
-      --wp-banner-image: url("https://unsplash.com/photos/goholCAVTRs/download?force=true&w=2000");
+      --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/0OjLy2WLdUb4Avri.jpeg");
       --wp-banner-position: center;
       --wp-banner-photo-opacity: 0;
   }
@@ -4240,7 +4229,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
     [href$="/p/Book-recommendations"]
   )
 ) {
-  --wp-banner-image: url("https://unsplash.com/photos/2NZQmMLo_7Q/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/6h2kQFVHsf5V7n4y.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -4257,7 +4246,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
     [href$="/p/Financial"]
   )
 ) {
-  --wp-banner-image: url("https://unsplash.com/photos/81ikZZG7_AA/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/2eKlfaTMAdCkFmUb.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -4275,7 +4264,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
     [href$="/p/Templatessamples"]
   )
 ) {
-  --wp-banner-image: url("https://unsplash.com/photos/rn00OVh0gEI/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/2o9nSjshY2Us52iP.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -4284,7 +4273,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
 
 /* HOA Voting / Surveys */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/HoA-VotingSurveys"]) {
-  --wp-banner-image: url("https://unsplash.com/photos/0CvHQ62gwY8/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/BRZtLSv8VLIkjCCF.jpeg");
   --wp-banner-position: center;
   --wp-banner-photo-opacity: 0;
 }
@@ -4293,7 +4282,7 @@ html body:has(.page_text > .forum > .comments) .row.content > .col-xs-12 > .row 
 
 /* Good Samaritan Westbrooke */
 [class*="app__AppContainer"]:has(a[aria-current="page"][href$="/p/Good-Samaritan-Westbrooke"]) {
-  --wp-banner-image: url("https://unsplash.com/photos/tXiMrX3Gc-g/download?force=true&w=2000");
+  --wp-banner-image: url("https://public-files.hoa-express.com/website-1063154681/pages/page-1395282279/FvgPVYoUbPXmh0k0.jpeg");
   --wp-banner-position: center 42%;
   --wp-banner-photo-opacity: 0;
 }
