@@ -184,10 +184,10 @@
   letter-spacing: -0.045em !important;
   text-align: center !important;
   text-decoration: none !important;
-  -webkit-text-stroke: clamp(2px, 0.045em, 5px) var(--wp-forest-a90);
-  paint-order: stroke fill;
+  /* Outline sits half inside / half outside the glyph (no paint-order — HOA Express's CSS
+     validator rejects it), so the stroke is half the width it was with `paint-order: stroke fill`. */
+  -webkit-text-stroke: clamp(1px, 0.0225em, 2.5px) var(--wp-forest-a90);
   text-shadow: 0 0.04em 0.14em rgba(16, 45, 38, 0.3);
-  text-wrap: balance;
   transform: translateY(0.38em);
 }
 
@@ -994,7 +994,7 @@
   > .rah-static[aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"]::before {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   width: auto;
   height: auto;
   background: none;
@@ -1021,7 +1021,7 @@
 )::before {
   position: fixed;
   z-index: 9999;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(16, 45, 38, 0.38);
   content: "";
   pointer-events: none;
@@ -1213,7 +1213,6 @@ main [class*="heading__HeaderText"] {
   font-weight: 600 !important;
   line-height: 0.98 !important;
   letter-spacing: -0.035em !important;
-  text-wrap: balance;
 }
 
 /* Some detail pages (e.g. a Discussion Forum topic) wrap the page title in a
@@ -2768,7 +2767,6 @@ fieldset[class*="multi-checkbox-container__Container"] {
   font-family: var(--wp-font-alt) !important;
   font-weight: 600 !important;
   letter-spacing: -0.035em !important;
-  text-wrap: balance;
 }
 
 [class*="app__AppContainer"]:has(
