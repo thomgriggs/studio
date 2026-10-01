@@ -622,6 +622,66 @@
   grid-column: 3 !important;
   color: var(--wp-forest) !important;
 }
+/* Member + notification dropdowns (user-box__DropdownMenu / notification-box__DropdownMenu).
+   HOA Express's default is a narrow right-aligned list with the icons trailing; this is the
+   card the concept uses (.local-control-menu there), ported to the real class names. */
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] {
+  position: absolute !important;
+  z-index: 10020 !important;
+  top: calc(100% + 0.35rem) !important;
+  right: 0 !important;
+  left: auto !important;
+  width: min(22rem, calc(100vw - 2.5rem)) !important;
+  padding: 0.75rem 0.85rem !important;
+  border: 0 !important;
+  border-radius: 0.55rem !important;
+  background: #fff !important;
+  box-shadow: 0 1rem 2rem rgba(16, 45, 38, 0.16) !important;
+  color: var(--wp-text-dark) !important;
+  font-family: var(--wp-font) !important;
+  font-size: 0.84rem !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  white-space: normal !important;
+}
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] li + li {
+  margin-top: 0.2rem !important;
+}
+/* HOA puts the icon after the label; row-reverse shows it first without touching markup. */
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] a {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  min-height: 2.6rem !important;
+  padding: 0.35rem 0.6rem !important;
+  border-radius: 0.35rem !important;
+  color: #46565d !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] a:hover,
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] a:focus-visible {
+  background: rgba(23, 63, 53, 0.065) !important;
+  color: var(--wp-forest) !important;
+}
+[class*="top-bar__Wrapper"] [class*="__DropdownMenu"] svg {
+  flex: 0 0 auto !important;
+  width: 1.05rem !important;
+  height: 1.05rem !important;
+  margin: 0 !important;
+  color: #7f8d92 !important;
+}
 /* Quiet, matching member and notification controls */
 [class*="top-bar__Wrapper"] [class*="user-box__Container"],
 [class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
