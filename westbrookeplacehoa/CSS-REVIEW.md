@@ -51,3 +51,8 @@ Result after this pass: **0 errors, 0 warnings**. What changed, and why it still
 - **`pointer-events` → geometry.** The mobile-nav container was pulled over the top bar with `pointer-events: none` so taps reached the Welcome/bell buttons. Now the container and `TopRow` are zero-height and only the Menu button is positioned up into the bar. Verified at 400px and 900px: Welcome dropdown opens, bell reachable, Menu opens the drawer. The drawer scrim lost `pointer-events: none`; tap-outside never closed the drawer before either (tested), so no behaviour change.
 - **Native nesting (`& …`) flattened** by `concept1/scripts/flatten-css.mjs` — 145 nested rules → plain selectors, 0 computed-style diffs on Calendar / Pet Directory / Member Documents in the A/B.
 - `inset` → four edges; `text-wrap: balance` dropped.
+
+## Live click-through fixes (2026-10-01, after the first paste)
+- **Drawer flashed its list over the page while opening.** HOA's drawer is react-animate-height: `.rah-static` idle, `.rah-animating` for 300ms during open/close. Our rules only matched `.rah-static`, so for the animation the list rendered unstyled in page flow. All drawer selectors now use `[class*="rah-"]`.
+- **Member dropdown sometimes didn't appear / chevron pushed to the edge.** `overflow: hidden` + `text-overflow: ellipsis` on `user-box__Container` clipped the absolutely positioned `user-box__DropdownMenu` that lives inside the button. Now `overflow: visible`; ellipsis dropped (it never applied to a flex button).
+- The gold band above the footer is intentional (`border-top` accent), left as is.

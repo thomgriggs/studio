@@ -215,10 +215,10 @@
   bottom: clamp(1.25rem, 3vw, 3rem) !important;
 }
 /* Prevent the closed off-canvas menu shadow from bleeding onto the page. */
-[class*="mobile-navigation__Container"] > .rah-static {
+[class*="mobile-navigation__Container"] > [class*="rah-"] {
   box-shadow: none !important;
 }
-[class*="mobile-navigation__Container"] > .rah-static[aria-hidden="false"] {
+[class*="mobile-navigation__Container"] > [class*="rah-"][aria-hidden="false"] {
   box-shadow: 1.25rem 0 3.5rem rgba(16, 45, 38, 0.32) !important;
 }
 @media (max-width: 40rem) {
@@ -579,7 +579,7 @@
    pointer-events: none so taps fell through to the Welcome/bell buttons. HOA Express's
    W3C validator rejects pointer-events, so instead the container and its TopRow are
    zero-height and the Menu button alone is positioned up into the top bar. The drawer
-   (.rah-static) is position: fixed, so it is unaffected. */
+   (.rah-static / .rah-animating) is position: fixed, so it is unaffected. */
 [class*="mobile-navigation__Container"] {
   display: block !important;
   position: relative !important;
@@ -607,13 +607,15 @@
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
 }
+/* The member dropdown (user-box__DropdownMenu) is position: absolute INSIDE this button, so
+   the button must not clip overflow or the open menu disappears. Text stays on one line; the
+   max-width keeps a long name from crowding the bell. */
 [class*="top-bar__Wrapper"] [class*="user-box__Container"] {
   grid-column: 2 !important;
   max-width: calc(100vw - 7rem);
-  overflow: hidden;
+  overflow: visible !important;
   color: var(--wp-forest) !important;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 [class*="top-bar__Wrapper"] [class*="notification-box__Container"] {
   grid-column: 3 !important;
@@ -745,7 +747,7 @@
   content: "Menu";
 }
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"]::after {
   content: "";
 }
@@ -855,6 +857,10 @@
     padding-right: 0 !important;
   }
 }
+/* HOA Express's drawer is react-animate-height: its class is .rah-static when idle and
+   .rah-animating for ~300ms while opening/closing. Every drawer rule matches [class*="rah-"]
+   so both states get the fixed dark panel — matching only .rah-static let the list dump into
+   the page flow for the duration of the animation. */
 /* Left-side navigation drawer. The close (X) icon is fixed to the viewport,
    outside this element in the markup, so it can sit above the drawer while
    open -- but that also means it's not part of this element's own scroll
@@ -864,7 +870,7 @@
    backdrop (overflow hidden, no scrolling here), and let only the inner
    child div scroll, inset from the top by the icon's height -- content then
    has nowhere to go that overlaps the icon. */
-[class*="mobile-navigation__Container"] > .rah-static {
+[class*="mobile-navigation__Container"] > [class*="rah-"] {
   position: fixed !important;
   z-index: 10001 !important;
   top: 0 !important;
@@ -878,10 +884,10 @@
   transform: translateX(-105%);
   transition: transform 280ms ease !important;
 }
-[class*="mobile-navigation__Container"] > .rah-static[aria-hidden="false"] {
+[class*="mobile-navigation__Container"] > [class*="rah-"][aria-hidden="false"] {
   transform: translateX(0);
 }
-[class*="mobile-navigation__Container"] > .rah-static > div {
+[class*="mobile-navigation__Container"] > [class*="rah-"] > div {
   position: absolute !important;
   top: 3.75rem !important;
   right: 0 !important;
@@ -893,7 +899,7 @@
   overflow-x: hidden !important;
 }
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"] {
   position: fixed !important;
   z-index: 10002 !important;
@@ -906,7 +912,7 @@
   transform: none;
 }
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"]::before {
   position: absolute;
   top: 0;
@@ -927,13 +933,13 @@
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  [class*="mobile-navigation__Container"] > .rah-static {
+  [class*="mobile-navigation__Container"] > [class*="rah-"] {
     transition: none !important;
   }
 }
 /* Refined slide-out navigation */
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 )::before {
   position: fixed;
   z-index: 9999;
@@ -946,14 +952,14 @@
   /* (pointer-events: none was here; the validator rejects it. The scrim now receives taps
      outside the drawer — the X close button is above it at z-index 10003.) */
 }
-[class*="mobile-navigation__Container"] > .rah-static {
+[class*="mobile-navigation__Container"] > [class*="rah-"] {
   width: min(24rem, 92vw) !important;
   background: var(--wp-dark) !important;
   box-shadow: 1.25rem 0 3.5rem rgba(16, 45, 38, 0.32);
   scrollbar-color: rgba(216, 182, 90, 0.5) transparent;
   scrollbar-width: thin;
 }
-[class*="mobile-navigation__Container"] > .rah-static > div {
+[class*="mobile-navigation__Container"] > [class*="rah-"] > div {
   min-height: 100% !important;
   padding: 4.75rem 0 2rem !important;
   font-family: var(--wp-font-alt) !important;
@@ -1031,7 +1037,7 @@
   font-size: 0.86rem !important;
 }
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"] {
   top: 0.8rem !important;
   left: 1.25rem !important;
@@ -1043,7 +1049,7 @@
   line-height: 2.75rem !important;
 }
 [class*="mobile-navigation__Container"]:has(
-  > .rah-static[aria-hidden="false"]
+  > [class*="rah-"][aria-hidden="false"]
 ) [class*="mobile-navigation__MenuIcon"]::before {
   font-size: 1.8rem;
   line-height: 2.75rem;
