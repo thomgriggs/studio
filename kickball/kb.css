@@ -326,6 +326,90 @@ input, select { font:inherit; }
 @media (max-width:380px) { .state { grid-auto-columns:minmax(0,1fr); } .state-item { padding:var(--space_xs); } }
 
 /* ========================================================================== */
+/* ME BAR : who this phone is acting as. Static, slim, on every screen.       */
+/* ========================================================================== */
+.me-bar { display:flex; align-items:center; justify-content:space-between; gap:var(--space_sm); min-height:36px; padding:var(--space_xs) var(--gutter); background:var(--color_bg-sunken); border-bottom:1px solid var(--color_line); font-size:var(--font_size-xs); }
+.me-pill { display:inline-flex; align-items:center; gap:6px; min-height:28px; padding:0 var(--space_md) 0 var(--space_sm); border-radius:var(--radius_pill); background:var(--color_bg-raised); border:1px solid var(--color_line-strong); font-weight:700; color:var(--color_text); }
+.me-dot { width:8px; height:8px; border-radius:50%; background:var(--color_text-dim); }
+.me-dot.is-league { background:var(--color_warn); } .me-dot.is-ump { background:var(--color_accent); } .me-dot.is-captain { background:var(--color_info); } .me-dot.is-lead { background:#c98bff; } .me-dot.is-player { background:var(--color_text-muted); }
+.me-league { color:var(--color_text-dim); font-weight:700; text-transform:uppercase; letter-spacing:.08em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* ========================================================================== */
+/* WHOAMI : the role switcher on Home                                         */
+/* ========================================================================== */
+.whoami { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+.seg.is-roles { display:grid; grid-template-columns:repeat(5, 1fr); padding:3px; border-radius:var(--radius_md); }
+.seg.is-roles button { min-width:0; min-height:44px; padding:0 2px; border-radius:var(--radius_sm); font-size:var(--font_size-xs); }
+.whoami-ctx { grid-template-columns:1fr 1fr; }
+.whoami-ctx .field select { min-height:44px; font-size:var(--font_size-sm); }
+
+/* ========================================================================== */
+/* ROLE HOME : cards per role — schedule rows, availability, standings       */
+/* ========================================================================== */
+.role-home { display:grid; gap:var(--space_lg); }
+.role-home:empty { display:none; }
+.role-card { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+.role-card.is-live { border-color:var(--color_accent); }
+.role-card h2 { font-size:var(--font_size-lg); }
+.role-card .hint strong { color:var(--color_text); }
+.role-card .hint .is-in { color:var(--color_accent); } .role-card .hint .is-out { color:var(--color_danger); }
+.sched-list { margin:0; padding:0; list-style:none; display:grid; gap:var(--space_xs); }
+.sched-row { display:grid; grid-template-columns:1fr auto; grid-template-areas:"when act" "who act"; align-items:center; column-gap:var(--space_sm); padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); }
+.sched-row.is-live { border-color:var(--color_accent); }
+.sched-row.is-final { opacity:.75; }
+.sched-when { grid-area:when; font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.08em; color:var(--color_text-dim); font-weight:700; }
+.sched-who { grid-area:who; font-weight:700; }
+.sched-who em { font-style:normal; color:var(--color_text-dim); padding:0 2px; }
+.sched-who strong { color:var(--color_accent); margin-left:var(--space_xs); }
+.sched-row > .key, .sched-row > .seg, .sched-row > select { grid-area:act; }
+.sched-row > .key { min-height:44px; font-size:var(--font_size-sm); padding-inline:var(--space_md); }
+.sched-list.is-admin .sched-row { grid-template-columns:1fr auto auto; grid-template-areas:"when ump x" "who ump x"; }
+.sched-list.is-admin select { grid-area:ump; min-height:44px; max-width:9rem; padding:0 var(--space_sm); border-radius:var(--radius_sm); background:var(--color_bg-raised); color:var(--color_text); border:1px solid var(--color_line-strong); font-size:var(--font_size-sm); }
+.sched-list.is-admin .roster-remove { grid-area:x; }
+.seg button.is-in { color:var(--color_accent-text); background:var(--color_accent); }
+.seg button.is-out { color:#fff; background:var(--color_danger); }
+.avail-list { margin:0; padding:0; list-style:none; display:grid; gap:var(--space_xs); }
+.avail-row { display:flex; justify-content:space-between; align-items:center; gap:var(--space_sm); padding:var(--space_xs) var(--space_xs) var(--space_xs) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); }
+.roster-name small, .roster-name small { font-size:var(--font_size-xs); color:var(--color_text-dim); font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-left:4px; }
+.roster-row.is-guest { border-style:dashed; }
+.lead-field label small { text-transform:none; letter-spacing:0; color:var(--color_text-dim); }
+.recruit { border-radius:var(--radius_sm); border:1px dashed var(--color_line-strong); padding:var(--space_sm) var(--space_md); }
+.recruit summary { cursor:pointer; font-size:var(--font_size-sm); font-weight:700; color:var(--color_text-muted); }
+.recruit .roster-list { margin-top:var(--space_sm); }
+.recruit .roster-row .key { min-height:40px; }
+.toggle-row { display:flex; justify-content:space-between; align-items:center; gap:var(--space_md); font-weight:700; cursor:pointer; }
+.toggle-row small { display:block; font-weight:400; color:var(--color_text-muted); font-size:var(--font_size-sm); }
+.switch { flex:none; width:56px; height:32px; border-radius:var(--radius_pill); background:var(--color_line-strong); position:relative; transition:background var(--motion_fast); }
+.switch i { position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%; background:var(--color_white); transition:transform var(--motion_fast); }
+.switch.is-on { background:var(--color_accent); } .switch.is-on i { transform:translateX(24px); }
+.watching { display:flex; align-items:center; gap:var(--space_sm); font-size:var(--font_size-sm); color:var(--color_warn); font-weight:700; }
+[data-denied] { opacity:.35; }
+
+/* ========================================================================== */
+/* LEAGUE : admin cards                                                       */
+/* ========================================================================== */
+.league-card { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+.league-card h2 { font-size:var(--font_size-lg); } .league-card h3 { font-size:var(--font_size-md); }
+.league-card .new-game { padding:0; background:none; border:0; }
+.rules { margin:0; padding:0; list-style:none; display:grid; gap:var(--space_xs); }
+.rule-row { display:grid; grid-template-columns:1fr 6rem; align-items:center; gap:var(--space_sm); }
+.rule-row label { font-size:var(--font_size-sm); font-weight:700; color:var(--color_text-muted); }
+.rule-row label small { display:block; color:var(--color_warn); font-size:var(--font_size-xs); }
+.rule-row.is-changed label { color:var(--color_text); }
+.rule-row input, .rule-row select { min-height:44px; padding:0 var(--space_sm); border-radius:var(--radius_sm); background:var(--color_bg-sunken); color:var(--color_text); border:1px solid var(--color_line-strong); text-align:center; }
+.rule-row.is-changed input, .rule-row.is-changed select { border-color:var(--color_warn); }
+.approve-row { display:flex; justify-content:space-between; align-items:center; gap:var(--space_sm); padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); }
+.approve-row > div { display:grid; gap:2px; min-width:0; }
+.approve-row span { font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.approve-row b { color:var(--color_text); }
+.approve-row.is-pending { border-color:var(--color_warn); } .approve-row.is-pending b { color:var(--color_warn); }
+.approve-row.is-declined { opacity:.6; }
+.ump-list { margin:0; padding:0; list-style:none; display:grid; gap:var(--space_xs); }
+.ump-list li { display:flex; justify-content:space-between; padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); font-weight:700; }
+.inline-form { display:grid; grid-template-columns:1fr auto; gap:var(--space_sm); align-items:end; }
+.inline-form .key { min-height:52px; }
+
+/* ========================================================================== */
 /* RESOLVE : runners on the play, right after a hit                          */
 /* ========================================================================== */
 .resolve { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_accent); }

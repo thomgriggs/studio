@@ -13,11 +13,17 @@ Static HTML/CSS/JS, no build step, phone-first. Read `PROJECT_PLAN.md` for purpo
 - Google Fonts only; icons inline SVG or text glyphs; no libraries.
 
 ## Map
-- `index.html` — one file, one `<main class="view" data-view>` per screen: `home` `ump` `captain` `teams` `team` `stats`. Screens are rendered by `kb.js` into these hosts.
-- `kb.js` — banner sections. **Spine:** delegated click/change/submit → `KB_ACTIONS[action](el, ev)`. **Nav:** `kbGo(view)` → `kbRender()` → `kbRender{Home,Ump,Captain,Teams,Team,Stats}`. **Game:** `kbNewGame`, `kbTap` (stamps the kicker), `kbRecord`, `kbUndo`, `kbFinish`, `kbNudge` (corrections), cornhole `kbBag`/`kbScoreRound`. **Derive:** `kbDerive` → `kbDeriveInnings` / `kbDeriveRounds`, `kbCheckEnd`. **Lineup:** `kbActiveLineup`, `kbCurrentKicker`, `kbNextKickers`, `kbBalancedLineup`, `kbLineupWarnings`, `kbDefenseWarnings`. **Season:** `kbSeasonStats`. **Teams:** `kbNewTeam`, `kbAddPlayer`, `kbSetGender`, `kbRemovePlayer`.
-- `data.js` — `KB_SPORTS` (see `HANDOFF.md` → Sport config), `KB_SEED_TEAMS` (copied into storage on first run).
+- `index.html` — one file, a `.me-bar` header, then one `<main class="view" data-view>` per screen: `home` `ump` `captain` `teams` `team` `stats` `league`. Screens are rendered by `kb.js` into these hosts.
+- `kb.js` — banner sections. **Spine:** delegated click/change/submit → `kbDispatch` (role gate: `KB_ACTION_CAP[action]` → `kbCan(cap, scope)`) → `KB_ACTIONS[action](el, ev)`. **Roles:** `KB_ROLES`, `kbCan`, `kbApplyPerms` (disables what the role may not do after every render), `kbSetMe`/`kbNormalizeMe`, `kbMeLabel`. **Schedule:** `kbSched`, `kbUpcoming`, `kbNextSched`, `kbEnsurePrep` (a captain’s pre-game lineup lives on the schedule entry as a game-shaped `prep`), `kbCaptainGame` (live game or prep), `kbStartScheduled`, `kbSetAvail`, `kbSetLead`, `kbFreeAgents`/`kbRecruit`, league admin `kbSetTeamStatus`/`kbAssignUmp`/`kbAddSched`/`kbSetRule`, `kbStandings`. **Nav:** `kbGo(view)` → `kbRender()` → `kbRender{Home,Ump,Captain,Teams,Team,Stats}`. **Game:** `kbNewGame`, `kbTap` (stamps the kicker), `kbRecord`, `kbUndo`, `kbFinish`, `kbNudge` (corrections), cornhole `kbBag`/`kbScoreRound`. **Derive:** `kbDerive` → `kbDeriveInnings` / `kbDeriveRounds`, `kbCheckEnd`. **Lineup:** `kbActiveLineup`, `kbCurrentKicker`, `kbNextKickers`, `kbBalancedLineup`, `kbLineupWarnings`, `kbDefenseWarnings`. **Season:** `kbSeasonStats`. **Teams:** `kbNewTeam`, `kbAddPlayer`, `kbSetGender`, `kbRemovePlayer`.
+- `data.js` — `KB_SPORTS` (see `HANDOFF.md` → Sport config), `KB_SEED_TEAMS`, `KB_SEED_LEAGUE` (copied into storage on first run; `kbSeedLeague` merges them into older devices).
 - `kb.css` — tokens, base, shared (`.key`, `.toast`, `.field`), then one banner per block in DOM order: home, ump (score-strip, fix-row, state, atbat, bases, linescore, pad, log, round), page, tabs/seg, roster, lineup, positions, teams.
 - `tests/engine.test.mjs` — loads `data.js` + `kb.js` into a `vm` sandbox with a stub DOM and drives `kbDerive` with hand-built logs.
+
+## Roles (the switcher stands in for sign-in — see PROJECT_PLAN.md)
+- Five roles: **league** (rules, approvals, ump assignment, schedule) · **ump** (score for assigned games) · **captain** (roster, lineup, names a lead) · **lead** (lineup + recruiting for the one game they lead) · **player** (own availability, free-agent flag, read-only live view). `kbState.me = { role, teamId, playerId, umpId }`.
+- **Gate once, in one place.** A control is gated by adding its action to `KB_ACTION_CAP`; `kbDispatch` refuses with a toast and `kbApplyPerms` disables it after render. Team roles are scoped to *their* team (`data-scope="<teamId>"` on a control when the team isn't implied by the screen). Never hide a control for a role — disable it, so every role sees the same screen.
+- **The league's rule overrides** (`league.overrides`, dotted paths into the sport config) are applied by `kbSport()`; the engine never reads `KB_SPORTS` directly for a game.
+- **Prep → game.** Availability (`sched.availability[playerId] = 'in'|'out'`) seeds the prep; the captain/lead edits the prep on the Captain screen; the ump's Start copies the prep into `game.teams` and links `game.schedId`; Save & done writes `sched.result` and drops one-game guests.
 
 ## Derived rules (what a backend must reproduce) — TBCS kickball, see PROJECT_PLAN.md for the quotes
 - **Kicker** = active lineup slot `[pa % slots]`; a shared slot alternates by pass. Stamped on the event at record time, so lineup edits never rewrite history.
@@ -32,9 +38,9 @@ Static HTML/CSS/JS, no build step, phone-first. Read `PROJECT_PLAN.md` for purpo
 - **Warnings** (captain): `< minPlayers`; `< minWomen`; back-to-back men (wraps last → first; a shared all-men slot counts as one man); `> maxFielders`; `> maxMenOnField`; `> maxInfielders` among `infield[]`; fielders `< minPlayers`.
 
 ## Test recipes
-- `node --test tests/engine.test.mjs` — must stay green; add a case for every new event kind or rule.
+- `node --test tests/engine.test.mjs` — must stay green; add a case for every new event kind, rule, or capability.
 - `node --check kb.js data.js`.
-- Serve from `studio/` (`python3 -m http.server 8765`) → `/kickball/`. Smoke: New game with LBC as home → Who's here → Lineup (make two men adjacent, see the row warning) → Positions → Play ball → End half → Single, Single, Home run (3–0, box score shows RBI 3) → 4 outs flips the half → Undo → Save & done → Teams → LBC → Stats.
+- Serve from `studio/` (`python3 -m http.server 8765`) → `/kickball/`. Smoke (roles): reset storage → Ump sees Oct 8 assigned → League: approve Ball Busters, assign an ump to Oct 15 → Captain LBC: mark two Out, name a lead, Set the lineup → Lead (that person): lineup is editable → Player: In/Out, free agent → Ump: Start Oct 8, score → Player: Watch (pad disabled) → Save & done → standings show 1–0. Smoke (game): New game with LBC as home → Who's here → Lineup (make two men adjacent, see the row warning) → Positions → Play ball → End half → Single, Single, Home run (3–0, box score shows RBI 3) → 4 outs flips the half → Undo → Save & done → Teams → LBC → Stats.
 - Lighthouse: `npx lighthouse "http://127.0.0.1:8765/kickball/" --form-factor=mobile --only-categories=accessibility --output=json --chrome-flags="--headless=new"` → 100.
 - Studio index: `python3 generate-index.py` in `studio/` after changing the `studio:*` meta tags.
 - Service worker: bump `CACHE_NAME` in `service-worker.js` whenever `kb.js`/`kb.css`/`data.js` change, or phones keep the old build.

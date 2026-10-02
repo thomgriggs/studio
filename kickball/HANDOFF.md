@@ -3,7 +3,7 @@
 Nothing talks to a server. Every screen renders from storage; every number is derived from a game's event log. This file is what to wire to.
 
 ## Screens (`<main class="view" data-view>` in `index.html`, `body[data-view]`)
-`home` · `ump` · `captain` · `teams` · `team` · `stats`. Navigate with `kbGo(view)`; UI state that isn't persisted lives in `kbState` (`view side tab teamId fix showLog pending`).
+`home` · `ump` · `captain` · `teams` · `team` · `stats` · `league`. Navigate with `kbGo(view)`; UI state lives in `kbState` (`view side tab teamId prepId fix showLog pending`); `kbState.me` (who this phone is) persists in `ui.me`.
 
 ## Tokens (`kb.css` `:root`, `--group_name`)
 `--color_bg|bg-raised|bg-sunken|line|line-strong|text|text-muted|text-dim|accent|accent-text|accent-soft|warn|danger|info` · `--dot_ball|strike|foul|out` · `--font_name-*` `--font_size-xs…xl|score` · `--space_xs…xl` `--gutter` · `--radius_sm|md|pill` · `--key_height` · `--motion_fast`.
@@ -11,7 +11,10 @@ Nothing talks to a server. Every screen renders from storage; every number is de
 ## Blocks
 ```
 shared   .key(.is-primary .is-commit .is-ghost .is-undo .is-fix)  .toast  .field  .field-pair  .eyebrow  .hint  .warn  .empty  .is-empty
-home     .home  .brand  .continue-card  .new-game  .home-links  .recent-panel  .recent
+me       .me-bar  .me-pill  .me-dot(.is-league .is-ump .is-captain .is-lead .is-player)  .me-league
+home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .role-home  .role-card(.is-live)  .new-game  .home-links  .recent-panel  .recent
+         .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
+league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
 ump      .ump  .score-strip  .side(.is-batting)  .side-name .side-score .side-tag
          .fix-row  .fix-label  .fix-value
          .state  .state-item  .state-label  .state-value  .dots(.is-ball .is-strike .is-foul .is-out)
@@ -37,15 +40,24 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | cornhole | `bag`(+`data-side`, `data-what`=in\|on, `data-delta`) · `score-round` |
 | captain | `captain-tab`(+`data-tab`=here\|lineup\|positions) · `captain-side` · `here`(+`data-player`) · `move`(+`data-index`, `data-delta`) · `balance` · `assign` (select, +`data-position`) |
 | teams | `new-team` (submit) · `add-player` (submit) · `gender`(+`data-player`, `data-gender`) · `remove-player` |
+| roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` (selects) |
+| schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
+| league | `league` · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
+
+Gated actions are listed in `KB_ACTION_CAP` (kb.js). A control may carry `data-scope="<teamId>"` to say which team it is about.
 
 `data-field`: `teams` `status` (continue card). Everything else is rendered whole by `kbRender*`.
 
 ## Storage (`localStorage` `kickball-v3`)
 ```
-{ teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */ }
-Team  { id, name, short, sport, roster:[{ id, name, gender:'female'|'male' }] }
-Game  { id, sport, status:'live'|'final', startedAt,
+{ teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */, league:League, ui:{ …, me } }
+League { id, name, sport, season, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
+         schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
+                     availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
+Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }
+Team  { id, name, short, sport, captain?:playerId, roster:[{ id, name, gender:'female'|'male', freeAgent?:true, guest?:true, guestFrom?:teamId, guestFor?:schedId }] }
+Game  { id, sport, mode, status:'live'|'final', startedAt, schedId?,
         teams:{ away:Side, home:Side }, events:[Event] }
 Side  { name, teamId|null, attendance:{ [playerId]:bool }, lineup:[playerId], assignments:{ [position]:playerId } }
 Event { t, by:'ump', kind, side?, actionId?, player?, value?, hit?, pa?:false,

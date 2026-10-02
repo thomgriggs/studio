@@ -25,10 +25,16 @@
 </head>
 <body data-view="home">
 
-	<!-- ===== HOME : what do I want to do? ===== -->
+	<!-- ===== ME BAR : who this phone is acting as — tap to switch (stands in for sign-in) ===== -->
+	<header class="me-bar"></header>
+
+	<!-- ===== HOME : who am I, then what do I need to do today ===== -->
 	<main class="view home" data-view="home">
 		<p class="brand"><span class="brand-dot" aria-hidden="true"></span> Scorekeeper</p>
 		<h1>Keep score</h1>
+
+		<!-- ===== WHOAMI : role switcher + context (team / player / ump) ===== -->
+		<section class="whoami"></section>
 
 		<button type="button" class="continue-card" data-action="go" data-to="ump" hidden>
 			<span class="card-eyebrow">Continue</span>
@@ -36,8 +42,11 @@
 			<span class="card-status" data-field="status"></span>
 		</button>
 
+		<!-- ===== ROLE HOME : rendered per role by kbRenderRoleHome ===== -->
+		<div class="role-home"></div>
+
 		<form class="new-game">
-			<h2>New game</h2>
+			<h2>Pickup game</h2>
 			<div class="field-pair">
 				<div class="field">
 					<label for="sport">Sport</label>
@@ -78,7 +87,7 @@
 	<!-- ===== UMP : the card, digital — rendered by kbRenderUmp from the sport config ===== -->
 	<main class="view ump" data-view="ump" aria-live="polite"></main>
 
-	<!-- ===== CAPTAIN : who's here → lineup → positions, for a side with a roster ===== -->
+	<!-- ===== CAPTAIN : who's here → lineup → positions, for a live game or a scheduled game's prep ===== -->
 	<main class="view captain page" data-view="captain"></main>
 
 	<!-- ===== TEAMS : list + create ===== -->
@@ -89,6 +98,9 @@
 
 	<!-- ===== STATS : season table for a team across saved games ===== -->
 	<main class="view stats page" data-view="stats"></main>
+
+	<!-- ===== LEAGUE : rules, team approvals, umpires, schedule, standings ===== -->
+	<main class="view league page" data-view="league"></main>
 
 	<script>
 		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");

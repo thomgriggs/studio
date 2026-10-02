@@ -88,9 +88,11 @@ window.KB_SPORTS = {
 };
 
 /* Seed teams — Liquid Breakfast Club is a team inside the structure, never "the app". */
-/* Copied into storage on first run; edit in the app after that.               */
+/* Copied into storage on first run; edit in the app after that. `captain` is a  */
+/* roster id; a roster entry may carry `freeAgent:true` (will fill in for a short  */
+/* team) or `guest:true, guestFrom:<teamId>` (recruited for one game).            */
 window.KB_SEED_TEAMS = [
-	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', roster:[
+	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', captain:'cristy-ceron', roster:[
 		{ id:'cristy-ceron', name:'Cristy Ceron', gender:'female' },
 		{ id:'cheryl-donish', name:'Cheryl Donish', gender:'female' },
 		{ id:'erin-forbes', name:'Erin Forbes', gender:'female' },
@@ -110,5 +112,48 @@ window.KB_SEED_TEAMS = [
 		{ id:'corey-odonnell', name:"Corey O'Donnell", gender:'male' },
 		{ id:'garrett-lacey', name:'Garrett Lacey', gender:'male' },
 		{ id:'donald-sienkiewicz', name:'Donald Sienkiewicz', gender:'male' }
+	] },
+	/* two more teams so every role has something to look at — names are made up */
+	{ id:'pitch-please', name:'Pitch Please', short:'PP', sport:'kickball', captain:'maya-ortiz', roster:[
+		{ id:'maya-ortiz', name:'Maya Ortiz', gender:'female' },
+		{ id:'jess-tran', name:'Jess Tran', gender:'female' },
+		{ id:'kayla-brooks', name:'Kayla Brooks', gender:'female' },
+		{ id:'nina-patel', name:'Nina Patel', gender:'female', freeAgent:true },
+		{ id:'amber-cole', name:'Amber Cole', gender:'female' },
+		{ id:'luis-ramos', name:'Luis Ramos', gender:'male' },
+		{ id:'devin-hart', name:'Devin Hart', gender:'male', freeAgent:true },
+		{ id:'marcus-lee', name:'Marcus Lee', gender:'male' },
+		{ id:'tyler-nguyen', name:'Tyler Nguyen', gender:'male' },
+		{ id:'owen-frost', name:'Owen Frost', gender:'male' },
+		{ id:'raj-singh', name:'Raj Singh', gender:'male' }
+	] },
+	{ id:'ball-busters', name:'Ball Busters', short:'BB', sport:'kickball', captain:'sam-rivera', roster:[
+		{ id:'sam-rivera', name:'Sam Rivera', gender:'female' },
+		{ id:'lena-wu', name:'Lena Wu', gender:'female' },
+		{ id:'tori-adams', name:'Tori Adams', gender:'female' },
+		{ id:'ben-carter', name:'Ben Carter', gender:'male' },
+		{ id:'eli-moore', name:'Eli Moore', gender:'male' },
+		{ id:'jake-fields', name:'Jake Fields', gender:'male', freeAgent:true },
+		{ id:'noah-kim', name:'Noah Kim', gender:'male' }
 	] }
 ];
+
+/* Seed league — the structure the five roles live in. Copied into storage on   */
+/* first run (and merged in when an older device has none).                     */
+/*   teams      approval status per team id: 'approved' | 'pending' | 'declined' */
+/*   umpires    who the league can assign                                        */
+/*   schedule   games: who, when, which ump; `prep` holds a captain's pre-game   */
+/*              lineup; `availability` is each player's in/out; `lead` is the    */
+/*              captain's stand-in per team; `gameId`/`result` once it's played  */
+/*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
+window.KB_SEED_LEAGUE = {
+	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', season:'Fall 2026',
+	umpires:[{ id:'ump-thom', name:'Thom Griggs' }, { id:'ump-dana', name:'Dana Reyes' }],
+	teams:{ 'lbc':'approved', 'pitch-please':'approved', 'ball-busters':'pending' },
+	schedule:[
+		{ id:'s1', date:'2026-10-08', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-thom', mode:'season', status:'scheduled', availability:{ 'thom-griggs':'in', 'selene-griggs':'in', 'sean-fetter':'out', 'maya-ortiz':'in' }, lead:{}, prep:null },
+		{ id:'s2', date:'2026-10-15', time:'20:00', field:'Field 1', away:'lbc', home:'pitch-please', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
+		{ id:'s3', date:'2026-10-22', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-dana', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
+	],
+	overrides:{}
+};

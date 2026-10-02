@@ -14,7 +14,7 @@ const ctx = vm.createContext({
 	console, structuredClone, Date, Option:function () {},
 	document:{ addEventListener(){}, querySelector:stubEl, querySelectorAll:() => [], createElement:stubEl, body:{ dataset:{}, appendChild(){} } },
 	localStorage:{ store:new Map(), getItem(k){ return this.store.get(k) ?? null; }, setItem(k, v){ this.store.set(k, String(v)); }, removeItem(k){ this.store.delete(k); } },
-	window:{ scrollTo(){} }, location:{ search:'' }, setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
+	window:{ scrollTo(){} }, scrollTo(){}, location:{ search:'' }, setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
 });
 ctx.window = ctx;
 for (const f of ['data.js', 'kb.js']) vm.runInContext(fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'), ctx, { filename:f });
@@ -318,4 +318,74 @@ test('the Runners row knows who scored on the force so the ump can reverse it', 
 	const d = run('kbDerive()');
 	assert.equal(d.score.home, 1);
 	assert.deepEqual(d.lastPlay.forced.map(f => [f.runner, f.target]), [['thom-griggs', 3], ['cristy-ceron', 4]]);
+});
+
+/* ---------- roles: who may do what (the switcher stands in for sign-in) ----- */
+test('roles: capabilities are scoped to the role, and team roles to their own team', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.prepId = null;`);
+	run(`kbState.me = { role:'ump', umpId:'ump-thom' }`);
+	assert.equal(run('kbCan("score")'), true);
+	assert.equal(run('kbCan("lineup")'), false, 'an ump does not touch lineups');
+	assert.equal(run('kbCan("league")'), false);
+	run(`kbState.me = { role:'league' }`);
+	assert.equal(run('kbCan("league") && kbCan("score") && kbCan("roster", "lbc")'), true, 'league can do everything');
+	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'cristy-ceron' }`);
+	assert.equal(run('kbCan("roster", "lbc")'), true);
+	assert.equal(run('kbCan("roster", "pitch-please")'), false, 'a captain only edits their own roster');
+	assert.equal(run('kbCan("score")'), false, 'captains do not keep score');
+	assert.equal(run('kbCan("lead", "lbc")'), true);
+	run(`kbState.me = { role:'player', teamId:'lbc', playerId:'thom-griggs' }`);
+	assert.equal(run('kbCan("availability")'), true);
+	assert.equal(run('kbCan("lineup", "lbc")'), false, 'players read the lineup, they do not set it');
+});
+
+test('roles: a lead may only set the lineup for the game they lead', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null;
+		kbState.me = { role:'lead', teamId:'lbc', playerId:'thom-griggs' }; kbState.prepId = 's1'; kbEnsurePrep(kbSched('s1')); kbState.side = 'home';`);
+	assert.equal(run('kbCan("lineup", "lbc")'), false, 'not the lead yet');
+	run(`kbSched('s1').lead = { lbc:'thom-griggs' }`);
+	assert.equal(run('kbCan("lineup", "lbc")'), true);
+	run(`kbState.prepId = 's2'; kbEnsurePrep(kbSched('s2'));`);
+	assert.equal(run('kbCan("lineup", "lbc")'), false, 'a different game, not their lead');
+});
+
+test('schedule: availability shapes the prep, the ump starts from the prep, the result lands on the schedule', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
+		kbState.me = { role:'player', teamId:'lbc', playerId:'thom-griggs' }; kbSetAvail('s1', 'thom-griggs', 'out');`);
+	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'cristy-ceron' }; kbEnsurePrep(kbSched('s1'));`);
+	const prep = run(`kbSched('s1').prep.teams.home`);
+	assert.equal(prep.attendance['thom-griggs'], false, 'out = not here');
+	assert.equal(prep.attendance['sean-fetter'], false, 'seeded as out');
+	assert.equal(prep.attendance['selene-griggs'], true);
+	assert.ok(!prep.lineup.includes('thom-griggs'), 'not in the lineup either');
+	run(`kbState.me = { role:'ump', umpId:'ump-thom' }; kbStartScheduled('s1');`);
+	assert.equal(run(`kbState.game.schedId`), 's1');
+	assert.equal(run(`kbSched('s1').status`), 'live');
+	assert.equal(run(`kbState.game.teams.home.attendance['thom-griggs']`), false, 'the ump got the captain’s prep');
+	run(`clock(); halfEnd(); tap('homer'); kbState.game.status = 'final'; kbFinish();`);
+	assert.deepEqual(run(`kbSched('s1').result`), { away:0, home:1 });
+	assert.equal(run(`kbSched('s1').status`), 'final');
+	assert.equal(run(`kbStandings().find(r => r.team.id === 'lbc').w`), 1);
+});
+
+test('recruit: a free agent joins as a guest for one game and leaves the roster when it is saved', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
+		kbState.me = { role:'captain', teamId:'lbc', playerId:'cristy-ceron' };`);
+	assert.deepEqual(run(`kbFreeAgents(kbSched('s1'), 'lbc').map(p => p.id)`), ['nina-patel', 'devin-hart'], 'Ball Busters is pending, so Jake is not offered');
+	run(`kbRecruit('s1', 'lbc', 'devin-hart', 'pitch-please')`);
+	assert.equal(run(`!!kbPlayer(kbTeam('lbc'), 'devin-hart')?.guest`), true);
+	assert.equal(run(`kbSched('s1').availability['devin-hart']`), 'in');
+	run(`kbState.me = { role:'ump', umpId:'ump-thom' }; kbStartScheduled('s1'); kbState.game.status = 'final'; kbFinish();`);
+	assert.equal(run(`!!kbPlayer(kbTeam('lbc'), 'devin-hart')`), false, 'guest gone after the game');
+});
+
+test('league: a rule override changes the config every game uses; back to the rulebook value removes it', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.me = { role:'league' };`);
+	run(`kbSetRule('structure.outsPerHalf', '3', 'number')`);
+	assert.equal(run(`kbSport({ sport:'kickball' }).structure.outsPerHalf`), 3);
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); tap('out'); tap('out'); tap('out');`);
+	assert.equal(run('kbDerive().half'), 'top', 'three outs flipped the half under the override');
+	run(`kbSetRule('structure.outsPerHalf', '4', 'number')`);
+	assert.deepEqual(run('kbState.league.overrides'), {});
+	assert.equal(run(`kbSport({ sport:'kickball' }).structure.outsPerHalf`), 4);
 });
