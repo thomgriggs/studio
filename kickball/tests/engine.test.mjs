@@ -392,3 +392,11 @@ test('league: a rule override changes the config every game uses; back to the ru
 	assert.deepEqual(run('kbState.league.overrides'), {});
 	assert.equal(run(`kbSport({ sport:'kickball' }).structure.outsPerHalf`), 4);
 });
+
+test('man bunt with a woman up: warned, not refused — the ump’s call stands', () => {
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); kbState.game.status = 'live';`);
+	assert.equal(run(`kbCurrentKicker('home').gender`), 'female');
+	run(`kbTap({ dataset:{ id:'bunt' } })`);
+	assert.equal(run('kbDerive().outs'), 1);
+	assert.equal(run('kbState.game.events.at(-1).actionId'), 'bunt');
+});

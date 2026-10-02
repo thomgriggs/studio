@@ -29,7 +29,7 @@ Static HTML/CSS/JS, no build step, phone-first. Read `PROJECT_PLAN.md` for purpo
 ## Derived rules (what a backend must reproduce) — TBCS kickball, see PROJECT_PLAN.md for the quotes
 - **Kicker** = active lineup slot `[pa % slots]`; a shared slot alternates by pass. Stamped on the event at record time, so lineup edits never rewrite history.
 - **Reach n**: the kicker takes base n; runners move **only as far as the force** — a runner vacates a base exactly when the runner behind him needs it (`target = max(ownBase, behind + 1)`); a forced target ≥ 4 scores. A home run scores everyone. Everything past the force is a `runner` event from the **Runners row** (`what:'to'|'score'|'out'`, tagged `rbi:<kicker>` so runs on the play credit an RBI). A held runner is the default — no event, no movement.
-- **Outs**: every non-reach pad button is an out (no count). `pa:false` actions (auto out) add an out but no plate appearance. `menOnly` actions are refused when a woman is up.
+- **Outs**: every non-reach pad button is an out (no count). `pa:false` actions (auto out) add an out but no plate appearance. `menOnly` actions warn when a woman is up but still record (the ump’s call).
 - **Clock**: game minute = `(event.t − clockStart) / 60000`; the first play auto-starts it. `official` at `officialAfter`. `lastInning` = the inning of the first event at/after `minutes`.
 - **Run cap**: when it applies (minute < `capUntil`, or lead ≥ `lateLeadException`), reaching `runCap.runs` in a half ends the half; `countsAsOut` sets outs to the max first.
 - **Half ends** at `outsPerHalf`, on the cap, or the End-half button; clears bases and runsThisHalf. In overtime each new half puts that side's last out on 2nd.

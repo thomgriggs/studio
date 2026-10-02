@@ -378,7 +378,7 @@ function kbTap(el) {
 	if (a.pa === false) ev.pa = false;
 	const k = kbCurrentKicker(side);
 	if (k && a.pa !== false) ev.player = k.id;
-	if (a.menOnly && k && k.gender !== 'male') { kbToast(`${kbFirst(k.name)} may bunt — that’s a live ball`); return; }
+	if (a.menOnly && k && k.gender !== 'male') kbToast(`Heads up: ${kbFirst(k.name)} may bunt — recorded anyway`); /* warn, don't prevent: the ump's call */
 	if (cfg.clock && !kbState.game.events.some(e => e.kind === 'clock')) kbState.game.events.push({ t:Date.now(), by:'ump', kind:'clock', what:'start', auto:true });
 	const before = kbDerive();
 	kbState.resolve = null; kbState.fc = null;
