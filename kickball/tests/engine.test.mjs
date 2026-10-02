@@ -325,7 +325,10 @@ test('roles: capabilities are scoped to the role, and team roles to their own te
 	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.prepId = null;`);
 	run(`kbState.me = { role:'ump', umpId:'ump-thom' }`);
 	assert.equal(run('kbCan("score")'), true);
-	assert.equal(run('kbCan("lineup")'), false, 'an ump does not touch lineups');
+	assert.equal(run('kbCan("lineup")'), true, 'an ump fixes lineups during a game (injury, field agreement)');
+	run(`kbState.prepId = 's1'; kbEnsurePrep(kbSched('s1'));`);
+	assert.equal(run('kbCan("lineup")'), false, 'but not a captain’s pre-game prep');
+	run(`kbState.prepId = null;`);
 	assert.equal(run('kbCan("league")'), false);
 	run(`kbState.me = { role:'league' }`);
 	assert.equal(run('kbCan("league") && kbCan("score") && kbCan("roster", "lbc")'), true, 'league can do everything');

@@ -165,7 +165,7 @@ function kbOnChange(ev) { const el = ev.target.closest('select[data-action],inpu
 /* ========================================================================== */
 const KB_ROLES = {
 	league:  { label:'League',  caps:['league', 'start-game', 'score', 'roster', 'lineup', 'lead', 'availability', 'recruit'] },
-	ump:     { label:'Ump',     caps:['start-game', 'score'] },
+	ump:     { label:'Ump',     caps:['start-game', 'score', 'lineup'] },   /* lineup: injuries and field agreements get fixed by the ump, with warnings, not refusals */
 	captain: { label:'Captain', caps:['roster', 'lineup', 'lead', 'availability', 'recruit'] },
 	lead:    { label:'Lead',    caps:['lineup', 'availability', 'recruit'] },
 	player:  { label:'Player',  caps:['availability'] }
@@ -179,7 +179,7 @@ const KB_ACTION_CAP = {
 	'set-lead':'lead', 'recruit':'recruit', 'avail':'availability', 'free-agent':'availability',
 	'team-status':'league', 'assign-ump':'league', 'add-ump':'league', 'add-sched':'league', 'remove-sched':'league', 'rule':'league'
 };
-const KB_DENIED = { 'start-game':'Only the ump or the league starts a game', score:'Only the ump keeps score — you’re watching', roster:'Only the captain changes the roster', lineup:'Only the captain or lead sets the lineup', lead:'Only the captain names a lead', availability:'You can only answer for yourself', recruit:'Only the captain or lead recruits', league:'League admins only' };
+const KB_DENIED = { 'start-game':'Only the ump or the league starts a game', score:'Only the ump keeps score — you’re watching', roster:'Only the captain changes the roster', lineup:'Only the captain, lead or ump sets the lineup', lead:'Only the captain names a lead', availability:'You can only answer for yourself', recruit:'Only the captain or lead recruits', league:'League admins only' };
 function kbDenied(cap) { return KB_DENIED[cap] || 'Not allowed for this role'; }
 function kbMeRole() { return KB_ROLES[kbState.me.role] ? kbState.me.role : 'player'; }
 function kbMeTeam() { return kbTeam(kbState.me.teamId); }
@@ -188,7 +188,8 @@ function kbMyTeamId(side) { const g = kbCaptainGame(); return g && g.teams[side]
 function kbCan(cap, teamId) {
 	const role = kbMeRole(), me = kbState.me;
 	if (!KB_ROLES[role].caps.includes(cap)) return false;
-	if (role === 'league' || role === 'ump') return true;
+	if (role === 'league') return true;
+	if (role === 'ump') return cap === 'lineup' ? !kbState.prepId : true;
 	/* team-scoped: which team is the control about? */
 	const scope = teamId !== undefined ? teamId
 		: cap === 'lineup' ? kbMyTeamId(kbState.side)
