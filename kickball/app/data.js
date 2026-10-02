@@ -92,7 +92,7 @@ window.KB_SPORTS = {
 /* roster id; a roster entry may carry `freeAgent:true` (will fill in for a short  */
 /* team) or `guest:true, guestFrom:<teamId>` (recruited for one game).            */
 window.KB_SEED_TEAMS = [
-	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', captain:'cristy-ceron', roster:[
+	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', captain:'jason-morton', roster:[
 		{ id:'cristy-ceron', name:'Cristy Ceron', gender:'female' },
 		{ id:'cheryl-donish', name:'Cheryl Donish', gender:'female' },
 		{ id:'erin-forbes', name:'Erin Forbes', gender:'female' },
@@ -147,13 +147,13 @@ window.KB_SEED_TEAMS = [
 /*              captain's stand-in per team; `gameId`/`result` once it's played  */
 /*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
 window.KB_SEED_LEAGUE = {
-	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', season:'Fall 2026',
-	umpires:[{ id:'ump-thom', name:'Thom Griggs' }, { id:'ump-dana', name:'Dana Reyes' }],
+	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', season:'Fall 2026', seedVersion:2, /* bump to push new seed data onto phones that already have a league */
+	umpires:[{ id:'ump-carl', name:'Carl' }, { id:'ump-bob', name:'Bob' }, { id:'ump-manny', name:'Manny' }],
 	teams:{ 'lbc':'approved', 'pitch-please':'approved', 'ball-busters':'pending' },
 	schedule:[
-		{ id:'s1', date:'2026-10-08', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-thom', mode:'season', status:'scheduled', availability:{ 'thom-griggs':'in', 'selene-griggs':'in', 'sean-fetter':'out', 'maya-ortiz':'in' }, lead:{}, prep:null },
+		{ id:'s1', date:'2026-10-08', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-carl', mode:'season', status:'scheduled', availability:{ 'thom-griggs':'in', 'selene-griggs':'in', 'sean-fetter':'out', 'maya-ortiz':'in' }, lead:{ lbc:'katie-morton' }, prep:null },
 		{ id:'s2', date:'2026-10-15', time:'20:00', field:'Field 1', away:'lbc', home:'pitch-please', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
-		{ id:'s3', date:'2026-10-22', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-dana', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
+		{ id:'s3', date:'2026-10-22', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-manny', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
 	],
 	overrides:{}
 };

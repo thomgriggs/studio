@@ -52,7 +52,7 @@ Gated actions are listed in `KB_ACTION_CAP` (kb.js). A control may carry `data-s
 ## Storage (`localStorage` `kickball-v3`)
 ```
 { teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */, league:League, ui:{ …, me } }
-League { id, name, sport, season, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
+League { id, name, sport, season, seedVersion, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
          schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
                      availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
 Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }

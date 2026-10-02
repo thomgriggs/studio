@@ -45,12 +45,15 @@ function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbS
 /* First run (or an older device) gets the seed league, plus any seed team or captain it's missing. */
 function kbSeedLeague() {
 	let dirty = false;
-	if (!kbState.league) { kbState.league = structuredClone(KB_SEED_LEAGUE); dirty = true; }
+	/* a new seedVersion replaces the demo league (schedule, umps, approvals) and re-seeds captains; rosters and games stay */
+	const stale = kbState.league && kbState.league.id === KB_SEED_LEAGUE.id && (kbState.league.seedVersion || 1) < (KB_SEED_LEAGUE.seedVersion || 1);
+	if (!kbState.league || stale) { if (stale && kbState.game && kbState.game.schedId) kbState.game.schedId = null; kbState.league = structuredClone(KB_SEED_LEAGUE); dirty = true; }
 	for (const seed of KB_SEED_TEAMS) {
 		const t = kbTeam(seed.id);
 		if (!t) { kbState.teams.push(structuredClone(seed)); dirty = true; }
-		else if (!t.captain && seed.captain) { t.captain = seed.captain; dirty = true; }
+		else if ((!t.captain || stale) && seed.captain && kbPlayer(t, seed.captain)) { t.captain = seed.captain; dirty = true; }
 	}
+	if (stale && kbState.me.role === 'ump') kbState.me.umpId = null;
 	if (dirty) kbSave();
 }
 
