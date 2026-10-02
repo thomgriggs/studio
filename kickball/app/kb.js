@@ -21,6 +21,9 @@ function kbInit() {
 	kbLoad();
 	if (!kbState.teams.length) { kbState.teams = structuredClone(KB_SEED_TEAMS); kbSave(); }
 	kbSeedLeague();
+	/* the landing page hands us a role: /app/?as=captain — take it, then clean the URL */
+	const as = new URLSearchParams(location.search).get('as');
+	if (as && KB_ROLES[as]) { kbState.me = { ...kbState.me, role:as }; kbState.ui.view = 'home'; history.replaceState(null, '', location.pathname); }
 	kbNormalizeMe();
 	document.addEventListener('click', kbOnClick);
 	document.addEventListener('change', kbOnChange);

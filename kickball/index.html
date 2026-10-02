@@ -7,103 +7,115 @@
 	<meta name="studio:project" content="Kickball">
 	<meta name="studio:description" content="The ump's card, digital — score, outs, innings, lineups and stats. Sport is a config.">
 	<meta name="theme-color" content="#0b1220">
-	<title>Kickball Scorekeeper</title>
-	<link rel="manifest" href="manifest.webmanifest">
-	<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+	<title>Scorekeeper — the ump’s card, digital</title>
+	<link rel="icon" href="app/icons/icon.svg" type="image/svg+xml">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="kb.css">
 	<script>
 		/* studio breadcrumb only when served inside the studio (it 404s on a standalone domain) */
 		if (location.pathname.startsWith('/kickball/')) {
 			document.write('<link rel="stylesheet" href="/assets/breadcrumb.css"><script defer src="/assets/breadcrumb.js"><\/script>');
 		}
 	</script>
-	<script defer src="data.js"></script>
-	<script defer src="kb.js"></script>
+	<style>
+		/* ================================================================== */
+		/* LANDING — what this is, and who you are. Same tokens as app/kb.css */
+		/* ================================================================== */
+		:root {
+			color-scheme:dark;
+			--color_bg:#0b1220; --color_bg-raised:#121b2e; --color_bg-sunken:#070c16;
+			--color_line:#24304a; --color_line-strong:#34426a;
+			--color_text:#f2f5fa; --color_text-muted:#9aa7c2; --color_text-dim:#7e8bad;
+			--color_accent:#3dff8f; --color_accent-text:#06220f; --color_accent-soft:color-mix(in srgb, var(--color_accent), transparent 85%);
+			--color_warn:#ffb347; --color_info:#5aa9ff; --color_lead:#c98bff;
+			--font_name-primary:'Inter', system-ui, sans-serif;
+			--font_size-xs:0.75rem; --font_size-sm:0.875rem; --font_size-md:1rem; --font_size-lg:1.25rem; --font_size-xl:1.75rem; --font_size-hero:clamp(2.25rem, 9vw, 3.5rem);
+			--space_xs:4px; --space_sm:8px; --space_md:12px; --space_lg:20px; --space_xl:32px; --gutter:16px;
+			--radius_sm:8px; --radius_md:14px; --radius_pill:999px; --motion_fast:120ms;
+		}
+		*, *::before, *::after { box-sizing:border-box; }
+		body { margin:0; min-height:100svh; background:var(--color_bg); color:var(--color_text); font:var(--font_size-md)/1.45 var(--font_name-primary); -webkit-font-smoothing:antialiased; }
+		h1, h2, h3, p { margin:0; }
+		a { color:inherit; }
+		:focus-visible { outline:3px solid var(--color_accent); outline-offset:2px; }
+
+		/* ===== LANDING ===== */
+		.landing { display:grid; gap:var(--space_xl); padding:var(--space_xl) var(--gutter) calc(var(--space_xl) + env(safe-area-inset-bottom)); max-width:36rem; margin:0 auto; }
+		.brand { display:flex; align-items:center; gap:var(--space_sm); color:var(--color_text-muted); font-size:var(--font_size-sm); text-transform:uppercase; letter-spacing:.12em; }
+		.brand-dot { width:10px; height:10px; border-radius:50%; background:var(--color_accent); }
+		.hero { display:grid; gap:var(--space_md); }
+		.hero h1 { font-size:var(--font_size-hero); font-weight:800; line-height:1.05; letter-spacing:-.02em; }
+		.hero h1 em { font-style:normal; color:var(--color_accent); }
+		.hero p { color:var(--color_text-muted); font-size:var(--font_size-lg); max-width:28rem; }
+		.hero-meta { display:flex; flex-wrap:wrap; gap:var(--space_sm); }
+		.pill { display:inline-flex; align-items:center; min-height:32px; padding:0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-raised); border:1px solid var(--color_line); font-size:var(--font_size-xs); font-weight:700; color:var(--color_text-muted); }
+
+		/* ===== HOW ===== */
+		.how { display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--space_sm); }
+		.how-step { display:grid; gap:var(--space_xs); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+		.how-n { font-size:var(--font_size-xs); font-weight:800; color:var(--color_accent); letter-spacing:.1em; }
+		.how-step strong { font-size:var(--font_size-sm); }
+		.how-step span { font-size:var(--font_size-xs); color:var(--color_text-muted); }
+
+		/* ===== ENTER : one card per role ===== */
+		.enter { display:grid; gap:var(--space_md); }
+		.section-label { font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.12em; color:var(--color_text-muted); font-weight:700; }
+		.roles { display:grid; gap:var(--space_sm); margin:0; padding:0; list-style:none; }
+		.role { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:var(--space_md); min-height:72px; padding:var(--space_md) var(--space_lg); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); text-decoration:none; transition:transform var(--motion_fast), border-color var(--motion_fast); }
+		.role:hover, .role:focus-visible { border-color:var(--color_line-strong); }
+		.role:active { transform:scale(.985); }
+		.role-dot { width:12px; height:12px; border-radius:50%; background:var(--color_text-dim); }
+		.role.is-league .role-dot { background:var(--color_warn); } .role.is-ump .role-dot { background:var(--color_accent); } .role.is-captain .role-dot { background:var(--color_info); } .role.is-lead .role-dot { background:var(--color_lead); } .role.is-player .role-dot { background:var(--color_text-muted); }
+		.role-text { display:grid; gap:2px; min-width:0; }
+		.role-text strong { font-size:var(--font_size-lg); }
+		.role-text span { font-size:var(--font_size-sm); color:var(--color_text-muted); }
+		.role-go { font-size:var(--font_size-lg); color:var(--color_text-dim); }
+		.role.is-ump { border-color:color-mix(in srgb, var(--color_accent), transparent 50%); background:var(--color_accent-soft); }
+		.role.is-ump .role-go { color:var(--color_accent); }
+		.enter-note { font-size:var(--font_size-sm); color:var(--color_text-dim); }
+
+		/* ===== FOOT ===== */
+		.foot { display:grid; gap:var(--space_sm); padding-top:var(--space_lg); border-top:1px solid var(--color_line); font-size:var(--font_size-sm); color:var(--color_text-dim); }
+		.foot a { color:var(--color_text-muted); }
+		@media (max-width:420px) { .how { grid-template-columns:1fr; } }
+	</style>
 </head>
-<body data-view="home">
-
-	<!-- ===== ME BAR : who this phone is acting as — tap to switch (stands in for sign-in) ===== -->
-	<header class="me-bar"></header>
-
-	<!-- ===== HOME : who am I, then what do I need to do today ===== -->
-	<main class="view home" data-view="home">
+<body>
+	<main class="landing">
+		<!-- ===== HERO : what you landed on ===== -->
 		<p class="brand"><span class="brand-dot" aria-hidden="true"></span> Scorekeeper</p>
-		<h1>Keep score</h1>
-
-		<!-- ===== WHOAMI : role switcher + context (team / player / ump) ===== -->
-		<section class="whoami"></section>
-
-		<button type="button" class="continue-card" data-action="go" data-to="ump" hidden>
-			<span class="card-eyebrow">Continue</span>
-			<span class="card-teams" data-field="teams"></span>
-			<span class="card-status" data-field="status"></span>
-		</button>
-
-		<!-- ===== ROLE HOME : rendered per role by kbRenderRoleHome ===== -->
-		<div class="role-home"></div>
-
-		<form class="new-game">
-			<h2>Pickup game</h2>
-			<div class="field-pair">
-				<div class="field">
-					<label for="sport">Sport</label>
-					<select id="sport" name="sport" data-action="go" data-to="home"></select>
-				</div>
-				<div class="field">
-					<label for="mode">Game</label>
-					<select id="mode" name="mode"></select>
-				</div>
-			</div>
-			<div class="field-pair">
-				<div class="field">
-					<label for="away-team">Away / Team A</label>
-					<select id="away-team" name="away-team"></select>
-					<input id="away" name="away" autocomplete="off" placeholder="or type a name" aria-label="Away team name">
-				</div>
-				<div class="field">
-					<label for="home-team">Home / Team B</label>
-					<select id="home-team" name="home-team"></select>
-					<input id="home" name="home" autocomplete="off" placeholder="or type a name" aria-label="Home team name">
-				</div>
-			</div>
-			<button type="submit" class="key is-primary" data-action="new-game">Start</button>
-		</form>
-
-		<div class="home-links">
-			<button type="button" class="key is-ghost" data-action="teams">Teams &amp; rosters</button>
-		</div>
-
-		<section class="recent-panel" aria-labelledby="recent-heading">
-			<h2 id="recent-heading">Recent games</h2>
-			<ul class="recent"></ul>
+		<section class="hero">
+			<h1>The ump’s card, <em>digital.</em></h1>
+			<p>Score, outs, inning and clock on a phone, legible in the sun. Every tap is a record, so lineups, stats and standings come for free.</p>
+			<div class="hero-meta"><span class="pill">Tampa Bay Club Sport rules</span><span class="pill">Coed kickball · cornhole</span><span class="pill">Works offline</span></div>
 		</section>
 
-		<p class="home-note">Everything is saved on this phone. Rules live in <code>data.js</code> — a sport is a config.</p>
+		<!-- ===== HOW : the three moments ===== -->
+		<section class="how" aria-label="How it works">
+			<div class="how-step"><span class="how-n">01</span><strong>Before</strong><span>Players say in or out. The captain sets the lineup.</span></div>
+			<div class="how-step"><span class="how-n">02</span><strong>Game time</strong><span>The ump taps the play. Score, outs, runners — no paper.</span></div>
+			<div class="how-step"><span class="how-n">03</span><strong>After</strong><span>Box score, season stats, standings. Nothing to type up.</span></div>
+		</section>
+
+		<!-- ===== ENTER : pick who you are ===== -->
+		<section class="enter" aria-labelledby="enter-heading">
+			<h2 class="section-label" id="enter-heading">Enter as…</h2>
+			<ul class="roles">
+				<li><a class="role is-ump" href="app/?as=ump"><span class="role-dot" aria-hidden="true"></span><span class="role-text"><strong>Umpire</strong><span>Keep score for the games assigned to you. Fix a lineup on the field if you have to.</span></span><span class="role-go" aria-hidden="true">→</span></a></li>
+				<li><a class="role is-captain" href="app/?as=captain"><span class="role-dot" aria-hidden="true"></span><span class="role-text"><strong>Captain</strong><span>Roster, batting order, positions. Name a lead for a game you’ll miss.</span></span><span class="role-go" aria-hidden="true">→</span></a></li>
+				<li><a class="role is-lead" href="app/?as=lead"><span class="role-dot" aria-hidden="true"></span><span class="role-text"><strong>Lead</strong><span>Run the team for one game: lineup, order, recruit a free agent if you’re short.</span></span><span class="role-go" aria-hidden="true">→</span></a></li>
+				<li><a class="role is-player" href="app/?as=player"><span class="role-dot" aria-hidden="true"></span><span class="role-text"><strong>Player</strong><span>In or out for each game. Watch live. Sign up as a free agent.</span></span><span class="role-go" aria-hidden="true">→</span></a></li>
+				<li><a class="role is-league" href="app/?as=league"><span class="role-dot" aria-hidden="true"></span><span class="role-text"><strong>League</strong><span>Set the rules, approve teams, assign umps, keep the schedule.</span></span><span class="role-go" aria-hidden="true">→</span></a></li>
+			</ul>
+			<p class="enter-note">One phone, one role at a time — you can switch inside the app. Sign-in will replace this page.</p>
+		</section>
+
+		<!-- ===== FOOT ===== -->
+		<footer class="foot">
+			<p>Demo data: Liquid Breakfast Club plus two made-up teams, three October games. Everything is saved on this phone.</p>
+			<p><a href="app/">Open the app without picking a role</a></p>
+		</footer>
 	</main>
-
-	<!-- ===== UMP : the card, digital — rendered by kbRenderUmp from the sport config ===== -->
-	<main class="view ump" data-view="ump" aria-live="polite"></main>
-
-	<!-- ===== CAPTAIN : who's here → lineup → positions, for a live game or a scheduled game's prep ===== -->
-	<main class="view captain page" data-view="captain"></main>
-
-	<!-- ===== TEAMS : list + create ===== -->
-	<main class="view teams page" data-view="teams"></main>
-
-	<!-- ===== TEAM : one roster, edit players + designation ===== -->
-	<main class="view team page" data-view="team"></main>
-
-	<!-- ===== STATS : season table for a team across saved games ===== -->
-	<main class="view stats page" data-view="stats"></main>
-
-	<!-- ===== LEAGUE : rules, team approvals, umpires, schedule, standings ===== -->
-	<main class="view league page" data-view="league"></main>
-
-	<script>
-		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");
-	</script>
 </body>
 </html>

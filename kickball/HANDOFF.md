@@ -2,7 +2,7 @@
 
 Nothing talks to a server. Every screen renders from storage; every number is derived from a game's event log. This file is what to wire to.
 
-## Screens (`<main class="view" data-view>` in `index.html`, `body[data-view]`)
+## Screens (`<main class="view" data-view>` in `app/index.html`, `body[data-view]`). The root `index.html` is the landing page; its role cards link to `app/?as=<role>`.
 `home` · `ump` · `captain` · `teams` · `team` · `stats` · `league`. Navigate with `kbGo(view)`; UI state lives in `kbState` (`view side tab teamId prepId fix showLog pending`); `kbState.me` (who this phone is) persists in `ui.me`.
 
 ## Tokens (`kb.css` `:root`, `--group_name`)

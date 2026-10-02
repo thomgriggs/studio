@@ -17,7 +17,7 @@ const ctx = vm.createContext({
 	window:{ scrollTo(){} }, scrollTo(){}, location:{ search:'' }, setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
 });
 ctx.window = ctx;
-for (const f of ['data.js', 'kb.js']) vm.runInContext(fs.readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'), ctx, { filename:f });
+for (const f of ['data.js', 'kb.js']) vm.runInContext(fs.readFileSync(new URL(`../app/${f}`, import.meta.url), 'utf8'), ctx, { filename:f });
 /* JSON-roundtrip so objects made inside the sandbox compare with deepEqual out here */
 const run = (code) => { const v = vm.runInContext(code, ctx); return v === undefined ? v : JSON.parse(JSON.stringify(v)); };
 

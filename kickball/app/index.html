@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+	<meta name="studio:project" content="Kickball">
+	<meta name="studio:description" content="The ump's card, digital — score, outs, innings, lineups and stats. Sport is a config.">
+	<meta name="theme-color" content="#0b1220">
+	<title>Kickball Scorekeeper</title>
+	<link rel="manifest" href="manifest.webmanifest">
+	<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="kb.css">
+	<script>
+		/* studio breadcrumb only when served inside the studio (it 404s on a standalone domain) */
+		if (location.pathname.startsWith('/kickball/')) {
+			document.write('<link rel="stylesheet" href="/assets/breadcrumb.css"><script defer src="/assets/breadcrumb.js"><\/script>');
+		}
+	</script>
+	<script defer src="data.js"></script>
+	<script defer src="kb.js"></script>
+</head>
+<body data-view="home">
+
+	<!-- ===== ME BAR : who this phone is acting as — tap to switch (stands in for sign-in) ===== -->
+	<header class="me-bar"></header>
+
+	<!-- ===== HOME : who am I, then what do I need to do today ===== -->
+	<main class="view home" data-view="home">
+		<p class="brand"><span class="brand-dot" aria-hidden="true"></span> Scorekeeper</p>
+		<h1>Keep score</h1>
+
+		<!-- ===== WHOAMI : role switcher + context (team / player / ump) ===== -->
+		<section class="whoami"></section>
+
+		<button type="button" class="continue-card" data-action="go" data-to="ump" hidden>
+			<span class="card-eyebrow">Continue</span>
+			<span class="card-teams" data-field="teams"></span>
+			<span class="card-status" data-field="status"></span>
+		</button>
+
+		<!-- ===== ROLE HOME : rendered per role by kbRenderRoleHome ===== -->
+		<div class="role-home"></div>
+
+		<form class="new-game">
+			<h2>Pickup game</h2>
+			<div class="field-pair">
+				<div class="field">
+					<label for="sport">Sport</label>
+					<select id="sport" name="sport" data-action="go" data-to="home"></select>
+				</div>
+				<div class="field">
+					<label for="mode">Game</label>
+					<select id="mode" name="mode"></select>
+				</div>
+			</div>
+			<div class="field-pair">
+				<div class="field">
+					<label for="away-team">Away / Team A</label>
+					<select id="away-team" name="away-team"></select>
+					<input id="away" name="away" autocomplete="off" placeholder="or type a name" aria-label="Away team name">
+				</div>
+				<div class="field">
+					<label for="home-team">Home / Team B</label>
+					<select id="home-team" name="home-team"></select>
+					<input id="home" name="home" autocomplete="off" placeholder="or type a name" aria-label="Home team name">
+				</div>
+			</div>
+			<button type="submit" class="key is-primary" data-action="new-game">Start</button>
+		</form>
+
+		<div class="home-links">
+			<button type="button" class="key is-ghost" data-action="teams">Teams &amp; rosters</button>
+		</div>
+
+		<section class="recent-panel" aria-labelledby="recent-heading">
+			<h2 id="recent-heading">Recent games</h2>
+			<ul class="recent"></ul>
+		</section>
+
+		<p class="home-note">Everything is saved on this phone. Rules live in <code>data.js</code> — a sport is a config.</p>
+	</main>
+
+	<!-- ===== UMP : the card, digital — rendered by kbRenderUmp from the sport config ===== -->
+	<main class="view ump" data-view="ump" aria-live="polite"></main>
+
+	<!-- ===== CAPTAIN : who's here → lineup → positions, for a live game or a scheduled game's prep ===== -->
+	<main class="view captain page" data-view="captain"></main>
+
+	<!-- ===== TEAMS : list + create ===== -->
+	<main class="view teams page" data-view="teams"></main>
+
+	<!-- ===== TEAM : one roster, edit players + designation ===== -->
+	<main class="view team page" data-view="team"></main>
+
+	<!-- ===== STATS : season table for a team across saved games ===== -->
+	<main class="view stats page" data-view="stats"></main>
+
+	<!-- ===== LEAGUE : rules, team approvals, umpires, schedule, standings ===== -->
+	<main class="view league page" data-view="league"></main>
+
+	<script>
+		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");
+	</script>
+</body>
+</html>
