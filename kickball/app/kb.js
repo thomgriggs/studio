@@ -146,6 +146,12 @@ const KB_ACTIONS = {
 	'share':        (el) => kbShare(Number(el.dataset.index)),
 	'unshare':      (el) => kbUnshare(Number(el.dataset.index)),
 	'assign':       (el) => kbAssign(el.dataset.position, el.value),
+	'pos-pick':     (el) => { kbState.posPick = kbState.posPick === el.dataset.position ? null : el.dataset.position; kbRender(); },
+	'assign-tap':   (el) => kbAssign(el.dataset.position, el.dataset.player),
+	'assign-clear': (el) => kbAssign(el.dataset.position, ''),
+	'team-card':    (el) => kbOpenTeamSheet(el.dataset.team),
+	'add-member':   (el) => kbAddMember(el.closest('form')),
+	'remove-member':(el) => kbRemoveMember(el.dataset.team, el.dataset.player),
 	/* teams */
 	'teams':        () => kbGo('teams'),
 	'team':         (el) => { kbState.teamId = el.dataset.team; kbGo('team'); },
@@ -227,7 +233,7 @@ const KB_ACTION_CAP = {
 	'new-game':'start-game', 'start-sched':'start-game',
 	'tap':'score', 'runner':'score', 'resolve-done':'score', 'fc-out':'score', 'fc-cancel':'score', 'play-out':'score', 'undo':'score', 'end-half':'score', 'clock-start':'score',
 	'fix-score':'score', 'fix-outs':'score', 'nudge':'score', 'fix-done':'score', 'bag':'score', 'score-round':'score', 'end-game':'score', 'finish':'score', 'abandon':'score',
-	'here':'lineup', 'move':'lineup', 'balance':'lineup', 'share':'lineup', 'unshare':'lineup', 'assign':'lineup', 'prep':'lineup',
+	'here':'lineup', 'move':'lineup', 'balance':'lineup', 'share':'lineup', 'unshare':'lineup', 'assign':'lineup', 'assign-tap':'lineup', 'assign-clear':'lineup', 'prep':'lineup', 'add-member':'roster', 'remove-member':'roster',
 	'new-team':'roster', 'add-player':'roster', 'gender':'roster', 'remove-player':'roster',
 	'set-lead':'lead', 'set-lead-clear':'lead', 'recruit':'recruit', 'avail':'availability', 'free-agent':'availability',
 	'team-status':'league', 'assign-ump':'league', 'rainout-game':'score', 'rainout-ext':'league', 'add-ump':'league', 'add-sched':'league', 'remove-sched':'league', 'rule':'league'
@@ -502,14 +508,18 @@ function kbNextSched(teamId) { return kbUpcoming(teamId)[0] || null; }
 function kbSchedDate(s) { const d = new Date(`${s.date}T${s.time || '12:00'}:00`); return `${d.toLocaleDateString([], { weekday:'short', month:'short', day:'numeric' })}${s.time ? ' · ' + d.toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }) : ''}`; }
 function kbSchedName(s, side) { const t = kbTeam(s[side]); return t ? t.name : s[side] || '—'; }
 function kbOpponent(s, teamId) { return s.away === teamId ? s.home : s.away; }
-function kbAvailCounts(s, teamId) { const team = kbTeam(teamId); const a = s.availability || {}; const c = { in:0, out:0, unknown:0 }; if (team) for (const p of team.roster) c[a[p.id] === 'in' ? 'in' : a[p.id] === 'out' ? 'out' : 'unknown'] += 1; return c; }
+function kbAvailCounts(s, teamId) { const team = kbTeam(teamId); const a = s.availability || {}; const c = { in:0, maybe:0, out:0, unknown:0 }; if (team) for (const p of team.roster) c[['in', 'maybe', 'out'].includes(a[p.id]) ? a[p.id] : 'unknown'] += 1; return c; }
+/* the In · Maybe · Out control for one person on one game */
+function kbInOutHTML(s, pid, cls = '') { const v = (s.availability || {})[pid]; return `<span class="seg is-inout ${cls}">${[['in', 'In'], ['maybe', 'Maybe'], ['out', 'Out']].map(([x, l]) => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${pid}" data-value="${x}" aria-pressed="${v === x}">${l}</button>`).join('')}</span>`; }
 /* A side built from a team's roster + this game's availability (unknown counts as here, like today). */
 function kbSideFromSched(s, side) {
 	const teamId = s[side], team = kbTeam(teamId), cfg = KB_SPORTS[kbLeagueOfSched(s).sport];
 	if (!team) return { name:cfg.sides[side], teamId:null, attendance:{}, lineup:[], assignments:{} };
 	const a = s.availability || {};
-	const ids = team.roster.filter(p => a[p.id] !== 'out').map(p => p.id);
-	return { name:team.name, teamId, attendance:Object.fromEntries(team.roster.map(p => [p.id, a[p.id] !== 'out'])), lineup:kbBalancedLineup(team, ids), assignments:{} };
+	/* "maybe" and silence both start as not here — the captain taps them in at the field */
+	const here = (id) => a[id] === 'in';
+	const ids = team.roster.filter(p => here(p.id)).map(p => p.id);
+	return { name:team.name, teamId, attendance:Object.fromEntries(team.roster.map(p => [p.id, here(p.id)])), lineup:kbBalancedLineup(team, team.roster.map(p => p.id)), assignments:{} };
 }
 /* The captain's pre-game workspace: a game-shaped object on the schedule entry, kept until the ump starts it. */
 function kbEnsurePrep(s) {
@@ -540,6 +550,7 @@ function kbSetAvail(schedId, playerId, value) {
 	s.availability = s.availability || {}; s.availability[playerId] = value;
 	/* keep a prep in step if the captain already opened one */
 	if (s.prep) for (const side of ['away', 'home']) { const t = s.prep.teams[side]; if (t.teamId && kbPlayer(kbTeam(t.teamId), playerId)) { t.attendance[playerId] = value === 'in'; if (value === 'in' && !t.lineup.some(slot => kbSlotIds(slot).includes(playerId))) t.lineup.push(playerId); } }
+	if (value === 'maybe' && kbState.me.playerId === playerId) kbToast('Marked maybe — the captain will count you when you say In');
 	kbSave(); kbRender();
 }
 function kbSetFreeAgent(playerId, teamId) {
@@ -980,10 +991,14 @@ function kbUnshare(index) {
 	t.lineup.splice(i, 1, ...ids);
 	kbSave(); kbRender();
 }
+/* assignments[pos] is a list (two people can share/rotate a spot); a person holds one spot at a time */
+function kbAt(A, pos) { const v = A[pos]; return Array.isArray(v) ? v : v ? [v] : []; }
+function kbOnField(A) { return Object.keys(A).flatMap(pos => kbAt(A, pos)); }
 function kbAssign(position, pid) {
-	const t = kbCaptainGame().teams[kbState.side];
-	for (const p of Object.keys(t.assignments)) if (t.assignments[p] === pid) delete t.assignments[p]; /* one spot per player */
-	if (pid) t.assignments[position] = pid; else delete t.assignments[position];
+	const t = kbCaptainGame().teams[kbState.side]; if (!pid) { delete t.assignments[position]; kbSave(); kbRender(); return; }
+	const already = kbAt(t.assignments, position).includes(pid);
+	for (const p of Object.keys(t.assignments)) { const rest = kbAt(t.assignments, p).filter(id => id !== pid); if (rest.length) t.assignments[p] = rest; else delete t.assignments[p]; }
+	if (!already) t.assignments[position] = kbAt(t.assignments, position).concat(pid); /* tapping a name already there takes them off */
 	kbSave(); kbRender();
 }
 function kbLineupWarnings(side, g = kbState.game) {
@@ -1001,9 +1016,9 @@ function kbLineupWarnings(side, g = kbState.game) {
 }
 function kbDefenseWarnings(side, g = kbState.game) {
 	const cfg = kbSport(g), T = cfg.team; if (!T) return [];
-	const team = kbTeam(g.teams[side].teamId); const A = g.teams[side].assignments; const ids = Object.values(A).filter(Boolean); const w = [];
+	const team = kbTeam(g.teams[side].teamId); const A = g.teams[side].assignments; const ids = kbOnField(A); const w = [];
 	const men = ids.filter(id => kbPlayer(team, id)?.gender === 'male').length;
-	const infield = (T.infield || []).filter(pos => A[pos]).length;
+	const infield = (T.infield || []).reduce((n, pos) => n + kbAt(A, pos).length, 0);
 	if (ids.length > T.maxFielders) w.push(`${ids.length} on the field — max ${T.maxFielders}`);
 	if (T.maxMenOnField && men > T.maxMenOnField) w.push(`${men} men on the field — max ${T.maxMenOnField}`);
 	if (T.maxInfielders && infield > T.maxInfielders) w.push(`${infield} infielders — max ${T.maxInfielders} including the catcher`);
@@ -1026,6 +1041,13 @@ function kbAddPlayer(form) {
 	team.roster.push({ id:kbSlug(name) + '-' + Date.now().toString(36).slice(-3), name, gender });
 	form.reset(); kbSave(); kbRender(); kbToast(`Added ${name}`);
 }
+function kbAddMember(form) {
+	const team = kbTeam(form.dataset.team); const name = form.querySelector('[name="name"]').value.trim(); if (!team || !name) return;
+	const gender = form.querySelector('[name="gender"]:checked')?.value || 'female';
+	team.roster.push({ id:kbSlug(name) + '-' + Date.now().toString(36).slice(-3), name, gender });
+	form.reset(); kbSave(); kbRender(); kbToast(`${name} joined ${team.short}`);
+}
+function kbRemoveMember(teamId, pid) { const team = kbTeam(teamId); if (!team || pid === team.captain) { kbToast(pid === (team || {}).captain ? 'The captain stays on the roster' : ''); return; } team.roster = team.roster.filter(p => p.id !== pid); kbSave(); kbRender(); }
 function kbSetGender(pid, gender) { const p = kbPlayer(kbTeam(kbState.teamId), pid); if (p) { p.gender = gender; kbSave(); kbRender(); } }
 function kbRemovePlayer(pid) { const team = kbTeam(kbState.teamId); team.roster = team.roster.filter(p => p.id !== pid); kbSave(); kbRender(); }
 
@@ -1093,29 +1115,7 @@ function kbRenderRoleHome() {
 			<ul class="sched-list">${mine.map(s => gameRow(s, s.status === 'rainout' ? `<button type="button" class="key is-ghost" data-action="rainout-game" data-sched="${s.id}">Rained out · undo</button>` : `<button type="button" class="key ${live(s) ? 'is-primary' : s.status === 'live' ? 'is-ghost' : 'is-primary'}" data-action="start-sched" data-sched="${s.id}">${live(s) ? 'Continue' : s.status === 'live' ? 'In progress' : 'Start'}</button>`)).join('') || '<li class="is-empty">Nothing assigned to you yet — the league assigns umps</li>'}</ul>
 			${mine.some(s => s.status === 'scheduled') ? '<p class="hint">Field closed? Hold a game’s row: <em>Rained out</em> is in League admin, or ask the league.</p>' : ''}</section>`;
 	}
-	if ((role === 'captain' || role === 'lead') && team) {
-		const next = kbNextSched(team.id);
-		if (next) {
-			const c = kbAvailCounts(next, team.id), leadId = (next.lead || {})[team.id], lead = leadId && kbPlayer(team, leadId);
-			const iLead = role === 'lead' && leadId === me.playerId;
-			const fa = kbFreeAgents(next, team.id);
-			html = `<section class="role-card"><p class="eyebrow">Next game · ${kbEscape(team.name)}</p>
-				<ul class="sched-list">${gameRow(next)}</ul>
-				${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(kbLeagueOfSched(next))}
-				<p class="hint"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said</p>
-				${role === 'lead' && !iLead ? `<p class="warn">${lead ? kbEscape(lead.name) + ' leads this game' : 'No lead named for this game'} — only the lead edits the lineup.</p>` : ''}
-				<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="prep" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">${live(next) ? 'Lineup (live)' : 'Set the lineup'}</button>${role === 'captain' ? `<button type="button" class="key is-ghost" data-action="team" data-team="${team.id}">Roster</button>` : ''}</div>
-				${role === 'captain' ? kbLeadFieldHTML(next, team, me) : ''}
-				<details class="recruit"><summary>Free agents · ${fa.length}</summary>
-					<p class="hint">${c.in < (kbSport({ sport:L.sport }).team?.minPlayers || 6) ? 'You’re short — ' : ''}players on other teams who said they’ll fill in.</p>
-					<nav class="tabs is-filter is-fa-filter" aria-label="Show">${[['all', `All · ${fa.length}`], ['available', `Available · ${fa.filter(p => kbFaAvailability(p.id, next) === 'yes').length}`]].map(([f, l]) => `<button type="button" class="${(kbState.faFilter || 'all') === f ? 'is-on' : ''}" data-action="fa-filter" data-filter="${f}" aria-pressed="${(kbState.faFilter || 'all') === f}">${l}</button>`).join('')}</nav>
-					<ul class="fa-list">${fa.filter(p => (kbState.faFilter || 'all') === 'all' || kbFaAvailability(p.id, next) === 'yes').map(p => kbPlayerCardHTML(p.id, { sched:next.id, team:team.id, from:p.from.id })).join('') || '<li class="is-empty">No free agents right now</li>'}</ul>
-				</details>
-			</section>
-			${role === 'captain' ? (() => { const rest = kbUpcoming(team.id).filter(s => s.id !== next.id); return rest.length ? `<section class="role-card"><p class="eyebrow">Upcoming · your In/Out and a lead if you’re out</p><ul class="sched-list is-captain">${rest.map(s => { const v = (s.availability || {})[team.captain]; return `<li class="sched-row ${s.status === 'rainout' ? 'is-rainout' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}</span><span class="sched-who">${s.home === team.id ? 'vs' : '@'} ${kbEscape(kbSchedName(s, s.home === team.id ? 'away' : 'home'))}${s.status === 'rainout' ? ' <strong class="is-rain">Rained out</strong>' : ''}</span>${s.status === 'rainout' ? '' : `<span class="seg is-inout">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${team.captain}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span><div class="sched-lead">${kbLeadFieldHTML(s, team, me)}</div>`}</li>`; }).join('')}</ul></section>` : ''; })() : ''}
-			<section class="role-card"><p class="eyebrow">Who’s in</p><ul class="avail-list">${team.roster.map(p => { const v = (next.availability || {})[p.id]; return `<li class="avail-row"><span class="roster-name">${kbEscape(p.name)}${p.guest ? ' <small>guest</small>' : ''}</span><span class="seg">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${next.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span></li>`; }).join('')}</ul></section>`;
-		} else html = `<section class="role-card"><p class="eyebrow">${kbEscape(team.name)}</p><p class="hint">No games scheduled. The league adds games.</p><div class="pad-bar is-2">${role === 'captain' ? `<button type="button" class="key is-ghost" data-action="team" data-team="${team.id}">Roster</button>` : ''}</div></section>`;
-	}
+	if ((role === 'captain' || role === 'lead') && team) html = kbCaptainHomeHTML(team, role, me, L);
 	if (role === 'player') { html = `<section class="role-card"><p class="eyebrow">You</p><div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="player">My page</button></div></section>`; }
 	if (false) {
 		const p = kbPlayer(team, me.playerId); const games = kbUpcoming(team.id).slice(0, 4);
@@ -1127,15 +1127,17 @@ function kbRenderRoleHome() {
 	}
 	host.innerHTML = html;
 }
-function kbStandingsHTML() {
-	const rows = kbStandings(); if (!rows.length) return '';
-	return `<section class="role-card"><p class="eyebrow">Standings</p><div class="linescore is-open"><table><thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>RF</th><th>RA</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.team.name)}</th><td>${r.w}</td><td>${r.l}</td><td>${r.t}</td><td>${r.rf}</td><td>${r.ra}</td></tr>`).join('')}</tbody></table></div></section>`;
+function kbStandingsHTML(L = kbState.league, highlight = null) {
+	const rows = kbStandings(L); if (!rows.length) return '';
+	return `<section class="role-card ${highlight ? 'is-bare' : ''}"><p class="eyebrow">Standings</p><div class="linescore is-open"><table><thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>RF</th><th>RA</th></tr></thead><tbody>${rows.map(r => `<tr class="${r.team.id === highlight ? 'is-me' : ''}"><th>${kbEscape(r.team.name)}</th><td>${r.w}</td><td>${r.l}</td><td>${r.t}</td><td>${r.rf}</td><td>${r.ra}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
 function kbRenderHome() {
 	kbRenderRoleHome();
 	const form = document.querySelector('.new-game'); if (form) form.hidden = !kbCan('start-game');
-	const links = document.querySelector('.home-links'); if (links) links.hidden = kbMeRole() === 'league';
+	const links = document.querySelector('.home-links'); if (links) links.hidden = ['league', 'captain', 'lead'].includes(kbMeRole());
+	const recentPanel = document.querySelector('.recent-panel'); if (recentPanel) recentPanel.hidden = ['captain', 'lead'].includes(kbMeRole());
+	const brand = document.querySelector('.home h1'); if (brand) brand.hidden = ['captain', 'lead'].includes(kbMeRole());
 	const sel = document.querySelector('select[name="sport"]');
 	if (sel && !sel.options.length) Object.values(KB_SPORTS).forEach(s => sel.add(new Option(s.name, s.id)));
 	const modeSel = document.querySelector('select[name="mode"]');
@@ -1366,7 +1368,8 @@ function kbRenderCaptain() {
 	const prep = kbState.prepId ? kbSched(kbState.prepId) : null;
 	const g = kbCaptainGame(), host = document.querySelector('.captain'); if (!host) return;
 	if (!g) { host.innerHTML = '<p class="empty">No game in progress. <button type="button" class="key is-ghost" data-action="go" data-to="home">Home</button></p>'; return; }
-	const sides = ['away', 'home'].filter(s => kbTeam(g.teams[s].teamId));
+	let sides = ['away', 'home'].filter(s => kbTeam(g.teams[s].teamId));
+	if (['captain', 'lead', 'player'].includes(kbMeRole()) && kbState.me.teamId) { const own = sides.filter(s => g.teams[s].teamId === kbState.me.teamId); if (own.length) sides = own; }
 	if (!sides.length) { host.innerHTML = '<p class="empty">Neither side has a roster attached. Start a new game and pick a team.</p>'; return; }
 	if (!sides.includes(kbState.side)) kbState.side = sides[0];
 	const side = kbState.side, t = g.teams[side], team = kbTeam(t.teamId), cfg = kbSport(g), T = cfg.team, tab = kbState.tab;
@@ -1395,10 +1398,13 @@ function kbRenderCaptain() {
 			</span>
 		</li>`; }).join('') || '<li class="is-empty">Nobody marked here yet</li>'}</ol>
 		<div class="pad-bar is-2"><button type="button" class="key is-ghost" data-action="balance">Balance W/M</button><button type="button" class="key is-primary" data-action="captain-tab" data-tab="positions">Next: positions</button></div>`;
-	if (tab === 'positions') { const onField = Object.values(t.assignments).filter(Boolean); const ids = active.flatMap(kbSlotIds); const bench = ids.filter(id => !onField.includes(id)); body = `
+	if (tab === 'positions') { const ids = active.flatMap(kbSlotIds); const onField = kbOnField(t.assignments); const bench = ids.filter(id => !onField.includes(id)); const pick = kbState.posPick && T.positions.includes(kbState.posPick) ? kbState.posPick : null; body = `
 		${dw.map(w => `<p class="warn">${kbEscape(w)}</p>`).join('')}
-		<ul class="positions">${T.positions.map(pos => `<li class="position-row"><label for="pos-${kbSlug(pos)}">${kbEscape(pos)}${(T.infield || []).includes(pos) ? ' <small>IF</small>' : ''}<em>${kbEscape(kbPositionName(pos))}</em></label><select id="pos-${kbSlug(pos)}" data-action="assign" data-position="${kbEscape(pos)}"><option value="">Open</option>${ids.map(id => { const p = kbPlayer(team, id); return `<option value="${id}" ${t.assignments[pos] === id ? 'selected' : ''}>${kbEscape(p.name)}</option>`; }).join('')}</select></li>`).join('')}</ul>
-		<p class="hint">Bench (${bench.length}): ${bench.map(id => kbEscape(kbFirst(kbPlayer(team, id).name))).join(', ') || '—'}</p>
+		<p class="hint">Tap a spot, then tap who plays there. Two names on a spot share it.</p>
+		${kbFieldSVG(T, t.assignments, team, pick)}
+		${pick ? `<div class="pos-pick"><p class="eyebrow">${kbEscape(pick)} · ${kbEscape(kbPositionName(pick))}${kbAt(t.assignments, pick).length ? ' · ' + kbAt(t.assignments, pick).map(id => kbEscape(kbFirst(kbDisplayName(kbPlayer(team, id))))).join(' / ') : ''}</p>
+			<div class="pos-chips">${ids.map(id => { const p = kbPlayer(team, id); const here = kbAt(t.assignments, pick).includes(id); const elsewhere = !here && onField.includes(id); return `<button type="button" class="chip-pick ${here ? 'is-on' : ''} ${elsewhere ? 'is-elsewhere' : ''}" data-action="assign-tap" data-position="${kbEscape(pick)}" data-player="${id}" aria-pressed="${here}" title="${elsewhere ? 'Moves them here from another spot' : ''}">${kbEscape(kbFirst(kbDisplayName(p)))}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></button>`; }).join('')}${kbAt(t.assignments, pick).length ? `<button type="button" class="chip-pick is-clear" data-action="assign-clear" data-position="${kbEscape(pick)}">Clear spot</button>` : ''}</div></div>` : ''}
+		<p class="hint">Bench (${bench.length}): ${bench.map(id => kbEscape(kbFirst(kbDisplayName(kbPlayer(team, id))))).join(', ') || '—'}</p>
 		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="${backTo}">${doneLabel}</button></div>`; }
 	host.innerHTML = `
 	<header class="page-head">
@@ -1530,7 +1536,7 @@ function kbRenderPlayer() {
 	const upcoming = sched.filter(s => s.status !== 'final'), played = sched.filter(s => s.status === 'final').slice(-3).reverse();
 	const live = kbState.game && kbState.game.status === 'live' && (ids.includes(kbState.game.teams.away.teamId) || ids.includes(kbState.game.teams.home.teamId)) ? kbState.game : null;
 	const myTeamIn = (s) => kbTeam(ids.includes(s.home) ? s.home : s.away);
-	const inout = (s) => { const v = (s.availability || {})[p.id]; return `<span class="seg is-inout">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span>`; };
+	const inout = (s) => kbInOutHTML(s, p.id);
 	const row = (s, extra = '') => { const t = myTeamIn(s); const opp = kbTeam(kbOpponent(s, t.id)); const SL = kbLeagueOfSched(s); return `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''} ${s.status === 'rainout' ? 'is-rainout' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}${teams.length > 1 ? ' · ' + kbEscape(t.short) : ''}${myLeagues.length > 1 && SL ? ` · <b>${kbEscape(kbLeagueLabel(SL))}</b>` : ''}</span><span class="sched-who">${s.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}${s.result ? ` <strong>${s.away === t.id ? `${s.result.away}–${s.result.home}` : `${s.result.home}–${s.result.away}`}${(s.result.away > s.result.home) === (s.away === t.id) ? ' W' : s.result.away === s.result.home ? ' T' : ' L'}</strong>` : s.status === 'rainout' ? ' <strong class="is-rain">Rained out</strong>' : ''}</span>${s.status === 'rainout' ? '' : extra}</li>`; };
 
 	/* --- next game card --- */
@@ -1538,13 +1544,13 @@ function kbRenderPlayer() {
 	if (live) { const d = kbDerive(live); const k = kbCurrentKicker(d.half === 'top' ? 'away' : 'home', live);
 		nextHTML = `<section class="pcard is-live"><p class="eyebrow">Live now</p><p class="live-score"><span>${kbEscape(live.teams.away.name)}</span><strong>${d.score.away}</strong><em>–</em><strong>${d.score.home}</strong><span>${kbEscape(live.teams.home.name)}</span></p><p class="hint">${d.half === 'top' ? 'Top' : 'Bottom'} ${d.inning} · ${d.outs} out${k ? ' · up: ' + kbEscape(kbDisplayName(k)) : ''}</p><div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="ump">Watch</button></div></section>`; }
 	else if (next) { const t = myTeamIn(next); const opp = kbTeam(kbOpponent(next, t.id)); const c = kbAvailCounts(next, t.id); const leadId = (next.lead || {})[t.id]; const lead = leadId && kbPlayer(t, leadId); const NL = kbLeagueOfSched(next); const cfg = kbSport({ sport:NL.sport, leagueId:NL.id }); const min = cfg.team ? cfg.team.minPlayers : 0;
-		const prep = next.prep, side = prep ? (prep.teams.home.teamId === t.id ? 'home' : 'away') : null; const active = prep ? kbActiveLineup(side, prep) : []; const spot = active.findIndex(slot => kbSlotIds(slot).includes(p.id)); const pos = prep ? Object.entries(prep.teams[side].assignments).find(([, id]) => id === p.id) : null;
+		const prep = next.prep, side = prep ? (prep.teams.home.teamId === t.id ? 'home' : 'away') : null; const active = prep ? kbActiveLineup(side, prep) : []; const spot = active.findIndex(slot => kbSlotIds(slot).includes(p.id)); const pos = prep ? Object.entries(prep.teams[side].assignments).find(([, ids]) => kbAt(prep.teams[side].assignments, ids && ids.length !== undefined && typeof ids !== 'string' ? Object.keys(prep.teams[side].assignments).find(k => prep.teams[side].assignments[k] === ids) : '').includes(p.id) || (typeof ids === 'string' ? ids === p.id : Array.isArray(ids) && ids.includes(p.id))) : null;
 		nextHTML = `<section class="pcard is-next"><p class="eyebrow">Next game${teams.length > 1 ? ' · ' + kbEscape(t.name) : ''}${myLeagues.length > 1 ? ' · ' + kbEscape(kbLeagueLabel(NL)) : ''}</p>
 			<p class="next-when">${kbEscape(kbSchedDate(next))}${next.field ? ' · ' + kbEscape(next.field) : ''}</p>
 			<h2 class="next-who">${next.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}</h2>
 			${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(NL)}
 			<div class="next-inout">${inout(next)}</div>
-			<p class="status-line"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
+			<p class="status-line"><strong class="is-in">${c.in} in</strong> · ${c.maybe} maybe · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
 			<p class="hint">${lead ? `${kbEscape(kbDisplayName(lead))} is running this one` : t.captain && kbPlayer(t, t.captain) ? `${kbEscape(kbDisplayName(kbPlayer(t, t.captain)))} (captain) is running this one` : ''}</p>
 			${prep ? `<p class="lineup-me">${spot >= 0 ? `You’re kicking <strong>${spot + 1}${['st', 'nd', 'rd'][spot] || 'th'}</strong>${pos ? ` · <strong>${kbEscape(pos[0])}</strong>` : ''}` : 'You’re not in the lineup yet'}</p>` : '<p class="lineup-me">Lineup not set yet</p>'}
 		</section>`; }
@@ -1658,3 +1664,93 @@ function kbOpenPlayerSheet(pid, schedId, teamId) {
 	if (!d.open) { const y = kbScrollY(); d.showModal(); if (typeof scrollTo === 'function') scrollTo(0, y); }
 }
 function kbClosePlayerSheet() { const d = document.getElementById('player-sheet'); if (d && d.open) d.close(); }
+
+/* ========================================================================== */
+/* CAPTAIN PAGE — one team, the captain's. Next game → who's in → lead (only  */
+/* when the captain is out) → free agents → schedule → roster → team stats.    */
+/* ========================================================================== */
+function kbTeamRecord(teamId) { const L = kbLeagueOfTeam(teamId); const row = kbStandings(L).find(r => r.team.id === teamId); return row ? `${row.w}–${row.l}${row.t ? '–' + row.t : ''}` : '0–0'; }
+function kbTeamLeaders(teamId, n = 3) { const { totals } = kbLeagueStats('all', 'all'); const team = kbTeam(teamId); if (!team) return []; return team.roster.filter(p => !p.guest && totals[p.id] && kbAB(totals[p.id]) >= 4).map(p => ({ p, t:totals[p.id] })).sort((a, b) => (b.t.h / kbAB(b.t)) - (a.t.h / kbAB(a.t))).slice(0, n); }
+function kbCaptainHomeHTML(team, role, me, L) {
+	const TL = kbLeagueOfTeam(team.id) || L; const next = kbNextSched(team.id); const upcoming = kbUpcoming(team.id).filter(s => s !== next);
+	const played = kbSchedSorted(true).filter(s => s.status === 'final' && (s.away === team.id || s.home === team.id)).slice(-5).reverse();
+	const live = next && next.gameId && kbState.game && kbState.game.id === next.gameId;
+	const cfg = kbSport({ sport:TL.sport, leagueId:TL.id }); const min = cfg.team ? cfg.team.minPlayers : 0;
+	const oppLink = (s) => { const opp = kbTeam(kbOpponent(s, team.id)); return opp ? `<button type="button" class="opp-link" data-action="team-card" data-team="${opp.id}">${kbEscape(opp.name)}</button>` : '—'; };
+	const leaders = kbTeamLeaders(team.id);
+	let html = `
+	<!-- ===== TEAM HEAD ===== -->
+	<header class="team-head">
+		<div><p class="eyebrow">${kbEscape(TL.night || TL.name)} · ${kbEscape(kbSeasonName(TL.season, TL))}</p><h1>${kbEscape(team.name)}</h1></div>
+		<span class="team-record"><strong>${kbTeamRecord(team.id)}</strong><small>record</small></span>
+	</header>`;
+	if (next) {
+		const c = kbAvailCounts(next, team.id), leadId = (next.lead || {})[team.id], lead = leadId && kbPlayer(team, leadId); const capOut = (next.availability || {})[team.captain] === 'out';
+		html += `
+	<!-- ===== NEXT GAME ===== -->
+	<section class="pcard is-next"><p class="eyebrow">Next game</p>
+		<p class="next-when">${kbEscape(kbSchedDate(next))}${next.field ? ' · ' + kbEscape(next.field) : ''}</p>
+		<h2 class="next-who">${next.home === team.id ? 'vs' : '@'} ${oppLink(next)}</h2>
+		${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(TL).replace('class="rainout ', 'class="rainout is-inline ')}
+		<p class="status-line"><strong class="is-in">${c.in} in</strong> · ${c.maybe} maybe · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
+		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="prep" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">${live ? 'Lineup (live)' : 'Lineup & positions'}</button>${lead ? `<span class="lead-chip">Lead: ${kbEscape(kbDisplayName(lead))}${role === 'captain' ? ` <button type="button" class="chip-x" data-action="set-lead-clear" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}" aria-label="Remove lead">×</button>` : ''}</span>` : ''}</div>
+		${role === 'captain' && capOut && !leadId ? kbLeadFieldHTML(next, team, me) : ''}
+		${role === 'lead' && leadId !== me.playerId ? `<p class="hint">${lead ? kbEscape(kbDisplayName(lead)) + ' is running this one' : 'No lead named'} — only the lead edits the lineup.</p>` : ''}
+	</section>
+	<!-- ===== WHO'S IN ===== -->
+	<section class="pcard"><p class="eyebrow">Who’s in · ${kbEscape(kbSchedDate(next).split(' · ')[0])}</p>
+		<ul class="avail-list">${team.roster.map(p => `<li class="avail-row ${p.guest ? 'is-guest' : ''}"><span class="roster-name">${kbEscape(kbDisplayName(p))}${p.id === team.captain ? ' <small>C</small>' : ''}${p.guest ? ' <small>guest</small>' : ''}</span>${kbInOutHTML(next, p.id, 'is-sm')}</li>`).join('')}</ul>
+	</section>
+	<!-- ===== FREE AGENTS ===== -->
+	<section class="pcard"><p class="eyebrow">Free agents${c.in < min ? ` · you’re short ${min - c.in}` : ''}</p>
+		${(() => { const fa = kbFreeAgents(next, team.id); const f = kbState.faFilter || 'all'; return `<nav class="tabs is-filter is-fa-filter" aria-label="Show">${[['all', `All · ${fa.length}`], ['available', `Available · ${fa.filter(p => kbFaAvailability(p.id, next) === 'yes').length}`]].map(([x, l]) => `<button type="button" class="${f === x ? 'is-on' : ''}" data-action="fa-filter" data-filter="${x}" aria-pressed="${f === x}">${l}</button>`).join('')}</nav>
+		<ul class="fa-list">${fa.filter(p => f === 'all' || kbFaAvailability(p.id, next) === 'yes').map(p => kbPlayerCardHTML(p.id, { sched:next.id, team:team.id, from:p.from.id })).join('') || '<li class="is-empty">No free agents on this night right now</li>'}</ul>`; })()}
+		<p class="hint">Pickups must be on another ${kbEscape(TL.org || 'league')} roster for this night and be declared to the ump before they play. First pickup is free; each extra one costs 2 runs. None in the playoffs.</p>
+	</section>`;
+	} else html += `<section class="pcard"><p class="eyebrow">Next game</p><p class="hint">Nothing scheduled — the league adds games.</p></section>`;
+	/* schedule */
+	html += `
+	<!-- ===== SCHEDULE ===== -->
+	<section class="pcard"><p class="eyebrow">Schedule</p>
+		<ul class="sched-list is-captain">${upcoming.map(s => { const v = (s.availability || {})[team.captain]; return `<li class="sched-row ${s.status === 'rainout' ? 'is-rainout' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}</span><span class="sched-who">${s.home === team.id ? 'vs' : '@'} ${oppLink(s)}${s.status === 'rainout' ? ' <strong class="is-rain">Rained out</strong>' : ''}</span>${s.status === 'rainout' || role !== 'captain' ? '' : kbInOutHTML(s, team.captain, 'is-sm') + `<div class="sched-lead">${kbLeadFieldHTML(s, team, me)}</div>`}</li>`; }).join('') || '<li class="is-empty">No more games this season</li>'}</ul>
+		${played.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">Results</p><ul class="sched-list">${played.map(s => { const us = s.away === team.id ? s.result.away : s.result.home, them = s.away === team.id ? s.result.home : s.result.away; return `<li class="sched-row is-final"><span class="sched-when">${kbEscape(kbSchedDate(s))}</span><span class="sched-who">${s.home === team.id ? 'vs' : '@'} ${oppLink(s)} <strong>${us}–${them} ${us > them ? 'W' : us < them ? 'L' : 'T'}</strong></span></li>`; }).join('')}</ul>` : ''}
+	</section>`;
+	/* roster (captain only edits) */
+	html += `
+	<!-- ===== ROSTER ===== -->
+	<section class="pcard"><p class="eyebrow">Roster · ${team.roster.filter(p => !p.guest).length}</p>
+		<ul class="roster-list is-edit">${team.roster.filter(p => !p.guest).map(p => `<li class="roster-row"><button type="button" class="roster-name as-link" data-action="player-card" data-player="${p.id}">${kbEscape(kbDisplayName(p))}${p.id === team.captain ? ' <small>C</small>' : ''}${kbMyPositions(p.id).length ? ` <small>${kbEscape(kbPositionsLabel(p.id))}</small>` : ''}</button><span class="seg"><button type="button" class="${p.gender === 'female' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="female" data-scope="${team.id}" aria-pressed="${p.gender === 'female'}">W</button><button type="button" class="${p.gender === 'male' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="male" data-scope="${team.id}" aria-pressed="${p.gender === 'male'}">M</button></span>${p.id === team.captain ? '<span class="roster-remove" aria-hidden="true"></span>' : `<button type="button" class="roster-remove" data-action="remove-member" data-team="${team.id}" data-player="${p.id}" data-scope="${team.id}" aria-label="Remove ${kbEscape(p.name)}">×</button>`}</li>`).join('')}</ul>
+		${role === 'captain' ? `<form class="inline-form is-add" data-team="${team.id}"><div class="field"><label for="add-name">Someone joined the team</label><input id="add-name" name="name" autocomplete="off" placeholder="Name" required></div><span class="seg is-radio" role="radiogroup" aria-label="Designation"><label><input type="radio" name="gender" value="female" checked> W</label><label><input type="radio" name="gender" value="male"> M</label></span><button type="submit" class="key is-ghost" data-action="add-member" data-scope="${team.id}">Add</button></form>` : ''}
+	</section>
+	<!-- ===== TEAM STATS ===== -->
+	<section class="pcard"><p class="eyebrow">Team · ${kbEscape(kbSeasonName(TL.season, TL))}</p>
+		${kbStandingsHTML(TL, team.id)}
+		${leaders.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">Leading the team · AVG</p><ol class="leaders">${leaders.map((x, i) => `<li><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))}</span><strong>${kbAvg(x.t)} · ${x.t.hr} HR · ${x.t.rbi} RBI</strong></li>`).join('')}</ol>` : ''}
+		<div class="pad-bar is-2"><button type="button" class="key is-ghost" data-action="stats" data-team="${team.id}">Full team stats</button></div>
+	</section>`;
+	return html;
+}
+/* the field — ten spots on a diamond; tap a spot to pick who plays there */
+function kbFieldSVG(T, A, team, pick) {
+	const spots = { 'C/SS':[50, 86], '1B':[72, 64], '2B':[58, 46], 'SS':[42, 46], '3B':[28, 64], 'LF':[18, 30], 'CFL/SS':[36, 20], 'C':[50, 12], 'CFR':[64, 20], 'RF':[82, 30] };
+	const names = (pos) => kbAt(A, pos).map(id => kbFirst(kbDisplayName(kbPlayer(team, id)) || '')).join(' / ');
+	return `<svg class="field" viewBox="0 0 100 100" role="group" aria-label="Field positions">
+		<path class="field-grass" d="M50 97 L1 48 Q50 -34 99 48 Z"/>
+		<path class="field-dirt" d="M50 92 L22 64 L50 36 L78 64 Z"/>
+		<path class="field-line" d="M50 92 L22 64 M50 92 L78 64"/>
+		${[[50, 92], [78, 64], [50, 36], [22, 64]].map(([x, y]) => `<rect class="field-base" x="${x - 2}" y="${y - 2}" width="4" height="4" transform="rotate(45 ${x} ${y})"/>`).join('')}
+		${T.positions.map(pos => { const [x, y] = spots[pos] || [50, 50]; const n = kbAt(A, pos); const on = n.length > 0; return `<g class="field-spot ${on ? 'is-on' : ''} ${pick === pos ? 'is-pick' : ''}" data-action="pos-pick" data-position="${kbEscape(pos)}" role="button" tabindex="0" aria-label="${kbEscape(pos)}${on ? ': ' + kbEscape(names(pos)) : ': open'}"><circle cx="${x}" cy="${y}" r="${on ? 7 : 5.5}"/><text class="field-code" x="${x}" y="${y - (on ? 1.4 : 0)}" text-anchor="middle" dominant-baseline="middle">${kbEscape(pos)}</text>${on ? `<text class="field-name" x="${x}" y="${y + 2.8}" text-anchor="middle" dominant-baseline="middle">${kbEscape(names(pos)).slice(0, 14)}</text>` : ''}</g>`; }).join('')}
+	</svg>`;
+}
+/* a team's card: record, roster, next game, leaders */
+function kbOpenTeamSheet(teamId) {
+	const d = document.getElementById('player-sheet'), team = kbTeam(teamId); if (!d || !team) return;
+	const TL = kbLeagueOfTeam(teamId); const next = kbNextSched(teamId); const cap = team.captain && kbPlayer(team, team.captain); const leaders = kbTeamLeaders(teamId, 5);
+	const w = team.roster.filter(p => !p.guest && p.gender === 'female').length, m = team.roster.filter(p => !p.guest && p.gender === 'male').length;
+	d.innerHTML = `<div class="sheet-head"><button type="button" class="drawer-close key is-ghost" data-action="sheet-close" aria-label="Close">×</button></div>
+		<header class="team-head"><div><p class="eyebrow">${kbEscape(TL ? TL.night || TL.name : '')}</p><h2>${kbEscape(team.name)}</h2><p class="hint">${team.roster.filter(p => !p.guest).length} players · ${w} W · ${m} M${cap ? ' · captain ' + kbEscape(kbDisplayName(cap)) : ''}</p></div><span class="team-record"><strong>${kbTeamRecord(teamId)}</strong><small>record</small></span></header>
+		${next ? `<p class="hint">Next: ${kbEscape(kbSchedDate(next))} ${next.home === teamId ? 'vs' : '@'} ${kbEscape(kbSchedName(next, next.home === teamId ? 'away' : 'home'))}</p>` : ''}
+		${kbStandingsHTML(TL, teamId)}
+		${leaders.length ? `<p class="eyebrow">Top of the order · AVG</p><ol class="leaders">${leaders.map((x, i) => `<li><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))}</span><strong>${kbAvg(x.t)} · ${x.t.hr} HR · ${x.t.rbi} RBI</strong></li>`).join('')}</ol>` : '<p class="hint">No games on the books yet.</p>'}`;
+	kbApplyPerms(); if (!d.open) { const y = kbScrollY(); d.showModal(); if (typeof scrollTo === 'function') scrollTo(0, y); }
+}

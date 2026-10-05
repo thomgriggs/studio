@@ -473,6 +473,44 @@ input, select { font:inherit; }
 .icon-grid button.is-on { border-color:var(--color_accent); background:var(--color_accent-soft); }
 @media (max-width:420px) { .stats-wrap { grid-template-columns:1fr; justify-items:center; } .icon-grid { grid-template-columns:repeat(6, 1fr); } }
 
+/* ===== CAPTAIN PAGE ===== */
+.team-head { display:grid; grid-template-columns:1fr auto; align-items:center; gap:var(--space_md); }
+.team-head h1 { font-size:var(--font_size-xl); line-height:1.1; } .team-head h2 { font-size:var(--font_size-xl); }
+.team-record { display:grid; justify-items:center; padding:var(--space_sm) var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+.team-record strong { font-size:var(--font_size-xl); line-height:1; } .team-record small { font-size:var(--font_size-xs); color:var(--color_text-dim); text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+.opp-link { font:inherit; color:inherit; background:none; border:0; padding:0; text-decoration:underline; text-decoration-color:var(--color_line-strong); text-underline-offset:4px; cursor:pointer; }
+.opp-link:hover { text-decoration-color:var(--color_accent); }
+.rainout.is-inline { background:transparent; border:0; padding:0 0 0 var(--space_xs); min-height:32px; border-left:3px solid var(--color_line-strong); border-radius:0; }
+.rainout.is-inline.is-go { border-left-color:var(--color_accent); } .rainout.is-inline.is-no { border-left-color:var(--color_danger); } .rainout.is-inline.is-warn { border-left-color:var(--color_warn); }
+.seg.is-inout.is-sm button { min-height:36px; min-width:44px; padding:0 var(--space_sm); font-size:var(--font_size-xs); }
+.seg button.is-maybe { color:var(--color_bg); background:var(--color_warn); }
+.lead-chip { display:inline-flex; align-items:center; gap:var(--space_xs); justify-self:start; align-self:center; min-height:36px; padding:0 var(--space_sm) 0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-sunken); border:1px solid var(--color_line-strong); font-size:var(--font_size-sm); font-weight:700; color:var(--color_text-muted); }
+.chip-x { min-width:28px; min-height:28px; border-radius:50%; color:var(--color_text-muted); font-size:var(--font_size-md); }
+.roster-name.as-link { background:none; border:0; padding:0; color:inherit; font:inherit; font-weight:700; text-align:left; cursor:pointer; min-height:44px; }
+.inline-form.is-add { grid-template-columns:1fr auto auto; }
+.role-card.is-bare { padding:0; background:none; border:0; }
+.role-card.is-bare > .eyebrow { display:none; }
+.linescore tr.is-me th, .linescore tr.is-me td { color:var(--color_accent); font-weight:800; }
+.pos-chips .chip-pick.is-elsewhere { border-style:dashed; }
+.pos-chips .chip-pick.is-clear { color:var(--color_danger); border-color:color-mix(in srgb, var(--color_danger), transparent 50%); }
+.pos-pick { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_accent); }
+.pos-chips .chip-pick .chip-tag { width:18px; height:18px; font-size:10px; margin-left:6px; }
+
+/* ===== FIELD : the diamond ===== */
+.field { width:100%; max-width:30rem; margin:0 auto; display:block; }
+.field-grass { fill:#15402c; stroke:var(--color_line-strong); stroke-width:.6; }
+.field-dirt { fill:#6b4a2b; }
+.field-line { stroke:rgba(255,255,255,.55); stroke-width:.5; fill:none; }
+.field-base { fill:#f2f5fa; }
+.field-spot { cursor:pointer; }
+.field-spot circle { fill:var(--color_bg); stroke:var(--color_line-strong); stroke-width:.8; }
+.field-spot.is-on circle { fill:var(--color_bg-raised); stroke:var(--color_accent); }
+.field-spot.is-pick circle { stroke:var(--color_warn); stroke-width:1.4; }
+.field-spot:focus-visible circle { stroke:var(--color_accent); stroke-width:1.6; }
+.field-code { fill:var(--color_text); font-size:3.2px; font-weight:800; letter-spacing:.1px; }
+.field-spot.is-on .field-code { fill:var(--color_text-muted); font-size:2.6px; }
+.field-name { fill:var(--color_text); font-size:2.6px; font-weight:700; }
+
 /* ===== RAINOUT : field status chip (Statusfy) ===== */
 .rainout { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:2px var(--space_sm); min-height:44px; padding:var(--space_xs) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); color:inherit; text-decoration:none; font-size:var(--font_size-sm); }
 .rainout .rainout-label { grid-column:1; font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.08em; color:var(--color_text-dim); font-weight:700; }

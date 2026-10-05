@@ -359,8 +359,9 @@ test('schedule: availability shapes the prep, the ump starts from the prep, the 
 	const prep = run(`kbSched('s1').prep.teams.home`);
 	assert.equal(prep.attendance['thom-griggs'], false, 'out = not here');
 	assert.equal(prep.attendance['sean-fetter'], false, 'seeded as out');
-	assert.equal(prep.attendance['selene-griggs'], true);
-	assert.ok(!prep.lineup.includes('thom-griggs'), 'not in the lineup either');
+	assert.equal(prep.attendance['selene-griggs'], true, 'In = here');
+	assert.equal(prep.attendance['cristy-ceron'], false, 'no answer = not here until tapped in');
+	assert.ok(!run(`kbActiveLineup('home', kbSched('s1').prep).flatMap(kbSlotIds)`).includes('thom-griggs'), 'not in the active lineup either');
 	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbStartScheduled('s1');`);
 	assert.equal(run(`kbState.game.schedId`), 's1');
 	assert.equal(run(`kbSched('s1').status`), 'live');
@@ -544,4 +545,29 @@ test('lead: the question only comes up when the captain is out', () => {
 	assert.equal(run(`kbSched('s1').availability['jason-morton']`), 'out');
 	run(`kbSetLead('s1', 'lbc', 'katie-morton')`); assert.equal(run(`kbSched('s1').lead.lbc`), 'katie-morton');
 	run(`kbSetLead('s1', 'lbc', '')`); assert.equal(run(`kbSched('s1').lead.lbc`), undefined, 'clearing removes the lead');
+});
+
+test('positions: a spot holds several people; a person holds one spot; infield counts every body', () => {
+	run(`mkGame('kickball', 'lbc'); kbState.side = 'home'; kbState.prepId = null; kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' };`);
+	run(`kbAssign('SS', 'thom-griggs'); kbAssign('SS', 'chris-bombicino');`);
+	assert.deepEqual(run(`kbAt(kbState.game.teams.home.assignments, 'SS')`), ['thom-griggs', 'chris-bombicino'], 'two names share SS');
+	run(`kbAssign('1B', 'thom-griggs');`);
+	assert.deepEqual(run(`kbAt(kbState.game.teams.home.assignments, 'SS')`), ['chris-bombicino'], 'Thom moved to 1B');
+	run(`kbAssign('1B', 'thom-griggs');`);
+	assert.deepEqual(run(`kbAt(kbState.game.teams.home.assignments, '1B')`), [], 'tapping the name already there takes him off');
+	run(`['C/SS','1B','2B','3B'].forEach((p, i) => kbAssign(p, kbTeam('lbc').roster[i].id)); kbAssign('SS', 'jason-morton'); kbAssign('CFL/SS', 'sean-fetter');`);
+	assert.ok(run(`kbDefenseWarnings('home')`).some(x => /7 infielders/.test(x)), 'two on SS + five others = 7 infielders');
+	assert.match(run(`kbFieldSVG(kbSport().team, kbState.game.teams.home.assignments, kbTeam('lbc'), 'SS')`), /class="field-spot is-on is-pick"/);
+});
+
+test('maybe: counts as its own bucket and is not here until they say In', () => {
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' };`);
+	run(`kbSetAvail('s1', 'cheryl-donish', 'maybe')`);
+	const c = run(`kbAvailCounts(kbSched('s1'), 'lbc')`); assert.equal(c.maybe, 1);
+	run(`kbSched('s1').prep = null; kbEnsurePrep(kbSched('s1'));`);
+	assert.equal(run(`kbSched('s1').prep.teams.home.attendance['cheryl-donish']`), false);
+	assert.equal(run(`kbSched('s1').prep.teams.home.attendance['thom-griggs']`), true, 'In = here');
+	assert.equal(run(`kbSched('s1').prep.teams.home.attendance['cristy-ceron']`), false, 'silence is not here either — the captain taps them in at the field');
+	assert.match(run(`kbCaptainHomeHTML(kbTeam('lbc'), 'captain', kbState.me, kbState.league)`), /Who’s in[\s\S]*Free agents[\s\S]*Schedule[\s\S]*Roster[\s\S]*Team ·/);
+	assert.equal(run(`kbTeamRecord('lbc')`), '0–0');
 });
