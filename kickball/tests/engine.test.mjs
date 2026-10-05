@@ -484,4 +484,6 @@ test('free agency positions: a multi-pick of OF SS 1B 2B 3B C; an old single cod
 	assert.deepEqual(run(`kbMyPositions('nina-patel')`), ['C'], 'C/SS counts as catcher');
 	assert.equal(run(`kbProfile('thom-griggs').position`), undefined);
 	assert.equal(run(`kbPositionsLabel('jake-fields')`), 'C · 1B');
+	run(`kbSetProfile('jake-fields', { positions:kbFaPositions().slice() })`);
+	assert.equal(run(`kbPositionsLabel('jake-fields')`), 'Anywhere', 'all six reads as Anywhere');
 });

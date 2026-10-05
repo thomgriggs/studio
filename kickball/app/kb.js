@@ -152,7 +152,7 @@ const KB_ACTIONS = {
 	'pcompare':     (el) => { const s = el.dataset.season; kbState.pcompare = kbState.pcompare.includes(s) ? kbState.pcompare.filter(x => x !== s) : kbState.pcompare.concat(s).slice(-2); kbSave(); kbRender(); },
 	'player-card':  (el) => kbOpenPlayerSheet(el.dataset.player, el.dataset.sched, el.dataset.team),
 	'sheet-close':  () => kbClosePlayerSheet(),
-	'fa-pos':       (el) => { const pid = kbState.me.playerId, cur = kbMyPositions(pid), p = el.dataset.pos; kbSetProfile(pid, { positions:cur.includes(p) ? cur.filter(x => x !== p) : cur.concat(p) }); kbRender(); },
+	'fa-pos':       (el) => { const pid = kbState.me.playerId, cur = kbMyPositions(pid), p = el.dataset.pos, all = kbFaPositions(); let next; if (p === 'ALL') next = cur.length === all.length ? [] : all.slice(); else next = cur.includes(p) ? cur.filter(x => x !== p) : all.filter(x => cur.includes(x) || x === p); kbSetProfile(pid, { positions:next }); kbRender(); },
 	'fa-mode':      (el) => { kbSetProfile(kbState.me.playerId, { freeAgent:el.dataset.mode }); kbRender(); kbToast({ off:'Off the free-agent list', mine:'Teams can ask you on nights you already play', all:'Teams can ask you for any game' }[el.dataset.mode]); },
 	'pick-icon':    (el) => { const f = el.closest('form').querySelector('[name="icon"]'); f.value = el.dataset.icon; el.closest('.icon-grid').querySelectorAll('button').forEach(b => { const on = b === el; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); }); },
 	'save-profile': (el) => kbSaveProfile(el.closest('form')),
@@ -275,7 +275,7 @@ function kbPositionName(code) { const cfg = kbState.league ? KB_SPORTS[kbState.l
 function kbFaPositions() { const T = kbState.league ? (KB_SPORTS[kbState.league.sport] || {}).team || {} : {}; return T.faPositions || []; }
 function kbFaPositionName(code) { const T = kbState.league ? (KB_SPORTS[kbState.league.sport] || {}).team || {} : {}; return (T.faPositionNames || {})[code] || code; }
 function kbMyPositions(pid) { return (kbProfile(pid).positions || []); }
-function kbPositionsLabel(pid) { return kbMyPositions(pid).join(' · '); }
+function kbPositionsLabel(pid) { const m = kbMyPositions(pid); return m.length && m.length === kbFaPositions().length ? 'Anywhere' : m.join(' · '); }
 function kbInitials(name) { return String(name || '').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
 function kbSetProfile(pid, patch) { if (!pid) return; kbState.profiles = kbState.profiles || {}; kbState.profiles[pid] = { ...kbProfile(pid), ...patch }; kbSave(); }
 function kbSaveProfile(form) {
@@ -1444,7 +1444,7 @@ function kbRenderPlayer() {
 			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></p>
 			${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}${w.url ? ` <a href="${kbEscape(w.url)}" target="_blank" rel="noopener">play</a>` : ''}</p>` : ''}
 		</div>
-		<div class="pos-chips is-head" role="group" aria-label="Positions I can play — tap to check"><span class="eyebrow" style="margin:0">I play</span>${kbFaPositions().map(x => `<button type="button" class="chip-pick ${kbMyPositions(p.id).includes(x) ? 'is-on' : ''}" data-action="fa-pos" data-pos="${x}" aria-pressed="${kbMyPositions(p.id).includes(x)}" title="${kbEscape(kbFaPositionName(x))}">${x}</button>`).join('')}</div>
+		<div class="pos-chips is-head" role="group" aria-label="Positions I can play — tap to check"><span class="eyebrow" style="margin:0">I play</span><button type="button" class="chip-pick is-all ${kbMyPositions(p.id).length === kbFaPositions().length ? 'is-on' : ''}" data-action="fa-pos" data-pos="ALL" aria-pressed="${kbMyPositions(p.id).length === kbFaPositions().length}" title="Anywhere">All</button>${kbFaPositions().map(x => `<button type="button" class="chip-pick ${kbMyPositions(p.id).includes(x) ? 'is-on' : ''}" data-action="fa-pos" data-pos="${x}" aria-pressed="${kbMyPositions(p.id).includes(x)}" title="${kbEscape(kbFaPositionName(x))}">${x}</button>`).join('')}</div>
 	</header>
 	${teams.length > 1 ? `<nav class="tabs is-filter" aria-label="Which team"><button type="button" class="${kbState.pteam === 'all' ? 'is-on' : ''}" data-action="pteam" data-team="all" aria-pressed="${kbState.pteam === 'all'}">All</button>${teams.map(t => `<button type="button" class="${kbState.pteam === t.id ? 'is-on' : ''}" data-action="pteam" data-team="${t.id}" aria-pressed="${kbState.pteam === t.id}">${kbEscape(t.short)}</button>`).join('')}</nav>` : ''}
 
