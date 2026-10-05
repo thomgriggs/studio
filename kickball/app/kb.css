@@ -367,6 +367,11 @@ input, select { font:inherit; }
 .sched-who strong { color:var(--color_accent); margin-left:var(--space_xs); }
 .sched-row > .key, .sched-row > .seg, .sched-row > select { grid-area:act; }
 .sched-row > .key { min-height:44px; font-size:var(--font_size-sm); padding-inline:var(--space_md); }
+.sched-list.is-captain .sched-row { grid-template-columns:1fr auto; grid-template-areas:"when act" "who act" "lead lead"; }
+.sched-list.is-captain .sched-lead { grid-area:lead; }
+.sched-list.is-captain .sched-lead:empty { display:none; }
+.sched-list.is-captain .sched-lead .field { margin:var(--space_sm) 0 0; }
+.sched-list.is-captain .sched-lead .hint { margin-top:var(--space_sm); }
 .sched-list.is-admin .sched-row { grid-template-columns:1fr auto auto; grid-template-areas:"when ump x" "who ump x"; }
 .sched-list.is-admin select { grid-area:ump; min-height:44px; max-width:9rem; padding:0 var(--space_sm); border-radius:var(--radius_sm); background:var(--color_bg-raised); color:var(--color_text); border:1px solid var(--color_line-strong); font-size:var(--font_size-sm); }
 .sched-list.is-admin .roster-remove { grid-area:x; }
