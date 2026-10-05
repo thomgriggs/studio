@@ -310,7 +310,7 @@ function kbSaveProfile(form) {
 	kbRender(); kbToast('Profile saved');
 }
 /* the switcher (stands in for sign-in) lives in a dialog behind the me-bar pill */
-function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) return; kbRenderWhoami(); if (!d.open) d.showModal(); }
+function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) return; kbRenderWhoami(); if (!d.open) { const y = kbScrollY(); d.showModal(); if (typeof scrollTo === 'function') scrollTo(0, y); } }
 function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); }
 
 /* ---------- stats across every roster the person is on ------------------- */
@@ -1032,9 +1032,15 @@ function kbRemovePlayer(pid) { const team = kbTeam(kbState.teamId); team.roster 
 /* ========================================================================== */
 /* RENDER                                                                     */
 /* ========================================================================== */
+let kbLastView = null;
+function kbScrollY() { return typeof scrollY === 'number' ? scrollY : 0; }
 function kbRender() {
 	const v = kbState.view;
 	clearInterval(kbTicker); kbTicker = null;
+	/* a re-render of the same screen must not move the page or close what was open */
+	const sameView = kbLastView === v, y = sameView ? kbScrollY() : 0;
+	const open = sameView ? [...document.querySelectorAll('.view.is-current details[open]')].map(d => d.className) : [];
+	kbLastView = v;
 	kbRenderMeBar();
 	if (v === 'home') kbRenderHome();
 	if (v === 'ump') kbRenderUmp();
@@ -1045,6 +1051,7 @@ function kbRender() {
 	if (v === 'league') kbRenderLeague();
 	if (v === 'player') kbRenderPlayer();
 	kbApplyPerms();
+	if (sameView) { open.forEach(cls => { const d = [...document.querySelectorAll('.view.is-current details')].find(x => x.className === cls); if (d) d.open = true; }); if (typeof scrollTo === 'function') scrollTo(0, y); }
 }
 
 /* ---------- me bar + switcher ------------------------------------------- */
@@ -1648,6 +1655,6 @@ function kbOpenPlayerSheet(pid, schedId, teamId) {
 		${kbOutsStripHTML(st)}
 		${canAdd ? `<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="recruit" data-sched="${schedId}" data-team="${teamId}" data-scope="${teamId}" data-player="${pid}" data-from="${(p.teams[0] || {}).id || ''}">Add ${kbEscape(kbFirst(kbDisplayName(p)))} for this game</button></div>` : ''}`;
 	kbApplyPerms();
-	if (!d.open) d.showModal();
+	if (!d.open) { const y = kbScrollY(); d.showModal(); if (typeof scrollTo === 'function') scrollTo(0, y); }
 }
 function kbClosePlayerSheet() { const d = document.getElementById('player-sheet'); if (d && d.open) d.close(); }
