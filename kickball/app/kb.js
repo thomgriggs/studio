@@ -277,8 +277,12 @@ function kbApplyPerms() {
 function kbSetMe(patch) {
 	kbState.me = { ...kbState.me, ...patch };
 	kbNormalizeMe(patch);
-	kbState.prepId = null; kbSave(); kbRender();
+	kbState.prepId = null;
+	/* a new identity lands on its own home — a captain shouldn't be left staring at a player's page */
+	kbSave();
+	if ('role' in patch || 'teamId' in patch || 'playerId' in patch || 'umpId' in patch) kbGo(kbHomeFor(kbMeRole())); else kbRender();
 }
+function kbHomeFor(role) { return role === 'player' ? 'player' : 'home'; }
 /* Make sure the role has a sensible team / player / ump behind it. */
 function kbNormalizeMe(patch = {}) {
 	const me = kbState.me, L = kbState.league;
@@ -323,7 +327,7 @@ function kbSaveProfile(form) {
 }
 /* the switcher (stands in for sign-in) lives in a dialog behind the me-bar pill */
 function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) return; kbRenderWhoami(); if (!d.open) { const y = kbScrollY(); d.showModal(); if (typeof scrollTo === 'function') scrollTo(0, y); } }
-function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); }
+function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); if (document.body.dataset.view !== kbState.view) kbGo(kbState.view); }
 
 /* ---------- stats across every roster the person is on ------------------- */
 function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, hr:0, outsBy:{} }; }
