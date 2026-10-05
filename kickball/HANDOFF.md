@@ -43,9 +43,9 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | cornhole | `bag`(+`data-side`, `data-what`=in\|on, `data-delta`) · `score-round` |
 | captain | `captain-tab`(+`data-tab`=here\|lineup\|positions) · `captain-side` · `here`(+`data-player`) · `move`(+`data-index`, `data-delta`) · `balance` · `assign` (select, +`data-position`) |
 | teams | `new-team` (submit) · `add-player` (submit) · `gender`(+`data-player`, `data-gender`) · `remove-player` |
-| roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` (selects) |
+| roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` · `league-pick` (selects) |
 | schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
-| player | `player` · `pteam`(+`data-team`=all\|teamId) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
+| player | `player` · `pteam`(+`data-team`=all\|teamId) · `pleague`(+`data-league`=all\|leagueId) · `pseason`(+`data-season`) · `pcompare`(+`data-season`) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
 | league | `league` · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
 
@@ -55,14 +55,14 @@ Gated actions are listed in `KB_ACTION_CAP` (kb.js). A control may carry `data-s
 
 ## Storage (`localStorage` `kickball-v3`)
 ```
-{ teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */, league:League, ui:{ …, me } }
-League { id, name, sport, season, seedVersion, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
+{ teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */, leagues:[League], leagueId /* active */, profiles, ui:{ …, me, pteam, pseason, pcompare, pleague } }
+League { id, org, name, night, sport, seasons:[{ id, name }], season, seedVersion, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
          schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
                      availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
 Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }
 Profile (profiles[personId]) { icon, nickname, positions:[faPosition], walkup:{ title, artist, url }, freeAgent:'off'|'mine'|'all' }
-Team  { id, name, short, sport, captain?:playerId, roster:[{ id, name, gender:'female'|'male', freeAgent?:true, guest?:true, guestFrom?:teamId, guestFor?:schedId }] }
-Game  { id, sport, mode, status:'live'|'final', startedAt, schedId?,
+Team  { id, name, short, sport, leagueId, captain?:playerId, roster:[{ id, name, gender:'female'|'male', freeAgent?:true, guest?:true, guestFrom?:teamId, guestFor?:schedId }] }
+Game  { id, sport, mode, status:'live'|'final', startedAt, schedId?, leagueId, season,
         teams:{ away:Side, home:Side }, events:[Event] }
 Side  { name, teamId|null, attendance:{ [playerId]:bool }, lineup:[playerId], assignments:{ [position]:playerId } }
 Event { t, by:'ump', kind, side?, actionId?, player?, value?, hit?, pa?:false,

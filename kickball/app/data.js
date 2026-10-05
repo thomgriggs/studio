@@ -98,7 +98,7 @@ window.KB_SPORTS = {
 /* roster id; a roster entry may carry `freeAgent:true` (will fill in for a short  */
 /* team) or `guest:true, guestFrom:<teamId>` (recruited for one game).            */
 window.KB_SEED_TEAMS = [
-	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', captain:'jason-morton', roster:[
+	{ id:'lbc', name:'Liquid Breakfast Club', short:'LBC', sport:'kickball', leagueId:'tbcs', captain:'jason-morton', roster:[
 		{ id:'cristy-ceron', name:'Cristy Ceron', gender:'female' },
 		{ id:'cheryl-donish', name:'Cheryl Donish', gender:'female' },
 		{ id:'erin-forbes', name:'Erin Forbes', gender:'female' },
@@ -120,7 +120,7 @@ window.KB_SEED_TEAMS = [
 		{ id:'donald-sienkiewicz', name:'Donald Sienkiewicz', gender:'male' }
 	] },
 	/* two more teams so every role has something to look at — names are made up */
-	{ id:'pitch-please', name:'Pitch Please', short:'PP', sport:'kickball', captain:'maya-ortiz', roster:[
+	{ id:'pitch-please', name:'Pitch Please', short:'PP', sport:'kickball', leagueId:'tbcs', captain:'maya-ortiz', roster:[
 		{ id:'maya-ortiz', name:'Maya Ortiz', gender:'female' },
 		{ id:'jess-tran', name:'Jess Tran', gender:'female' },
 		{ id:'kayla-brooks', name:'Kayla Brooks', gender:'female' },
@@ -133,8 +133,8 @@ window.KB_SEED_TEAMS = [
 		{ id:'owen-frost', name:'Owen Frost', gender:'male' },
 		{ id:'raj-singh', name:'Raj Singh', gender:'male' }
 	] },
-	/* a Sunday team — Thom is on it too (same id), so the Player view has two rosters to filter */
-	{ id:'sliders', name:'Sunday Sliders', short:'SUN', sport:'kickball', captain:'dana-reyes', roster:[
+	/* Sunday night — Thom is on the Sliders too (same id), so one person spans two leagues */
+	{ id:'sliders', name:'Sunday Sliders', short:'SLD', sport:'kickball', leagueId:'tbcs-sun', captain:'dana-reyes', roster:[
 		{ id:'dana-reyes', name:'Dana Reyes', gender:'female' },
 		{ id:'thom-griggs', name:'Thom Griggs', gender:'male' },
 		{ id:'ivy-chen', name:'Ivy Chen', gender:'female' },
@@ -144,7 +144,17 @@ window.KB_SEED_TEAMS = [
 		{ id:'gwen-hale', name:'Gwen Hale', gender:'female' },
 		{ id:'omar-baig', name:'Omar Baig', gender:'male' }
 	] },
-	{ id:'ball-busters', name:'Ball Busters', short:'BB', sport:'kickball', captain:'sam-rivera', roster:[
+	{ id:'bay-bombers', name:'Bay Bombers', short:'BAY', sport:'kickball', leagueId:'tbcs-sun', captain:'kim-park', roster:[
+		{ id:'kim-park', name:'Kim Park', gender:'female' },
+		{ id:'ana-lopez', name:'Ana Lopez', gender:'female' },
+		{ id:'zoe-grant', name:'Zoe Grant', gender:'female' },
+		{ id:'sofia-reyes', name:'Sofia Reyes', gender:'female' },
+		{ id:'max-ortega', name:'Max Ortega', gender:'male' },
+		{ id:'theo-banks', name:'Theo Banks', gender:'male' },
+		{ id:'ravi-mehta', name:'Ravi Mehta', gender:'male' },
+		{ id:'cole-dunn', name:'Cole Dunn', gender:'male' }
+	] },
+	{ id:'ball-busters', name:'Ball Busters', short:'BB', sport:'kickball', leagueId:'tbcs', captain:'sam-rivera', roster:[
 		{ id:'sam-rivera', name:'Sam Rivera', gender:'female' },
 		{ id:'lena-wu', name:'Lena Wu', gender:'female' },
 		{ id:'tori-adams', name:'Tori Adams', gender:'female' },
@@ -165,27 +175,38 @@ window.KB_SEED_PROFILES = {
 	'jake-fields': { icon:'🐊', positions:['C', '1B'], freeAgent:'mine' }
 };
 
-/* Seed league — the structure the five roles live in. Copied into storage on   */
-/* first run (and merged in when an older device has none).                     */
+/* Seed leagues — in TBCS terms a "league" is one sport on one night at one       */
+/* location, under the organisation. A person can be on a team in several.      */
+/* Copied into storage on first run (and merged in when an older device has none). */
 /*   teams      approval status per team id: 'approved' | 'pending' | 'declined' */
 /*   umpires    who the league can assign                                        */
 /*   schedule   games: who, when, which ump; `prep` holds a captain's pre-game   */
 /*              lineup; `availability` is each player's in/out; `lead` is the    */
 /*              captain's stand-in per team; `gameId`/`result` once it's played  */
 /*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
-window.KB_SEED_LEAGUE = {
-	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', seedVersion:7,
+window.KB_SEED_LEAGUES = [{
+	id:'tbcs', org:'Tampa Bay Club Sport', name:'Tuesday Kickball', night:'Tuesday', sport:'kickball', seedVersion:8,
 	/* seasons: games and schedule entries carry a season id; `season` is the current one */
 	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
 	season:'fall-2026', /* bump to push new seed data onto phones that already have a league */
 	umpires:[{ id:'ump-carl', name:'Carl' }, { id:'ump-bob', name:'Bob' }, { id:'ump-manny', name:'Manny' }],
-	teams:{ 'lbc':'approved', 'pitch-please':'approved', 'sliders':'approved', 'ball-busters':'pending' },
+	teams:{ 'lbc':'approved', 'pitch-please':'approved', 'ball-busters':'pending' },
 	schedule:[
-		{ id:'s1', date:'2026-10-08', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-carl', mode:'season', status:'scheduled', availability:{ 'thom-griggs':'in', 'selene-griggs':'in', 'sean-fetter':'out', 'maya-ortiz':'in' }, lead:{ lbc:'katie-morton' }, prep:null },
-		{ id:'s2', date:'2026-10-15', time:'20:00', field:'Field 1', away:'lbc', home:'pitch-please', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
-		{ id:'s3', date:'2026-10-22', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-manny', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
-		{ id:'s4', date:'2026-10-11', time:'16:00', field:'Field 3', away:'sliders', home:'pitch-please', ump:'ump-bob', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
-		{ id:'s5', date:'2026-10-18', time:'16:00', field:'Field 3', away:'pitch-please', home:'sliders', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
+		{ id:'s1', date:'2026-10-06', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-carl', mode:'season', status:'scheduled', availability:{ 'thom-griggs':'in', 'selene-griggs':'in', 'sean-fetter':'out', 'maya-ortiz':'in' }, lead:{ lbc:'katie-morton' }, prep:null },
+		{ id:'s2', date:'2026-10-13', time:'20:00', field:'Field 1', away:'lbc', home:'pitch-please', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
+		{ id:'s3', date:'2026-10-20', time:'19:00', field:'Field 2', away:'pitch-please', home:'lbc', ump:'ump-manny', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
 	],
 	overrides:{}
-};
+}, {
+	id:'tbcs-sun', org:'Tampa Bay Club Sport', name:'Sunday Kickball', night:'Sunday', sport:'kickball', seedVersion:8,
+	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
+	season:'fall-2026',
+	umpires:[{ id:'ump-bob', name:'Bob' }],
+	teams:{ 'sliders':'approved', 'bay-bombers':'approved' },
+	schedule:[
+		{ id:'s4', date:'2026-10-11', time:'16:00', field:'Field 3', away:'sliders', home:'bay-bombers', ump:'ump-bob', mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null },
+		{ id:'s5', date:'2026-10-18', time:'16:00', field:'Field 3', away:'bay-bombers', home:'sliders', ump:null, mode:'season', status:'scheduled', availability:{}, lead:{}, prep:null }
+	],
+	overrides:{}
+}];
+window.KB_SEED_LEAGUE = window.KB_SEED_LEAGUES[0]; /* the Tuesday league — kept for the tests and older code */

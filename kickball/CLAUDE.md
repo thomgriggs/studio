@@ -19,6 +19,10 @@ Static HTML/CSS/JS, no build step, phone-first. `index.html` at the root is the 
 - `app/kb.css` — tokens, base, shared (`.key`, `.toast`, `.field`), then one banner per block in DOM order: home, ump (score-strip, fix-row, state, atbat, bases, linescore, pad, log, round), page, tabs/seg, roster, lineup, positions, teams.
 - `tests/engine.test.mjs` — loads `app/data.js` + `app/kb.js` into a `vm` sandbox with a stub DOM and drives `kbDerive` with hand-built logs.
 
+## Leagues: one sport, one night
+- In TBCS terms a league is one sport on one night (`kbState.leagues[]`, each with `org`, `name`, `night`, `sport`, seasons, umpires, approvals, schedule, overrides). `kbState.league` is a live view of the **active** league (`kbState.leagueId`) — the one an ump, captain or admin is acting in; the me-bar's league select switches it, and acting for a team moves you to that team's league. Teams carry `leagueId`; games carry `leagueId` + `season`.
+- A person's own page spans every league they're on: merged schedule tagged by night, league scope on stats (`kbState.pleague`: all / one night), free agency per night. Stats helpers take `(season, leagueId)`; `'all'` means every league (same sport in the demo).
+
 ## Identity: one person logs in
 - A **person** is a roster id; the same id on two rosters is one person on two teams (`kbPersonTeams`, `kbPerson`). `kbState.me.playerId` is the person; `me.teamId` is only the captain/lead's working team. Profiles (icon, nickname, walk-up song, free-agent mode) are `kbState.profiles[personId]`, kept across rosters.
 - The switcher is a `<dialog>` behind the me-bar pill — never inline on a role's home. The landing hands the app `?as=<role>&who=<id>`.

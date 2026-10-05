@@ -322,7 +322,7 @@ test('the Runners row knows who scored on the force so the ump can reverse it', 
 
 /* ---------- roles: who may do what (the switcher stands in for sign-in) ----- */
 test('roles: capabilities are scoped to the role, and team roles to their own team', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.prepId = null;`);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.prepId = null;`);
 	run(`kbState.me = { role:'ump', umpId:'ump-carl' }`);
 	assert.equal(run('kbCan("score")'), true);
 	assert.equal(run('kbCan("lineup")'), true, 'an ump fixes lineups during a game (injury, field agreement)');
@@ -343,7 +343,7 @@ test('roles: capabilities are scoped to the role, and team roles to their own te
 });
 
 test('roles: a lead may only set the lineup for the game they lead', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null;
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null;
 		kbState.me = { role:'lead', teamId:'lbc', playerId:'thom-griggs' }; kbState.prepId = 's1'; kbEnsurePrep(kbSched('s1')); kbState.side = 'home';`);
 	assert.equal(run('kbCan("lineup", "lbc")'), false, 'Katie is the lead, not Thom');
 	run(`kbSched('s1').lead = { lbc:'thom-griggs' }`);
@@ -353,7 +353,7 @@ test('roles: a lead may only set the lineup for the game they lead', () => {
 });
 
 test('schedule: availability shapes the prep, the ump starts from the prep, the result lands on the schedule', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
 		kbState.me = { role:'player', teamId:'lbc', playerId:'thom-griggs' }; kbSetAvail('s1', 'thom-griggs', 'out');`);
 	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' }; kbEnsurePrep(kbSched('s1'));`);
 	const prep = run(`kbSched('s1').prep.teams.home`);
@@ -372,7 +372,7 @@ test('schedule: availability shapes the prep, the ump starts from the prep, the 
 });
 
 test('recruit: a free agent joins as a guest for one game and leaves the roster when it is saved', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbState.games = []; kbState.prepId = null;
 		kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' };`);
 	assert.deepEqual(run(`kbFreeAgents(kbSched('s1'), 'lbc').map(p => p.id)`), ['nina-patel', 'devin-hart'], 'Ball Busters is pending, so Jake is not offered');
 	run(`kbRecruit('s1', 'lbc', 'devin-hart', 'pitch-please')`);
@@ -383,7 +383,7 @@ test('recruit: a free agent joins as a guest for one game and leaves the roster 
 });
 
 test('league: a rule override changes the config every game uses; back to the rulebook value removes it', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.me = { role:'league' };`);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.me = { role:'league' };`);
 	run(`kbSetRule('structure.outsPerHalf', '3', 'number')`);
 	assert.equal(run(`kbSport({ sport:'kickball' }).structure.outsPerHalf`), 3);
 	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); tap('out'); tap('out'); tap('out');`);
@@ -402,10 +402,11 @@ test('man bunt with a woman up: warned, not refused — the ump’s call stands'
 });
 
 test('people: a player on two rosters is one person; free-agent modes respect "nights I already play"', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = {}; kbState.games = []; kbState.game = null;`);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = {}; kbState.games = []; kbState.game = null;`);
 	assert.deepEqual(run(`kbPersonTeams('thom-griggs').map(t => t.id)`), ['lbc', 'sliders']);
+	assert.deepEqual(run(`kbPersonLeagues('thom-griggs').map(l => l.id)`), ['tbcs', 'tbcs-sun'], 'Tuesday and Sunday');
 	run(`kbSetProfile('devin-hart', { freeAgent:'mine' })`);
-	assert.equal(run(`kbPlaysOn('devin-hart', '2026-10-08')`), true, 'Pitch Please plays Oct 8');
+	assert.equal(run(`kbPlaysOn('devin-hart', '2026-10-06')`), true, 'Pitch Please plays Tuesday Oct 6');
 	run(`kbState.league.schedule.push({ id:'sx', date:'2026-11-01', time:'19:00', away:'ball-busters', home:'lbc', status:'scheduled', availability:{}, lead:{}, prep:null }); kbState.league.teams['ball-busters'] = 'approved';`);
 	assert.equal(run(`kbPlaysOn('devin-hart', '2026-11-01')`), false);
 	assert.ok(run(`kbFreeAgents(kbSched('s1'), 'lbc').map(p => p.id)`).includes('devin-hart'), 'offered on a night he plays');
@@ -417,13 +418,13 @@ test('people: a player on two rosters is one person; free-agent modes respect "n
 });
 
 test('demo games: seeded once, deterministic, finished, and they feed one person’s stats across both rosters', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
-	assert.equal(run('kbState.games.length'), 6, 'three last season, three this season');
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	assert.equal(run('kbState.games.length'), 10, 'six Tuesday + four Sunday');
 	assert.ok(run('kbState.games.every(g => g.status === "final" && g.demo && g.season)'));
 	const first = run('kbDerive(kbState.games[0]).score');
-	run('kbState.league.demoGames = false; kbState.games = []; kbSeedDemoGames();');
+	run('kbState.leagues.forEach(l => l.demoGames = 0); kbState.games = []; kbSeedDemoGames();');
 	assert.deepEqual(run('kbDerive(kbState.games[0]).score'), first, 'same seed, same game');
-	run('kbSeedDemoGames();'); assert.equal(run('kbState.games.length'), 6, 'seeded once');
+	run('kbSeedDemoGames();'); assert.equal(run('kbState.games.length'), 10, 'seeded once');
 	const st = run(`kbPlayerStats('thom-griggs')`);
 	assert.ok(st.g >= 1, 'Thom is on LBC, so he shows up in the demo games: ' + st.g);
 	const axes = run(`kbRadarAxes('thom-griggs')`);
@@ -463,10 +464,11 @@ test('baseball names: AVG is H/AB, every PA is an AB (one pitch, no walks), HR c
 });
 
 test('seasons: stats scope to a season or all; overlays scale against the primary scope; new games carry the current season', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
 	assert.deepEqual(run(`KB_SPORTS.kickball.team.positions`), ['C/SS', '1B', '2B', '3B', 'SS', 'LF', 'CFL/SS', 'C', 'CFR', 'RF']);
 	assert.equal(run(`KB_SPORTS.kickball.team.infield.length`), 6, 'six infield spots including the catcher');
-	assert.equal(run(`kbGamesIn('spring-2026').length`), 3); assert.equal(run(`kbGamesIn('fall-2026').length`), 3); assert.equal(run(`kbGamesIn('all').length`), 6);
+	assert.equal(run(`kbGamesIn('spring-2026').length`), 3); assert.equal(run(`kbGamesIn('fall-2026').length`), 3); assert.equal(run(`kbGamesIn('all').length`), 6, 'the active (Tuesday) league');
+	assert.equal(run(`kbGamesIn('all', 'all').length`), 10, 'every league'); assert.equal(run(`kbGamesIn('all', 'tbcs-sun').length`), 4);
 	const all = run(`kbPlayerStats('cristy-ceron', 'all')`), fall = run(`kbPlayerStats('cristy-ceron', 'fall-2026')`), spring = run(`kbPlayerStats('cristy-ceron', 'spring-2026')`);
 	assert.equal(all.pa, fall.pa + spring.pa);
 	const ov = run(`kbRadarOverlay(kbRadarAxes('cristy-ceron', 'all'), 'cristy-ceron', 'spring-2026')`);
@@ -478,7 +480,7 @@ test('seasons: stats scope to a season or all; overlays scale against the primar
 });
 
 test('free agency positions: a multi-pick of OF SS 1B 2B 3B C; an old single code migrates to its group', () => {
-	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = { 'thom-griggs':{ position:'CFR' }, 'nina-patel':{ position:'C/SS' } }; kbState.games = []; kbSeedLeague();`);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = { 'thom-griggs':{ position:'CFR' }, 'nina-patel':{ position:'C/SS' } }; kbState.games = []; kbSeedLeague();`);
 	assert.deepEqual(run(`kbFaPositions()`), ['OF', 'SS', '1B', '2B', '3B', 'C']);
 	assert.deepEqual(run(`kbMyPositions('thom-griggs')`), ['OF'], 'CFR is outfield');
 	assert.deepEqual(run(`kbMyPositions('nina-patel')`), ['C'], 'C/SS counts as catcher');
@@ -486,4 +488,24 @@ test('free agency positions: a multi-pick of OF SS 1B 2B 3B C; an old single cod
 	assert.equal(run(`kbPositionsLabel('jake-fields')`), 'C · 1B');
 	run(`kbSetProfile('jake-fields', { positions:kbFaPositions().slice() })`);
 	assert.equal(run(`kbPositionsLabel('jake-fields')`), 'Anywhere', 'all six reads as Anywhere');
+});
+
+test('leagues: a person spans nights; stats scope by league or all; a Sunday team’s free agents come from Sunday; the ump acts in one league', () => {
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	const tue = run(`kbPlayerStats('thom-griggs', 'all', 'tbcs')`), sun = run(`kbPlayerStats('thom-griggs', 'all', 'tbcs-sun')`), all = run(`kbPlayerStats('thom-griggs', 'all', 'all')`);
+	assert.equal(all.pa, tue.pa + sun.pa, 'all kickball = Tuesday + Sunday');
+	assert.ok(sun.g > 0, 'he played Sundays too');
+	assert.equal(run(`kbLeagueOfSched(kbSched('s4')).id`), 'tbcs-sun');
+	assert.ok(run(`kbFreeAgents(kbSched('s4'), 'sliders').every(p => kbLeagueOfTeam(p.from.id).id === 'tbcs-sun')`), 'Sunday recruits only from Sunday teams');
+	assert.equal(run(`kbStandings(kbLeague('tbcs-sun')).length`), 2);
+	run(`kbState.me = { role:'ump', umpId:'ump-bob' }; kbNormalizeMe({ umpId:'ump-bob' });`);
+	assert.equal(run('kbState.leagueId'), 'tbcs', 'Bob umps both nights — stays where he is');
+	run(`kbSetLeague('tbcs-sun');`);
+	assert.equal(run('kbState.me.umpId'), 'ump-bob', 'switching nights keeps an ump who works both');
+	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbNormalizeMe();`);
+	assert.equal(run('kbState.me.umpId'), 'ump-bob', 'Carl does not ump Sundays — falls back to a Sunday ump');
+	run(`kbState.me = { role:'ump', umpId:'ump-bob' }; kbStartScheduled('s4');`);
+	assert.equal(run('kbState.game.leagueId'), 'tbcs-sun');
+	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' }; kbNormalizeMe();`);
+	assert.equal(run('kbState.leagueId'), 'tbcs', 'captaining LBC puts you back on Tuesday');
 });

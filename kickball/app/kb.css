@@ -334,6 +334,9 @@ input, select { font:inherit; }
 .me-dot { width:8px; height:8px; border-radius:50%; background:var(--color_text-dim); }
 .me-dot.is-league { background:var(--color_warn); } .me-dot.is-ump { background:var(--color_accent); } .me-dot.is-captain { background:var(--color_info); } .me-dot.is-lead { background:#c98bff; } .me-dot.is-player { background:var(--color_text-muted); }
 .me-league { color:var(--color_text-dim); font-weight:700; text-transform:uppercase; letter-spacing:.08em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.me-league.is-pick select { min-height:28px; max-width:14rem; padding:0 var(--space_sm); border-radius:var(--radius_pill); background:var(--color_bg-raised); color:var(--color_text-muted); border:1px solid var(--color_line-strong); font-size:var(--font_size-xs); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.tabs.is-filter button small { color:var(--color_text-dim); font-size:10px; margin-left:2px; }
+.sched-when b { color:var(--color_info); }
 
 /* ========================================================================== */
 /* WHOAMI : the role switcher on Home                                         */
