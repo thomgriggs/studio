@@ -74,7 +74,9 @@ window.TC_DATA = (function () {
 	];
 
 	/* ---------------------------------------------------------------------- */
-	/* DESIGNERS — seed profiles (placeholders; ~10 wanted before launch)      */
+	/* DESIGNERS — seed profiles (placeholders; ~10 wanted before launch).     */
+	/* Design thumbs are public-domain artwork standing in for the designers'   */
+	/* work (credits in `art`; sources in design-iterations/inspiration/artwork). */
 	/* ---------------------------------------------------------------------- */
 	const designers = [
 		{
@@ -83,9 +85,9 @@ window.TC_DATA = (function () {
 			styles:['lettering','vintage','screen print'],
 			story:'Placeholder story. This is where the designer tells, in their own words, how the two commandments show up in their work and their life. Two or three short paragraphs, first person.',
 			designs:[
-				{ id:'d1-love-god', title:'Love God', thumb:'assets/design-placeholder.svg' },
-				{ id:'d1-neighbor', title:'Neighbor', thumb:'assets/design-placeholder.svg' },
-				{ id:'d1-hang',     title:'All the Law', thumb:'assets/design-placeholder.svg' }
+				{ id:'d1-love-god', title:'Love God', thumb:'assets/art/callot-sermon.jpg', art:'Callot, The Sermon on the Mount (1635)' },
+				{ id:'d1-neighbor', title:'Neighbor', thumb:'assets/art/bloch-sermon.jpg', art:'Bloch, Sermon on the Mount (1877)' },
+				{ id:'d1-hang',     title:'All the Law', thumb:'assets/art/currier-ives-sermon.jpg', art:'Currier & Ives, Christ’s Sermon on the Mount (1866)' }
 			]
 		},
 		{
@@ -94,8 +96,8 @@ window.TC_DATA = (function () {
 			styles:['typographic','minimal','monochrome'],
 			story:'Placeholder story for the second seed designer.',
 			designs:[
-				{ id:'d2-two',   title:'Two', thumb:'assets/design-placeholder.svg' },
-				{ id:'d2-keep',  title:'Keep my commandments', thumb:'assets/design-placeholder.svg' }
+				{ id:'d2-two',   title:'Two', thumb:'assets/art/rembrandt-preaching.jpg', art:'Rembrandt, Christ Preaching (c. 1657)' },
+				{ id:'d2-keep',  title:'Keep my commandments', thumb:'assets/art/wechtlin-preaching.jpg', art:'Wechtlin, Christ Preaching (1508)' }
 			]
 		},
 		{
@@ -104,9 +106,9 @@ window.TC_DATA = (function () {
 			styles:['illustration','iconography','color'],
 			story:'Placeholder story for the third seed designer.',
 			designs:[
-				{ id:'d3-lion',  title:'Lion', thumb:'assets/design-placeholder.svg' },
-				{ id:'d3-eagle', title:'Eagle', thumb:'assets/design-placeholder.svg' },
-				{ id:'d3-ox',    title:'Ox', thumb:'assets/design-placeholder.svg' }
+				{ id:'d3-lion',  title:'Lion', thumb:'assets/art/durer-doctors.jpg', art:'Dürer, Christ Among the Doctors (c. 1503)' },
+				{ id:'d3-eagle', title:'Eagle', thumb:'assets/art/rembrandt-samaritan.jpg', art:'Rembrandt, The Good Samaritan (1633)' },
+				{ id:'d3-ox',    title:'Ox', thumb:'assets/art/tissot-samaritan.jpg', art:'Tissot, The Good Samaritan (1886–94)' }
 			]
 		}
 	];

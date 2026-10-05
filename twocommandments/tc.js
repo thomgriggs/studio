@@ -416,6 +416,7 @@ function tcInitDesigners() {
 				<li class="design-card">
 					<img src="${x.thumb}" alt="${tcEscape(x.title)} by ${tcEscape(d.name)}" width="160" height="160">
 					<span class="choice-title">${tcEscape(x.title)}</span>
+					${x.art ? `<span class="choice-meta art-credit">Stand-in art: ${tcEscape(x.art)}</span>` : ''}
 					<a class="btn" href="shop.html?design=${x.id}">Make it yours</a>
 				</li>`).join('');
 			else el.textContent = d[key] ?? '';
@@ -448,7 +449,7 @@ function tcInitShop() {
 		<li><button type="button" class="choice${on ? ' is-active' : ''}" data-action="pick-design" data-id="${x.id}" aria-pressed="${on}">
 			<img src="${x.thumb}" alt="" width="160" height="160">
 			<span class="choice-title">${tcEscape(x.title)}</span>
-			<span class="choice-meta">by ${tcEscape(x.designer.name)}</span>
+			<span class="choice-meta">by ${tcEscape(x.designer.name)}</span>${x.art ? `<span class="choice-meta art-credit">Stand-in art: ${tcEscape(x.art)}</span>` : ''}
 		</button></li>`; }).join('');
 	const pHost = document.querySelector('[data-choices="product"]');
 	if (pHost) pHost.innerHTML = TC_DATA.products.map(p => `
