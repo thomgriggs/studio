@@ -277,8 +277,11 @@ function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) r
 function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); }
 
 /* ---------- stats across every roster the person is on ------------------- */
-function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, outsBy:{} }; }
-const KB_STAT_KEYS = ['pa', 'h', 'r', 'rbi', 'out', 'reached', 'tb', 'xb', 'xbo'];
+function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, hr:0, outsBy:{} }; }
+const KB_STAT_KEYS = ['pa', 'h', 'r', 'rbi', 'out', 'reached', 'tb', 'xb', 'xbo', 'hr'];
+/* In this league every plate appearance is an at-bat: one pitch, no walks (auto-outs are pa:false and never counted). */
+function kbAB(t) { return t.pa; }
+function kbAvg(t) { return kbAB(t) ? (t.h / kbAB(t)).toFixed(3).replace(/^0/, '') : '.000'; }
 function kbLeagueStats() {
 	const totals = {}; let teamGames = {};
 	for (const g of kbState.games) {
@@ -294,14 +297,14 @@ function kbPlayerStats(pid) { return kbLeagueStats().totals[pid] || kbEmptyTotal
 /* five axes, each 0..1 against the league's best; the league average rides along for the overlay */
 function kbRadarAxes(pid) {
 	const { totals } = kbLeagueStats(); const ids = Object.keys(totals).filter(id => totals[id].pa >= 4);
-	const cheap = t => ['foul', 'caught', 'missed'].reduce((n, kind) => n + ((t.outsBy || {})[kind] || 0), 0);
+	/* baseball names, per game where it's a counting stat so a 2-game player can sit beside a 6-game one */
 	const axes = [
-		{ key:'obp',   label:'On base',     f:t => t.pa ? t.reached / t.pa : 0,             fmt:v => v.toFixed(3).replace(/^0/, '') },
-		{ key:'power', label:'Power',       f:t => t.pa ? t.tb / t.pa : 0,                  fmt:v => v.toFixed(2) + ' TB/PA' },
-		{ key:'clean', label:'Clean',       f:t => t.pa ? 1 - cheap(t) / t.pa : 0,          fmt:v => Math.round(v * 100) + '%' },
-		{ key:'runs',  label:'Runs',        f:t => t.g ? t.r / t.g : 0,                     fmt:v => v.toFixed(1) + '/g' },
-		{ key:'rbi',   label:'RBI',         f:t => t.g ? t.rbi / t.g : 0,                   fmt:v => v.toFixed(1) + '/g' },
-		{ key:'bases', label:'Baserunning', f:t => t.reached ? t.xb / t.reached : 0,        fmt:v => v.toFixed(2) + ' XB/OB' }
+		{ key:'avg', label:'AVG', f:t => kbAB(t) ? t.h / kbAB(t) : 0,        fmt:v => v.toFixed(3).replace(/^0/, '') },
+		{ key:'hr',  label:'HR',  f:t => t.g ? t.hr / t.g : 0,               fmt:v => v.toFixed(1) + '/g' },
+		{ key:'rbi', label:'RBI', f:t => t.g ? t.rbi / t.g : 0,              fmt:v => v.toFixed(1) + '/g' },
+		{ key:'r',   label:'R',   f:t => t.g ? t.r / t.g : 0,                fmt:v => v.toFixed(1) + '/g' },
+		{ key:'eb',  label:'EB',  f:t => t.g ? t.xb / t.g : 0,               fmt:v => v.toFixed(1) + '/g' },
+		{ key:'obp', label:'OBP', f:t => t.pa ? t.reached / t.pa : 0,        fmt:v => v.toFixed(3).replace(/^0/, '') }
 	];
 	const mine = totals[pid] || kbEmptyTotals();
 	return axes.map(a => { const vals = ids.map(id => a.f(totals[id])); const max = Math.max(a.f(mine), ...vals, 0.0001); const avg = vals.length ? vals.reduce((x, y) => x + y, 0) / vals.length : 0; const me = a.f(mine); const rank = 1 + vals.filter(v => v > me).length; return { ...a, me, avg, max, norm:me / max, avgNorm:avg / max, rank, of:Math.max(ids.length, ids.includes(pid) ? 0 : 1 + ids.length), text:a.fmt(me) }; });
@@ -312,8 +315,8 @@ function kbInsight(axes, st) {
 	const rel = axes.filter(a => a.of > 1).map(a => ({ ...a, d:a.norm - a.avgNorm }));
 	if (!rel.length) return '';
 	const best = rel.slice().sort((x, y) => y.d - x.d)[0], worst = rel.slice().sort((x, y) => x.d - y.d)[0];
-	const praise = { obp:'You get on base more than most of the league', power:'You hit for more power than most of the league', clean:'You put the ball in play cleanly more than most', runs:'You come around to score more than most', rbi:'You drive in runs more than most', bases:'You take the extra base more than anyone around you' };
-	const work = { obp:'getting on base is where the room is', power:'it’s mostly singles — swing for the gap', clean:'fouls and pop-ups are eating your at-bats', runs:'you’re on base but not coming around', rbi:'runners on when you’re up aren’t coming home', bases:'you’re holding when the league is running' };
+	const praise = { avg:'You hit for a higher average than most of the league', hr:'You hit more home runs than most of the league', rbi:'You drive in runs more than most', r:'You come around to score more than most', eb:'You take more extra bases than anyone around you', obp:'You get on base more than most of the league' };
+	const work = { avg:'the average is where the room is', hr:'the long ball isn’t there yet', rbi:'runners on when you’re up aren’t coming home', r:'you’re on base but not coming around', eb:'you’re holding when the league is running', obp:'getting on base is where the room is' };
 	if (best.d <= 0.02) return `Right around the league average across the board — ${work[worst.key]}.`;
 	return `${praise[best.key]}${worst.d < -0.05 ? `; ${work[worst.key]}` : ''}.`;
 }
@@ -631,7 +634,7 @@ function kbDeriveInnings(g, cfg) {
 		final:false, finalReason:'', notice:'', log:[] };
 	const side = () => d.half === 'top' ? 'away' : 'home';
 	/* tb = total bases on hits · xb = extra bases taken as a runner beyond the force · xbo = thrown out trying · outsBy = outs by kind (foul, caught, missed…) */
-	const stat = (s, id) => { if (!id || id === true) return null; return d.stats[s][id] || (d.stats[s][id] = { pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, outsBy:{} }); };
+	const stat = (s, id) => { if (!id || id === true) return null; return d.stats[s][id] || (d.stats[s][id] = { pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, hr:0, outsBy:{} }); };
 	const lead = () => d.score[side()] - d.score[kbOther(side())];
 	const capApplies = () => { if (!R.runCap) return false; if (!K) return true; if (d.minute < K.capUntil) return true; return lead() >= (R.runCap.lateLeadException ?? Infinity); };
 	const run = (runnerId, kickerId, n = 1) => {
@@ -657,7 +660,7 @@ function kbDeriveInnings(g, cfg) {
 	/* A home run scores everyone.                                              */
 	const reach = (e, n) => {
 		const b = d.bases, who = e.player || true;
-		if (e.hit) { const s = stat(side(), e.player); if (s) s.tb += n; }
+		if (e.hit) { const s = stat(side(), e.player); if (s) { s.tb += n; if (n >= 4) s.hr += 1; } }
 		if (n >= 4) { for (let i = 2; i >= 0; i--) { if (b[i]) { run(b[i], e.player); b[i] = null; } } run(e.player, e.player); endPA(e, 'reach'); afterRuns(); return; }
 		const next = [null, null, null];
 		let outRunner = null;
@@ -1394,10 +1397,10 @@ function kbRenderPlayer() {
 	else nextHTML = `<section class="pcard"><p class="eyebrow">Next game</p><p class="hint">Nothing scheduled${kbState.pteam !== 'all' ? ' for this team' : ''}.</p></section>`;
 
 	/* --- stats --- */
-	const st = kbPlayerStats(p.id), axes = kbRadarAxes(p.id), obp = axes[0];
-	const { totals } = kbLeagueStats(); const board = Object.entries(totals).filter(([, t]) => t.pa >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, obp:t.reached / t.pa })).filter(x => x.p).sort((a, b) => b.obp - a.obp || b.t.h - a.t.h).slice(0, 8);
+	const st = kbPlayerStats(p.id), axes = kbRadarAxes(p.id), obp = axes.find(a => a.key === 'obp'), avg = axes[0];
+	const { totals } = kbLeagueStats(); const board = Object.entries(totals).filter(([, t]) => kbAB(t) >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, avg:t.h / kbAB(t) })).filter(x => x.p).sort((a, b) => b.avg - a.avg || b.t.h - a.t.h).slice(0, 8);
 	const myRank = board.findIndex(x => x.id === p.id);
-	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}: on base ${obp.text}, ${st.h} hit${st.h === 1 ? '' : 's'} for ${st.tb} bases, ${st.r} run${st.r === 1 ? '' : 's'}, ${st.rbi} RBI, ${st.xb} extra base${st.xb === 1 ? '' : 's'} taken.` : 'No games on the books yet — stats start with your first game.';
+	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}: hitting ${avg.text} (${st.h} for ${kbAB(st)}), ${st.hr} HR, ${st.r} R, ${st.rbi} RBI, ${st.xb} extra base${st.xb === 1 ? '' : 's'}.` : 'No games on the books yet — stats start with your first game.';
 
 	/* --- settings --- */
 	const icons = (window.KB_ICONS || []).map(i => `<button type="button" class="${pr.icon === i ? 'is-on' : ''}" data-action="pick-icon" data-icon="${i}" aria-pressed="${pr.icon === i}" aria-label="Icon ${i}">${i}</button>`).join('');
@@ -1433,13 +1436,13 @@ function kbRenderPlayer() {
 	<section class="pcard"><p class="eyebrow">Season · ${kbEscape(L.season)}</p>
 		<div class="stats-wrap">
 			${kbRadarSVG(axes)}
-			<ul class="stat-grid">${[['PA', st.pa], ['H', st.h], ['TB', st.tb], ['R', st.r], ['RBI', st.rbi], ['OBP', kbObp(st)]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
+			<ul class="stat-grid">${[['AVG', kbAvg(st)], ['H/AB', `${st.h}/${kbAB(st)}`], ['HR', st.hr], ['R', st.r], ['RBI', st.rbi], ['EB', st.xb]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
 		</div>
 		<p class="radar-key"><i class="is-me"></i> You <i class="is-league"></i> League average</p>
 		<p class="stat-text">${kbEscape(summary)} ${kbEscape(kbInsight(axes, st))}</p>
 		<ul class="axis-list">${axes.map(a => `<li><span>${kbEscape(a.label)}</span><strong>${kbEscape(a.text)}</strong><small>${a.of > 1 ? `${a.rank}${['st', 'nd', 'rd'][a.rank - 1] || 'th'} of ${a.of}` : ''}</small></li>`).join('')}</ul>
 		${kbOutsStripHTML(st)}
-		${board.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">League · on base</p><ol class="leaders">${board.map((x, i) => `<li class="${x.id === p.id ? 'is-me' : ''}"><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))} <small>${x.p.teams.map(t => t.short).join('/')}</small></span><strong>${x.obp.toFixed(3).replace(/^0/, '')}</strong></li>`).join('')}${myRank < 0 && st.pa ? `<li class="is-me"><span class="leader-n">${obp.rank}</span><span class="leader-name">${kbEscape(kbDisplayName(p))}</span><strong>${obp.text}</strong></li>` : ''}</ol>` : ''}
+		${board.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">League · batting average</p><ol class="leaders">${board.map((x, i) => `<li class="${x.id === p.id ? 'is-me' : ''}"><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))} <small>${x.p.teams.map(t => t.short).join('/')}</small></span><strong>${x.avg.toFixed(3).replace(/^0/, '')}</strong></li>`).join('')}${myRank < 0 && st.pa ? `<li class="is-me"><span class="leader-n">${avg.rank}</span><span class="leader-name">${kbEscape(kbDisplayName(p))}</span><strong>${avg.text}</strong></li>` : ''}</ol>` : ''}
 	</section>
 
 	<!-- ===== SETTINGS : profile ===== -->

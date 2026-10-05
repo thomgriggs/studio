@@ -437,6 +437,7 @@ test('stats: total bases, extra bases beyond the force, caught running, and outs
 	run(`tap('single'); tap('double');`);
 	let d = run('kbDerive()');
 	assert.equal(d.stats.home['thom-griggs'].tb, 2, 'a double is two total bases');
+	assert.equal(d.stats.home['thom-griggs'].hr, 0);
 	assert.equal(d.stats.home['cristy-ceron'].xb, 0, 'the force is not an extra base');
 	run(`at(2, { kind:'runner', base:3, what:'score', rbi:'thom-griggs', side:'home' });`);
 	d = run('kbDerive()');
@@ -450,4 +451,13 @@ test('stats: total bases, extra bases beyond the force, caught running, and outs
 	d = run('kbDerive()');
 	const all = Object.values(d.stats.home).reduce((o, s) => { for (const [k, n] of Object.entries(s.outsBy)) o[k] = (o[k] || 0) + n; return o; }, {});
 	assert.deepEqual(all, { foul:1, caught:1 });
+});
+
+test('baseball names: AVG is H/AB, every PA is an AB (one pitch, no walks), HR counted', () => {
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); tap('homer'); tap('out'); tap('single'); tap('foul');`);
+	const d = run('kbDerive()');
+	assert.equal(d.stats.home['cristy-ceron'].hr, 1);
+	assert.equal(run(`kbAB(kbDerive().stats.home['cristy-ceron'])`), 1);
+	assert.equal(run(`kbAvg({ h:1, pa:3 })`), '.333');
+	assert.deepEqual(run(`kbRadarAxes('x').map(a => a.key)`), ['avg', 'hr', 'rbi', 'r', 'eb', 'obp']);
 });

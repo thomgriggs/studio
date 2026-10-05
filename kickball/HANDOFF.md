@@ -71,7 +71,7 @@ kinds: reach out ball strike foul runner halfEnd set round
 ```
 
 ## Derived (`kbDerive(game)`)
-innings → `{ score, inning, half, outs, count, bases[3] (playerId|true|null), runsThisHalf, line:{away[],home[]}, pa:{away,home}, stats:{ side:{ playerId:{ pa,h,r,rbi,out,reached,tb,xb,xbo,outsBy:{ [actionId]:n } } } }, final, finalReason, log[] }`
+innings → `{ score, inning, half, outs, count, bases[3] (playerId|true|null), runsThisHalf, line:{away[],home[]}, pa:{away,home}, stats:{ side:{ playerId:{ pa,h,r,rbi,out,reached,tb,xb,xbo,hr,outsBy:{ [actionId]:n } } } }, final, finalReason, log[] }`
 rounds → `{ score, round, rounds[{ n, away, home, net, after }], final, finalReason, log[] }`
 Season: `kbSeasonStats(teamId)` → `{ games, totals:{ playerId:{ g,pa,h,r,rbi,out,reached } } }`. OBP = reached / pa.
 
