@@ -239,28 +239,84 @@ body.is-scrolled .topbar { border-bottom-color:var(--color_line); }
 .panel.is-dark .bible-picker label, .panel.is-dark .bible-picker .picker-note { color:color-mix(in srgb, var(--color_paper), transparent 35%); }
 
 /* ========================================================================== */
-/* HERO — panel 1: the verse, and nothing else                                */
+/* OPEN — panel 1: "If you love me…" alone, cinematic (founder's flow: must   */
+/* feel like a movie; background image/video; music). Rembrandt stand-in.     */
+/* ========================================================================== */
+.open { background:var(--color_ink); overflow:hidden; isolation:isolate; }
+.open .open-image { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; z-index:-1; opacity:.55; filter:saturate(.6) contrast(1.05); transform:scale(1.04); animation:tc-drift 40s var(--motion_ease) infinite alternate; }
+.open::after { content:''; position:absolute; inset:0; z-index:-1; background:radial-gradient(ellipse at 50% 60%, transparent 30%, rgba(29,26,22,.85) 100%); }
+@keyframes tc-drift { from { transform:scale(1.04) translateY(0); } to { transform:scale(1.1) translateY(-1.5%); } }
+.open .verse.is-open-line .verse-text { font-style:italic; font-variation-settings:'opsz' 144, 'wght' 300; text-shadow:0 2px 40px rgba(0,0,0,.5); }
+.open .verse.is-open-line .reveal-part { display:inline; }
+.open .verse .verse-ref { opacity:0; transition:opacity 1.2s var(--motion_ease) 2.2s; }
+.open .verse.is-revealed .verse-ref { opacity:.7; }
+.sound { position:absolute; top:calc(var(--space_lg) + 48px); right:var(--gutter); display:inline-flex; align-items:center; gap:var(--space_sm); min-height:44px; padding:var(--space_sm) var(--space_md); border:1px solid color-mix(in srgb, var(--color_paper), transparent 60%); border-radius:var(--radius_pill); background:transparent; color:var(--color_paper); cursor:pointer; font-size:var(--font_size-xs); letter-spacing:.14em; text-transform:uppercase; }
+.sound:hover { border-color:var(--color_paper); }
+.sound[aria-pressed="true"] { background:var(--color_paper); color:var(--color_ink); }
+.sound .sound-wave { opacity:.35; } .sound[aria-pressed="true"] .sound-wave { opacity:1; }
+.open .panel-nav a { opacity:.6; }
+
+/* ========================================================================== */
+/* WELCOME — panel 2: the title page; brands the project                      */
+/* ========================================================================== */
+.welcome { background:var(--color_paper-deep); }
+.welcome-title { font-size:var(--font_size-hero); font-variation-settings:'opsz' 144, 'wght' 300; letter-spacing:-.03em; line-height:.95; margin:0; }
+.welcome-title .numeral { font-variation-settings:'opsz' 144, 'wght' 500; color:var(--color_accent); margin-right:.08em; }
+.welcome-sub { font-family:var(--font_name-display); font-style:italic; font-size:var(--font_size-xl); color:var(--color_text-muted); margin:var(--space_md) auto 0; }
+
+/* ========================================================================== */
+/* NARRATIVE — panel 3: three short lines that set the verse up               */
+/* ========================================================================== */
+.narrative { background:var(--color_paper); }
+.narrative-line { font-family:var(--font_name-display); font-size:var(--font_size-display); line-height:1.1; letter-spacing:-.02em; font-variation-settings:'opsz' 144, 'wght' 300; max-width:22ch; margin:0 auto var(--space_md); text-wrap:balance; }
+.narrative-line.is-turn { margin-top:var(--space_xl); font-style:italic; }
+.narrative-note { font-size:var(--font_size-xs); color:var(--color_text-muted); margin:var(--space_xl) auto 0; letter-spacing:.14em; text-transform:uppercase; }
+
+/* ========================================================================== */
+/* HERO — panel 4: "Jesus said:" then the verse; ALL is emphasized, subtly    */
 /* ========================================================================== */
 .hero { background:var(--color_paper); }
 .hero .panel-inner { width:min(100%, 88rem); }
+.hero .said { margin-bottom:var(--space_lg); }
+.verse .emph { font-style:italic; font-variation-settings:'opsz' 144, 'wght' 500; color:var(--color_accent); }
+.verse .anim-unit .emph { display:inline; }
 
 /* ========================================================================== */
-/* LOGO — panel 2: the mark, small, breathing                                 */
+/* LOGO — the closing beat: the mark over the designers' layered work          */
+/* (jitter.video "layered designs"; the founder moved it to the end)           */
 /* ========================================================================== */
 .logo { background:var(--color_paper-deep); }
 .logo-mark { width:min(38vw, 240px); margin:0 auto var(--space_lg); animation:tc-breathe 6s var(--motion_ease) infinite; }
 @keyframes tc-breathe { 0%, 100% { transform:scale(1); } 50% { transform:scale(1.03); } }
-
-/* ========================================================================== */
-/* LOVE — panel 3: the one dark beat                                          */
-/* ========================================================================== */
-.love { background:var(--color_ink); }
+.logo-stack { position:relative; width:min(60vw, 320px); aspect-ratio:1; margin:0 auto var(--space_lg); }
+.logo-stack .logo-layer { position:absolute; inset:0; width:100%; height:100%; border-radius:var(--radius_md); mix-blend-mode:multiply; opacity:0; transition:opacity var(--motion_slow) var(--motion_ease-out), transform var(--motion_slow) var(--motion_ease-out); }
+.logo-stack .logo-layer:nth-child(1) { background:var(--gospel_matthew-soft); transform:rotate(-8deg) translate(-6%, 4%); }
+.logo-stack .logo-layer:nth-child(2) { background:var(--gospel_luke-soft);    transform:rotate(5deg) translate(5%, -3%); }
+.logo-stack .logo-layer:nth-child(3) { background:var(--gospel_john-soft);    transform:rotate(-2deg) translate(2%, 6%); }
+.logo-stack .logo-mark { position:absolute; inset:0; width:100%; margin:0; }
+.panel.is-seen .logo-stack .logo-layer { opacity:.85; }
+.panel.is-seen .logo-stack .logo-layer:nth-child(2) { transition-delay:300ms; }
+.panel.is-seen .logo-stack .logo-layer:nth-child(3) { transition-delay:600ms; }
 
 /* ========================================================================== */
 /* GOSPELS — panel 5: four chapters, a list you can read (atterwasch),        */
-/* each in its own colour (De La Calle)                                       */
+/* each in its own colour (De La Calle). `.is-corners`: the founder's layout — */
+/* four icon buttons in the four corners, proceed at the bottom.               */
 /* ========================================================================== */
 .gospels { background:var(--color_paper); }
+.gospel-picker.is-corners { display:grid; grid-template-columns:1fr 1fr; gap:var(--space_md); max-width:44rem; border-top:0; margin:var(--space_lg) auto; }
+.gospel-picker.is-corners .gospel-btn { display:grid; grid-template-columns:1fr; grid-template-areas:"icon" "name" "symbol"; justify-items:center; gap:var(--space_sm); padding:var(--space_lg) var(--space_md); min-height:14rem; border:1px solid var(--color_line-strong); border-radius:var(--radius_md); text-align:center; }
+.gospel-picker.is-corners .gospel-btn .gospel-icon { grid-area:icon; display:block; width:clamp(64px, 14vw, 112px); height:auto; }
+.gospel-picker.is-corners .gospel-btn .gospel-n { display:none; }
+.gospel-picker.is-corners .gospel-btn .gospel-name { grid-area:name; }
+.gospel-picker.is-corners .gospel-btn .gospel-symbol { grid-area:symbol; }
+.gospel-picker.is-corners .gospel-btn:hover, .gospel-picker.is-corners .gospel-btn.is-active { padding-left:var(--space_md); border-color:var(--gospel_color); background:var(--gospel_soft); }
+.gospel-picker.is-corners .gospel-btn.is-active .gospel-name::after { content:''; }
+.gospel-picker.is-corners .gospel-btn:nth-child(1) { border-top-left-radius:calc(var(--radius_md) * 3); }
+.gospel-picker.is-corners .gospel-btn:nth-child(2) { border-top-right-radius:calc(var(--radius_md) * 3); }
+.gospel-picker.is-corners .gospel-btn:nth-child(3) { border-bottom-left-radius:calc(var(--radius_md) * 3); }
+.gospel-picker.is-corners .gospel-btn:nth-child(4) { border-bottom-right-radius:calc(var(--radius_md) * 3); }
+.gospel-proceed { margin-top:var(--space_lg); }
 .gospel-picker { display:grid; gap:0; margin:var(--space_lg) auto; max-width:56rem; text-align:left; border-top:1px solid var(--color_line-strong); }
 .gospel-btn {
 	display:grid; grid-template-columns:3ch 1fr auto; align-items:center; gap:var(--space_md);

@@ -21,8 +21,10 @@ Static skeleton; nothing talks to a server. Every screen renders from `data.js` 
 ```
 .skip-link  .topbar  .brand  .primary-navigation  .toast
 .panel(.is-dark)  .panel-inner  .panel-nav
-  .hero  .logo  .logo-mark  .love  .gospels  .verses  .related-panel  .share  .share-actions
-.verse(.is-hero .is-display .is-loading .reveal)  .verse-text  .verse-num  .verse-ref  .anim-unit  .reveal-part
+  .open  .open-image  .sound  .sound-label  .welcome  .welcome-title  .numeral  .welcome-sub  .narrative  .narrative-line(.is-turn)  .narrative-note
+  .hero  .said  .emph  .logo(.is-finale)  .logo-stack  .logo-layer  .logo-mark  .gospels  .gospel-picker(.is-corners)  .gospel-icon  .gospel-proceed  .verses  .related-panel  .share  .share-actions
+.verse(.is-hero .is-display .is-loading .reveal .is-open-line)  .verse-text  .verse-num  .verse-ref  .anim-unit  .reveal-part
+  data attributes on .verse: data-ref · data-anim · data-split · data-part · data-plain · data-emph
 .bible-picker  .picker-note
 .gospel-picker  .gospel-btn(.is-active)  .gospel-name  .gospel-symbol
 .passages  .passage(.is-chosen)  .passage-body
@@ -45,7 +47,7 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `tc.css` 
 
 | Attribute | Where | Values |
 |---|---|---|
-| `data-action` | every control | `pick-bible` (select) · `pick-gospel` · `open-drawer` / `close-drawer` · `pick-church` (select) · `church-url` (submit) · `clear-church` · `pick-design` · `pick-product` · `shop-next` / `shop-back` (+ `data-to`) · `quick-order` · `share` · `copy-link` · `coming-soon` |
+| `data-action` | every control | `pick-bible` (select) · `pick-gospel` · `open-drawer` / `close-drawer` · `pick-church` (select) · `church-url` (submit) · `clear-church` · `pick-design` · `pick-product` · `shop-next` / `shop-back` (+ `data-to`) · `quick-order` · `toggle-sound` · `proceed` · `share` · `copy-link` · `coming-soon` |
 | `data-ref` | `.verse` | verse ids from `scripts/fetch-verses.mjs` (`matthew.22.36-40`, `john.14.15`, …) |
 | `data-anim` / `data-plain` / `data-split` | `.verse` | animation mode · join verses without numbers · regex for the two-part reveal |
 | `data-field` | dynamic text | `text` `ref` (verse) · `church.name` · `bible.short` · designer: `name initials location tagline styles story designs` · order: `order.design order.product order.price order.church` |

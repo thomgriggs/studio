@@ -81,6 +81,8 @@ const TC_ACTIONS = {
 	'close-drawer':   () => tcCloseDrawer(),
 	'share':          () => tcShare(),
 	'copy-link':      () => tcCopyLink(),
+	'toggle-sound':   (el) => tcToggleSound(el),
+	'proceed':        () => { if (!tcState.gospel) tcToast('Pick a Gospel, or read them all below'); },
 	'coming-soon':    () => tcToast('Coming soon')
 };
 
@@ -173,14 +175,24 @@ function tcRenderVerses(root = document) {
 	});
 }
 
-/* two-part reveal: split the (single-verse) text at data-split, e.g. "," */
+/* two-part reveal: split the (single-verse) text at data-split, e.g. ",".     */
+/* data-part="1" shows only the first half (the sheet: panel 1 is just          */
+/* "If you love me…") — the comma becomes an ellipsis.                          */
 function tcRenderReveal(block, text, entry) {
 	const raw = tcVerseText(entry);
 	const at = raw.search(new RegExp(block.dataset.split || ','));
-	const a = at > -1 ? raw.slice(0, at + 1) : raw, b = at > -1 ? raw.slice(at + 1).trim() : '';
-	text.innerHTML = `<span class="reveal-part">${tcEscape(a)}</span><span class="reveal-part">${tcEscape(b)}</span>`;
+	let a = at > -1 ? raw.slice(0, at + 1) : raw, b = at > -1 ? raw.slice(at + 1).trim() : '';
+	if (block.dataset.part === '1') { a = a.replace(/[,;:]\s*$/, '') + '…'; b = ''; }
+	text.innerHTML = `<span class="reveal-part">${tcEscape(a)}</span>${b ? `<span class="reveal-part">${tcEscape(b)}</span>` : ''}`;
 	block.classList.remove('is-revealed');
 	tcWhenVisible(block, () => block.classList.add('is-revealed'));
+}
+/* data-emph="all|whole": the first word matching gets <em class="emph"> — the  */
+/* founder's panel 4: "fonts must emphasize 'All', but subtly". Version-aware,  */
+/* since WEB says "whole" where KJV says "all".                                  */
+function tcEmphWord(block, word) {
+	const pat = block.dataset.emph; if (!pat) return false;
+	return new RegExp(`^[“"']?(${pat})[,.;:!?”"']?$`, 'i').test(word);
 }
 
 /* hero animation — modes: fade | words | letters. ?anim= overrides for demos */
@@ -190,15 +202,17 @@ function tcAnimateWords(block, text, entry) {
 	const raw = tcVerseText(entry);
 	block.dataset.anim = mode;
 	block.classList.remove('is-in');
+	let emphDone = false;
+	const wrapWord = (w) => { if (!emphDone && tcEmphWord(block, w)) { emphDone = true; return `<em class="emph">${tcEscape(w)}</em>`; } return tcEscape(w); };
 	if (mode === 'fade' || reduce) {
-		text.textContent = raw;
+		text.innerHTML = raw.split(' ').map(wrapWord).join(' ');
 		if (reduce) { block.classList.add('is-in'); return; }
 		tcWhenVisible(block, () => block.classList.add('is-in'));
 		return;
 	}
 	const units = mode === 'letters' ? Array.from(raw) : raw.split(' ');
 	const step = mode === 'letters' ? 22 : 90;
-	text.innerHTML = units.map(u => `<span class="anim-unit">${u === ' ' ? '&nbsp;' : tcEscape(u)}</span>${mode === 'words' ? ' ' : ''}`).join('');
+	text.innerHTML = units.map(u => `<span class="anim-unit">${u === ' ' ? '&nbsp;' : (mode === 'words' ? wrapWord(u) : tcEscape(u))}</span>${mode === 'words' ? ' ' : ''}`).join('');
 	text.setAttribute('aria-label', raw);
 	tcWhenVisible(block, () => {
 		text.querySelectorAll('.anim-unit').forEach((u, i) => { u.style.transitionDelay = `${i * step}ms`; u.classList.add('is-in'); });
@@ -237,12 +251,29 @@ function tcRenderGospels() {
 	const host = document.querySelector('.gospel-picker');
 	if (!host) return;
 	const numerals = ['I', 'II', 'III', 'IV'];
+	/* .is-corners: the founder's panel 5 — four icon buttons top-left / top-right / bottom-left / bottom-right */
 	host.innerHTML = TC_DATA.gospels.map((g, i) => `
 		<button type="button" class="gospel-btn${tcState.gospel === g.id ? ' is-active' : ''}" data-action="pick-gospel" data-gospel="${g.id}" aria-pressed="${tcState.gospel === g.id}">
+			<img class="gospel-icon" src="${g.icon}" alt="" width="96" height="96">
 			<span class="gospel-n" aria-hidden="true">${numerals[i]}</span>
 			<span class="gospel-name">${g.label}</span>
 			<span class="gospel-symbol">${g.symbol}</span>
 		</button>`).join('');
+}
+/* sound — the founder wants music on the opening (ideally Aramaic; his picks are in TC_DATA.music).   */
+/* No track is bundled: they're licensed recordings. The toggle is real; it plays once a file exists.    */
+function tcToggleSound(el) {
+	const on = el.getAttribute('aria-pressed') !== 'true';
+	const track = TC_DATA.music && TC_DATA.music[0];
+	let audio = document.querySelector('audio.open-audio');
+	if (on && track && track.src) {
+		if (!audio) { audio = document.createElement('audio'); audio.className = 'open-audio'; audio.loop = true; audio.src = track.src; document.body.appendChild(audio); }
+		audio.play().catch(() => {});
+	} else if (audio) audio.pause();
+	el.setAttribute('aria-pressed', on);
+	el.setAttribute('aria-label', `Sound: ${on ? 'on' : 'off'}`);
+	const label = el.querySelector('[data-field="sound.label"]'); if (label) label.textContent = on ? 'Sound on' : 'Sound';
+	if (on && !(track && track.src)) tcToast(track ? `Music: “${track.title}” — ${track.artist}. Not licensed yet, so silent for now.` : 'No track chosen yet');
 }
 function tcRenderPassages() {
 	const host = document.querySelector('.passages');
@@ -267,8 +298,9 @@ function tcSetGospel(id) {
 	tcStore(TC_KEYS.gospel, id);
 	tcRenderGospels();
 	tcRenderPassages();
+	/* with a Proceed button on the panel (the founder's panel 5), picking doesn't jump — Proceed does */
 	const target = document.getElementById('verses');
-	if (target) { target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }
+	if (target && !document.querySelector('.gospel-proceed')) { target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }
 	const g = TC_DATA.gospels.find(x => x.id === id);
 	tcToast(`Reading ${g.label}`);
 }

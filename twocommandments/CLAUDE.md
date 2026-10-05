@@ -13,10 +13,10 @@ You are working on a static HTML/CSS/JS skeleton of a message site + merch funne
 - Google Fonts only for type. Icons are inline SVG — no icon library or icon font.
 
 ## Map
-- `index.html` — panels in storyboard order: hero → logo → love → gospels → verses → related → share.
+- `index.html` — the design breakdown (references → studies → working build). `home.html` — the working home, panels in the founder's Oct 2026 order: open ("If you love me…", sound) → welcome → narrative → hero ("Jesus said: All…", `data-emph`) → gospels (`.is-corners` + proceed) → verses → related → share → logo finale (`.logo-stack`).
 - `church.html` / `designers.html` / `shop.html` / `about.html` — inner pages sharing the `.page` frame.
-- `tc.js` — one file, banner sections. Spine: delegated `[data-action]` click/change/submit → `TC_ACTIONS[action](el, ev)`. Init: `tcInit` → `tcInit{Home,Church,Designers,Shop}` by `body[data-view]`. Verse system: `tcResolveBible` (`?bible=` → localStorage → default), `tcRenderVerses`, `tcAnimateWords`, `tcRenderReveal`. Home: `tcRenderGospels`, `tcRenderPassages`, `tcSetGospel`, `tcRenderRelated`. Church: `tcSetChurch`, `tcRenderContextPills`. Shop: `tcShopGo`, `tcPickChoice`, `tcRenderOrder`, `tcRenderSplit`.
-- `data.js` — `TC_DATA.{versions, defaultVersion, gospels, related, share, churches, designers, products, split}`.
+- `tc.js` — one file, banner sections. Spine: delegated `[data-action]` click/change/submit → `TC_ACTIONS[action](el, ev)`. Init: `tcInit` → `tcInit{Home,Church,Designers,Shop}` by `body[data-view]`. Verse system: `tcResolveBible` (`?bible=` → localStorage → default), `tcRenderVerses`, `tcAnimateWords`, `tcRenderReveal`. Home: `tcRenderGospels` (icons; `.is-corners`), `tcRenderPassages`, `tcSetGospel` (no auto-scroll when a Proceed button exists), `tcRenderRelated`, `tcToggleSound` (plays `TC_DATA.music[0].src` when one exists), `tcEmphWord` (`data-emph`). Church: `tcSetChurch`, `tcRenderContextPills`. Shop: `tcShopGo`, `tcPickChoice`, `tcRenderOrder`, `tcRenderSplit`.
+- `data.js` — `TC_DATA.{versions, defaultVersion, gospels, related, share, churches, designers, products, split, music}`.
 - `verses.js` — generated. `TC_VERSES[version][refId] → { reference, verses:[{ n, text }] }`.
 - `tc.css` — tokens, base, shared controls, then one banner per block in DOM order.
 - `assets/` — placeholder SVGs (logo, four gospel icons, design thumb, hero background).
@@ -24,7 +24,8 @@ You are working on a static HTML/CSS/JS skeleton of a message site + merch funne
 ## Derived data (rules a backend must reproduce)
 - **Bible resolution**: `?bible=` wins and is saved; else localStorage `tc-bible`; else `TC_DATA.defaultVersion`. Only `source:'bundled'` versions are selectable.
 - **Quote cleanup** (`tcVerseText`): a passage excerpt may open or close a quotation outside the excerpt; the unmatched mark is dropped for display only.
-- **Two-part reveal**: split at the first match of `data-split` (default `,`).
+- **Two-part reveal**: split at the first match of `data-split` (default `,`); `data-part="1"` shows only the first half with an ellipsis (the opening panel).
+- **Emphasis** (`data-emph="all|whole"`): the first word matching (ignoring surrounding quotes/punctuation) is wrapped in `<em class="emph">` — one word, once.
 - **Chosen Gospel** (`tc-gospel`): its passage is ordered first and open; without a choice all four are open.
 - **Church** (`tc-church`): `{ id|null, name, url }`; from the list or a typed URL (hostname becomes the name).
 - **Split**: `TC_DATA.split` shares are rendered as-is (33/33/33/1 — they intentionally don't sum to 100; that's the founder's sheet).

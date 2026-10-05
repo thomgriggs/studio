@@ -27,7 +27,7 @@ window.TC_DATA = (function () {
 		{ id:'niv', label:'New International Version (NIV)', short:'NIV', source:'api', licensed:true },
 		{ id:'esv', label:'English Standard Version (ESV)', short:'ESV', source:'api', licensed:true }
 	];
-	const defaultVersion = 'web';
+	const defaultVersion = 'web'; /* the founder's default is CSB (doc, Oct 2026) — licensed; WEB until then */
 
 	/* ---------------------------------------------------------------------- */
 	/* GOSPELS — panel 5 buttons → panel 6 passages                            */
@@ -141,5 +141,15 @@ window.TC_DATA = (function () {
 		]
 	};
 
-	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split };
+	/* ---------------------------------------------------------------------- */
+	/* MUSIC — the opening panel (founder: "music, ideally Aramaic"). His picks */
+	/* from the sheet's NOTES columns. Licensed recordings: no file is bundled;  */
+	/* set `src` once a license exists and the sound toggle plays it.           */
+	/* ---------------------------------------------------------------------- */
+	const music = [
+		{ id:'fagrok',  title:'Fagrok Mor Wadhmok', artist:'Sam Thomas', language:'Syriac', src:null },
+		{ id:'syriac',  title:'രക്ഷകനുര ചെയ്താൻ (Syriac)', artist:'Sam Thomas · Brothers of Sophia', language:'Syriac', src:null }
+	];
+
+	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split, music };
 })();

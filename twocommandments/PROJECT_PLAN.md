@@ -6,7 +6,22 @@ Status: **skeleton** — structure, content, data and behavior are in place with
 
 ## Home page storyboard
 
-Source of truth: the founder's Google Sheet "Calling All Christians – Website" (18 rows). Each row is a full-viewport panel on `index.html`.
+Source of truth: the founder's Google Sheet "Calling All Christians – Website" + the "WEBSITE FLOW" section of his doc. **Re-ordered by him in Oct 2026** (read 2026-10-05); `home.html` follows this order. The earlier table is kept below it for the panel details that didn't change.
+
+| # | Panel (his order) | His words | Built as |
+|---|---|---|---|
+| 1 | **Open — "If you love me…"** | "Must feel cinematic. Background imagery/video must draw people into a 'movie' experience. Music — ideally Aramaic. Scroll." Sheet: "In this panel, just 'if you love me…'" | `.panel.open` — John 14:15 first half only (`data-part="1"`), Rembrandt stand-in full-bleed with slow drift, `.sound` toggle (`TC_DATA.music`: his two Sam Thomas Syriac tracks, no file until licensed) |
+| 2 | **Welcome** | "The 'title page' — cover page, conveying 'welcome to the II Commandments' — this one brands the project" | `.panel.welcome` — wordmark, "of Jesus" |
+| 3 | **Narrative** | "A brief narrative that sets up the simplicity of the II Commandments." Sheet's new Segue row: "In the Old Testament, there are four major prophets and twelve minor prophets" (+ Tanakh / Twelve note) | `.panel.narrative` — three lines, **draft copy for him to replace** |
+| 4 | **"JESUS said: All of the Law and the Prophets…"** | "Fonts — must emphasize 'All', but subtly." Sheet now prefixes "JESUS said:" | `.panel.hero` — eyebrow "Jesus said", words animate in, `data-emph="all|whole"` wraps the first match in `<em class="emph">` (version-aware: WEB says "whole"), Bible picker |
+| 5 | **The four Gospels** | "Could be like the Gospel options given in 'Option 3'. But I envision 4 buttons — top left, top right, bottom left, bottom right — then a 'proceed' button at the bottom. Icons with the symbols for Matthew, Mark, Luke, John" | `.gospel-picker.is-corners` — 2×2 icon tiles with corner radii, `.gospel-proceed` → #verses |
+| 6 | Verses | unchanged | `.passages` |
+| — | Related · Share | unchanged | drawer · `.panel.share` |
+| end | **Logo — layered designs** | "Keep this for the end/bottom of the scroll perhaps (by doing this, you demonstrate the emphasis on design): different designs, one on top of the other, like the last section of jitter.video" | `.panel.logo.is-finale` — `.logo-stack` of three design layers under the mark |
+
+**Also new in the doc (Oct 2026):** "WEBSITE — MUSTS: Default to Christian Standard Bible (CSB)" (licensed — see Bible text); "It has to feel like one page is taking you to the next page"; "Images/UI have to establish that you're going to take a moment to reflect on the words of Jesus — set a tone — feel like you're in the presence"; a Behance pick for first designer (Lydia Zach); Resurrection Design Co. ("definitely"), MOTIF, Forgiven Photography as contacts. The sheet also dropped its old Bible-dropdown row (ewtn/quietbible references) — the picker stays on panel 4.
+
+### Earlier table (panel details)
 
 | # | Panel | Copy / behavior | Built as |
 |---|---|---|---|
@@ -112,6 +127,7 @@ Still placeholder: the mark, the gospel symbol art, Jesus imagery for the hero (
 
 ## Next steps
 
+0. Founder reviews the re-cut `home.html` (his Oct order) — especially the narrative copy (ours is a draft), the "All" emphasis, the four-corner picker, and whether the logo belongs at the end.
 1. Design pass once inspiration arrives: type, colour, motion for panels 1–3 and 5, the church-name treatment, designer profiles.
 2. Real logo + gospel symbol art.
 3. Founder's story into `about.html`; 10 seed designers into `data.js`.
