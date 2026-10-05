@@ -232,7 +232,7 @@ test('defense: "no more than 5 men" and "no more than 6 infielders including the
 	run(`(() => { mkGame('kickball', 'lbc'); const t = kbState.game.teams.home; const men = kbTeam('lbc').roster.filter(p => p.gender === 'male').map(p => p.id); kbSport().team.positions.forEach((pos, i) => { t.assignments[pos] = men[i]; }); })()`);
 	const w = run(`kbDefenseWarnings('home')`);
 	assert.ok(w.some(x => /men on the field/.test(x)));
-	assert.ok(w.some(x => /7 infielders/.test(x)));
+	assert.ok(!w.some(x => /infielders/.test(x)), "filling all ten spots is exactly six infielders — legal"); run(`kbState.game.teams.home.assignments["LF"] = kbState.game.teams.home.assignments["RF"]; kbState.game.teams.home.assignments["RF"] = null;`); /* still no 7th infield spot exists — the rule can only trip if the config names more than six */ assert.equal(run("kbSport().team.infield.length"), 6);
 });
 
 test('"men may not bunt": the man-bunt button is an out; a woman kicking is refused that button', () => {
@@ -464,6 +464,8 @@ test('baseball names: AVG is H/AB, every PA is an AB (one pitch, no walks), HR c
 
 test('seasons: stats scope to a season or all; overlays scale against the primary scope; new games carry the current season', () => {
 	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	assert.deepEqual(run(`KB_SPORTS.kickball.team.positions`), ['C/SS', '1B', '2B', '3B', 'SS', 'LF', 'CFL/SS', 'C', 'CFR', 'RF']);
+	assert.equal(run(`KB_SPORTS.kickball.team.infield.length`), 6, 'six infield spots including the catcher');
 	assert.equal(run(`kbGamesIn('spring-2026').length`), 3); assert.equal(run(`kbGamesIn('fall-2026').length`), 3); assert.equal(run(`kbGamesIn('all').length`), 6);
 	const all = run(`kbPlayerStats('cristy-ceron', 'all')`), fall = run(`kbPlayerStats('cristy-ceron', 'fall-2026')`), spring = run(`kbPlayerStats('cristy-ceron', 'spring-2026')`);
 	assert.equal(all.pa, fall.pa + spring.pa);
@@ -472,5 +474,5 @@ test('seasons: stats scope to a season or all; overlays scale against the primar
 	assert.equal(run(`kbSeasonName('spring-2026')`), 'Spring 2026');
 	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbStartScheduled('s1');`);
 	assert.equal(run('kbState.game.season'), 'fall-2026');
-	assert.match(run(`kbPlayerCardHTML('devin-hart', { sched:'s1', team:'lbc', from:'pitch-please' })`), /Left Field[\s\S]*data-action="recruit"/);
+	assert.match(run(`kbPlayerCardHTML('devin-hart', { sched:'s1', team:'lbc', from:'pitch-please' })`), /LF[\s\S]*data-action="recruit"/);
 });

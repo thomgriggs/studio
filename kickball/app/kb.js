@@ -61,6 +61,8 @@ function kbSeedLeague() {
 	if (stale && kbState.me.role === 'ump') kbState.me.umpId = null;
 	/* seed profiles once per person; a person's own edits win */
 	for (const [pid, pr] of Object.entries(window.KB_SEED_PROFILES || {})) if (!kbState.profiles[pid]) { kbState.profiles[pid] = structuredClone(pr); dirty = true; }
+	/* positions renamed to the league's codes: drop a saved position that no longer exists */
+	{ const cfg = KB_SPORTS[kbState.league.sport]; const list = (cfg && cfg.team && cfg.team.positions) || []; for (const pr of Object.values(kbState.profiles)) if (pr.position && !list.includes(pr.position)) { delete pr.position; dirty = true; } }
 	if (dirty) kbSave();
 	kbSeedDemoGames();
 	if (dirty) kbSave();
@@ -268,6 +270,7 @@ function kbPersonTeams(pid) { return kbState.teams.filter(t => t.roster.some(p =
 function kbPerson(pid) { for (const t of kbState.teams) { const p = kbPlayer(t, pid); if (p) return { ...p, teams:kbPersonTeams(pid) }; } return null; }
 function kbProfile(pid) { return (kbState.profiles && kbState.profiles[pid]) || {}; }
 function kbDisplayName(p) { if (!p) return ''; const pr = kbProfile(p.id); return pr.nickname || p.name; }
+function kbPositionName(code) { const cfg = kbState.league ? KB_SPORTS[kbState.league.sport] : null; return (cfg && cfg.team && cfg.team.positionNames && cfg.team.positionNames[code]) || code; }
 function kbInitials(name) { return String(name || '').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
 function kbSetProfile(pid, patch) { if (!pid) return; kbState.profiles = kbState.profiles || {}; kbState.profiles[pid] = { ...kbProfile(pid), ...patch }; kbSave(); }
 function kbSaveProfile(form) {
@@ -1272,7 +1275,7 @@ function kbRenderCaptain() {
 		<div class="pad-bar is-2"><button type="button" class="key is-ghost" data-action="balance">Balance W/M</button><button type="button" class="key is-primary" data-action="captain-tab" data-tab="positions">Next: positions</button></div>`;
 	if (tab === 'positions') { const onField = Object.values(t.assignments).filter(Boolean); const ids = active.flatMap(kbSlotIds); const bench = ids.filter(id => !onField.includes(id)); body = `
 		${dw.map(w => `<p class="warn">${kbEscape(w)}</p>`).join('')}
-		<ul class="positions">${T.positions.map(pos => `<li class="position-row"><label for="pos-${kbSlug(pos)}">${kbEscape(pos)}${(T.infield || []).includes(pos) ? ' <small>IF</small>' : ''}</label><select id="pos-${kbSlug(pos)}" data-action="assign" data-position="${kbEscape(pos)}"><option value="">Open</option>${ids.map(id => { const p = kbPlayer(team, id); return `<option value="${id}" ${t.assignments[pos] === id ? 'selected' : ''}>${kbEscape(p.name)}</option>`; }).join('')}</select></li>`).join('')}</ul>
+		<ul class="positions">${T.positions.map(pos => `<li class="position-row"><label for="pos-${kbSlug(pos)}">${kbEscape(pos)}${(T.infield || []).includes(pos) ? ' <small>IF</small>' : ''}<em>${kbEscape(kbPositionName(pos))}</em></label><select id="pos-${kbSlug(pos)}" data-action="assign" data-position="${kbEscape(pos)}"><option value="">Open</option>${ids.map(id => { const p = kbPlayer(team, id); return `<option value="${id}" ${t.assignments[pos] === id ? 'selected' : ''}>${kbEscape(p.name)}</option>`; }).join('')}</select></li>`).join('')}</ul>
 		<p class="hint">Bench (${bench.length}): ${bench.map(id => kbEscape(kbFirst(kbPlayer(team, id).name))).join(', ') || '—'}</p>
 		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="${backTo}">${doneLabel}</button></div>`; }
 	host.innerHTML = `
@@ -1433,7 +1436,7 @@ function kbRenderPlayer() {
 		<div class="player-id">
 			<h1>${kbEscape(kbDisplayName(p))}</h1>
 			${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}
-			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos">${kbEscape(pr.position)}</span>` : ''}</p>
+			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos" title="${kbEscape(kbPositionName(pr.position))}">${kbEscape(pr.position)}</span>` : ''}</p>
 			${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}${w.url ? ` <a href="${kbEscape(w.url)}" target="_blank" rel="noopener">play</a>` : ''}</p>` : ''}
 		</div>
 	</header>
@@ -1474,7 +1477,7 @@ function kbRenderPlayer() {
 			<input type="hidden" name="icon" value="${kbEscape(pr.icon || '')}">
 			<p class="eyebrow">Icon</p><div class="icon-grid" role="group" aria-label="Choose an icon">${icons}</div>
 			<div class="field-pair"><div class="field"><label for="pf-nick">Nickname</label><input id="pf-nick" name="nickname" value="${kbEscape(pr.nickname || '')}" autocomplete="off" placeholder="${kbEscape(kbFirst(p.name))}"></div>
-			<div class="field"><label for="pf-pos">Preferred position</label><select id="pf-pos" name="position"><option value="">Anywhere</option>${(kbSport({ sport:L.sport }).team?.positions || []).map(x => `<option value="${kbEscape(x)}" ${pr.position === x ? 'selected' : ''}>${kbEscape(x)}</option>`).join('')}</select></div></div>
+			<div class="field"><label for="pf-pos">Preferred position</label><select id="pf-pos" name="position"><option value="">Anywhere</option>${(kbSport({ sport:L.sport }).team?.positions || []).map(x => `<option value="${kbEscape(x)}" ${pr.position === x ? 'selected' : ''}>${kbEscape(x)} — ${kbEscape(kbPositionName(x))}</option>`).join('')}</select></div></div>
 			<p class="eyebrow">Walk-up song</p>
 			<div class="field-pair"><div class="field"><label for="pf-wt">Title</label><input id="pf-wt" name="walkup-title" value="${kbEscape(w.title || '')}" autocomplete="off"></div><div class="field"><label for="pf-wa">Artist</label><input id="pf-wa" name="walkup-artist" value="${kbEscape(w.artist || '')}" autocomplete="off"></div></div>
 			<div class="field"><label for="pf-wu">Link (Spotify, YouTube…)</label><input id="pf-wu" name="walkup-url" type="url" value="${kbEscape(w.url || '')}" autocomplete="off" placeholder="https://"></div>
@@ -1509,7 +1512,7 @@ function kbOpenPlayerSheet(pid, schedId, teamId) {
 	const canAdd = teamId && schedId && !kbPlayer(kbTeam(teamId), pid);
 	const w = pr.walkup || {};
 	d.innerHTML = `<div class="sheet-head"><button type="button" class="drawer-close key is-ghost" data-action="sheet-close" aria-label="Close">×</button></div>
-		<header class="player-head"><span class="avatar-big" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span><div class="player-id"><h2>${kbEscape(kbDisplayName(p))}</h2>${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}<p class="team-chips">${p.teams.map(t => `<span class="chip-team">${kbEscape(t.short)}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos">${kbEscape(pr.position)}</span>` : ''}</p>${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}</p>` : ''}</div></header>
+		<header class="player-head"><span class="avatar-big" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span><div class="player-id"><h2>${kbEscape(kbDisplayName(p))}</h2>${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}<p class="team-chips">${p.teams.map(t => `<span class="chip-team">${kbEscape(t.short)}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos" title="${kbEscape(kbPositionName(pr.position))}">${kbEscape(pr.position)}</span>` : ''}</p>${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}</p>` : ''}</div></header>
 		<div class="stats-wrap">${kbRadarSVG(axes, overlays)}<ul class="stat-grid">${[['AVG', kbAvg(st)], ['H/AB', `${st.h}/${kbAB(st)}`], ['HR', st.hr], ['R', st.r], ['RBI', st.rbi], ['EB', st.xb]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul></div>
 		<p class="radar-key"><i class="is-me"></i> All seasons <i class="is-league"></i> League${overlays.filter(Boolean).map((o, i) => ` <i class="is-cmp-${i + 1}"></i> ${kbEscape(o.label)}`).join('')}</p>
 		<ul class="season-lines">${seasons.map(s => { const t = kbPlayerStats(pid, s); return t.pa ? `<li><span>${kbEscape(kbSeasonName(s))}</span><strong>${kbEscape(kbStatLine(t))}</strong><small>${t.g} game${t.g === 1 ? '' : 's'}</small></li>` : ''; }).join('')}</ul>

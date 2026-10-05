@@ -61,8 +61,10 @@ window.KB_SPORTS = {
 		team:{
 			minPlayers:6,                  /* "at least 6 players (minimum one female) to start" */
 			minWomen:1,
-			positions:['Pitcher', 'Catcher', '1st Base', '2nd Base', '3rd Base', 'Left Short', 'Right Short', 'Left Field', 'Left Center', 'Right Center'],
-			infield:['Pitcher', 'Catcher', '1st Base', '2nd Base', '3rd Base', 'Left Short', 'Right Short'],
+			/* the league's ten spots (Thom, 2026-10-05). Self-pitch: the kicking team pitches, so there is no defensive pitcher. */
+			positions:['C/SS', '1B', '2B', '3B', 'SS', 'LF', 'CFL/SS', 'C', 'CFR', 'RF'],
+			positionNames:{ 'C/SS':'Catcher / short stop', '1B':'First base', '2B':'Second base', '3B':'Third base', 'SS':'Short stop', 'LF':'Left field', 'CFL/SS':'Center field left / short stop', 'C':'Center', 'CFR':'Center field right', 'RF':'Right field' },
+			infield:['C/SS', '1B', '2B', '3B', 'SS', 'CFL/SS'],   /* "no more than 6 infielders, including the catcher" */
 			maxFielders:10,                /* "Maximum of 10 fielders with no more than 5 men" */
 			maxMenOnField:5,
 			maxInfielders:6,               /* "No more than 6 infielders, including the catcher" */
@@ -153,10 +155,10 @@ window.KB_SEED_TEAMS = [
 /* Keyed by player id; a person keeps one profile across every roster they're on.   */
 window.KB_ICONS = ['⚽','🦵','🔥','⚡','🌴','🦩','🐊','🌊','☀️','🍕','🎯','👑','🦁','🐂','🦅','😇'];
 window.KB_SEED_PROFILES = {
-	'thom-griggs': { icon:'🦩', nickname:'Thom', position:'Pitcher', walkup:{ title:'', artist:'', url:'' }, freeAgent:'mine' },
-	'nina-patel':  { icon:'⚡', position:'2nd Base', freeAgent:'all' },
-	'devin-hart':  { icon:'🔥', position:'Left Field', freeAgent:'all' },
-	'jake-fields': { icon:'🐊', position:'Catcher', freeAgent:'mine' }
+	'thom-griggs': { icon:'🦩', nickname:'Thom', position:'SS', walkup:{ title:'', artist:'', url:'' }, freeAgent:'mine' },
+	'nina-patel':  { icon:'⚡', position:'2B', freeAgent:'all' },
+	'devin-hart':  { icon:'🔥', position:'LF', freeAgent:'all' },
+	'jake-fields': { icon:'🐊', position:'C/SS', freeAgent:'mine' }
 };
 
 /* Seed league — the structure the five roles live in. Copied into storage on   */
@@ -168,7 +170,7 @@ window.KB_SEED_PROFILES = {
 /*              captain's stand-in per team; `gameId`/`result` once it's played  */
 /*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
 window.KB_SEED_LEAGUE = {
-	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', seedVersion:5,
+	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', seedVersion:6,
 	/* seasons: games and schedule entries carry a season id; `season` is the current one */
 	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
 	season:'fall-2026', /* bump to push new seed data onto phones that already have a league */

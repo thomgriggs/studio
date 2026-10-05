@@ -322,6 +322,7 @@ input, select { font:inherit; }
 .lineup-tags { display:inline-flex; gap:2px; }
 .lineup-move button.is-on { background:var(--color_accent); color:var(--color_accent-text); border-color:var(--color_accent); }
 .position-row label small { color:var(--color_text-dim); font-weight:700; margin-left:4px; }
+.position-row label em { display:block; font-style:normal; font-weight:400; font-size:var(--font_size-xs); color:var(--color_text-dim); }
 .base-actions button[data-what="courtesy"] { color:var(--color_info); }
 @media (max-width:380px) { .state { grid-auto-columns:minmax(0,1fr); } .state-item { padding:var(--space_xs); } }
 

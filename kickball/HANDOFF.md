@@ -88,7 +88,7 @@ Season: `kbSeasonStats(teamId)` → `{ games, totals:{ playerId:{ g,pa,h,r,rbi,o
                mercy?:{ [mode]: null | [{ after, diff }] },
                overtime?:{ [mode]: false | { runnerOnSecond } },
                courtesyRunner?:{ … }, bust?:{ enabled, resetTo } },
-  team?:     { minPlayers, minWomen?, positions[], infield?[], maxFielders, maxMenOnField?, maxInfielders?,
+  team?:     { minPlayers, minWomen?, positions[] (league codes: C/SS 1B 2B 3B SS LF CFL/SS C CFR RF), positionNames?:{ code:name }, infield?[], maxFielders, maxMenOnField?, maxInfielders?,
                coed?:{ noBackToBackMen, autoOutBetween, splitSlots }, bunting?:{ women, men } },
   record:    'linescore'|'rounds' }
 ```
