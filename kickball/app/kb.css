@@ -425,7 +425,7 @@ input, select { font:inherit; }
 .pcard.is-live { border-color:var(--color_accent); }
 .next-when { font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.1em; color:var(--color_text-dim); font-weight:700; }
 .next-who { font-size:var(--font_size-xl); }
-.next-inout .seg.is-inout { display:grid; grid-template-columns:1fr 1fr; width:100%; padding:4px; border-radius:var(--radius_md); }
+.next-inout .seg.is-inout { display:grid; grid-template-columns:1fr auto 1fr; width:100%; padding:4px; border-radius:var(--radius_md); }
 .next-inout .seg.is-inout button { min-height:var(--key_height); border-radius:var(--radius_sm); font-size:var(--font_size-lg); }
 .status-line { font-size:var(--font_size-sm); color:var(--color_text-muted); }
 .status-line .is-in { color:var(--color_accent); } .status-line .is-out { color:var(--color_danger); } .status-line .is-short { color:var(--color_warn); }
@@ -667,3 +667,5 @@ input, select { font:inherit; }
 .resolve.is-fc { border-color:var(--dot_out); }
 .resolve-foot { display:flex; justify-content:space-between; gap:var(--space_sm); }
 .resolve-row.is-forced .resolve-who em { color:var(--color_text-muted); text-transform:none; letter-spacing:0; font-size:var(--font_size-xs); }
+.next-inout .seg.is-inout .is-q { min-width:72px; }
+.next-inout .seg.is-inout .half { width:20px; height:20px; }
