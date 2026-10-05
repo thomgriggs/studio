@@ -400,3 +400,33 @@ test('man bunt with a woman up: warned, not refused — the ump’s call stands'
 	assert.equal(run('kbDerive().outs'), 1);
 	assert.equal(run('kbState.game.events.at(-1).actionId'), 'bunt');
 });
+
+test('people: a player on two rosters is one person; free-agent modes respect "nights I already play"', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = {}; kbState.games = []; kbState.game = null;`);
+	assert.deepEqual(run(`kbPersonTeams('thom-griggs').map(t => t.id)`), ['lbc', 'sliders']);
+	run(`kbSetProfile('devin-hart', { freeAgent:'mine' })`);
+	assert.equal(run(`kbPlaysOn('devin-hart', '2026-10-08')`), true, 'Pitch Please plays Oct 8');
+	run(`kbState.league.schedule.push({ id:'sx', date:'2026-11-01', time:'19:00', away:'ball-busters', home:'lbc', status:'scheduled', availability:{}, lead:{}, prep:null }); kbState.league.teams['ball-busters'] = 'approved';`);
+	assert.equal(run(`kbPlaysOn('devin-hart', '2026-11-01')`), false);
+	assert.ok(run(`kbFreeAgents(kbSched('s1'), 'lbc').map(p => p.id)`).includes('devin-hart'), 'offered on a night he plays');
+	assert.ok(!run(`kbFreeAgents(kbSched('sx'), 'lbc').map(p => p.id)`).includes('devin-hart'), 'not offered on a night he does not');
+	run(`kbSetProfile('devin-hart', { freeAgent:'all' })`);
+	assert.ok(run(`kbFreeAgents(kbSched('sx'), 'lbc').map(p => p.id)`).includes('devin-hart'), '"any game" is offered everywhere');
+	run(`kbSetProfile('devin-hart', { freeAgent:'off' })`);
+	assert.ok(!run(`kbFreeAgents(kbSched('s1'), 'lbc').map(p => p.id)`).includes('devin-hart'));
+});
+
+test('demo games: seeded once, deterministic, finished, and they feed one person’s stats across both rosters', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	assert.equal(run('kbState.games.length'), 3);
+	assert.ok(run('kbState.games.every(g => g.status === "final" && g.demo)'));
+	const first = run('kbDerive(kbState.games[0]).score');
+	run('kbState.league.demoGames = false; kbState.games = []; kbSeedDemoGames();');
+	assert.deepEqual(run('kbDerive(kbState.games[0]).score'), first, 'same seed, same game');
+	run('kbSeedDemoGames();'); assert.equal(run('kbState.games.length'), 3, 'seeded once');
+	const st = run(`kbPlayerStats('thom-griggs')`);
+	assert.ok(st.g >= 1, 'Thom is on LBC, so he shows up in the demo games: ' + st.g);
+	const axes = run(`kbRadarAxes('thom-griggs')`);
+	assert.equal(axes.length, 5); assert.ok(axes.every(a => a.norm >= 0 && a.norm <= 1 && a.avgNorm >= 0 && a.avgNorm <= 1));
+	assert.match(run(`kbRadarSVG(kbRadarAxes('thom-griggs'))`), /<svg class="radar"/);
+});

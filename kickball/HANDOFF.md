@@ -14,6 +14,9 @@ shared   .key(.is-primary .is-commit .is-ghost .is-undo .is-fix)  .toast  .field
 me       .me-bar  .me-pill  .me-dot(.is-league .is-ump .is-captain .is-lead .is-player)  .me-league
 home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .role-home  .role-card(.is-live)  .new-game  .home-links  .recent-panel  .recent
          .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
+player   .player-head  .avatar-big  .player-id  .player-real  .team-chips  .chip-team(.is-captain)  .walkup  .tabs.is-filter  .pcard(.is-next .is-live)  .next-when  .next-who  .next-inout  .seg.is-inout  .status-line(.is-in .is-out .is-short)  .lineup-me  .live-score
+         .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
+switch   .switcher (dialog)  .switch-head
 league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
 ump      .ump  .score-strip  .side(.is-batting)  .side-name .side-score .side-tag
          .fix-row  .fix-label  .fix-value
@@ -42,6 +45,7 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | teams | `new-team` (submit) · `add-player` (submit) · `gender`(+`data-player`, `data-gender`) · `remove-player` |
 | roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` (selects) |
 | schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
+| player | `player` · `pteam`(+`data-team`=all\|teamId) · `fa-mode`(+`data-mode`=off\|mine\|all) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
 | league | `league` · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
 
@@ -56,6 +60,7 @@ League { id, name, sport, season, seedVersion, umpires:[{ id, name }], teams:{ [
          schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
                      availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
 Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }
+Profile (profiles[personId]) { icon, nickname, walkup:{ title, artist, url }, freeAgent:'off'|'mine'|'all' }
 Team  { id, name, short, sport, captain?:playerId, roster:[{ id, name, gender:'female'|'male', freeAgent?:true, guest?:true, guestFrom?:teamId, guestFor?:schedId }] }
 Game  { id, sport, mode, status:'live'|'final', startedAt, schedId?,
         teams:{ away:Side, home:Side }, events:[Event] }

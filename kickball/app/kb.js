@@ -8,9 +8,9 @@
 
 const KB_KEY = 'kickball-v3';
 const kbState = {
-	teams:[], games:[], game:null, league:null,          /* persisted */
+	teams:[], games:[], game:null, league:null, profiles:{}, /* persisted */
 	me:{ role:'ump', teamId:null, playerId:null, umpId:null }, /* who this phone is acting as (persisted in ui) — stands in for sign-in */
-	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, /* ui */
+	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, pteam:'all', /* ui */
 	pending:{ away:{ in:0, on:0 }, home:{ in:0, on:0 } }
 };
 let kbTicker = null;
@@ -22,8 +22,12 @@ function kbInit() {
 	if (!kbState.teams.length) { kbState.teams = structuredClone(KB_SEED_TEAMS); kbSave(); }
 	kbSeedLeague();
 	/* the landing page hands us a role: /app/?as=captain — take it, then clean the URL */
-	const as = new URLSearchParams(location.search).get('as');
-	if (as && KB_ROLES[as]) { kbState.me = { ...kbState.me, role:as }; kbState.ui.view = 'home'; history.replaceState(null, '', location.pathname); }
+	const qs = new URLSearchParams(location.search), as = qs.get('as'), who = qs.get('who');
+	if (as && KB_ROLES[as]) {
+		kbState.me = { ...kbState.me, role:as };
+		if (who) { if (as === 'ump') kbState.me.umpId = who; else { kbState.me.playerId = who; const ts = kbPersonTeams(who); if (ts.length) kbState.me.teamId = (as === 'captain' && ts.find(t => t.captain === who) || ts[0]).id; } }
+		kbState.ui.view = 'home'; history.replaceState(null, '', location.pathname);
+	}
 	kbNormalizeMe();
 	document.addEventListener('click', kbOnClick);
 	document.addEventListener('change', kbOnChange);
@@ -31,6 +35,7 @@ function kbInit() {
 	/* a refresh puts you back where you were; screens that need a game fall back to home */
 	const needsGame = ['ump', 'captain'], needsTeam = ['team', 'stats'];
 	let view = kbState.ui.view || 'home';
+	if (kbMeRole() === 'player' && view === 'home') view = 'player';
 	if (needsGame.includes(view) && !kbState.game && !(view === 'captain' && kbState.prepId && kbSched(kbState.prepId))) view = 'home';
 	if (needsTeam.includes(view) && !kbTeam(kbState.teamId)) view = 'teams';
 	kbGo(view);
@@ -39,9 +44,9 @@ function kbInit() {
 /* ---------- storage ------------------------------------------------------ */
 function kbLoad() {
 	kbState.ui = {};
-	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.league = s.league || null; kbState.ui = s.ui || {}; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
+	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.league = s.league || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
 }
-function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, league:kbState.league, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, me:kbState.me } })); } catch (e) {} }
+function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, league:kbState.league, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, me:kbState.me } })); } catch (e) {} }
 /* First run (or an older device) gets the seed league, plus any seed team or captain it's missing. */
 function kbSeedLeague() {
 	let dirty = false;
@@ -54,6 +59,10 @@ function kbSeedLeague() {
 		else if ((!t.captain || stale) && seed.captain && kbPlayer(t, seed.captain)) { t.captain = seed.captain; dirty = true; }
 	}
 	if (stale && kbState.me.role === 'ump') kbState.me.umpId = null;
+	/* seed profiles once per person; a person's own edits win */
+	for (const [pid, pr] of Object.entries(window.KB_SEED_PROFILES || {})) if (!kbState.profiles[pid]) { kbState.profiles[pid] = structuredClone(pr); dirty = true; }
+	if (dirty) kbSave();
+	kbSeedDemoGames();
 	if (dirty) kbSave();
 }
 
@@ -132,6 +141,14 @@ const KB_ACTIONS = {
 	'me-team':      (el) => kbSetMe({ teamId:el.value || null, playerId:null }),
 	'me-player':    (el) => kbSetMe({ playerId:el.value || null }),
 	'me-ump':       (el) => kbSetMe({ umpId:el.value || null }),
+	'switch':       () => kbOpenSwitch(),
+	'switch-close': () => kbCloseSwitch(),
+	/* player view */
+	'player':       () => kbGo('player'),
+	'pteam':        (el) => { kbState.pteam = el.dataset.team || 'all'; kbSave(); kbRender(); },
+	'fa-mode':      (el) => { kbSetProfile(kbState.me.playerId, { freeAgent:el.dataset.mode }); kbRender(); kbToast({ off:'Off the free-agent list', mine:'Teams can ask you on nights you already play', all:'Teams can ask you for any game' }[el.dataset.mode]); },
+	'pick-icon':    (el) => { const f = el.closest('form').querySelector('[name="icon"]'); f.value = el.dataset.icon; el.closest('.icon-grid').querySelectorAll('button').forEach(b => { const on = b === el; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); }); },
+	'save-profile': (el) => kbSaveProfile(el.closest('form')),
 	/* schedule + availability */
 	'start-sched':  (el) => kbStartScheduled(el.dataset.sched),
 	'prep':         (el) => kbOpenPrep(el.dataset.sched, el.dataset.team),
@@ -237,8 +254,89 @@ function kbMeLabel() {
 	const me = kbState.me, role = KB_ROLES[kbMeRole()].label, team = kbMeTeam();
 	if (me.role === 'league') return `${role} · ${kbState.league ? kbState.league.name : ''}`;
 	if (me.role === 'ump') { const u = kbState.league && kbState.league.umpires.find(u => u.id === me.umpId); return `${role} · ${u ? kbFirst(u.name) : '—'}`; }
-	const p = team && kbPlayer(team, me.playerId);
+	const p = kbPerson(me.playerId);
+	if (me.role === 'player') return `${kbProfile(me.playerId).icon || ''} ${p ? kbDisplayName(p) : '—'}`.trim();
 	return `${role} · ${team ? team.short : '—'}${p ? ' · ' + kbFirst(p.name) : ''}`;
+}
+
+/* ---------- people: a player is a person who may be on several rosters ------ */
+function kbPersonTeams(pid) { return kbState.teams.filter(t => t.roster.some(p => p.id === pid && !p.guest)); }
+function kbPerson(pid) { for (const t of kbState.teams) { const p = kbPlayer(t, pid); if (p) return { ...p, teams:kbPersonTeams(pid) }; } return null; }
+function kbProfile(pid) { return (kbState.profiles && kbState.profiles[pid]) || {}; }
+function kbDisplayName(p) { if (!p) return ''; const pr = kbProfile(p.id); return pr.nickname || p.name; }
+function kbInitials(name) { return String(name || '').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2); }
+function kbSetProfile(pid, patch) { if (!pid) return; kbState.profiles = kbState.profiles || {}; kbState.profiles[pid] = { ...kbProfile(pid), ...patch }; kbSave(); }
+function kbSaveProfile(form) {
+	const v = n => (form.querySelector(`[name="${n}"]`) || {}).value || '';
+	const pid = kbState.me.playerId; if (!pid) return;
+	kbSetProfile(pid, { icon:v('icon'), nickname:v('nickname').trim(), walkup:{ title:v('walkup-title').trim(), artist:v('walkup-artist').trim(), url:v('walkup-url').trim() } });
+	kbRender(); kbToast('Profile saved');
+}
+/* the switcher (stands in for sign-in) lives in a dialog behind the me-bar pill */
+function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) return; kbRenderWhoami(); if (!d.open) d.showModal(); }
+function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); }
+
+/* ---------- stats across every roster the person is on ------------------- */
+function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0 }; }
+function kbLeagueStats() {
+	const totals = {}; let teamGames = {};
+	for (const g of kbState.games) {
+		for (const s of ['away', 'home']) {
+			const tid = g.teams[s].teamId; if (!tid) continue; teamGames[tid] = (teamGames[tid] || 0) + 1;
+			const d = kbDerive(g);
+			for (const [pid, st] of Object.entries(d.stats[s])) { const t = totals[pid] || (totals[pid] = kbEmptyTotals()); t.g += 1; for (const key of ['pa', 'h', 'r', 'rbi', 'out', 'reached']) t[key] += st[key]; }
+		}
+	}
+	return { totals, teamGames };
+}
+function kbPlayerStats(pid) { return kbLeagueStats().totals[pid] || kbEmptyTotals(); }
+/* five axes, each 0..1 against the league's best; the league average rides along for the overlay */
+function kbRadarAxes(pid) {
+	const { totals } = kbLeagueStats(); const ids = Object.keys(totals).filter(id => totals[id].pa >= 4);
+	const axes = [
+		{ key:'obp',     label:'On base', f:t => t.pa ? t.reached / t.pa : 0, fmt:v => v.toFixed(3).replace(/^0/, '') },
+		{ key:'contact', label:'Contact', f:t => t.pa ? t.h / t.pa : 0, fmt:v => Math.round(v * 100) + '%' },
+		{ key:'runs',    label:'Runs',    f:t => t.g ? t.r / t.g : 0, fmt:v => v.toFixed(1) + '/g' },
+		{ key:'rbi',     label:'RBI',     f:t => t.g ? t.rbi / t.g : 0, fmt:v => v.toFixed(1) + '/g' },
+		{ key:'games',   label:'Games',   f:t => t.g, fmt:v => String(v) }
+	];
+	const mine = totals[pid] || kbEmptyTotals();
+	return axes.map(a => { const vals = ids.map(id => a.f(totals[id])); const max = Math.max(a.f(mine), ...vals, 0.0001); const avg = vals.length ? vals.reduce((x, y) => x + y, 0) / vals.length : 0; const me = a.f(mine); const rank = 1 + vals.filter(v => v > me).length; return { ...a, me, avg, max, norm:me / max, avgNorm:avg / max, rank, of:Math.max(ids.length, ids.includes(pid) ? 0 : 1 + ids.length), text:a.fmt(me) }; });
+}
+function kbRadarSVG(axes) {
+	const n = axes.length, cx = 100, cy = 100, r = 72; const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r * v, cy + Math.sin(a) * r * v]; };
+	const poly = (vals) => vals.map((v, i) => pt(i, Math.max(0.04, v)).map(x => x.toFixed(1)).join(',')).join(' ');
+	const rings = [0.25, 0.5, 0.75, 1].map(s => `<polygon class="radar-ring" points="${poly(axes.map(() => s))}"/>`).join('');
+	const spokes = axes.map((_, i) => { const [x, y] = pt(i, 1); return `<line class="radar-spoke" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`; }).join('');
+	const labels = axes.map((a, i) => { const [x, y] = pt(i, 1.22); return `<text class="radar-label" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${kbEscape(a.label)}</text>`; }).join('');
+	return `<svg class="radar" viewBox="-22 -14 244 228" role="img" aria-label="${kbEscape(axes.map(a => `${a.label} ${a.text}`).join(', '))}">${rings}${spokes}<polygon class="radar-league" points="${poly(axes.map(a => a.avgNorm))}"/><polygon class="radar-me" points="${poly(axes.map(a => a.norm))}"/>${axes.map((a, i) => { const [x, y] = pt(i, Math.max(0.04, a.norm)); return `<circle class="radar-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2"/>`; }).join('')}${labels}</svg>`;
+}
+
+/* ---------- demo games: three finished games so stats and standings have    */
+/* something to show. Deterministic (seeded PRNG), driven through the real     */
+/* engine, marked demo:true. Seeded once per league (league.demoGames).        */
+function kbSeedDemoGames() {
+	const L = kbState.league; if (!L || L.demoGames || kbState.games.length) return;
+	let seed = 20261008; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+	const weights = [['single', 32], ['double', 9], ['triple', 2], ['homer', 4], ['out', 28], ['caught', 12], ['foul', 7], ['missed', 3], ['error', 3]];
+	const pick = () => { let x = rnd() * weights.reduce((a, [, w]) => a + w, 0); for (const [id, w] of weights) { if ((x -= w) <= 0) return id; } return 'out'; };
+	const sideFor = (teamId, flip) => { const t = kbTeam(teamId); const ids = t.roster.filter(p => !p.guest).map(p => p.id); const here = ids.filter((_, i) => rnd() > 0.2 || i < 8); return { name:t.name, teamId, attendance:Object.fromEntries(ids.map(id => [id, here.includes(id)])), lineup:kbBalancedLineup(t, here), assignments:{} }; };
+	const keep = kbState.game;
+	const matchups = [['pitch-please', 'lbc', '2026-09-10'], ['lbc', 'pitch-please', '2026-09-17'], ['pitch-please', 'lbc', '2026-09-24']];
+	matchups.forEach(([away, home, date], n) => {
+		const t0 = new Date(`${date}T19:00:00`).getTime(); let t = t0;
+		const g = { id:'demo-' + n, demo:true, sport:L.sport, mode:'season', status:'live', startedAt:new Date(t0).toISOString(), teams:{ away:sideFor(away), home:sideFor(home) }, events:[{ t, by:'ump', kind:'clock', what:'start' }] };
+		kbState.game = g;
+		for (let guard = 0; guard < 400; guard++) {
+			const d = kbDerive(g); if (d.final || d.inning > 6) break;
+			const side = d.half === 'top' ? 'away' : 'home'; const id = pick(); const a = kbSport(g).actions.find(x => x.id === id); const kk = kbCurrentKicker(side, g);
+			t += 35000 + Math.floor(rnd() * 40000);
+			const ev = { t, by:'ump', kind:a.kind, value:a.value || 0, actionId:a.id, side }; if (a.hit) ev.hit = true; if (kk) ev.player = kk.id;
+			g.events.push(ev);
+		}
+		g.status = 'final'; kbState.games.push(g);
+	});
+	kbState.game = keep; L.demoGames = true; kbSave();
 }
 
 /* ---------- schedule ------------------------------------------------------ */
@@ -292,8 +390,12 @@ function kbSetAvail(schedId, playerId, value) {
 function kbSetFreeAgent(playerId, teamId) {
 	const p = kbPlayer(kbTeam(teamId), playerId); if (!p) return;
 	if (kbMeRole() === 'player' && playerId !== kbState.me.playerId) { kbToast(kbDenied('availability')); return; }
-	p.freeAgent = !p.freeAgent; kbSave(); kbRender(); kbToast(p.freeAgent ? `${kbFirst(p.name)} is a free agent — teams that are short can ask` : `${kbFirst(p.name)} is off the free-agent list`);
+	const next = kbFaMode(playerId) === 'off' ? 'all' : 'off';
+	kbSetProfile(playerId, { freeAgent:next }); kbRender(); kbToast(next === 'all' ? `${kbFirst(p.name)} is a free agent — teams that are short can ask` : `${kbFirst(p.name)} is off the free-agent list`);
 }
+/* free-agent mode: 'off' | 'mine' (only nights I already play) | 'all' (any game). Legacy roster flag = 'all'. */
+function kbFaMode(pid) { const pr = kbProfile(pid); if (pr.freeAgent) return pr.freeAgent; const p = kbPerson(pid); return p && p.freeAgent ? 'all' : 'off'; }
+function kbPlaysOn(pid, date) { return kbPersonTeams(pid).some(t => kbState.league.schedule.some(s => s.date === date && (s.away === t.id || s.home === t.id))); }
 function kbSetLead(schedId, teamId, playerId) {
 	const s = kbSched(schedId); if (!s) return;
 	s.lead = s.lead || {}; if (playerId) s.lead[teamId] = playerId; else delete s.lead[teamId];
@@ -302,7 +404,12 @@ function kbSetLead(schedId, teamId, playerId) {
 /* Free agents on other approved teams who haven't said they're out. */
 function kbFreeAgents(s, forTeamId) {
 	const L = kbState.league; const out = [];
-	for (const t of kbState.teams) { if (t.id === forTeamId || (L.teams[t.id] && L.teams[t.id] !== 'approved')) continue; for (const p of t.roster) if (p.freeAgent && !p.guest && (s.availability || {})[p.id] !== 'out' && !kbPlayer(kbTeam(forTeamId), p.id)) out.push({ ...p, from:t }); }
+	const seen = new Set();
+	for (const t of kbState.teams) { if (t.id === forTeamId || (L.teams[t.id] && L.teams[t.id] !== 'approved')) continue; for (const p of t.roster) {
+		if (p.guest || seen.has(p.id) || kbPlayer(kbTeam(forTeamId), p.id) || (s.availability || {})[p.id] === 'out') continue;
+		const mode = kbFaMode(p.id); if (mode === 'off') continue; if (mode === 'mine' && !kbPlaysOn(p.id, s.date)) continue;
+		seen.add(p.id); out.push({ ...p, from:t, mode });
+	} }
 	return out;
 }
 /* Recruit: copy the player onto the roster as a guest for this game and mark them in. */
@@ -768,13 +875,14 @@ function kbRender() {
 	if (v === 'team') kbRenderTeam();
 	if (v === 'stats') kbRenderStats();
 	if (v === 'league') kbRenderLeague();
+	if (v === 'player') kbRenderPlayer();
 	kbApplyPerms();
 }
 
 /* ---------- me bar + switcher ------------------------------------------- */
 function kbRenderMeBar() {
 	const bar = document.querySelector('.me-bar'); if (!bar) return;
-	bar.innerHTML = `<button type="button" class="me-pill" data-action="go" data-to="home" aria-label="Acting as ${kbEscape(kbMeLabel())} — tap to switch"><span class="me-dot is-${kbMeRole()}" aria-hidden="true"></span>${kbEscape(kbMeLabel())}</button>${kbState.league ? `<span class="me-league">${kbEscape(kbState.league.name)} · ${kbEscape(kbState.league.season)}</span>` : ''}`;
+	bar.innerHTML = `<button type="button" class="me-pill" data-action="switch" aria-haspopup="dialog" aria-controls="switch" aria-label="Signed in as ${kbEscape(kbMeLabel())} — tap to switch"><span class="me-dot is-${kbMeRole()}" aria-hidden="true"></span>${kbEscape(kbMeLabel())}</button>${kbState.league ? `<span class="me-league">${kbEscape(kbState.league.name)} · ${kbEscape(kbState.league.season)}</span>` : ''}`;
 }
 function kbRenderWhoami() {
 	const host = document.querySelector('.whoami'); if (!host) return;
@@ -784,7 +892,7 @@ function kbRenderWhoami() {
 	if (['captain', 'lead', 'player'].includes(role)) ctx += `<div class="field"><label for="me-team">Team</label><select id="me-team" data-action="me-team">${teams.map(t => `<option value="${t.id}" ${t.id === me.teamId ? 'selected' : ''}>${kbEscape(t.name)}</option>`).join('')}</select></div>`;
 	if (['lead', 'player'].includes(role) && team) ctx += `<div class="field"><label for="me-player">I am</label><select id="me-player" data-action="me-player">${team.roster.map(p => `<option value="${p.id}" ${p.id === me.playerId ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>`;
 	if (role === 'ump' && L) ctx += `<div class="field"><label for="me-ump">I am</label><select id="me-ump" data-action="me-ump">${L.umpires.map(u => `<option value="${u.id}" ${u.id === me.umpId ? 'selected' : ''}>${kbEscape(u.name)}</option>`).join('')}</select></div>`;
-	host.innerHTML = `<p class="eyebrow" id="whoami-heading">I am the…</p>
+	host.innerHTML = `<div class="switch-head"><p class="eyebrow" id="whoami-heading">Switch who this phone is (stands in for sign-in)</p><button type="button" class="drawer-close key is-ghost" data-action="switch-close" aria-label="Close">×</button></div>
 		<div class="seg is-roles" role="group" aria-labelledby="whoami-heading">${Object.entries(KB_ROLES).map(([id, r]) => `<button type="button" class="${id === role ? 'is-on' : ''}" data-action="role" data-role="${id}" aria-pressed="${id === role}">${r.label}</button>`).join('')}</div>
 		${ctx ? `<div class="field-pair whoami-ctx">${ctx}</div>` : ''}
 		<p class="hint">${{ league:'Sets the rules, approves teams, assigns umps.', ump:'Keeps score for the games assigned to you.', captain:`Runs the roster and lineup${team && team.captain ? ' · captain is ' + kbEscape(kbPlayer(team, team.captain)?.name || '') : ''}. Can name a lead for a game.`, lead:'Runs the lineup for one game when the captain can’t.', player:'Says in or out for each game; can watch live; can sign up as a free agent.' }[role]}</p>`;
@@ -829,7 +937,8 @@ function kbRenderRoleHome() {
 			<section class="role-card"><p class="eyebrow">Who’s in</p><ul class="avail-list">${team.roster.map(p => { const v = (next.availability || {})[p.id]; return `<li class="avail-row"><span class="roster-name">${kbEscape(p.name)}${p.guest ? ' <small>guest</small>' : ''}</span><span class="seg">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${next.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span></li>`; }).join('')}</ul></section>`;
 		} else html = `<section class="role-card"><p class="eyebrow">${kbEscape(team.name)}</p><p class="hint">No games scheduled. The league adds games.</p><div class="pad-bar is-2">${role === 'captain' ? `<button type="button" class="key is-ghost" data-action="team" data-team="${team.id}">Roster</button>` : ''}</div></section>`;
 	}
-	if (role === 'player' && team) {
+	if (role === 'player') { html = `<section class="role-card"><p class="eyebrow">You</p><div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="player">My page</button></div></section>`; }
+	if (false) {
 		const p = kbPlayer(team, me.playerId); const games = kbUpcoming(team.id).slice(0, 4);
 		const watch = kbState.game && kbState.game.status === 'live' ? `<section class="role-card is-live"><p class="eyebrow">Live now</p><p class="sched-who">${kbEscape(kbState.game.teams.away.name)} <strong>${kbDerive().score.away}</strong> – <strong>${kbDerive().score.home}</strong> ${kbEscape(kbState.game.teams.home.name)}</p><div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="ump">Watch</button></div></section>` : '';
 		html = `${watch}<section class="role-card"><p class="eyebrow">Can you make it? · ${kbEscape(team.name)}</p>
@@ -845,7 +954,6 @@ function kbStandingsHTML() {
 }
 
 function kbRenderHome() {
-	kbRenderWhoami();
 	kbRenderRoleHome();
 	const form = document.querySelector('.new-game'); if (form) form.hidden = !kbCan('start-game');
 	const links = document.querySelector('.home-links'); if (links) links.hidden = kbMeRole() === 'league';
@@ -1216,4 +1324,101 @@ function kbRenderStats() {
 	host.innerHTML = `
 	<header class="page-head"><button type="button" class="key is-ghost back" data-action="team" data-team="${team.id}" aria-label="Back">←</button><div><p class="eyebrow">${games} saved game${games === 1 ? '' : 's'}</p><h1>${kbEscape(team.name)}</h1></div></header>
 	${rows.length ? `<div class="linescore is-open"><table><thead><tr><th>Player</th><th>G</th><th>PA</th><th>H</th><th>R</th><th>RBI</th><th>OBP</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.p.name)}</th><td>${r.s.g}</td><td>${r.s.pa}</td><td>${r.s.h}</td><td>${r.s.r}</td><td>${r.s.rbi}</td><td>${kbObp(r.s)}</td></tr>`).join('')}</tbody></table></div>` : '<p class="empty">No saved games with this team yet. Finish a game with "Save & done" and the numbers show up here.</p>'}`;
+}
+
+/* ========================================================================== */
+/* PLAYER — one person's page: next game, in/out, lineup, live, free agent,    */
+/* stats vs the league, settings. Sleeper-style cards. Team filter when the    */
+/* person is on more than one roster.                                         */
+/* ========================================================================== */
+function kbMyTeamsFiltered() { const ts = kbPersonTeams(kbState.me.playerId); return kbState.pteam === 'all' ? ts : ts.filter(t => t.id === kbState.pteam); }
+function kbRenderPlayer() {
+	const host = document.querySelector('.player'); if (!host) return;
+	const me = kbState.me, p = kbPerson(me.playerId), L = kbState.league;
+	if (!p) { host.innerHTML = '<p class="empty">No player picked. <button type="button" class="key is-ghost" data-action="switch">Switch</button></p>'; return; }
+	const pr = kbProfile(p.id), teams = kbPersonTeams(p.id), mine = kbMyTeamsFiltered(); const ids = mine.map(t => t.id);
+	if (kbState.pteam !== 'all' && !ids.length) { kbState.pteam = 'all'; return kbRenderPlayer(); }
+	const sched = kbSchedSorted().filter(s => ids.includes(s.away) || ids.includes(s.home));
+	const upcoming = sched.filter(s => s.status !== 'final'), played = sched.filter(s => s.status === 'final').slice(-3).reverse();
+	const live = kbState.game && kbState.game.status === 'live' && (ids.includes(kbState.game.teams.away.teamId) || ids.includes(kbState.game.teams.home.teamId)) ? kbState.game : null;
+	const myTeamIn = (s) => kbTeam(ids.includes(s.home) ? s.home : s.away);
+	const inout = (s) => { const v = (s.availability || {})[p.id]; return `<span class="seg is-inout">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span>`; };
+	const row = (s, extra = '') => { const t = myTeamIn(s); const opp = kbTeam(kbOpponent(s, t.id)); return `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}${teams.length > 1 ? ' · ' + kbEscape(t.short) : ''}</span><span class="sched-who">${s.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}${s.result ? ` <strong>${s.away === t.id ? `${s.result.away}–${s.result.home}` : `${s.result.home}–${s.result.away}`}${(s.result.away > s.result.home) === (s.away === t.id) ? ' W' : s.result.away === s.result.home ? ' T' : ' L'}</strong>` : ''}</span>${extra}</li>`; };
+
+	/* --- next game card --- */
+	const next = upcoming[0]; let nextHTML = '';
+	if (live) { const d = kbDerive(live); const k = kbCurrentKicker(d.half === 'top' ? 'away' : 'home', live);
+		nextHTML = `<section class="pcard is-live"><p class="eyebrow">Live now</p><p class="live-score"><span>${kbEscape(live.teams.away.name)}</span><strong>${d.score.away}</strong><em>–</em><strong>${d.score.home}</strong><span>${kbEscape(live.teams.home.name)}</span></p><p class="hint">${d.half === 'top' ? 'Top' : 'Bottom'} ${d.inning} · ${d.outs} out${k ? ' · up: ' + kbEscape(kbDisplayName(k)) : ''}</p><div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="go" data-to="ump">Watch</button></div></section>`; }
+	else if (next) { const t = myTeamIn(next); const opp = kbTeam(kbOpponent(next, t.id)); const c = kbAvailCounts(next, t.id); const leadId = (next.lead || {})[t.id]; const lead = leadId && kbPlayer(t, leadId); const cfg = kbSport({ sport:L.sport }); const min = cfg.team ? cfg.team.minPlayers : 0;
+		const prep = next.prep, side = prep ? (prep.teams.home.teamId === t.id ? 'home' : 'away') : null; const active = prep ? kbActiveLineup(side, prep) : []; const spot = active.findIndex(slot => kbSlotIds(slot).includes(p.id)); const pos = prep ? Object.entries(prep.teams[side].assignments).find(([, id]) => id === p.id) : null;
+		nextHTML = `<section class="pcard is-next"><p class="eyebrow">Next game${teams.length > 1 ? ' · ' + kbEscape(t.name) : ''}</p>
+			<p class="next-when">${kbEscape(kbSchedDate(next))}${next.field ? ' · ' + kbEscape(next.field) : ''}</p>
+			<h2 class="next-who">${next.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}</h2>
+			<div class="next-inout">${inout(next)}</div>
+			<p class="status-line"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
+			<p class="hint">${lead ? `${kbEscape(kbDisplayName(lead))} is running this one` : t.captain && kbPlayer(t, t.captain) ? `${kbEscape(kbDisplayName(kbPlayer(t, t.captain)))} (captain) is running this one` : ''}</p>
+			${prep ? `<p class="lineup-me">${spot >= 0 ? `You’re kicking <strong>${spot + 1}${['st', 'nd', 'rd'][spot] || 'th'}</strong>${pos ? ` · <strong>${kbEscape(pos[0])}</strong>` : ''}` : 'You’re not in the lineup yet'}</p>` : '<p class="lineup-me">Lineup not set yet</p>'}
+		</section>`; }
+	else nextHTML = `<section class="pcard"><p class="eyebrow">Next game</p><p class="hint">Nothing scheduled${kbState.pteam !== 'all' ? ' for this team' : ''}.</p></section>`;
+
+	/* --- stats --- */
+	const st = kbPlayerStats(p.id), axes = kbRadarAxes(p.id), obp = axes[0];
+	const { totals } = kbLeagueStats(); const board = Object.entries(totals).filter(([, t]) => t.pa >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, obp:t.reached / t.pa })).filter(x => x.p).sort((a, b) => b.obp - a.obp || b.t.h - a.t.h).slice(0, 8);
+	const myRank = board.findIndex(x => x.id === p.id);
+	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}, on base ${obp.text} (${obp.rank}${['st', 'nd', 'rd'][obp.rank - 1] || 'th'} of ${obp.of}), ${st.h} hit${st.h === 1 ? '' : 's'}, ${st.r} run${st.r === 1 ? '' : 's'} scored, ${st.rbi} driven in.` : 'No games on the books yet — stats start with your first game.';
+
+	/* --- settings --- */
+	const icons = (window.KB_ICONS || []).map(i => `<button type="button" class="${pr.icon === i ? 'is-on' : ''}" data-action="pick-icon" data-icon="${i}" aria-pressed="${pr.icon === i}" aria-label="Icon ${i}">${i}</button>`).join('');
+	const w = pr.walkup || {};
+	host.innerHTML = `
+	<!-- ===== PLAYER HEAD : who I am, which teams ===== -->
+	<header class="player-head">
+		<span class="avatar-big" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span>
+		<div class="player-id">
+			<h1>${kbEscape(kbDisplayName(p))}</h1>
+			${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}
+			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></p>
+			${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}${w.url ? ` <a href="${kbEscape(w.url)}" target="_blank" rel="noopener">play</a>` : ''}</p>` : ''}
+		</div>
+	</header>
+	${teams.length > 1 ? `<nav class="tabs is-filter" aria-label="Which team"><button type="button" class="${kbState.pteam === 'all' ? 'is-on' : ''}" data-action="pteam" data-team="all" aria-pressed="${kbState.pteam === 'all'}">All</button>${teams.map(t => `<button type="button" class="${kbState.pteam === t.id ? 'is-on' : ''}" data-action="pteam" data-team="${t.id}" aria-pressed="${kbState.pteam === t.id}">${kbEscape(t.short)}</button>`).join('')}</nav>` : ''}
+
+	${nextHTML}
+
+	<!-- ===== SCHEDULE : the rest, in or out ===== -->
+	<section class="pcard"><p class="eyebrow">Schedule</p>
+		<ul class="sched-list">${upcoming.slice(live ? 0 : 1).map(s => row(s, inout(s))).join('') || '<li class="is-empty">No more games scheduled</li>'}</ul>
+		${played.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">Played</p><ul class="sched-list">${played.map(s => row(s)).join('')}</ul>` : ''}
+	</section>
+
+	<!-- ===== FREE AGENT : opt in, for my nights or any night ===== -->
+	<section class="pcard"><p class="eyebrow">Free agent</p>
+		<p class="hint">Teams that are short can ask you to fill in. Pick when.</p>
+		<div class="tabs is-fa" role="group" aria-label="Free agent">${[['off', 'Off'], ['mine', 'Nights I already play'], ['all', 'Any game']].map(([m, l]) => `<button type="button" class="${kbFaMode(p.id) === m ? 'is-on' : ''}" data-action="fa-mode" data-mode="${m}" aria-pressed="${kbFaMode(p.id) === m}">${l}</button>`).join('')}</div>
+	</section>
+
+	<!-- ===== STATS : me vs the league ===== -->
+	<section class="pcard"><p class="eyebrow">Season · ${kbEscape(L.season)}</p>
+		<div class="stats-wrap">
+			${kbRadarSVG(axes)}
+			<ul class="stat-grid">${[['G', st.g], ['PA', st.pa], ['H', st.h], ['R', st.r], ['RBI', st.rbi], ['OBP', kbObp(st)]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
+		</div>
+		<p class="radar-key"><i class="is-me"></i> You <i class="is-league"></i> League average</p>
+		<p class="stat-text">${kbEscape(summary)}</p>
+		${board.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">League · on base</p><ol class="leaders">${board.map((x, i) => `<li class="${x.id === p.id ? 'is-me' : ''}"><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))} <small>${x.p.teams.map(t => t.short).join('/')}</small></span><strong>${x.obp.toFixed(3).replace(/^0/, '')}</strong></li>`).join('')}${myRank < 0 && st.pa ? `<li class="is-me"><span class="leader-n">${obp.rank}</span><span class="leader-name">${kbEscape(kbDisplayName(p))}</span><strong>${obp.text}</strong></li>` : ''}</ol>` : ''}
+	</section>
+
+	<!-- ===== SETTINGS : profile ===== -->
+	<details class="pcard settings"><summary>Settings</summary>
+		<form class="profile-form">
+			<input type="hidden" name="icon" value="${kbEscape(pr.icon || '')}">
+			<p class="eyebrow">Icon</p><div class="icon-grid" role="group" aria-label="Choose an icon">${icons}</div>
+			<div class="field"><label for="pf-nick">Nickname</label><input id="pf-nick" name="nickname" value="${kbEscape(pr.nickname || '')}" autocomplete="off" placeholder="${kbEscape(kbFirst(p.name))}"></div>
+			<p class="eyebrow">Walk-up song</p>
+			<div class="field-pair"><div class="field"><label for="pf-wt">Title</label><input id="pf-wt" name="walkup-title" value="${kbEscape(w.title || '')}" autocomplete="off"></div><div class="field"><label for="pf-wa">Artist</label><input id="pf-wa" name="walkup-artist" value="${kbEscape(w.artist || '')}" autocomplete="off"></div></div>
+			<div class="field"><label for="pf-wu">Link (Spotify, YouTube…)</label><input id="pf-wu" name="walkup-url" type="url" value="${kbEscape(w.url || '')}" autocomplete="off" placeholder="https://"></div>
+			<p class="hint">Your name on the roster is the captain’s to change.</p>
+			<button type="submit" class="key is-primary" data-action="save-profile">Save</button>
+		</form>
+	</details>`;
 }

@@ -33,9 +33,6 @@
 		<p class="brand"><span class="brand-dot" aria-hidden="true"></span> Scorekeeper</p>
 		<h1>Keep score</h1>
 
-		<!-- ===== WHOAMI : role switcher + context (team / player / ump) ===== -->
-		<section class="whoami"></section>
-
 		<button type="button" class="continue-card" data-action="go" data-to="ump" hidden>
 			<span class="card-eyebrow">Continue</span>
 			<span class="card-teams" data-field="teams"></span>
@@ -81,7 +78,6 @@
 			<ul class="recent"></ul>
 		</section>
 
-		<p class="home-note">Everything is saved on this phone. Rules live in <code>data.js</code> — a sport is a config.</p>
 	</main>
 
 	<!-- ===== UMP : the card, digital — rendered by kbRenderUmp from the sport config ===== -->
@@ -101,6 +97,12 @@
 
 	<!-- ===== LEAGUE : rules, team approvals, umpires, schedule, standings ===== -->
 	<main class="view league page" data-view="league"></main>
+
+	<!-- ===== PLAYER : one person's page — next game, schedule, free agent, stats, settings ===== -->
+	<main class="view player page" data-view="player"></main>
+
+	<!-- ===== SWITCH : who this phone is (stands in for sign-in); opened from the me-bar pill ===== -->
+	<dialog class="switcher" id="switch" aria-labelledby="whoami-heading"><section class="whoami"></section></dialog>
 
 	<script>
 		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");
