@@ -474,5 +474,14 @@ test('seasons: stats scope to a season or all; overlays scale against the primar
 	assert.equal(run(`kbSeasonName('spring-2026')`), 'Spring 2026');
 	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbStartScheduled('s1');`);
 	assert.equal(run('kbState.game.season'), 'fall-2026');
-	assert.match(run(`kbPlayerCardHTML('devin-hart', { sched:'s1', team:'lbc', from:'pitch-please' })`), /LF[\s\S]*data-action="recruit"/);
+	assert.match(run(`kbPlayerCardHTML('devin-hart', { sched:'s1', team:'lbc', from:'pitch-please' })`), /OF[\s\S]*data-action="recruit"/);
+});
+
+test('free agency positions: a multi-pick of OF SS 1B 2B 3B C; an old single code migrates to its group', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = { 'thom-griggs':{ position:'CFR' }, 'nina-patel':{ position:'C/SS' } }; kbState.games = []; kbSeedLeague();`);
+	assert.deepEqual(run(`kbFaPositions()`), ['OF', 'SS', '1B', '2B', '3B', 'C']);
+	assert.deepEqual(run(`kbMyPositions('thom-griggs')`), ['OF'], 'CFR is outfield');
+	assert.deepEqual(run(`kbMyPositions('nina-patel')`), ['C'], 'C/SS counts as catcher');
+	assert.equal(run(`kbProfile('thom-griggs').position`), undefined);
+	assert.equal(run(`kbPositionsLabel('jake-fields')`), 'C · 1B');
 });

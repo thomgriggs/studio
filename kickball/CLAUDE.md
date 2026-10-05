@@ -42,7 +42,7 @@ Static HTML/CSS/JS, no build step, phone-first. `index.html` at the root is the 
 - **Game ends** (`kbCheckEnd` after a half, `kbCheckWalkoff` after any event): mercy tiers for the mode after full innings; time — the last inning completes, ties stand if `tiesAllowed[mode]`, else overtime if configured; home leads in the bottom of the last inning / OT → final.
 - **Courtesy runner**: replaces the runner with that side's last out of the same gender (`lastOutBy`).
 - **Cornhole**: per round, points = in×3 + on×1 per side; cancellation → only the leader scores the difference; `bust` optionally resets over `pointsToWin`; win at `pointsToWin` with `winBy`.
-- **Positions** are the league’s codes (`team.positions`: C/SS · 1B · 2B · 3B · SS · LF · CFL/SS · C · CFR · RF; long names in `team.positionNames`); the six with a short-stop or base count as infield for the 6-infielder rule. Self-pitch: no defensive pitcher.
+- **Positions** are the league’s codes (`team.positions`: C/SS · 1B · 2B · 3B · SS · LF · CFL/SS · C · CFR · RF; long names in `team.positionNames`); the six with a short-stop or base count as infield for the 6-infielder rule. Self-pitch: no defensive pitcher. Free agency asks a simpler question — `team.faPositions` OF · SS · 1B · 2B · 3B · C, multi-pick, stored as `profile.positions[]`; `team.faPositionOf` maps a lineup code to its group.
 - **Warnings** (captain): `< minPlayers`; `< minWomen`; back-to-back men (wraps last → first; a shared all-men slot counts as one man); `> maxFielders`; `> maxMenOnField`; `> maxInfielders` among `infield[]`; fielders `< minPlayers`.
 
 ## Test recipes

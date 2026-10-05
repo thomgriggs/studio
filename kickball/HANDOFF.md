@@ -45,7 +45,7 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | teams | `new-team` (submit) · `add-player` (submit) · `gender`(+`data-player`, `data-gender`) · `remove-player` |
 | roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` (selects) |
 | schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
-| player | `player` · `pteam`(+`data-team`=all\|teamId) · `fa-mode`(+`data-mode`=off\|mine\|all) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
+| player | `player` · `pteam`(+`data-team`=all\|teamId) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
 | league | `league` · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
 
@@ -60,7 +60,7 @@ League { id, name, sport, season, seedVersion, umpires:[{ id, name }], teams:{ [
          schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
                      availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
 Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }
-Profile (profiles[personId]) { icon, nickname, walkup:{ title, artist, url }, freeAgent:'off'|'mine'|'all' }
+Profile (profiles[personId]) { icon, nickname, positions:[faPosition], walkup:{ title, artist, url }, freeAgent:'off'|'mine'|'all' }
 Team  { id, name, short, sport, captain?:playerId, roster:[{ id, name, gender:'female'|'male', freeAgent?:true, guest?:true, guestFrom?:teamId, guestFor?:schedId }] }
 Game  { id, sport, mode, status:'live'|'final', startedAt, schedId?,
         teams:{ away:Side, home:Side }, events:[Event] }
