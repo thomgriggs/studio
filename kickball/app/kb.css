@@ -341,9 +341,18 @@ input, select { font:inherit; }
 /* ========================================================================== */
 /* WHOAMI : the role switcher on Home                                         */
 /* ========================================================================== */
-.whoami { display:grid; gap:var(--space_sm); padding:var(--space_md); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
+.whoami { display:grid; gap:var(--space_md); padding:var(--space_lg); border-radius:var(--radius_md); background:var(--color_bg-raised); border:1px solid var(--color_line); }
 .seg.is-roles { display:grid; grid-template-columns:repeat(5, 1fr); padding:3px; border-radius:var(--radius_md); }
-.seg.is-roles button { min-width:0; min-height:44px; padding:0 2px; border-radius:var(--radius_sm); font-size:var(--font_size-xs); }
+.seg.is-roles button { min-width:0; min-height:44px; padding:0 2px; border-radius:var(--radius_sm); font-size:var(--font_size-xs); font-weight:800; color:var(--color_text-muted); }
+.seg.is-roles button.is-on { background:var(--color_accent); color:var(--color_accent-text); }
+.switch-head { display:flex; justify-content:space-between; align-items:flex-start; gap:var(--space_md); }
+.switch-head h2 { font-size:var(--font_size-xl); line-height:1.1; }
+.switch-head .hint { margin-top:var(--space_xs); }
+.whoami-ctx .field { display:grid; gap:var(--space_xs); }
+.whoami-ctx .field label { font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.1em; color:var(--color_text-dim); font-weight:700; }
+.whoami-ctx .field.is-wide { grid-column:1 / -1; }
+.whoami-ctx .field select { width:100%; }
+.whoami-blurb { padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); color:var(--color_text-muted); }
 .whoami-ctx { grid-template-columns:1fr 1fr; }
 .whoami-ctx .field select { min-height:44px; font-size:var(--font_size-sm); }
 

@@ -1091,16 +1091,23 @@ function kbRenderMeBar() {
 }
 function kbRenderWhoami() {
 	const host = document.querySelector('.whoami'); if (!host) return;
-	const me = kbState.me, role = kbMeRole(), L = kbState.league, team = kbMeTeam();
+	const me = kbState.me, role = kbMeRole(), team = kbMeTeam();
 	const teams = kbState.teams.filter(t => t.roster.length);
+	const teamOpt = (t) => { const L = kbLeagueOfTeam(t.id); return `<option value="${t.id}" ${t.id === me.teamId ? 'selected' : ''}>${kbEscape(t.name)}${L ? ' · ' + kbEscape(L.night) : ''}</option>`; };
 	let ctx = '';
-	if (['captain', 'lead', 'player'].includes(role)) ctx += `<div class="field"><label for="me-team">Team</label><select id="me-team" data-action="me-team">${teams.map(t => `<option value="${t.id}" ${t.id === me.teamId ? 'selected' : ''}>${kbEscape(t.name)}</option>`).join('')}</select></div>`;
-	if (['lead', 'player'].includes(role) && team) ctx += `<div class="field"><label for="me-player">I am</label><select id="me-player" data-action="me-player">${team.roster.map(p => `<option value="${p.id}" ${p.id === me.playerId ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>`;
-	if (role === 'ump' && L) ctx += `<div class="field"><label for="me-ump">I am</label><select id="me-ump" data-action="me-ump">${L.umpires.map(u => `<option value="${u.id}" ${u.id === me.umpId ? 'selected' : ''}>${kbEscape(u.name)}</option>`).join('')}</select></div>`;
-	host.innerHTML = `<div class="switch-head"><p class="eyebrow" id="whoami-heading">Switch who this phone is (stands in for sign-in)</p><button type="button" class="drawer-close key is-ghost" data-action="switch-close" aria-label="Close">×</button></div>
+	if (role === 'captain' || role === 'lead') ctx += `<div class="field ${role === 'captain' ? 'is-wide' : ''}"><label for="me-team">Team</label><select id="me-team" data-action="me-team">${teams.map(teamOpt).join('')}</select></div>`;
+	if (role === 'lead' && team) ctx += `<div class="field"><label for="me-player">I am</label><select id="me-player" data-action="me-player">${team.roster.filter(p => !p.guest).map(p => `<option value="${p.id}" ${p.id === me.playerId ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>`;
+	if (role === 'player') { /* one person may be on several rosters — list everyone once, grouped by team */
+		const seen = new Set();
+		ctx += `<div class="field is-wide"><label for="me-player">I am</label><select id="me-player" data-action="me-player">${teams.map(t => { const ps = t.roster.filter(p => !p.guest && !seen.has(p.id)); ps.forEach(p => seen.add(p.id)); return ps.length ? `<optgroup label="${kbEscape(t.name)}">${ps.map(p => `<option value="${p.id}" ${p.id === me.playerId ? 'selected' : ''}>${kbEscape(p.name)}${kbPersonTeams(p.id).length > 1 ? ' · ' + kbPersonTeams(p.id).map(x => x.short).join(' + ') : ''}</option>`).join('')}</optgroup>` : ''; }).join('')}</select></div>`; }
+	if (role === 'ump') { const umps = []; kbState.leagues.forEach(L => (L.umpires || []).forEach(u => { if (!umps.find(x => x.id === u.id)) umps.push(u); }));
+		ctx += `<div class="field is-wide"><label for="me-ump">I am</label><select id="me-ump" data-action="me-ump">${umps.map(u => `<option value="${u.id}" ${u.id === me.umpId ? 'selected' : ''}>${kbEscape(u.name)}</option>`).join('')}</select></div>`; }
+	const blurb = { league:'Set the rules, approve teams, assign umps, keep the schedule.', ump:'Keep score for the games assigned to you.', captain:`Roster, lineup, positions${team && team.captain ? ' · ' + kbEscape(kbPlayer(team, team.captain)?.name || '') + ' is captain' : ''}. Name a lead for a game you’ll miss.`, lead:'Run the lineup for one game when the captain is out.', player:'In or out for each game, watch live, sign up as a free agent.' }[role];
+	host.innerHTML = `<div class="switch-head"><div><h2 id="whoami-heading">Who are you?</h2><p class="hint">Stands in for sign-in. Pick a role, then a person.</p></div><button type="button" class="drawer-close key is-ghost" data-action="switch-close" aria-label="Close">×</button></div>
 		<div class="seg is-roles" role="group" aria-labelledby="whoami-heading">${Object.entries(KB_ROLES).map(([id, r]) => `<button type="button" class="${id === role ? 'is-on' : ''}" data-action="role" data-role="${id}" aria-pressed="${id === role}">${r.label}</button>`).join('')}</div>
 		${ctx ? `<div class="field-pair whoami-ctx">${ctx}</div>` : ''}
-		<p class="hint">${{ league:'Sets the rules, approves teams, assigns umps.', ump:'Keeps score for the games assigned to you.', captain:`Runs the roster and lineup${team && team.captain ? ' · captain is ' + kbEscape(kbPlayer(team, team.captain)?.name || '') : ''}. Can name a lead for a game.`, lead:'Runs the lineup for one game when the captain can’t.', player:'Says in or out for each game; can watch live; can sign up as a free agent.' }[role]}</p>`;
+		<p class="hint whoami-blurb">${blurb}</p>
+		<button type="button" class="key is-primary" data-action="switch-close">Done · ${kbEscape(kbMeLabel())}</button>`;
 }
 
 /* Home is role-aware: what this person needs to do today, then the shared bits. */
