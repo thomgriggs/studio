@@ -484,6 +484,8 @@ input, select { font:inherit; }
 .rainout.is-inline.is-go { border-left-color:var(--color_accent); } .rainout.is-inline.is-no { border-left-color:var(--color_danger); } .rainout.is-inline.is-warn { border-left-color:var(--color_warn); }
 .seg.is-inout.is-sm button { min-height:36px; min-width:44px; padding:0 var(--space_sm); font-size:var(--font_size-xs); }
 .seg button.is-maybe { color:var(--color_bg); background:var(--color_warn); }
+.seg.is-inout .is-q { min-width:40px; font-size:var(--font_size-md); }
+.status-line .is-q { color:var(--color_warn); }
 .lead-chip { display:inline-flex; align-items:center; gap:var(--space_xs); justify-self:start; align-self:center; min-height:36px; padding:0 var(--space_sm) 0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-sunken); border:1px solid var(--color_line-strong); font-size:var(--font_size-sm); font-weight:700; color:var(--color_text-muted); }
 .chip-x { min-width:28px; min-height:28px; border-radius:50%; color:var(--color_text-muted); font-size:var(--font_size-md); }
 .roster-name.as-link { background:none; border:0; padding:0; color:inherit; font:inherit; font-weight:700; text-align:left; cursor:pointer; min-height:44px; }

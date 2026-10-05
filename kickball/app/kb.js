@@ -510,7 +510,7 @@ function kbSchedName(s, side) { const t = kbTeam(s[side]); return t ? t.name : s
 function kbOpponent(s, teamId) { return s.away === teamId ? s.home : s.away; }
 function kbAvailCounts(s, teamId) { const team = kbTeam(teamId); const a = s.availability || {}; const c = { in:0, maybe:0, out:0, unknown:0 }; if (team) for (const p of team.roster) c[['in', 'maybe', 'out'].includes(a[p.id]) ? a[p.id] : 'unknown'] += 1; return c; }
 /* the In · Maybe · Out control for one person on one game */
-function kbInOutHTML(s, pid, cls = '') { const v = (s.availability || {})[pid]; return `<span class="seg is-inout ${cls}">${[['in', 'In'], ['maybe', 'Maybe'], ['out', 'Out']].map(([x, l]) => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${pid}" data-value="${x}" aria-pressed="${v === x}">${l}</button>`).join('')}</span>`; }
+function kbInOutHTML(s, pid, cls = '') { const v = (s.availability || {})[pid]; return `<span class="seg is-inout ${cls}">${[['in', 'In', 'In'], ['maybe', '?', 'Not sure yet'], ['out', 'Out', 'Out']].map(([x, l, a]) => `<button type="button" class="${v === x ? 'is-on is-' + x : ''} ${x === 'maybe' ? 'is-q' : ''}" data-action="avail" data-sched="${s.id}" data-player="${pid}" data-value="${x}" aria-pressed="${v === x}" aria-label="${a}">${l}</button>`).join('')}</span>`; }
 /* A side built from a team's roster + this game's availability (unknown counts as here, like today). */
 function kbSideFromSched(s, side) {
 	const teamId = s[side], team = kbTeam(teamId), cfg = KB_SPORTS[kbLeagueOfSched(s).sport];
@@ -550,7 +550,7 @@ function kbSetAvail(schedId, playerId, value) {
 	s.availability = s.availability || {}; s.availability[playerId] = value;
 	/* keep a prep in step if the captain already opened one */
 	if (s.prep) for (const side of ['away', 'home']) { const t = s.prep.teams[side]; if (t.teamId && kbPlayer(kbTeam(t.teamId), playerId)) { t.attendance[playerId] = value === 'in'; if (value === 'in' && !t.lineup.some(slot => kbSlotIds(slot).includes(playerId))) t.lineup.push(playerId); } }
-	if (value === 'maybe' && kbState.me.playerId === playerId) kbToast('Marked maybe — the captain will count you when you say In');
+	if (value === 'maybe' && kbState.me.playerId === playerId) kbToast('Not sure yet — the captain counts you when you say In');
 	kbSave(); kbRender();
 }
 function kbSetFreeAgent(playerId, teamId) {
@@ -1064,6 +1064,7 @@ function kbRender() {
 	const open = sameView ? [...document.querySelectorAll('.view.is-current details[open]')].map(d => d.className) : [];
 	kbLastView = v;
 	kbRenderMeBar();
+	{ const sw = document.getElementById('switch'); if (sw && sw.open) kbRenderWhoami(); }
 	if (v === 'home') kbRenderHome();
 	if (v === 'ump') kbRenderUmp();
 	if (v === 'captain') kbRenderCaptain();
@@ -1550,7 +1551,7 @@ function kbRenderPlayer() {
 			<h2 class="next-who">${next.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}</h2>
 			${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(NL)}
 			<div class="next-inout">${inout(next)}</div>
-			<p class="status-line"><strong class="is-in">${c.in} in</strong> · ${c.maybe} maybe · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
+			<p class="status-line"><strong class="is-in">${c.in} in</strong> · <strong class="is-q">${c.maybe} ?</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
 			<p class="hint">${lead ? `${kbEscape(kbDisplayName(lead))} is running this one` : t.captain && kbPlayer(t, t.captain) ? `${kbEscape(kbDisplayName(kbPlayer(t, t.captain)))} (captain) is running this one` : ''}</p>
 			${prep ? `<p class="lineup-me">${spot >= 0 ? `You’re kicking <strong>${spot + 1}${['st', 'nd', 'rd'][spot] || 'th'}</strong>${pos ? ` · <strong>${kbEscape(pos[0])}</strong>` : ''}` : 'You’re not in the lineup yet'}</p>` : '<p class="lineup-me">Lineup not set yet</p>'}
 		</section>`; }
@@ -1692,7 +1693,7 @@ function kbCaptainHomeHTML(team, role, me, L) {
 		<p class="next-when">${kbEscape(kbSchedDate(next))}${next.field ? ' · ' + kbEscape(next.field) : ''}</p>
 		<h2 class="next-who">${next.home === team.id ? 'vs' : '@'} ${oppLink(next)}</h2>
 		${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(TL).replace('class="rainout ', 'class="rainout is-inline ')}
-		<p class="status-line"><strong class="is-in">${c.in} in</strong> · ${c.maybe} maybe · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
+		<p class="status-line"><strong class="is-in">${c.in} in</strong> · <strong class="is-q">${c.maybe} ?</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
 		<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="prep" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">${live ? 'Lineup (live)' : 'Lineup & positions'}</button>${lead ? `<span class="lead-chip">Lead: ${kbEscape(kbDisplayName(lead))}${role === 'captain' ? ` <button type="button" class="chip-x" data-action="set-lead-clear" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}" aria-label="Remove lead">×</button>` : ''}</span>` : ''}</div>
 		${role === 'captain' && capOut && !leadId ? kbLeadFieldHTML(next, team, me) : ''}
 		${role === 'lead' && leadId !== me.playerId ? `<p class="hint">${lead ? kbEscape(kbDisplayName(lead)) + ' is running this one' : 'No lead named'} — only the lead edits the lineup.</p>` : ''}
@@ -1715,8 +1716,8 @@ function kbCaptainHomeHTML(team, role, me, L) {
 		<ul class="sched-list is-captain">${upcoming.map(s => { const v = (s.availability || {})[team.captain]; return `<li class="sched-row ${s.status === 'rainout' ? 'is-rainout' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}</span><span class="sched-who">${s.home === team.id ? 'vs' : '@'} ${oppLink(s)}${s.status === 'rainout' ? ' <strong class="is-rain">Rained out</strong>' : ''}</span>${s.status === 'rainout' || role !== 'captain' ? '' : kbInOutHTML(s, team.captain, 'is-sm') + `<div class="sched-lead">${kbLeadFieldHTML(s, team, me)}</div>`}</li>`; }).join('') || '<li class="is-empty">No more games this season</li>'}</ul>
 		${played.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">Results</p><ul class="sched-list">${played.map(s => { const us = s.away === team.id ? s.result.away : s.result.home, them = s.away === team.id ? s.result.home : s.result.away; return `<li class="sched-row is-final"><span class="sched-when">${kbEscape(kbSchedDate(s))}</span><span class="sched-who">${s.home === team.id ? 'vs' : '@'} ${oppLink(s)} <strong>${us}–${them} ${us > them ? 'W' : us < them ? 'L' : 'T'}</strong></span></li>`; }).join('')}</ul>` : ''}
 	</section>`;
-	/* roster (captain only edits) */
-	html += `
+	/* roster — the captain's job; a lead runs one night, not the team */
+	if (role === 'captain') html += `
 	<!-- ===== ROSTER ===== -->
 	<section class="pcard"><p class="eyebrow">Roster · ${team.roster.filter(p => !p.guest).length}</p>
 		<ul class="roster-list is-edit">${team.roster.filter(p => !p.guest).map(p => `<li class="roster-row"><button type="button" class="roster-name as-link" data-action="player-card" data-player="${p.id}">${kbEscape(kbDisplayName(p))}${p.id === team.captain ? ' <small>C</small>' : ''}${kbMyPositions(p.id).length ? ` <small>${kbEscape(kbPositionsLabel(p.id))}</small>` : ''}</button><span class="seg"><button type="button" class="${p.gender === 'female' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="female" data-scope="${team.id}" aria-pressed="${p.gender === 'female'}">W</button><button type="button" class="${p.gender === 'male' ? 'is-on' : ''}" data-action="gender" data-player="${p.id}" data-gender="male" data-scope="${team.id}" aria-pressed="${p.gender === 'male'}">M</button></span>${p.id === team.captain ? '<span class="roster-remove" aria-hidden="true"></span>' : `<button type="button" class="roster-remove" data-action="remove-member" data-team="${team.id}" data-player="${p.id}" data-scope="${team.id}" aria-label="Remove ${kbEscape(p.name)}">×</button>`}</li>`).join('')}</ul>

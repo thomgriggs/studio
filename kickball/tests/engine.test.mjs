@@ -569,5 +569,6 @@ test('maybe: counts as its own bucket and is not here until they say In', () => 
 	assert.equal(run(`kbSched('s1').prep.teams.home.attendance['thom-griggs']`), true, 'In = here');
 	assert.equal(run(`kbSched('s1').prep.teams.home.attendance['cristy-ceron']`), false, 'silence is not here either — the captain taps them in at the field');
 	assert.match(run(`kbCaptainHomeHTML(kbTeam('lbc'), 'captain', kbState.me, kbState.league)`), /Who’s in[\s\S]*Free agents[\s\S]*Schedule[\s\S]*Roster[\s\S]*Team ·/);
+	assert.ok(!/ROSTER ====/.test(run(`kbCaptainHomeHTML(kbTeam('lbc'), 'lead', { role:'lead', teamId:'lbc', playerId:'katie-morton' }, kbState.league)`)), 'a lead has no roster section');
 	assert.equal(run(`kbTeamRecord('lbc')`), '0–0');
 });
