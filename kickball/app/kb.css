@@ -462,6 +462,41 @@ input, select { font:inherit; }
 .icon-grid button.is-on { border-color:var(--color_accent); background:var(--color_accent-soft); }
 @media (max-width:420px) { .stats-wrap { grid-template-columns:1fr; justify-items:center; } .icon-grid { grid-template-columns:repeat(6, 1fr); } }
 
+/* ===== SEASONS + COMPARE ===== */
+.tabs.is-seasons button { font-size:var(--font_size-xs); }
+.compare-row { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space_xs) var(--space_sm); font-size:var(--font_size-xs); }
+.chip-cmp { min-height:32px; padding:0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-sunken); border:1px dashed var(--color_line-strong); color:var(--color_text-muted); font-size:var(--font_size-xs); font-weight:700; }
+.chip-cmp.is-on { border-style:solid; color:var(--color_text); }
+.chip-cmp.is-1 { border-color:var(--color_info); } .chip-cmp.is-2 { border-color:#c98bff; }
+.radar-cmp { fill:none; stroke-width:2; stroke-linejoin:round; }
+.radar-cmp.is-1 { stroke:var(--color_info); fill:color-mix(in srgb, var(--color_info), transparent 85%); }
+.radar-cmp.is-2 { stroke:#c98bff; fill:color-mix(in srgb, #c98bff, transparent 85%); }
+.radar-key .is-cmp-1 { background:var(--color_info); } .radar-key .is-cmp-2 { background:#c98bff; }
+.chip-pos { display:inline-flex; align-items:center; min-height:24px; padding:0 var(--space_sm); border-radius:var(--radius_pill); background:var(--color_accent-soft); border:1px solid var(--color_accent); color:var(--color_accent); font-size:var(--font_size-xs); font-weight:800; }
+.season-lines { margin:0; padding:0; list-style:none; display:grid; gap:var(--space_xs); }
+.season-lines li { display:grid; grid-template-columns:auto 1fr; gap:2px var(--space_sm); align-items:baseline; padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); font-size:var(--font_size-xs); }
+.season-lines li span { color:var(--color_text-muted); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.season-lines li strong { font-size:var(--font_size-sm); } .season-lines li small { grid-column:2; color:var(--color_text-dim); font-weight:700; }
+
+/* ===== PLAYER CARDS (free agents) + SHEET ===== */
+.fa-list { margin:var(--space_sm) 0 0; padding:0; list-style:none; display:grid; gap:var(--space_sm); }
+.fa-card { display:grid; grid-template-columns:1fr auto; align-items:center; gap:var(--space_sm); padding:var(--space_sm); border-radius:var(--radius_md); background:var(--color_bg-sunken); border:1px solid var(--color_line); }
+.fa-open { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:var(--space_sm); text-align:left; min-height:64px; padding:var(--space_xs); border-radius:var(--radius_sm); }
+.fa-open:hover { background:var(--color_bg-raised); }
+.avatar-big.is-sm { width:44px; height:44px; font-size:1.25rem; }
+.fa-text { display:grid; gap:2px; min-width:0; }
+.fa-text strong { font-size:var(--font_size-md); }
+.fa-meta { font-size:var(--font_size-xs); color:var(--color_text-muted); font-weight:700; display:flex; flex-wrap:wrap; align-items:center; gap:4px; }
+.fa-meta .chip-tag { width:18px; height:18px; font-size:10px; }
+.fa-line { font-size:var(--font_size-xs); color:var(--color_text-dim); font-weight:700; }
+.radar.is-mini { width:64px; max-width:64px; } .radar.is-mini .radar-label { display:none; }
+.fa-card > .key { min-height:44px; }
+.sheet { border:1px solid var(--color_line-strong); border-radius:var(--radius_md) var(--radius_md) 0 0; background:var(--color_bg); color:var(--color_text); padding:var(--space_md) var(--gutter) calc(var(--space_lg) + env(safe-area-inset-bottom)); width:min(100vw, 32rem); max-height:92svh; margin:auto auto 0; display:none; gap:var(--space_md); }
+.sheet[open] { display:grid; }
+.sheet::backdrop { background:rgba(7,12,22,.7); }
+.sheet-head { display:flex; justify-content:flex-end; }
+.sheet .player-id h2 { font-size:var(--font_size-xl); line-height:1.1; }
+
 /* ========================================================================== */
 /* LEAGUE : admin cards                                                       */
 /* ========================================================================== */

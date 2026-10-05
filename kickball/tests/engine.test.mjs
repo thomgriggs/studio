@@ -12,7 +12,7 @@ import vm from 'node:vm';
 const stubEl = () => ({ dataset:{}, classList:{ toggle(){}, add(){}, remove(){} }, innerHTML:'', textContent:'', hidden:false, options:[], value:'', querySelector:stubEl, querySelectorAll:() => [], add(){}, addEventListener(){}, setAttribute(){}, closest:() => null });
 const ctx = vm.createContext({
 	console, structuredClone, Date, Option:function () {},
-	document:{ addEventListener(){}, querySelector:stubEl, querySelectorAll:() => [], createElement:stubEl, body:{ dataset:{}, appendChild(){} } },
+	document:{ addEventListener(){}, querySelector:stubEl, querySelectorAll:() => [], getElementById:() => null, createElement:stubEl, body:{ dataset:{}, appendChild(){} } },
 	localStorage:{ store:new Map(), getItem(k){ return this.store.get(k) ?? null; }, setItem(k, v){ this.store.set(k, String(v)); }, removeItem(k){ this.store.delete(k); } },
 	window:{ scrollTo(){} }, scrollTo(){}, location:{ search:'' }, setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
 });
@@ -418,12 +418,12 @@ test('people: a player on two rosters is one person; free-agent modes respect "n
 
 test('demo games: seeded once, deterministic, finished, and they feed one person’s stats across both rosters', () => {
 	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
-	assert.equal(run('kbState.games.length'), 3);
-	assert.ok(run('kbState.games.every(g => g.status === "final" && g.demo)'));
+	assert.equal(run('kbState.games.length'), 6, 'three last season, three this season');
+	assert.ok(run('kbState.games.every(g => g.status === "final" && g.demo && g.season)'));
 	const first = run('kbDerive(kbState.games[0]).score');
 	run('kbState.league.demoGames = false; kbState.games = []; kbSeedDemoGames();');
 	assert.deepEqual(run('kbDerive(kbState.games[0]).score'), first, 'same seed, same game');
-	run('kbSeedDemoGames();'); assert.equal(run('kbState.games.length'), 3, 'seeded once');
+	run('kbSeedDemoGames();'); assert.equal(run('kbState.games.length'), 6, 'seeded once');
 	const st = run(`kbPlayerStats('thom-griggs')`);
 	assert.ok(st.g >= 1, 'Thom is on LBC, so he shows up in the demo games: ' + st.g);
 	const axes = run(`kbRadarAxes('thom-griggs')`);
@@ -460,4 +460,17 @@ test('baseball names: AVG is H/AB, every PA is an AB (one pitch, no walks), HR c
 	assert.equal(run(`kbAB(kbDerive().stats.home['cristy-ceron'])`), 1);
 	assert.equal(run(`kbAvg({ h:1, pa:3 })`), '.333');
 	assert.deepEqual(run(`kbRadarAxes('x').map(a => a.key)`), ['avg', 'hr', 'rbi', 'r', 'eb', 'obp']);
+});
+
+test('seasons: stats scope to a season or all; overlays scale against the primary scope; new games carry the current season', () => {
+	run(`kbState.league = structuredClone(KB_SEED_LEAGUE); kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames();`);
+	assert.equal(run(`kbGamesIn('spring-2026').length`), 3); assert.equal(run(`kbGamesIn('fall-2026').length`), 3); assert.equal(run(`kbGamesIn('all').length`), 6);
+	const all = run(`kbPlayerStats('cristy-ceron', 'all')`), fall = run(`kbPlayerStats('cristy-ceron', 'fall-2026')`), spring = run(`kbPlayerStats('cristy-ceron', 'spring-2026')`);
+	assert.equal(all.pa, fall.pa + spring.pa);
+	const ov = run(`kbRadarOverlay(kbRadarAxes('cristy-ceron', 'all'), 'cristy-ceron', 'spring-2026')`);
+	assert.ok(ov && ov.norms.length === 6 && ov.norms.every(v => v >= 0 && v <= 1));
+	assert.equal(run(`kbSeasonName('spring-2026')`), 'Spring 2026');
+	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbStartScheduled('s1');`);
+	assert.equal(run('kbState.game.season'), 'fall-2026');
+	assert.match(run(`kbPlayerCardHTML('devin-hart', { sched:'s1', team:'lbc', from:'pitch-please' })`), /Left Field[\s\S]*data-action="recruit"/);
 });

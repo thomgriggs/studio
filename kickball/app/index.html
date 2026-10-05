@@ -104,6 +104,9 @@
 	<!-- ===== SWITCH : who this phone is (stands in for sign-in); opened from the me-bar pill ===== -->
 	<dialog class="switcher" id="switch" aria-labelledby="whoami-heading"><section class="whoami"></section></dialog>
 
+	<!-- ===== PLAYER SHEET : tap a player (free agent, roster) to see their card and stats ===== -->
+	<dialog class="sheet" id="player-sheet" aria-label="Player"></dialog>
+
 	<script>
 		if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js");
 	</script>

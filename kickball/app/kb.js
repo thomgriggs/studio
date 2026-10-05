@@ -10,7 +10,7 @@ const KB_KEY = 'kickball-v3';
 const kbState = {
 	teams:[], games:[], game:null, league:null, profiles:{}, /* persisted */
 	me:{ role:'ump', teamId:null, playerId:null, umpId:null }, /* who this phone is acting as (persisted in ui) — stands in for sign-in */
-	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, pteam:'all', /* ui */
+	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, pteam:'all', pseason:null, pcompare:[], /* ui */
 	pending:{ away:{ in:0, on:0 }, home:{ in:0, on:0 } }
 };
 let kbTicker = null;
@@ -44,9 +44,9 @@ function kbInit() {
 /* ---------- storage ------------------------------------------------------ */
 function kbLoad() {
 	kbState.ui = {};
-	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.league = s.league || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
+	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.league = s.league || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.pseason = kbState.ui.pseason || null; kbState.pcompare = kbState.ui.pcompare || []; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
 }
-function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, league:kbState.league, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, me:kbState.me } })); } catch (e) {} }
+function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, league:kbState.league, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, pseason:kbState.pseason, pcompare:kbState.pcompare, me:kbState.me } })); } catch (e) {} }
 /* First run (or an older device) gets the seed league, plus any seed team or captain it's missing. */
 function kbSeedLeague() {
 	let dirty = false;
@@ -146,6 +146,10 @@ const KB_ACTIONS = {
 	/* player view */
 	'player':       () => kbGo('player'),
 	'pteam':        (el) => { kbState.pteam = el.dataset.team || 'all'; kbSave(); kbRender(); },
+	'pseason':      (el) => { kbState.pseason = el.dataset.season; kbState.pcompare = kbState.pcompare.filter(s => s !== el.dataset.season); kbSave(); kbRender(); },
+	'pcompare':     (el) => { const s = el.dataset.season; kbState.pcompare = kbState.pcompare.includes(s) ? kbState.pcompare.filter(x => x !== s) : kbState.pcompare.concat(s).slice(-2); kbSave(); kbRender(); },
+	'player-card':  (el) => kbOpenPlayerSheet(el.dataset.player, el.dataset.sched, el.dataset.team),
+	'sheet-close':  () => kbClosePlayerSheet(),
 	'fa-mode':      (el) => { kbSetProfile(kbState.me.playerId, { freeAgent:el.dataset.mode }); kbRender(); kbToast({ off:'Off the free-agent list', mine:'Teams can ask you on nights you already play', all:'Teams can ask you for any game' }[el.dataset.mode]); },
 	'pick-icon':    (el) => { const f = el.closest('form').querySelector('[name="icon"]'); f.value = el.dataset.icon; el.closest('.icon-grid').querySelectorAll('button').forEach(b => { const on = b === el; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); }); },
 	'save-profile': (el) => kbSaveProfile(el.closest('form')),
@@ -269,7 +273,7 @@ function kbSetProfile(pid, patch) { if (!pid) return; kbState.profiles = kbState
 function kbSaveProfile(form) {
 	const v = n => (form.querySelector(`[name="${n}"]`) || {}).value || '';
 	const pid = kbState.me.playerId; if (!pid) return;
-	kbSetProfile(pid, { icon:v('icon'), nickname:v('nickname').trim(), walkup:{ title:v('walkup-title').trim(), artist:v('walkup-artist').trim(), url:v('walkup-url').trim() } });
+	kbSetProfile(pid, { icon:v('icon'), nickname:v('nickname').trim(), position:v('position'), walkup:{ title:v('walkup-title').trim(), artist:v('walkup-artist').trim(), url:v('walkup-url').trim() } });
 	kbRender(); kbToast('Profile saved');
 }
 /* the switcher (stands in for sign-in) lives in a dialog behind the me-bar pill */
@@ -282,9 +286,9 @@ const KB_STAT_KEYS = ['pa', 'h', 'r', 'rbi', 'out', 'reached', 'tb', 'xb', 'xbo'
 /* In this league every plate appearance is an at-bat: one pitch, no walks (auto-outs are pa:false and never counted). */
 function kbAB(t) { return t.pa; }
 function kbAvg(t) { return kbAB(t) ? (t.h / kbAB(t)).toFixed(3).replace(/^0/, '') : '.000'; }
-function kbLeagueStats() {
+function kbLeagueStats(season = 'all') {
 	const totals = {}; let teamGames = {};
-	for (const g of kbState.games) {
+	for (const g of kbGamesIn(season)) {
 		for (const s of ['away', 'home']) {
 			const tid = g.teams[s].teamId; if (!tid) continue; teamGames[tid] = (teamGames[tid] || 0) + 1;
 			const d = kbDerive(g);
@@ -293,10 +297,10 @@ function kbLeagueStats() {
 	}
 	return { totals, teamGames };
 }
-function kbPlayerStats(pid) { return kbLeagueStats().totals[pid] || kbEmptyTotals(); }
+function kbPlayerStats(pid, season = 'all') { return kbLeagueStats(season).totals[pid] || kbEmptyTotals(); }
 /* five axes, each 0..1 against the league's best; the league average rides along for the overlay */
-function kbRadarAxes(pid) {
-	const { totals } = kbLeagueStats(); const ids = Object.keys(totals).filter(id => totals[id].pa >= 4);
+function kbRadarAxes(pid, season = 'all') {
+	const { totals } = kbLeagueStats(season); const ids = Object.keys(totals).filter(id => totals[id].pa >= 4);
 	/* baseball names, per game where it's a counting stat so a 2-game player can sit beside a 6-game one */
 	const axes = [
 		{ key:'avg', label:'AVG', f:t => kbAB(t) ? t.h / kbAB(t) : 0,        fmt:v => v.toFixed(3).replace(/^0/, '') },
@@ -326,29 +330,36 @@ function kbOutsStripHTML(st) {
 	if (!rows.length) return '';
 	return `<p class="eyebrow" style="margin-top:var(--space_md)">Your outs · ${st.out}</p><ul class="outs-strip">${rows.map(([l, n]) => `<li><strong>${n}</strong><span>${l}</span></li>`).join('')}${st.xbo ? `<li class="is-run"><strong>${st.xbo}</strong><span>Caught running</span></li>` : ''}</ul>`;
 }
-function kbRadarSVG(axes) {
+/* overlay polygons for other seasons, scaled against the primary axes' max so the shapes compare honestly */
+function kbRadarOverlay(axes, pid, season) {
+	const t = kbPlayerStats(pid, season); if (!t.pa) return null;
+	return { season, label:kbSeasonName(season), norms:axes.map(a => Math.min(1, a.f(t) / a.max)) };
+}
+function kbRadarSVG(axes, overlays = []) {
 	const n = axes.length, cx = 100, cy = 100, r = 72; const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r * v, cy + Math.sin(a) * r * v]; };
 	const poly = (vals) => vals.map((v, i) => pt(i, Math.max(0.04, v)).map(x => x.toFixed(1)).join(',')).join(' ');
 	const rings = [0.25, 0.5, 0.75, 1].map(s => `<polygon class="radar-ring" points="${poly(axes.map(() => s))}"/>`).join('');
 	const spokes = axes.map((_, i) => { const [x, y] = pt(i, 1); return `<line class="radar-spoke" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}"/>`; }).join('');
 	const labels = axes.map((a, i) => { const [x, y] = pt(i, 1.22); return `<text class="radar-label" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" dominant-baseline="middle">${kbEscape(a.label)}</text>`; }).join('');
-	return `<svg class="radar" viewBox="-22 -14 244 228" role="img" aria-label="${kbEscape(axes.map(a => `${a.label} ${a.text}`).join(', '))}">${rings}${spokes}<polygon class="radar-league" points="${poly(axes.map(a => a.avgNorm))}"/><polygon class="radar-me" points="${poly(axes.map(a => a.norm))}"/>${axes.map((a, i) => { const [x, y] = pt(i, Math.max(0.04, a.norm)); return `<circle class="radar-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2"/>`; }).join('')}${labels}</svg>`;
+	return `<svg class="radar" viewBox="-22 -14 244 228" role="img" aria-label="${kbEscape(axes.map(a => `${a.label} ${a.text}`).join(', '))}">${rings}${spokes}<polygon class="radar-league" points="${poly(axes.map(a => a.avgNorm))}"/>${overlays.filter(Boolean).map((o, i) => `<polygon class="radar-cmp is-${i + 1}" points="${poly(o.norms)}"/>`).join('')}<polygon class="radar-me" points="${poly(axes.map(a => a.norm))}"/>${axes.map((a, i) => { const [x, y] = pt(i, Math.max(0.04, a.norm)); return `<circle class="radar-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2"/>`; }).join('')}${labels}</svg>`;
 }
 
 /* ---------- demo games: three finished games so stats and standings have    */
 /* something to show. Deterministic (seeded PRNG), driven through the real     */
 /* engine, marked demo:true. Seeded once per league (league.demoGames).        */
 function kbSeedDemoGames() {
-	const L = kbState.league; if (!L || L.demoGames || kbState.games.length) return;
+	const L = kbState.league; if (!L || L.demoGames === 2 || kbState.games.length) return;
 	let seed = 20261008; const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
 	const weights = [['single', 32], ['double', 9], ['triple', 2], ['homer', 4], ['out', 28], ['caught', 12], ['foul', 7], ['missed', 3], ['error', 3]];
 	const pick = () => { let x = rnd() * weights.reduce((a, [, w]) => a + w, 0); for (const [id, w] of weights) { if ((x -= w) <= 0) return id; } return 'out'; };
 	const sideFor = (teamId, flip) => { const t = kbTeam(teamId); const ids = t.roster.filter(p => !p.guest).map(p => p.id); const here = ids.filter((_, i) => rnd() > 0.2 || i < 8); return { name:t.name, teamId, attendance:Object.fromEntries(ids.map(id => [id, here.includes(id)])), lineup:kbBalancedLineup(t, here), assignments:{} }; };
 	const keep = kbState.game;
-	const matchups = [['pitch-please', 'lbc', '2026-09-10'], ['lbc', 'pitch-please', '2026-09-17'], ['pitch-please', 'lbc', '2026-09-24']];
-	matchups.forEach(([away, home, date], n) => {
+	/* last season (so "compare seasons" has something) and this one */
+	const matchups = [['pitch-please', 'lbc', '2026-04-16', 'spring-2026'], ['lbc', 'pitch-please', '2026-04-30', 'spring-2026'], ['lbc', 'sliders', '2026-05-14', 'spring-2026'],
+		['pitch-please', 'lbc', '2026-09-10', 'fall-2026'], ['lbc', 'pitch-please', '2026-09-17', 'fall-2026'], ['pitch-please', 'lbc', '2026-09-24', 'fall-2026']];
+	matchups.forEach(([away, home, date, season], n) => {
 		const t0 = new Date(`${date}T19:00:00`).getTime(); let t = t0;
-		const g = { id:'demo-' + n, demo:true, sport:L.sport, mode:'season', status:'live', startedAt:new Date(t0).toISOString(), teams:{ away:sideFor(away), home:sideFor(home) }, events:[{ t, by:'ump', kind:'clock', what:'start' }] };
+		const g = { id:'demo-' + n, demo:true, season, sport:L.sport, mode:'season', status:'live', startedAt:new Date(t0).toISOString(), teams:{ away:sideFor(away), home:sideFor(home) }, events:[{ t, by:'ump', kind:'clock', what:'start' }] };
 		kbState.game = g;
 		for (let guard = 0; guard < 400; guard++) {
 			const d = kbDerive(g); if (d.final || d.inning > 6) break;
@@ -367,8 +378,15 @@ function kbSeedDemoGames() {
 		}
 		g.status = 'final'; kbState.games.push(g);
 	});
-	kbState.game = keep; L.demoGames = true; kbSave();
+	kbState.game = keep; L.demoGames = 2; kbSave();
 }
+
+/* ---------- seasons ------------------------------------------------------- */
+function kbSeasons() { const L = kbState.league; return L ? (L.seasons || [{ id:L.season, name:String(L.season) }]) : []; }
+function kbSeasonName(id) { const s = kbSeasons().find(x => x.id === id); return s ? s.name : (id === 'all' ? 'All seasons' : String(id || '')); }
+function kbCurrentSeason() { return kbState.league ? kbState.league.season : null; }
+function kbGameSeason(g) { return g.season || kbCurrentSeason(); }
+function kbGamesIn(season) { return season === 'all' ? kbState.games : kbState.games.filter(g => kbGameSeason(g) === (season || kbCurrentSeason())); }
 
 /* ---------- schedule ------------------------------------------------------ */
 function kbSched(id) { return kbState.league && kbState.league.schedule.find(s => s.id === id); }
@@ -406,7 +424,7 @@ function kbStartScheduled(schedId) {
 	if (s.gameId && kbState.game && kbState.game.id === s.gameId) { kbGo('ump'); return; }
 	if (kbState.game && kbState.game.status === 'live') { kbToast('Finish the game in progress first'); return; }
 	const prep = kbEnsurePrep(s);
-	kbState.game = { id:'g' + Date.now(), schedId:s.id, sport:prep.sport, mode:prep.mode, status:'live', startedAt:new Date().toISOString(), teams:structuredClone(prep.teams), events:[] };
+	kbState.game = { id:'g' + Date.now(), schedId:s.id, season:kbCurrentSeason(), sport:prep.sport, mode:prep.mode, status:'live', startedAt:new Date().toISOString(), teams:structuredClone(prep.teams), events:[] };
 	s.gameId = kbState.game.id; s.status = 'live'; s.prep = null; kbState.prepId = null;
 	kbSave(); kbGo('ump'); kbToast('Play ball');
 }
@@ -448,6 +466,7 @@ function kbRecruit(schedId, teamId, playerId, fromId) {
 	const s = kbSched(schedId), team = kbTeam(teamId), from = kbTeam(fromId), p = from && kbPlayer(from, playerId); if (!s || !team || !p) return;
 	if (kbPlayer(team, p.id)) { kbToast(`${kbFirst(p.name)} is already on the roster`); return; }
 	team.roster.push({ id:p.id, name:p.name, gender:p.gender, guest:true, guestFrom:from.id, guestFor:s.id });
+	kbClosePlayerSheet();
 	kbSetAvail(s.id, p.id, 'in');
 	kbToast(`${kbFirst(p.name)} is in for this game`);
 }
@@ -474,7 +493,7 @@ function kbSetRule(path, raw, type) {
 function kbStandings() {
 	const L = kbState.league; const rows = {};
 	const row = id => rows[id] || (rows[id] = { team:kbTeam(id), w:0, l:0, t:0, rf:0, ra:0 });
-	for (const s of L.schedule) { if (!s.result) continue; const a = row(s.away), h = row(s.home); a.rf += s.result.away; a.ra += s.result.home; h.rf += s.result.home; h.ra += s.result.away; if (s.result.away > s.result.home) { a.w++; h.l++; } else if (s.result.home > s.result.away) { h.w++; a.l++; } else { a.t++; h.t++; } }
+	for (const s of L.schedule) { if (!s.result || (s.season || L.season) !== L.season) continue; const a = row(s.away), h = row(s.home); a.rf += s.result.away; a.ra += s.result.home; h.rf += s.result.home; h.ra += s.result.away; if (s.result.away > s.result.home) { a.w++; h.l++; } else if (s.result.home > s.result.away) { h.w++; a.l++; } else { a.t++; h.t++; } }
 	for (const [id, st] of Object.entries(L.teams)) if (st === 'approved') row(id);
 	return Object.values(rows).filter(r => r.team).sort((a, b) => (b.w - a.w) || (a.l - b.l) || ((b.rf - b.ra) - (a.rf - a.ra)));
 }
@@ -504,7 +523,7 @@ function kbNewGame(form) {
 			lineup: team ? kbBalancedLineup(team, team.roster.map(p => p.id)) : [],
 			assignments: {} };
 	};
-	kbState.game = { id:'g' + Date.now(), sport, mode, status:'live', startedAt:new Date().toISOString(), teams:{ away:sideOf('away'), home:sideOf('home') }, events:[] };
+	kbState.game = { id:'g' + Date.now(), season:kbCurrentSeason(), sport, mode, status:'live', startedAt:new Date().toISOString(), teams:{ away:sideOf('away'), home:sideOf('home') }, events:[] };
 	kbSave();
 	const anyTeam = kbState.game.teams.away.teamId || kbState.game.teams.home.teamId;
 	if (anyTeam) { kbState.side = kbState.game.teams.home.teamId ? 'home' : 'away'; kbState.tab = 'here'; kbGo('captain'); kbToast('Who’s here today?'); }
@@ -917,7 +936,7 @@ function kbRender() {
 /* ---------- me bar + switcher ------------------------------------------- */
 function kbRenderMeBar() {
 	const bar = document.querySelector('.me-bar'); if (!bar) return;
-	bar.innerHTML = `<button type="button" class="me-pill" data-action="switch" aria-haspopup="dialog" aria-controls="switch" aria-label="Signed in as ${kbEscape(kbMeLabel())} — tap to switch"><span class="me-dot is-${kbMeRole()}" aria-hidden="true"></span>${kbEscape(kbMeLabel())}</button>${kbState.league ? `<span class="me-league">${kbEscape(kbState.league.name)} · ${kbEscape(kbState.league.season)}</span>` : ''}`;
+	bar.innerHTML = `<button type="button" class="me-pill" data-action="switch" aria-haspopup="dialog" aria-controls="switch" aria-label="Signed in as ${kbEscape(kbMeLabel())} — tap to switch"><span class="me-dot is-${kbMeRole()}" aria-hidden="true"></span>${kbEscape(kbMeLabel())}</button>${kbState.league ? `<span class="me-league">${kbEscape(kbState.league.name)} · ${kbEscape(kbSeasonName(kbState.league.season))}</span>` : ''}`;
 }
 function kbRenderWhoami() {
 	const host = document.querySelector('.whoami'); if (!host) return;
@@ -942,7 +961,7 @@ function kbRenderRoleHome() {
 	let html = '';
 	if (role === 'league' && L) {
 		const pending = Object.values(L.teams).filter(s => s === 'pending').length, noUmp = kbUpcoming().filter(s => !s.ump).length;
-		html = `<section class="role-card"><p class="eyebrow">League</p><h2>${kbEscape(L.name)} · ${kbEscape(L.season)}</h2>
+		html = `<section class="role-card"><p class="eyebrow">League</p><h2>${kbEscape(L.name)} · ${kbEscape(kbSeasonName(L.season))}</h2>
 			<p class="hint">${Object.values(L.teams).filter(s => s === 'approved').length} teams${pending ? ` · <strong>${pending} waiting for approval</strong>` : ''}${noUmp ? ` · <strong>${noUmp} game${noUmp > 1 ? 's' : ''} without an ump</strong>` : ''}</p>
 			<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="league">League admin</button><button type="button" class="key is-ghost" data-action="teams">Teams &amp; rosters</button></div></section>
 			${kbStandingsHTML()}`;
@@ -966,7 +985,7 @@ function kbRenderRoleHome() {
 				${role === 'captain' ? `<div class="field lead-field"><label for="lead-${next.id}">Lead for this game <small>(if you can’t make it)</small></label><select id="lead-${next.id}" data-action="set-lead" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}"><option value="">Me — ${kbEscape(kbPlayer(team, team.captain)?.name || 'captain')}</option>${team.roster.filter(p => p.id !== team.captain).map(p => `<option value="${p.id}" ${leadId === p.id ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>` : ''}
 				<details class="recruit"><summary>Free agents · ${fa.length}</summary>
 					<p class="hint">${c.in < (kbSport({ sport:L.sport }).team?.minPlayers || 6) ? 'You’re short — ' : ''}players on other teams who said they’ll fill in.</p>
-					<ul class="roster-list is-edit">${fa.map(p => `<li class="roster-row"><span class="roster-name">${kbEscape(p.name)} <small>${kbEscape(p.from.short)}</small></span><span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span><button type="button" class="key is-ghost" data-action="recruit" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}" data-player="${p.id}" data-from="${p.from.id}">Add</button></li>`).join('') || '<li class="is-empty">No free agents right now</li>'}</ul>
+					<ul class="fa-list">${fa.map(p => kbPlayerCardHTML(p.id, { sched:next.id, team:team.id, from:p.from.id })).join('') || '<li class="is-empty">No free agents right now</li>'}</ul>
 				</details>
 			</section>
 			<section class="role-card"><p class="eyebrow">Who’s in</p><ul class="avail-list">${team.roster.map(p => { const v = (next.availability || {})[p.id]; return `<li class="avail-row"><span class="roster-name">${kbEscape(p.name)}${p.guest ? ' <small>guest</small>' : ''}</span><span class="seg">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${next.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span></li>`; }).join('')}</ul></section>`;
@@ -1279,7 +1298,7 @@ function kbRenderLeague() {
 	<header class="page-head"><button type="button" class="key is-ghost back" data-action="go" data-to="home" aria-label="Home">←</button><div><p class="eyebrow">League admin</p><h1>${kbEscape(L.name)}</h1></div></header>
 
 	<!-- ===== RULES : the sport config the league can tune; blank = rulebook ===== -->
-	<section class="league-card"><h2>Rules · ${kbEscape(cfg.name)} · ${kbEscape(L.season)}</h2>
+	<section class="league-card"><h2>Rules · ${kbEscape(cfg.name)} · ${kbEscape(kbSeasonName(L.season))}</h2>
 		<p class="hint">These sit on top of the rulebook in <code>data.js</code>. Every game started in this league uses them.</p>
 		<ul class="rules">
 			${rule('structure.outsPerHalf', 'Outs per half')}
@@ -1397,8 +1416,10 @@ function kbRenderPlayer() {
 	else nextHTML = `<section class="pcard"><p class="eyebrow">Next game</p><p class="hint">Nothing scheduled${kbState.pteam !== 'all' ? ' for this team' : ''}.</p></section>`;
 
 	/* --- stats --- */
-	const st = kbPlayerStats(p.id), axes = kbRadarAxes(p.id), obp = axes.find(a => a.key === 'obp'), avg = axes[0];
-	const { totals } = kbLeagueStats(); const board = Object.entries(totals).filter(([, t]) => kbAB(t) >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, avg:t.h / kbAB(t) })).filter(x => x.p).sort((a, b) => b.avg - a.avg || b.t.h - a.t.h).slice(0, 8);
+	const season = kbState.pseason || kbCurrentSeason(); const scopes = ['all'].concat(kbSeasons().map(s => s.id).reverse());
+	const st = kbPlayerStats(p.id, season), axes = kbRadarAxes(p.id, season), obp = axes.find(a => a.key === 'obp'), avg = axes[0];
+	const compare = kbState.pcompare.filter(s => s !== season && scopes.includes(s)); const overlays = compare.map(s => kbRadarOverlay(axes, p.id, s));
+	const { totals } = kbLeagueStats(season); const board = Object.entries(totals).filter(([, t]) => kbAB(t) >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, avg:t.h / kbAB(t) })).filter(x => x.p).sort((a, b) => b.avg - a.avg || b.t.h - a.t.h).slice(0, 8);
 	const myRank = board.findIndex(x => x.id === p.id);
 	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}: hitting ${avg.text} (${st.h} for ${kbAB(st)}), ${st.hr} HR, ${st.r} R, ${st.rbi} RBI, ${st.xb} extra base${st.xb === 1 ? '' : 's'}.` : 'No games on the books yet — stats start with your first game.';
 
@@ -1412,7 +1433,7 @@ function kbRenderPlayer() {
 		<div class="player-id">
 			<h1>${kbEscape(kbDisplayName(p))}</h1>
 			${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}
-			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></p>
+			<p class="team-chips">${teams.map(t => `<span class="chip-team${t.captain === p.id ? ' is-captain' : ''}">${kbEscape(t.short)}${t.captain === p.id ? ' · C' : ''}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos">${kbEscape(pr.position)}</span>` : ''}</p>
 			${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}${w.url ? ` <a href="${kbEscape(w.url)}" target="_blank" rel="noopener">play</a>` : ''}</p>` : ''}
 		</div>
 	</header>
@@ -1433,12 +1454,14 @@ function kbRenderPlayer() {
 	</section>
 
 	<!-- ===== STATS : me vs the league ===== -->
-	<section class="pcard"><p class="eyebrow">Season · ${kbEscape(L.season)}</p>
+	<section class="pcard"><p class="eyebrow">Stats</p>
+		<nav class="tabs is-filter is-seasons" aria-label="Season">${scopes.map(s => `<button type="button" class="${season === s ? 'is-on' : ''}" data-action="pseason" data-season="${s}" aria-pressed="${season === s}">${kbEscape(kbSeasonName(s))}</button>`).join('')}</nav>
+		<p class="compare-row"><span class="eyebrow" style="margin:0">Compare</span>${scopes.filter(s => s !== season && s !== 'all').map(s => `<button type="button" class="chip-cmp ${compare.includes(s) ? 'is-on is-' + (compare.indexOf(s) + 1) : ''}" data-action="pcompare" data-season="${s}" aria-pressed="${compare.includes(s)}">${kbEscape(kbSeasonName(s))}</button>`).join('')}</p>
 		<div class="stats-wrap">
-			${kbRadarSVG(axes)}
+			${kbRadarSVG(axes, overlays)}
 			<ul class="stat-grid">${[['AVG', kbAvg(st)], ['H/AB', `${st.h}/${kbAB(st)}`], ['HR', st.hr], ['R', st.r], ['RBI', st.rbi], ['EB', st.xb]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
 		</div>
-		<p class="radar-key"><i class="is-me"></i> You <i class="is-league"></i> League average</p>
+		<p class="radar-key"><i class="is-me"></i> You · ${kbEscape(kbSeasonName(season))} <i class="is-league"></i> League average${overlays.filter(Boolean).map((o, i) => ` <i class="is-cmp-${i + 1}"></i> ${kbEscape(o.label)}`).join('')}</p>
 		<p class="stat-text">${kbEscape(summary)} ${kbEscape(kbInsight(axes, st))}</p>
 		<ul class="axis-list">${axes.map(a => `<li><span>${kbEscape(a.label)}</span><strong>${kbEscape(a.text)}</strong><small>${a.of > 1 ? `${a.rank}${['st', 'nd', 'rd'][a.rank - 1] || 'th'} of ${a.of}` : ''}</small></li>`).join('')}</ul>
 		${kbOutsStripHTML(st)}
@@ -1450,7 +1473,8 @@ function kbRenderPlayer() {
 		<form class="profile-form">
 			<input type="hidden" name="icon" value="${kbEscape(pr.icon || '')}">
 			<p class="eyebrow">Icon</p><div class="icon-grid" role="group" aria-label="Choose an icon">${icons}</div>
-			<div class="field"><label for="pf-nick">Nickname</label><input id="pf-nick" name="nickname" value="${kbEscape(pr.nickname || '')}" autocomplete="off" placeholder="${kbEscape(kbFirst(p.name))}"></div>
+			<div class="field-pair"><div class="field"><label for="pf-nick">Nickname</label><input id="pf-nick" name="nickname" value="${kbEscape(pr.nickname || '')}" autocomplete="off" placeholder="${kbEscape(kbFirst(p.name))}"></div>
+			<div class="field"><label for="pf-pos">Preferred position</label><select id="pf-pos" name="position"><option value="">Anywhere</option>${(kbSport({ sport:L.sport }).team?.positions || []).map(x => `<option value="${kbEscape(x)}" ${pr.position === x ? 'selected' : ''}>${kbEscape(x)}</option>`).join('')}</select></div></div>
 			<p class="eyebrow">Walk-up song</p>
 			<div class="field-pair"><div class="field"><label for="pf-wt">Title</label><input id="pf-wt" name="walkup-title" value="${kbEscape(w.title || '')}" autocomplete="off"></div><div class="field"><label for="pf-wa">Artist</label><input id="pf-wa" name="walkup-artist" value="${kbEscape(w.artist || '')}" autocomplete="off"></div></div>
 			<div class="field"><label for="pf-wu">Link (Spotify, YouTube…)</label><input id="pf-wu" name="walkup-url" type="url" value="${kbEscape(w.url || '')}" autocomplete="off" placeholder="https://"></div>
@@ -1459,3 +1483,39 @@ function kbRenderPlayer() {
 		</form>
 	</details>`;
 }
+
+/* ========================================================================== */
+/* PLAYER CARD — the free-agent view of a person (Sleeper-style): icon, name, */
+/* teams, preferred position, the line, a mini radar. Tap → the full sheet.    */
+/* ========================================================================== */
+function kbStatLine(st) { return `${kbAvg(st)} AVG · ${st.hr} HR · ${st.rbi} RBI · ${st.r} R · ${st.xb} EB`; }
+function kbPlayerCardHTML(pid, ctx = {}) {
+	const p = kbPerson(pid); if (!p) return '';
+	const pr = kbProfile(pid), st = kbPlayerStats(pid, 'all');
+	return `<li class="fa-card">
+		<button type="button" class="fa-open" data-action="player-card" data-player="${pid}" data-sched="${ctx.sched || ''}" data-team="${ctx.team || ''}" aria-haspopup="dialog" aria-controls="player-sheet">
+			<span class="avatar-big is-sm" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span>
+			<span class="fa-text"><strong>${kbEscape(kbDisplayName(p))}</strong><span class="fa-meta">${p.teams.map(t => kbEscape(t.short)).join(' · ')}${pr.position ? ' · ' + kbEscape(pr.position) : ''} · <span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></span><span class="fa-line">${st.pa ? kbEscape(kbStatLine(st)) : 'No games yet'}</span></span>
+			${st.pa ? kbRadarSVG(kbRadarAxes(pid, 'all')).replace('class="radar"', 'class="radar is-mini"') : ''}
+		</button>
+		${ctx.team ? `<button type="button" class="key is-ghost" data-action="recruit" data-sched="${ctx.sched}" data-team="${ctx.team}" data-scope="${ctx.team}" data-player="${pid}" data-from="${ctx.from}">Add</button>` : ''}
+	</li>`;
+}
+function kbOpenPlayerSheet(pid, schedId, teamId) {
+	const d = document.getElementById('player-sheet'), p = kbPerson(pid); if (!d || !p) return;
+	const pr = kbProfile(pid), seasons = ['all'].concat(kbSeasons().map(s => s.id).reverse()), season = 'all';
+	const st = kbPlayerStats(pid, season), axes = kbRadarAxes(pid, season);
+	const overlays = kbSeasons().map(s => s.id).reverse().slice(0, 2).map(s => kbRadarOverlay(axes, pid, s));
+	const canAdd = teamId && schedId && !kbPlayer(kbTeam(teamId), pid);
+	const w = pr.walkup || {};
+	d.innerHTML = `<div class="sheet-head"><button type="button" class="drawer-close key is-ghost" data-action="sheet-close" aria-label="Close">×</button></div>
+		<header class="player-head"><span class="avatar-big" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span><div class="player-id"><h2>${kbEscape(kbDisplayName(p))}</h2>${pr.nickname ? `<p class="player-real">${kbEscape(p.name)}</p>` : ''}<p class="team-chips">${p.teams.map(t => `<span class="chip-team">${kbEscape(t.short)}</span>`).join('')}<span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span>${pr.position ? `<span class="chip-pos">${kbEscape(pr.position)}</span>` : ''}</p>${w.title ? `<p class="walkup">♪ ${kbEscape(w.title)}${w.artist ? ' — ' + kbEscape(w.artist) : ''}</p>` : ''}</div></header>
+		<div class="stats-wrap">${kbRadarSVG(axes, overlays)}<ul class="stat-grid">${[['AVG', kbAvg(st)], ['H/AB', `${st.h}/${kbAB(st)}`], ['HR', st.hr], ['R', st.r], ['RBI', st.rbi], ['EB', st.xb]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul></div>
+		<p class="radar-key"><i class="is-me"></i> All seasons <i class="is-league"></i> League${overlays.filter(Boolean).map((o, i) => ` <i class="is-cmp-${i + 1}"></i> ${kbEscape(o.label)}`).join('')}</p>
+		<ul class="season-lines">${seasons.map(s => { const t = kbPlayerStats(pid, s); return t.pa ? `<li><span>${kbEscape(kbSeasonName(s))}</span><strong>${kbEscape(kbStatLine(t))}</strong><small>${t.g} game${t.g === 1 ? '' : 's'}</small></li>` : ''; }).join('')}</ul>
+		${kbOutsStripHTML(st)}
+		${canAdd ? `<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="recruit" data-sched="${schedId}" data-team="${teamId}" data-scope="${teamId}" data-player="${pid}" data-from="${(p.teams[0] || {}).id || ''}">Add ${kbEscape(kbFirst(kbDisplayName(p)))} for this game</button></div>` : ''}`;
+	kbApplyPerms();
+	if (!d.open) d.showModal();
+}
+function kbClosePlayerSheet() { const d = document.getElementById('player-sheet'); if (d && d.open) d.close(); }

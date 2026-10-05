@@ -153,7 +153,10 @@ window.KB_SEED_TEAMS = [
 /* Keyed by player id; a person keeps one profile across every roster they're on.   */
 window.KB_ICONS = ['⚽','🦵','🔥','⚡','🌴','🦩','🐊','🌊','☀️','🍕','🎯','👑','🦁','🐂','🦅','😇'];
 window.KB_SEED_PROFILES = {
-	'thom-griggs': { icon:'🦩', nickname:'Thom', walkup:{ title:'', artist:'', url:'' }, freeAgent:'mine' }
+	'thom-griggs': { icon:'🦩', nickname:'Thom', position:'Pitcher', walkup:{ title:'', artist:'', url:'' }, freeAgent:'mine' },
+	'nina-patel':  { icon:'⚡', position:'2nd Base', freeAgent:'all' },
+	'devin-hart':  { icon:'🔥', position:'Left Field', freeAgent:'all' },
+	'jake-fields': { icon:'🐊', position:'Catcher', freeAgent:'mine' }
 };
 
 /* Seed league — the structure the five roles live in. Copied into storage on   */
@@ -165,7 +168,10 @@ window.KB_SEED_PROFILES = {
 /*              captain's stand-in per team; `gameId`/`result` once it's played  */
 /*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
 window.KB_SEED_LEAGUE = {
-	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', season:'Fall 2026', seedVersion:4, /* bump to push new seed data onto phones that already have a league */
+	id:'tbcs', name:'Tampa Bay Club Sport', sport:'kickball', seedVersion:5,
+	/* seasons: games and schedule entries carry a season id; `season` is the current one */
+	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
+	season:'fall-2026', /* bump to push new seed data onto phones that already have a league */
 	umpires:[{ id:'ump-carl', name:'Carl' }, { id:'ump-bob', name:'Bob' }, { id:'ump-manny', name:'Manny' }],
 	teams:{ 'lbc':'approved', 'pitch-please':'approved', 'sliders':'approved', 'ball-busters':'pending' },
 	schedule:[
