@@ -185,7 +185,9 @@ window.KB_SEED_PROFILES = {
 /*              captain's stand-in per team; `gameId`/`result` once it's played  */
 /*   overrides  rule tweaks the league applies on top of KB_SPORTS[sport]        */
 window.KB_SEED_LEAGUES = [{
-	id:'tbcs', org:'Tampa Bay Club Sport', name:'Tuesday Kickball', night:'Tuesday', sport:'kickball', seedVersion:8,
+	id:'tbcs', org:'Tampa Bay Club Sport', name:'Tuesday Kickball', night:'Tuesday', sport:'kickball', seedVersion:9,
+	/* TBCS announces rainouts on Rainout Line / Statusfy. dnis = their line; ext = this night's extension (Tue Kickball: 28 Gadsden, 30 Northshore). */
+	rainout:{ dnis:'8136020066', ext:30 },
 	/* seasons: games and schedule entries carry a season id; `season` is the current one */
 	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
 	season:'fall-2026', /* bump to push new seed data onto phones that already have a league */
@@ -198,7 +200,8 @@ window.KB_SEED_LEAGUES = [{
 	],
 	overrides:{}
 }, {
-	id:'tbcs-sun', org:'Tampa Bay Club Sport', name:'Sunday Kickball', night:'Sunday', sport:'kickball', seedVersion:8,
+	id:'tbcs-sun', org:'Tampa Bay Club Sport', name:'Sunday Kickball', night:'Sunday', sport:'kickball', seedVersion:9,
+	rainout:{ dnis:'8136020066', ext:null },   /* no Sunday kickball extension exists on their line — the app links to the line instead */
 	seasons:[{ id:'spring-2026', name:'Spring 2026' }, { id:'fall-2026', name:'Fall 2026' }],
 	season:'fall-2026',
 	umpires:[{ id:'ump-bob', name:'Bob' }],

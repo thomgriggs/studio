@@ -16,6 +16,7 @@ home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .ro
          .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
 player   .player-head  .avatar-big  .player-id  .player-real  .team-chips  .chip-team(.is-captain)  .walkup  .tabs.is-filter  .pcard(.is-next .is-live)  .next-when  .next-who  .next-inout  .seg.is-inout  .status-line(.is-in .is-out .is-short)  .lineup-me  .live-score
          .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .axis-list  .outs-strip(.is-run)  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
+rainout  .rainout(.is-go .is-no .is-warn .is-off .is-link .is-loading)  .rainout-label  .rainout-detail  .rainout-when  .sched-row.is-rainout  .sched-tools
 switch   .switcher (dialog)  .switch-head
 league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
 ump      .ump  .score-strip  .side(.is-batting)  .side-name .side-score .side-tag
@@ -45,8 +46,8 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | teams | `new-team` (submit) · `add-player` (submit) · `gender`(+`data-player`, `data-gender`) · `remove-player` |
 | roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` · `league-pick` (selects) |
 | schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
-| player | `player` · `pteam`(+`data-team`=all\|teamId) · `pleague`(+`data-league`=all\|leagueId) · `pseason`(+`data-season`) · `pcompare`(+`data-season`) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
-| league | `league` · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
+| player | `player` · `pteam`(+`data-team`=all\|teamId) · `pleague`(+`data-league`) · `pleague-pick` (select) · `fa-filter`(+`data-filter`=all\|available) · `pseason`(+`data-season`) · `pcompare`(+`data-season`) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
+| league | `league` · `rainout-game`(+`data-sched`) · `rainout-ext` (input) · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
 
 Gated actions are listed in `KB_ACTION_CAP` (kb.js). A control may carry `data-scope="<teamId>"` to say which team it is about.
@@ -56,8 +57,8 @@ Gated actions are listed in `KB_ACTION_CAP` (kb.js). A control may carry `data-s
 ## Storage (`localStorage` `kickball-v3`)
 ```
 { teams:[Team], games:[Game]  /* finished, newest first */, game:Game|null /* in progress or final-not-saved */, leagues:[League], leagueId /* active */, profiles, ui:{ …, me, pteam, pseason, pcompare, pleague } }
-League { id, org, name, night, sport, seasons:[{ id, name }], season, seedVersion, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
-         schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'live'|'final',
+League { id, org, name, night, sport, rainout:{ dnis, ext|null }, seasons:[{ id, name }], season, seedVersion, umpires:[{ id, name }], teams:{ [teamId]:'approved'|'pending'|'declined' }, overrides:{ 'dotted.path':value },
+         schedule:[{ id, date:'YYYY-MM-DD', time:'HH:MM', field, away:teamId, home:teamId, ump:umpId|null, mode, status:'scheduled'|'rainout'|'live'|'final',
                      availability:{ [playerId]:'in'|'out' }, lead:{ [teamId]:playerId }, prep:Game|null, gameId?, result?:{ away, home } }] }
 Me     { role:'league'|'ump'|'captain'|'lead'|'player', teamId, playerId, umpId }
 Profile (profiles[personId]) { icon, nickname, positions:[faPosition], walkup:{ title, artist, url }, freeAgent:'off'|'mine'|'all' }

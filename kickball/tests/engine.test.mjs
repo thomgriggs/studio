@@ -509,3 +509,31 @@ test('leagues: a person spans nights; stats scope by league or all; a Sunday tea
 	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' }; kbNormalizeMe();`);
 	assert.equal(run('kbState.leagueId'), 'tbcs', 'captaining LBC puts you back on Tuesday');
 });
+
+test('rainout line: a Statusfy extension page parses to name, status, detail, level, updated, disabled; a game can be called off', () => {
+	const html = `<html><head><title>Tuesday Kickball Northshore &bull; Statusfy</title></head><body>
+		<div class="extension-detail status-bg-3"><h4 class="status-description">Canceled</h4></div>
+		<span>Tuesday / Kickball / Northshore</span> <em>(Disabled)</em>
+		<span class="updated-time" data-timestamp="1790695121000"></span>
+		<h5>Status Detail</h5><p>NO GAMES</p><h6>Last Updated On</h6><p>Oct 1</p></body></html>`;
+	const r = run(`kbParseStatusfy(${JSON.stringify(html)})`);
+	assert.equal(r.name, 'Tuesday Kickball Northshore'); assert.equal(r.status, 'Canceled'); assert.equal(r.detail, 'NO GAMES'); assert.equal(r.level, 3); assert.equal(r.updated, 1790695121000); assert.equal(r.disabled, true);
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null;`);
+	assert.equal(run(`kbRainoutLink(kbLeague('tbcs'))`), 'https://statusfy.com/8136020066/30');
+	assert.equal(run(`kbRainoutLink(kbLeague('tbcs-sun'))`), 'https://rainoutline.com/search/dnis/8136020066', 'no extension → the line itself');
+	run(`kbToggleRainout('s2')`); assert.equal(run(`kbSched('s2').status`), 'rainout');
+	run(`kbState.me = { role:'ump', umpId:'ump-carl' }; kbStartScheduled('s2');`); assert.equal(run('kbState.game'), null, 'a rained-out game cannot be started');
+	run(`kbToggleRainout('s2')`); assert.equal(run(`kbSched('s2').status`), 'scheduled');
+});
+
+test('free-agent availability: any-game = yes; nights-I-play = In on their own game that date → yes, Out → no, silent → maybe', () => {
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.game = null;`);
+	assert.equal(run(`kbFaAvailability('devin-hart', kbSched('s2'))`), 'yes', 'Devin said any game');
+	run(`kbSetProfile('devin-hart', { freeAgent:'mine' })`);
+	assert.equal(run(`kbFaAvailability('devin-hart', kbSched('s2'))`), 'maybe', 'plays Tue (s2 is his own game, so no other game that night) → nothing to go on');
+	/* Thom is a free agent for his nights; Sunday Oct 11 the Sliders play — if he says In there, a Sunday team short that day sees green */
+	run(`kbState.league.schedule.push({ id:'sx', date:'2026-10-11', time:'18:00', away:'bay-bombers', home:'lbc', status:'scheduled', availability:{}, lead:{}, prep:null });`);
+	assert.equal(run(`kbFaAvailability('thom-griggs', kbSched('sx'))`), 'maybe');
+	run(`kbSetAvail('s4', 'thom-griggs', 'in')`); assert.equal(run(`kbFaAvailability('thom-griggs', kbSched('sx'))`), 'yes');
+	run(`kbSetAvail('s4', 'thom-griggs', 'out')`); assert.equal(run(`kbFaAvailability('thom-griggs', kbSched('sx'))`), 'no');
+});

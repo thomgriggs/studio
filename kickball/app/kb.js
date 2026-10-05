@@ -161,7 +161,11 @@ const KB_ACTIONS = {
 	'me-ump':       (el) => kbSetMe({ umpId:el.value || null }),
 	'switch':       () => kbOpenSwitch(),
 	'league-pick':  (el) => kbSetLeague(el.value),
+	'rainout-game': (el) => kbToggleRainout(el.dataset.sched),
+	'rainout-ext':  (el) => { const L = kbState.league; L.rainout = L.rainout || { dnis:'8136020066', ext:null }; L.rainout.ext = el.value.trim() ? Number(el.value) : null; delete kbRainoutCache[kbRainoutKey(L)]; kbSave(); kbRender(); },
 	'pleague':      (el) => { kbState.pleague = el.dataset.league; kbState.pseason = null; kbState.pcompare = []; kbSave(); kbRender(); },
+	'pleague-pick': (el) => { kbState.pleague = el.value; kbState.pseason = null; kbState.pcompare = []; kbSave(); kbRender(); },
+	'fa-filter':    (el) => { kbState.faFilter = el.dataset.filter; kbRender(); },
 	'switch-close': () => kbCloseSwitch(),
 	/* player view */
 	'player':       () => kbGo('player'),
@@ -225,7 +229,7 @@ const KB_ACTION_CAP = {
 	'here':'lineup', 'move':'lineup', 'balance':'lineup', 'share':'lineup', 'unshare':'lineup', 'assign':'lineup', 'prep':'lineup',
 	'new-team':'roster', 'add-player':'roster', 'gender':'roster', 'remove-player':'roster',
 	'set-lead':'lead', 'recruit':'recruit', 'avail':'availability', 'free-agent':'availability',
-	'team-status':'league', 'assign-ump':'league', 'add-ump':'league', 'add-sched':'league', 'remove-sched':'league', 'rule':'league'
+	'team-status':'league', 'assign-ump':'league', 'rainout-game':'score', 'rainout-ext':'league', 'add-ump':'league', 'add-sched':'league', 'remove-sched':'league', 'rule':'league'
 };
 const KB_DENIED = { 'start-game':'Only the ump or the league starts a game', score:'Only the ump keeps score — you’re watching', roster:'Only the captain changes the roster', lineup:'Only the captain, lead or ump sets the lineup', lead:'Only the captain names a lead', availability:'You can only answer for yourself', recruit:'Only the captain or lead recruits', league:'League admins only' };
 function kbDenied(cap) { return KB_DENIED[cap] || 'Not allowed for this role'; }
@@ -424,6 +428,49 @@ function kbLeagueLabel(L) { return L ? (L.night || L.name) : ''; }
 function kbPersonLeagues(pid) { const seen = new Set(); return kbPersonTeams(pid).map(t => kbLeagueOfTeam(t.id)).filter(L => L && !seen.has(L.id) && seen.add(L.id)); }
 function kbSetLeague(id) { if (!kbLeague(id)) return; kbState.leagueId = id; kbState.prepId = null; kbNormalizeMe(); kbSave(); kbRender(); }
 
+/* ---------- rainout line (Statusfy) ---------------------------------------- */
+/* TBCS publishes field status per extension at statusfy.com/<dnis>/<ext> (CORS open), */
+/* mirrored by rainoutline.com. We read the page, cache it 10 minutes, and show a chip.  */
+const KB_RAINOUT_TTL = 10 * 60 * 1000; const kbRainoutCache = {};
+function kbRainoutKey(L) { return L && L.rainout && L.rainout.dnis && L.rainout.ext ? `${L.rainout.dnis}/${L.rainout.ext}` : null; }
+function kbRainoutLink(L) { return L && L.rainout && L.rainout.dnis ? (L.rainout.ext ? `https://statusfy.com/${L.rainout.dnis}/${L.rainout.ext}` : `https://rainoutline.com/search/dnis/${L.rainout.dnis}`) : null; }
+/* pure: pull name, status, detail, updated and the enabled flag out of a Statusfy extension page */
+function kbParseStatusfy(html) {
+	const text = (re) => { const m = html.match(re); return m ? m[1].replace(/<[^>]+>/g, '').replace(/&bull;|&ensp;|&nbsp;/g, ' ').replace(/\s+/g, ' ').trim() : ''; };
+	const name = text(/<title>([^<]*?)(?:\s*(?:&bull;|•)\s*Statusfy)?<\/title>/i);
+	const level = (html.match(/status-bg-(\d)/) || [])[1] || null;
+	const status = text(/class="[^"]*status-description[^"]*"[^>]*>([\s\S]*?)<\/[a-z]+>/i) || text(/<div class="extension-detail[^"]*"[\s\S]*?<(?:h\d|p|span)[^>]*>([\s\S]*?)<\//i);
+	const detail = text(/Status Detail<\/[a-z0-9]+>([\s\S]*?)Last Updated On/i);
+	const ts = (html.match(/data-timestamp="(\d+)"/) || [])[1];
+	const disabled = /\(Disabled\)/.test(html);
+	return { name, status, detail, level:level ? Number(level) : null, updated:ts ? Number(ts) : null, disabled };
+}
+function kbTimeAgo(ms) { const m = Math.round((Date.now() - ms) / 60000); if (m < 60) return `${m} min ago`; const h = Math.round(m / 60); if (h < 48) return `${h} hr ago`; return `${Math.round(h / 24)} days ago`; }
+function kbFieldStatus(L) {
+	const key = kbRainoutKey(L); if (!key) return;
+	const hit = kbRainoutCache[key]; if (hit && Date.now() - hit.at < KB_RAINOUT_TTL) return hit.data;
+	if (kbRainoutCache[key + ':pending']) return hit ? hit.data : undefined;
+	if (typeof fetch !== 'function') return hit ? hit.data : undefined;
+	kbRainoutCache[key + ':pending'] = true;
+	fetch(`https://statusfy.com/${key}`, { mode:'cors' }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(html => { kbRainoutCache[key] = { at:Date.now(), data:kbParseStatusfy(html) }; })
+		.catch(() => { kbRainoutCache[key] = { at:Date.now(), data:{ error:true } }; })
+		.finally(() => { delete kbRainoutCache[key + ':pending']; document.querySelectorAll(`[data-rainout="${L.id}"]`).forEach(el => { el.outerHTML = kbRainoutHTML(L); }); });
+	return hit ? hit.data : undefined;
+}
+/* the chip. Level 1 = go, 3 = canceled (Statusfy's status-bg-N); anything else is "see the line". */
+function kbRainoutHTML(L) {
+	if (!L || !L.rainout || !L.rainout.dnis) return '';
+	const link = kbRainoutLink(L), data = kbRainoutKey(L) ? kbFieldStatus(L) : null;
+	const wrap = (cls, body) => `<a class="rainout ${cls}" data-rainout="${L.id}" href="${link}" target="_blank" rel="noopener">${body}</a>`;
+	if (!kbRainoutKey(L)) return wrap('is-link', '<span class="rainout-label">Field status</span><strong>Rainout Line →</strong>');
+	if (data === undefined) return wrap('is-loading', '<span class="rainout-label">Field status</span><strong>Checking…</strong>');
+	if (data.error || !data.status) return wrap('is-link', '<span class="rainout-label">Field status</span><strong>Check the line →</strong>');
+	const cls = data.disabled ? 'is-off' : data.level === 1 ? 'is-go' : data.level === 3 ? 'is-no' : 'is-warn';
+	return wrap(cls, `<span class="rainout-label">Field status${data.disabled ? ' · line not active' : ''}</span><strong>${kbEscape(data.status)}</strong>${data.detail && data.detail.toLowerCase() !== data.status.toLowerCase() ? `<span class="rainout-detail">${kbEscape(data.detail)}</span>` : ''}${data.updated ? `<span class="rainout-when">${kbEscape(kbTimeAgo(data.updated))}</span>` : ''}`);
+}
+/* the league (or the ump) can also call a game off by hand */
+function kbToggleRainout(schedId) { const s = kbSched(schedId); if (!s || s.status === 'live' || s.status === 'final') { kbToast('That game is already being played'); return; } s.status = s.status === 'rainout' ? 'scheduled' : 'rainout'; kbSave(); kbRender(); kbToast(s.status === 'rainout' ? 'Marked rained out — everyone sees it' : 'Game is back on'); }
+
 /* ---------- seasons ------------------------------------------------------- */
 function kbSeasons(L = kbState.league) { return L ? (L.seasons || [{ id:L.season, name:String(L.season) }]) : []; }
 function kbSeasonName(id, L = kbState.league) { const s = kbSeasons(L).find(x => x.id === id) || kbState.leagues.flatMap(l => kbSeasons(l)).find(x => x.id === id); return s ? s.name : (id === 'all' ? 'All seasons' : String(id || '')); }
@@ -471,6 +518,7 @@ function kbStartScheduled(schedId) {
 	const s = kbSched(schedId); if (!s) return;
 	if (s.gameId && kbState.game && kbState.game.id === s.gameId) { kbGo('ump'); return; }
 	if (kbState.game && kbState.game.status === 'live') { kbToast('Finish the game in progress first'); return; }
+	if (s.status === 'rainout') { kbToast('This game is marked rained out — undo that first'); return; }
 	const prep = kbEnsurePrep(s);
 	kbState.game = { id:'g' + Date.now(), schedId:s.id, leagueId:kbLeagueOfSched(s).id, season:kbCurrentSeason(kbLeagueOfSched(s)), sport:prep.sport, mode:prep.mode, status:'live', startedAt:new Date().toISOString(), teams:structuredClone(prep.teams), events:[] };
 	s.gameId = kbState.game.id; s.status = 'live'; s.prep = null; kbState.prepId = null;
@@ -508,6 +556,14 @@ function kbFreeAgents(s, forTeamId) {
 		seen.add(p.id); out.push({ ...p, from:t, mode });
 	} }
 	return out;
+}
+/* Is this free agent actually available for game s? 'yes' = said any game, or plays that night and said In; 'no' = plays that night and said Out; 'maybe' = hasn't said. */
+function kbFaAvailability(pid, s) {
+	const mode = kbFaMode(pid); if (mode === 'all') return 'yes';
+	const own = kbSchedSorted(true).filter(x => x.date === s.date && x.id !== s.id && kbPersonTeams(pid).some(t => t.id === x.away || t.id === x.home));
+	if (!own.length) return 'maybe';
+	const v = own.map(x => (x.availability || {})[pid]).filter(Boolean);
+	if (v.includes('in')) return 'yes'; if (v.length && v.every(x => x === 'out')) return 'no'; return 'maybe';
 }
 /* Recruit: copy the player onto the roster as a guest for this game and mark them in. */
 function kbRecruit(schedId, teamId, playerId, fromId) {
@@ -1016,8 +1072,9 @@ function kbRenderRoleHome() {
 	}
 	if (role === 'ump' && L) {
 		const mine = kbUpcoming().filter(s => s.ump && s.ump === me.umpId);
-		html = `<section class="role-card"><p class="eyebrow">Your games</p>
-			<ul class="sched-list">${mine.map(s => gameRow(s, `<button type="button" class="key ${live(s) ? 'is-primary' : s.status === 'live' ? 'is-ghost' : 'is-primary'}" data-action="start-sched" data-sched="${s.id}">${live(s) ? 'Continue' : s.status === 'live' ? 'In progress' : 'Start'}</button>`)).join('') || '<li class="is-empty">Nothing assigned to you yet — the league assigns umps</li>'}</ul></section>`;
+		html = `<section class="role-card"><p class="eyebrow">Your games · ${kbEscape(kbLeagueLabel(L))}</p>${kbRainoutHTML(L)}
+			<ul class="sched-list">${mine.map(s => gameRow(s, s.status === 'rainout' ? `<button type="button" class="key is-ghost" data-action="rainout-game" data-sched="${s.id}">Rained out · undo</button>` : `<button type="button" class="key ${live(s) ? 'is-primary' : s.status === 'live' ? 'is-ghost' : 'is-primary'}" data-action="start-sched" data-sched="${s.id}">${live(s) ? 'Continue' : s.status === 'live' ? 'In progress' : 'Start'}</button>`)).join('') || '<li class="is-empty">Nothing assigned to you yet — the league assigns umps</li>'}</ul>
+			${mine.some(s => s.status === 'scheduled') ? '<p class="hint">Field closed? Hold a game’s row: <em>Rained out</em> is in League admin, or ask the league.</p>' : ''}</section>`;
 	}
 	if ((role === 'captain' || role === 'lead') && team) {
 		const next = kbNextSched(team.id);
@@ -1027,13 +1084,15 @@ function kbRenderRoleHome() {
 			const fa = kbFreeAgents(next, team.id);
 			html = `<section class="role-card"><p class="eyebrow">Next game · ${kbEscape(team.name)}</p>
 				<ul class="sched-list">${gameRow(next)}</ul>
+				${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(kbLeagueOfSched(next))}
 				<p class="hint"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said</p>
 				${role === 'lead' && !iLead ? `<p class="warn">${lead ? kbEscape(lead.name) + ' leads this game' : 'No lead named for this game'} — only the lead edits the lineup.</p>` : ''}
 				<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="prep" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">${live(next) ? 'Lineup (live)' : 'Set the lineup'}</button>${role === 'captain' ? `<button type="button" class="key is-ghost" data-action="team" data-team="${team.id}">Roster</button>` : ''}</div>
 				${role === 'captain' ? `<div class="field lead-field"><label for="lead-${next.id}">Lead for this game <small>(if you can’t make it)</small></label><select id="lead-${next.id}" data-action="set-lead" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}"><option value="">Me — ${kbEscape(kbPlayer(team, team.captain)?.name || 'captain')}</option>${team.roster.filter(p => p.id !== team.captain).map(p => `<option value="${p.id}" ${leadId === p.id ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>` : ''}
 				<details class="recruit"><summary>Free agents · ${fa.length}</summary>
 					<p class="hint">${c.in < (kbSport({ sport:L.sport }).team?.minPlayers || 6) ? 'You’re short — ' : ''}players on other teams who said they’ll fill in.</p>
-					<ul class="fa-list">${fa.map(p => kbPlayerCardHTML(p.id, { sched:next.id, team:team.id, from:p.from.id })).join('') || '<li class="is-empty">No free agents right now</li>'}</ul>
+					<nav class="tabs is-filter is-fa-filter" aria-label="Show">${[['all', `All · ${fa.length}`], ['available', `Available · ${fa.filter(p => kbFaAvailability(p.id, next) === 'yes').length}`]].map(([f, l]) => `<button type="button" class="${(kbState.faFilter || 'all') === f ? 'is-on' : ''}" data-action="fa-filter" data-filter="${f}" aria-pressed="${(kbState.faFilter || 'all') === f}">${l}</button>`).join('')}</nav>
+					<ul class="fa-list">${fa.filter(p => (kbState.faFilter || 'all') === 'all' || kbFaAvailability(p.id, next) === 'yes').map(p => kbPlayerCardHTML(p.id, { sched:next.id, team:team.id, from:p.from.id })).join('') || '<li class="is-empty">No free agents right now</li>'}</ul>
 				</details>
 			</section>
 			<section class="role-card"><p class="eyebrow">Who’s in</p><ul class="avail-list">${team.roster.map(p => { const v = (next.availability || {})[p.id]; return `<li class="avail-row"><span class="roster-name">${kbEscape(p.name)}${p.guest ? ' <small>guest</small>' : ''}</span><span class="seg">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${next.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span></li>`; }).join('')}</ul></section>`;
@@ -1357,6 +1416,13 @@ function kbRenderLeague() {
 		</ul>
 	</section>
 
+	<!-- ===== FIELD STATUS : Rainout Line extension for this night ===== -->
+	<section class="league-card"><h2>Field status</h2>
+		<p class="hint">${kbEscape(L.org || '')} announces rainouts on Rainout Line / Statusfy, line (813) 602-0066. Enter this night's extension and every screen shows the status; leave it blank to just link to the line.</p>
+		${kbRainoutHTML(L)}
+		<div class="inline-form"><div class="field"><label for="ro-ext">Extension <small>(Tue Kickball: 28 Gadsden · 30 Northshore)</small></label><input id="ro-ext" type="number" inputmode="numeric" min="1" value="${L.rainout && L.rainout.ext ? L.rainout.ext : ''}" data-action="rainout-ext" placeholder="none"></div><a class="key is-ghost" href="https://rainoutline.com/search/dnis/${(L.rainout || {}).dnis || '8136020066'}" target="_blank" rel="noopener">Open the line</a></div>
+	</section>
+
 	<!-- ===== TEAMS : approvals ===== -->
 	<section class="league-card"><h2>Teams</h2>
 		<ul class="team-list">${teamsAll.map(t => { const st = L.teams[t.id] || 'pending'; const cap = t.captain && kbPlayer(t, t.captain); return `<li class="approve-row is-${st}"><div><strong>${kbEscape(t.name)}</strong><span>${t.roster.length} players${cap ? ' · captain ' + kbEscape(cap.name) : ''} · <b>${statusLabel[st]}</b></span></div><span class="seg">${['approved', 'declined'].filter(x => x !== st).map(x => `<button type="button" data-action="team-status" data-team="${t.id}" data-status="${x}">${x === 'approved' ? 'Approve' : 'Decline'}</button>`).join('')}${st !== 'pending' ? `<button type="button" data-action="team-status" data-team="${t.id}" data-status="pending">Reset</button>` : ''}</span></li>`; }).join('') || '<li class="is-empty">No teams yet</li>'}</ul>
@@ -1371,11 +1437,11 @@ function kbRenderLeague() {
 
 	<!-- ===== SCHEDULE : games, ump assignment, results ===== -->
 	<section class="league-card"><h2>Schedule</h2>
-		<ul class="sched-list is-admin">${kbSchedSorted().map(s => `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''} ${s.status === 'final' ? 'is-final' : ''}">
+		<ul class="sched-list is-admin">${kbSchedSorted().map(s => `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''} ${s.status === 'final' ? 'is-final' : ''} ${s.status === 'rainout' ? 'is-rainout' : ''}">
 			<span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}${s.mode && s.mode !== 'season' ? ' · ' + kbEscape(cfg.modes?.[s.mode] || s.mode) : ''}</span>
-			<span class="sched-who">${kbEscape(kbSchedName(s, 'away'))} <em>@</em> ${kbEscape(kbSchedName(s, 'home'))}${s.result ? ` <strong>${s.result.away}–${s.result.home}</strong>` : s.status === 'live' ? ' <strong>live</strong>' : ''}</span>
+			<span class="sched-who">${kbEscape(kbSchedName(s, 'away'))} <em>@</em> ${kbEscape(kbSchedName(s, 'home'))}${s.result ? ` <strong>${s.result.away}–${s.result.home}</strong>` : s.status === 'live' ? ' <strong>live</strong>' : s.status === 'rainout' ? ' <strong class="is-rain">rained out</strong>' : ''}</span>
 			${s.status === 'final' ? '' : `<select data-action="assign-ump" data-sched="${s.id}" aria-label="Umpire"><option value="">No ump yet</option>${L.umpires.map(u => `<option value="${u.id}" ${s.ump === u.id ? 'selected' : ''}>${kbEscape(u.name)}</option>`).join('')}</select>
-			<button type="button" class="roster-remove" data-action="remove-sched" data-sched="${s.id}" aria-label="Remove game">×</button>`}
+			<span class="sched-tools"><button type="button" class="key is-ghost ${s.status === 'rainout' ? 'is-on' : ''}" data-action="rainout-game" data-sched="${s.id}" aria-pressed="${s.status === 'rainout'}" title="Rained out">☔</button><button type="button" class="roster-remove" data-action="remove-sched" data-sched="${s.id}" aria-label="Remove game">×</button></span>`}
 		</li>`).join('') || '<li class="is-empty">No games yet</li>'}</ul>
 		<form class="new-game"><h3>Add a game</h3>
 			<div class="field-pair"><div class="field"><label for="sch-date">Date</label><input id="sch-date" name="date" type="date" required></div><div class="field"><label for="sch-time">Time</label><input id="sch-time" name="time" type="time"></div></div>
@@ -1447,7 +1513,7 @@ function kbRenderPlayer() {
 	const live = kbState.game && kbState.game.status === 'live' && (ids.includes(kbState.game.teams.away.teamId) || ids.includes(kbState.game.teams.home.teamId)) ? kbState.game : null;
 	const myTeamIn = (s) => kbTeam(ids.includes(s.home) ? s.home : s.away);
 	const inout = (s) => { const v = (s.availability || {})[p.id]; return `<span class="seg is-inout">${['in', 'out'].map(x => `<button type="button" class="${v === x ? 'is-on is-' + x : ''}" data-action="avail" data-sched="${s.id}" data-player="${p.id}" data-value="${x}" aria-pressed="${v === x}">${x === 'in' ? 'In' : 'Out'}</button>`).join('')}</span>`; };
-	const row = (s, extra = '') => { const t = myTeamIn(s); const opp = kbTeam(kbOpponent(s, t.id)); const SL = kbLeagueOfSched(s); return `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}${teams.length > 1 ? ' · ' + kbEscape(t.short) : ''}${myLeagues.length > 1 && SL ? ` · <b>${kbEscape(kbLeagueLabel(SL))}</b>` : ''}</span><span class="sched-who">${s.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}${s.result ? ` <strong>${s.away === t.id ? `${s.result.away}–${s.result.home}` : `${s.result.home}–${s.result.away}`}${(s.result.away > s.result.home) === (s.away === t.id) ? ' W' : s.result.away === s.result.home ? ' T' : ' L'}</strong>` : ''}</span>${extra}</li>`; };
+	const row = (s, extra = '') => { const t = myTeamIn(s); const opp = kbTeam(kbOpponent(s, t.id)); const SL = kbLeagueOfSched(s); return `<li class="sched-row ${s.status === 'live' ? 'is-live' : ''} ${s.status === 'rainout' ? 'is-rainout' : ''}"><span class="sched-when">${kbEscape(kbSchedDate(s))}${s.field ? ' · ' + kbEscape(s.field) : ''}${teams.length > 1 ? ' · ' + kbEscape(t.short) : ''}${myLeagues.length > 1 && SL ? ` · <b>${kbEscape(kbLeagueLabel(SL))}</b>` : ''}</span><span class="sched-who">${s.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}${s.result ? ` <strong>${s.away === t.id ? `${s.result.away}–${s.result.home}` : `${s.result.home}–${s.result.away}`}${(s.result.away > s.result.home) === (s.away === t.id) ? ' W' : s.result.away === s.result.home ? ' T' : ' L'}</strong>` : s.status === 'rainout' ? ' <strong class="is-rain">Rained out</strong>' : ''}</span>${s.status === 'rainout' ? '' : extra}</li>`; };
 
 	/* --- next game card --- */
 	const next = upcoming[0]; let nextHTML = '';
@@ -1458,6 +1524,7 @@ function kbRenderPlayer() {
 		nextHTML = `<section class="pcard is-next"><p class="eyebrow">Next game${teams.length > 1 ? ' · ' + kbEscape(t.name) : ''}${myLeagues.length > 1 ? ' · ' + kbEscape(kbLeagueLabel(NL)) : ''}</p>
 			<p class="next-when">${kbEscape(kbSchedDate(next))}${next.field ? ' · ' + kbEscape(next.field) : ''}</p>
 			<h2 class="next-who">${next.home === t.id ? 'vs' : '@'} ${kbEscape(opp ? opp.name : '—')}</h2>
+			${next.status === 'rainout' ? '<p class="warn">Rained out — no game this week.</p>' : kbRainoutHTML(NL)}
 			<div class="next-inout">${inout(next)}</div>
 			<p class="status-line"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said${c.in < min ? ` · <strong class="is-short">short ${min - c.in}</strong>` : ''}</p>
 			<p class="hint">${lead ? `${kbEscape(kbDisplayName(lead))} is running this one` : t.captain && kbPlayer(t, t.captain) ? `${kbEscape(kbDisplayName(kbPlayer(t, t.captain)))} (captain) is running this one` : ''}</p>
@@ -1507,8 +1574,8 @@ function kbRenderPlayer() {
 	</section>
 
 	<!-- ===== STATS : me vs the league ===== -->
-	<section class="pcard"><p class="eyebrow">Stats</p>
-		${myLeagues.length > 1 ? `<nav class="tabs is-filter is-leagues" aria-label="League"><button type="button" class="${lscope === 'all' ? 'is-on' : ''}" data-action="pleague" data-league="all" aria-pressed="${lscope === 'all'}">All ${kbEscape((KB_SPORTS[myLeagues[0].sport] || {}).name || '').toLowerCase()}</button>${myLeagues.map(l => `<button type="button" class="${lscope === l.id ? 'is-on' : ''}" data-action="pleague" data-league="${l.id}" aria-pressed="${lscope === l.id}">${kbEscape(kbLeagueLabel(l))}</button>`).join('')}</nav>` : ''}
+	<section class="pcard">
+		<div class="pcard-head"><p class="eyebrow">Stats</p>${myLeagues.length > 1 ? `<label class="scope-pick"><span class="sr-only">Which league</span><select data-action="pleague-pick" aria-label="Which league"><option value="all" ${lscope === 'all' ? 'selected' : ''}>All ${kbEscape((KB_SPORTS[myLeagues[0].sport] || {}).name || '').toLowerCase()}</option>${myLeagues.map(l => `<option value="${l.id}" ${lscope === l.id ? 'selected' : ''}>${kbEscape(kbLeagueLabel(l))} · ${kbEscape(l.name)}</option>`).join('')}</select></label>` : ''}</div>
 		<nav class="tabs is-filter is-seasons" aria-label="Season">${scopes.map(s => `<button type="button" class="${season === s ? 'is-on' : ''}" data-action="pseason" data-season="${s}" aria-pressed="${season === s}">${kbEscape(kbSeasonName(s))}</button>`).join('')}</nav>
 		<p class="compare-row"><span class="eyebrow" style="margin:0">Compare</span>${scopes.filter(s => s !== season && s !== 'all').map(s => `<button type="button" class="chip-cmp ${compare.includes(s) ? 'is-on is-' + (compare.indexOf(s) + 1) : ''}" data-action="pcompare" data-season="${s}" aria-pressed="${compare.includes(s)}">${kbEscape(kbSeasonName(s))}</button>`).join('')}</p>
 		<div class="stats-wrap">
@@ -1545,10 +1612,11 @@ function kbStatLine(st) { return `${kbAvg(st)} AVG · ${st.hr} HR · ${st.rbi} R
 function kbPlayerCardHTML(pid, ctx = {}) {
 	const p = kbPerson(pid); if (!p) return '';
 	const pr = kbProfile(pid), st = kbPlayerStats(pid, 'all', 'all');
-	return `<li class="fa-card">
+	const s = ctx.sched ? kbSched(ctx.sched) : null; const av = s ? kbFaAvailability(pid, s) : null;
+	return `<li class="fa-card ${av ? 'is-av-' + av : ''}">
 		<button type="button" class="fa-open" data-action="player-card" data-player="${pid}" data-sched="${ctx.sched || ''}" data-team="${ctx.team || ''}" aria-haspopup="dialog" aria-controls="player-sheet">
-			<span class="avatar-big is-sm" aria-hidden="true">${pr.icon || kbInitials(p.name)}</span>
-			<span class="fa-text"><strong>${kbEscape(kbDisplayName(p))}</strong><span class="fa-meta">${p.teams.map(t => kbEscape(t.short)).join(' · ')}${kbMyPositions(pid).length ? ' · ' + kbEscape(kbPositionsLabel(pid)) : ''} · <span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></span><span class="fa-line">${st.pa ? kbEscape(kbStatLine(st)) : 'No games yet'}</span></span>
+			<span class="avatar-big is-sm" aria-hidden="true">${pr.icon || kbInitials(p.name)}${av ? `<i class="av-light is-${av}" title="${av === 'yes' ? 'Available that night' : av === 'no' ? 'Said out that night' : 'Hasn’t said'}"></i>` : ''}</span>
+			<span class="fa-text"><strong>${kbEscape(kbDisplayName(p))}${av === 'yes' ? ' <span class="av-tag">Available</span>' : av === 'no' ? ' <span class="av-tag is-no">Out that night</span>' : ''}</strong><span class="fa-meta">${p.teams.map(t => kbEscape(t.short)).join(' · ')}${kbMyPositions(pid).length ? ' · ' + kbEscape(kbPositionsLabel(pid)) : ''} · <span class="chip-tag is-${p.gender}">${p.gender === 'male' ? 'M' : 'W'}</span></span><span class="fa-line">${st.pa ? kbEscape(kbStatLine(st)) : 'No games yet'}</span></span>
 			${st.pa ? kbRadarSVG(kbRadarAxes(pid, 'all', 'all')).replace('class="radar"', 'class="radar is-mini"') : ''}
 		</button>
 		${ctx.team ? `<button type="button" class="key is-ghost" data-action="recruit" data-sched="${ctx.sched}" data-team="${ctx.team}" data-scope="${ctx.team}" data-player="${pid}" data-from="${ctx.from}">Add</button>` : ''}

@@ -466,6 +466,38 @@ input, select { font:inherit; }
 .icon-grid button.is-on { border-color:var(--color_accent); background:var(--color_accent-soft); }
 @media (max-width:420px) { .stats-wrap { grid-template-columns:1fr; justify-items:center; } .icon-grid { grid-template-columns:repeat(6, 1fr); } }
 
+/* ===== RAINOUT : field status chip (Statusfy) ===== */
+.rainout { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:2px var(--space_sm); min-height:44px; padding:var(--space_xs) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); color:inherit; text-decoration:none; font-size:var(--font_size-sm); }
+.rainout .rainout-label { grid-column:1; font-size:var(--font_size-xs); text-transform:uppercase; letter-spacing:.08em; color:var(--color_text-dim); font-weight:700; }
+.rainout strong { grid-column:2; font-weight:800; }
+.rainout .rainout-detail { grid-column:2; font-size:var(--font_size-xs); color:var(--color_text-muted); }
+.rainout .rainout-when { grid-column:3; grid-row:1 / span 2; font-size:var(--font_size-xs); color:var(--color_text-dim); font-weight:700; }
+.rainout.is-go { border-color:color-mix(in srgb, var(--color_accent), transparent 50%); } .rainout.is-go strong { color:var(--color_accent); }
+.rainout.is-no { border-color:var(--color_danger); } .rainout.is-no strong { color:var(--color_danger); }
+.rainout.is-warn strong { color:var(--color_warn); }
+.rainout.is-off strong, .rainout.is-link strong, .rainout.is-loading strong { color:var(--color_text-muted); }
+.sched-row.is-rainout { opacity:.8; border-style:dashed; }
+.sched-who .is-rain { color:var(--color_warn); }
+.sched-tools { display:inline-flex; gap:2px; align-items:center; }
+.sched-tools .key { min-height:40px; min-width:40px; padding:0; font-size:var(--font_size-md); }
+.sched-tools .key.is-on { background:var(--color_warn); color:var(--color_bg); border-color:var(--color_warn); }
+.sched-list.is-admin .sched-row { grid-template-areas:"when ump x" "who ump x"; }
+.sched-list.is-admin .sched-tools { grid-area:x; }
+.inline-form .field label small { text-transform:none; letter-spacing:0; }
+
+/* ===== STATS HEAD : league scope as a dropdown, seasons as tabs ===== */
+.pcard-head { display:flex; justify-content:space-between; align-items:center; gap:var(--space_sm); }
+.pcard-head .eyebrow { margin:0; }
+.scope-pick select { min-height:36px; max-width:12rem; padding:0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-sunken); color:var(--color_text); border:1px solid var(--color_line-strong); font-size:var(--font_size-xs); font-weight:800; }
+/* ===== FREE AGENT AVAILABILITY : the light ===== */
+.avatar-big { position:relative; }
+.av-light { position:absolute; right:-2px; bottom:-2px; width:14px; height:14px; border-radius:50%; border:2px solid var(--color_bg-sunken); background:var(--color_text-dim); }
+.av-light.is-yes { background:var(--color_accent); box-shadow:0 0 8px var(--color_accent); } .av-light.is-no { background:var(--color_danger); }
+.av-tag { display:inline-block; margin-left:4px; padding:0 6px; border-radius:var(--radius_pill); background:var(--color_accent-soft); color:var(--color_accent); font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; vertical-align:middle; }
+.av-tag.is-no { background:color-mix(in srgb, var(--color_danger), transparent 85%); color:var(--color_danger); }
+.fa-card.is-av-yes { border-color:color-mix(in srgb, var(--color_accent), transparent 55%); }
+.tabs.is-fa-filter { margin-top:var(--space_sm); }
+
 /* ===== SEASONS + COMPARE ===== */
 .tabs.is-seasons button { font-size:var(--font_size-xs); }
 .compare-row { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space_xs) var(--space_sm); font-size:var(--font_size-xs); }
