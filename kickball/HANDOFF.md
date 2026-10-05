@@ -16,6 +16,7 @@ home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .ro
          .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
 player   .player-head  .avatar-big  .player-id  .player-real  .team-chips  .chip-team(.is-captain)  .walkup  .tabs.is-filter  .pcard(.is-next .is-live)  .next-when  .next-who  .next-inout  .seg.is-inout  .status-line(.is-in .is-out .is-short)  .lineup-me  .live-score
          .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .axis-list  .outs-strip(.is-run)  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
+players  .pl-pos  .pl-tools  .pl-search  .pl-check(.is-on)  .pl-table-wrap  .pl-table  .pl-name  .pl-person  .pl-text  .pl-meta  .pl-last  .pl-act  .pl-add  td.is-hi/.is-lo/.is-sort  .avatar-big.is-xs
 rainout  .rainout(.is-go .is-no .is-warn .is-off .is-link .is-loading)  .rainout-label  .rainout-detail  .rainout-when  .sched-row.is-rainout  .sched-tools
 switch   .switcher (dialog)  .switch-head
 league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
@@ -47,6 +48,7 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 | roles | `role`(+`data-role`) · `me-team` · `me-player` · `me-ump` · `league-pick` (selects) |
 | schedule | `start-sched`(+`data-sched`) · `prep`(+`data-sched`, `data-team`) · `avail`(+`data-sched`, `data-player`, `data-value`=in\|out) · `free-agent`(+`data-player`, `data-team`) · `set-lead` (select, +`data-sched`, `data-team`) · `set-lead-clear` · `recruit`(+`data-sched`, `data-team`, `data-player`, `data-from`) |
 | player | `player` · `pteam`(+`data-team`=all\|teamId) · `pleague`(+`data-league`) · `pleague-pick` (select) · `fa-filter`(+`data-filter`=all\|available) · `pseason`(+`data-season`) · `pcompare`(+`data-season`) · `fa-mode`(+`data-mode`=off\|mine\|all) · `fa-pos`(+`data-pos`) · `pick-icon`(+`data-icon`) · `save-profile` (submit) · `switch` · `switch-close` |
+| players | `players`(+`data-sched`, `data-team`, `data-fa`) · `pl-pos`(+`data-pos`) · `pl-q` (search input) · `pl-fa` (checkbox) · `pl-sort`(+`data-sort`) |
 | league | `league` · `rainout-game`(+`data-sched`) · `rainout-ext` (input) · `team-status`(+`data-team`, `data-status`) · `assign-ump` (select, +`data-sched`) · `add-ump` (submit) · `add-sched` (submit) · `remove-sched`(+`data-sched`) · `rule` (input/select, +`data-path`, `data-type`) |
 | fallback | `coming-soon` |
 

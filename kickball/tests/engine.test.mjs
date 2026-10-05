@@ -572,3 +572,15 @@ test('maybe: counts as its own bucket and is not here until they say In', () => 
 	assert.ok(!/ROSTER ====/.test(run(`kbCaptainHomeHTML(kbTeam('lbc'), 'lead', { role:'lead', teamId:'lbc', playerId:'katie-morton' }, kbState.league)`)), 'a lead has no roster section');
 	assert.equal(run(`kbTeamRecord('lbc')`), '0–0');
 });
+
+test('players table: scoped to the night, free-agent toggle, position chips, search, sort', () => {
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.profiles = structuredClone(KB_SEED_PROFILES); kbState.games = []; kbState.game = null; kbSeedDemoGames(); kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' };`);
+	const all = run(`kbPlayersRows({ pos:'all', q:'', fa:false, sort:'avg', dir:-1, sched:'s1', team:'lbc' })`);
+	assert.ok(all.every(r => ['lbc', 'pitch-please', 'ball-busters'].includes(r.team.id)), 'Tuesday night only');
+	assert.ok(all.length > 1 && all[0].avg >= all[1].avg, 'sorted by AVG desc');
+	const fa = run(`kbPlayersRows({ pos:'all', q:'', fa:true, sort:'avg', dir:-1, sched:'s1', team:'lbc' })`);
+	assert.ok(fa.length && fa.every(r => r.fa && r.team.id !== 'lbc'), 'free agents from other teams');
+	assert.deepEqual(run(`kbPlayersRows({ pos:'OF', q:'', fa:true, sort:'avg', dir:-1, sched:'s1', team:'lbc' }).map(r => r.id)`), ['devin-hart']);
+	assert.deepEqual(run(`kbPlayersRows({ pos:'all', q:'nina', fa:false, sort:'name', dir:1, sched:'s1', team:'lbc' }).map(r => r.id)`), ['nina-patel']);
+	assert.match(run(`kbLastGameLine('cristy-ceron')`), /^[WLT] \d+–\d+ (vs|@) /);
+});
