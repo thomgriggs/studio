@@ -184,6 +184,7 @@ const KB_ACTIONS = {
 	'avail':        (el) => kbSetAvail(el.dataset.sched, el.dataset.player, el.dataset.value),
 	'free-agent':   (el) => kbSetFreeAgent(el.dataset.player, el.dataset.team),
 	'set-lead':     (el) => kbSetLead(el.dataset.sched, el.dataset.team, el.value),
+	'set-lead-clear': (el) => kbSetLead(el.dataset.sched, el.dataset.team, ''),
 	'recruit':      (el) => kbRecruit(el.dataset.sched, el.dataset.team, el.dataset.player, el.dataset.from),
 	/* league */
 	'league':       () => kbGo('league'),
@@ -228,7 +229,7 @@ const KB_ACTION_CAP = {
 	'fix-score':'score', 'fix-outs':'score', 'nudge':'score', 'fix-done':'score', 'bag':'score', 'score-round':'score', 'end-game':'score', 'finish':'score', 'abandon':'score',
 	'here':'lineup', 'move':'lineup', 'balance':'lineup', 'share':'lineup', 'unshare':'lineup', 'assign':'lineup', 'prep':'lineup',
 	'new-team':'roster', 'add-player':'roster', 'gender':'roster', 'remove-player':'roster',
-	'set-lead':'lead', 'recruit':'recruit', 'avail':'availability', 'free-agent':'availability',
+	'set-lead':'lead', 'set-lead-clear':'lead', 'recruit':'recruit', 'avail':'availability', 'free-agent':'availability',
 	'team-status':'league', 'assign-ump':'league', 'rainout-game':'score', 'rainout-ext':'league', 'add-ump':'league', 'add-sched':'league', 'remove-sched':'league', 'rule':'league'
 };
 const KB_DENIED = { 'start-game':'Only the ump or the league starts a game', score:'Only the ump keeps score — you’re watching', roster:'Only the captain changes the roster', lineup:'Only the captain, lead or ump sets the lineup', lead:'Only the captain names a lead', availability:'You can only answer for yourself', recruit:'Only the captain or lead recruits', league:'League admins only' };
@@ -1088,7 +1089,9 @@ function kbRenderRoleHome() {
 				<p class="hint"><strong class="is-in">${c.in} in</strong> · <strong class="is-out">${c.out} out</strong> · ${c.unknown} haven’t said</p>
 				${role === 'lead' && !iLead ? `<p class="warn">${lead ? kbEscape(lead.name) + ' leads this game' : 'No lead named for this game'} — only the lead edits the lineup.</p>` : ''}
 				<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="prep" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">${live(next) ? 'Lineup (live)' : 'Set the lineup'}</button>${role === 'captain' ? `<button type="button" class="key is-ghost" data-action="team" data-team="${team.id}">Roster</button>` : ''}</div>
-				${role === 'captain' ? `<div class="field lead-field"><label for="lead-${next.id}">Lead for this game <small>(if you can’t make it)</small></label><select id="lead-${next.id}" data-action="set-lead" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}"><option value="">Me — ${kbEscape(kbPlayer(team, team.captain)?.name || 'captain')}</option>${team.roster.filter(p => p.id !== team.captain).map(p => `<option value="${p.id}" ${leadId === p.id ? 'selected' : ''}>${kbEscape(p.name)}</option>`).join('')}</select></div>` : ''}
+				${(() => { if (role !== 'captain') return ''; const capOut = (next.availability || {})[team.captain] === 'out'; if (!capOut && !leadId) return ''; /* the lead question only comes up when the captain is out */
+					if (!capOut && leadId) return `<p class="hint">${kbEscape(kbDisplayName(lead))} is set to lead this one — you’re marked in, so that’s optional. <button type="button" class="link" data-action="set-lead-clear" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}">Clear</button></p>`;
+					return `<div class="field lead-field ${leadId ? '' : 'is-needed'}"><label for="lead-${next.id}">You’re out this game — who runs the team?</label><select id="lead-${next.id}" data-action="set-lead" data-sched="${next.id}" data-team="${team.id}" data-scope="${team.id}"><option value="">Pick a lead…</option>${team.roster.filter(p => p.id !== team.captain && !p.guest).map(p => `<option value="${p.id}" ${leadId === p.id ? 'selected' : ''}>${kbEscape(kbDisplayName(p))}${(next.availability || {})[p.id] === 'in' ? ' · in' : (next.availability || {})[p.id] === 'out' ? ' · out' : ''}</option>`).join('')}</select>${leadId ? '' : '<p class="warn">No one is running the team yet.</p>'}</div>`; })()}
 				<details class="recruit"><summary>Free agents · ${fa.length}</summary>
 					<p class="hint">${c.in < (kbSport({ sport:L.sport }).team?.minPlayers || 6) ? 'You’re short — ' : ''}players on other teams who said they’ll fill in.</p>
 					<nav class="tabs is-filter is-fa-filter" aria-label="Show">${[['all', `All · ${fa.length}`], ['available', `Available · ${fa.filter(p => kbFaAvailability(p.id, next) === 'yes').length}`]].map(([f, l]) => `<button type="button" class="${(kbState.faFilter || 'all') === f ? 'is-on' : ''}" data-action="fa-filter" data-filter="${f}" aria-pressed="${(kbState.faFilter || 'all') === f}">${l}</button>`).join('')}</nav>

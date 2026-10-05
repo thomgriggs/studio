@@ -377,6 +377,8 @@ input, select { font:inherit; }
 .roster-name small, .roster-name small { font-size:var(--font_size-xs); color:var(--color_text-dim); font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin-left:4px; }
 .roster-row.is-guest { border-style:dashed; }
 .lead-field label small { text-transform:none; letter-spacing:0; color:var(--color_text-dim); }
+.lead-field.is-needed select { border-color:var(--color_warn); }
+.link { background:none; border:0; padding:0; color:var(--color_accent); text-decoration:underline; cursor:pointer; font:inherit; min-height:24px; }
 .recruit { border-radius:var(--radius_sm); border:1px dashed var(--color_line-strong); padding:var(--space_sm) var(--space_md); }
 .recruit summary { cursor:pointer; font-size:var(--font_size-sm); font-weight:700; color:var(--color_text-muted); }
 .recruit .roster-list { margin-top:var(--space_sm); }

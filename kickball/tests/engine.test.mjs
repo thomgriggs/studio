@@ -537,3 +537,11 @@ test('free-agent availability: any-game = yes; nights-I-play = In on their own g
 	run(`kbSetAvail('s4', 'thom-griggs', 'in')`); assert.equal(run(`kbFaAvailability('thom-griggs', kbSched('sx'))`), 'yes');
 	run(`kbSetAvail('s4', 'thom-griggs', 'out')`); assert.equal(run(`kbFaAvailability('thom-griggs', kbSched('sx'))`), 'no');
 });
+
+test('lead: the question only comes up when the captain is out', () => {
+	run(`kbState.leagues = structuredClone(KB_SEED_LEAGUES); kbState.leagueId = 'tbcs'; kbState.teams = structuredClone(KB_SEED_TEAMS); kbState.game = null; kbSched('s1').lead = {};`);
+	run(`kbState.me = { role:'captain', teamId:'lbc', playerId:'jason-morton' }; kbSetAvail('s1', 'jason-morton', 'out');`);
+	assert.equal(run(`kbSched('s1').availability['jason-morton']`), 'out');
+	run(`kbSetLead('s1', 'lbc', 'katie-morton')`); assert.equal(run(`kbSched('s1').lead.lbc`), 'katie-morton');
+	run(`kbSetLead('s1', 'lbc', '')`); assert.equal(run(`kbSched('s1').lead.lbc`), undefined, 'clearing removes the lead');
+});
