@@ -15,7 +15,7 @@ me       .me-bar  .me-pill  .me-dot(.is-league .is-ump .is-captain .is-lead .is-
 home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .role-home  .role-card(.is-live)  .new-game  .home-links  .recent-panel  .recent
          .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
 player   .player-head  .avatar-big  .player-id  .player-real  .team-chips  .chip-team(.is-captain)  .walkup  .tabs.is-filter  .pcard(.is-next .is-live)  .next-when  .next-who  .next-inout  .seg.is-inout  .status-line(.is-in .is-out .is-short)  .lineup-me  .live-score
-         .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
+         .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .axis-list  .outs-strip(.is-run)  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
 switch   .switcher (dialog)  .switch-head
 league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
 ump      .ump  .score-strip  .side(.is-batting)  .side-name .side-score .side-tag
@@ -71,7 +71,7 @@ kinds: reach out ball strike foul runner halfEnd set round
 ```
 
 ## Derived (`kbDerive(game)`)
-innings → `{ score, inning, half, outs, count, bases[3] (playerId|true|null), runsThisHalf, line:{away[],home[]}, pa:{away,home}, stats:{ side:{ playerId:{ pa,h,r,rbi,out,reached } } }, final, finalReason, log[] }`
+innings → `{ score, inning, half, outs, count, bases[3] (playerId|true|null), runsThisHalf, line:{away[],home[]}, pa:{away,home}, stats:{ side:{ playerId:{ pa,h,r,rbi,out,reached,tb,xb,xbo,outsBy:{ [actionId]:n } } } }, final, finalReason, log[] }`
 rounds → `{ score, round, rounds[{ n, away, home, net, after }], final, finalReason, log[] }`
 Season: `kbSeasonStats(teamId)` → `{ games, totals:{ playerId:{ g,pa,h,r,rbi,out,reached } } }`. OBP = reached / pa.
 

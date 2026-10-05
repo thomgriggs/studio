@@ -439,6 +439,15 @@ input, select { font:inherit; }
 .stat-grid li { display:grid; justify-items:center; padding:var(--space_sm) var(--space_xs); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); }
 .stat-grid strong { font-size:var(--font_size-lg); } .stat-grid span { font-size:var(--font_size-xs); color:var(--color_text-dim); font-weight:700; letter-spacing:.08em; }
 .stat-text { font-size:var(--font_size-sm); color:var(--color_text-muted); }
+.axis-list { margin:0; padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:var(--space_xs); }
+.axis-list li { display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:0 var(--space_sm); padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); border:1px solid var(--color_line); font-size:var(--font_size-xs); }
+.axis-list li span { color:var(--color_text-muted); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+.axis-list li strong { font-size:var(--font_size-sm); }
+.axis-list li small { grid-column:1 / -1; color:var(--color_text-dim); font-weight:700; }
+.outs-strip { margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:var(--space_xs); }
+.outs-strip li { display:inline-flex; align-items:baseline; gap:6px; min-height:36px; padding:0 var(--space_md); border-radius:var(--radius_pill); background:var(--color_bg-sunken); border:1px solid var(--color_line); font-size:var(--font_size-xs); color:var(--color_text-muted); }
+.outs-strip li strong { color:var(--dot_out); font-size:var(--font_size-md); }
+.outs-strip li.is-run strong { color:var(--color_warn); }
 .leaders { margin:0; padding:0; list-style:none; display:grid; gap:2px; }
 .leaders li { display:grid; grid-template-columns:2ch 1fr auto; align-items:center; gap:var(--space_sm); padding:var(--space_sm) var(--space_md); border-radius:var(--radius_sm); background:var(--color_bg-sunken); font-size:var(--font_size-sm); }
 .leaders li.is-me { border:1px solid var(--color_accent); background:var(--color_accent-soft); }

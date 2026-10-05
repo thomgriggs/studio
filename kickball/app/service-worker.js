@@ -1,7 +1,7 @@
 /* Offline shell. Page loads are NETWORK-FIRST so a new build always wins when   */
 /* there's signal; the cache is the fallback for the field. Assets are cache-    */
 /* first. Bump CACHE_NAME whenever kb.js / kb.css / data.js change.              */
-const CACHE_NAME = "kickball-v16";
+const CACHE_NAME = "kickball-v17";
 const ASSETS = ["./", "./index.html", "./kb.css", "./kb.js", "./data.js", "./manifest.webmanifest", "./icons/icon.svg"];
 
 self.addEventListener("install", (event) => {

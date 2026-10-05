@@ -277,14 +277,15 @@ function kbOpenSwitch() { const d = document.getElementById('switch'); if (!d) r
 function kbCloseSwitch() { const d = document.getElementById('switch'); if (d && d.open) d.close(); }
 
 /* ---------- stats across every roster the person is on ------------------- */
-function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0 }; }
+function kbEmptyTotals() { return { g:0, pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, outsBy:{} }; }
+const KB_STAT_KEYS = ['pa', 'h', 'r', 'rbi', 'out', 'reached', 'tb', 'xb', 'xbo'];
 function kbLeagueStats() {
 	const totals = {}; let teamGames = {};
 	for (const g of kbState.games) {
 		for (const s of ['away', 'home']) {
 			const tid = g.teams[s].teamId; if (!tid) continue; teamGames[tid] = (teamGames[tid] || 0) + 1;
 			const d = kbDerive(g);
-			for (const [pid, st] of Object.entries(d.stats[s])) { const t = totals[pid] || (totals[pid] = kbEmptyTotals()); t.g += 1; for (const key of ['pa', 'h', 'r', 'rbi', 'out', 'reached']) t[key] += st[key]; }
+			for (const [pid, st] of Object.entries(d.stats[s])) { const t = totals[pid] || (totals[pid] = kbEmptyTotals()); t.g += 1; for (const key of KB_STAT_KEYS) t[key] += st[key] || 0; for (const [kind, n] of Object.entries(st.outsBy || {})) t.outsBy[kind] = (t.outsBy[kind] || 0) + n; }
 		}
 	}
 	return { totals, teamGames };
@@ -293,15 +294,34 @@ function kbPlayerStats(pid) { return kbLeagueStats().totals[pid] || kbEmptyTotal
 /* five axes, each 0..1 against the league's best; the league average rides along for the overlay */
 function kbRadarAxes(pid) {
 	const { totals } = kbLeagueStats(); const ids = Object.keys(totals).filter(id => totals[id].pa >= 4);
+	const cheap = t => ['foul', 'caught', 'missed'].reduce((n, kind) => n + ((t.outsBy || {})[kind] || 0), 0);
 	const axes = [
-		{ key:'obp',     label:'On base', f:t => t.pa ? t.reached / t.pa : 0, fmt:v => v.toFixed(3).replace(/^0/, '') },
-		{ key:'contact', label:'Contact', f:t => t.pa ? t.h / t.pa : 0, fmt:v => Math.round(v * 100) + '%' },
-		{ key:'runs',    label:'Runs',    f:t => t.g ? t.r / t.g : 0, fmt:v => v.toFixed(1) + '/g' },
-		{ key:'rbi',     label:'RBI',     f:t => t.g ? t.rbi / t.g : 0, fmt:v => v.toFixed(1) + '/g' },
-		{ key:'games',   label:'Games',   f:t => t.g, fmt:v => String(v) }
+		{ key:'obp',   label:'On base',     f:t => t.pa ? t.reached / t.pa : 0,             fmt:v => v.toFixed(3).replace(/^0/, '') },
+		{ key:'power', label:'Power',       f:t => t.pa ? t.tb / t.pa : 0,                  fmt:v => v.toFixed(2) + ' TB/PA' },
+		{ key:'clean', label:'Clean',       f:t => t.pa ? 1 - cheap(t) / t.pa : 0,          fmt:v => Math.round(v * 100) + '%' },
+		{ key:'runs',  label:'Runs',        f:t => t.g ? t.r / t.g : 0,                     fmt:v => v.toFixed(1) + '/g' },
+		{ key:'rbi',   label:'RBI',         f:t => t.g ? t.rbi / t.g : 0,                   fmt:v => v.toFixed(1) + '/g' },
+		{ key:'bases', label:'Baserunning', f:t => t.reached ? t.xb / t.reached : 0,        fmt:v => v.toFixed(2) + ' XB/OB' }
 	];
 	const mine = totals[pid] || kbEmptyTotals();
 	return axes.map(a => { const vals = ids.map(id => a.f(totals[id])); const max = Math.max(a.f(mine), ...vals, 0.0001); const avg = vals.length ? vals.reduce((x, y) => x + y, 0) / vals.length : 0; const me = a.f(mine); const rank = 1 + vals.filter(v => v > me).length; return { ...a, me, avg, max, norm:me / max, avgNorm:avg / max, rank, of:Math.max(ids.length, ids.includes(pid) ? 0 : 1 + ids.length), text:a.fmt(me) }; });
+}
+/* strongest and weakest axis against the league, as one sentence */
+function kbInsight(axes, st) {
+	if (!st.pa) return '';
+	const rel = axes.filter(a => a.of > 1).map(a => ({ ...a, d:a.norm - a.avgNorm }));
+	if (!rel.length) return '';
+	const best = rel.slice().sort((x, y) => y.d - x.d)[0], worst = rel.slice().sort((x, y) => x.d - y.d)[0];
+	const praise = { obp:'You get on base more than most of the league', power:'You hit for more power than most of the league', clean:'You put the ball in play cleanly more than most', runs:'You come around to score more than most', rbi:'You drive in runs more than most', bases:'You take the extra base more than anyone around you' };
+	const work = { obp:'getting on base is where the room is', power:'it’s mostly singles — swing for the gap', clean:'fouls and pop-ups are eating your at-bats', runs:'you’re on base but not coming around', rbi:'runners on when you’re up aren’t coming home', bases:'you’re holding when the league is running' };
+	if (best.d <= 0.02) return `Right around the league average across the board — ${work[worst.key]}.`;
+	return `${praise[best.key]}${worst.d < -0.05 ? `; ${work[worst.key]}` : ''}.`;
+}
+function kbOutsStripHTML(st) {
+	const kinds = [['foul', 'Foul'], ['caught', 'Caught'], ['missed', 'Missed'], ['out', 'Thrown out'], ['bunt', 'Bunt'], ['fc', 'Fielder’s choice']];
+	const rows = kinds.map(([k, l]) => [l, (st.outsBy || {})[k] || 0]).filter(([, n]) => n);
+	if (!rows.length) return '';
+	return `<p class="eyebrow" style="margin-top:var(--space_md)">Your outs · ${st.out}</p><ul class="outs-strip">${rows.map(([l, n]) => `<li><strong>${n}</strong><span>${l}</span></li>`).join('')}${st.xbo ? `<li class="is-run"><strong>${st.xbo}</strong><span>Caught running</span></li>` : ''}</ul>`;
 }
 function kbRadarSVG(axes) {
 	const n = axes.length, cx = 100, cy = 100, r = 72; const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r * v, cy + Math.sin(a) * r * v]; };
@@ -333,6 +353,14 @@ function kbSeedDemoGames() {
 			t += 35000 + Math.floor(rnd() * 40000);
 			const ev = { t, by:'ump', kind:a.kind, value:a.value || 0, actionId:a.id, side }; if (a.hit) ev.hit = true; if (kk) ev.player = kk.id;
 			g.events.push(ev);
+			/* a hit that isn't a homer: runners sometimes take an extra base (or get thrown out trying) — the Runners row */
+			if (a.kind === 'reach' && a.value < 4) {
+				const after = kbDerive(g); if (after.final || after.half !== d.half) continue;
+				for (let b = 3; b >= 1; b--) { const r = after.bases[b - 1]; if (!r || r === true || r === ev.player) continue; const roll = rnd();
+					if (roll < 0.22) { const to = b + 1 >= 4 ? 4 : (after.bases[b] ? null : b + 1); if (to == null) continue; t += 4000; g.events.push({ t, by:'ump', kind:'runner', base:b, what:to >= 4 ? 'score' : 'to', to, rbi:ev.player, side }); }
+					else if (roll < 0.28) { t += 4000; g.events.push({ t, by:'ump', kind:'runner', base:b, what:'out', side }); }
+				}
+			}
 		}
 		g.status = 'final'; kbState.games.push(g);
 	});
@@ -602,7 +630,8 @@ function kbDeriveInnings(g, cfg) {
 		clockStart:null, minute:0, official:false, lastInning:null, overtime:false, capOn:false,
 		final:false, finalReason:'', notice:'', log:[] };
 	const side = () => d.half === 'top' ? 'away' : 'home';
-	const stat = (s, id) => { if (!id || id === true) return null; return d.stats[s][id] || (d.stats[s][id] = { pa:0, h:0, r:0, rbi:0, out:0, reached:0 }); };
+	/* tb = total bases on hits · xb = extra bases taken as a runner beyond the force · xbo = thrown out trying · outsBy = outs by kind (foul, caught, missed…) */
+	const stat = (s, id) => { if (!id || id === true) return null; return d.stats[s][id] || (d.stats[s][id] = { pa:0, h:0, r:0, rbi:0, out:0, reached:0, tb:0, xb:0, xbo:0, outsBy:{} }); };
 	const lead = () => d.score[side()] - d.score[kbOther(side())];
 	const capApplies = () => { if (!R.runCap) return false; if (!K) return true; if (d.minute < K.capUntil) return true; return lead() >= (R.runCap.lateLeadException ?? Infinity); };
 	const run = (runnerId, kickerId, n = 1) => {
@@ -620,7 +649,7 @@ function kbDeriveInnings(g, cfg) {
 	};
 	const recordOut = (e) => { if (e.player) { d.lastOut[side()] = e.player; const p = kbPlayer(kbTeam(g.teams[side()].teamId), e.player); if (p) d.lastOutBy[side()][p.gender] = e.player; } };
 	const endPA = (e, outcome) => { if (e.pa === false) return; d.pa[side()] += 1; const s = stat(side(), e.player); if (s) { s.pa += 1; if (outcome === 'out') s.out += 1; if (outcome === 'reach') s.reached += 1; if (e.hit) s.h += 1; } };
-	const out = (e) => { d.outs += 1; recordOut(e); endPA(e, 'out'); if (d.outs >= S.outsPerHalf) endHalf(); };
+	const out = (e) => { d.outs += 1; recordOut(e); endPA(e, 'out'); const s = stat(side(), e.player); if (s && e.pa !== false) s.outsBy[e.actionId || 'out'] = (s.outsBy[e.actionId || 'out'] || 0) + 1; if (d.outs >= S.outsPerHalf) endHalf(); };
 	const afterRuns = () => { if (capApplies() && d.runsThisHalf >= R.runCap.runs) { d.notice = `${R.runCap.runs} runs — that’s the inning`; if (R.runCap.countsAsOut) d.outs = S.outsPerHalf; endHalf(); return true; } return false; };
 	/* A kick moves the kicker to base n and runners ONLY as far as the force   */
 	/* requires: a runner must vacate a base exactly when the runner behind him */
@@ -628,6 +657,7 @@ function kbDeriveInnings(g, cfg) {
 	/* A home run scores everyone.                                              */
 	const reach = (e, n) => {
 		const b = d.bases, who = e.player || true;
+		if (e.hit) { const s = stat(side(), e.player); if (s) s.tb += n; }
 		if (n >= 4) { for (let i = 2; i >= 0; i--) { if (b[i]) { run(b[i], e.player); b[i] = null; } } run(e.player, e.player); endPA(e, 'reach'); afterRuns(); return; }
 		const next = [null, null, null];
 		let outRunner = null;
@@ -655,6 +685,8 @@ function kbDeriveInnings(g, cfg) {
 			case 'reach': reach(e, e.value); break;
 			case 'out': out(e); break;
 			case 'runner': { const i = e.base - 1; const r = d.bases[i]; if (!r) break;
+				/* baserunning: anything beyond where the force left you is an extra base; out = caught trying */
+				{ const rs = stat(side(), r); if (rs) { if (e.what === 'out') rs.xbo += 1; else if (e.what === 'advance') rs.xb += 1; else if (e.what === 'score') rs.xb += 4 - (i + 1); else if (e.what === 'to') { const to = Number(e.to); if (to > i + 1 && (to >= 4 || !d.bases[to - 1])) rs.xb += to - (i + 1); } } }
 				if (e.what === 'courtesy') { const p = kbPlayer(kbTeam(g.teams[side()].teamId), r); const sub = p ? d.lastOutBy[side()][p.gender] : null; if (sub && sub !== r) { d.bases[i] = sub; d.notice = `${kbFirst(kbPlayer(kbTeam(g.teams[side()].teamId), sub).name)} runs for ${kbFirst(p.name)}`; } else d.notice = 'No one has made an out for that spot yet'; break; }
 				d.bases[i] = null;
 				/* e.rbi = the kicker whose play this runner movement belongs to (from the Runners row) */
@@ -1365,7 +1397,7 @@ function kbRenderPlayer() {
 	const st = kbPlayerStats(p.id), axes = kbRadarAxes(p.id), obp = axes[0];
 	const { totals } = kbLeagueStats(); const board = Object.entries(totals).filter(([, t]) => t.pa >= 4).map(([id, t]) => ({ id, p:kbPerson(id), t, obp:t.reached / t.pa })).filter(x => x.p).sort((a, b) => b.obp - a.obp || b.t.h - a.t.h).slice(0, 8);
 	const myRank = board.findIndex(x => x.id === p.id);
-	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}, on base ${obp.text} (${obp.rank}${['st', 'nd', 'rd'][obp.rank - 1] || 'th'} of ${obp.of}), ${st.h} hit${st.h === 1 ? '' : 's'}, ${st.r} run${st.r === 1 ? '' : 's'} scored, ${st.rbi} driven in.` : 'No games on the books yet — stats start with your first game.';
+	const summary = st.g ? `${st.g} game${st.g === 1 ? '' : 's'}: on base ${obp.text}, ${st.h} hit${st.h === 1 ? '' : 's'} for ${st.tb} bases, ${st.r} run${st.r === 1 ? '' : 's'}, ${st.rbi} RBI, ${st.xb} extra base${st.xb === 1 ? '' : 's'} taken.` : 'No games on the books yet — stats start with your first game.';
 
 	/* --- settings --- */
 	const icons = (window.KB_ICONS || []).map(i => `<button type="button" class="${pr.icon === i ? 'is-on' : ''}" data-action="pick-icon" data-icon="${i}" aria-pressed="${pr.icon === i}" aria-label="Icon ${i}">${i}</button>`).join('');
@@ -1401,10 +1433,12 @@ function kbRenderPlayer() {
 	<section class="pcard"><p class="eyebrow">Season · ${kbEscape(L.season)}</p>
 		<div class="stats-wrap">
 			${kbRadarSVG(axes)}
-			<ul class="stat-grid">${[['G', st.g], ['PA', st.pa], ['H', st.h], ['R', st.r], ['RBI', st.rbi], ['OBP', kbObp(st)]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
+			<ul class="stat-grid">${[['PA', st.pa], ['H', st.h], ['TB', st.tb], ['R', st.r], ['RBI', st.rbi], ['OBP', kbObp(st)]].map(([l, v]) => `<li><strong>${v}</strong><span>${l}</span></li>`).join('')}</ul>
 		</div>
 		<p class="radar-key"><i class="is-me"></i> You <i class="is-league"></i> League average</p>
-		<p class="stat-text">${kbEscape(summary)}</p>
+		<p class="stat-text">${kbEscape(summary)} ${kbEscape(kbInsight(axes, st))}</p>
+		<ul class="axis-list">${axes.map(a => `<li><span>${kbEscape(a.label)}</span><strong>${kbEscape(a.text)}</strong><small>${a.of > 1 ? `${a.rank}${['st', 'nd', 'rd'][a.rank - 1] || 'th'} of ${a.of}` : ''}</small></li>`).join('')}</ul>
+		${kbOutsStripHTML(st)}
 		${board.length ? `<p class="eyebrow" style="margin-top:var(--space_md)">League · on base</p><ol class="leaders">${board.map((x, i) => `<li class="${x.id === p.id ? 'is-me' : ''}"><span class="leader-n">${i + 1}</span><span class="leader-name">${kbEscape(kbDisplayName(x.p))} <small>${x.p.teams.map(t => t.short).join('/')}</small></span><strong>${x.obp.toFixed(3).replace(/^0/, '')}</strong></li>`).join('')}${myRank < 0 && st.pa ? `<li class="is-me"><span class="leader-n">${obp.rank}</span><span class="leader-name">${kbEscape(kbDisplayName(p))}</span><strong>${obp.text}</strong></li>` : ''}</ol>` : ''}
 	</section>
 

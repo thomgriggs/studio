@@ -427,6 +427,27 @@ test('demo games: seeded once, deterministic, finished, and they feed one person
 	const st = run(`kbPlayerStats('thom-griggs')`);
 	assert.ok(st.g >= 1, 'Thom is on LBC, so he shows up in the demo games: ' + st.g);
 	const axes = run(`kbRadarAxes('thom-griggs')`);
-	assert.equal(axes.length, 5); assert.ok(axes.every(a => a.norm >= 0 && a.norm <= 1 && a.avgNorm >= 0 && a.avgNorm <= 1));
+	assert.equal(axes.length, 6);
+	assert.ok(run('kbState.games.some(g => g.events.some(e => e.kind === "runner"))'), 'demo runners take extra bases'); assert.ok(axes.every(a => a.norm >= 0 && a.norm <= 1 && a.avgNorm >= 0 && a.avgNorm <= 1));
 	assert.match(run(`kbRadarSVG(kbRadarAxes('thom-griggs'))`), /<svg class="radar"/);
+});
+
+test('stats: total bases, extra bases beyond the force, caught running, and outs by kind all come from the log', () => {
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd();`);
+	run(`tap('single'); tap('double');`);
+	let d = run('kbDerive()');
+	assert.equal(d.stats.home['thom-griggs'].tb, 2, 'a double is two total bases');
+	assert.equal(d.stats.home['cristy-ceron'].xb, 0, 'the force is not an extra base');
+	run(`at(2, { kind:'runner', base:3, what:'score', rbi:'thom-griggs', side:'home' });`);
+	d = run('kbDerive()');
+	assert.equal(d.stats.home['cristy-ceron'].xb, 1, 'home from 3rd is one extra base');
+	assert.equal(d.stats.home['thom-griggs'].rbi, 1);
+	run(`tap('single');`);
+	run(`at(3, { kind:'runner', base:2, what:'out', side:'home' });`); /* Thom was not forced by the single (1st was empty) — he is still on 2nd */
+	d = run('kbDerive()');
+	assert.equal(d.stats.home['thom-griggs'].xbo, 1, 'thrown out going home');
+	run(`tap('foul'); tap('caught');`);
+	d = run('kbDerive()');
+	const all = Object.values(d.stats.home).reduce((o, s) => { for (const [k, n] of Object.entries(s.outsBy)) o[k] = (o[k] || 0) + n; return o; }, {});
+	assert.deepEqual(all, { foul:1, caught:1 });
 });
