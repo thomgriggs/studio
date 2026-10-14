@@ -53,7 +53,7 @@ Not modeled: time between games, forfeits, the tournament (KickFall) rule set, a
 
 ## Next
 1. Use it at a real game; fix what hurts.
-2. Game summary / share screen (final, line score, both box scores).
+2. ~~Game summary / share screen~~ — done 2026-10-14: `summary` view with share, per-game JSON export, and a whole-store backup from Home. First real game planned for Sun 2026-10-18; score the paper card alongside and compare.
 3. Player progress cards; season leaderboard.
 4. Softball + dodgeball configs to demo "any sport" for the pitch.
 5. Deploy (Cloudflare Pages, `kickball.thomgriggs.com`) once the rules are confirmed. See `DEPLOYMENT.md`.

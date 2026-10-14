@@ -10,7 +10,7 @@ const KB_KEY = 'kickball-v3';
 const kbState = {
 	teams:[], games:[], game:null, leagues:[], leagueId:null, profiles:{}, /* persisted */
 	me:{ role:'ump', teamId:null, playerId:null, umpId:null }, /* who this phone is acting as (persisted in ui) — stands in for sign-in */
-	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, pteam:'all', pseason:null, pcompare:[], pleague:'all', pl:{ pos:'all', q:'', fa:true, sort:'avg', dir:-1, sched:null, team:null }, /* ui */
+	view:'home', showLog:false, fix:null, side:'home', tab:'here', teamId:null, share:null, prepId:null, summaryId:null, pteam:'all', pseason:null, pcompare:[], pleague:'all', pl:{ pos:'all', q:'', fa:true, sort:'avg', dir:-1, sched:null, team:null }, /* ui */
 	pending:{ away:{ in:0, on:0 }, home:{ in:0, on:0 } }
 };
 let kbTicker = null;
@@ -44,15 +44,16 @@ function kbInit() {
 	if (kbMeRole() === 'player' && view === 'home') view = 'player';
 	if (needsGame.includes(view) && !kbState.game && !(view === 'captain' && kbState.prepId && kbSched(kbState.prepId))) view = 'home';
 	if (needsTeam.includes(view) && !kbTeam(kbState.teamId)) view = 'teams';
+	if (view === 'summary' && !kbSummaryGame()) view = 'home';
 	kbGo(view);
 }
 
 /* ---------- storage ------------------------------------------------------ */
 function kbLoad() {
 	kbState.ui = {};
-	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.leagues = s.leagues || (s.league ? [s.league] : []); kbState.leagueId = s.leagueId || (kbState.leagues[0] || {}).id || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.pseason = kbState.ui.pseason || null; kbState.pcompare = kbState.ui.pcompare || []; kbState.pleague = kbState.ui.pleague || 'all'; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
+	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.leagues = s.leagues || (s.league ? [s.league] : []); kbState.leagueId = s.leagueId || (kbState.leagues[0] || {}).id || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.pseason = kbState.ui.pseason || null; kbState.pcompare = kbState.ui.pcompare || []; kbState.pleague = kbState.ui.pleague || 'all'; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; kbState.summaryId = kbState.ui.summaryId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
 }
-function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, leagues:kbState.leagues, leagueId:kbState.leagueId, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, pseason:kbState.pseason, pcompare:kbState.pcompare, pleague:kbState.pleague, me:kbState.me } })); } catch (e) {} }
+function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, leagues:kbState.leagues, leagueId:kbState.leagueId, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, pseason:kbState.pseason, pcompare:kbState.pcompare, pleague:kbState.pleague, summaryId:kbState.summaryId, me:kbState.me } })); } catch (e) {} }
 /* First run (or an older device) gets the seed league, plus any seed team or captain it's missing. */
 function kbSeedLeague() {
 	let dirty = false;
@@ -136,6 +137,11 @@ const KB_ACTIONS = {
 	'score-round':  () => kbScoreRound(),
 	'end-game':     () => { if (kbState.game) { kbState.game.status = 'final'; kbSave(); kbRender(); kbToast('Final'); } },
 	'finish':       () => kbFinish(),
+	/* summary + export — open to every role */
+	'summary':      (el) => { kbState.summaryId = el.dataset.game || 'live'; kbGo('summary'); },
+	'share-game':   () => kbShareGame(),
+	'export-game':  () => kbExportGame(),
+	'export-all':   () => kbExportAll(),
 	'abandon':      () => { const s = kbSchedOfGame(kbState.game); if (s) { s.status = 'scheduled'; s.gameId = null; } kbState.game = null; kbSave(); kbGo('home'); kbToast('Game discarded'); },
 	/* captain */
 	'captain':      (el) => { kbState.side = el.dataset.side || kbState.side; kbState.tab = el.dataset.tab || 'here'; kbGo('captain'); },
@@ -939,6 +945,101 @@ function kbEventLabel(e, g = kbState.game) {
 }
 
 /* ========================================================================== */
+/* SUMMARY + EXPORT — one finished game, reviewable and shareable; the whole    */
+/* store as a backup file. Everything here is read-only over the event log.    */
+/* ========================================================================== */
+/* the game the summary screen shows: a saved game by id, or 'live' = the one in progress / final-not-saved */
+function kbSummaryGame() { const id = kbState.summaryId; if (!id) return null; if (id === 'live') return kbState.game; return kbState.games.find(g => g.id === id) || null; }
+function kbGameWhen(g) { return new Date(g.startedAt).toLocaleDateString([], { weekday:'short', month:'short', day:'numeric', year:'numeric' }); }
+function kbGameLeague(g) { return kbState.leagues.find(l => l.id === g.leagueId) || null; }
+function kbGameStatus(g, d) { return d.finalReason || (g.status === 'final' ? 'Final' : 'In progress'); }
+/* plain text of a game — what gets shared; also the test surface */
+function kbSummaryText(g, d = kbDerive(g)) {
+	const cfg = kbSport(g), L = kbGameLeague(g), inn = cfg.structure.kind === 'innings';
+	const lines = [`${g.teams.away.name} ${d.score.away} – ${d.score.home} ${g.teams.home.name}`, `${kbGameStatus(g, d)} · ${kbGameWhen(g)}${L ? ' · ' + (L.night || L.name) : ''}`];
+	if (inn) {
+		const n = Math.max(cfg.structure.innings || 7, d.inning);
+		const row = (s) => `${g.teams[s].name}: ${Array.from({ length:n }, (_, i) => d.line[s][i] ?? '-').join(' ')} | ${d.score[s]}`;
+		lines.push('', row('away'), row('home'));
+	} else if (d.rounds) {
+		lines.push('', ...d.rounds.map(r => `R${r.n}: ${r.away.in * 3 + r.away.on}–${r.home.in * 3 + r.home.on} (${r.after.away}–${r.after.home})`));
+	}
+	for (const s of ['away', 'home']) {
+		const team = kbTeam(g.teams[s].teamId); if (!team || !d.stats) continue;
+		const rows = Object.entries(d.stats[s]).map(([pid, st]) => ({ p:kbPlayer(team, pid), st })).filter(r => r.p).sort((a, b) => b.st.h - a.st.h || b.st.pa - a.st.pa || a.p.name.localeCompare(b.p.name));
+		if (!rows.length) continue;
+		lines.push('', `${team.name} — PA H R RBI`);
+		rows.forEach(r => lines.push(`${r.p.name}: ${r.st.pa} ${r.st.h} ${r.st.r} ${r.st.rbi}`));
+	}
+	return lines.join('\n');
+}
+/* a game plus everything needed to read it on another machine: the rosters it names and the league's rule overrides */
+function kbGameExport(g) {
+	const teams = ['away', 'home'].map(s => kbTeam(g.teams[s].teamId)).filter(Boolean);
+	const L = kbGameLeague(g);
+	return { exported:new Date().toISOString(), app:KB_KEY, game:g, teams, league:L ? { id:L.id, org:L.org, name:L.name, night:L.night, sport:L.sport, season:L.season, overrides:L.overrides || {} } : null };
+}
+function kbFileStamp(d = new Date()) { return d.toISOString().slice(0, 10); }
+function kbSlug(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+/* hand the phone a file: the share sheet on phones that take files (iOS saves to Files / AirDrops), a download elsewhere */
+async function kbDownload(name, text, type = 'application/json') {
+	try {
+		const file = new File([text], name, { type });
+		if (navigator.canShare && navigator.canShare({ files:[file] })) { await navigator.share({ files:[file], title:name }); return; }
+		const url = URL.createObjectURL(file); const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+		setTimeout(() => URL.revokeObjectURL(url), 1000); kbToast(`Saved ${name}`);
+	} catch (e) { if (e && e.name === 'AbortError') return; kbToast('Could not save a file here'); }
+}
+async function kbShareGame() {
+	const g = kbSummaryGame(); if (!g) return;
+	const text = kbSummaryText(g), title = `${g.teams.away.name} @ ${g.teams.home.name}`;
+	try {
+		if (navigator.share) { await navigator.share({ title, text }); return; }
+		await navigator.clipboard.writeText(text); kbToast('Copied the summary');
+	} catch (e) { if (e && e.name === 'AbortError') return; kbToast('Could not share here'); }
+}
+function kbExportGame() {
+	const g = kbSummaryGame(); if (!g) return;
+	kbDownload(`kickball-${kbFileStamp(new Date(g.startedAt))}-${kbSlug(g.teams.away.name)}-at-${kbSlug(g.teams.home.name)}.json`, JSON.stringify(kbGameExport(g), null, '\t'));
+}
+/* the whole store — teams, every saved game, the live game, leagues, profiles. Restoring = paste it back into localStorage[KB_KEY]. */
+function kbExportAll() {
+	kbSave();
+	let raw = null; try { raw = localStorage.getItem(KB_KEY); } catch (e) {}
+	if (!raw) { kbToast('Nothing to back up yet'); return; }
+	kbDownload(`kickball-backup-${kbFileStamp()}.json`, raw);
+}
+function kbRenderSummary() {
+	const host = document.querySelector('.summary'); if (!host) return;
+	const g = kbSummaryGame();
+	if (!g) { host.innerHTML = `<header class="page-head"><button type="button" class="key is-ghost back" data-action="go" data-to="home" aria-label="Back">←</button><div><h1>Game summary</h1></div></header><p class="empty">No game to show.</p>`; return; }
+	const d = kbDerive(g), cfg = kbSport(g), L = kbGameLeague(g), inn = cfg.structure.kind === 'innings';
+	const modeLabel = cfg.modes && cfg.modes[g.mode] ? cfg.modes[g.mode] : '';
+	const plays = g.events.filter(e => e.kind !== 'clock');
+	const last = plays.length ? plays[plays.length - 1].t : null;
+	const dur = d.clockStart != null && last ? kbMMSS(last - d.clockStart) : null;
+	const winner = d.score.away === d.score.home ? null : (d.score.away > d.score.home ? 'away' : 'home');
+	const back = kbState.summaryId === 'live' && kbState.game ? 'ump' : 'home';
+	const n = Math.max(cfg.structure.innings || 7, d.inning);
+	/* the engine writes a 0 for every half that was played, so a blank cell means that half never happened (a walk-off, time) */
+	const cell = (s, i) => `<td>${d.line[s][i] ?? (!d.final && i + 1 === d.inning && (s === 'away' ? d.half === 'top' : d.half === 'bottom') ? 0 : '')}</td>`;
+	host.innerHTML = `
+	<!-- ===== SUMMARY : final, line score, both box scores, the log ===== -->
+	<header class="page-head"><button type="button" class="key is-ghost back" data-action="go" data-to="${back}" aria-label="Back">←</button><div><p class="eyebrow">${kbEscape(kbGameStatus(g, d))}</p><h1>Game summary</h1></div></header>
+	<section class="final-card" aria-label="Score">
+		${['away', 'home'].map(s => `<div class="final-side ${winner === s ? 'is-winner' : ''}"><span class="final-name">${kbEscape(g.teams[s].name)}</span><span class="final-score">${d.score[s]}</span></div>`).join('')}
+	</section>
+	<p class="summary-meta">${kbEscape(kbGameWhen(g))}${L ? ' · ' + kbEscape(L.night || L.name) : ''}${modeLabel ? ' · ' + kbEscape(modeLabel) : ''}${dur ? ' · ' + dur + ' played' : ''} · ${plays.length} play${plays.length === 1 ? '' : 's'}${g.demo ? ' · demo' : ''}</p>
+	${inn ? `<div class="linescore is-open"><table><thead><tr><th></th>${Array.from({ length:n }, (_, i) => `<th>${i + 1}</th>`).join('')}<th>R</th></tr></thead><tbody>
+		<tr><th>${kbEscape(g.teams.away.name)}</th>${Array.from({ length:n }, (_, i) => cell('away', i)).join('')}<td class="total">${d.score.away}</td></tr>
+		<tr><th>${kbEscape(g.teams.home.name)}</th>${Array.from({ length:n }, (_, i) => cell('home', i)).join('')}<td class="total">${d.score.home}</td></tr></tbody></table></div>`
+	: `<div class="linescore is-open"><table><thead><tr><th>#</th><th>${kbEscape(g.teams.away.name)}</th><th>${kbEscape(g.teams.home.name)}</th><th>Score</th></tr></thead><tbody>${(d.rounds || []).map(r => `<tr><td>${r.n}</td><td>${r.away.in * 3 + r.away.on}</td><td>${r.home.in * 3 + r.home.on}</td><td class="total">${r.after.away}–${r.after.home}</td></tr>`).join('') || '<tr><td colspan="4">No rounds</td></tr>'}</tbody></table></div>`}
+	${inn ? kbBoxScoreHTML(g, d, 'away', true) + kbBoxScoreHTML(g, d, 'home', true) : ''}
+	<div class="pad-bar is-2"><button type="button" class="key is-primary" data-action="share-game">Share</button><button type="button" class="key is-ghost" data-action="export-game">Export JSON</button></div>
+	<details class="linescore"><summary>Play log · ${d.log.length}</summary><ol class="log" aria-label="Play log">${d.log.map(e => `<li><span>${kbEscape(e.label)}</span><span class="log-after">${e.after}</span></li>`).join('') || '<li>Nothing recorded</li>'}</ol></details>`;
+}
+
+/* ========================================================================== */
 /* SEASON STATS — aggregate a team's players across saved games              */
 /* ========================================================================== */
 function kbSeasonStats(teamId) {
@@ -1084,6 +1185,7 @@ function kbRender() {
 	if (v === 'league') kbRenderLeague();
 	if (v === 'player') kbRenderPlayer();
 	if (v === 'players') kbRenderPlayers();
+	if (v === 'summary') kbRenderSummary();
 	kbApplyPerms();
 	if (sameView) { open.forEach(cls => { const d = [...document.querySelectorAll('.view.is-current details')].find(x => x.className === cls); if (d) d.open = true; }); if (typeof scrollTo === 'function') scrollTo(0, y); }
 }
@@ -1173,7 +1275,7 @@ function kbRenderHome() {
 		if (g) { const d = kbDerive(); cont.querySelector('[data-field="teams"]').textContent = `${g.teams.away.name} ${d.score.away} – ${d.score.home} ${g.teams.home.name}`; cont.querySelector('[data-field="status"]').textContent = g.status === 'final' ? 'Final — tap to review' : (kbSport(g).structure.kind === 'innings' ? `${d.half === 'top' ? 'Top' : 'Bottom'} ${d.inning}` : `Round ${d.round}`); }
 	}
 	const recent = document.querySelector('.recent');
-	if (recent) recent.innerHTML = kbState.games.slice(0, 5).map(g => { const d = kbDerive(g); return `<li><span>${kbEscape(g.teams.away.name)} <strong>${d.score.away}</strong> – <strong>${d.score.home}</strong> ${kbEscape(g.teams.home.name)}</span><span class="recent-date">${new Date(g.startedAt).toLocaleDateString([], { month:'short', day:'numeric' })}</span></li>`; }).join('') || '<li class="is-empty">No games saved yet</li>';
+	if (recent) recent.innerHTML = kbState.games.slice(0, 5).map(g => { const d = kbDerive(g); return `<li><button type="button" class="recent-row" data-action="summary" data-game="${g.id}"><span>${kbEscape(g.teams.away.name)} <strong>${d.score.away}</strong> – <strong>${d.score.home}</strong> ${kbEscape(g.teams.home.name)}</span><span class="recent-date">${new Date(g.startedAt).toLocaleDateString([], { month:'short', day:'numeric' })}</span></button></li>`; }).join('') || '<li class="is-empty">No games saved yet</li>';
 }
 
 function kbRenderUmp() {
@@ -1252,11 +1354,11 @@ function kbFcHTML(g, d, batting) {
 		</div>
 	</div>`;
 }
-function kbBoxScoreHTML(g, d, side) {
+function kbBoxScoreHTML(g, d, side, open = false) {
 	const team = kbTeam(g.teams[side].teamId); if (!team) return '';
 	const rows = Object.entries(d.stats[side]).map(([pid, s]) => ({ p:kbPlayer(team, pid), s })).filter(r => r.p).sort((a, b) => b.s.pa - a.s.pa || a.p.name.localeCompare(b.p.name));
 	if (!rows.length) return '';
-	return `<details class="linescore box"><summary>${kbEscape(team.name)} box score</summary><table><thead><tr><th>Player</th><th>PA</th><th>H</th><th>R</th><th>RBI</th><th>OBP</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.p.name)}</th><td>${r.s.pa}</td><td>${r.s.h}</td><td>${r.s.r}</td><td>${r.s.rbi}</td><td>${kbObp(r.s)}</td></tr>`).join('')}</tbody></table></details>`;
+	return `<details class="linescore box" ${open ? 'open' : ''}><summary>${kbEscape(team.name)} box score</summary><table><thead><tr><th>Player</th><th>PA</th><th>H</th><th>R</th><th>RBI</th><th>OBP</th></tr></thead><tbody>${rows.map(r => `<tr><th>${kbEscape(r.p.name)}</th><td>${r.s.pa}</td><td>${r.s.h}</td><td>${r.s.r}</td><td>${r.s.rbi}</td><td>${kbObp(r.s)}</td></tr>`).join('')}</tbody></table></details>`;
 }
 
 function kbUmpInnings(g, cfg, d) {
@@ -1311,7 +1413,7 @@ function kbUmpInnings(g, cfg, d) {
 
 	${kbFcHTML(g, d, batting)}
 	${kbResolveHTML(g, d, batting)}
-	${d.final ? `<p class="final-banner">${kbEscape(d.finalReason)}</p>` : ''}
+	${d.final ? `<button type="button" class="final-banner" data-action="summary" data-game="live">${kbEscape(d.finalReason)} · Summary →</button>` : ''}
 
 	<!-- ===== LINE SCORE : the paper card, legible ===== -->
 	<details class="linescore">
@@ -1354,7 +1456,7 @@ function kbUmpRounds(g, cfg, d) {
 	</header>
 	${kbFixRowHTML(d, g)}
 	<div class="state"><div class="state-item"><span class="state-label">Round</span><strong class="state-value">${d.final ? 'F' : d.round}</strong></div></div>
-	${d.final ? `<p class="final-banner">${kbEscape(d.finalReason)}</p>` : ''}
+	${d.final ? `<button type="button" class="final-banner" data-action="summary" data-game="live">${kbEscape(d.finalReason)} · Summary →</button>` : ''}
 	<div class="round" role="group" aria-label="This round">
 		${['away', 'home'].map(s => `
 		<div class="round-side">

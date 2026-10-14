@@ -584,3 +584,31 @@ test('players table: scoped to the night, free-agent toggle, position chips, sea
 	assert.deepEqual(run(`kbPlayersRows({ pos:'all', q:'nina', fa:false, sort:'name', dir:1, sched:'s1', team:'lbc' }).map(r => r.id)`), ['nina-patel']);
 	assert.match(run(`kbLastGameLine('cristy-ceron')`), /^[WLT] \d+–\d+ (vs|@) /);
 });
+
+/* ---- summary + export: read-only over the log ---------------------------- */
+test('summary text: score line, line score, and a box-score row per kicker', () => {
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); ['single','single','homer'].forEach(tap); kbState.game.status = 'final';`);
+	const text = run('kbSummaryText(kbState.game)');
+	assert.match(text, /^Away 0 – 3 Home\n/);
+	assert.match(text, /\nFinal · /);
+	assert.match(text, /Home: 3 - - - - - - \| 3/, 'home scored 3 in the 1st, the rest unplayed');
+	assert.match(text, /Liquid Breakfast Club — PA H R RBI\n/);
+	assert.match(text, /\nCheryl Donish: 1 1 1 3\n?/, 'the home-run kicker: 1 PA, 1 H, 1 R, 3 RBI');
+});
+test('summary screen picks a saved game by id or the live game', () => {
+	run(`mkGame('kickball', 'lbc'); kbState.games = [{ ...kbState.game, id:'saved-1' }]; kbState.summaryId = 'saved-1';`);
+	assert.equal(run('kbSummaryGame().id'), 'saved-1');
+	run(`kbState.summaryId = 'live'`);
+	assert.equal(run('kbSummaryGame().id'), 't');
+	run(`kbState.summaryId = 'nope'`);
+	assert.equal(run('kbSummaryGame()'), null);
+});
+test('game export carries the game, the rosters it names, and the league overrides', () => {
+	run(`mkGame('kickball', 'lbc'); clock(); halfEnd(); tap('single'); kbState.game.leagueId = 'tbcs';`);
+	const x = run('kbGameExport(kbState.game)');
+	assert.equal(x.app, 'kickball-v3');
+	assert.equal(x.game.events.length, 3);
+	assert.deepEqual(x.teams.map(t => t.id), ['lbc']);
+	assert.ok(x.league === null || typeof x.league.overrides === 'object');
+	assert.equal(run("kbSlug('Liquid Breakfast Club')"), 'liquid-breakfast-club');
+});

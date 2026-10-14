@@ -3,7 +3,7 @@
 Nothing talks to a server. Every screen renders from storage; every number is derived from a game's event log. This file is what to wire to.
 
 ## Screens (`<main class="view" data-view>` in `app/index.html`, `body[data-view]`). The root `index.html` is the landing page; its role cards link to `app/?as=<role>`.
-`home` · `ump` · `captain` · `teams` · `team` · `stats` · `league`. Navigate with `kbGo(view)`; UI state lives in `kbState` (`view side tab teamId prepId fix showLog pending`); `kbState.me` (who this phone is) persists in `ui.me`.
+`home` · `ump` · `captain` · `teams` · `team` · `stats` · `league` · `summary`. Navigate with `kbGo(view)`; UI state lives in `kbState` (`view side tab teamId prepId summaryId fix showLog pending`); `kbState.me` (who this phone is) persists in `ui.me`.
 
 ## Tokens (`kb.css` `:root`, `--group_name`)
 `--color_bg|bg-raised|bg-sunken|line|line-strong|text|text-muted|text-dim|accent|accent-text|accent-soft|warn|danger|info` · `--dot_ball|strike|foul|out` · `--font_name-*` `--font_size-xs…xl|score` · `--space_xs…xl` `--gutter` · `--radius_sm|md|pill` · `--key_height` · `--motion_fast`.
@@ -13,12 +13,14 @@ Nothing talks to a server. Every screen renders from storage; every number is de
 shared   .key(.is-primary .is-commit .is-ghost .is-undo .is-fix)  .toast  .field  .field-pair  .eyebrow  .hint  .warn  .empty  .is-empty
 me       .me-bar  .me-pill  .me-dot(.is-league .is-ump .is-captain .is-lead .is-player)  .me-league
 home     .home  .brand  .whoami  .whoami-ctx  .seg.is-roles  .continue-card  .role-home  .role-card(.is-live)  .new-game  .home-links  .recent-panel  .recent
+         .recent-row
          .sched-list(.is-admin)  .sched-row(.is-live .is-final)  .sched-when  .sched-who  .avail-list  .avail-row  .lead-field  .recruit  .toggle-row  .switch(.is-on)  .watching
 player   .player-head  .avatar-big  .player-id  .player-real  .team-chips  .chip-team(.is-captain)  .walkup  .tabs.is-filter  .pcard(.is-next .is-live)  .next-when  .next-who  .next-inout  .seg.is-inout  .status-line(.is-in .is-out .is-short)  .lineup-me  .live-score
          .tabs.is-fa  .stats-wrap  .radar  .radar-ring .radar-spoke .radar-league .radar-me .radar-dot .radar-label  .radar-key  .stat-grid  .stat-text  .axis-list  .outs-strip(.is-run)  .leaders(.is-me)  .leader-n  .leader-name  .settings  .profile-form  .icon-grid
 players  .pl-pos  .pl-tools  .pl-search  .pl-check(.is-on)  .pl-table-wrap  .pl-table  .pl-name  .pl-person  .pl-text  .pl-meta  .pl-last  .pl-act  .pl-add  td.is-hi/.is-lo/.is-sort  .avatar-big.is-xs
 rainout  .rainout(.is-go .is-no .is-warn .is-off .is-link .is-loading)  .rainout-label  .rainout-detail  .rainout-when  .sched-row.is-rainout  .sched-tools
 switch   .switcher (dialog)  .switch-head
+summary  .final-card  .final-side(.is-winner)  .final-name  .final-score  .summary-meta  .linescore .log
 league   .league-card  .rules  .rule-row(.is-changed)  .approve-row(.is-approved .is-pending .is-declined)  .ump-list  .inline-form
 ump      .ump  .score-strip  .side(.is-batting)  .side-name .side-score .side-tag
          .fix-row  .fix-label  .fix-value
@@ -39,7 +41,8 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 ## `data-action` (every control)
 | Group | Actions |
 |---|---|
-| nav | `go`(+`data-to`) · `teams` · `team`(+`data-team`) · `stats`(+`data-team`) · `captain`(+`data-side`, `data-tab`) |
+| nav | `go`(+`data-to`) · `teams` · `team`(+`data-team`) · `stats`(+`data-team`) · `captain`(+`data-side`, `data-tab`) · `summary`(+`data-game`=gameId\|live) |
+| export | `share-game` (Web Share text, clipboard fallback) · `export-game` (JSON: game + its rosters + league overrides) · `export-all` (the whole `kickball-v3` store as a backup file; restore = write it back to `localStorage`) |
 | game | `new-game` (submit) · `tap`(+`data-id` = action id) · `runner`(+`data-base`, `data-what`=advance\|to\|score\|out\|courtesy, `data-to`, `data-rbi`) · `resolve-done` · `fc-out`(+`data-runner`, `data-base`) · `fc-cancel` · `play-out`(+`data-runner`, `data-base`) · `undo` · `end-half` · `clock-start` · `end-game` · `finish` · `abandon` · `toggle-log` |
 | fix | `fix-score`(+`data-side`) · `fix-outs` · `nudge`(+`data-what`, `data-side`, `data-delta`) · `fix-done` |
 | cornhole | `bag`(+`data-side`, `data-what`=in\|on, `data-delta`) · `score-round` |
