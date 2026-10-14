@@ -1,7 +1,7 @@
 /* Offline shell. Page loads are NETWORK-FIRST so a new build always wins when   */
 /* there's signal; the cache is the fallback for the field. Assets are cache-    */
 /* first. Bump CACHE_NAME whenever kb.js / kb.css / data.js change.              */
-const CACHE_NAME = "kickball-v31";
+const CACHE_NAME = "kickball-v32";
 const ASSETS = ["./", "./index.html", "./kb.css", "./kb.js", "./data.js", "./manifest.webmanifest", "./icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -17,6 +17,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
 	const req = event.request;
 	if (req.method !== "GET") return;
+	if (new URL(req.url).pathname.includes("/api/")) return;   /* cloud backup: never cached */
 	const isPage = req.mode === "navigate" || req.destination === "document";
 	const isApp = /\/(kb\.js|kb\.css|data\.js)$/.test(new URL(req.url).pathname);
 	if (isPage || isApp) {

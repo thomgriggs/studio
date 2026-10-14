@@ -100,6 +100,9 @@
 	<main class="view summary page" data-view="summary"></main>
 
 	<!-- ===== LEAGUE : rules, team approvals, umpires, schedule, standings ===== -->
+	<!-- ===== SYNC : cloud backup (beta) — invite code, copies on the server, restore ===== -->
+	<main class="view sync page" data-view="sync"></main>
+
 	<main class="view league page" data-view="league"></main>
 
 	<!-- ===== PLAYERS : the league's players — filters, search, sortable stats table, tap for the card ===== -->
@@ -107,6 +110,9 @@
 
 	<!-- ===== PLAYER : one person's page — next game, schedule, free agent, stats, settings ===== -->
 	<main class="view player page" data-view="player"></main>
+
+	<!-- ===== FOOTNOTE : cloud backup state on every screen; tap for the sync screen ===== -->
+	<footer class="sync-bar"><button type="button" class="sync-status" data-action="sync" data-state="off" aria-live="polite">Beta · Cloud backup off · tap to set up</button></footer>
 
 	<!-- ===== SWITCH : who this phone is (stands in for sign-in); opened from the me-bar pill ===== -->
 	<dialog class="switcher" id="switch" aria-labelledby="whoami-heading"><section class="whoami"></section></dialog>

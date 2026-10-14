@@ -14,7 +14,7 @@ const ctx = vm.createContext({
 	console, structuredClone, Date, Option:function () {},
 	document:{ addEventListener(){}, querySelector:stubEl, querySelectorAll:() => [], getElementById:() => null, createElement:stubEl, body:{ dataset:{}, appendChild(){} } },
 	localStorage:{ store:new Map(), getItem(k){ return this.store.get(k) ?? null; }, setItem(k, v){ this.store.set(k, String(v)); }, removeItem(k){ this.store.delete(k); } },
-	window:{ scrollTo(){} }, scrollTo(){}, location:{ search:'' }, setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
+	window:{ scrollTo(){} }, scrollTo(){}, location:{ search:'', protocol:'https:', href:'https://kickball.test/' }, URL, fetch:() => Promise.reject(new Error('no network in tests')), setTimeout, clearTimeout, setInterval:() => 0, clearInterval(){}
 });
 ctx.window = ctx;
 for (const f of ['data.js', 'kb.js']) vm.runInContext(fs.readFileSync(new URL(`../app/${f}`, import.meta.url), 'utf8'), ctx, { filename:f });
@@ -611,4 +611,39 @@ test('game export carries the game, the rosters it names, and the league overrid
 	assert.deepEqual(x.teams.map(t => t.id), ['lbc']);
 	assert.ok(x.league === null || typeof x.league.overrides === 'object');
 	assert.equal(run("kbSlug('Liquid Breakfast Club')"), 'liquid-breakfast-club');
+});
+
+/* ---------- cloud backup (beta) ------------------------------------------ */
+test('sync payload hashes data only — a screen change never costs a write', () => {
+	const r = run(`
+		mkGame('kickball', 'tigers', 'bulls'); clock(); tap('single');
+		const pa = kbSyncPayload();
+		kbState.view = 'teams'; kbState.tab = 'other';
+		const pb = kbSyncPayload();
+		tap('out');
+		const pc = kbSyncPayload();
+		({ same: pa.hash === pb.hash, changed: pb.hash !== pc.hash, note: pc.note, status: pc.status, gameId: pc.gameId, hasBody: typeof pc.body === "string" && pc.body.includes('"events"') });
+	`);
+	assert.equal(r.same, true); assert.equal(r.changed, true);
+	assert.equal(r.status, 'live'); assert.equal(r.gameId, 't'); assert.equal(r.hasBody, true);
+	assert.match(r.note, /^Away 0–0 Home · T1$/);
+});
+test('sync status: off without a code, paused with a cap notice, ok after a send', () => {
+	const r = run(`
+		kbSync.code = ''; kbSync.lastAt = 0; kbSync.pausedUntil = 0;
+		const off = kbSyncStatus(), offOn = kbSyncOn();
+		kbSync.code = 'abcd-1234';
+		kbSync.pausedWhy = 'day'; kbSync.pausedUntil = Date.now() + 60000;
+		const paused = kbSyncStatus();
+		kbSync.pausedUntil = 0; kbSync.lastAt = Date.now();
+		const ok = kbSyncStatus();
+		({ off: off.state, offOn, paused: paused.state, pausedText: paused.text, ok: ok.state });
+	`);
+	assert.equal(r.off, 'off'); assert.equal(r.offOn, false);
+	assert.equal(r.paused, 'paused'); assert.match(r.pausedText, /paused for today/); assert.match(r.pausedText, /still saved on this phone/);
+	assert.equal(r.ok, 'ok');
+});
+test('kbSave never schedules an upload without a code', () => {
+	const r = run(`kbSync.code = ''; kbSync.timer = null; kbSave(); kbSync.timer === null;`);
+	assert.equal(r, true);
 });

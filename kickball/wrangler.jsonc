@@ -1,5 +1,8 @@
 {
   "name": "kickball",
-  "pages_build_output_dir": ".",
-  "compatibility_date": "2026-06-14"
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-06-14",
+  "d1_databases": [
+    { "binding": "DB", "database_name": "kickball", "database_id": "REPLACE_AFTER_D1_CREATE", "migrations_dir": "migrations" }
+  ]
 }

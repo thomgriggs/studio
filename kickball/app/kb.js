@@ -34,6 +34,7 @@ function kbInit() {
 		kbState.ui.view = 'home'; history.replaceState(null, '', location.pathname);
 	}
 	kbNormalizeMe();
+	kbSyncInit();
 	document.addEventListener('click', kbOnClick);
 	document.addEventListener('change', kbOnChange);
 	document.addEventListener('input', ev => { const el = ev.target.closest('input[type="search"][data-action]'); if (el) kbDispatch(el, ev); });
@@ -53,7 +54,7 @@ function kbLoad() {
 	kbState.ui = {};
 	try { const s = JSON.parse(localStorage.getItem(KB_KEY) || 'null'); if (s) { kbState.game = s.game || null; kbState.teams = s.teams || []; kbState.games = s.games || []; kbState.leagues = s.leagues || (s.league ? [s.league] : []); kbState.leagueId = s.leagueId || (kbState.leagues[0] || {}).id || null; kbState.profiles = s.profiles || {}; kbState.ui = s.ui || {}; kbState.pteam = kbState.ui.pteam || 'all'; kbState.pseason = kbState.ui.pseason || null; kbState.pcompare = kbState.ui.pcompare || []; kbState.pleague = kbState.ui.pleague || 'all'; kbState.side = kbState.ui.side || kbState.side; kbState.tab = kbState.ui.tab || kbState.tab; kbState.teamId = kbState.ui.teamId || null; kbState.prepId = kbState.ui.prepId || null; kbState.summaryId = kbState.ui.summaryId || null; if (kbState.ui.me) kbState.me = { ...kbState.me, ...kbState.ui.me }; } } catch (e) {}
 }
-function kbSave() { try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, leagues:kbState.leagues, leagueId:kbState.leagueId, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, pseason:kbState.pseason, pcompare:kbState.pcompare, pleague:kbState.pleague, summaryId:kbState.summaryId, me:kbState.me } })); } catch (e) {} }
+function kbSave() { kbSyncSchedule(); try { localStorage.setItem(KB_KEY, JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, leagues:kbState.leagues, leagueId:kbState.leagueId, profiles:kbState.profiles, ui:{ view:kbState.view, side:kbState.side, tab:kbState.tab, teamId:kbState.teamId, prepId:kbState.prepId, pteam:kbState.pteam, pseason:kbState.pseason, pcompare:kbState.pcompare, pleague:kbState.pleague, summaryId:kbState.summaryId, me:kbState.me } })); } catch (e) {} }
 /* First run (or an older device) gets the seed league, plus any seed team or captain it's missing. */
 function kbSeedLeague() {
 	let dirty = false;
@@ -142,6 +143,12 @@ const KB_ACTIONS = {
 	'share-game':   () => kbShareGame(),
 	'export-game':  () => kbExportGame(),
 	'export-all':   () => kbExportAll(),
+	'sync':         () => kbGo('sync'),
+	'sync-setup':   (el) => kbSyncSetup(el.closest('form')),
+	'sync-now':     () => kbSyncFlush(true),
+	'sync-list':    () => kbSyncList(),
+	'sync-restore': (el) => kbSyncRestore(el),
+	'sync-forget':  () => kbSyncForget(),
 	'abandon':      () => { const s = kbSchedOfGame(kbState.game); if (s) { s.status = 'scheduled'; s.gameId = null; } kbState.game = null; kbSave(); kbGo('home'); kbToast('Game discarded'); },
 	/* captain */
 	'captain':      (el) => { kbState.side = el.dataset.side || kbState.side; kbState.tab = el.dataset.tab || 'here'; kbGo('captain'); },
@@ -1186,6 +1193,8 @@ function kbRender() {
 	if (v === 'player') kbRenderPlayer();
 	if (v === 'players') kbRenderPlayers();
 	if (v === 'summary') kbRenderSummary();
+	if (v === 'sync') kbRenderSync();
+	kbRenderSyncBar();
 	kbApplyPerms();
 	if (sameView) { open.forEach(cls => { const d = [...document.querySelectorAll('.view.is-current details')].find(x => x.className === cls); if (d) d.open = true; }); if (typeof scrollTo === 'function') scrollTo(0, y); }
 }
@@ -1950,4 +1959,144 @@ function kbRenderPlayersTable() {
 		${sched && team ? `<td class="pl-act">${canAdd ? `<button type="button" class="pl-add" data-action="recruit" data-sched="${sched.id}" data-team="${team.id}" data-scope="${team.id}" data-player="${r.id}" data-from="${r.team.id}" aria-label="Add ${kbEscape(kbDisplayName(r.p))}">${kbIcon('plus', 16)}</button>` : ''}</td>` : ''}
 	</tr>`; }).join('') || `<tr><td colspan="${cols.length + 2}" class="is-empty">Nobody matches</td></tr>`}</tbody>`;
 	kbApplyPerms();
+}
+
+/* ========================================================================== */
+/* CLOUD BACKUP (beta) — timestamped copies of this phone's store on the      */
+/* server (functions/api). The phone stays the source of truth: every kbSave() */
+/* schedules one debounced upload; identical data is never re-sent; any cap or */
+/* outage just pauses uploads and says so in the footer. Needs an invite code. */
+/* ========================================================================== */
+const KB_SYNC_KEY = 'kickball-sync';
+const KB_SYNC_API = (typeof location !== 'undefined' && /^https?:/.test(location.protocol)) ? new URL('api/', location.href).href : '';
+const KB_SYNC_DEBOUNCE = 10000;
+const kbSync = { code:'', device:'', label:'', lastHash:'', lastAt:0, lastId:0, pausedUntil:0, pausedWhy:'', /* persisted */
+	timer:null, inflight:false, net:'', list:null, listErr:'', confirmId:0 }; /* session only */
+function kbSyncRandom(n = 12) { const a = 'abcdefghijklmnopqrstuvwxyz0123456789'; let out = ''; const buf = (typeof crypto !== 'undefined' && crypto.getRandomValues) ? crypto.getRandomValues(new Uint8Array(n)) : Array.from({ length:n }, () => Math.random() * 256 | 0); for (const b of buf) out += a[b % a.length]; return out; }
+function kbSyncPersist() { try { localStorage.setItem(KB_SYNC_KEY, JSON.stringify({ code:kbSync.code, device:kbSync.device, label:kbSync.label, lastHash:kbSync.lastHash, lastAt:kbSync.lastAt, lastId:kbSync.lastId, pausedUntil:kbSync.pausedUntil, pausedWhy:kbSync.pausedWhy })); } catch (e) {} }
+function kbSyncInit() {
+	try { const s = JSON.parse(localStorage.getItem(KB_SYNC_KEY) || 'null'); if (s) Object.assign(kbSync, s); } catch (e) {}
+	if (!kbSync.device) { kbSync.device = kbSyncRandom(); kbSync.label = 'This phone'; kbSyncPersist(); }
+	if (typeof window === 'undefined' || !window.addEventListener) return;
+	window.addEventListener('online', () => { kbSync.net = ''; kbSyncFlush(); });
+	window.addEventListener('offline', () => kbRenderSyncBar());
+	/* leaving the app (switching to Messages, locking the phone) is the moment a copy matters most */
+	document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') kbSyncFlush(); });
+	window.addEventListener('pagehide', () => kbSyncFlush());
+}
+/* FNV-1a over the data part of the store (not ui), so a screen change never costs a write */
+function kbSyncHash(str) { let h = 0x811c9dc5; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193); } return (h >>> 0).toString(16).padStart(8, '0') + str.length.toString(16); }
+function kbSyncPayload() {
+	const body = JSON.stringify({ game:kbState.game, teams:kbState.teams, games:kbState.games, leagues:kbState.leagues, leagueId:kbState.leagueId, profiles:kbState.profiles });
+	const g = kbState.game || kbState.games[0] || null, d = g ? kbDerive(g) : null;
+	return { code:kbSync.code, device:kbSync.device, label:kbSync.label, hash:kbSyncHash(body), gameId:g ? g.id : null, status:g ? g.status : null,
+		note:g && d ? `${g.teams.away.name} ${d.score.away}–${d.score.home} ${g.teams.home.name}${kbState.game ? ` · ${d.final ? 'final' : `${d.half === 'top' ? 'T' : 'B'}${d.inning}`}` : ''}` : null, body };
+}
+function kbSyncOn() { return !!(kbSync.code && KB_SYNC_API); }
+function kbSyncSchedule() {
+	if (!kbSyncOn() || kbSync.timer) return;
+	if (kbSyncPayload().hash === kbSync.lastHash) return;   /* nothing new since the last copy — don't even show "Backing up…" */
+	kbSync.timer = setTimeout(() => kbSyncFlush(), KB_SYNC_DEBOUNCE);
+	kbRenderSyncBar();
+}
+async function kbSyncFlush(manual = false) {
+	clearTimeout(kbSync.timer); kbSync.timer = null;
+	if (!kbSyncOn() || kbSync.inflight) return;
+	if (!manual && kbSync.pausedUntil > Date.now()) { kbRenderSyncBar(); return; }
+	const p = kbSyncPayload();
+	if (!manual && p.hash === kbSync.lastHash) { kbRenderSyncBar(); return; }
+	kbSync.inflight = true; kbRenderSyncBar();
+	try {
+		const small = p.body.length < 60000;
+		const r = await fetch(KB_SYNC_API + 'sync', { method:'POST', headers:{ 'content-type':'application/json' }, body:JSON.stringify(p), keepalive:small });
+		let j = null; try { j = await r.json(); } catch (e) {}
+		if (r.ok && j && j.ok) { kbSync.lastHash = p.hash; kbSync.lastAt = j.at || Date.now(); kbSync.lastId = j.id || 0; kbSync.pausedUntil = 0; kbSync.pausedWhy = ''; kbSync.net = ''; if (manual) kbToast(j.dup ? 'Already backed up' : 'Backed up'); }
+		else if (j && j.paused === 'rate') { kbSync.net = ''; kbSync.timer = setTimeout(() => kbSyncFlush(), ((j.retry || 5) + 1) * 1000); }
+		else if (j && j.paused === 'day') { kbSync.pausedWhy = 'day'; kbSync.pausedUntil = j.until || (Date.now() + 3600000); }
+		else if (j && (j.paused === 'off' || j.paused === 'code')) { kbSync.pausedWhy = j.paused; kbSync.pausedUntil = Date.now() + 15 * 60000; }
+		else { kbSync.net = `server ${r.status}`; kbSync.timer = setTimeout(() => kbSyncFlush(), 60000); }
+		if (manual && j && j.paused) kbToast(j.error || 'Backup paused');
+	} catch (e) {
+		kbSync.net = 'offline'; kbSync.timer = setTimeout(() => kbSyncFlush(), 60000);
+		if (manual) kbToast('No connection — will retry');
+	}
+	kbSync.inflight = false; kbSyncPersist(); kbRenderSyncBar();
+	if (kbState.view === 'sync') kbRenderSync();
+}
+function kbSyncWhen(ms) { return new Date(ms).toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }); }
+/* one line, every screen: what the server has, or why it doesn't */
+function kbSyncStatus() {
+	const now = Date.now();
+	if (!KB_SYNC_API) return { state:'off', text:'Cloud backup needs the hosted app' };
+	if (!kbSync.code) return { state:'off', text:'Cloud backup off · tap to set up' };
+	if (kbSync.pausedUntil > now) {
+		if (kbSync.pausedWhy === 'day') return { state:'paused', text:'Cloud backup paused for today (beta cap). Your game is still saved on this phone.' };
+		if (kbSync.pausedWhy === 'off') return { state:'paused', text:'Cloud backup is switched off right now. Your game is still saved on this phone.' };
+		return { state:'paused', text:'Invite code not accepted. Your game is still saved on this phone.' };
+	}
+	if ((typeof navigator !== 'undefined' && navigator.onLine === false) || kbSync.net === 'offline') return { state:'offline', text:`Offline · will back up when signal returns${kbSync.lastAt ? ` · last ${kbSyncWhen(kbSync.lastAt)}` : ''}` };
+	if (kbSync.net) return { state:'offline', text:`Backup server unreachable (${kbSync.net}) · retrying${kbSync.lastAt ? ` · last ${kbSyncWhen(kbSync.lastAt)}` : ''}` };
+	if (kbSync.inflight || kbSync.timer) return { state:'saving', text:'Backing up…' };
+	if (kbSync.lastAt) return { state:'ok', text:`Backed up ${kbSyncWhen(kbSync.lastAt)}` };
+	return { state:'saving', text:'Cloud backup on · nothing sent yet' };
+}
+function kbRenderSyncBar() {
+	const el = document.querySelector('.sync-status'); if (!el) return;
+	const s = kbSyncStatus();
+	el.dataset.state = s.state; el.textContent = `Beta · ${s.text}`;
+}
+function kbSyncSetup(form) {
+	if (!form) return;
+	kbSync.code = (form.querySelector('[name="code"]').value || '').trim().toLowerCase();
+	kbSync.label = (form.querySelector('[name="label"]').value || '').trim().slice(0, 40) || 'This phone';
+	kbSync.pausedUntil = 0; kbSync.pausedWhy = ''; kbSync.lastHash = ''; kbSync.list = null;
+	kbSyncPersist(); kbRenderSync();
+	if (kbSync.code) kbSyncFlush(true); else kbToast('Cloud backup off');
+}
+function kbSyncForget() { clearTimeout(kbSync.timer); kbSync.timer = null; kbSync.code = ''; kbSync.list = null; kbSync.pausedUntil = 0; kbSync.pausedWhy = ''; kbSyncPersist(); kbRenderSync(); kbRenderSyncBar(); kbToast('Cloud backup off'); }
+async function kbSyncList() {
+	if (!kbSyncOn()) return;
+	kbSync.list = 'loading'; kbSync.listErr = ''; kbRenderSync();
+	try {
+		const r = await fetch(`${KB_SYNC_API}snapshots?code=${encodeURIComponent(kbSync.code)}`);
+		const j = await r.json();
+		if (!r.ok || !j.ok) throw new Error(j.error || `server ${r.status}`);
+		kbSync.list = j.snapshots;
+	} catch (e) { kbSync.list = null; kbSync.listErr = e.message || 'could not load'; }
+	kbRenderSync();
+}
+/* two taps: the first arms the row, the second restores. The current store is kept under KB_KEY + '-before-restore'. */
+async function kbSyncRestore(el) {
+	const id = +el.dataset.id; if (!id) return;
+	if (kbSync.confirmId !== id) { kbSync.confirmId = id; kbRenderSync(); return; }
+	kbSync.confirmId = 0;
+	try {
+		const r = await fetch(`${KB_SYNC_API}snapshot?code=${encodeURIComponent(kbSync.code)}&id=${id}`);
+		if (!r.ok) throw new Error(`server ${r.status}`);
+		const text = await r.text(); const data = JSON.parse(text);
+		if (!data || !Array.isArray(data.teams)) throw new Error('not a kickball backup');
+		try { const cur = localStorage.getItem(KB_KEY); if (cur) localStorage.setItem(KB_KEY + '-before-restore', cur); } catch (e) {}
+		localStorage.setItem(KB_KEY, JSON.stringify({ ...data, ui:{ view:'home', me:kbState.me } }));
+		kbSync.lastHash = ''; kbSyncPersist();
+		kbToast('Restored — reloading'); setTimeout(() => location.reload(), 600);
+	} catch (e) { kbToast(`Restore failed: ${e.message}`); }
+}
+function kbRenderSync() {
+	const host = document.querySelector('.sync'); if (!host) return;
+	const s = kbSyncStatus(), on = kbSyncOn();
+	const rows = Array.isArray(kbSync.list) ? kbSync.list : [];
+	const when = (ms) => new Date(ms).toLocaleString([], { month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+	host.innerHTML = `<header class="page-head"><button type="button" class="key is-ghost back" data-action="go" data-to="home" aria-label="Back">←</button><div><h1>Cloud backup</h1><p class="sub">Beta · a timestamped copy of this phone's data, kept on the server after every change</p></div></header>
+		<p class="sync-state is-${s.state}" role="status">${kbEscape(s.text)}</p>
+		<form class="sync-form" autocomplete="off">
+			<div class="field"><label for="sync-code">Invite code</label><input id="sync-code" name="code" inputmode="text" autocapitalize="none" spellcheck="false" placeholder="xxxx-xxxx" value="${kbEscape(kbSync.code)}"></div>
+			<div class="field"><label for="sync-label">This phone's name</label><input id="sync-label" name="label" maxlength="40" placeholder="Thom's iPhone" value="${kbEscape(kbSync.label)}"></div>
+			<div class="row-keys"><button type="submit" class="key is-primary" data-action="sync-setup">${on ? 'Save' : 'Turn on'}</button>${on ? `<button type="button" class="key is-ghost" data-action="sync-forget">Turn off</button>` : ''}</div>
+		</form>
+		${on ? `<section class="sync-copies" aria-labelledby="sync-copies-h">
+			<div class="row-keys"><h2 id="sync-copies-h">Copies on the server</h2><button type="button" class="key is-ghost" data-action="sync-now">Back up now</button><button type="button" class="key is-ghost" data-action="sync-list">${kbSync.list ? 'Refresh' : 'Show'}</button></div>
+			<p class="sync-note">Device id <code>${kbEscape(kbSync.device)}</code>. Lost this phone? Enter the same invite code on a new one and restore the latest copy from here.</p>
+			${kbSync.list === 'loading' ? `<p class="empty">Loading…</p>` : kbSync.listErr ? `<p class="empty">${kbEscape(kbSync.listErr)}</p>` : Array.isArray(kbSync.list) && !rows.length ? `<p class="empty">Nothing on the server yet.</p>` : ''}
+			${rows.length ? `<ul class="recent sync-list">${rows.map(r => `<li><div class="sync-row"><strong>${kbEscape(when(r.at))}</strong><span>${kbEscape(r.note || (r.gameId ? `game ${r.gameId}` : 'no game'))}</span><small>${kbEscape(r.label || r.device)}${r.device === kbSync.device ? ' (this phone)' : ''} · ${Math.round(r.bytes / 1024)} KB</small></div><button type="button" class="key ${kbSync.confirmId === r.id ? 'is-primary' : 'is-ghost'}" data-action="sync-restore" data-id="${r.id}">${kbSync.confirmId === r.id ? 'Tap again to restore' : 'Restore'}</button></li>`).join('')}</ul>` : ''}
+		</section>` : `<p class="sync-note">An invite code turns this on. Without one the app works exactly the same, saved on this phone only — use <strong>Back up data</strong> on the home screen for a file copy.</p>`}`;
 }

@@ -57,4 +57,4 @@ Not modeled: time between games, forfeits, the tournament (KickFall) rule set, a
 3. Player progress cards; season leaderboard.
 4. Softball + dodgeball configs to demo "any sport" for the pitch.
 5. Deploy (Cloudflare Pages, `kickball.thomgriggs.com`) once the rules are confirmed. See `DEPLOYMENT.md`.
-6. Sync / accounts — only once two phones need to see one game.
+6. ~~Cloud backup~~ — done 2026-10-14 (beta): every change is copied to D1 behind an invite code, with a footer notice when the beta cap pauses it; restore from any phone on the same code. Two-phone sync / accounts stay deferred until two phones need one game.
