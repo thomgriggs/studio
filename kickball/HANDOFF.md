@@ -42,7 +42,7 @@ State is `.is-*`. Every block has a `/* ===== NAME ===== */` banner in `kb.css`;
 ## `data-action` (every control)
 | Group | Actions |
 |---|---|
-| nav | `go`(+`data-to`) · `teams` · `team`(+`data-team`) · `stats`(+`data-team`) · `captain`(+`data-side`, `data-tab`) · `summary`(+`data-game`=gameId\|live) |
+| nav | `go`(+`data-to`) · URL `?setup=CODE` or `?view=sync` opens the sync screen · `teams` · `team`(+`data-team`) · `stats`(+`data-team`) · `captain`(+`data-side`, `data-tab`) · `summary`(+`data-game`=gameId\|live) |
 | sync | `sync` (the screen) · `sync-setup` (submit: invite code + phone name) · `sync-now` · `sync-list` · `sync-restore`(+`data-id`, two taps) · `sync-forget` |
 | export | `share-game` (Web Share text, clipboard fallback) · `export-game` (JSON: game + its rosters + league overrides) · `export-all` (the whole `kickball-v3` store as a backup file; restore = write it back to `localStorage`) |
 | game | `new-game` (submit) · `tap`(+`data-id` = action id) · `runner`(+`data-base`, `data-what`=advance\|to\|score\|out\|courtesy, `data-to`, `data-rbi`) · `resolve-done` · `fc-out`(+`data-runner`, `data-base`) · `fc-cancel` · `play-out`(+`data-runner`, `data-base`) · `undo` · `end-half` · `clock-start` · `end-game` · `finish` · `abandon` · `toggle-log` |

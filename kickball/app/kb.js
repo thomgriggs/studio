@@ -46,6 +46,8 @@ function kbInit() {
 	if (needsGame.includes(view) && !kbState.game && !(view === 'captain' && kbState.prepId && kbSched(kbState.prepId))) view = 'home';
 	if (needsTeam.includes(view) && !kbTeam(kbState.teamId)) view = 'teams';
 	if (view === 'summary' && !kbSummaryGame()) view = 'home';
+	/* /app/?setup=CODE (or ?view=sync) opens the cloud-backup screen with the invite code filled in */
+	if (qs.has('setup') || qs.get('view') === 'sync') { if (qs.get('setup')) { kbSync.code = qs.get('setup').trim().toLowerCase(); kbSyncPersist(); } view = 'sync'; history.replaceState(null, '', location.pathname); }
 	kbGo(view);
 }
 
