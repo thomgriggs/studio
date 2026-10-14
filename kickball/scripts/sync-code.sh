@@ -12,7 +12,8 @@ if [ "${1:-}" = "local" ]; then TARGET=--local; shift; fi
 q() { npx --yes wrangler d1 execute kickball $TARGET --command "$1"; }
 case "${1:-}" in
   add)   code="$(LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4)-$(LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4)"
-         q "INSERT INTO codes (code, label, enabled, created) VALUES ('$code', '${2:-}', 1, $(date +%s)000)"; echo "invite code: $code" ;;
+         label="$(printf %s "${2:-}" | sed "s/'/''/g")"
+         q "INSERT INTO codes (code, label, enabled, created) VALUES ('$code', '$label', 1, $(date +%s)000)" >/dev/null; echo "invite code: $code" ;;
   off)   q "UPDATE codes SET enabled = 0 WHERE code = '$2'" ;;
   on)    q "UPDATE codes SET enabled = 1 WHERE code = '$2'" ;;
   list)  q "SELECT c.code, c.label, c.enabled, (SELECT COUNT(*) FROM snapshots s WHERE s.code = c.code) AS snapshots FROM codes c" ;;
