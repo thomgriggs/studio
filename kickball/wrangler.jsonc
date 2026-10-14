@@ -3,6 +3,6 @@
   "pages_build_output_dir": "dist",
   "compatibility_date": "2026-06-14",
   "d1_databases": [
-    { "binding": "DB", "database_name": "kickball", "database_id": "REPLACE_AFTER_D1_CREATE", "migrations_dir": "migrations" }
+    { "binding": "DB", "database_name": "kickball", "database_id": "ca71bf59-60ec-4371-bb82-9a44e6e74b3c", "migrations_dir": "migrations" }
   ]
 }
