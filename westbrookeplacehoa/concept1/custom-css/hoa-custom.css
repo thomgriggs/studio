@@ -863,19 +863,22 @@
   top: 1.75rem !important;
   left: 1.875rem !important;
 }
-/* The strip is "Please <a>sign in</a> or <a>register</a>" — flex makes each word its own item,
-   which drops HOA's text-align: right and the inter-word spaces. Push it to the right edge
-   with justify-content and put the spaces back with gap. */
-@media (min-width: 48rem) {
-  [class*="top-bar__SignIn"] {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.3em;
-    min-height: 3.5rem;
-    padding-right: 0.9375rem;
-    padding-left: 7rem; /* clear the Menu button + label on the left */
-  }
+/* The strip is "Please <a>sign in</a> or <a>register</a>". HOA centres it in a 1000px box
+   (so "right-aligned" stops 140px short of the edge on a wide screen) and hides it below
+   48rem. Show it at every width, full-bleed, flush right of the Menu button. Flex makes each
+   word its own item, which drops the inter-word spaces; gap puts them back. */
+[class*="top-bar__SignIn"] {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.3em;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 3.5rem;
+  margin: 0 !important;
+  padding-right: 0.9375rem;
+  padding-left: 7rem; /* clear the Menu button + label on the left */
+  color: var(--wp-forest);
 }
 [class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="mobile-navigation__UserBox"] {
   display: grid !important;
