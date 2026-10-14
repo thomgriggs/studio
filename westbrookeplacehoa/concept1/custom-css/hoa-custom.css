@@ -848,6 +848,63 @@
 [class*="mobile-navigation__MenuIcon"] {
   color: var(--wp-forest) !important;
 }
+/* LOGGED OUT. HOA Express renders top-bar__SignIn (which it hides on phones) instead of
+   top-bar__Wrapper, so the mobile-nav container sits at the top of the bar rather than under
+   a 3.5rem wrapper. The negative offset that lifts the Menu button into the bar then pushes it
+   off the top of the page (y = -46px on a 390px iPhone; half-clipped on desktop) — a visitor
+   who was not signed in could not open the menu at all. In that case anchor the button to the
+   3.5rem bar itself (container + TopRow static so the bar is the containing block), and show
+   the drawer's sign-in/register card because the bar has no sign-in control at phone width. */
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"],
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] > [class*="mobile-navigation__TopRow"] {
+  position: static !important;
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="mobile-navigation__MenuIcon"] {
+  top: 1.75rem !important;
+  left: 1.875rem !important;
+}
+@media (min-width: 48rem) {
+  [class*="top-bar__SignIn"] {
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
+  }
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="mobile-navigation__UserBox"] {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  align-items: center;
+  color: rgba(255, 250, 240, 0.78);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="sign-in__UserIconContainer"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--wp-gold);
+  color: var(--wp-dark);
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="sign-in__UserIconContainer"] svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="sign-in__SignInContainer"] > span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--wp-paper);
+  font-family: var(--wp-font-alt) !important;
+  font-size: 1rem;
+  font-weight: 600;
+}
+[class*="top-bar__SignIn"] + [class*="mobile-navigation__Container"] [class*="sign-in__SignInContainer"] a {
+  color: var(--wp-gold) !important;
+  text-decoration-color: rgba(216, 182, 90, 0.5) !important;
+}
 /* Keep the utility controls visually secondary to the site navigation. */
 [class*="top-bar__Wrapper"] [class*="user-box__Container"],
 [class*="top-bar__Wrapper"] [class*="notification-box__Container"],
