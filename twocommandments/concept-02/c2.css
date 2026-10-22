@@ -9,8 +9,7 @@
 	--font_sans: 'Inter', system-ui, sans-serif;
 	--space_gutter: clamp(20px, 6vw, 96px);
 	--dur_word: 900ms;
-	--dur_part: 1400ms;
-}
+	}
 
 /* ===== BASE ===== */
 * { box-sizing: border-box; }
@@ -29,17 +28,12 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 
 /* ===== VERSE ===== */
 .verse { margin: 0; text-align: center; font: 400 clamp(2.4rem, 8vw, 7rem)/1.05 var(--font_serif); letter-spacing: -.01em; max-width: 14ch; text-wrap: balance; text-shadow: 0 2px 40px rgba(0,0,0,.5); }
-.verse__a, .verse__b { display: block; }
-.verse__b { font-style: italic; font-size: .72em; margin-top: .35em; color: var(--color_muted); }
 .verse .w { display: inline-block; opacity: 0; transform: translateY(.3em); filter: blur(6px); transition: opacity var(--dur_word) ease, transform var(--dur_word) ease, filter var(--dur_word) ease; transition-delay: calc(var(--i) * 220ms); }
 .verse.is-in .w { opacity: 1; transform: none; filter: none; }
-.verse__b .w { transition-delay: calc(var(--dur_part) + var(--i) * 220ms); }
-.verse__cite { position: absolute; bottom: calc(var(--space_gutter) + 48px); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; color: var(--color_muted); margin: 0; opacity: 0; transition: opacity 1200ms ease 3200ms; }
-.verse.is-in + .verse__cite { opacity: 1; }
 
 /* ===== SOUND ===== */
-.sound { position: absolute; top: var(--space_gutter); right: var(--space_gutter); display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 16px; border: 1px solid rgba(243,238,228,.35); border-radius: 999px; background: rgba(13,11,9,.35); color: var(--color_ink); font: 500 .8rem/1 var(--font_sans); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(8px); }
-.sound:hover { border-color: var(--color_ink); }
+.sound { position: absolute; bottom: var(--space_gutter); right: var(--space_gutter); width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--color_muted); cursor: pointer; }
+.sound:hover { color: var(--color_ink); }
 .sound .sound__off { display: none; }
 .sound[aria-pressed="true"] .sound__on { display: none; }
 .sound[aria-pressed="true"] .sound__off { display: block; }
@@ -54,7 +48,5 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	.sec__bg, .next span { animation: none; }
-	.verse .w, .verse__cite { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
-	.verse.is-in + .verse__cite { opacity: 1; }
 }

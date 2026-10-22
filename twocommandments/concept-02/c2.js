@@ -26,15 +26,12 @@
 		});
 	}
 
-	/* two-part reveal: "If you love me," … "keep my commandments." */
+	/* opening line only: the verse up to data-split, trailing punctuation dropped */
 	function renderOpen(h) {
 		var t = text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
-		var a = i < 0 ? t : t.slice(0, i + 1), b = i < 0 ? '' : t.slice(i + 1).trim();
-		words(h.querySelector('.verse__a'), a);
-		words(h.querySelector('.verse__b'), b);
+		words(h, (i < 0 ? t : t.slice(0, i)).replace(/[\s,.;:]+$/, ''));
 		requestAnimationFrame(function () { requestAnimationFrame(function () { h.classList.add('is-in'); }); });
 	}
-	document.querySelectorAll('[data-cite]').forEach(function (p) { p.textContent = passage(p.dataset.cite).reference; });
 	document.querySelectorAll('.verse--open').forEach(renderOpen);
 
 	/* ---------------------------------------------------------------- */
@@ -46,7 +43,7 @@
 
 	function label(on) {
 		btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-		btn.querySelector('.sound__label').textContent = on ? 'Stop music' : 'Play music';
+		btn.setAttribute('aria-label', on ? 'Mute music' : 'Play music');
 	}
 	function loadApi() {
 		if (window.YT && window.YT.Player) { return make(); }
