@@ -165,26 +165,38 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .passage[data-gospel="luke"]    .passage__gospel { color: #7fa9e0; }
 .passage[data-gospel="john"]    .passage__gospel { color: #e0b64a; }
 
-/* ===== PATHS : the finale — two words split the panel; hover a side and it takes the room ===== */
-.sec--paths { padding: 0; }
+/* ===== PATHS : the finale — the end of the story: white, thick sans, Design top-left / Shop bottom-right ===== */
+:root { --font_black: 'Archivo Black', 'Arial Black', sans-serif; --color_paper: #f7f5f0; --color_ink-dark: #15130f; }
+.sec--paths { padding: 0; background: var(--color_paper); color: var(--color_ink-dark); }
 .split { position: absolute; inset: 0; display: flex; }
-.half { position: relative; flex: 1 1 0; display: grid; place-items: center; overflow: hidden; text-decoration: none; color: var(--color_ink); transition: flex 900ms cubic-bezier(.7, 0, .3, 1), background-color 900ms ease; }
-.half--design { background: #14122b; }
-.half--shop   { background: #221a08; }
-.half + .half { border-left: 1px solid rgba(243,238,228,.12); }
-.half__word { position: absolute; left: 50%; top: 50%; translate: -50% -50%; white-space: nowrap; font: 400 clamp(3rem, 12vw, 12rem)/1 var(--font_serif); letter-spacing: -.02em; transition: transform 900ms cubic-bezier(.7, 0, .3, 1), opacity 600ms ease; }
-.half__more { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: min(80vw, 40ch); display: grid; justify-items: center; gap: 24px; text-align: center; opacity: 0; translate: -50% calc(-50% + 16px); transition: opacity 600ms ease, translate 600ms ease; pointer-events: none; }
-.half__lede { font: 400 clamp(1.1rem, 1.8vw, 1.5rem)/1.5 var(--font_serif); color: var(--color_ink); }
-.half__cta { display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid rgba(243,238,228,.45); border-radius: 999px; font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; }
-/* one side grows, the other narrows to a sliver with its word turned small */
+.half { position: relative; flex: 1 1 0; overflow: hidden; text-decoration: none; color: inherit; background: var(--color_paper); transition: flex 900ms cubic-bezier(.7, 0, .3, 1); }
+.half + .half { border-left: 2px solid var(--color_ink-dark); }
+.half__word { position: absolute; margin: 0; font: 400 clamp(3rem, 10.5vw, 11rem)/.85 var(--font_black); letter-spacing: -.03em; text-transform: uppercase; white-space: nowrap; transition: font-size 900ms cubic-bezier(.7, 0, .3, 1), opacity 600ms ease, translate 900ms cubic-bezier(.7, 0, .3, 1); }
+.half--design .half__word { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); }
+.half--shop   .half__word { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); }
+/* supporting graphics: thick ink line drawings in the opposite corner from the word */
+.half__art { position: absolute; width: clamp(140px, 26vmin, 320px); height: auto; fill: none; stroke: var(--color_ink-dark); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: .9; transition: translate 900ms cubic-bezier(.7, 0, .3, 1), opacity 600ms ease; }
+.half--design .half__art { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); }
+.half--shop   .half__art { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); }
+/* the story behind each word, diagonally opposite it */
+.half__more { position: absolute; width: min(70vw, 34ch); display: grid; gap: 24px; opacity: 0; transition: opacity 600ms ease, translate 600ms ease; pointer-events: none; }
+.half--design .half__more { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); justify-items: end; text-align: right; translate: 0 16px; }
+.half--shop   .half__more { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); justify-items: start; text-align: left; translate: 0 -16px; }
+.half__lede { font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.45 var(--font_sans); color: var(--color_ink-dark); }
+.half__cta { display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--color_ink-dark); color: var(--color_paper); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; }
+/* hover: that side takes the panel; the other narrows to a sliver with its word turned sideways */
 .split:has(.half:hover) .half:not(:hover), .split:has(.half:focus-visible) .half:not(:focus-visible) { flex: 0 0 clamp(72px, 10vw, 160px); }
-.split:has(.half:hover) .half:not(:hover) .half__word, .split:has(.half:focus-visible) .half:not(:focus-visible) .half__word { transform: rotate(-90deg) scale(.28); opacity: .6; }
+.split:has(.half:hover) .half:not(:hover) .half__word, .split:has(.half:focus-visible) .half:not(:focus-visible) .half__word { font-size: clamp(2rem, 5vw, 4.5rem); left: 50%; right: auto; top: 50%; bottom: auto; translate: -50% -50%; rotate: -90deg; }
+.split:has(.half:hover) .half:not(:hover) .half__art, .split:has(.half:focus-visible) .half:not(:focus-visible) .half__art { opacity: 0; }
 .half:hover, .half:focus-visible { flex: 1 1 0; }
-.half:hover .half__word, .half:focus-visible .half__word { transform: translateY(-22vh) scale(.5); }
-.half:hover .half__more, .half:focus-visible .half__more { opacity: 1; translate: -50% -50%; transition-delay: 350ms; }
-.half--design:hover, .half--design:focus-visible { background: #1b1840; }
-.half--shop:hover, .half--shop:focus-visible { background: #2e2309; }
-@media (max-width: 640px) { .split { flex-direction: column; } .half + .half { border-left: 0; border-top: 1px solid rgba(243,238,228,.12); } .split:has(.half:hover) .half:not(:hover) .half__word { transform: scale(.35); } }
+.half:hover .half__word, .half:focus-visible .half__word { font-size: clamp(4rem, 17vw, 19rem); }
+.half--design:hover .half__art, .half--design:focus-visible .half__art { translate: 0 calc(-100% - 40px); opacity: .25; }
+.half--shop:hover .half__art,   .half--shop:focus-visible .half__art   { translate: 0 calc(100% + 40px); opacity: .25; }
+.half:hover .half__more, .half:focus-visible .half__more { opacity: 1; translate: 0 0; transition-delay: 350ms; }
+@media (max-width: 640px) { .split { flex-direction: column; } .half + .half { border-left: 0; border-top: 2px solid var(--color_ink-dark); } .half__more { width: min(80vw, 34ch); } .split:has(.half:hover) .half:not(:hover) .half__word { rotate: 0deg; } }
+/* corner controls on a light slide */
+.corner.is-dark .ctl { background: rgba(21,19,15,.08); color: var(--color_ink-dark); }
+.corner.is-dark .ctl:hover { background: rgba(21,19,15,.16); }
 .toast { position: fixed; left: 50%; bottom: 84px; translate: -50% 0; z-index: 6; padding: 12px 18px; border-radius: 999px; background: rgba(243,238,228,.92); color: var(--color_bg); font: 500 .8rem/1 var(--font_sans); letter-spacing: .08em; opacity: 0; transition: opacity 300ms ease; pointer-events: none; }
 .toast.is-on { opacity: 1; }
 
@@ -199,6 +211,6 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.scrub__hint { display: none; }
 	.sec--gospels, .sec--passage, .sec--gospels::before, .door__leaf, .gospels { transition: none; }
 	.gospels.is-entering { transform: none; opacity: 1; }
-	.half, .half__word, .half__more { transition: none; }
+	.half, .half__word, .half__more, .half__art { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 }

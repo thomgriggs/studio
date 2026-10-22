@@ -187,6 +187,7 @@
 		var list = sections(), i = list.indexOf(current());
 		corner.classList.toggle('has-prev', i > 0);
 		corner.classList.toggle('at-end', i >= list.length - 1);
+		corner.classList.toggle('is-dark', list[i].classList.contains('is-light'));
 	}
 	document.querySelector('[data-action="prev"]').addEventListener('click', function () { go(-1); });
 	document.querySelector('[data-action="next"]').addEventListener('click', function () { go(1); });
