@@ -62,15 +62,9 @@
 	/* opener: the picture fades in, then the words, then the light on them */
 	var pin = document.querySelector('.pin');
 	function openerIn() {
-		/* the picture first; then the line fades in; then the light reads across it, word by word */
+		/* on load: the picture, then the line fades up. the light comes with the scroll. */
 		if (pin) { pin.classList.add('is-loaded'); }
-		setTimeout(function () {
-			document.querySelectorAll('.verse--open').forEach(function (h) {
-				h.classList.add('is-in');
-				var ws = h.querySelectorAll('.w');
-				ws.forEach(function (w, i) { setTimeout(function () { w.style.setProperty('--lit', 1); }, reduced ? 0 : 3200 + i * 1100); });
-			});
-		}, reduced ? 0 : 1800);
+		setTimeout(function () { document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); }); }, reduced ? 0 : 900);
 	}
 	var bg = pin && pin.querySelector('.sec__bg');
 	if (bg && !bg.complete) { bg.addEventListener('load', openerIn, { once: true }); bg.addEventListener('error', openerIn, { once: true }); } else { openerIn(); }
@@ -166,6 +160,9 @@
 				sec.style.setProperty('--c', c);
 				var v = sec.querySelector('.verse'); if (v) {
 					v.classList.toggle('is-gone', r.bottom <= 0);
+					/* on scroll, while the picture is stuck: the light reads across the line, word by word; the curtain only starts after */
+					var ws = v.querySelectorAll('.w'), n = ws.length;
+					ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (p * (n + .6) - i) / 1.2))); });
 				}
 				return;
 			}
