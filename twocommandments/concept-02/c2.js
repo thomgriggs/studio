@@ -62,9 +62,15 @@
 	/* opener: the picture fades in, then the words, then the light on them */
 	var pin = document.querySelector('.pin');
 	function openerIn() {
-		/* the line first, slowly, on black; then the picture comes up behind it */
-		document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); });
-		setTimeout(function () { if (pin) { pin.classList.add('is-loaded'); } }, reduced ? 0 : 2200);
+		/* the picture first; then the line fades in; then the light reads across it, word by word */
+		if (pin) { pin.classList.add('is-loaded'); }
+		setTimeout(function () {
+			document.querySelectorAll('.verse--open').forEach(function (h) {
+				h.classList.add('is-in');
+				var ws = h.querySelectorAll('.w');
+				ws.forEach(function (w, i) { setTimeout(function () { w.style.setProperty('--lit', 1); }, reduced ? 0 : 2800 + i * 650); });
+			});
+		}, reduced ? 0 : 1800);
 	}
 	var bg = pin && pin.querySelector('.sec__bg');
 	if (bg && !bg.complete) { bg.addEventListener('load', openerIn, { once: true }); bg.addEventListener('error', openerIn, { once: true }); } else { openerIn(); }
@@ -160,9 +166,6 @@
 				sec.style.setProperty('--c', c);
 				var v = sec.querySelector('.verse'); if (v) {
 					v.classList.toggle('is-gone', r.bottom <= 0);
-					/* the light reads across the line: word i lights as p passes its share of the stretch, with a soft edge */
-					var ws = v.querySelectorAll('.w'), n = ws.length;
-					ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (p * (n + .6) - i) / 1.2))); });
 				}
 				return;
 			}
