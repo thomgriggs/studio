@@ -50,28 +50,25 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .scrub .stage { position: sticky; top: 0; width: 100%; left: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
 .scrub__hint { position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
 
-/* ----- the stack fills the whole panel: four big discs sweep in from the corners ----- */
-.stack { position: absolute; inset: 0; width: 100%; height: 100%; place-self: stretch; isolation: isolate; transform-origin: 50% 50%; scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
-.disc { position: absolute; width: 72vmin; aspect-ratio: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .92; }
-.disc--matthew { background: var(--gospel_matthew); left: calc(50% - 60vmin + var(--p1) * 20vmin); top:    calc(50% - 58vmin + var(--p1) * 16vmin); translate: calc((1 - var(--p1)) * -120vw) calc((1 - var(--p1)) * -80vh); }
-.disc--mark    { background: var(--gospel_mark);    left: calc(50% - 12vmin - var(--p1) * 20vmin + 20vmin); top: calc(50% - 56vmin + var(--p1) * 16vmin); translate: calc((1 - var(--p1)) *  120vw) calc((1 - var(--p1)) * -80vh); }
-.disc--luke    { background: var(--gospel_luke);    left: calc(50% - 60vmin + var(--p2) * 22vmin); top:    calc(50% - 14vmin - var(--p2) * 12vmin + 12vmin); translate: calc((1 - var(--p2)) * -120vw) calc((1 - var(--p2)) *  80vh); }
-.disc--john    { background: var(--gospel_john);    left: calc(50% - 12vmin - var(--p2) * 22vmin + 22vmin); top: calc(50% - 16vmin - var(--p2) * 12vmin + 12vmin); translate: calc((1 - var(--p2)) *  120vw) calc((1 - var(--p2)) *  80vh); }
-
-/* ----- the mark: "II" rises, letters of the word appear one by one ----- */
-.mark { position: relative; z-index: 1; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_bg); text-shadow: 0 0 2px rgba(243,238,228,.9), 0 0 24px rgba(243,238,228,.6); scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
-.mark__num { display: block; font-size: clamp(8rem, 38vmin, 22rem); line-height: .9; letter-spacing: -.04em; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 40px); }
-.mark__word { display: block; margin-top: .3em; font-weight: 500; font-size: clamp(1.8rem, 7vmin, 4.5rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
-.mark__word .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
-.mark__word .l.is-on { opacity: 1; translate: 0; }
+/* ----- the logo: two tablets slide in from either side and meet as "II" ----- */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.logo { display: grid; justify-items: center; gap: clamp(20px, 4vmin, 40px); scale: calc(1 - var(--p4) * .6); translate: 0 calc(var(--p4) * -28vh); }
+.tablets { display: flex; gap: clamp(14px, 3vmin, 32px); margin: 0; }
+.tablet { display: grid; place-items: end center; width: clamp(96px, 22vmin, 200px); height: clamp(220px, 56vmin, 520px); padding-bottom: clamp(16px, 3vmin, 32px); border-radius: 999px 999px 10px 10px; background: var(--color_ink); color: var(--color_bg); box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
+.tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }
+.tablet__text { font: 500 clamp(.7rem, 1.6vmin, 1rem)/1.3 var(--font_sans); letter-spacing: .14em; text-transform: uppercase; text-align: center; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 8px); }
+.wordmark { margin: 0; font: 400 clamp(1.6rem, 6vmin, 4rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
+.wordmark .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
+.wordmark .l.is-on { opacity: 1; translate: 0; }
 
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	.sec__bg { animation: none; }
 	.scrub { min-height: 100vh; }
-	.stack, .mark, .disc, .mark__num { translate: 0; scale: 1; opacity: 1; }
-	.mark__word .l { opacity: 1; translate: 0; transition: none; }
+	.logo, .tablet, .tablet__text { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
+	.wordmark .l { opacity: 1; translate: 0; transition: none; }
 	.scrub__hint { display: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 }

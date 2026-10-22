@@ -52,11 +52,11 @@
 			var r = sec.getBoundingClientRect(), track = r.height - innerHeight;
 			var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
 			sec.style.setProperty('--p', p);
-			sec.style.setProperty('--p1', phase(p, 0.00, 0.30)); /* top discs in */
-			sec.style.setProperty('--p2', phase(p, 0.15, 0.45)); /* bottom discs in */
-			sec.style.setProperty('--p3', phase(p, 0.40, 0.60)); /* II rises */
+			sec.style.setProperty('--p1', phase(p, 0.00, 0.32)); /* left tablet in */
+			sec.style.setProperty('--p2', phase(p, 0.18, 0.50)); /* right tablet in */
+			sec.style.setProperty('--p3', phase(p, 0.50, 0.64)); /* inscriptions */
 			sec.style.setProperty('--p4', phase(p, 0.85, 1.00)); /* assembled logo recedes toward section 3 */
-			var letters = sec.querySelectorAll('.mark__word .l'), on = Math.round(phase(p, 0.55, 0.82) * letters.length);
+			var letters = sec.querySelectorAll('.wordmark .l'), on = Math.round(phase(p, 0.62, 0.84) * letters.length);
 			letters.forEach(function (l, i) { l.classList.toggle('is-on', i < on); });
 		});
 	}
