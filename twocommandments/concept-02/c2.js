@@ -81,6 +81,7 @@
 	}
 	function setGospel(id, scroll) {
 		localStorage.setItem('tc-gospel', id);
+		document.documentElement.dataset.gospel = id; /* the room takes the Gospel's colour */
 		document.querySelectorAll('.gospel').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.gospel === id ? 'true' : 'false'); });
 		if (gospelsEl) { gospelsEl.classList.add('has-choice'); }
 		if (proceed) { proceed.hidden = false; }

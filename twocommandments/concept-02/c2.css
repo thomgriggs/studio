@@ -97,6 +97,14 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 
 /* ===== GOSPELS : four windows, choose one ===== */
 .sec--gospels { background: var(--color_bg); gap: clamp(24px, 5vmin, 48px); align-content: center; }
+/* the room takes the chosen Gospel's colour: deep tint on the ground, soft glow behind the windows */
+.sec--gospels, .sec--passage { transition: background-color 1400ms ease; }
+.sec--gospels::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 45%, var(--color_tint-glow, transparent), transparent 60%); opacity: 0; transition: opacity 1400ms ease; }
+:root[data-gospel] .sec--gospels::before { opacity: 1; }
+:root[data-gospel="matthew"] .sec--gospels, :root[data-gospel="matthew"] .sec--passage { background-color: #0e1b13; --color_tint-glow: rgba(47,107,69,.45); }
+:root[data-gospel="mark"]    .sec--gospels, :root[data-gospel="mark"]    .sec--passage { background-color: #220e0c; --color_tint-glow: rgba(156,47,36,.45); }
+:root[data-gospel="luke"]    .sec--gospels, :root[data-gospel="luke"]    .sec--passage { background-color: #0d1626; --color_tint-glow: rgba(43,108,176,.45); }
+:root[data-gospel="john"]    .sec--gospels, :root[data-gospel="john"]    .sec--passage { background-color: #201806; --color_tint-glow: rgba(201,151,28,.4); }
 .said--static { position: static; }
 .gospels { display: flex; gap: clamp(12px, 3vmin, 36px); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
 .gospel { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(72px, 18vmin, 170px); padding: 0; border: 0; background: none; color: var(--color_muted); font: 500 .75rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; transition: translate 400ms ease, color 400ms ease; }
@@ -114,7 +122,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .proceed:hover { border-color: var(--color_ink); background: rgba(243,238,228,.08); }
 
 /* ===== PASSAGE : the chosen Gospel, read in full ===== */
-.sec--passage { background: var(--color_bg); align-content: center; }
+.sec--passage { background: var(--color_bg); align-content: center; position: relative; }
 .passage { max-width: 44rem; width: 100%; }
 .passage__gospel { margin: 0 0 8px; font: 500 .75rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
 .passage__ref { margin: 0 0 clamp(20px, 4vmin, 40px); font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
@@ -135,5 +143,6 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.glass .frags, .glass .sacred, .tablet::after { opacity: 1; }
 	.wordmark .l { opacity: 1; translate: 0; transition: none; }
 	.scrub__hint { display: none; }
+	.sec--gospels, .sec--passage, .sec--gospels::before { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 }
