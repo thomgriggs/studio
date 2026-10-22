@@ -113,7 +113,48 @@ def window(id, seed, crown):
 </g>
 </svg>'''
 
+# ---- Gospel windows: the field in the evangelist's colour, symbol leaded into a pale medallion ----
+GOSPELS = {
+    "matthew": {"field": ["#2f6b45", "#3a7d52", "#245a3a", "#4a8a5a", "#1f6f7a", "#356b4f"], "halo": ["#cfe3c9", "#e2ebe3", "#bfe0c4", "#f6e7b8"],
+                "sym": "M32 16a6 6 0 1 0 .1 0ZM20 48c2-9 7-13 12-13s10 4 12 13M14 30l10 6M50 30l-10 6"},
+    "mark":    {"field": ["#9c2f24", "#b3261e", "#7f1f18", "#c0392b", "#8c3a2a", "#a3362a"], "halo": ["#f0dfda", "#f3c9bd", "#e8b4a8", "#f6e7b8"],
+                "sym": "M32 20a10 10 0 1 0 .1 0ZM22 22c-5-2-8 2-6 6M42 22c5-2 8 2 6 6M26 46l6 6 6-6M28 34l4 3 4-3"},
+    "luke":    {"field": ["#27507f", "#2b6cb0", "#1f4470", "#3b6fa8", "#3b4e9c", "#2a5c8f"], "halo": ["#d6e2f0", "#bfd2ea", "#c9d8ee", "#f6e7b8"],
+                "sym": "M20 26c-6-8-2-14 4-12M44 26c6-8 2-14-4-12M20 30c0 12 6 18 12 18s12-6 12-18c0-4-6-8-12-8s-12 4-12 8z"},
+    "john":    {"field": ["#8c6a12", "#a8801a", "#6f540e", "#c9971c", "#9a7a1e", "#b08a22"], "halo": ["#f6e7b8", "#f4d58d", "#efd9a0", "#faf0cf"],
+                "sym": "M32 20l-4 6h8zM8 34c10-6 18-6 24-2 6-4 14-4 24 2-8 2-14 6-16 12h-16c-2-6-8-10-16-12z"},
+}
+
+def gospel_window(gid, seed):
+    g = GOSPELS[gid]
+    global BLUES, WARM, ROSE
+    keep = (BLUES, WARM, ROSE)
+    BLUES, WARM, ROSE = g["field"], g["halo"], g["halo"]
+    body = f'''<svg class="glass" viewBox="0 0 {W} {H}">
+<defs>
+<clipPath id="arch-{gid}"><path d="{ARCH}"/></clipPath>
+<radialGradient id="glow-{gid}" cx="50%" cy="57%" r="55%"><stop offset="0" stop-color="#fff6d6" stop-opacity=".5"/><stop offset=".45" stop-color="#ffd27a" stop-opacity=".15"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<filter id="grain-{gid}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="{seed}"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .18 0"/></filter>
+</defs>
+<path class="stone" d="{ARCH}"/>
+<g clip-path="url(#arch-{gid})">
+<g class="frags">
+{mosaic(seed)}
+{halo(seed)}
+</g>
+<rect width="{W}" height="{H}" fill="url(#glow-{gid})"/>
+<circle class="medallion" cx="{HEART[0]}" cy="{HEART[1]}" r="60"/>
+<g class="symbol" transform="translate({HEART[0]-58} {HEART[1]-58}) scale(1.8)"><path d="{g["sym"]}"/></g>
+<rect width="{W}" height="{H}" filter="url(#grain-{gid})" opacity=".5"/>
+<g class="lead"><circle cx="{HEART[0]}" cy="{HEART[1]}" r="60"/><circle cx="{HEART[0]}" cy="{HEART[1]}" r="{HALO_R}"/><path d="M0 128 H200 M0 372 H200"/><path d="{ARCH}"/></g>
+</g>
+</svg>'''
+    BLUES, WARM, ROSE = keep
+    return body
+
 html = open("index.html").read()
+for i, gid in enumerate(["matthew", "mark", "luke", "john"]):
+    html = re.sub(rf'(<button class="gospel" data-gospel="{gid}"[^>]*>\n?)(.*?)(\n?\t+<span class="gospel__name">)', lambda m: m.group(1) + "\n" + gospel_window(gid, 20 + i) + "\n\t\t\t\t\t" + m.group(3).lstrip("\n"), html, count=1, flags=re.S)
 a = window("a", 7, "cross")
 b = window("b", 11, "dove")
 html = re.sub(r'(<span class="tablet tablet--a" aria-hidden="true">).*?(</span>\n\t+<span class="tablet tablet--b")', lambda m: m.group(1) + "\n" + a + "\n\t\t\t\t\t" + m.group(2), html, count=1, flags=re.S)

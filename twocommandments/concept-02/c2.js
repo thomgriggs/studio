@@ -60,6 +60,37 @@
 	requestAnimationFrame(function () { requestAnimationFrame(function () { document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); }); }); });
 
 	/* ---------------------------------------------------------------- */
+	/* GOSPELS — choose one window; its passage renders in section 6     */
+	/* choice persists in tc-gospel; without one, Matthew reads first     */
+	/* ---------------------------------------------------------------- */
+	var gospelsEl = document.querySelector('.gospels'), proceed = document.querySelector('[data-action="proceed"]');
+	function gospelById(id) { return TC_DATA.gospels.filter(function (g) { return g.id === id; })[0]; }
+	function renderPassage(id) {
+		var g = gospelById(id) || TC_DATA.gospels[0], ps = passage(g.ref), art = document.querySelector('.passage');
+		if (!art) { return; }
+		art.dataset.gospel = g.id;
+		art.querySelector('[data-field="gospel"]').textContent = 'The Gospel of ' + g.label;
+		art.querySelector('[data-field="reference"]').textContent = ps.reference;
+		var box = art.querySelector('[data-field="text"]'); box.textContent = '';
+		var para = document.createElement('p');
+		ps.verses.forEach(function (v) {
+			var n = document.createElement('span'); n.className = 'n'; n.textContent = v.n;
+			para.appendChild(n); para.appendChild(document.createTextNode(v.text + ' '));
+		});
+		box.appendChild(para);
+	}
+	function setGospel(id, scroll) {
+		localStorage.setItem('tc-gospel', id);
+		document.querySelectorAll('.gospel').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.gospel === id ? 'true' : 'false'); });
+		if (gospelsEl) { gospelsEl.classList.add('has-choice'); }
+		if (proceed) { proceed.hidden = false; }
+		renderPassage(id);
+	}
+	document.querySelectorAll('.gospel').forEach(function (b) { b.addEventListener('click', function () { setGospel(b.dataset.gospel); }); });
+	var saved = localStorage.getItem('tc-gospel');
+	if (saved && gospelById(saved)) { setGospel(saved); } else { renderPassage('matthew'); }
+
+	/* ---------------------------------------------------------------- */
 	/* BIBLE PICKER — bundled versions only; choice persists in tc-bible  */
 	/* ---------------------------------------------------------------- */
 	document.querySelectorAll('[data-action="bible"]').forEach(function (sel) {
@@ -71,7 +102,7 @@
 			localStorage.setItem('tc-bible', sel.value);
 			var u = new URL(location.href); u.searchParams.delete('bible'); history.replaceState(null, '', u); /* the saved choice now wins */
 			document.querySelectorAll('.reveal.is-in').forEach(function (el) { el.classList.remove('is-in'); });
-			renderAll();
+			renderAll(); renderPassage(localStorage.getItem('tc-gospel') || 'matthew');
 			requestAnimationFrame(function () { requestAnimationFrame(function () { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); }); }); });
 		});
 	});

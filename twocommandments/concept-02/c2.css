@@ -95,6 +95,37 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .bible__select { appearance: none; border: 0; background: transparent; color: inherit; font: 500 .8rem/1 var(--font_sans); letter-spacing: .06em; padding: 6px 0; cursor: pointer; }
 .bible__select:focus-visible { outline: 2px solid var(--color_ink); outline-offset: 4px; border-radius: 4px; }
 
+/* ===== GOSPELS : four windows, choose one ===== */
+.sec--gospels { background: var(--color_bg); gap: clamp(24px, 5vmin, 48px); align-content: center; }
+.said--static { position: static; }
+.gospels { display: flex; gap: clamp(12px, 3vmin, 36px); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
+.gospel { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(72px, 18vmin, 170px); padding: 0; border: 0; background: none; color: var(--color_muted); font: 500 .75rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; transition: translate 400ms ease, color 400ms ease; }
+.gospel .glass { width: 100%; }
+.gospel .frags, .gospel .medallion, .gospel .symbol { opacity: .45; transition: opacity 500ms ease; } /* unlit until chosen */
+.gospel:hover, .gospel:focus-visible { color: var(--color_ink); translate: 0 -6px; }
+.gospel:hover .frags, .gospel:hover .medallion, .gospel:hover .symbol { opacity: .8; }
+.gospel[aria-pressed="true"] { color: var(--color_ink); translate: 0 -10px; }
+.gospel[aria-pressed="true"] .frags, .gospel[aria-pressed="true"] .medallion, .gospel[aria-pressed="true"] .symbol { opacity: 1; }
+.gospel[aria-pressed="true"] .glass { filter: drop-shadow(0 0 28px rgba(255,214,140,.35)); }
+.gospels.has-choice .gospel:not([aria-pressed="true"]) .frags { opacity: .3; }
+.glass .medallion { fill: #f6e7b8; }
+.glass .symbol path { fill: none; stroke: var(--color_lead); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.proceed { display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid rgba(243,238,228,.35); border-radius: 999px; color: var(--color_ink); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: border-color 300ms ease, background 300ms ease; }
+.proceed:hover { border-color: var(--color_ink); background: rgba(243,238,228,.08); }
+
+/* ===== PASSAGE : the chosen Gospel, read in full ===== */
+.sec--passage { background: var(--color_bg); align-content: center; }
+.passage { max-width: 44rem; width: 100%; }
+.passage__gospel { margin: 0 0 8px; font: 500 .75rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
+.passage__ref { margin: 0 0 clamp(20px, 4vmin, 40px); font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
+.passage__text { font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); color: var(--color_ink); max-height: 60vh; overflow: auto; padding-right: 8px; }
+.passage__text p { margin: 0 0 1em; }
+.passage__text .n { font: 500 .6em/1 var(--font_sans); color: var(--color_muted); vertical-align: super; margin-right: .3em; }
+.passage[data-gospel="matthew"] .passage__gospel { color: #6fb08a; }
+.passage[data-gospel="mark"]    .passage__gospel { color: #e07a6e; }
+.passage[data-gospel="luke"]    .passage__gospel { color: #7fa9e0; }
+.passage[data-gospel="john"]    .passage__gospel { color: #e0b64a; }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
