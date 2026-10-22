@@ -68,7 +68,7 @@
 			document.querySelectorAll('.verse--open').forEach(function (h) {
 				h.classList.add('is-in');
 				var ws = h.querySelectorAll('.w');
-				ws.forEach(function (w, i) { setTimeout(function () { w.style.setProperty('--lit', 1); }, reduced ? 0 : 2800 + i * 650); });
+				ws.forEach(function (w, i) { setTimeout(function () { w.style.setProperty('--lit', 1); }, reduced ? 0 : 3200 + i * 1100); });
 			});
 		}, reduced ? 0 : 1800);
 	}
