@@ -59,14 +59,15 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .tablets { display: flex; gap: clamp(14px, 3vmin, 32px); margin: 0; }
 .tablet { position: relative; display: block; width: clamp(96px, 22vmin, 200px); filter: drop-shadow(0 0 30px rgba(255,214,140,.18)); }
 .tablet::after { content: ""; position: absolute; left: -30%; right: -30%; top: 96%; height: 50%; background: radial-gradient(ellipse at 50% 0%, rgba(120,140,255,.35), rgba(255,170,90,.18) 40%, transparent 70%); filter: blur(18px); opacity: var(--p3); pointer-events: none; } /* coloured light spilling onto the floor */
-.glass { display: block; width: 100%; height: auto; }
-.glass .lead { fill: none; stroke: var(--color_lead); stroke-width: 3; stroke-linejoin: round; }
+.glass { display: block; width: 100%; height: auto; overflow: visible; }
+.glass .stone { fill: none; stroke: #2a2622; stroke-width: 14; stroke-linejoin: round; } /* the wall the window sits in */
+.glass .lead { fill: none; stroke: var(--color_lead); stroke-width: 2.4; stroke-linejoin: round; }
 .glass .frags path { stroke: var(--color_lead); stroke-width: 1.6; stroke-linejoin: round; }
-.glass .ray { fill: #f2c14e; stroke: var(--color_lead); stroke-width: 1.2; }
+.glass .ray { fill: #f6d77a; stroke: var(--color_lead); stroke-width: 1; }
 .glass .heart { fill: #b8262b; }
 .glass .flame { fill: #f08a2a; }
 .glass .motif { fill: #f6e7b8; }
-.glass .motif--line { fill: none; stroke: var(--color_lead); stroke-width: 2; stroke-linecap: round; }
+.glass .motif--beak { fill: #e8a63a; }
 .glass .frags, .glass .sacred { opacity: calc(.45 + var(--p3) * .55); } /* the glass lights up on the third beat */
 .tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
 .tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }

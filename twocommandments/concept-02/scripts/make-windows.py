@@ -10,11 +10,15 @@ BLUES = ["#27507f", "#2b6cb0", "#3b4e9c", "#4a3f8f", "#1f6f7a", "#2f6b45", "#5a6
 WARM  = ["#f2c14e", "#e8a63a", "#f6e7b8", "#f0b88a", "#e9c46a", "#f4d58d"]
 ROSE  = ["#d98a8a", "#e8b4b8", "#c96a6a", "#f0c8c0"]
 
+def shade(hexc, k):
+    r, g, b = int(hexc[1:3], 16), int(hexc[3:5], 16), int(hexc[5:7], 16)
+    r, g, b = [max(0, min(255, int(v * k))) for v in (r, g, b)]
+    return f"#{r:02x}{g:02x}{b:02x}"
+
+HALO_R = 104  # outside this the field is blue mosaic; inside, the petal halo
+
 def cell_color(cx, cy, rng):
-    d = math.hypot(cx - HEART[0], cy - HEART[1])
-    if d < 88:  return rng.choice(WARM)          # halo of gold around the heart
-    if d < 118: return rng.choice(ROSE + WARM)   # rose edge of the halo
-    return rng.choice(BLUES)
+    return shade(rng.choice(BLUES), rng.uniform(.82, 1.18))  # tonal variation, like hand-blown glass
 
 def mosaic(seed):
     rng = random.Random(seed)
@@ -35,15 +39,34 @@ def mosaic(seed):
             shapes = [p] if rng.random() < .6 else [[p[0], p[1], p[2]], [p[0], p[2], p[3]]]
             for s in shapes:
                 scx = sum(q[0] for q in s)/len(s); scy = sum(q[1] for q in s)/len(s)
+                if all(math.hypot(x - HEART[0], y - HEART[1]) < HALO_R - 2 for x, y in s): continue
                 d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in s) + "Z"
                 out.append(f'<path d="{d}" fill="{cell_color(scx, scy, rng)}"/>')
     return "\n".join(out)
 
-def rays(n=20, r0=58, r1=92):
+def halo(seed):
+    """Concentric rings of petal-shaped panes around the heart: gold inside, rose outside."""
+    rng = random.Random(seed + 100)
+    out = []
+    rings = [(0, 62, 10, WARM), (62, 84, 14, WARM), (84, HALO_R, 18, ROSE + WARM)]
+    for r0, r1, n, pal in rings:
+        off = rng.uniform(0, 2*math.pi/n)
+        for i in range(n):
+            a0 = off + i * 2*math.pi/n; a1 = off + (i+1) * 2*math.pi/n; am = (a0+a1)/2
+            def P(r, a): return f"{HEART[0] + r*math.cos(a):.1f} {HEART[1] + r*math.sin(a):.1f}"
+            if r0 == 0:
+                d = f"M{P(0, a0)} L{P(r1, a0)} Q{P(r1*1.08, am)} {P(r1, a1)}Z"
+            else:
+                d = f"M{P(r0, a0)} L{P(r1, a0)} Q{P(r1*1.06, am)} {P(r1, a1)} L{P(r0, a1)} Q{P(r0*1.04, am)} {P(r0, a0)}Z"
+            out.append(f'<path d="{d}" fill="{shade(rng.choice(pal), rng.uniform(.9, 1.1))}"/>')
+    return "\n".join(out)
+
+def rays(n=16, r0=56, r1=86):
     out = []
     for i in range(n):
         a = -math.pi/2 + i * 2*math.pi/n
-        w = 0.055
+        r1 = 90 if i % 2 == 0 else 74
+        w = 0.04
         x0, y0 = HEART[0] + r0*math.cos(a - w), HEART[1] + r0*math.sin(a - w)
         x1, y1 = HEART[0] + r1*math.cos(a),      HEART[1] + r1*math.sin(a)
         x2, y2 = HEART[0] + r0*math.cos(a + w), HEART[1] + r0*math.sin(a + w)
@@ -53,31 +76,40 @@ def rays(n=20, r0=58, r1=92):
 HEART_D = "M100 300 C70 276 52 258 52 232 a24 24 0 0 1 48 -8 a24 24 0 0 1 48 8 c0 26 -18 44 -48 68Z"
 FLAME_D = "M100 182 c10 10 16 20 10 32 c-2 -6 -6 -8 -10 -10 c-4 2 -8 4 -10 10 c-6 -12 0 -22 10 -32Z"
 CROSS_D = "M96 150 h8 v10 h10 v8 h-10 v22 h-8 v-22 h-10 v-8 h10Z"
-DOVE_D  = "M74 168 c10 -12 26 -14 38 -6 c8 -6 18 -6 26 -2 c-6 2 -10 6 -12 12 c6 2 10 6 12 12 c-10 -2 -20 -2 -28 4 c-6 10 -18 14 -30 12 c8 -4 12 -10 12 -18 c-8 -2 -14 -8 -18 -14Z"
-BRANCH_D= "M118 186 c8 -2 14 -6 18 -12 M124 184 c0 -6 4 -10 8 -12 M130 180 c2 -5 6 -8 10 -9"
+DOVE_PARTS = [
+    ("M72 172 c2 -5 8 -7 14 -5 c10 0 20 2 28 6 c6 2 12 2 20 -2 c-4 6 -10 10 -18 12 c-10 2 -22 0 -32 -4 c-4 -1 -8 -3 -12 -7Z", "motif"),  # body, flying left
+    ("M94 170 c-4 -12 2 -24 12 -30 c-2 10 0 20 6 28Z", "motif"),   # near wing
+    ("M104 171 c0 -12 8 -22 18 -26 c-6 10 -6 18 -2 26Z", "motif"),  # far wing
+    ("M73 170 l-7 2 l7 3Z", "motif motif--beak"),                   # beak
+]
+DOVE = '<g transform="translate(-20 -46) scale(1.2)">' + "\n".join(f'<path class="{c}" d="{d}"/>' for d, c in DOVE_PARTS) + '<circle cx="74" cy="169" r="1.3" fill="#0d0b09"/></g>'
+DOVE_LEAD = '<g transform="translate(-20 -46) scale(1.2)">' + "".join(f'<path d="{d}"/>' for d, c in DOVE_PARTS[:3]) + '</g>'
+DOVE_D  = "M100 190 c-6 0 -11 -3 -14 -8 c-9 1 -17 -2 -22 -8 c6 -1 11 -3 14 -6 c-7 -3 -11 -8 -12 -14 c8 4 16 5 24 3 c2 -6 6 -10 11 -11 c3 0 6 1 8 3 l7 -2 l-4 5 c2 3 3 7 3 11 c8 1 15 5 19 11 c-6 0 -11 1 -15 3 c6 3 10 7 12 12 c-9 -3 -18 -3 -26 0 c-1 1 -3 1 -5 1Z"
+BRANCH_D= "M106 158 c6 -6 14 -8 22 -6 M112 156 c0 -5 2 -9 6 -11 M118 154 c3 -4 7 -6 12 -6"
 
 def window(id, seed, crown):
-    crown_fill = f'<path class="motif" d="{CROSS_D}"/>' if crown == "cross" else f'<path class="motif" d="{DOVE_D}"/><path class="motif motif--line" d="{BRANCH_D}"/>'
-    crown_lead = f'<path d="{CROSS_D}"/>' if crown == "cross" else f'<path d="{DOVE_D}"/>'
+    crown_fill = f'<path class="motif" d="{CROSS_D}"/>' if crown == "cross" else DOVE
+    crown_lead = f'<path d="{CROSS_D}"/>' if crown == "cross" else DOVE_LEAD
     return f'''<svg class="glass" viewBox="0 0 {W} {H}">
 <defs>
 <clipPath id="arch-{id}"><path d="{ARCH}"/></clipPath>
 <radialGradient id="glow-{id}" cx="50%" cy="57%" r="55%"><stop offset="0" stop-color="#fff6d6" stop-opacity=".55"/><stop offset=".45" stop-color="#ffd27a" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
 <filter id="grain-{id}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="{seed}"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .18 0"/></filter>
 </defs>
+<path class="stone" d="{ARCH}"/>
 <g clip-path="url(#arch-{id})">
 <g class="frags">
 {mosaic(seed)}
+{halo(seed)}
 </g>
 <rect width="{W}" height="{H}" fill="url(#glow-{id})"/>
 <g class="sacred">
-{rays()}
 <path class="heart" d="{HEART_D}"/>
 <path class="flame" d="{FLAME_D}"/>
 {crown_fill}
 </g>
 <rect width="{W}" height="{H}" filter="url(#grain-{id})" opacity=".5"/>
-<g class="lead"><path d="{HEART_D}"/><path d="{FLAME_D}"/>{crown_lead}<path d="M0 140 H200 M0 240 H200 M0 340 H200"/><path d="{ARCH}"/></g>
+<g class="lead"><path d="{HEART_D}"/><path d="{FLAME_D}"/>{crown_lead}<circle cx="{HEART[0]}" cy="{HEART[1]}" r="{HALO_R}"/><path d="M0 128 H200 M0 372 H200"/><path d="{ARCH}"/></g>
 </g>
 </svg>'''
 
