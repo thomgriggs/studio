@@ -54,15 +54,15 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .prev span { margin-top: 5px; rotate: -135deg; }
 
 /* ===== SCRUB SECTION : tall track, sticky stage, --p 0..1 from scroll ===== */
-.scrub { display: block; min-height: 400vh; padding: 0; overflow: visible; scroll-snap-align: none; }
+.scrub { display: block; min-height: 260vh; padding: 0; overflow: visible; scroll-snap-align: none; }
 .scrub .stage { position: sticky; top: 0; width: 100%; left: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
-.scrub__hint { position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
+.scrub__hint { display: none; position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
 
 /* ----- the logo: two tablets slide in from either side and meet as "II" ----- */
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.logo { display: grid; justify-items: center; gap: clamp(20px, 4vmin, 40px); scale: calc(1 - var(--p4) * .6); translate: 0 calc(var(--p4) * -28vh); }
-.tablets { display: flex; gap: clamp(14px, 3vmin, 32px); margin: 0; }
-.tablet { position: relative; display: block; width: clamp(96px, 22vmin, 200px); filter: drop-shadow(0 0 30px rgba(255,214,140,.18)); }
+.logo { display: grid; justify-items: center; gap: clamp(24px, 5vmin, 56px); translate: 0 -2vh; }
+.tablets { display: flex; gap: clamp(18px, 4vmin, 48px); margin: 0; }
+.tablet { position: relative; display: block; width: clamp(120px, 26vmin, 280px); filter: drop-shadow(0 0 30px rgba(255,214,140,calc(.05 + var(--p3) * .2))); }
 .tablet::after { content: ""; position: absolute; left: -30%; right: -30%; top: 96%; height: 50%; background: radial-gradient(ellipse at 50% 0%, rgba(120,140,255,.35), rgba(255,170,90,.18) 40%, transparent 70%); filter: blur(18px); opacity: var(--p3); pointer-events: none; } /* coloured light spilling onto the floor */
 .glass { display: block; width: 100%; height: auto; overflow: visible; }
 .glass .stone { fill: none; stroke: #2a2622; stroke-width: 14; stroke-linejoin: round; } /* the wall the window sits in */
@@ -73,10 +73,11 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .glass .flame { fill: #f08a2a; }
 .glass .motif { fill: #f6e7b8; }
 .glass .motif--beak { fill: #e8a63a; }
-.glass .frags, .glass .sacred { opacity: calc(.45 + var(--p3) * .55); } /* the glass lights up on the third beat */
-.tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
-.tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }
-.wordmark { margin: 0; font: 400 clamp(1.6rem, 6vmin, 4rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
+.tablet--a .frags, .tablet--a .sacred { opacity: calc(.06 + var(--p1) * .94); }
+.tablet--b .frags, .tablet--b .sacred { opacity: calc(.06 + var(--p2) * .94); }
+.tablet--a .glass rect[filter], .tablet--b .glass rect[filter] { opacity: calc(var(--p3) * .5); }
+.glass rect[fill^="url(#glow"] { opacity: var(--p3); }
+.wordmark { margin: 0; font: 400 clamp(1.8rem, 7vmin, 5rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
 .wordmark .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .wordmark .l.is-on { opacity: 1; translate: 0; }
 
@@ -206,6 +207,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.sec__bg { animation: none; }
 	.scrub { min-height: 100vh; }
 	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
+	.tablet .frags, .tablet .sacred, .glass rect { opacity: 1; }
 	.glass .frags, .glass .sacred, .tablet::after { opacity: 1; }
 	.wordmark .l { opacity: 1; translate: 0; transition: none; }
 	.scrub__hint { display: none; }
