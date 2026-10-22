@@ -20,7 +20,7 @@
 
 /* ===== BASE ===== */
 * { box-sizing: border-box; }
-html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
+html { scroll-behavior: smooth; } /* no snapping: the page eases, the arrows step */
 body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16px/1.5 var(--font_sans); -webkit-font-smoothing: antialiased; }
 :focus-visible { outline: 2px solid var(--color_ink); outline-offset: 4px; }
 .skip { position: absolute; left: -999px; top: 8px; z-index: 9; background: var(--color_ink); color: var(--color_bg); padding: 8px 12px; }
@@ -28,7 +28,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .muted { color: var(--color_muted); }
 
 /* ===== SECTION FRAME ===== */
-.sec { position: relative; min-height: 100vh; min-height: 100svh; scroll-snap-align: start; display: grid; place-items: center; padding: var(--space_gutter); overflow: hidden; isolation: isolate; }
+.sec { position: relative; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: var(--space_gutter); overflow: hidden; isolation: isolate; }
 .sec__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: -2; filter: saturate(.7) contrast(1.05); transform: scale(1.04); animation: drift 40s ease-in-out infinite alternate; }
 .sec__veil { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(13,11,9,.35), var(--color_veil) 45%, rgba(13,11,9,.85)); }
 @keyframes drift { from { transform: scale(1.04) translateY(0); } to { transform: scale(1.08) translateY(-1.5%); } }
@@ -55,7 +55,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 
 /* ===== SCRUB SECTION : tall track, sticky stage, --p 0..1 from scroll ===== */
 .scrub { display: block; min-height: 260vh; padding: 0; overflow: visible; scroll-snap-align: none; }
-.scrub .stage { position: sticky; top: 0; width: 100%; left: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
+.scrub .stage { position: sticky; top: 0; width: 100%; left: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; }
 .scrub__hint { display: none; position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
 
 /* ----- the logo: two tablets slide in from either side and meet as "II" ----- */
@@ -73,8 +73,10 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .glass .flame { fill: #f08a2a; }
 .glass .motif { fill: #f6e7b8; }
 .glass .motif--beak { fill: #e8a63a; }
-.tablet--a .frags, .tablet--a .sacred { opacity: calc(.06 + var(--p1) * .94); }
-.tablet--b .frags, .tablet--b .sacred { opacity: calc(.06 + var(--p2) * .94); }
+.tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
+.tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }
+.tablet--a .frags, .tablet--a .sacred { opacity: calc(.35 + var(--p3) * .65); }
+.tablet--b .frags, .tablet--b .sacred { opacity: calc(.35 + var(--p3) * .65); }
 .tablet--a .glass rect[filter], .tablet--b .glass rect[filter] { opacity: calc(var(--p3) * .5); }
 .glass rect[fill^="url(#glow"] { opacity: var(--p3); }
 .wordmark { margin: 0; font: 400 clamp(1.8rem, 7vmin, 5rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
