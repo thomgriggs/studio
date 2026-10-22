@@ -201,7 +201,7 @@ FRAME = '''<svg class="door__frame" viewBox="0 0 240 480" aria-hidden="true">
 <path class="room" d="M120 36 C168 62 212 118 212 194 V480 H28 V194 C28 118 72 62 120 36 Z"/>
 <path class="order order--keystone" d="M108 10 L120 0 L132 10 L126 30 H114 Z"/>
 </svg>'''
-for i, gid in enumerate(["matthew", "mark", "luke", "john", "design", "shop"]):
+for i, gid in enumerate(["matthew", "mark", "luke", "john"]):
     html = re.sub(rf'(<button class="gospel" data-gospel="{gid}"[^>]*>).*?(<span class="gospel__name">)',
                   lambda m: m.group(1) + '\n\t\t\t\t<span class="door" aria-hidden="true">' + FRAME + '<span class="door__leaf">' + gospel_door(gid, 20 + i) + '</span></span>\n\t\t\t\t' + m.group(2), html, count=1, flags=re.S)
 a = window("a", 7, "cross")

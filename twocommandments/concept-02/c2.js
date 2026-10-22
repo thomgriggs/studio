@@ -156,16 +156,8 @@
 	scrub();
 
 	/* ---------------------------------------------------------------- */
-	/* PATHS — the finale: a door opens in place and shows what is behind */
-	/* the actions behind them are not wired yet → toast                  */
+	/* PATHS — the finale; the two actions are not wired yet → toast      */
 	/* ---------------------------------------------------------------- */
-	document.querySelectorAll('.path .gospel').forEach(function (b) {
-		b.addEventListener('click', function () {
-			var path = b.closest('.path'), open = !path.classList.contains('is-open');
-			document.querySelectorAll('.path').forEach(function (p) { p.classList.remove('is-open'); p.querySelector('.gospel').setAttribute('aria-expanded', 'false'); p.querySelector('.path__behind').hidden = true; });
-			if (open) { path.classList.add('is-open'); b.setAttribute('aria-expanded', 'true'); path.querySelector('.path__behind').hidden = false; }
-		});
-	});
 	var toastEl = document.createElement('div'); toastEl.className = 'toast'; toastEl.setAttribute('role', 'status'); document.body.appendChild(toastEl);
 	var toastT;
 	function toast(msg) { toastEl.textContent = msg; toastEl.classList.add('is-on'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('is-on'); }, 2200); }
