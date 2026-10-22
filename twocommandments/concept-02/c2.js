@@ -141,10 +141,11 @@
 	});
 
 	function scrub() {
-		document.querySelectorAll('.scrub').forEach(function (sec) {
+		document.querySelectorAll('.scrub, .pin').forEach(function (sec) {
 			var r = sec.getBoundingClientRect(), track = r.height - innerHeight;
 			var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
 			sec.style.setProperty('--p', p);
+			if (!sec.classList.contains('scrub')) { return; }
 			sec.style.setProperty('--p1', phase(p, 0.00, 0.30)); /* left window lights */
 			sec.style.setProperty('--p2', phase(p, 0.15, 0.45)); /* right window lights */
 			sec.style.setProperty('--p3', phase(p, 0.40, 0.60)); /* the glow and the cast light */
