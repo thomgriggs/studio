@@ -90,7 +90,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .segue.is-in .prophets li { opacity: 1; transform: none; }
 
 /* ===== LAW : hero verse over Jesus, from the crowd ===== */
-.sec--law { gap: 0; }
+.sec--law { gap: clamp(16px, 3vmin, 32px); align-content: center; }
 .sec__bg--law { object-position: 50% 40%; filter: saturate(.55) contrast(1.1) brightness(.85); }
 .sec--law .sec__veil { background: linear-gradient(180deg, rgba(13,11,9,.55), rgba(13,11,9,.45) 45%, rgba(13,11,9,.9)); }
 .said { position: absolute; top: calc(50% - min(16vmin, 9rem)); margin: 0; font: 500 .8rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }

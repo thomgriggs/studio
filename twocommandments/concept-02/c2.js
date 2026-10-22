@@ -8,6 +8,8 @@
 	/* ---------------------------------------------------------------- */
 	/* VERSES                                                             */
 	/* ---------------------------------------------------------------- */
+	/* ?bible= is for testing and applies to this load only; a version is remembered only when chosen in the picker */
+	if (localStorage.getItem('tc-bible') && !localStorage.getItem('tc-bible-chosen')) { localStorage.removeItem('tc-bible'); }
 	function version() {
 		var q = new URLSearchParams(location.search).get('bible');
 		var v = q || localStorage.getItem('tc-bible') || TC_DATA.defaultVersion;
@@ -117,7 +119,7 @@
 		});
 		sel.value = version();
 		sel.addEventListener('change', function () {
-			localStorage.setItem('tc-bible', sel.value);
+			localStorage.setItem('tc-bible', sel.value); localStorage.setItem('tc-bible-chosen', '1');
 			var u = new URL(location.href); u.searchParams.delete('bible'); history.replaceState(null, '', u); /* the saved choice now wins */
 			document.querySelectorAll('.reveal.is-in').forEach(function (el) { el.classList.remove('is-in'); });
 			renderAll(); renderPassage(localStorage.getItem('tc-gospel') || 'matthew');
