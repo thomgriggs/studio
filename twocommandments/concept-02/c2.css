@@ -36,8 +36,12 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 /* ===== PIN : the opener stays put; the next slide's dark stage rises over it and crops it out ===== */
 .pin { display: block; min-height: 170vh; padding: 0; overflow: visible; z-index: 0; }
 .pin .stage { position: sticky; top: 0; width: 100%; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; padding: var(--space_gutter); }
-.pin .sec__bg { translate: 0 calc(var(--p) * -6vh); } /* the picture drifts up a little as you leave */
-.pin .verse { translate: 0 calc(var(--p) * 4vh); }      /* the words sink a touch, so the stage seems to pass over them */
+/* the picture fades in on load, starts close and slowly pulls back as you scroll; the words stay in the middle */
+.pin .sec__bg { animation: none; opacity: 0; transform: scale(calc(1.28 - var(--p) * .28)); transition: opacity 1800ms ease; }
+.pin.is-loaded .sec__bg { opacity: 1; }
+/* once the words are in, light falls on them */
+.pin .verse { transition: text-shadow 1600ms ease; }
+.pin .verse.is-lit { text-shadow: 0 0 14px rgba(255,236,196,.55), 0 0 48px rgba(255,214,140,.45), 0 2px 40px rgba(0,0,0,.5); }
 .sec--logo { position: relative; z-index: 1; background: var(--color_bg); box-shadow: 0 -40px 80px rgba(13,11,9,.6); }
 
 /* ===== VERSE ===== */
@@ -214,6 +218,8 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	.sec__bg { animation: none; }
+	.pin .sec__bg { opacity: 1; transform: none; transition: none; }
+	.pin .verse { transition: none; }
 	.scrub { min-height: 100vh; }
 	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
 	.tablet .frags, .tablet .sacred, .glass rect { opacity: 1; }

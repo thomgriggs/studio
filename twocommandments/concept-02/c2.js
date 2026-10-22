@@ -59,7 +59,20 @@
 	}, { threshold: .4 });
 	document.querySelectorAll('.reveal, .segue').forEach(function (el) { io.observe(el); });
 	document.querySelectorAll('.prophets li').forEach(function (li, i) { li.style.setProperty('--i', i); });
-	requestAnimationFrame(function () { requestAnimationFrame(function () { document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); }); }); });
+	/* opener: the picture fades in, then the words, then the light on them */
+	var pin = document.querySelector('.pin');
+	function openerIn() {
+		if (pin) { pin.classList.add('is-loaded'); }
+		setTimeout(function () {
+			document.querySelectorAll('.verse--open').forEach(function (h) {
+				h.classList.add('is-in');
+				var n = h.querySelectorAll('.w').length;
+				setTimeout(function () { h.classList.add('is-lit'); }, reduced ? 0 : n * 220 + 900);
+			});
+		}, reduced ? 0 : 500);
+	}
+	var bg = pin && pin.querySelector('.sec__bg');
+	if (bg && !bg.complete) { bg.addEventListener('load', openerIn, { once: true }); bg.addEventListener('error', openerIn, { once: true }); } else { openerIn(); }
 
 	/* ---------------------------------------------------------------- */
 	/* GOSPELS — choose one window; its passage renders in section 6     */
