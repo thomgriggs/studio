@@ -57,13 +57,17 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .logo { display: grid; justify-items: center; gap: clamp(20px, 4vmin, 40px); scale: calc(1 - var(--p4) * .6); translate: 0 calc(var(--p4) * -28vh); }
 .tablets { display: flex; gap: clamp(14px, 3vmin, 32px); margin: 0; }
-.tablet { display: block; width: clamp(96px, 22vmin, 200px); filter: drop-shadow(0 0 40px rgba(246,231,184,.25)) drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+.tablet { position: relative; display: block; width: clamp(96px, 22vmin, 200px); filter: drop-shadow(0 0 30px rgba(255,214,140,.18)); }
+.tablet::after { content: ""; position: absolute; left: -30%; right: -30%; top: 96%; height: 50%; background: radial-gradient(ellipse at 50% 0%, rgba(120,140,255,.35), rgba(255,170,90,.18) 40%, transparent 70%); filter: blur(18px); opacity: var(--p3); pointer-events: none; } /* coloured light spilling onto the floor */
 .glass { display: block; width: 100%; height: auto; }
-.glass .lead { fill: none; stroke: var(--color_lead); stroke-width: 6; stroke-linejoin: round; }
-.glass .pane { fill: var(--color_glass-light); }
-.glass .pane--heart { fill: var(--color_glass-heart); }
-.glass .pane--heart2 { fill: var(--color_glass-heart); fill-opacity: .85; }
-.glass rect, .glass path { opacity: calc(.5 + var(--p3) * .5); } /* the glass lights up on the third beat */
+.glass .lead { fill: none; stroke: var(--color_lead); stroke-width: 3; stroke-linejoin: round; }
+.glass .frags path { stroke: var(--color_lead); stroke-width: 1.6; stroke-linejoin: round; }
+.glass .ray { fill: #f2c14e; stroke: var(--color_lead); stroke-width: 1.2; }
+.glass .heart { fill: #b8262b; }
+.glass .flame { fill: #f08a2a; }
+.glass .motif { fill: #f6e7b8; }
+.glass .motif--line { fill: none; stroke: var(--color_lead); stroke-width: 2; stroke-linecap: round; }
+.glass .frags, .glass .sacred { opacity: calc(.45 + var(--p3) * .55); } /* the glass lights up on the third beat */
 .tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
 .tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }
 .wordmark { margin: 0; font: 400 clamp(1.6rem, 6vmin, 4rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
@@ -76,7 +80,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.sec__bg { animation: none; }
 	.scrub { min-height: 100vh; }
 	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
-	.glass rect, .glass path { opacity: 1; }
+	.glass .frags, .glass .sacred, .tablet::after { opacity: 1; }
 	.wordmark .l { opacity: 1; translate: 0; transition: none; }
 	.scrub__hint { display: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
