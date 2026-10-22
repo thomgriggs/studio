@@ -40,10 +40,14 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .pin .sec__bg { animation: none; opacity: 0; transform: scale(calc(1.28 - var(--p) * .28)); transition: opacity 1800ms ease; }
 .pin.is-loaded .sec__bg { opacity: 1; }
 /* the words are fixed to the middle of the browser, above the curtain; they fade only once the curtain has closed over the picture */
-.pin .verse { position: fixed; left: 50%; top: 50%; translate: -50% -50%; z-index: 2; width: max-content; max-width: 90vw; opacity: calc(1 - max(0, var(--c, 0) - .7) / .3); transition: text-shadow 1600ms ease; pointer-events: none; }
+.pin .verse { position: fixed; left: 50%; top: 50%; translate: -50% -50%; z-index: 3; width: max-content; max-width: 90vw; opacity: calc(1 - max(0, var(--c, 0) - .7) / .3); transition: text-shadow 1600ms ease; pointer-events: none; }
 .pin .verse.is-gone { visibility: hidden; }
+/* as you scroll, light passes over the words one by one, as if reading; unread words wait in shadow */
+.pin .verse .w { --lit: 0; filter: brightness(calc(.55 + var(--lit) * .55)); text-shadow: 0 0 calc(var(--lit) * 16px) rgba(255,236,196,calc(var(--lit) * .7)), 0 0 calc(var(--lit) * 56px) rgba(255,214,140,calc(var(--lit) * .55)), 0 2px 40px rgba(0,0,0,.5); }
 
-.sec--logo { position: relative; z-index: 1; background: var(--color_bg); box-shadow: 0 -40px 80px rgba(13,11,9,.6); }
+/* stacking, bottom to top: the opener's picture (0) · the black stage of slide 2 (2) · the fixed line (3) */
+.pin .stage { z-index: 0; }
+.sec--logo { position: relative; z-index: 2; background: var(--color_bg); box-shadow: 0 -40px 80px rgba(13,11,9,.6); }
 
 /* ===== VERSE ===== */
 .verse { margin: 0; text-align: center; font: 400 clamp(2.4rem, 8vw, 7rem)/1.05 var(--font_serif); letter-spacing: -.01em; max-width: 14ch; text-wrap: balance; text-shadow: 0 2px 40px rgba(0,0,0,.5); }
