@@ -47,21 +47,21 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 
 /* ===== SCRUB SECTION : tall track, sticky stage, --p 0..1 from scroll ===== */
 .scrub { display: block; min-height: 400vh; padding: 0; overflow: visible; scroll-snap-align: none; }
-.scrub .stage { position: sticky; top: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
+.scrub .stage { position: sticky; top: 0; width: 100%; left: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
 .scrub__hint { position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
 
-/* ----- the stack: four discs fly in from the corners and overlap ----- */
-.stack { position: absolute; width: min(70vmin, 520px); aspect-ratio: 1; isolation: isolate; scale: calc(1 - var(--p4) * .45); translate: 0 calc(var(--p4) * -14vh); }
-.disc { position: absolute; width: 58%; aspect-ratio: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .92; }
-.disc--matthew { background: var(--gospel_matthew); left: 4%;  top: 6%;    translate: calc((1 - var(--p1)) * -90vw) calc((1 - var(--p1)) * -60vh); }
-.disc--mark    { background: var(--gospel_mark);    right: 4%; top: 10%;   translate: calc((1 - var(--p1)) *  90vw) calc((1 - var(--p1)) * -60vh); }
-.disc--luke    { background: var(--gospel_luke);    left: 10%; bottom: 4%; translate: calc((1 - var(--p2)) * -90vw) calc((1 - var(--p2)) *  60vh); }
-.disc--john    { background: var(--gospel_john);    right: 10%; bottom: 8%; translate: calc((1 - var(--p2)) *  90vw) calc((1 - var(--p2)) *  60vh); }
+/* ----- the stack fills the whole panel: four big discs sweep in from the corners ----- */
+.stack { position: absolute; inset: 0; width: 100%; height: 100%; place-self: stretch; isolation: isolate; transform-origin: 50% 50%; scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
+.disc { position: absolute; width: 72vmin; aspect-ratio: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .92; }
+.disc--matthew { background: var(--gospel_matthew); left: calc(50% - 60vmin + var(--p1) * 20vmin); top:    calc(50% - 58vmin + var(--p1) * 16vmin); translate: calc((1 - var(--p1)) * -120vw) calc((1 - var(--p1)) * -80vh); }
+.disc--mark    { background: var(--gospel_mark);    left: calc(50% - 12vmin - var(--p1) * 20vmin + 20vmin); top: calc(50% - 56vmin + var(--p1) * 16vmin); translate: calc((1 - var(--p1)) *  120vw) calc((1 - var(--p1)) * -80vh); }
+.disc--luke    { background: var(--gospel_luke);    left: calc(50% - 60vmin + var(--p2) * 22vmin); top:    calc(50% - 14vmin - var(--p2) * 12vmin + 12vmin); translate: calc((1 - var(--p2)) * -120vw) calc((1 - var(--p2)) *  80vh); }
+.disc--john    { background: var(--gospel_john);    left: calc(50% - 12vmin - var(--p2) * 22vmin + 22vmin); top: calc(50% - 16vmin - var(--p2) * 12vmin + 12vmin); translate: calc((1 - var(--p2)) *  120vw) calc((1 - var(--p2)) *  80vh); }
 
 /* ----- the mark: "II" rises, letters of the word appear one by one ----- */
-.mark { position: relative; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_ink); scale: calc(1 - var(--p4) * .45); translate: 0 calc(var(--p4) * -14vh); }
-.mark__num { display: block; font-size: clamp(6rem, 22vmin, 12rem); line-height: .9; letter-spacing: -.04em; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 40px); }
-.mark__word { display: block; margin-top: .4em; font-size: clamp(1.6rem, 5vmin, 3rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
+.mark { position: relative; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_ink); scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
+.mark__num { display: block; font-size: clamp(8rem, 38vmin, 22rem); line-height: .9; letter-spacing: -.04em; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 40px); }
+.mark__word { display: block; margin-top: .3em; font-size: clamp(1.8rem, 7vmin, 4.5rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
 .mark__word .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .mark__word .l.is-on { opacity: 1; translate: 0; }
 
