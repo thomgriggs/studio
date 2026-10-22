@@ -5,17 +5,44 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 	<title>II Commandments — Concept 02</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="c2.css">
 	<link rel="stylesheet" href="/assets/breadcrumb.css">
 	<script defer src="/assets/breadcrumb.js"></script>
-	<style>
-		:root { color-scheme:light; --color_bg:#f6f4ef; --color_ink:#1a1a1a; --color_muted:#5f5b55; }
-		body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--color_bg); color:var(--color_ink); font:18px/1.5 system-ui, sans-serif; }
-		p { color:var(--color_muted); margin:0; }
-	</style>
 </head>
 <body>
-	<p>Concept 02 — not started.</p>
+	<a class="skip" href="#s1">Skip to content</a>
+
+	<!-- ===== SECTION 1 : IF YOU LOVE ME ===== -->
+	<section class="sec sec--open" id="s1" aria-labelledby="s1-h">
+		<img class="sec__bg" src="assets/bloch-sermon-on-the-mount.jpg" alt="" aria-hidden="true">
+		<div class="sec__veil" aria-hidden="true"></div>
+
+		<h1 class="verse verse--open" id="s1-h" data-ref="john.14.15" data-split=",">
+			<span class="verse__a"></span>
+			<span class="verse__b"></span>
+		</h1>
+		<p class="verse__cite" data-cite="john.14.15"></p>
+
+		<button class="sound" type="button" data-action="sound" aria-pressed="false">
+			<svg class="sound__on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+			<svg class="sound__off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7z"/></svg>
+			<span class="sound__label">Play music</span>
+		</button>
+		<div class="yt" id="yt" aria-hidden="true"></div>
+
+		<a class="next" href="#s2" aria-label="Next section"><span></span></a>
+	</section>
+
+	<!-- ===== SECTION 2 : placeholder ===== -->
+	<section class="sec sec--next" id="s2" aria-label="Next">
+		<p class="muted">Section 2 — not started.</p>
+	</section>
+
 	<script src="data.js"></script>
 	<script src="verses.js"></script>
+	<script src="c2.js"></script>
 </body>
 </html>

@@ -132,3 +132,11 @@ Still placeholder: the mark, the gospel symbol art, Jesus imagery for the hero (
 2. Real logo + gospel symbol art.
 3. Founder's story into `about.html`; 10 seed designers into `data.js`.
 4. Decide commerce stack, then wire `shop.html` to it.
+
+## Concept 02 (started 2026-10-22) — `concept-02/`
+Thom: "we got off on the wrong foot" — Concept 01 is frozen in `archive/`. Concept 02 is **one long page, each section full-height, built one section at a time** from CL's (Christian Leon, the client) direction.
+
+| # | Section | CL's direction | Built as |
+|---|---|---|---|
+| 1 | If you love me | Impactful text "If you love me"; music from three YouTube videos (Sam Thomas, Syriac chant); Jesus image (Google / magnific picks, see `concept-02/assets/ASSETS.md`) | `#s1` — John 14:15 two-part word reveal from `verses.js`; Bloch stand-in with slow drift; "Play music" toggle (browsers block autoplay with sound) |
+| 2 | — | pending | placeholder |
