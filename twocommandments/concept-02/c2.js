@@ -104,7 +104,7 @@
 			}, reduced ? 0 : 900);
 		}, delay);
 	}
-	document.querySelectorAll('.gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
+	document.querySelectorAll('.gospels .gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
 	var saved = localStorage.getItem('tc-gospel');
 	if (saved && gospelById(saved)) { setGospel(saved); } else { renderPassage('matthew'); }
 
@@ -154,6 +154,24 @@
 	addEventListener('scroll', scrub, { passive: true });
 	addEventListener('resize', scrub);
 	scrub();
+
+	/* ---------------------------------------------------------------- */
+	/* PATHS — the finale: a door opens in place and shows what is behind */
+	/* the actions behind them are not wired yet → toast                  */
+	/* ---------------------------------------------------------------- */
+	document.querySelectorAll('.path .gospel').forEach(function (b) {
+		b.addEventListener('click', function () {
+			var path = b.closest('.path'), open = !path.classList.contains('is-open');
+			document.querySelectorAll('.path').forEach(function (p) { p.classList.remove('is-open'); p.querySelector('.gospel').setAttribute('aria-expanded', 'false'); p.querySelector('.path__behind').hidden = true; });
+			if (open) { path.classList.add('is-open'); b.setAttribute('aria-expanded', 'true'); path.querySelector('.path__behind').hidden = false; }
+		});
+	});
+	var toastEl = document.createElement('div'); toastEl.className = 'toast'; toastEl.setAttribute('role', 'status'); document.body.appendChild(toastEl);
+	var toastT;
+	function toast(msg) { toastEl.textContent = msg; toastEl.classList.add('is-on'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('is-on'); }, 2200); }
+	document.querySelectorAll('[data-action="submit-design"], [data-action="go-shop"]').forEach(function (a) {
+		a.addEventListener('click', function (ev) { ev.preventDefault(); toast('Coming soon'); });
+	});
 
 	/* ---------------------------------------------------------------- */
 	/* CORNER CONTROLS — back / next step through the sections            */

@@ -165,6 +165,23 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .passage[data-gospel="luke"]    .passage__gospel { color: #7fa9e0; }
 .passage[data-gospel="john"]    .passage__gospel { color: #e0b64a; }
 
+/* ===== PATHS : the finale — two doors, make a design or go to the shop ===== */
+.sec--paths { background: var(--color_bg); gap: clamp(24px, 5vmin, 48px); align-content: center; }
+.paths { display: flex; gap: clamp(28px, 7vmin, 96px); justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+.path { display: grid; justify-items: center; gap: 20px; width: clamp(120px, 24vmin, 230px); }
+.path .gospel { width: 100%; }
+.path .frags, .path .medallion, .path .symbol { opacity: .7; }
+.path:hover .frags, .path:hover .medallion, .path:hover .symbol, .path.is-open .frags, .path.is-open .medallion, .path.is-open .symbol { opacity: 1; }
+.path .door__frame .room { transition: fill 800ms ease; }
+.path.is-open[data-path="design"] .room { fill: #2a2560; }
+.path.is-open[data-path="shop"]   .room { fill: #5c4410; }
+.path.is-open .door__leaf { transform: rotateY(-108deg); }
+.path__behind { max-width: 28ch; text-align: center; display: grid; justify-items: center; gap: 16px; font: 400 clamp(.95rem, 1.3vw, 1.1rem)/1.55 var(--font_sans); color: var(--color_muted); opacity: 0; translate: 0 8px; transition: opacity 600ms ease 500ms, translate 600ms ease 500ms; }
+.path__behind p { margin: 0; }
+.path.is-open .path__behind { opacity: 1; translate: 0; }
+.toast { position: fixed; left: 50%; bottom: 84px; translate: -50% 0; z-index: 6; padding: 12px 18px; border-radius: 999px; background: rgba(243,238,228,.92); color: var(--color_bg); font: 500 .8rem/1 var(--font_sans); letter-spacing: .08em; opacity: 0; transition: opacity 300ms ease; pointer-events: none; }
+.toast.is-on { opacity: 1; }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
@@ -176,5 +193,6 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.scrub__hint { display: none; }
 	.sec--gospels, .sec--passage, .sec--gospels::before, .door__leaf, .gospels { transition: none; }
 	.gospels.is-entering { transform: none; opacity: 1; }
+	.path__behind { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 }

@@ -82,6 +82,8 @@ Google Doc: https://docs.google.com/document/d/1NGQ6icOEgEiOY9yKmW0Zlg26J6hRKoIq
 
 ## Open questions
 
+0. **The two paths (2026-10-22).** How a designer submits (form? email? upload spec?), who reviews, how the split is explained, and whether the church is chosen before or in the shop. Concept 02's finale doors are a placeholder for both until this is decided.
+
 1. Printer / print-on-demand provider and how orders reach it.
 2. E-commerce platform (or custom) and payments; host for the production site.
 3. Licensed Bible versions — pay for API.Bible commercial use, or stay public domain?
@@ -145,4 +147,4 @@ Thom: "we got off on the wrong foot" — Concept 01 is frozen in `archive/`. Con
 | 4 | Jesus said · Choose your Bible | Sheet: Matthew 22:40 across the centre, Jesus in the background from the crowd at ~45°, words animated; Bible picker lives here | `#s4` — Rembrandt *Christ Preaching* stand-in; "two" emphasised in gold; `.bible` picker bottom-left (bundled WEB/KJV/ASV; CSB/NIV/ESV wait on a licence) re-renders every verse on the page and clears `?bible=` |
 | 5 | Choose which story (sheet rows 6–9) | Four Gospel buttons in the evangelists' colours with their symbols. Thom (2026-10-22): make them **doors** with the stained glass set in; click → the door opens and you go through it into the text | `#s5` — four Gothic oak doors (references 2026-10-22: LAPADA's arched Gothic oak cathedral door with scrolled strap hinges; Pexels Gothic church-door photos): pointed stone arch in two orders with a keystone, vertical planks with grain, two scrolled iron strap hinges, studs, a ring pull; Thom: the stained glass is **only in the pointed top**, a lunette holding the evangelist's medallion (Matthew green / winged man, Mark red / lion, Luke blue / ox, John gold / eagle). Click: the leaf swings open on its hinge, the room behind glows in the Gospel's colour, the row drifts through the doorway, the page lands on the passage; the row resets for the way back. Choice persists in `tc-gospel`; the ground of sections 5–6 fades to the Gospel's colour |
 | 6 | The passage | The chosen Gospel's verses | `#s6` — Gospel name in its colour, reference, full text with superscript verse numbers from `verses.js`; follows the Bible picker; Matthew when nothing is chosen |
-| 7 | — | pending (sheet row 10: related verses, "maybe a side track") | placeholder |
+| 7 | Two paths (finale) | Thom (2026-10-22): the last slide is the action. Only two paths: (1) submit a design inspired by the two commandments to be made and sold in the shop, (2) go to the shop. The process itself is still fuzzy | `#s7` — two more doors from the same generator (pencil lunette: Make a design; shirt lunette: Go to the shop). A door opens in place and reveals one paragraph and a button behind it. Both buttons toast "Coming soon" until the submission flow and the shop exist. Sheet rows 10–12 (related verses, call to share, church picker) are not in concept 02 yet |

@@ -163,6 +163,11 @@ def studs():
             out.append(f'<circle class="stud" cx="{x}" cy="{y}" r="2.4"/>')
     return "".join(out)
 
+GOSPELS["design"] = {"field": ["#4a3f8f", "#3b4e9c", "#5a67b8", "#6b4fa0", "#27507f", "#3f3a7a"], "halo": ["#f6e7b8", "#e8dcf2", "#d9d2ee", "#f4d58d"],
+                     "sym": "M18 46 l6 -18 l24 -24 a4 4 0 0 1 6 6 l-24 24 z M24 28 l12 12 M36 10 l18 18"}        # a pencil, drawn
+GOSPELS["shop"]   = {"field": ["#8c6a12", "#a8801a", "#2f6b45", "#9c2f24", "#c9971c", "#7a5a10"], "halo": ["#f6e7b8", "#f4d58d", "#efd9a0", "#faf0cf"],
+                     "sym": "M22 14 l10 -4 a6 6 0 0 0 12 0 l10 4 l6 12 l-8 4 v26 h-28 v-26 l-8 -4 z"}             # a shirt
+
 def gospel_door(gid, seed):
     g = GOSPELS[gid]
     planks = "".join(f'<rect class="plank" x="{i*40}" y="0" width="40" height="440" fill="url(#oak-{gid}-{i%2})"/>' for i in range(5))
@@ -196,7 +201,7 @@ FRAME = '''<svg class="door__frame" viewBox="0 0 240 480" aria-hidden="true">
 <path class="room" d="M120 36 C168 62 212 118 212 194 V480 H28 V194 C28 118 72 62 120 36 Z"/>
 <path class="order order--keystone" d="M108 10 L120 0 L132 10 L126 30 H114 Z"/>
 </svg>'''
-for i, gid in enumerate(["matthew", "mark", "luke", "john"]):
+for i, gid in enumerate(["matthew", "mark", "luke", "john", "design", "shop"]):
     html = re.sub(rf'(<button class="gospel" data-gospel="{gid}"[^>]*>).*?(<span class="gospel__name">)',
                   lambda m: m.group(1) + '\n\t\t\t\t<span class="door" aria-hidden="true">' + FRAME + '<span class="door__leaf">' + gospel_door(gid, 20 + i) + '</span></span>\n\t\t\t\t' + m.group(2), html, count=1, flags=re.S)
 a = window("a", 7, "cross")
