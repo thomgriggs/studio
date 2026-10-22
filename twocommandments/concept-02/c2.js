@@ -158,7 +158,14 @@
 			var r = sec.getBoundingClientRect(), track = r.height - innerHeight;
 			var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
 			sec.style.setProperty('--p', p);
-			if (!sec.classList.contains('scrub')) { return; }
+			if (!sec.classList.contains('scrub')) {
+				/* curtain: how far the next slide has risen over this one (0 = not yet, 1 = covered) */
+				var c = Math.min(1, Math.max(0, (innerHeight - r.bottom) / innerHeight + 1));
+				c = Math.min(1, Math.max(0, 1 - r.bottom / innerHeight));
+				sec.style.setProperty('--c', c);
+				var v = sec.querySelector('.verse'); if (v) { v.classList.toggle('is-gone', r.bottom <= 0); }
+				return;
+			}
 			sec.style.setProperty('--p1', phase(p, 0.00, 0.30)); /* left window lights */
 			sec.style.setProperty('--p2', phase(p, 0.15, 0.45)); /* right window lights */
 			sec.style.setProperty('--p3', phase(p, 0.40, 0.60)); /* the glow and the cast light */
