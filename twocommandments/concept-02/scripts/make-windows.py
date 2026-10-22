@@ -75,15 +75,15 @@ def rays(n=16, r0=56, r1=86):
 
 HEART_D = "M100 300 C70 276 52 258 52 232 a24 24 0 0 1 48 -8 a24 24 0 0 1 48 8 c0 26 -18 44 -48 68Z"
 FLAME_D = "M100 182 c10 10 16 20 10 32 c-2 -6 -6 -8 -10 -10 c-4 2 -8 4 -10 10 c-6 -12 0 -22 10 -32Z"
-CROSS_D = "M96 150 h8 v10 h10 v8 h-10 v22 h-8 v-22 h-10 v-8 h10Z"
+CROSS_D = "M94 42 h12 v16 h16 v12 h-16 v34 h-12 v-34 h-16 v-12 h16Z"
 DOVE_PARTS = [
     ("M72 172 c2 -5 8 -7 14 -5 c10 0 20 2 28 6 c6 2 12 2 20 -2 c-4 6 -10 10 -18 12 c-10 2 -22 0 -32 -4 c-4 -1 -8 -3 -12 -7Z", "motif"),  # body, flying left
     ("M94 170 c-4 -12 2 -24 12 -30 c-2 10 0 20 6 28Z", "motif"),   # near wing
     ("M104 171 c0 -12 8 -22 18 -26 c-6 10 -6 18 -2 26Z", "motif"),  # far wing
     ("M73 170 l-7 2 l7 3Z", "motif motif--beak"),                   # beak
 ]
-DOVE = '<g transform="translate(-20 -46) scale(1.2)">' + "\n".join(f'<path class="{c}" d="{d}"/>' for d, c in DOVE_PARTS) + '<circle cx="74" cy="169" r="1.3" fill="#0d0b09"/></g>'
-DOVE_LEAD = '<g transform="translate(-20 -46) scale(1.2)">' + "".join(f'<path d="{d}"/>' for d, c in DOVE_PARTS[:3]) + '</g>'
+DOVE = '<g transform="translate(-40 -164) scale(1.4)">' + "\n".join(f'<path class="{c}" d="{d}"/>' for d, c in DOVE_PARTS) + '<circle cx="74" cy="169" r="1.3" fill="#0d0b09"/></g>'
+DOVE_LEAD = '<g transform="translate(-40 -164) scale(1.4)">' + "".join(f'<path d="{d}"/>' for d, c in DOVE_PARTS[:3]) + '</g>'
 DOVE_D  = "M100 190 c-6 0 -11 -3 -14 -8 c-9 1 -17 -2 -22 -8 c6 -1 11 -3 14 -6 c-7 -3 -11 -8 -12 -14 c8 4 16 5 24 3 c2 -6 6 -10 11 -11 c3 0 6 1 8 3 l7 -2 l-4 5 c2 3 3 7 3 11 c8 1 15 5 19 11 c-6 0 -11 1 -15 3 c6 3 10 7 12 12 c-9 -3 -18 -3 -26 0 c-1 1 -3 1 -5 1Z"
 BRANCH_D= "M106 158 c6 -6 14 -8 22 -6 M112 156 c0 -5 2 -9 6 -11 M118 154 c3 -4 7 -6 12 -6"
 
