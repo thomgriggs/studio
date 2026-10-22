@@ -112,18 +112,35 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 :root[data-gospel="john"]    .sec--gospels, :root[data-gospel="john"]    .sec--passage { background-color: #201806; --color_tint-glow: rgba(201,151,28,.4); }
 .said--static { position: static; }
 .gospels { display: flex; gap: clamp(12px, 3vmin, 36px); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
-.gospel { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(84px, 20vmin, 190px); padding: 0; border: 0; background: none; color: var(--color_muted); font: 500 .75rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; transition: color 400ms ease; }
+.gospel { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(96px, 22vmin, 210px); padding: 0; border: 0; background: none; color: var(--color_muted); font: 500 .75rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; transition: color 400ms ease; }
 .gospel:hover, .gospel:focus-visible, .gospel[aria-pressed="true"] { color: var(--color_ink); }
 
-/* ----- the door: a stone arch, the room glowing behind, a wooden leaf with the window set in it ----- */
-.door { position: relative; display: block; width: 100%; aspect-ratio: 200 / 440; perspective: 900px; }
-.door__room { position: absolute; inset: 0; border-radius: 999px 999px 10px 10px; background: radial-gradient(ellipse at 50% 30%, var(--color_tint-glow, rgba(255,214,140,.35)), #0d0b09 75%); box-shadow: inset 0 0 0 7px #2a2622; }
-.door__leaf { position: absolute; inset: 0; display: block; border-radius: 999px 999px 10px 10px; background: linear-gradient(90deg, #3a2a1c, #4b3724 40%, #3a2a1c); box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), 0 20px 50px rgba(0,0,0,.6); transform-origin: left center; transform-style: preserve-3d; transition: transform 900ms cubic-bezier(.6, 0, .3, 1); overflow: hidden; }
-.door__leaf .glass { position: absolute; left: 9%; top: 5%; width: 82%; }
-.door__leaf .stone { stroke: #2a2622; stroke-width: 10; }
-.door__panel { position: absolute; left: 14%; right: 14%; bottom: 7%; height: 11%; border-radius: 3px; box-shadow: inset 0 0 0 2px rgba(0,0,0,.45), inset 0 2px 0 rgba(255,255,255,.06); }
-.door__handle { position: absolute; right: 10%; bottom: 23%; width: 6%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #f0c56a, #8c6a12 70%); box-shadow: 0 1px 3px rgba(0,0,0,.7); }
-.gospel .frags, .gospel .medallion, .gospel .symbol { opacity: .55; transition: opacity 500ms ease; } /* unlit until chosen */
+/* ----- the door: stone Gothic arch in two orders, the room glowing behind, an oak plank leaf with the glass in its pointed top ----- */
+.door { position: relative; display: block; width: 100%; aspect-ratio: 240 / 480; perspective: 1000px; }
+.door__frame { position: absolute; inset: 0; width: 100%; height: 100%; }
+.door__frame .order { fill: #3a3531; }
+.door__frame .order--outer { fill: #2f2b27; }
+.door__frame .order--keystone { fill: #4a443e; }
+.door__frame .room { fill: #0d0b09; }
+.door__leaf { position: absolute; left: 11.7%; top: 7.5%; width: 76.6%; height: 92.5%; display: block; transform-origin: left center; transform-style: preserve-3d; transition: transform 900ms cubic-bezier(.6, 0, .3, 1); filter: drop-shadow(0 18px 40px rgba(0,0,0,.6)); }
+.door__leaf .leaf { display: block; width: 100%; height: 100%; }
+.leaf .seams path { fill: none; stroke: rgba(0,0,0,.55); stroke-width: 1.6; }
+.leaf .rail { fill: #3b2a1a; stroke: rgba(0,0,0,.5); stroke-width: 1; }
+.leaf .iron { fill: #1b1917; stroke: #0a0908; stroke-width: .8; }
+.leaf .iron--curl { fill: none; stroke: #1b1917; stroke-width: 4.5; stroke-linecap: round; }
+.leaf .stud { fill: #2a2420; stroke: rgba(255,255,255,.08); stroke-width: .8; }
+.leaf .ring { fill: none; stroke: #1b1917; stroke-width: 4; }
+.leaf .ring-plate { fill: #1b1917; }
+.leaf .leaf-edge { fill: none; stroke: rgba(0,0,0,.7); stroke-width: 3; }
+.leaf .stone { display: none; }
+/* the room behind the leaf takes the Gospel's colour once it is chosen */
+.gospel[aria-pressed="true"] .door__frame .room { fill: url(#none); }
+.door__frame .room { transition: fill 800ms ease; }
+:root[data-gospel="matthew"] .gospel[data-gospel="matthew"] .room { fill: #1d4a30; }
+:root[data-gospel="mark"]    .gospel[data-gospel="mark"]    .room { fill: #5a1e18; }
+:root[data-gospel="luke"]    .gospel[data-gospel="luke"]    .room { fill: #1c3a66; }
+:root[data-gospel="john"]    .gospel[data-gospel="john"]    .room { fill: #5c4410; }
+.gospel .frags, .gospel .medallion, .gospel .symbol { opacity: .6; transition: opacity 500ms ease; } /* unlit until chosen */
 .gospel:hover .frags, .gospel:hover .medallion, .gospel:hover .symbol, .gospel[aria-pressed="true"] .frags, .gospel[aria-pressed="true"] .medallion, .gospel[aria-pressed="true"] .symbol { opacity: 1; }
 .gospel.is-open .door__leaf { transform: rotateY(-108deg); }
 

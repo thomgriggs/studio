@@ -125,36 +125,80 @@ GOSPELS = {
                 "sym": "M32 20l-4 6h8zM8 34c10-6 18-6 24-2 6-4 14-4 24 2-8 2-14 6-16 12h-16c-2-6-8-10-16-12z"},
 }
 
-def gospel_window(gid, seed):
+# ---- Gospel DOORS (after Thom's references: Gothic oak plank doors with scrolled strap hinges, glass only in the pointed top) ----
+LEAF = "M100 0 C150 28 200 90 200 170 V440 H0 V170 C0 90 50 28 100 0 Z"   # pointed arch leaf
+LUNETTE = "M100 14 C142 38 186 92 186 162 H14 C14 92 58 38 100 14 Z"        # the glass, top of the leaf
+
+def lunette(gid, seed):
+    """mosaic + medallion in the pointed top; same generator, smaller centre."""
+    global BLUES, WARM, ROSE, HEART, HALO_R
     g = GOSPELS[gid]
-    global BLUES, WARM, ROSE
-    keep = (BLUES, WARM, ROSE)
-    BLUES, WARM, ROSE = g["field"], g["halo"], g["halo"]
-    body = f'''<svg class="glass" viewBox="0 0 {W} {H}">
-<defs>
-<clipPath id="arch-{gid}"><path d="{ARCH}"/></clipPath>
-<radialGradient id="glow-{gid}" cx="50%" cy="57%" r="55%"><stop offset="0" stop-color="#fff6d6" stop-opacity=".5"/><stop offset=".45" stop-color="#ffd27a" stop-opacity=".15"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-<filter id="grain-{gid}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="{seed}"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .18 0"/></filter>
-</defs>
-<path class="stone" d="{ARCH}"/>
-<g clip-path="url(#arch-{gid})">
+    keep = (BLUES, WARM, ROSE, HEART, HALO_R)
+    BLUES, WARM, ROSE, HEART, HALO_R = g["field"], g["halo"], g["halo"], (100, 100), 42
+    out = f'''<g clip-path="url(#lun-{gid})">
 <g class="frags">
 {mosaic(seed)}
 {halo(seed)}
 </g>
-<rect width="{W}" height="{H}" fill="url(#glow-{gid})"/>
-<circle class="medallion" cx="{HEART[0]}" cy="{HEART[1]}" r="60"/>
-<g class="symbol" transform="translate({HEART[0]-58} {HEART[1]-58}) scale(1.8)"><path d="{g["sym"]}"/></g>
-<rect width="{W}" height="{H}" filter="url(#grain-{gid})" opacity=".5"/>
-<g class="lead"><circle cx="{HEART[0]}" cy="{HEART[1]}" r="60"/><circle cx="{HEART[0]}" cy="{HEART[1]}" r="{HALO_R}"/><path d="M0 128 H200 M0 372 H200"/><path d="{ARCH}"/></g>
+<rect width="200" height="200" fill="url(#glow-{gid})"/>
+<circle class="medallion" cx="100" cy="100" r="25"/>
+<g class="symbol" transform="translate(76 76) scale(.75)"><path d="{g["sym"]}"/></g>
+<rect width="200" height="200" filter="url(#grain-{gid})" opacity=".5"/>
+<g class="lead"><circle cx="100" cy="100" r="25"/><circle cx="100" cy="100" r="42"/><path d="M100 14 V162 M14 100 H186"/><path d="{LUNETTE}"/></g>
+</g>'''
+    BLUES, WARM, ROSE, HEART, HALO_R = keep
+    return out
+
+def strap(y, flip=False):
+    """an iron strap hinge from the hinge side, tapering, with a scrolled end and a leaf curl"""
+    d = f"M0 {y-7} H118 C132 {y-7} 140 {y-4} 146 {y} C140 {y+4} 132 {y+7} 118 {y+7} H0 Z"
+    curl = f"M118 {y-7} C126 {y-20} 140 {y-22} 146 {y-14} C150 {y-8} 142 {y-4} 138 {y-9}"
+    curl2 = f"M118 {y+7} C126 {y+20} 140 {y+22} 146 {y+14} C150 {y+8} 142 {y+4} 138 {y+9}"
+    return f'<path class="iron" d="{d}"/><path class="iron iron--curl" d="{curl}"/><path class="iron iron--curl" d="{curl2}"/>'
+
+def studs():
+    out = []
+    for x in (40, 80, 120, 160):
+        for y in range(196, 432, 24):
+            out.append(f'<circle class="stud" cx="{x}" cy="{y}" r="2.4"/>')
+    return "".join(out)
+
+def gospel_door(gid, seed):
+    g = GOSPELS[gid]
+    planks = "".join(f'<rect class="plank" x="{i*40}" y="0" width="40" height="440" fill="url(#oak-{gid}-{i%2})"/>' for i in range(5))
+    return f'''<svg class="leaf glass" viewBox="0 0 200 440">
+<defs>
+<clipPath id="leaf-{gid}"><path d="{LEAF}"/></clipPath>
+<clipPath id="lun-{gid}"><path d="{LUNETTE}"/></clipPath>
+<linearGradient id="oak-{gid}-0" x1="0" x2="1"><stop offset="0" stop-color="#4a3521"/><stop offset=".5" stop-color="#5c4229"/><stop offset="1" stop-color="#42301e"/></linearGradient>
+<linearGradient id="oak-{gid}-1" x1="0" x2="1"><stop offset="0" stop-color="#43301d"/><stop offset=".5" stop-color="#563d26"/><stop offset="1" stop-color="#3b2a1a"/></linearGradient>
+<radialGradient id="glow-{gid}" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6d6" stop-opacity=".5"/><stop offset=".5" stop-color="#ffd27a" stop-opacity=".15"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+<filter id="grain-{gid}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="{seed}"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .18 0"/></filter>
+<filter id="wood-{gid}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .6" numOctaves="3" seed="{seed+3}"/><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/></filter>
+</defs>
+<g clip-path="url(#leaf-{gid})">
+{planks}
+<rect width="200" height="440" filter="url(#wood-{gid})"/>
+<g class="seams"><path d="M40 0 V440 M80 0 V440 M120 0 V440 M160 0 V440"/></g>
+{lunette(gid, seed)}
+<path class="rail" d="M0 164 H200 V178 H0 Z"/>
+{strap(226)}{strap(356)}
+{studs()}
+<circle class="ring" cx="160" cy="300" r="11"/><circle class="ring-plate" cx="160" cy="286" r="4"/>
+<path class="leaf-edge" d="{LEAF}"/>
 </g>
 </svg>'''
-    BLUES, WARM, ROSE = keep
-    return body
 
 html = open("index.html").read()
+FRAME = '''<svg class="door__frame" viewBox="0 0 240 480" aria-hidden="true">
+<path class="order order--outer" d="M120 6 C178 36 234 100 234 190 V480 H6 V190 C6 100 62 36 120 6 Z"/>
+<path class="order order--inner" d="M120 20 C172 48 222 108 222 192 V480 H18 V192 C18 108 68 48 120 20 Z"/>
+<path class="room" d="M120 36 C168 62 212 118 212 194 V480 H28 V194 C28 118 72 62 120 36 Z"/>
+<path class="order order--keystone" d="M108 10 L120 0 L132 10 L126 30 H114 Z"/>
+</svg>'''
 for i, gid in enumerate(["matthew", "mark", "luke", "john"]):
-    html = re.sub(rf'(<button class="gospel" data-gospel="{gid}"[^>]*>\n?)(.*?)(\n?\t+<span class="gospel__name">)', lambda m: m.group(1) + "\n" + gospel_window(gid, 20 + i) + "\n\t\t\t\t\t" + m.group(3).lstrip("\n"), html, count=1, flags=re.S)
+    html = re.sub(rf'(<button class="gospel" data-gospel="{gid}"[^>]*>).*?(<span class="gospel__name">)',
+                  lambda m: m.group(1) + '\n\t\t\t\t<span class="door" aria-hidden="true">' + FRAME + '<span class="door__leaf">' + gospel_door(gid, 20 + i) + '</span></span>\n\t\t\t\t' + m.group(2), html, count=1, flags=re.S)
 a = window("a", 7, "cross")
 b = window("b", 11, "dove")
 html = re.sub(r'(<span class="tablet tablet--a" aria-hidden="true">).*?(</span>\n\t+<span class="tablet tablet--b")', lambda m: m.group(1) + "\n" + a + "\n\t\t\t\t\t" + m.group(2), html, count=1, flags=re.S)
