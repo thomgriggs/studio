@@ -61,7 +61,7 @@ Bundled (public domain, free, in `verses.js`): **WEB** (default), **KJV**, **ASV
 Licensed (CSB, NIV, ESV, NLT, NASB) cannot be bundled for free. Path when wanted: API.Bible (free non-commercial tier, needs a key) or the ESV API, behind a Cloudflare Worker that hides the key; `TC_DATA.versions[].source = 'api'` is the seam. A merch site is commercial — expect a license conversation. Tell the founder: CSB as default is a licensing decision, not a technical one.
 
 ## From the founder's doc "CALLING ALL CHRISTIANS" (read 2026-09-30)
-Google Doc: https://docs.google.com/document/d/1NGQ6icOEgEiOY9yKmW0Zlg26J6hRKoIqGC5YNBKP4vw/edit — the inspiration links are catalogued in `design-iterations/inspiration/INSPIRATION.md`.
+Google Doc: https://docs.google.com/document/d/1NGQ6icOEgEiOY9yKmW0Zlg26J6hRKoIqGC5YNBKP4vw/edit · Sheet "Calling All Christians - Website": https://docs.google.com/spreadsheets/d/1aoe11IdOuTU8YWP1ohasmBwQS8H3MDxFgH7gdZxTo5c/edit — the inspiration links are catalogued in `design-iterations/inspiration/INSPIRATION.md`.
 
 **These differ from the meeting notes — confirm which is current:**
 - **Designer split: "Partner with designers – 50/50 profit split"** (the storyboard's About row says 33/33/33 + 1%). The doc also says "X % of each sale goes to the Church of your choice (as long as it's an entity we can find)".

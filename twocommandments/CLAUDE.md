@@ -13,6 +13,7 @@ You are working on a static HTML/CSS/JS skeleton of a message site + merch funne
 - Google Fonts only for type. Icons are inline SVG — no icon library or icon font.
 
 ## Map
+- **2026-10-22: the whole build moved to `archive/` (Concept 01, frozen). `concept-02/` is the live work. Paths below are relative to `archive/` unless noted.** Serve: `http://127.0.0.1:8765/twocommandments/` → concept index.
 - `index.html` — the design breakdown (references → studies → working build). `home.html` — the working home, panels in the founder's Oct 2026 order: open ("If you love me…", sound) → welcome → narrative → hero ("Jesus said: All…", `data-emph`) → gospels (`.is-corners` + proceed) → verses → related → share → logo finale (`.logo-stack`).
 - `church.html` / `designers.html` / `shop.html` / `about.html` — inner pages sharing the `.page` frame.
 - `tc.js` — one file, banner sections. Spine: delegated `[data-action]` click/change/submit → `TC_ACTIONS[action](el, ev)`. Init: `tcInit` → `tcInit{Home,Church,Designers,Shop}` by `body[data-view]`. Verse system: `tcResolveBible` (`?bible=` → localStorage → default), `tcRenderVerses`, `tcAnimateWords`, `tcRenderReveal`. Home: `tcRenderGospels` (icons; `.is-corners`), `tcRenderPassages`, `tcSetGospel` (no auto-scroll when a Proceed button exists), `tcRenderRelated`, `tcToggleSound` (plays `TC_DATA.music[0].src` when one exists), `tcEmphWord` (`data-emph`). Church: `tcSetChurch`, `tcRenderContextPills`. Shop: `tcShopGo`, `tcPickChoice`, `tcRenderOrder`, `tcRenderSplit`.

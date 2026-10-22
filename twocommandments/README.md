@@ -10,8 +10,11 @@ Any static server from the `studio/` folder, e.g. `python3 -m http.server 8765` 
 2. `HANDOFF.md` — naming contract (blocks, `data-action`, `data-field`, storage, data shape).
 3. `CLAUDE.md` — working rulebook, code map, test recipes.
 
-## Front door
-`index.html` is the **design breakdown**: every reference from the founder's doc with its screenshot, his quote, the device we take and where it lands — then the **studies** (one page per reference, `design-iterations/studies/*/`), then the earlier three concepts, then the working build (`home.html` + inner pages). Studies and concepts share the root's `tc.js` / `data.js` / `verses.js`.
+## Layout (2026-10-22)
+`index.html` lists the concepts. **`archive/`** is Concept 01 — everything built before 2026-10-22, untouched (its own `index.html` is the design breakdown). **`concept-02/`** is the second concept, started fresh with its own copy of `data.js` / `verses.js`. Notes stay at the root.
+
+## Concept 01 (`archive/`)
+`archive/index.html` is the **design breakdown**: every reference from the founder's doc with its screenshot, his quote, the device we take and where it lands — then the **studies** (one page per reference, `design-iterations/studies/*/`), then the earlier three concepts, then the working build (`home.html` + inner pages). Studies and concepts share the root's `tc.js` / `data.js` / `verses.js`.
 
 ## Files
 `index.html` `church.html` `designers.html` `shop.html` `about.html` · `tc.css` `tc.js` `data.js` `verses.js` (generated) · `scripts/fetch-verses.mjs` · `assets/` (placeholder SVGs).
