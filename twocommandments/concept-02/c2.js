@@ -14,7 +14,14 @@
 		return TC_VERSES[v] ? v : TC_DATA.defaultVersion;
 	}
 	function passage(ref) { return TC_VERSES[version()][ref]; }
-	function text(ref) { return passage(ref).verses.map(function (v) { return v.text; }).join(' '); }
+	/* an excerpt may open or close a quotation outside itself; drop the unmatched mark */
+	function text(ref) {
+		var t = passage(ref).verses.map(function (v) { return v.text; }).join(' ').trim();
+		var opens = (t.match(/[“"]/g) || []).length, closes = (t.match(/[”"]/g) || []).length;
+		if (/[”"]$/.test(t) && closes > opens) { t = t.replace(/[”"]+$/, ''); }
+		if (/^[“"]/.test(t) && opens > closes) { t = t.replace(/^[“"]+/, ''); }
+		return t;
+	}
 
 	/* wrap each word so it can animate in on its own delay */
 	function words(el, str) {
@@ -30,9 +37,44 @@
 	function renderOpen(h) {
 		var t = text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
 		words(h, (i < 0 ? t : t.slice(0, i)).replace(/[\s,.;:]+$/, ''));
-		requestAnimationFrame(function () { requestAnimationFrame(function () { h.classList.add('is-in'); }); });
 	}
-	document.querySelectorAll('.verse--open').forEach(renderOpen);
+	/* full verse; the first "two" is emphasised (CL: "...these Two Commandments") */
+	function renderVerse(h) {
+		words(h, text(h.dataset.ref));
+		var w = [].slice.call(h.querySelectorAll('.w')).filter(function (s) { return /^two$/i.test(s.textContent.replace(/[^\w]/g, '')); })[0];
+		if (w) { w.classList.add('emph'); }
+	}
+	function renderAll() {
+		document.querySelectorAll('.verse--open').forEach(renderOpen);
+		document.querySelectorAll('.verse--law').forEach(renderVerse);
+		document.querySelectorAll('[data-words]').forEach(function (el) { if (!el.dataset.ref) { words(el, el.dataset.copy || (el.dataset.copy = el.textContent)); } });
+	}
+	renderAll();
+
+	/* reveal when a section scrolls into view; the opener reveals at once */
+	var io = new IntersectionObserver(function (entries) {
+		entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); } });
+	}, { threshold: .4 });
+	document.querySelectorAll('.reveal, .segue').forEach(function (el) { io.observe(el); });
+	document.querySelectorAll('.prophets li').forEach(function (li, i) { li.style.setProperty('--i', i); });
+	requestAnimationFrame(function () { requestAnimationFrame(function () { document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); }); }); });
+
+	/* ---------------------------------------------------------------- */
+	/* BIBLE PICKER — bundled versions only; choice persists in tc-bible  */
+	/* ---------------------------------------------------------------- */
+	document.querySelectorAll('[data-action="bible"]').forEach(function (sel) {
+		TC_DATA.versions.filter(function (v) { return v.source === 'bundled'; }).forEach(function (v) {
+			var o = document.createElement('option'); o.value = v.id; o.textContent = v.label || v.name || v.id; sel.appendChild(o);
+		});
+		sel.value = version();
+		sel.addEventListener('change', function () {
+			localStorage.setItem('tc-bible', sel.value);
+			var u = new URL(location.href); u.searchParams.delete('bible'); history.replaceState(null, '', u); /* the saved choice now wins */
+			document.querySelectorAll('.reveal.is-in').forEach(function (el) { el.classList.remove('is-in'); });
+			renderAll();
+			requestAnimationFrame(function () { requestAnimationFrame(function () { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); }); }); });
+		});
+	});
 
 	/* ---------------------------------------------------------------- */
 	/* SCRUB — scroll position through a tall section drives --p (0..1)   */
