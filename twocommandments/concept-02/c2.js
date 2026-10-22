@@ -66,8 +66,6 @@
 		setTimeout(function () {
 			document.querySelectorAll('.verse--open').forEach(function (h) {
 				h.classList.add('is-in');
-				var n = h.querySelectorAll('.w').length;
-				setTimeout(function () { h.classList.add('is-lit'); }, reduced ? 0 : n * 220 + 900);
 			});
 		}, reduced ? 0 : 500);
 	}
@@ -163,7 +161,12 @@
 				var c = Math.min(1, Math.max(0, (innerHeight - r.bottom) / innerHeight + 1));
 				c = Math.min(1, Math.max(0, 1 - r.bottom / innerHeight));
 				sec.style.setProperty('--c', c);
-				var v = sec.querySelector('.verse'); if (v) { v.classList.toggle('is-gone', r.bottom <= 0); }
+				var v = sec.querySelector('.verse'); if (v) {
+					v.classList.toggle('is-gone', r.bottom <= 0);
+					/* the light reads across the line: word i lights as p passes its share of the stretch, with a soft edge */
+					var ws = v.querySelectorAll('.w'), n = ws.length;
+					ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (p * (n + .6) - i) / 1.2))); });
+				}
 				return;
 			}
 			sec.style.setProperty('--p1', phase(p, 0.00, 0.30)); /* left window lights */
