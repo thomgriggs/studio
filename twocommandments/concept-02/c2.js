@@ -158,6 +158,13 @@
 				var c = Math.min(1, Math.max(0, (innerHeight - r.bottom) / innerHeight + 1));
 				c = Math.min(1, Math.max(0, 1 - r.bottom / innerHeight));
 				sec.style.setProperty('--c', c);
+				var marks = sec.querySelectorAll('.prophets li');
+				if (marks.length) {
+					/* four major marks light one after another over the first two thirds; the twelve minor follow */
+					var majors = [].filter.call(marks, function (m) { return m.classList.contains('prophets__major'); }), minors = [].filter.call(marks, function (m) { return !m.classList.contains('prophets__major'); });
+					majors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, (p * 1.5 * (majors.length + .6) - i) / 1.2))); });
+					minors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, ((p - .62) / .38 * (minors.length + 2) - i) / 3))); });
+				}
 				var v = sec.querySelector('.verse'); if (v) {
 					v.classList.toggle('is-gone', r.bottom <= 0);
 					/* on scroll, while the picture is stuck: the light reads across the line, word by word; the curtain only starts after */
