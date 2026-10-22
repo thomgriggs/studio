@@ -12,3 +12,7 @@
   Cache-Control: no-cache
 /kickball/service-worker.js
   Cache-Control: no-cache
+
+# II Commandments concept 02: always revalidate while it is being designed live
+/twocommandments/concept-02/*
+  Cache-Control: no-cache
