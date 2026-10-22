@@ -59,9 +59,9 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .disc--john    { background: var(--gospel_john);    left: calc(50% - 12vmin - var(--p2) * 22vmin + 22vmin); top: calc(50% - 16vmin - var(--p2) * 12vmin + 12vmin); translate: calc((1 - var(--p2)) *  120vw) calc((1 - var(--p2)) *  80vh); }
 
 /* ----- the mark: "II" rises, letters of the word appear one by one ----- */
-.mark { position: relative; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_ink); scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
+.mark { position: relative; z-index: 1; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_bg); text-shadow: 0 0 2px rgba(243,238,228,.9), 0 0 24px rgba(243,238,228,.6); scale: calc(1 - var(--p4) * .7); translate: 0 calc(var(--p4) * -30vh); }
 .mark__num { display: block; font-size: clamp(8rem, 38vmin, 22rem); line-height: .9; letter-spacing: -.04em; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 40px); }
-.mark__word { display: block; margin-top: .3em; font-size: clamp(1.8rem, 7vmin, 4.5rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
+.mark__word { display: block; margin-top: .3em; font-weight: 500; font-size: clamp(1.8rem, 7vmin, 4.5rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
 .mark__word .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .mark__word .l.is-on { opacity: 1; translate: 0; }
 
