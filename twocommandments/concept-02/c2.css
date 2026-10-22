@@ -7,13 +7,17 @@
 	--color_veil: rgba(13, 11, 9, .55);
 	--font_serif: 'Cormorant Garamond', 'Times New Roman', serif;
 	--font_sans: 'Inter', system-ui, sans-serif;
+	--gospel_matthew: #2f6b45;
+	--gospel_mark: #c0392b;
+	--gospel_luke: #2b6cb0;
+	--gospel_john: #c9971c;
 	--space_gutter: clamp(20px, 6vw, 96px);
 	--dur_word: 900ms;
 	}
 
 /* ===== BASE ===== */
 * { box-sizing: border-box; }
-html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16px/1.5 var(--font_sans); -webkit-font-smoothing: antialiased; }
 :focus-visible { outline: 2px solid var(--color_ink); outline-offset: 4px; }
 .skip { position: absolute; left: -999px; top: 8px; z-index: 9; background: var(--color_ink); color: var(--color_bg); padding: 8px 12px; }
@@ -41,9 +45,33 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .yt { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 .next span { width: 11px; height: 11px; margin-top: -5px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; rotate: 45deg; }
 
+/* ===== SCRUB SECTION : tall track, sticky stage, --p 0..1 from scroll ===== */
+.scrub { display: block; min-height: 400vh; padding: 0; overflow: visible; scroll-snap-align: none; }
+.scrub .stage { position: sticky; top: 0; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; scroll-snap-align: start; }
+.scrub__hint { position: absolute; bottom: 24px; left: 50%; translate: -50% 0; margin: 0; font: 500 .7rem/1 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; opacity: calc(1 - var(--p) * 6); }
+
+/* ----- the stack: four discs fly in from the corners and overlap ----- */
+.stack { position: absolute; width: min(70vmin, 520px); aspect-ratio: 1; isolation: isolate; scale: calc(1 - var(--p4) * .45); translate: 0 calc(var(--p4) * -14vh); }
+.disc { position: absolute; width: 58%; aspect-ratio: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .92; }
+.disc--matthew { background: var(--gospel_matthew); left: 4%;  top: 6%;    translate: calc((1 - var(--p1)) * -90vw) calc((1 - var(--p1)) * -60vh); }
+.disc--mark    { background: var(--gospel_mark);    right: 4%; top: 10%;   translate: calc((1 - var(--p1)) *  90vw) calc((1 - var(--p1)) * -60vh); }
+.disc--luke    { background: var(--gospel_luke);    left: 10%; bottom: 4%; translate: calc((1 - var(--p2)) * -90vw) calc((1 - var(--p2)) *  60vh); }
+.disc--john    { background: var(--gospel_john);    right: 10%; bottom: 8%; translate: calc((1 - var(--p2)) *  90vw) calc((1 - var(--p2)) *  60vh); }
+
+/* ----- the mark: "II" rises, letters of the word appear one by one ----- */
+.mark { position: relative; margin: 0; text-align: center; font: 400 1rem var(--font_serif); color: var(--color_ink); scale: calc(1 - var(--p4) * .45); translate: 0 calc(var(--p4) * -14vh); }
+.mark__num { display: block; font-size: clamp(6rem, 22vmin, 12rem); line-height: .9; letter-spacing: -.04em; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 40px); }
+.mark__word { display: block; margin-top: .4em; font-size: clamp(1.6rem, 5vmin, 3rem); letter-spacing: .22em; text-transform: uppercase; padding-left: .22em; }
+.mark__word .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
+.mark__word .l.is-on { opacity: 1; translate: 0; }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	.sec__bg { animation: none; }
+	.scrub { min-height: 100vh; }
+	.stack, .mark, .disc, .mark__num { translate: 0; scale: 1; opacity: 1; }
+	.mark__word .l { opacity: 1; translate: 0; transition: none; }
+	.scrub__hint { display: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 }

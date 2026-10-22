@@ -35,6 +35,36 @@
 	document.querySelectorAll('.verse--open').forEach(renderOpen);
 
 	/* ---------------------------------------------------------------- */
+	/* SCRUB — scroll position through a tall section drives --p (0..1)   */
+	/* and four eased phases --p1..--p4 the CSS animates from              */
+	/* ---------------------------------------------------------------- */
+	var ease = function (t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; };
+	var phase = function (p, a, b) { return ease(Math.min(1, Math.max(0, (p - a) / (b - a)))); };
+	var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	document.querySelectorAll('[data-letters]').forEach(function (el) {
+		var str = el.textContent; el.textContent = '';
+		str.split('').forEach(function (ch) { var s = document.createElement('span'); s.className = 'l'; s.textContent = ch; el.appendChild(s); });
+	});
+
+	function scrub() {
+		document.querySelectorAll('.scrub').forEach(function (sec) {
+			var r = sec.getBoundingClientRect(), track = r.height - innerHeight;
+			var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
+			sec.style.setProperty('--p', p);
+			sec.style.setProperty('--p1', phase(p, 0.00, 0.30)); /* top discs in */
+			sec.style.setProperty('--p2', phase(p, 0.15, 0.45)); /* bottom discs in */
+			sec.style.setProperty('--p3', phase(p, 0.40, 0.60)); /* II rises */
+			sec.style.setProperty('--p4', phase(p, 0.85, 1.00)); /* assembled logo recedes toward section 3 */
+			var letters = sec.querySelectorAll('.mark__word .l'), on = Math.round(phase(p, 0.55, 0.82) * letters.length);
+			letters.forEach(function (l, i) { l.classList.toggle('is-on', i < on); });
+		});
+	}
+	addEventListener('scroll', scrub, { passive: true });
+	addEventListener('resize', scrub);
+	scrub();
+
+	/* ---------------------------------------------------------------- */
 	/* MUSIC — the founder's YouTube picks, hidden player, user-started     */
 	/* ---------------------------------------------------------------- */
 	var TRACKS = ['uyoXMs8AZcg', '4vdk1jo7Tw8', '5e9rGmiCxJU'];

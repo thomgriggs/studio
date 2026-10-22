@@ -139,4 +139,5 @@ Thom: "we got off on the wrong foot" — Concept 01 is frozen in `archive/`. Con
 | # | Section | CL's direction | Built as |
 |---|---|---|---|
 | 1 | If you love me | Impactful text "If you love me"; music from three YouTube videos (Sam Thomas, Syriac chant); Jesus image (Google / magnific picks, see `concept-02/assets/ASSETS.md`) | `#s1` — John 14:15 two-part word reveal from `verses.js`; Bloch stand-in with slow drift; "Play music" toggle (browsers block autoplay with sound) |
-| 2 | — | pending | placeholder |
+| 2 | Logo, built by scrolling | jitter.video "design in motion" device; each scroll step assembles part of the logo, then the finished mark goes on down to section 3 | `#s2` — 400vh track, sticky stage, scroll progress `--p` → four Gospel discs fly in from the corners (screen blend), "II" rises, COMMANDMENTS spells out, assembled logo shrinks and rises into section 3. Placeholder mark until CL's real logo |
+| 3 | — | pending | placeholder |
