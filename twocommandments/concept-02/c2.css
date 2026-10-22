@@ -11,6 +11,8 @@
 	--gospel_mark: #c0392b;
 	--gospel_luke: #2b6cb0;
 	--gospel_john: #c9971c;
+	--color_glass-light: #f6e7b8;
+	--color_lead: #0d0b09;
 	--space_gutter: clamp(20px, 6vw, 96px);
 	--dur_word: 900ms;
 	}
@@ -54,10 +56,13 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .logo { display: grid; justify-items: center; gap: clamp(20px, 4vmin, 40px); scale: calc(1 - var(--p4) * .6); translate: 0 calc(var(--p4) * -28vh); }
 .tablets { display: flex; gap: clamp(14px, 3vmin, 32px); margin: 0; }
-.tablet { display: grid; place-items: end center; width: clamp(96px, 22vmin, 200px); height: clamp(220px, 56vmin, 520px); padding-bottom: clamp(16px, 3vmin, 32px); border-radius: 999px 999px 10px 10px; background: var(--color_ink); color: var(--color_bg); box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.tablet { display: block; width: clamp(96px, 22vmin, 200px); filter: drop-shadow(0 0 40px rgba(246,231,184,.25)) drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+.glass { display: block; width: 100%; height: auto; }
+.glass .lead { fill: none; stroke: var(--color_lead); stroke-width: 6; stroke-linejoin: round; }
+.glass .icon { fill: var(--color_lead); opacity: var(--p3); }
+.glass rect, .glass path:not(.icon) { opacity: calc(.55 + var(--p3) * .45); } /* the glass lights up once the icons are in */
 .tablet--a { translate: calc((1 - var(--p1)) * -110vw) 0; rotate: calc((1 - var(--p1)) * -12deg); }
 .tablet--b { translate: calc((1 - var(--p2)) *  110vw) 0; rotate: calc((1 - var(--p2)) *  12deg); }
-.tablet__text { font: 500 clamp(.7rem, 1.6vmin, 1rem)/1.3 var(--font_sans); letter-spacing: .14em; text-transform: uppercase; text-align: center; opacity: var(--p3); translate: 0 calc((1 - var(--p3)) * 8px); }
 .wordmark { margin: 0; font: 400 clamp(1.6rem, 6vmin, 4rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
 .wordmark .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .wordmark .l.is-on { opacity: 1; translate: 0; }
@@ -67,7 +72,8 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	html { scroll-behavior: auto; }
 	.sec__bg { animation: none; }
 	.scrub { min-height: 100vh; }
-	.logo, .tablet, .tablet__text { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
+	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
+	.glass .icon, .glass rect, .glass path { opacity: 1; }
 	.wordmark .l { opacity: 1; translate: 0; transition: none; }
 	.scrub__hint { display: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
