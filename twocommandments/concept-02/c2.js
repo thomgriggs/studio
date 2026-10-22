@@ -63,7 +63,7 @@
 	/* GOSPELS — choose one window; its passage renders in section 6     */
 	/* choice persists in tc-gospel; without one, Matthew reads first     */
 	/* ---------------------------------------------------------------- */
-	var gospelsEl = document.querySelector('.gospels'), proceed = document.querySelector('[data-action="proceed"]');
+	var gospelsEl = document.querySelector('.gospels');
 	function gospelById(id) { return TC_DATA.gospels.filter(function (g) { return g.id === id; })[0]; }
 	function renderPassage(id) {
 		var g = gospelById(id) || TC_DATA.gospels[0], ps = passage(g.ref), art = document.querySelector('.passage');
@@ -79,15 +79,32 @@
 		});
 		box.appendChild(para);
 	}
-	function setGospel(id, scroll) {
+	function setGospel(id) {
 		localStorage.setItem('tc-gospel', id);
 		document.documentElement.dataset.gospel = id; /* the room takes the Gospel's colour */
 		document.querySelectorAll('.gospel').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.gospel === id ? 'true' : 'false'); });
 		if (gospelsEl) { gospelsEl.classList.add('has-choice'); }
-		if (proceed) { proceed.hidden = false; }
 		renderPassage(id);
 	}
-	document.querySelectorAll('.gospel').forEach(function (b) { b.addEventListener('click', function () { setGospel(b.dataset.gospel); }); });
+	/* click: the door opens, the row drifts in through it, the passage section takes over, then the row resets for the way back */
+	var entering = false;
+	function enter(btn) {
+		if (entering) { return; }
+		entering = true;
+		setGospel(btn.dataset.gospel);
+		var r = btn.getBoundingClientRect(), g = gospelsEl.getBoundingClientRect();
+		gospelsEl.style.setProperty('--door_x', ((r.left + r.width / 2 - g.left) / g.width * 100).toFixed(1) + '%');
+		btn.classList.add('is-open');
+		var delay = reduced ? 0 : 1500;
+		setTimeout(function () { gospelsEl.classList.add('is-entering'); }, reduced ? 0 : 100);
+		setTimeout(function () {
+			document.getElementById('s6').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+			setTimeout(function () {
+				gospelsEl.classList.remove('is-entering'); btn.classList.remove('is-open'); entering = false;
+			}, reduced ? 0 : 900);
+		}, delay);
+	}
+	document.querySelectorAll('.gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
 	var saved = localStorage.getItem('tc-gospel');
 	if (saved && gospelById(saved)) { setGospel(saved); } else { renderPassage('matthew'); }
 
@@ -137,6 +154,33 @@
 	addEventListener('scroll', scrub, { passive: true });
 	addEventListener('resize', scrub);
 	scrub();
+
+	/* ---------------------------------------------------------------- */
+	/* CORNER CONTROLS — back / next step through the sections            */
+	/* ---------------------------------------------------------------- */
+	var corner = document.querySelector('.corner');
+	function sections() { return [].slice.call(document.querySelectorAll('.sec')).filter(function (s) { return !s.classList.contains('sec--next'); }); }
+	function current() {
+		var list = sections(), mid = innerHeight / 2, best = list[0];
+		list.forEach(function (s) { var r = s.getBoundingClientRect(); if (r.top <= mid && r.bottom > mid) { best = s; } });
+		return best;
+	}
+	function go(step) {
+		var list = sections(), i = list.indexOf(current()) + step;
+		if (i < 0 || i >= list.length) { return; }
+		var t = list[i], r = t.getBoundingClientRect();
+		/* a tall scrubbed section is entered at its top going down and at its end coming up */
+		var y = scrollY + r.top + (step < 0 && t.classList.contains('scrub') ? r.height - innerHeight : 0);
+		scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
+	}
+	function syncCorner() {
+		var list = sections(), i = list.indexOf(current());
+		corner.classList.toggle('has-prev', i > 0);
+		corner.classList.toggle('at-end', i >= list.length - 1);
+	}
+	document.querySelector('[data-action="prev"]').addEventListener('click', function () { go(-1); });
+	document.querySelector('[data-action="next"]').addEventListener('click', function () { go(1); });
+	addEventListener('scroll', syncCorner, { passive: true }); syncCorner();
 
 	/* ---------------------------------------------------------------- */
 	/* MUSIC — the founder's YouTube picks, hidden player, user-started     */

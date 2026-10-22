@@ -22,13 +22,6 @@
 
 		<h1 class="verse verse--open" id="s1-h" data-ref="john.14.15" data-split=","></h1>
 
-		<div class="corner">
-			<a class="ctl next" href="#s2" aria-label="Next section"><span></span></a>
-			<button class="ctl sound" type="button" data-action="sound" aria-pressed="false" aria-label="Play music">
-				<svg class="sound__on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
-				<svg class="sound__off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7z"/></svg>
-			</button>
-		</div>
 		<div class="yt" id="yt" aria-hidden="true"></div>
 	</section>
 
@@ -480,7 +473,7 @@
 		<h2 class="sr" id="s5-h">Choose your Gospel</h2>
 		<div class="gospels" role="group" aria-label="The four Gospels">
 			<button class="gospel" data-gospel="matthew" type="button" aria-pressed="false">
-
+				<span class="door" aria-hidden="true"><span class="door__room"></span><span class="door__leaf">
 <svg class="glass" viewBox="0 0 200 440">
 <defs>
 <clipPath id="arch-matthew"><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></clipPath>
@@ -682,10 +675,11 @@
 <g class="lead"><circle cx="100" cy="250" r="60"/><circle cx="100" cy="250" r="104"/><path d="M0 128 H200 M0 372 H200"/><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></g>
 </g>
 </svg>
-														<span class="gospel__name">Matthew</span>
+					<span class="door__panel"></span><span class="door__handle"></span></span></span>
+				<span class="gospel__name">Matthew</span>
 			</button>
 			<button class="gospel" data-gospel="mark" type="button" aria-pressed="false">
-
+				<span class="door" aria-hidden="true"><span class="door__room"></span><span class="door__leaf">
 <svg class="glass" viewBox="0 0 200 440">
 <defs>
 <clipPath id="arch-mark"><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></clipPath>
@@ -897,10 +891,11 @@
 <g class="lead"><circle cx="100" cy="250" r="60"/><circle cx="100" cy="250" r="104"/><path d="M0 128 H200 M0 372 H200"/><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></g>
 </g>
 </svg>
-														<span class="gospel__name">Mark</span>
+					<span class="door__panel"></span><span class="door__handle"></span></span></span>
+				<span class="gospel__name">Mark</span>
 			</button>
 			<button class="gospel" data-gospel="luke" type="button" aria-pressed="false">
-
+				<span class="door" aria-hidden="true"><span class="door__room"></span><span class="door__leaf">
 <svg class="glass" viewBox="0 0 200 440">
 <defs>
 <clipPath id="arch-luke"><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></clipPath>
@@ -1101,10 +1096,11 @@
 <g class="lead"><circle cx="100" cy="250" r="60"/><circle cx="100" cy="250" r="104"/><path d="M0 128 H200 M0 372 H200"/><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></g>
 </g>
 </svg>
-														<span class="gospel__name">Luke</span>
+					<span class="door__panel"></span><span class="door__handle"></span></span></span>
+				<span class="gospel__name">Luke</span>
 			</button>
 			<button class="gospel" data-gospel="john" type="button" aria-pressed="false">
-
+				<span class="door" aria-hidden="true"><span class="door__room"></span><span class="door__leaf">
 <svg class="glass" viewBox="0 0 200 440">
 <defs>
 <clipPath id="arch-john"><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></clipPath>
@@ -1314,10 +1310,10 @@
 <g class="lead"><circle cx="100" cy="250" r="60"/><circle cx="100" cy="250" r="104"/><path d="M0 128 H200 M0 372 H200"/><path d="M100 0 C150 0 200 60 200 140 V440 H0 V140 C0 60 50 0 100 0 Z"/></g>
 </g>
 </svg>
-														<span class="gospel__name">John</span>
+					<span class="door__panel"></span><span class="door__handle"></span></span></span>
+				<span class="gospel__name">John</span>
 			</button>
 		</div>
-		<a class="proceed" href="#s6" data-action="proceed" hidden>Proceed</a>
 	</section>
 
 	<!-- ===== SECTION 6 : THE PASSAGE ===== -->
@@ -1333,6 +1329,16 @@
 	<section class="sec sec--next" id="s7" aria-label="Next">
 		<p class="muted">Section 7 — not started.</p>
 	</section>
+
+	<!-- ===== CORNER CONTROLS : on every slide — back, next, mute ===== -->
+	<div class="corner">
+		<button class="ctl prev" type="button" data-action="prev" aria-label="Previous section"><span></span></button>
+		<button class="ctl next" type="button" data-action="next" aria-label="Next section"><span></span></button>
+		<button class="ctl sound" type="button" data-action="sound" aria-pressed="false" aria-label="Play music">
+			<svg class="sound__on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+			<svg class="sound__off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7z"/></svg>
+		</button>
+	</div>
 
 	<script src="data.js"></script>
 	<script src="verses.js"></script>
