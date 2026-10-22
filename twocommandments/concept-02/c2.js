@@ -62,12 +62,9 @@
 	/* opener: the picture fades in, then the words, then the light on them */
 	var pin = document.querySelector('.pin');
 	function openerIn() {
-		if (pin) { pin.classList.add('is-loaded'); }
-		setTimeout(function () {
-			document.querySelectorAll('.verse--open').forEach(function (h) {
-				h.classList.add('is-in');
-			});
-		}, reduced ? 0 : 500);
+		/* the line first, slowly, on black; then the picture comes up behind it */
+		document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); });
+		setTimeout(function () { if (pin) { pin.classList.add('is-loaded'); } }, reduced ? 0 : 2200);
 	}
 	var bg = pin && pin.querySelector('.sec__bg');
 	if (bg && !bg.complete) { bg.addEventListener('load', openerIn, { once: true }); bg.addEventListener('error', openerIn, { once: true }); } else { openerIn(); }
