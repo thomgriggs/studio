@@ -177,7 +177,14 @@ Gospel colours restated by him (rows 9–12): Matthew green · Mark red · Luke 
 - **"CHURCHES"**: one sermon reference so far — Aaron Burke, "Love | Fruit of the Spirit" (Radiant, at 19 min).
 - **"EXECUTION"**: Printful, Printify, Completeful; shirt cost $18–20, ~$28 to net $10 — unchanged.
 
+## Built 2026-11-02 — v.2 folded into `concept-02/` (restore point: git tag `before-v2-feedback`)
+- s1: two beats — "If you love me" is read, fades, "keep my commandments" (whatever follows the comma in the chosen version) is read, then "John 14:15" at half size in rose-burgundy (`--color_burgundy` #c9525e; true burgundy fails contrast on the veil). "Choose your version" picker bottom-left, synced with the one in s4. Pin track 220vh.
+- `#s-agape` (new, between s2 and s3): AGAPE/LOVE crossfade three times, settle stacked, then eight placeholder satellites in a ring over two beats. **Placeholders** until his chart arrives.
+- s3: numerals. s4: `data-emph` regex lights whole/all · law · prophets · two · commandments; picker label "Choose your version".
+- s5: Option 1 doors (default) · Option 2 corners (`?s5=corners` or the switch at the top of the section): four symbols in the corners, "In every Gospel" centred, Proceed. The corner symbols are thin line-art placeholders. s6: first / second / commandment(s) in gold.
+- `#s-verses` (new, between s6 and s7): the nine related verses (Gal 5:14 is inside Gal 5:13-14) drift in a jittered grid; click opens a reading panel (Esc / × / backdrop close, focus returned).
+- Music: `?music=syriac|catholic|orthodox|protestant` and a picker beside the mute button; never autoplays. `TC_DATA.musicSets`.
+
 ## Next steps (2026-11-02)
-1. Fold v.2 panels 1–6 into `concept-02/` in his order: s1 second line + burgundy reference + picker; new Agape section; numerals and emphasis in s3/s4; s5 Option 2 corners alongside the doors; emphasis in the passage; floating-verses section.
-2. Music by tradition with a picker and `?music=` links for his focus group.
-3. Ask him for: the Agape chart source, what "option to watch" should play, and the official logo. Tell him the ESV/CSB and film-clip answers are licensing, not technical.
+1. Founder reviews the build; his focus-group links: `?music=catholic`, `?music=orthodox`, `?music=protestant`, `?s5=corners`.
+2. Ask him for: the Agape chart source, what "option to watch" should play, and the official logo. Tell him the ESV/CSB and film-clip answers are licensing, not technical.

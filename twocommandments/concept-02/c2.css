@@ -16,6 +16,7 @@
 	--color_glass-light: #f6e7b8;
 	--color_glass-heart: #e8c9c0;
 	--color_lead: #0d0b09;
+	--color_burgundy: #c9525e;   /* the reference line; true burgundy (#6e1f2a) is 1.8:1 on the veil, this rose-burgundy is 4.5:1 */
 	--space_gutter: clamp(20px, 6vw, 96px);
 	--dur_word: 900ms;
 	}
@@ -36,7 +37,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 @keyframes drift { from { transform: scale(1.04) translateY(0); } to { transform: scale(1.08) translateY(-1.5%); } }
 
 /* ===== PIN : the opener stays put; the next slide's dark stage rises over it and crops it out ===== */
-.pin { display: block; min-height: 170vh; padding: 0; overflow: visible; isolation: auto; z-index: auto; } /* no stacking context: the fixed line must sit above the curtain */
+.pin { display: block; min-height: 220vh; padding: 0; overflow: visible; isolation: auto; z-index: auto; } /* no stacking context: the fixed line must sit above the curtain */
 .pin .stage { position: sticky; top: 0; width: 100%; height: 100vh; height: 100svh; display: grid; place-items: center; overflow: hidden; padding: var(--space_gutter); }
 /* the picture fades in on load, starts close and slowly pulls back as you scroll; the words stay in the middle */
 .pin .sec__bg { animation: none; opacity: 0; transform: scale(calc(1.28 - var(--p) * .28)); transition: opacity 1800ms ease; }
@@ -46,6 +47,14 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .pin .verse.is-gone { visibility: hidden; }
 /* as you scroll, light passes over the words one by one, as if reading; unread words wait in shadow */
 .pin .verse .w { --lit: 0; transition: opacity 2200ms ease, transform 2200ms ease, filter 300ms linear, text-shadow 300ms linear; filter: brightness(calc(1 + var(--lit) * .25)); text-shadow: 0 0 calc(var(--lit) * 16px) rgba(255,236,196,calc(var(--lit) * .7)), 0 0 calc(var(--lit) * 56px) rgba(255,214,140,calc(var(--lit) * .55)), 0 2px 40px rgba(0,0,0,.5); }
+
+/* opener, two beats: first half is read, fades, the second half and the reference take its place */
+.verse--open { --o1: 1; --o2: 0; --or: 0; }
+.verse--open .verse__part { display: block; grid-area: 1 / 1; }
+.verse--open { display: grid; }
+.verse__part1 { opacity: var(--o1); transition: opacity 400ms linear; }
+.verse__part2 { opacity: var(--o2); transition: opacity 400ms linear; }
+.verse__ref { position: absolute; left: 50%; top: calc(100% + .35em); translate: -50% 0; margin: 0; color: var(--color_burgundy); font: 500 .5em/1 var(--font_serif); letter-spacing: .08em; white-space: nowrap; text-shadow: 0 2px 24px rgba(0,0,0,.8); opacity: var(--or); transition: opacity 400ms linear; }
 
 /* stacking, bottom to top: the opener's picture (0) · the fixed line (1) · the black stage of slide 2 (2), which covers both like a curtain */
 .pin .stage { z-index: 0; }
@@ -119,7 +128,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .sec--law .sec__veil { background: linear-gradient(180deg, rgba(13,11,9,.55), rgba(13,11,9,.45) 45%, rgba(13,11,9,.9)); }
 .said { position: absolute; top: calc(50% - min(16vmin, 9rem)); margin: 0; font: 500 .8rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
 .verse--law { max-width: 22ch; font-size: clamp(1.9rem, 5.4vw, 4.6rem); font-style: italic; }
-.verse--law .emph { font-style: normal; color: #f2c14e; }
+.verse--law .emph { font-style: normal; font-weight: 600; color: #f2c14e; text-shadow: 0 0 16px rgba(255,236,196,.7), 0 0 56px rgba(255,214,140,.55), 0 2px 40px rgba(0,0,0,.5); }
 .bible { position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: rgba(243,238,228,.14); backdrop-filter: blur(10px); color: var(--color_ink); font: 500 .75rem/1 var(--font_sans); letter-spacing: .12em; text-transform: uppercase; }
 .bible__select { appearance: none; border: 0; background: transparent; color: inherit; font: 500 .8rem/1 var(--font_sans); letter-spacing: .06em; padding: 6px 0; cursor: pointer; }
 .bible__select:focus-visible { outline: 2px solid var(--color_ink); outline-offset: 4px; border-radius: 4px; }
@@ -224,12 +233,82 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .toast { position: fixed; left: 50%; bottom: 84px; translate: -50% 0; z-index: 6; padding: 12px 18px; border-radius: 999px; background: rgba(243,238,228,.92); color: var(--color_bg); font: 500 .8rem/1 var(--font_sans); letter-spacing: .08em; opacity: 0; transition: opacity 300ms ease; pointer-events: none; }
 .toast.is-on { opacity: 1; }
 
+/* ===== SECTION 5 OPTION 2 : the four in the corners ===== */
+.sec--gospels .gospels[hidden] { display: none; }
+:root[data-s5="corners"] .sec--gospels .said--static { display: none; }
+.gospels--corners { position: absolute; inset: 0; display: block; transform: none; opacity: 1; transition: none; }
+.gospel--corner { position: absolute; width: auto; min-width: 48px; min-height: 48px; justify-items: center; gap: 12px; padding: clamp(16px, 4vmin, 40px); color: var(--color_ink); }
+.gospel--tl { top: 0; left: 0; }
+.gospel--tr { top: 0; right: 0; }
+.gospel--bl { bottom: 0; left: 0; }
+.gospel--br { bottom: 0; right: 0; }
+.gospel--corner .corner__symbol { display: block; width: clamp(72px, 18vmin, 160px); height: auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; opacity: .8; transition: opacity 400ms ease, transform 400ms ease; }
+.gospel--corner:hover .corner__symbol, .gospel--corner:focus-visible .corner__symbol, .gospel--corner[aria-pressed="true"] .corner__symbol { opacity: 1; transform: scale(1.06); }
+.gospel--corner[data-gospel="matthew"] .corner__symbol { color: var(--gospel_matthew); }
+.gospel--corner[data-gospel="mark"]    .corner__symbol { color: var(--gospel_mark); }
+.gospel--corner[data-gospel="luke"]    .corner__symbol { color: var(--gospel_luke); }
+.gospel--corner[data-gospel="john"]    .corner__symbol { color: var(--gospel_john); }
+.gospel--corner[aria-pressed="true"] .corner__symbol { filter: drop-shadow(0 0 14px currentColor); }
+.corners__line { position: absolute; left: 50%; top: 50%; translate: -50% -50%; margin: 0; width: max-content; max-width: 60vw; text-align: center; font: 400 clamp(2.4rem, 7vw, 6rem)/1.05 var(--font_serif); letter-spacing: -.01em; text-wrap: balance; text-shadow: 0 2px 40px rgba(0,0,0,.5); }
+.corners__proceed { position: absolute; left: 50%; bottom: clamp(20px, 5vmin, 48px); translate: -50% 0; }
+.s5-switch { position: absolute; top: 12px; left: 50%; translate: -50% 0; z-index: 1; margin: 0; display: flex; align-items: center; gap: 4px; font: 500 .72rem/1 var(--font_sans); letter-spacing: .08em; color: var(--color_muted); }
+.s5-switch button { min-height: 48px; padding: 0 10px; border: 0; background: none; color: var(--color_muted); font: inherit; letter-spacing: inherit; cursor: pointer; }
+.s5-switch button:hover, .s5-switch button[aria-pressed="true"] { color: var(--color_ink); }
+.s5-switch button[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 640px) { .corners__line { max-width: 70vw; } .corners__proceed { bottom: 140px; } }
+
+/* ===== PASSAGE EMPHASIS : first / second / commandment ===== */
+.passage__text .emph { font-weight: 700; color: #f2c14e; }
+
+/* ===== MUSIC PICKER : tradition select beside the sound button ===== */
+.ctl--music { appearance: none; -webkit-appearance: none; width: auto; min-width: 48px; padding: 0 18px; border-radius: 999px; font: 500 .75rem/1 var(--font_sans); letter-spacing: .08em; text-align: center; text-align-last: center; }
+.ctl--music option { background: var(--color_bg); color: var(--color_ink); }
+.corner.is-dark .ctl--music { background: rgba(21,19,15,.08); color: var(--color_ink-dark); }
+.corner.is-dark .ctl--music:hover { background: rgba(21,19,15,.16); }
+.corner.is-dark .ctl--music option { background: var(--color_paper); color: var(--color_ink-dark); }
+
+/* ===== AGAPE : two words trade places, settle, then eight related words ring them ===== */
+.sec--agape { --ag-a: 1; --ag-l: 0; --ag-s: 1; --ag-q1: 1; --ag-q2: 1; min-height: 320vh; background: var(--color_bg); }
+.sec--agape .stage { position: sticky; }
+.agape__pair { position: relative; display: grid; place-items: center; margin: 0; font: 400 clamp(3rem, 11vw, 9rem)/1 var(--font_serif); letter-spacing: .12em; text-transform: uppercase; padding-left: .12em; }
+.agape__w { grid-area: 1 / 1; white-space: nowrap; }
+.agape__w--a { opacity: calc(var(--ag-a) + (1 - var(--ag-a)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * -.55em); }
+.agape__w--l { opacity: calc(var(--ag-l) + (1 - var(--ag-l)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * .55em); font-style: italic; color: #f2c14e; }
+.agape__ring { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.agape__ring li { --ang: calc(var(--k) * 45deg - 90deg); position: absolute; left: calc(50% + cos(var(--ang)) * min(40vw, 34rem)); top: calc(50% + sin(var(--ang)) * min(36vh, 22rem)); translate: -50% -50%; width: max-content; max-width: 13rem; text-align: center; font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.3 var(--font_serif); letter-spacing: .02em; color: var(--color_ink); text-wrap: balance; }
+.agape__ring li[data-beat="1"] { opacity: var(--ag-q1); }
+.agape__ring li[data-beat="2"] { opacity: var(--ag-q2); }
+
+/* ===== FLOATING VERSES : the related verses drift; one click opens a reading panel ===== */
+.sec--float { --cols: 3; --rows: 3; display: block; min-height: max(100vh, calc(var(--rows) * 10rem)); background: var(--color_bg); }
+.float__field { position: absolute; inset: var(--space_gutter); }
+.float__verse { position: absolute; display: block; width: calc(100% / var(--cols) - 1.5rem); min-height: 3rem; padding: 12px 16px; border: 1px solid rgba(243,238,228,.22); border-radius: 14px; background: rgba(13,11,9,.6); color: var(--color_ink); text-decoration: none; animation: float-drift calc(14s + var(--i) * 1.7s) ease-in-out calc(var(--i) * -2.3s) infinite alternate; transition: border-color 250ms ease, background 250ms ease; }
+.float__verse:hover, .float__verse:focus-visible { animation-play-state: paused; z-index: 2; border-color: var(--color_ink); background: rgba(30,23,16,.95); }
+.float__verse-ref { display: block; font: 500 .72rem/1.3 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; color: var(--color_muted); }
+.float__verse-title { display: block; margin-top: 4px; font: 400 clamp(1.05rem, 1.6vw, 1.35rem)/1.25 var(--font_serif); }
+@keyframes float-drift { from { translate: -14px 8px; } to { translate: 14px -10px; } }
+.float__read { position: fixed; inset: 0; z-index: 7; display: grid; place-items: center; padding: var(--space_gutter); background: rgba(13,11,9,.88); }
+.float__read[hidden] { display: none; }
+.float__sheet { position: relative; width: min(100%, 44rem); max-height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 16px; padding: clamp(20px, 4vw, 40px); border: 1px solid rgba(243,238,228,.22); border-radius: 18px; background: var(--color_bg-warm); }
+.float__close { position: absolute; top: 8px; right: 8px; width: 48px; height: 48px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: rgba(243,238,228,.14); color: var(--color_ink); cursor: pointer; }
+.float__close:hover { background: rgba(243,238,228,.28); }
+.float__ref { margin: 0; padding-right: 48px; font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
+.float__text { overflow: auto; max-height: 60vh; padding-right: 8px; font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); }
+.float__text p { margin: 0; }
+.float__text .n { font: 500 .6em/1 var(--font_sans); color: var(--color_muted); vertical-align: super; margin-right: .3em; }
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
+	.float__verse { animation: none; }
+	.float__verse, .float__close { transition: none; }
 	.sec__bg { animation: none; }
 	.pin .sec__bg { opacity: 1; transform: none; transition: none; }
 	.pin .verse { transition: none; }
+	.verse--open { display: block; }
+	.verse--open .verse__part { display: inline; }
+	.verse__part1, .verse__part2, .verse__ref { opacity: 1; transition: none; }
+	.verse__ref { position: static; display: table; margin: .5em auto 0; translate: none; }
 	.scrub { min-height: 100vh; }
 	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
 	.tablet .frags, .tablet .sacred, .glass rect { opacity: 1; }
@@ -240,4 +319,5 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.gospels.is-entering { transform: none; opacity: 1; }
 	.half, .half__word, .half__more, .half__art { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
+	.gospel--corner .corner__symbol { transition: none; transform: none; }
 }

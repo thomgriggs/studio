@@ -51,7 +51,9 @@ window.TC_DATA = (function () {
 		{ ref:'galatians.5.13-14',title:'Life by the Spirit' },
 		{ ref:'james.2.8',        title:'The royal law' },
 		{ ref:'1john.4.7-12',     title:'God’s love and ours' },
-		{ ref:'1john.4.19-21',    title:'We love because he first loved us' }
+		{ ref:'1john.4.19-21',    title:'We love because he first loved us' },
+		{ ref:'luke.10.25-37',    title:'The Good Samaritan' }
+		/* the founder's tenth (Galatians 5:14) is covered by galatians.5.13-14 above */
 	];
 
 	/* ---------------------------------------------------------------------- */
@@ -153,5 +155,13 @@ window.TC_DATA = (function () {
 		{ id:'syriac',  title:'രക്ഷകനുര ചെയ്താൻ (Syriac)', artist:'Sam Thomas · Brothers of Sophia', language:'Syriac', src:null }
 	];
 
-	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split, music };
+	/* focus-group test: one set per tradition, picked with ?music= or the picker; YouTube ids, nothing bundled */
+	const musicSets = {
+		syriac:     { label:'Syriac',     ids:['uyoXMs8AZcg', '4vdk1jo7Tw8', '5e9rGmiCxJU'] },
+		catholic:   { label:'Catholic',   ids:['FLbyr94LH1I', 'o2_YXd0FPxY'] },
+		orthodox:   { label:'Orthodox',   ids:['zLEXAjetYd4'] },
+		protestant: { label:'Protestant', ids:['DlAZxnpsFdo'] }
+	};
+
+	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split, music, musicSets };
 })();

@@ -18,6 +18,10 @@
 		<div class="stage">
 			<img class="sec__bg" src="assets/bloch-sermon-on-the-mount.jpg" alt="" aria-hidden="true">
 			<div class="sec__veil" aria-hidden="true"></div>
+			<label class="bible">
+				<span class="bible__label">Choose your version</span>
+				<select class="bible__select" data-action="bible" aria-label="Bible version"></select>
+			</label>
 		</div>
 		<h1 class="verse verse--open" id="s1-h" data-ref="john.14.15" data-split=","></h1>
 		<div class="yt" id="yt" aria-hidden="true"></div>
@@ -442,11 +446,33 @@
 		</div>
 	</section>
 
+	<!-- ===== SECTION AGAPE : AGAPE and LOVE trade places, settle, then the related words appear around them ===== -->
+	<section class="sec sec--agape scrub" id="s-agape" aria-labelledby="s-agape-h" style="--p:0">
+		<div class="stage">
+			<h2 class="sr" id="s-agape-h">Agape</h2>
+			<p class="agape__pair">
+				<span class="agape__w agape__w--a">Agape</span>
+				<span class="agape__w agape__w--l">Love</span>
+			</p>
+			<!-- PLACEHOLDER satellites drawn from the common agape teaching, pending the founder's chart (an image in his Google Doc). Replace the words, keep the markup. -->
+			<ul class="agape__ring">
+				<li style="--k:0" data-beat="1">unconditional</li>
+				<li style="--k:1" data-beat="2">charity (caritas)</li>
+				<li style="--k:2" data-beat="1">sacrificial</li>
+				<li style="--k:3" data-beat="2">benevolence</li>
+				<li style="--k:4" data-beat="1">the love of God for the world</li>
+				<li style="--k:5" data-beat="2">goodwill</li>
+				<li style="--k:6" data-beat="1">self-giving</li>
+				<li style="--k:7" data-beat="2">love of neighbour</li>
+			</ul>
+		</div>
+	</section>
+
 	<!-- ===== SECTION 3 : SEGUE — the law and the prophets ===== -->
 	<section class="sec sec--segue pin pin--short" id="s3" aria-labelledby="s3-h" style="--p:0">
 		<div class="stage">
 		<div class="segue">
-			<p class="segue__line reveal" id="s3-h" data-words>In the Old Testament, there are four major prophets and twelve minor prophets.</p>
+			<p class="segue__line reveal" id="s3-h" data-words>In the Old Testament, there are 4 major prophets and 12 minor prophets.</p>
 			<ul class="prophets" aria-hidden="true">
 				<li class="prophets__major"></li><li class="prophets__major"></li><li class="prophets__major"></li><li class="prophets__major"></li>
 				<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
@@ -460,9 +486,9 @@
 		<img class="sec__bg sec__bg--law" src="assets/rembrandt-christ-preaching.jpg" alt="" aria-hidden="true">
 		<div class="sec__veil" aria-hidden="true"></div>
 		<p class="said said--static reveal" data-words>Jesus said</p>
-		<h2 class="verse verse--law reveal" id="s4-h" data-ref="matthew.22.40"></h2>
+		<h2 class="verse verse--law reveal" id="s4-h" data-ref="matthew.22.40" data-emph="^(whole|all)$|^law$|^prophets$|^two$|^commandments?$"></h2>
 		<label class="bible">
-			<span class="bible__label">Bible</span>
+			<span class="bible__label">Choose your version</span>
 			<select class="bible__select" data-action="bible" aria-label="Bible version"></select>
 		</label>
 	</section>
@@ -1514,6 +1540,28 @@
 				<span class="gospel__name">John</span>
 			</button>
 		</div>
+		<!-- Option 2 : the four in the corners, each with its evangelist's symbol -->
+		<div class="gospels gospels--corners" role="group" aria-label="The four Gospels" hidden>
+			<button class="gospel gospel--corner gospel--tl" data-gospel="matthew" type="button" aria-pressed="false">
+				<svg class="corner__symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 16a6 6 0 1 0 .1 0ZM20 48c2-9 7-13 12-13s10 4 12 13M14 30l10 6M50 30l-10 6"/></svg>
+				<span class="gospel__name">Matthew</span>
+			</button>
+			<button class="gospel gospel--corner gospel--tr" data-gospel="mark" type="button" aria-pressed="false">
+				<svg class="corner__symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 20a10 10 0 1 0 .1 0ZM22 22c-5-2-8 2-6 6M42 22c5-2 8 2 6 6M26 46l6 6 6-6M28 34l4 3 4-3"/></svg>
+				<span class="gospel__name">Mark</span>
+			</button>
+			<button class="gospel gospel--corner gospel--bl" data-gospel="luke" type="button" aria-pressed="false">
+				<svg class="corner__symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M20 26c-6-8-2-14 4-12M44 26c6-8 2-14-4-12M20 30c0 12 6 18 12 18s12-6 12-18c0-4-6-8-12-8s-12 4-12 8z"/></svg>
+				<span class="gospel__name">Luke</span>
+			</button>
+			<button class="gospel gospel--corner gospel--br" data-gospel="john" type="button" aria-pressed="false">
+				<svg class="corner__symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 20l-4 6h8zM8 34c10-6 18-6 24-2 6-4 14-4 24 2-8 2-14 6-16 12h-16c-2-6-8-10-16-12z"/></svg>
+				<span class="gospel__name">John</span>
+			</button>
+			<p class="corners__line">In every Gospel</p>
+			<a class="proceed corners__proceed" href="#s6">Proceed</a>
+		</div>
+		<p class="s5-switch" role="group" aria-label="Section 5 layout"><button type="button" data-action="s5" data-s5="doors" aria-pressed="true">Option 1 · doors</button> / <button type="button" data-action="s5" data-s5="corners" aria-pressed="false">Option 2 · corners</button></p>
 	</section>
 
 	<!-- ===== SECTION 6 : THE PASSAGE ===== -->
@@ -1523,6 +1571,21 @@
 			<h2 class="passage__ref" id="s6-h" data-field="reference"></h2>
 			<div class="passage__text" data-field="text"></div>
 		</article>
+	</section>
+
+	<!-- ===== SECTION FLOATING VERSES : the related verses drift; each opens a reading panel (filled from TC_DATA.related by c2.js) ===== -->
+	<section class="sec sec--float" id="s-verses" aria-labelledby="s-verses-h">
+		<h2 class="sr" id="s-verses-h">Related verses</h2>
+		<div class="float__field"></div>
+		<div class="float__read" role="dialog" aria-modal="true" aria-labelledby="float-read-h" hidden>
+			<div class="float__sheet">
+				<button type="button" class="float__close" aria-label="Close">
+					<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+				</button>
+				<h3 class="float__ref" id="float-read-h"></h3>
+				<div class="float__text" tabindex="0"></div>
+			</div>
+		</div>
 	</section>
 
 	<!-- ===== SECTION 7 : TWO PATHS — the end of the story: white, thick type, Design | Shop ===== -->
@@ -1560,6 +1623,7 @@
 	<div class="corner">
 		<button class="ctl prev" type="button" data-action="prev" aria-label="Previous section"><span></span></button>
 		<button class="ctl next" type="button" data-action="next" aria-label="Next section"><span></span></button>
+		<select class="ctl ctl--music" data-action="music" aria-label="Music"></select>
 		<button class="ctl sound" type="button" data-action="sound" aria-pressed="false" aria-label="Play music">
 			<svg class="sound__on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
 			<svg class="sound__off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4-2.7-2.7z"/></svg>

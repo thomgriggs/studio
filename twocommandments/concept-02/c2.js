@@ -38,18 +38,28 @@
 	/* opening line only: the verse up to data-split, trailing punctuation dropped */
 	function renderOpen(h) {
 		var t = text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
-		words(h, (i < 0 ? t : t.slice(0, i)).replace(/[\s,.;:]+$/, ''));
+		var clean = function (s) { return s.replace(/^[\s,.;:]+|[\s,.;:]+$/g, ''); };
+		h.textContent = '';
+		var mk = function (cls, str) { var s = document.createElement('span'); s.className = 'verse__part ' + cls; words(s, str); h.appendChild(s); return s; };
+		mk('verse__part1', clean(i < 0 ? t : t.slice(0, i)));
+		if (i >= 0 && clean(t.slice(i + sep.length))) {
+			mk('verse__part2', clean(t.slice(i + sep.length)));
+			var ref = document.createElement('span'); ref.className = 'verse__ref'; ref.textContent = passage(h.dataset.ref).reference; h.appendChild(ref);
+		}
 	}
-	/* full verse; the first "two" is emphasised (CL: "...these Two Commandments") */
+	/* full verse; data-emph is a |-separated list of regexes matched (case-insensitive) against each word's letters; matches get .emph */
 	function renderVerse(h) {
 		words(h, text(h.dataset.ref));
-		var w = [].slice.call(h.querySelectorAll('.w')).filter(function (s) { return /^two$/i.test(s.textContent.replace(/[^\w]/g, '')); })[0];
-		if (w) { w.classList.add('emph'); }
+		var src = h.dataset.emph;
+		if (!src) { return; }
+		var re = new RegExp(src, 'i');
+		h.querySelectorAll('.w').forEach(function (s) { if (re.test(s.textContent.replace(/[^\w]/g, ''))) { s.classList.add('emph'); } });
 	}
 	function renderAll() {
 		document.querySelectorAll('.verse--open').forEach(renderOpen);
 		document.querySelectorAll('.verse--law').forEach(renderVerse);
 		document.querySelectorAll('[data-words]').forEach(function (el) { if (!el.dataset.ref) { words(el, el.dataset.copy || (el.dataset.copy = el.textContent)); } });
+		renderFloat();
 	}
 	renderAll();
 
@@ -85,7 +95,14 @@
 		var para = document.createElement('p');
 		ps.verses.forEach(function (v) {
 			var n = document.createElement('span'); n.className = 'n'; n.textContent = v.n;
-			para.appendChild(n); para.appendChild(document.createTextNode(v.text + ' '));
+			para.appendChild(n);
+			/* first / second / commandment(s) stand out in gold */
+			v.text.split(/\s+/).filter(Boolean).forEach(function (w) {
+				if (/^(first|second|commandments?)$/.test(w.replace(/[^A-Za-z]/g, '').toLowerCase())) {
+					var e = document.createElement('span'); e.className = 'emph'; e.textContent = w; para.appendChild(e);
+				} else { para.appendChild(document.createTextNode(w)); }
+				para.appendChild(document.createTextNode(' '));
+			});
 		});
 		box.appendChild(para);
 	}
@@ -114,7 +131,7 @@
 			}, reduced ? 0 : 900);
 		}, delay);
 	}
-	document.querySelectorAll('.gospels .gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
+	document.querySelectorAll('.gospels:not(.gospels--corners) .gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
 	var saved = localStorage.getItem('tc-gospel');
 	if (saved && gospelById(saved)) { setGospel(saved); } else { renderPassage('matthew'); }
 
@@ -127,6 +144,7 @@
 		});
 		sel.value = version();
 		sel.addEventListener('change', function () {
+			document.querySelectorAll('[data-action="bible"]').forEach(function (o) { o.value = sel.value; }); /* both pickers agree */
 			localStorage.setItem('tc-bible', sel.value); localStorage.setItem('tc-bible-chosen', '1');
 			var u = new URL(location.href); u.searchParams.delete('bible'); history.replaceState(null, '', u); /* the saved choice now wins */
 			document.querySelectorAll('.reveal.is-in').forEach(function (el) { el.classList.remove('is-in'); });
@@ -165,7 +183,17 @@
 					majors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, (p * 1.5 * (majors.length + .6) - i) / 1.2))); });
 					minors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, ((p - .62) / .38 * (minors.length + 2) - i) / 3))); });
 				}
-				var v = sec.querySelector('.verse'); if (v) {
+				var v = sec.querySelector('.verse'); if (v && v.classList.contains('verse--open') && v.querySelector('.verse__part2')) {
+					v.classList.toggle('is-gone', r.bottom <= 0);
+					/* two beats: the first half is read (0..0.5), swaps at ~0.55, the second half is read (0.6..0.9), then the reference */
+					var lit = function (part, q) { var ws = part.querySelectorAll('.w'), n = ws.length; ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (q * (n + .6) - i) / 1.2))); }); };
+					var clamp01 = function (x) { return Math.min(1, Math.max(0, x)); };
+					lit(v.querySelector('.verse__part1'), p / .5);
+					lit(v.querySelector('.verse__part2'), (p - .6) / .3);
+					v.style.setProperty('--o1', reduced ? 1 : 1 - clamp01((p - .5) / .06));
+					v.style.setProperty('--o2', reduced ? 1 : clamp01((p - .55) / .06));
+					v.style.setProperty('--or', reduced ? 1 : clamp01((p - .88) / .08));
+				} else if (v) {
 					v.classList.toggle('is-gone', r.bottom <= 0);
 					/* on scroll, while the picture is stuck: the light reads across the line, word by word; the curtain only starts after */
 					var ws = v.querySelectorAll('.w'), n = ws.length;
@@ -196,6 +224,88 @@
 	});
 
 	/* ---------------------------------------------------------------- */
+	/* AGAPE — scroll drives the crossfade of AGAPE / LOVE, then two beats */
+	/* of related words (placeholders until the founder's chart arrives)    */
+	/* ---------------------------------------------------------------- */
+	var agape = document.querySelector('.sec--agape');
+	function agapeScrub() {
+		if (!agape) { return; }
+		var r = agape.getBoundingClientRect(), track = r.height - innerHeight;
+		var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
+		/* 0 to .3: three full crossfades (AGAPE shows at both ends), .3 to .4: they settle stacked */
+		var a = .5 + .5 * Math.cos(Math.min(1, p / .3) * Math.PI * 6);
+		agape.style.setProperty('--ag-a', a.toFixed(3));
+		agape.style.setProperty('--ag-l', (1 - a).toFixed(3));
+		agape.style.setProperty('--ag-s', phase(p, .3, .4));
+		agape.style.setProperty('--ag-q1', phase(p, .4, .65));
+		agape.style.setProperty('--ag-q2', phase(p, .7, 1));
+	}
+	addEventListener('scroll', agapeScrub, { passive: true });
+	addEventListener('resize', agapeScrub);
+	agapeScrub();
+
+	/* ---------------------------------------------------------------- */
+	/* FLOATING VERSES — TC_DATA.related drifts; click opens a reading panel */
+	/* renderFloat() is also called from renderAll(), before this block runs */
+	/* ---------------------------------------------------------------- */
+	function renderFloat() {
+		var sec = document.querySelector('.sec--float');
+		if (!sec) { return; }
+		var field = sec.querySelector('.float__field'), list = TC_DATA.related;
+		var cols = innerWidth < 640 ? 2 : 3, rows = Math.ceil(list.length / cols);
+		sec.style.setProperty('--cols', cols); sec.style.setProperty('--rows', rows);
+		field.textContent = '';
+		var seed = 7, rnd = function () { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+		/* each verse gets its own cell of a grid, jittered inside it, so none overlap */
+		list.forEach(function (it, i) {
+			var ps = passage(it.ref); if (!ps) { return; }
+			var a = document.createElement('a'); a.className = 'float__verse'; a.href = '#'; a.dataset.ref = it.ref;
+			a.style.setProperty('--i', i);
+			a.style.left = ((i % cols + rnd() * .28) / cols * 100).toFixed(1) + '%';
+			a.style.top = ((Math.floor(i / cols) + rnd() * .5) / rows * 100).toFixed(1) + '%';
+			var r = document.createElement('span'); r.className = 'float__verse-ref'; r.textContent = ps.reference;
+			var t = document.createElement('span'); t.className = 'float__verse-title'; t.textContent = it.title;
+			a.appendChild(r); a.appendChild(t); field.appendChild(a);
+		});
+		var panel = sec.querySelector('.float__read');
+		if (!panel.hidden && panel.dataset.ref) { fillRead(panel, panel.dataset.ref); } /* version changed while reading */
+	}
+	function fillRead(panel, ref) {
+		var ps = passage(ref); if (!ps) { return; }
+		panel.dataset.ref = ref;
+		panel.querySelector('.float__ref').textContent = ps.reference;
+		var box = panel.querySelector('.float__text'); box.textContent = '';
+		var para = document.createElement('p');
+		ps.verses.forEach(function (v) {
+			var n = document.createElement('span'); n.className = 'n'; n.textContent = v.n;
+			para.appendChild(n); para.appendChild(document.createTextNode(v.text + ' '));
+		});
+		box.appendChild(para);
+	}
+	(function () {
+		var sec = document.querySelector('.sec--float'); if (!sec) { return; }
+		var panel = sec.querySelector('.float__read'), closeBtn = panel.querySelector('.float__close'), body = panel.querySelector('.float__text'), opener = null;
+		function close() { panel.hidden = true; panel.dataset.ref = ''; if (opener) { opener.focus(); opener = null; } }
+		sec.querySelector('.float__field').addEventListener('click', function (ev) {
+			var a = ev.target.closest('.float__verse'); if (!a) { return; }
+			ev.preventDefault(); opener = a;
+			fillRead(panel, a.dataset.ref); panel.hidden = false; body.scrollTop = 0; closeBtn.focus();
+		});
+		closeBtn.addEventListener('click', close);
+		panel.addEventListener('click', function (ev) { if (ev.target === panel) { close(); } });
+		panel.addEventListener('keydown', function (ev) {
+			if (ev.key === 'Escape') { ev.preventDefault(); close(); }
+			if (ev.key === 'Tab') { /* keep focus inside: close button <-> text */
+				var first = closeBtn, last = body;
+				if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+				else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+			}
+		});
+		var cols0 = innerWidth < 640 ? 2 : 3, rt;
+		addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { var c = innerWidth < 640 ? 2 : 3; if (c !== cols0) { cols0 = c; renderFloat(); } }, 200); });
+	})();
+
+	/* ---------------------------------------------------------------- */
 	/* CORNER CONTROLS — back / next step through the sections            */
 	/* ---------------------------------------------------------------- */
 	var corner = document.querySelector('.corner');
@@ -224,9 +334,38 @@
 	addEventListener('scroll', syncCorner, { passive: true }); syncCorner();
 
 	/* ---------------------------------------------------------------- */
+	/* SECTION 5 OPTIONS — doors (default) or corners; ?s5= or the switch  */
+	/* only one block is visible (hidden also drops it from the a11y tree) */
+	/* ---------------------------------------------------------------- */
+	var doorsEl = document.querySelector('.gospels:not(.gospels--corners)'), cornersEl = document.querySelector('.gospels--corners');
+	function setS5(mode) {
+		mode = mode === 'corners' ? 'corners' : 'doors';
+		document.documentElement.dataset.s5 = mode;
+		if (doorsEl) { doorsEl.hidden = mode !== 'doors'; }
+		if (cornersEl) { cornersEl.hidden = mode !== 'corners'; }
+		document.querySelectorAll('[data-action="s5"]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.s5 === mode ? 'true' : 'false'); });
+		var u = new URL(location.href); /* the URL names the option only once it has been chosen */
+		if (mode === 'corners' || u.searchParams.has('s5')) { u.searchParams.set('s5', mode); history.replaceState(null, '', u); }
+	}
+	document.querySelectorAll('[data-action="s5"]').forEach(function (b) { b.addEventListener('click', function () { setS5(b.dataset.s5); }); });
+	/* a corner choice sets the Gospel and moves on; no door animation */
+	document.querySelectorAll('.gospel--corner').forEach(function (b) {
+		b.addEventListener('click', function () {
+			setGospel(b.dataset.gospel);
+			document.getElementById('s6').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+		});
+	});
+	setS5(new URLSearchParams(location.search).get('s5'));
+
+	/* ---------------------------------------------------------------- */
 	/* MUSIC — the founder's YouTube picks, hidden player, user-started     */
 	/* ---------------------------------------------------------------- */
-	var TRACKS = ['uyoXMs8AZcg', '4vdk1jo7Tw8', '5e9rGmiCxJU'];
+	/* the set comes from ?music= (syriac | catholic | orthodox | protestant), default syriac */
+	var SETS = TC_DATA.musicSets;
+	var setKey = new URLSearchParams(location.search).get('music');
+	if (!SETS[setKey]) { setKey = 'syriac'; }
+	var loadedKey = setKey;
+	function tracks() { return SETS[setKey].ids; }
 	var player = null, ready = false, wanted = false;
 	var btn = document.querySelector('[data-action="sound"]');
 
@@ -242,14 +381,30 @@
 	}
 	function make() {
 		player = new YT.Player('yt', {
-			videoId: TRACKS[0],
-			playerVars: { playlist: TRACKS.slice(1).join(','), loop: 1, controls: 0, disablekb: 1, playsinline: 1, rel: 0 },
+			videoId: tracks()[0],
+			playerVars: { playlist: (tracks().length > 1 ? tracks().slice(1) : tracks()).join(','), loop: 1, controls: 0, disablekb: 1, playsinline: 1, rel: 0 },
 			events: {
-				onReady: function () { ready = true; if (wanted) player.playVideo(); },
+				onReady: function () { ready = true; if (loadedKey !== setKey) { swap(); } else if (wanted) { player.playVideo(); } },
 				onStateChange: function (e) { if (e.data === YT.PlayerState.ENDED) player.nextVideo(); }
 			}
 		});
 	}
+	/* switch the playlist; plays only if the listener had already started it */
+	function swap() {
+		loadedKey = setKey;
+		if (wanted) { player.loadPlaylist(tracks()); } else { player.cuePlaylist(tracks()); }
+		player.setLoop(true);
+	}
+	var pick = document.querySelector('[data-action="music"]');
+	Object.keys(SETS).forEach(function (k) {
+		var o = document.createElement('option'); o.value = k; o.textContent = SETS[k].label; pick.appendChild(o);
+	});
+	pick.value = setKey;
+	pick.addEventListener('change', function () {
+		setKey = pick.value;
+		var u = new URL(location.href); u.searchParams.set('music', setKey); history.replaceState(null, '', u);
+		if (player && ready) { swap(); }
+	});
 	btn.addEventListener('click', function () {
 		wanted = btn.getAttribute('aria-pressed') !== 'true';
 		label(wanted);
