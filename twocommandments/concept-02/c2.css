@@ -7,6 +7,8 @@
 	--color_veil: rgba(13, 11, 9, .55);
 	--color_bg-warm: #1e1710;   /* the segue: a warmer, lamp-lit room between the glass and the etching */
 	--color_bg-warm-glow: #3a2c1c;
+	--color_bg-wine: #3b1118;   /* agape: oxblood, wine side not plum */
+	--color_bg-wine-glow: #5a1c25;
 	--font_serif: 'Cormorant Garamond', 'Times New Roman', serif;
 	--font_sans: 'Inter', system-ui, sans-serif;
 	--gospel_matthew: #2f6b45;
@@ -268,13 +270,15 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .corner.is-dark .ctl--music option { background: var(--color_paper); color: var(--color_ink-dark); }
 
 /* ===== AGAPE : two words trade places, settle, then eight related words ring them ===== */
-.sec--agape { --ag-a: 1; --ag-l: 0; --ag-s: 1; --ag-q1: 1; --ag-q2: 1; min-height: 320vh; background: var(--color_bg); }
+.sec--agape { --ag-a: 1; --ag-l: 0; --ag-s: 1; --ag-q1: 1; --ag-q2: 1; min-height: 320vh; background: var(--color_bg-wine); }
+.sec--agape .stage { background: radial-gradient(ellipse at 50% 50%, var(--color_bg-wine-glow), var(--color_bg-wine) 60%, #2a0d12 100%); }
 .sec--agape .stage { position: sticky; }
 .agape__pair { position: relative; display: grid; place-items: center; margin: 0; font: 400 clamp(3rem, 11vw, 9rem)/1 var(--font_serif); letter-spacing: .12em; text-transform: uppercase; padding-left: .12em; }
 .agape__w { grid-area: 1 / 1; white-space: nowrap; }
 .agape__w--a { opacity: calc(var(--ag-a) + (1 - var(--ag-a)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * -.55em); }
 .agape__w--l { opacity: calc(var(--ag-l) + (1 - var(--ag-l)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * .55em); font-style: italic; color: #f2c14e; }
 .agape__ring { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.agape__ring::before { content: ""; position: absolute; left: 50%; top: 50%; width: calc(min(40vw, 34rem) * 2); height: calc(min(36vh, 22rem) * 2); translate: -50% -50%; border: 1px dotted rgba(243,238,228,.35); border-radius: 50%; opacity: var(--ag-q1); }
 .agape__ring li { --ang: calc(var(--k) * 45deg - 90deg); position: absolute; left: calc(50% + cos(var(--ang)) * min(40vw, 34rem)); top: calc(50% + sin(var(--ang)) * min(36vh, 22rem)); translate: -50% -50%; width: max-content; max-width: 13rem; text-align: center; font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.3 var(--font_serif); letter-spacing: .02em; color: var(--color_ink); text-wrap: balance; }
 .agape__ring li[data-beat="1"] { opacity: var(--ag-q1); }
 .agape__ring li[data-beat="2"] { opacity: var(--ag-q2); }
