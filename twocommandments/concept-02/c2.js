@@ -37,7 +37,8 @@
 
 	/* opening line only: the verse up to data-split, trailing punctuation dropped */
 	function renderOpen(h) {
-		var t = text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
+		/* data-copy pins the line to one wording; the reference still comes from the passage */
+		var t = h.dataset.copy || text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
 		var clean = function (s) { return s.replace(/^[\s,.;:]+|[\s,.;:]+$/g, ''); };
 		h.textContent = '';
 		var mk = function (cls, str) { var s = document.createElement('span'); s.className = 'verse__part ' + cls; words(s, str); h.appendChild(s); return s; };
@@ -144,7 +145,7 @@
 		});
 		sel.value = version();
 		sel.addEventListener('change', function () {
-			document.querySelectorAll('[data-action="bible"]').forEach(function (o) { o.value = sel.value; }); /* both pickers agree */
+			document.querySelectorAll('[data-action="bible"]').forEach(function (o) { o.value = sel.value; }); /* every picker agrees */
 			localStorage.setItem('tc-bible', sel.value); localStorage.setItem('tc-bible-chosen', '1');
 			var u = new URL(location.href); u.searchParams.delete('bible'); history.replaceState(null, '', u); /* the saved choice now wins */
 			document.querySelectorAll('.reveal.is-in').forEach(function (el) { el.classList.remove('is-in'); });
