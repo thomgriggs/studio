@@ -1,0 +1,38 @@
+{
+ "url": "https://dvaughnlaw.com/etn-schedule/day-1-foundations/",
+ "slug": "etn-schedule__day-1-foundations",
+ "type": "event-schedule",
+ "status": 404,
+ "redirected_to": null,
+ "last_modified": "2026-08-21",
+ "seo": {
+  "title_tag": "Page not found - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "",
+  "robots": "noindex, follow",
+  "og_title": "Page not found - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "No Results Found",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The page you requested could not be found. Try refining your search, or use the navigation above to locate the post.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 24
+}

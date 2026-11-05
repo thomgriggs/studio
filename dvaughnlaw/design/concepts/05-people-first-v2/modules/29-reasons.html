@@ -1,0 +1,18 @@
+{#
+MODULE: reasons
+PURPOSE: Three to five short reasons to choose the firm as white rounded tiles in a row on a soft sage band, each with a sage check disc, a serif claim and one line. Links inside the line (a person's name to the bio) stay live.
+SLOTS: eyebrow, title, image (src, alt; optional), items[title, text]. With an image the band becomes a tall rounded photo beside a 2 x 2 grid of generous white cards, each with a numbered sage disc instead of the check.
+SQUARESPACE: Section with a soft colour: centered Heading, then (with image) two columns: Image block with rounded corners beside a 2 x 2 grid of Text blocks with white backgrounds and rounded corners (number in the Heading 3 or a small image); without image a row of 3 to 4 such blocks. The numbered discs are a CSS counter; in Squarespace type the numeral into the block. No code needed otherwise.
+#}
+<section class="m m-reasons{{ ' m-reasons--img' if s.image }}" data-module="reasons" data-tone="{{ tone }}" aria-labelledby="reasons-title">
+  <div class="wrap">
+    <div class="m__head">{% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}<h2 id="reasons-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <div class="reasons__layout">
+    {% if s.image %}<img class="reasons__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy">{% endif %}
+    <ul class="reasons" role="list">
+      {% for i in s["items"] %}<li><span class="reasons__tick" aria-hidden="true"></span><h3>{{ i.title|md }}</h3><p>{{ i.text|md }}</p></li>
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+</section>

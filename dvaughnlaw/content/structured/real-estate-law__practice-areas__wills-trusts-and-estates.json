@@ -1,0 +1,84 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/wills-trusts-and-estates/",
+ "slug": "real-estate-law__practice-areas__wills-trusts-and-estates",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Wills, Trusts, and Estates",
+ "seo": {
+  "title_tag": "Wills, Trusts, and Estates - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/wills-trusts-and-estates/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Wills, Trusts, and Estates - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Wills, Trusts, and Estates"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "What are your final wishes? How do you want your assets managed – either now or after you pass? These choices are too important to leave to chance or deal with “someday.”",
+     "In Saint Petersburg, families trust Vaughn Law to guide them through these critical decisions. We are experts in wills, trusts, and estates. We help families ensure that their intentions are known and their wishes are carried out.",
+     "Estate planning uses wills and trusts as tools to meet your goals. Our team can help you:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Protect assets"
+     },
+     {
+      "text": "Plan for illness or incapacity"
+     },
+     {
+      "text": "Avoid probate"
+     },
+     {
+      "text": "Protect beneficiaries"
+     },
+     {
+      "text": "Minimize taxes"
+     },
+     {
+      "text": "Gift assets"
+     },
+     {
+      "text": "Pay for medical and long-term care"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "When your financial house isn’t in order, it can cost you and your family dearly. Protect your assets and the people you love with smart estate planning. Request an [order title](https://dvaughnlaw.com/vaughnlaw/order-title/) with Vaughn Law today."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

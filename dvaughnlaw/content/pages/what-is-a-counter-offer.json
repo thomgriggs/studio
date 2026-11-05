@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-a-counter-offer/",
+ "slug": "what-is-a-counter-offer",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "What Is A Counter-Offer? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-a-counter-offer/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is A Counter-Offer? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The video puts this in more visual terms, but basically, a seller can respond to a buyer’s offer with changes – a “counter” – that improves the terms. You need to put yourself in their shoes and construct a modified offer that you think they might take that meets more of your needs. Then it’s […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:03+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "sales-process"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is A Counter-Offer?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/n8kntj5nbu",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The video puts this in more visual terms, but basically, a seller can respond to a buyer’s offer with changes – a “counter” – that improves the terms.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You need to put yourself in their shoes and construct a modified offer that you think they might take that meets more of your needs. Then it’s their turn – accept, reject, or construct yet another counter.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s an efficient market process, but beware: clauses and costs matter. Your broker should be closely involved in constructing a counter. Successful bargaining is best done with a win/win approach where each side is meeting their biggest needs and compromising others to reach an agreement.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember that outside conditions like interest rates, and supply and demand, will keep evolving so you’ll need to be patient but decisive to craft an counter-offer that works for both sides.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 145
+}

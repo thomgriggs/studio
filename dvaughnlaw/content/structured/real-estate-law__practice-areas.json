@@ -1,0 +1,84 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+ "slug": "real-estate-law__practice-areas",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Practice Areas",
+ "seo": {
+  "title_tag": "Practice Areas - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Practice Areas - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Practice Areas"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law is a growth-oriented law firm in Saint Petersburg. We serve a variety of clients around the state of Florida.",
+     "Our practice areas include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Real Estate Closings"
+     },
+     {
+      "text": "Real Estate Transactions"
+     },
+     {
+      "text": "Business Entity Formation"
+     },
+     {
+      "text": "Landlord/Tenant"
+     },
+     {
+      "text": "Litigation"
+     },
+     {
+      "text": "Land Trusts"
+     },
+     {
+      "text": "HOA/Condo Disputes"
+     },
+     {
+      "text": "Code Enforcement Violations"
+     },
+     {
+      "text": "Foreclosures"
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "No matter your situation, Vaughn Law can help. Schedule your [free consultation](https://dvaughnlaw.com/consultation/) with us today."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

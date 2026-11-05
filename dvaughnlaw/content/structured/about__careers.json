@@ -1,0 +1,52 @@
+{
+ "url": "https://dvaughnlaw.com/about/careers/",
+ "slug": "about__careers",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Careers",
+ "seo": {
+  "title_tag": "Careers - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/about/careers/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Careers - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Careers"
+   }
+  },
+  {
+   "module": "image-text",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/22_depositphotos_329829600-stock-photo-smiling-multiethnic-couple-handshake-realtor.jpg",
+      "alt": "Couple Shaking Hands"
+     }
+    ],
+    "title": "Careers",
+    "level": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "We are always looking for great people. Please contact us or submit your resume and your desired position(s) on our contact form."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0
+ }
+}

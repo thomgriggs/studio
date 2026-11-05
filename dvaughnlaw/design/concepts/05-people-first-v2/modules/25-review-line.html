@@ -1,0 +1,9 @@
+{#
+MODULE: review-line
+PURPOSE: One line of client praise with the reviewer and source, e.g. a Google review snippet or rating, centered under a row of sage stars when there is a rating. Defined for the design (the reference site uses a "4.9 stars, 250+ reviews" line); the crawled site has no client reviews, so no page uses it yet and nothing is invented.
+SLOTS: text, author, source, rating (optional number), href (optional link to the review source).
+SQUARESPACE: Section with one centered Text block (rating and source as a small paragraph) or a Testimonials block. No code.
+#}
+<section class="m m-review" data-module="review-line" data-tone="{{ tone }}">
+  <div class="wrap wrap--narrow"><p class="review">{% if s.rating %}<span class="review__rating"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> {{ s.rating }}</span>{% endif %}{% if s.text %}<span class="review__text">&ldquo;{{ s.text|md }}&rdquo;</span>{% endif %}{% if s.author or s.source %}<span class="review__by">{{ s.author }}{% if s.author and s.source %}, {% endif %}{% if s.href %}<a href="{{ s.href }}" target="_blank" rel="noopener">{{ s.source }}</a>{% else %}{{ s.source }}{% endif %}</span>{% endif %}</p></div>
+</section>

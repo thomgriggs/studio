@@ -1,0 +1,211 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/",
+ "slug": "estate-planning",
+ "template": "hub",
+ "family": "hub-landing",
+ "title": "Estate Planning",
+ "seo": {
+  "title_tag": "Estate Planning - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "title": "Estate Planning",
+    "tagline": "Accessible | Reliable | Practical Real Estate & Business Law Firm",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_188931800.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "card-grid",
+   "slots": {
+    "cards": [
+     {
+      "title": "Important Terms",
+      "text": [
+       "The ultimate goal of an estate plan is determined by the specific goals of the client."
+      ],
+      "href": "https://dvaughnlaw.com/estate-planning/important-terms/"
+     },
+     {
+      "title": "Estate Planning Documents",
+      "text": [
+       "There are five Estate Planning Documents to consider regardless of your age, health or wealth."
+      ],
+      "href": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/"
+     },
+     {
+      "title": "Probate",
+      "text": [
+       "A Probate is a court supervised process for identifying and gathering assets of a deceased person."
+      ],
+      "href": "https://dvaughnlaw.com/estate-planning/probate/"
+     },
+     {
+      "title": "Ancillary Probate",
+      "text": [
+       "At Vaughn Law, PLLC, we specialize in assisting clients with the ancillary probate process in Florida."
+      ],
+      "href": "https://dvaughnlaw.com/estate-planning/ancillary-probate/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "How Can We Help You?",
+    "level": 2,
+    "depth": 2
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+     "alt": ""
+    },
+    "title": "Let’s work together for your online success",
+    "level": 2,
+    "buttons": [
+     {
+      "text": "Order Title",
+      "href": "https://dvaughnlaw.com/vaughnlaw/order-title/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "image-text",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_188931800.jpg",
+      "alt": "City View"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Front-Office.jpg",
+      "alt": "Front Office"
+     }
+    ],
+    "title": "About Vaughn law",
+    "level": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "We guarantee top-notch service!"
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law is a boutique law firm that provides full-service title and real estate closing services in the state of Florida. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar, and exciting time for everyone involved, therefore we provide each of our customers’ closing the personal attention and excellent service that it deserves."
+     },
+     {
+      "type": "p",
+      "text": "Our goal is to make the closing process a smooth one. It should be as easy as possible for all parties involved. Our experienced staff is ready for the intricacies of each closing transaction and expertly handles and resolves any issues that may arise throughout the process."
+     },
+     {
+      "type": "p",
+      "text": "Whether you are a real estate developer, or you are buying or selling your first home, Vaughn Law has the Real Estate Legal Solutions to properly handle your closing. [Contact us](https://dvaughnlaw.com/contact/) today!"
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law wants to be your Real Estate law firm for all your legal, title, and settlement service needs. We not only help clients in the Tampa Bay area, we are licensed to practice throughout the entire state of Florida."
+     },
+     {
+      "type": "p",
+      "text": "When it comes to important life events, we sweat the small stuff so you don’t have to!"
+     },
+     {
+      "type": "p",
+      "text": "We understand that closing on your home is a big deal! Our team pays attention to the details to ensure a smooth closing. We continually develop new resources and technology to better assist you with your needs. And our firm never loses sight of the importance of customer service."
+     },
+     {
+      "type": "p",
+      "text": "Any legal matter can be stressful. But at Vaughn Law, we care for our clients with integrity and respect. Our priority is our clients! Your situation will be handled with care and outstanding legal expertise. Schedule your free consultation today."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law’s mission is to be the leading title and real estate settlement service provider in the Saint Petersburg area and throughout the state of Florida by serving our customers in a professional, efficient manner with a friendly and personal touch. Through ongoing resource development, new technology, teamwork, and communication, we aim to deliver unparalleled title service and customer satisfaction."
+     },
+     {
+      "type": "p",
+      "text": "We pride ourselves on our attention to the details, reliability, friendliness, and our strong values of integrity, competency, and professionalism. We hope you enjoy all of the resources and tools our website has to offer!"
+     }
+    ]
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2021/12/AMy-signing-scaled.jpg",
+     "alt": ""
+    },
+    "title": "Fast and Accurate Closing",
+    "level": 2,
+    "buttons": [
+     {
+      "text": "Order Title",
+      "href": "https://dvaughnlaw.com/vaughnlaw/order-title/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "logo-row",
+   "slots": {
+    "logos": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/The-Fund.jpg",
+      "alt": "The Fund",
+      "href": "https://www.thefund.com/home.aspx"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Old-republick.jpg",
+      "alt": "Old Republic National Title",
+      "href": "https://www.oldrepublictitle.com/"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Secure-Insight.jpg",
+      "alt": "Secure Insight",
+      "href": "https://secureinsight.com/"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Bay-Area.jpg",
+      "alt": "Bay Area Real Estate Council",
+      "href": "http://www.flarecs.com/local-recs/bay-area"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Eclosing.jpg",
+      "alt": "E-Closing",
+      "href": "http://www.e-closing.com/"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/florida-Board-circle-jpg.jpg",
+      "alt": "Florida Board Certified Real Estate Attorney",
+      "href": "https://www.floridabar.org/about/cert/cert-re-info/"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "url": "https://dvaughnlaw.com/tag/17/",
+ "slug": "tag__17",
+ "type": "tag",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "17 Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/tag/17/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "17 Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h2",
+   "text": "[Why Use A REALTOR®](https://dvaughnlaw.com/why-use-a-realtor/)",
+   "links": [
+    {
+     "text": "Why Use A REALTOR®",
+     "href": "https://dvaughnlaw.com/why-use-a-realtor/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "A state license is required to sell real estate. But roughly half of those licensed take the additional step of becoming a REALTOR®. As we show you in this video, only members of the National Association of Realtors – NAR – are entitled to use...",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 49
+}

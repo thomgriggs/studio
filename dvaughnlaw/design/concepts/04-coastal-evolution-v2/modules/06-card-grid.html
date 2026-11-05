@@ -1,0 +1,23 @@
+{#
+MODULE: card-grid
+PURPOSE: A set of short cards, each with a title, a line or two, and optionally a link and picture. Square cards with a teal top rule on a tinted ground; the title carries the link and the whole card is clickable. Used for the practice-area cards on hubs and the mission/values cards on home.
+SLOTS: eyebrow, title, anchor (section id, for jump links), cards[title, text[], href, link_text, image, planned]. A card with `planned: true` and no href is a page the site menu lists but the live site does not have yet: shown without link or arrow, quieter, with a small "Page planned" tag.
+SQUARESPACE: Section with Summary-style layout of Cards (or a grid of Image/Text/Button blocks in a multi-column row, each block group with a top border). Card links go on the title. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-cards" data-module="card-grid" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ul class="cards cards--{{ [s.cards|length, 4]|min }}" role="list">
+      {% for c in s.cards %}
+      <li class="card{{ ' card--link' if c.href }}{{ ' card--planned' if c.planned }}">
+        {% if c.image %}<img src="{{ c.image.src }}" alt="{{ c.image.alt }}" loading="lazy">{% endif %}
+        {% if c.title %}<h{{ 3 if s.title else 2 }} class="card__title" data-orig-level="blurb">{% if c.href %}<a href="{{ c.href|href }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h{{ 3 if s.title else 2 }}>{% endif %}
+        {% for t in c.text %}<p>{{ t|md }}</p>{% endfor %}
+        {% if c.planned %}<p class="card__planned">Page planned</p>{% endif %}
+        {% if c.link_text %}<p><a class="more" href="{{ c.href|href }}">{{ c.link_text }}</a></p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

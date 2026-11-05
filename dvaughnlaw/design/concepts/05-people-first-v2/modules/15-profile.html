@@ -1,0 +1,17 @@
+{#
+MODULE: profile
+PURPOSE: A person: a large rounded portrait beside the name (serif), role (small sans caps) and social links. The bio that follows on the old page comes through as headed-section modules after it; the team template gathers them under the person.
+SLOTS: image (src, alt), name, role, links[text, href].
+SQUARESPACE: Section in a two-column layout: Image block and a Text block with the name (H2) and role; Social Links or Button blocks for the links. Squarespace has no native team block, so the same pattern repeats per person. No code.
+#}
+{% from "_macros.html" import heading %}
+<section class="m m-profile" data-module="profile" data-tone="{{ tone }}">
+  <div class="wrap profile__grid">
+    <img src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy">
+    <div>
+      {{ heading(2, s.name, 2, "profile__name") }}
+      <p class="profile__role">{{ s.role }}</p>
+      {% if s.links %}<p class="actions">{% for l in s.links %}<a class="btn btn--ghost" href="{{ l.href }}" target="_blank" rel="noopener">{{ l.text }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{#
+MODULE: steps
+PURPOSE: A short ordered list (3 to 6 items, each a lead-in plus at most about 40 words) shown as ruled rows with a large teal numeral, the lead-in in the serif. Longer ordered lists stay in the list module.
+SLOTS: eyebrow, title, level, depth, items[lead, text], actions[text, href] (optional buttons under the steps). Variant `process`: the home page's three-step "How it starts", steps side by side in columns with large numerals and the button beneath.
+SQUARESPACE: Section with an optional Heading block and one Text block per step in a two-column row (numeral left, text right), or a numbered list in one Text block. No code (process variant: a three-column row of Text blocks, numeral in a Heading 1 style, plus a Button block).
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-steps{{ ' m-steps--process' if variant == 'process' }}" data-module="steps" data-tone="{{ tone }}">
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(s.depth or 2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ol class="steps" role="list">
+      {% for i in s["items"] %}<li>{% if i.lead %}<strong class="steps__lead">{{ i.lead|md }}</strong> {% endif %}<span class="steps__text">{{ i.text|md }}</span></li>
+      {% endfor %}
+    </ol>
+    {% if s.actions %}<p class="actions steps__actions">{% for a in s.actions %}<a class="btn" href="{{ a.href|href }}">{{ a.text }}</a>{% endfor %}</p>{% endif %}
+  </div>
+</section>

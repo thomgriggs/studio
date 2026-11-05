@@ -1,0 +1,147 @@
+{
+ "url": "https://dvaughnlaw.com/why-you-should-update-your-estate-plan-when-moving-to-florida/",
+ "slug": "why-you-should-update-your-estate-plan-when-moving-to-florida",
+ "template": "article",
+ "family": "post-article",
+ "title": "Why You Should Update Your Estate Plan When Moving to Florida",
+ "seo": {
+  "title_tag": "Why You Should Update Your Estate Plan When Moving to Florida - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/why-you-should-update-your-estate-plan-when-moving-to-florida/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Why You Should Update Your Estate Plan When Moving to Florida - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "If you’ve recently moved to Florida, updating your estate plan should be a top priority. While your existing documents may still be valid, Florida’s unique laws can significantly impact how your estate is handled. Here’s what you need to know: Florida Has Different Requirements Documents such as a will must meet Florida’s specific rules. For […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Why You Should Update Your Estate Plan When Moving to Florida",
+    "date": "2025-07-21"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "If you’ve recently moved to Florida, updating your estate plan should be a top priority. While your existing documents may still be valid, Florida’s unique laws can significantly impact how your estate is handled. Here’s what you need to know:"
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Florida Has Different Requirements",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Documents such as a will must meet Florida’s specific rules. For example, your will must be signed with two witnesses present at the same time, and your personal representative must either be a resident of Florida or a close blood relative. If your documents were drafted in another state, they might not meet these requirements."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Out of State Documents May Be Rejected",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Even though your documents such as your power of attorney, healthcare surrogate, or living will may be legally valid, banks, hospitals, and other institutions might refuse to accept out of state documents."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Homestead Laws Can Override Your Plan",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Florida’s strong protections for your primary home can also come with restrictions, especially if you’re married or have minor children. These laws can override parts of your existing estate plan."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "No State Income or State Estate Tax",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Florida’s tax-friendly environment may allow you to simplify your estate plan and remove strategies that were only necessary in your previous state."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "A Move Is a Great Time for a Check-In",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Ask yourself:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Are your beneficiaries current?",
+        "children": []
+       },
+       {
+        "text": "Do you still trust your named agents?",
+        "children": []
+       },
+       {
+        "text": "Do your documents reflect your current goals and relationships?",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "What to Do Next:",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Schedule a review with a Vaughn Law. A simple update now can save your family time, confusion, and stress later."
+     },
+     {
+      "type": "p",
+      "text": "*By: Allison Couri, Attorney*"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

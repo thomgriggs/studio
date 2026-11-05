@@ -1,0 +1,445 @@
+{
+ "url": "https://dvaughnlaw.com/cyber-security/",
+ "slug": "cyber-security",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-10-26",
+ "seo": {
+  "title_tag": "Cyber Security - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/cyber-security/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Cyber Security - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h1",
+   "text": "Cyber Security",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Cyber Security",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Protect Yourself From Cyber Fraud",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Watch the video or read below to learn how to protect yourself from cyber fraud.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "youtube",
+   "src": "https://www.youtube.com/embed/ek4TwC9owwY?feature=oembed",
+   "title": "Protect Your Money from Wire Fraud Schemes When Buying a Home",
+   "component": "video",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "How Your Money Gets Stolen",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Watch the video or read below to learn how to protect yourself from cyber fraud.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "**Hacked email** – Hackers get access to the email account of someone involved in the transaction – the buyer, seller, real estate agent, mortgage lender, title agent, or other.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Email from hacker** – The hacker then emails that person to change the wiring or payment instructions without knowledge from the other parties.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Consumer pays wrong account** – If not questioned, the wrong account gets the down payment or other funds and the criminal gets away.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Closing day** – By the time closing day arrives and the mistake is realized, often the funds are long gone.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "How to Avoid Wire Fraud",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Rule 1: Always question emails that contain wiring instructions.**\nHackers have learned to exploit the real estate closing process to steal millions of dollars from people buying or selling a home.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Rule 2: Always call before sending any money.**\nWhen you do receive instructions on where to send money prior to closing, always call your contact person at the title company to verify. Then call your bank to verify as well.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Rule 3: Always call after sending money.**\nIt’s always a good idea to call right after money is sent. That way, you can verify that it was received by the correct recipient.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Rule 4: Act immediately if anything seems unusual.**\nContact your bank, mortgage company, and title company immediately if anything is in question. If something is wrong, you may need to contact your local FBI office.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "You can never be too careful when it comes to cyber security and wire fraud. Vaughn Law recommends that you always call and confirm wiring instructions prior to sending any funds to anyone via wire transfer. In fact, Vaughn Law will only provide you with a partial account number via email so you have to call and confirm the information you received in order to obtain the entire account number.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "Get in touch with us",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "form",
+   "note": "Lawmatics intake",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+   "alt": "Vaughn law Logo",
+   "alt_missing": false,
+   "title": "",
+   "width": "666",
+   "height": "100",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "Vaughn Law offers its clients a different, more personalized and service orientated approach, by tailoring its representation to its client’s needs. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process.",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Address",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "350 Corey Avenue, St.\nPete Beach, FL 33706",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Phone Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 223-6080](tel:7272236080)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Fax Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 645-4226](tel:7276454226)",
+   "links": [
+    {
+     "text": "(727) 645-4226",
+     "href": "tel:7276454226"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Email",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Closing Services",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Realtors](https://dvaughnlaw.com/services/realtors/)",
+     "links": [
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Consumers](https://dvaughnlaw.com/services/consumers/)",
+     "links": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Lenders](https://dvaughnlaw.com/services/lenders/)",
+     "links": [
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Builders](https://dvaughnlaw.com/services/builders/)",
+     "links": [
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/services/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business Entity Formation](https://dvaughnlaw.com/practice-areas/business-entity-formation/)",
+     "links": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/practice-areas/business-entity-formation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/practice-areas/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/practice-areas/commercial/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Foreclosures](https://dvaughnlaw.com/practice-areas/foreclosures/)",
+     "links": [
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/practice-areas/foreclosures/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Land Trusts](https://dvaughnlaw.com/practice-areas/land-trusts/)",
+     "links": [
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/practice-areas/land-trusts/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Landlord/Tenant](https://dvaughnlaw.com/practice-areas/landlord-tenant/)",
+     "links": [
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/practice-areas/landlord-tenant/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Litigation](https://dvaughnlaw.com/practice-areas/litigation/)",
+     "links": [
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/practice-areas/litigation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Real Estate Transaction](https://dvaughnlaw.com/practice-areas/real-estate-transactions/)",
+     "links": [
+      {
+       "text": "Real Estate Transaction",
+       "href": "https://dvaughnlaw.com/practice-areas/real-estate-transactions/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2019/03/Beach-office-scaled.jpg",
+   "alt": "Architecture - Property",
+   "alt_missing": false,
+   "title": "Beach-office",
+   "width": "1800",
+   "height": "1200",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.197831041805!2d-82.74966069999999!3d27.7420435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fd5bea45f9c9%3A0xd5c4f4a1323a4f56!2s350%20Corey%20Ave%2C%20St%20Pete%20Beach%2C%20FL%2033706!5e0!3m2!1sen!2sus!4v1694102817362!5m2!1sen!2sus",
+   "title": "",
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 352
+}

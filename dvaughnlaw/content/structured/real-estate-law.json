@@ -1,0 +1,175 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/",
+ "slug": "real-estate-law",
+ "template": "hub",
+ "family": "hub-landing",
+ "title": "Real Estate Law",
+ "seo": {
+  "title_tag": "Real Estate Law - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Real Estate Law - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "title": "Real Estate Law",
+    "tagline": "Accessible | Reliable | Practical Real Estate & Business Law Firm",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_4953121.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "card-grid",
+   "slots": {
+    "cards": [
+     {
+      "title": "Business Entity Formation",
+      "text": [
+       "The right legal counsel can make or break your business."
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/"
+     },
+     {
+      "title": "Litigation",
+      "text": [
+       "Conflict requires thoughtful representation."
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/litigation/"
+     },
+     {
+      "title": "Homestead",
+      "text": [
+       "Do you understand your homestead rights and benefits?"
+      ],
+      "href": "https://dvaughnlaw.com/homestead/"
+     },
+     {
+      "title": "Foreclosures",
+      "text": [
+       "Have you received the dreaded late payment notices from your lender?"
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/foreclosures/"
+     },
+     {
+      "title": "Real Estate Transactions",
+      "text": [
+       "Provides expertise and advice throughout your transaction."
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/real-estate-transactions/"
+     },
+     {
+      "title": "Land Trusts",
+      "text": [
+       "Land Trusts are an exceptional vehicle to hold title in Florida."
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/land-trusts/"
+     },
+     {
+      "title": "Deeds and Conveyances",
+      "text": [
+       "Make sure the transfer of your biggest asset is prepared properly!"
+      ],
+      "href": "https://dvaughnlaw.com/deeds-and-conveyances/"
+     },
+     {
+      "title": "Landlord / Tenant",
+      "text": [
+       "Represents landlords in residential and commercial landlord-tenant disputes."
+      ],
+      "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/"
+     },
+     {
+      "title": "PCCLB",
+      "text": [
+       "Do you have a construction licensing issue in Pinellas County?"
+      ],
+      "href": "https://dvaughnlaw.com/pcclb/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+     "alt": ""
+    },
+    "title": "Let’s work together for your Legal success.",
+    "level": 2,
+    "buttons": [
+     {
+      "text": "Schedule Consultation",
+      "href": "https://dvaughnlaw.com/consultation/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "image-text",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_4953121.jpg",
+      "alt": "Aeral Footage of Saint Petersburg Florida"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Whitneys-Notes.jpg",
+      "alt": "Whitney's Notes"
+     }
+    ],
+    "title": "About Vaughn law",
+    "level": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "We guarantee our agents are top-notch!"
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law is a boutique law firm that provides practical Real Estate Legal Solutions for your litigation and transactional needs. Vaughn Law offers its clients a different, more personalized, and service-oriented approach, by tailoring its representation to its client’s needs. At Vaughn Law , the client is always our first priority."
+     },
+     {
+      "type": "p",
+      "text": "We understand that this may be an overwhelming, unfamiliar, and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process. We offer valuable legal guidance while providing honest and straightforward opinions. We advise clients on all their options to provide them with the information necessary to make fully educated decisions."
+     },
+     {
+      "type": "p",
+      "text": "Our goal is to make the legal process a smooth one. Our experienced staff knows that every situation is unique. However, we have handled many legal cases throughout Florida."
+     },
+     {
+      "type": "p",
+      "text": "No matter your legal needs, Vaughn Law has your Real Estate Legal Solutions. You will receive legal expertise that is professional and personal. Contact us today to schedule your consultation."
+     }
+    ]
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2021/12/AMy-signing-scaled.jpg",
+     "alt": ""
+    },
+    "title": "STRAIGHT FORWARD LEGAL EXPERTISE",
+    "level": 2
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0
+ }
+}

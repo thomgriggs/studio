@@ -1,0 +1,65 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/foreclosure-auctions-and-tax-deed-sales/",
+ "slug": "investors__legal-services__foreclosure-auctions-and-tax-deed-sales",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Foreclosure Auctions and Tax Deed Sales",
+ "seo": {
+  "title_tag": "Foreclosure Auctions and Tax Deed Sales - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/foreclosure-auctions-and-tax-deed-sales/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Foreclosure Auctions and Tax Deed Sales - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Foreclosure Auctions and Tax Deed Sales"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Properties being sold at foreclosure auctions and tax deed sales are often desirable and appear to be an excellent deal. But are these properties really as good as they look, or are they too good to be true?"
+     },
+     {
+      "type": "p",
+      "text": "You should be aware that just because you purchased a property at a foreclosure auction or tax deed sale does not mean that it has free and clear title. Your ownership may be subject to a mortgage, liens, or judgments."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law has years of experience reviewing and evaluating the title of properties being sold at foreclosure auctions and tax deed sales, and can accurately advise you on potential title defects and issues before bidding on the property so you can accurately determine its value."
+     },
+     {
+      "type": "p",
+      "text": "If you have already purchased the property and have been made aware of a title defect, Vaughn Law can also assist you in resolving it. We have experience negotiating and resolving a variety of different types of title defects."
+     },
+     {
+      "type": "p",
+      "text": "If you have purchased a property at a tax deed sale and need to Quiet Title in order to sell it, we can assist you with that. We have successfully quieted title to many properties purchased at tax deed sales."
+     },
+     {
+      "type": "p",
+      "text": "Do not hesitate to contact Vaughn Law today and schedule a [free consultation.](https://dvaughnlaw.com/consultation/)"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "url": "https://dvaughnlaw.com/landlord-tenant-misconceptions/",
+ "slug": "landlord-tenant-misconceptions",
+ "template": "article",
+ "family": "post-article",
+ "title": "Landlord Tenant Misconceptions",
+ "seo": {
+  "title_tag": "Landlord Tenant Misconceptions - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/landlord-tenant-misconceptions/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Landlord Tenant Misconceptions - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Vaughn Voyage: Navigating Property Law and Estate Planning Renting a property can be a great option for both landlords and tenants, however, it’s important to understand the laws and regulations that govern landlord-tenant relationships in Florida to avoid common misconceptions that can lead to misunderstandings and legal issues. Let’s take a closer look at some […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Landlord Tenant Misconceptions",
+    "date": "2023-06-02"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Voyage: Navigating Property Law and Estate Planning"
+     },
+     {
+      "type": "p",
+      "text": "Renting a property can be a great option for both landlords and tenants, however, it’s important to understand the laws and regulations that govern landlord-tenant relationships in Florida to avoid common misconceptions that can lead to misunderstandings and legal issues. Let’s take a closer look at some of the most prevalent misconceptions regarding landlord-tenant law in the Sunshine State."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "variant": "lead-in",
+   "slots": {
+    "title": "Misconception 1: “I don’t need a written lease agreement.”",
+    "level": "bold",
+    "body": [
+     {
+      "type": "p",
+      "text": "In Florida, a lease mu be written for it to be enforceable. A written agreement clarifies the terms and conditions of the tenancy. It protects both parties by ensuring a clear understanding of their rights and obligations. Furthermore, if you are residing in a property where your annual lease has expired, it reverts to a month-to-month lease. Which means either party, including the landlord, can terminate it at any time with only 15 days’ notice prior to the end of the month."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "variant": "lead-in",
+   "slots": {
+    "title": "Misconception 2: “I can withhold rent for any reason.”",
+    "level": "bold",
+    "body": [
+     {
+      "type": "p",
+      "text": "Tenants sometimes believe they have the right to withhold rent if they encounter issues with the property or disputes with the landlord. Under Florida law, tenants cannot unilaterally withhold rent. Instead, they must follow specific procedures outlined in the state statutes, such as giving proper notice to the landlord and allowing a reasonable time for repairs."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "variant": "lead-in",
+   "slots": {
+    "title": "Misconception 3: “Landlords can evict tenants without notice.”",
+    "level": "bold",
+    "body": [
+     {
+      "type": "p",
+      "text": "Florida law requires landlords to provide written notice to tenants before initiating eviction proceedings. The type of notice and the length of time required depend on the circumstances. Proper notice is essential to protect the rights of both parties and ensure a fair and lawful eviction process. A landlord cannot, under any circumstances, lock a tenant out of the property without a court order to do so."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "variant": "lead-in",
+   "slots": {
+    "title": "Misconception 4: “Landlords have unlimited rights to enter the rental property.”",
+    "level": "bold",
+    "body": [
+     {
+      "type": "p",
+      "text": "Florida law provides tenants with the right to privacy and requires landlords to provide reasonable notice before entering the property, except in cases of emergencies. Typically, 12 hours’ notice is considered reasonable, unless otherwise specified in the lease agreement. Additionally, tenants may not unreasonably withhold consent to the Landlord to access the Property."
+     },
+     {
+      "type": "p",
+      "text": "It’s wise to consult with a knowledgeable real estate attorney to ensure compliance and to address any concerns or dispute. Contact Vaughn Law at #727-363-6100 and mention Paradise to schedule a consultation regarding your landlord-tenant issue, to ensure it is properly handled."
+     },
+     {
+      "type": "p",
+      "text": "You can read more on Paradise’s New FL monthly Magazine [HERE](https://www.paradisenewsfl.com/current-issue/)!"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

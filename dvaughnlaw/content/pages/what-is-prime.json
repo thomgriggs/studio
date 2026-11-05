@@ -1,0 +1,94 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-prime/",
+ "slug": "what-is-prime",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is \"Prime\"? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-prime/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is \"Prime\"? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The Prime Lending Rate – sometimes just called “Prime” - is the interest rate that banks charge each other for overnight loans. Some consumer rates – like ARMs – are set in relation to Prime. In the US, Prime is affected by the Federal Reserve lending rate to banks; historically, Prime is about 3 […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-04-04T23:25:27+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is “Prime”?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/onqouo4nut",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Prime Lending Rate – sometimes just called “Prime” - is the interest rate that banks charge each other for overnight loans. Some consumer rates – like ARMs – are set in relation to Prime.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the US, Prime is affected by the Federal Reserve lending rate to banks; historically, Prime is about 3 percent above the Fed rate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The video shows an example.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The Federal Reserve loans to Bank A at 1%",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bank A loans to Bank B at 4%",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Both banks – A & B – will recalculate variable-rate loans like ARMs on that 4% Prime figure.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "ARM rates are frequently defined as “% above Prime” – that gap is usually called the “margin” or “spread.” Just remember those 3 layers in Prime: Federal Reserve Bank A Bank B And finally, YOUR rate.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 138
+}

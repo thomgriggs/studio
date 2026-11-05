@@ -1,0 +1,101 @@
+{
+ "url": "https://dvaughnlaw.com/can-creditors-collect-information-beyond-the-6-required-pieces/",
+ "slug": "can-creditors-collect-information-beyond-the-6-required-pieces",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Can Creditors Collect Information Beyond The 6 Required Pieces? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/can-creditors-collect-information-beyond-the-6-required-pieces/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Can Creditors Collect Information Beyond The 6 Required Pieces? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "In addition to the required pieces: Name Income Social Security Number Property Address Estimated Property Value Mortgage Amount Sought a creditor may collect whatever additional information they deem necessary. However, as soon as you have provided the 6 required pieces, the creditor has 3 business days to provide a Loan Estimate for approved loans.",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T15:56:01+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Can Creditors Collect Information Beyond The 6 Required Pieces?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/ot81c1pdm4",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to the required pieces:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Name",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Social Security Number",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property Address",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estimated Property Value",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mortgage Amount Sought",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "a creditor may collect whatever additional information they deem necessary.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "However, as soon as you have provided the 6 required pieces, the creditor has 3 business days to provide a Loan Estimate for approved loans.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 63
+}

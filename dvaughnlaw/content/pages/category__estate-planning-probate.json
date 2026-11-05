@@ -1,0 +1,65 @@
+{
+ "url": "https://dvaughnlaw.com/category/estate-planning-probate/",
+ "slug": "category__estate-planning-probate",
+ "type": "category",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-06-04",
+ "seo": {
+  "title_tag": "Estate Planning / Probate Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/estate-planning-probate/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning / Probate Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h2",
+   "text": "[If You Can’t Speak for Yourself, Who Will?](https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/)",
+   "links": [
+    {
+     "text": "If You Can’t Speak for Yourself, Who Will?",
+     "href": "https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Imagine waking up in a hospital, unable to communicate. Doctors need to make urgent decisions about your care, but without the right legal documents, even your closest family members may have no...",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[Durable Power Of Attorney Explained: When It’s Valid And Why You Need One In Florida](https://dvaughnlaw.com/durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida/)",
+   "links": [
+    {
+     "text": "Durable Power Of Attorney Explained: When It’s Valid And Why You Need One In Florida",
+     "href": "https://dvaughnlaw.com/durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[The Importance Of Estate Planning: Protect Your Family’s Future With Estate Planning](https://dvaughnlaw.com/the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning/)",
+   "links": [
+    {
+     "text": "The Importance Of Estate Planning: Protect Your Family’s Future With Estate Planning",
+     "href": "https://dvaughnlaw.com/the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning/"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 77
+}

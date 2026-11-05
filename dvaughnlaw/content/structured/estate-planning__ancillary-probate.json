@@ -1,0 +1,188 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/ancillary-probate/",
+ "slug": "estate-planning__ancillary-probate",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Ancillary Probate",
+ "seo": {
+  "title_tag": "Ancillary Probate - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/ancillary-probate/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ancillary Probate - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ancillary Probate"
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "What Are the Best Ways to Avoid Ancillary Probate?",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "If you own property in more than one state, your estate could be subject to probate proceedings in each of those states—a process known as ancillary probate. This often means additional time, costs, and stress for your loved ones. Below are some of the most effective legal strategies to avoid ancillary probate and streamline the estate administration process:"
+     },
+     {
+      "type": "p",
+      "text": "**1. Create a Revocable Living Trust**\nA revocable living trust allows you to transfer ownership of your real estate and other assets into a trust during your lifetime. Upon your passing, the assets held in the trust are distributed directly to your beneficiaries—without the need for court involvement in any state."
+     },
+     {
+      "type": "p",
+      "text": "**Key Benefits:**"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Avoids probate and ancillary probate",
+        "children": []
+       },
+       {
+        "text": "Maintains privacy (unlike probate, which is public)",
+        "children": []
+       },
+       {
+        "text": "Allows continued control of assets during your lifetime",
+        "children": []
+       },
+       {
+        "text": "Easily amendable or revocable while you are alive",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "**2. Use an Enhanced Life Estate Deed (Lady Bird Deed)**"
+     },
+     {
+      "type": "p",
+      "text": "An **Enhanced Life Estate Deed**, often called a **Lady Bird Deed**, is a special type of deed recognized in a few states (including Florida) that allows you to retain full control of the property during your lifetime, including the right to sell, lease, or mortgage it. Upon your death, the property passes directly to the beneficiary named in the deed—without going through probate."
+     },
+     {
+      "type": "p",
+      "text": "**Why It’s Popular:**"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Avoids probate and ancillary probate",
+        "children": []
+       },
+       {
+        "text": "You retain full ownership and control during your life",
+        "children": []
+       },
+       {
+        "text": "No gift tax consequences upon signing",
+        "children": []
+       },
+       {
+        "text": "Easy and inexpensive compared to setting up a trust",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Lady Bird Deeds are especially useful for Florida residents with out-of-state beneficiaries or those seeking to simplify property transfers while preserving Medicaid eligibility"
+     },
+     {
+      "type": "p",
+      "text": "**3. Hold Property Jointly with Right of Survivorship**"
+     },
+     {
+      "type": "p",
+      "text": "Joint ownership with right of survivorship means that when one owner passes away, the surviving owner automatically receives full ownership of the property. This bypasses the probate process entirely."
+     },
+     {
+      "type": "p",
+      "text": "**Important Notes:**"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Must be titled correctly to take effect",
+        "children": []
+       },
+       {
+        "text": "Common for spouses or trusted co-owners",
+        "children": []
+       },
+       {
+        "text": "Does not allow control over who receives the property after both owners pass away",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Our legal team can review your deeds to ensure they are properly titled and offer guidance on whether joint ownership is appropriate for your estate plan."
+     },
+     {
+      "type": "p",
+      "text": "**4. Use a Limited Liability Company (LLC)**"
+     },
+     {
+      "type": "p",
+      "text": "Transferring real estate into an LLC can help you avoid ancillary probate while also offering liability protection and tax advantages. The LLC itself owns the property, and your membership interest in the LLC can be passed on through your trust or will without the need for probate in the state where the property is located."
+     },
+     {
+      "type": "p",
+      "text": "**Ideal For:**"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Real estate investors",
+        "children": []
+       },
+       {
+        "text": "Owners of rental or vacation properties in other states",
+        "children": []
+       },
+       {
+        "text": "Those seeking asset protection and streamlined estate administration",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Our Investor LLC and Legacy Protection Plans include LLC creation, deed preparation, and registered agent services, making this a seamless option for multi-property owners."
+     },
+     {
+      "type": "p",
+      "text": "**Take Control of Your Estate Planning**"
+     },
+     {
+      "type": "p",
+      "text": "Avoiding ancillary probate is not only about saving money—it’s about saving your loved ones from additional legal burdens during an already difficult time. Whether you choose a trust, Lady Bird Deed, or LLC, we’ll help you build a plan that protects your assets and honors your wishes."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

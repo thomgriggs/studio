@@ -1,0 +1,96 @@
+{
+ "url": "https://dvaughnlaw.com/what-will-the-trid-loan-estimate-tell-me/",
+ "slug": "what-will-the-trid-loan-estimate-tell-me",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "What Will The TRID Loan Estimate Tell Me? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-will-the-trid-loan-estimate-tell-me/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Will The TRID Loan Estimate Tell Me? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The Loan Estimate documents the essential facts and terms of an approved real estate loan. It includes: loan terms projected payments and loan costs cash and costs at closing time the services for which you CAN and CANNOT shop in relation to the loan summary information with which to compare this loan to others and […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:04:10+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Will The TRID Loan Estimate Tell Me?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/5i9k4z7cqj",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Loan Estimate documents the essential facts and terms of an approved real estate loan. It includes:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "loan terms",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "projected payments and loan costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "cash and costs at closing time",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "the services for which you CAN and CANNOT shop in relation to the loan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "summary information with which to compare this loan to others",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "and other important details such as appraisal, insurance, late payment, refinancing, loan assumption policy and whether this lender intends to service this loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Loan Disclosure is a dynamic form; it will include information that IS related to YOUR loan and may leave out information that is NOT so forms from different lenders or for different loans may not look identical.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 123
+}

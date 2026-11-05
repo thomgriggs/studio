@@ -1,0 +1,121 @@
+{
+ "url": "https://dvaughnlaw.com/cyber-security/",
+ "slug": "cyber-security",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Cyber Security",
+ "seo": {
+  "title_tag": "Cyber Security - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/cyber-security/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Cyber Security - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Cyber Security",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "video-split",
+   "slots": {
+    "title": "Protect Yourself From Cyber Fraud",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Watch the video or read below to learn how to protect yourself from cyber fraud."
+     }
+    ],
+    "url": "https://www.youtube.com/embed/ek4TwC9owwY?feature=oembed",
+    "video_title": "Protect Your Money from Wire Fraud Schemes When Buying a Home"
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "How Your Money Gets Stolen",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Watch the video or read below to learn how to protect yourself from cyber fraud."
+     }
+    ]
+   }
+  },
+  {
+   "module": "steps",
+   "slots": {
+    "items": [
+     {
+      "lead": "Hacked email",
+      "text": "– Hackers get access to the email account of someone involved in the transaction – the buyer, seller, real estate agent, mortgage lender, title agent, or other."
+     },
+     {
+      "lead": "Email from hacker",
+      "text": "– The hacker then emails that person to change the wiring or payment instructions without knowledge from the other parties."
+     },
+     {
+      "lead": "Consumer pays wrong account",
+      "text": "– If not questioned, the wrong account gets the down payment or other funds and the criminal gets away."
+     },
+     {
+      "lead": "Closing day",
+      "text": "– By the time closing day arrives and the mistake is realized, often the funds are long gone."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "How to Avoid Wire Fraud",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "**Rule 1: Always question emails that contain wiring instructions.**\nHackers have learned to exploit the real estate closing process to steal millions of dollars from people buying or selling a home."
+     },
+     {
+      "type": "p",
+      "text": "**Rule 2: Always call before sending any money.**\nWhen you do receive instructions on where to send money prior to closing, always call your contact person at the title company to verify. Then call your bank to verify as well."
+     },
+     {
+      "type": "p",
+      "text": "**Rule 3: Always call after sending money.**\nIt’s always a good idea to call right after money is sent. That way, you can verify that it was received by the correct recipient."
+     },
+     {
+      "type": "p",
+      "text": "**Rule 4: Act immediately if anything seems unusual.**\nContact your bank, mortgage company, and title company immediately if anything is in question. If something is wrong, you may need to contact your local FBI office."
+     },
+     {
+      "type": "p",
+      "text": "You can never be too careful when it comes to cyber security and wire fraud. Vaughn Law recommends that you always call and confirm wiring instructions prior to sending any funds to anyone via wire transfer. In fact, Vaughn Law will only provide you with a partial account number via email so you have to call and confirm the information you received in order to obtain the entire account number."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

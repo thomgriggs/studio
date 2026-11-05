@@ -1,0 +1,33 @@
+{#
+MODULE: hero
+PURPOSE: Top of the home page and practice-area hubs. Full-bleed waterfront photo under a charcoal wash, left-aligned serif title, one line, then a row of square buttons.
+SLOTS: eyebrow, title (h1), tagline, image (src, alt), images[src, alt] (people-first photos, used by the proposed home page), inset (src, alt; a small framed photo), actions[text, href]. Empty slots are left out. With `images` the hero becomes the photo-led home hero: copy on charcoal left, the first photo bleeding off the right edge, the `inset` photo (the office sign) as a framed square over the seam.
+SQUARESPACE: Section at the top of the page with a background image and dark overlay (section styles), a Heading block set to H1, a Text block, and Button blocks in one row (first Primary, the rest Secondary). Home variant: a two-column section (text left, Image block right with the section set edge to edge) plus a small Image block with a border overlapping the corner (negative margin). No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+{% if s.images %}
+<section class="m m-hero m-hero--split" data-module="hero" data-tone="dark">
+  <div class="hsplit">
+    <div class="hsplit__copy">
+      {{ eyebrow(s.eyebrow) }}
+      {{ heading(1, s.title, 1) }}
+      {% if s.tagline %}<p class="hero__tag">{{ s.tagline|md }}</p>{% endif %}
+      {% if s.actions %}<ul class="actions" role="list">{% for a in s.actions %}<li><a class="btn{{ '' if loop.first else ' btn--outline' }}" href="{{ a.href|href }}">{{ a.text }}</a></li>{% endfor %}</ul>{% endif %}
+    </div>
+    <div class="hsplit__photo">
+      <img src="{{ s.images[0].src }}" alt="{{ s.images[0].alt }}">
+      {% if s.inset %}<img class="hsplit__inset" src="{{ s.inset.src }}" alt="{{ s.inset.alt }}">{% endif %}
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="m m-hero{{ ' m-hero--tall' if s.actions }}" data-module="hero" data-tone="dark"{% if s.image %} style="--bg:url('{{ s.image.src }}')"{% endif %}>
+  <div class="wrap">
+    <div class="hero__copy">
+      {{ heading(1, s.title, 1) }}
+      {% if s.tagline %}<p class="hero__tag">{{ s.tagline|md }}</p>{% endif %}
+      {% if s.actions %}<ul class="actions" role="list">{% for a in s.actions %}<li><a class="btn{{ '' if loop.first else ' btn--outline' }}" href="{{ a.href|href }}">{{ a.text }}</a></li>{% endfor %}</ul>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}

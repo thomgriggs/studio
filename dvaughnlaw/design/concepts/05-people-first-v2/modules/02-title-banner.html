@@ -1,0 +1,21 @@
+{#
+MODULE: title-banner
+PURPOSE: Page title at the top of every inner page: centered navy serif title on a pale ground. A page's own photo (or, on a video post, the video poster) becomes a rounded tile that straddles the banner's bottom edge. Posts use the left-aligned reading-column form: title, then a byline row with the date (and the category link when the post has one) on the pale block.
+SLOTS: title (h1), image (optional), date (posts only, shown as e.g. November 24, 2025). The page shell may pass `layout` = post, `related` (category) and `video` (YouTube URL shown as the straddling poster).
+SQUARESPACE: Section with a pale section colour and a Heading block set to H1 (centered); for posts the title, date and category are the blog post's own header (Blog post layout). The straddling tile is an Image or Video block pulled up over the section edge. No code.
+#}
+{% from "_macros.html" import heading, poster %}
+{% set post = layout == "post" %}
+<section class="m m-banner{{ ' m-banner--post' if post }}{{ ' m-banner--tile' if (s.image or video) and not post or video }}{{ ' m-banner--video' if video }}" data-module="title-banner" data-tone="pale">
+  <div class="wrap{{ ' wrap--post' if post }}">
+    {{ heading(1, s.title, 1) }}
+    {% if post and (s.date or related) %}
+    <div class="byline">
+      {% if s.date %}<p class="byline__item"><span class="byline__k">Published</span><time datetime="{{ s.date }}">{{ s.date|longdate }}</time></p>{% endif %}
+      {% if related %}<p class="byline__item"><span class="byline__k">Category</span><a href="{{ related.category.url|href }}">{{ related.category.title }}</a></p>{% endif %}
+    </div>
+    {% elif s.date %}<p class="eyebrow"><time datetime="{{ s.date }}">{{ s.date|longdate }}</time></p>{% endif %}
+  </div>
+  {% if video %}<div class="wrap wrap--mid banner__media">{{ poster(video, s.title) }}</div>
+  {% elif s.image and not post %}<div class="wrap wrap--mid banner__media"><img class="hero__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}"></div>{% endif %}
+</section>

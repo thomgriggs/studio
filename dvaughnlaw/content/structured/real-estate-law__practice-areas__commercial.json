@@ -1,0 +1,75 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/commercial/",
+ "slug": "real-estate-law__practice-areas__commercial",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Commercial",
+ "seo": {
+  "title_tag": "Commercial - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/commercial/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Commercial - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Commercial"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law represents landlord and tenants alike in commercial landlord tenant disputes. We understand that your rental property may be your livelihood and will work hard to protect it! We are knowledgeable and experienced in Florida commercial landlord tenant law.",
+     "Vaughn Law has represented a variety of different landlord and tenants in commercial landlord tenant disputes. These include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Commercial evictions"
+     },
+     {
+      "text": "Claims for unpaid rent"
+     },
+     {
+      "text": "Claims for non-monetary defaults"
+     },
+     {
+      "text": "Property damage disputes"
+     },
+     {
+      "text": "Maintenance disputes"
+     },
+     {
+      "text": "Illegal use of the property"
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "Make sure you have expert legal guidance in your landlord/tenant dispute. Request your [free consultation](https://dvaughnlaw.com/consultation/) with Vaughn Law today."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

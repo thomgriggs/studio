@@ -1,0 +1,96 @@
+{
+ "url": "https://dvaughnlaw.com/services/realtors/",
+ "slug": "services__realtors",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Realtors",
+ "seo": {
+  "title_tag": "Realtors - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/services/realtors/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Realtors - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Realtors"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "You need a trustworthy partner who understands your needs and works hard to assist with a timely closing.",
+     "When you work with Vaughn Law your job is easier. Realtors enjoy:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "One single point of contact who makes it a point to return calls as soon as possible"
+     },
+     {
+      "text": "Full Service on every transaction"
+     },
+     {
+      "text": "Timely and accurate title commitments"
+     },
+     {
+      "text": "Superior communication"
+     },
+     {
+      "text": "Knowledgeable and professional staff"
+     },
+     {
+      "text": "Contract upload capability or drop off"
+     },
+     {
+      "text": "Advanced technology to ensure ease of the transaction"
+     },
+     {
+      "text": "Ability to assist with correcting title issues and preparing legal documents necessary for closing"
+     },
+     {
+      "text": "Experience dealing with 1031 exchanges"
+     },
+     {
+      "text": "Fast payment of commission"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "If you represent a buyer or seller in a real estate transaction, you can often expect to receive your check at closing or the following business day after the transaction closes, depending upon the time of closing. If you are unable to attend closing, please contact us to make arrangements for your funds to be wired to you upon the completion of closing. We know that Realtors operate mostly on commission, so it is our commitment to you to handle these details as quickly as possible to get you paid!"
+     },
+     {
+      "type": "p",
+      "text": "At Vaughn Law it is our goal to assist all parties in getting to closing! [Contact us](https://dvaughnlaw.com/vaughnlaw/contact/) to learn more about how Vaughn Law can simplify your closings."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

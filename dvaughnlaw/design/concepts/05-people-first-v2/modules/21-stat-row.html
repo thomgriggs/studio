@@ -1,0 +1,16 @@
+{#
+MODULE: stat-row
+PURPOSE: Two to four short facts side by side as white tiles on a tinted band, each a figure (when the live text starts with one) and a label in the serif, with a sage check disc when there is no figure. Fires only where the live page has a run of short blurbs with no body text (the workshop's "Completely Free / No Obligation / All Ages Welcome / Seats Are Limited").
+SLOTS: eyebrow, title, level, items[value, label].
+SQUARESPACE: Section with a row of 2 to 4 Text blocks (large heading style for the figure, small paragraph for the label) or a Summary block in a grid. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-stats" data-module="stat-row" data-tone="{{ tone }}">
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ul class="stats stats--{{ s["items"]|length }}" role="list">
+      {% for i in s["items"] %}<li class="stat">{% if i.value %}<span class="stat__value">{{ i.value }}</span>{% else %}<span class="stat__tick" aria-hidden="true"></span>{% endif %}<span class="stat__label">{{ i.label|md }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

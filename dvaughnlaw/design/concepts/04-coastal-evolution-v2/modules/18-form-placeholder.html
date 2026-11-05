@@ -1,0 +1,9 @@
+{#
+MODULE: form-placeholder
+PURPOSE: Marks where a form goes. The old site's forms (Lawmatics intake, contact) are rebuilt natively; nothing is collected here.
+SLOTS: note (what the old form was).
+SQUARESPACE: Section with a native Form block (fields, notifications, storage). No code.
+#}
+<section class="m m-form" data-module="form-placeholder" data-tone="b">
+  <div class="wrap"><div class="formbox" role="note"><strong>Form</strong>{% if s.note %}<br><small>{{ s.note }}</small>{% endif %}</div></div>
+</section>

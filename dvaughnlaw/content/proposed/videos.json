@@ -1,0 +1,185 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/resources/videos/",
+  "slug": "videos",
+  "template": "content-page",
+  "family": "text-page",
+  "title": "Videos",
+  "seo": {
+    "title_tag": "Videos | Vaughn Law, PLLC",
+    "meta_description": "Short videos from Danielle Vaughn and the Vaughn Law team on Florida real estate, landlord and tenant matters, and estate planning.",
+    "h1_count": 1
+  },
+  "_about": "Proposed Videos page: replaces the old video library (112 links to the vendor stock posts and the YouTube post pages, all dropped). Only the firm's own YouTube clips (content/videos.json), newest first, each a standard YouTube video card that opens on YouTube in a new tab. One grid, not grouped by topic: the titles overlap too much (landlord and tenant, estate planning and real estate) for obvious groups.",
+  "verified": [
+    "Channel: Vaughn Law, https://www.youtube.com/@Vaughnlawstpete (YouTube oEmbed author for all 12 videos the live site embeds; channel id UCipcAuPJWQoWqi3CnbVCzag)",
+    "Video titles and dates verbatim from YouTube (oEmbed, channel RSS feed, watch pages); 22 videos = 12 embedded on the live site + the newest 15 in the channel feed, 5 in both",
+    "Featured video: ekRcoj3fKWs, the intro video the live site embeds (post 'Discover Why Vaughn Law Is Your Top Choice...'), published on the channel 2024-04-26"
+  ],
+  "confirm": [
+    "Page title 'Videos' and the button 'Visit our YouTube channel' (new functional copy)",
+    "The channel is not linked anywhere on the live site; it was found through the embedded videos. Confirm @Vaughnlawstpete is the firm's official channel and that every video listed should be public on the site (it includes #shorts and a 'Thank You for Scheduling Your Consultation' video)",
+    "Older channel videos not in the RSS feed (it lists only the newest 15) are missing unless the live site embedded them; the client can add any others",
+    "Meta title and description are written for this page"
+  ],
+  "modules": [
+    {
+      "module": "title-banner",
+      "slots": {
+        "title": "Videos"
+      }
+    },
+    {
+      "module": "video",
+      "slots": {
+        "url": "https://www.youtube.com/embed/ekRcoj3fKWs",
+        "title": "Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida"
+      },
+      "variant": "poster"
+    },
+    {
+      "module": "video-grid",
+      "slots": {
+        "title": "All videos",
+        "videos": [
+          {
+            "title": "Your Family Deserves More Than a Vacation Plan 💼",
+            "href": "https://www.youtube.com/watch?v=kEtuQAd-qtU",
+            "date": "2026-03-27",
+            "video": "https://www.youtube.com/embed/kEtuQAd-qtU"
+          },
+          {
+            "title": "The most important part of your trust, funding it!",
+            "href": "https://www.youtube.com/watch?v=jc_kTAVi7fE",
+            "date": "2026-03-23",
+            "video": "https://www.youtube.com/embed/jc_kTAVi7fE"
+          },
+          {
+            "title": "Facing a Lawsuit? What You Need to Know About the Litigation Process",
+            "href": "https://www.youtube.com/watch?v=BXW3Fx0aKuA",
+            "date": "2026-02-10",
+            "video": "https://www.youtube.com/embed/BXW3Fx0aKuA"
+          },
+          {
+            "title": "Thank You for Scheduling Your Consultation with Vaughn Law | What Happens Next",
+            "href": "https://www.youtube.com/watch?v=QN3r9TKaQzA",
+            "date": "2026-01-19",
+            "video": "https://www.youtube.com/embed/QN3r9TKaQzA"
+          },
+          {
+            "title": "Danielle Vaughn, Board Certified Real Estate Attorney and owner of Vaughn Law PLLC",
+            "href": "https://www.youtube.com/watch?v=LKK1Uzrq4ec",
+            "date": "2025-12-09",
+            "video": "https://www.youtube.com/embed/LKK1Uzrq4ec"
+          },
+          {
+            "title": "What happens if your tenant cannot pay the rent?",
+            "href": "https://www.youtube.com/watch?v=IsNXzmJxrr0",
+            "date": "2024-09-25",
+            "video": "https://www.youtube.com/embed/IsNXzmJxrr0"
+          },
+          {
+            "title": "Durable Power Of Attorney Explained: When It’s Valid And Why You Need One In Florida",
+            "href": "https://www.youtube.com/watch?v=s7XckJYUlO0",
+            "date": "2024-08-22",
+            "video": "https://www.youtube.com/embed/s7XckJYUlO0"
+          },
+          {
+            "title": "Florida Homestead Law & Homestead Exemption Explained: Protect Your Property & Spousal Rights",
+            "href": "https://www.youtube.com/watch?v=-ZAfyS8dKzw",
+            "date": "2024-08-21",
+            "video": "https://www.youtube.com/embed/-ZAfyS8dKzw"
+          },
+          {
+            "title": "How To Serve Notice Of Non-Payment Of Rent: Proper Procedure For Landlords & Eviction Tips",
+            "href": "https://www.youtube.com/watch?v=nWVW4B72kfE",
+            "date": "2024-08-21",
+            "video": "https://www.youtube.com/embed/nWVW4B72kfE"
+          },
+          {
+            "title": "Eviction Steps After Court Judgment: What Landlords Must Do | #shorts",
+            "href": "https://www.youtube.com/watch?v=O5gkH8zWofg",
+            "date": "2024-08-21",
+            "video": "https://www.youtube.com/embed/O5gkH8zWofg"
+          },
+          {
+            "title": "Why Your Landlord Can Raise Rent: Facts About Rent Hikes & Tenant Rights",
+            "href": "https://www.youtube.com/watch?v=IdZt7PQac1I",
+            "date": "2024-08-21",
+            "video": "https://www.youtube.com/embed/IdZt7PQac1I"
+          },
+          {
+            "title": "How To Avoid Probate: How Estate Planning Can Save You Time, Money, And Family Conflicts | #shorts",
+            "href": "https://www.youtube.com/watch?v=HFJ7gljWPvs",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/HFJ7gljWPvs"
+          },
+          {
+            "title": "Why Do You Must Need Estate Planning: How To Protect Your Assets And Avoid Probate | #shorts",
+            "href": "https://www.youtube.com/watch?v=v2LahucSAXo",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/v2LahucSAXo"
+          },
+          {
+            "title": "Deed Transfers Explained: Key Issues Before Transferring Property Titles In Florida",
+            "href": "https://www.youtube.com/watch?v=hZ-6oyWfP80",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/hZ-6oyWfP80"
+          },
+          {
+            "title": "Why Landlords Should Never Accept Partial Rent: Eviction Process Explained | #shorts",
+            "href": "https://www.youtube.com/watch?v=ggFwFDJzoqM",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/ggFwFDJzoqM"
+          },
+          {
+            "title": "The Importance Of Estate Planning: Protect Your Family's Future With Estate Planning",
+            "href": "https://www.youtube.com/watch?v=kFP-C57h2sg",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/kFP-C57h2sg"
+          },
+          {
+            "title": "Foreclosure Property Pitfalls: Hidden Liens, Title Issues, and More",
+            "href": "https://www.youtube.com/watch?v=eLV191AQAlI",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/eLV191AQAlI"
+          },
+          {
+            "title": "Florida Landlord-Tenant Laws Explained: Avoid Eviction, Rent Increase, and Lease Renewal Pitfalls",
+            "href": "https://www.youtube.com/watch?v=DtrW2icVx_c",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/DtrW2icVx_c"
+          },
+          {
+            "title": "Why Your Spouse Must Sign The Mortgage: Spousal Rights & Mortgage Laws Explained",
+            "href": "https://www.youtube.com/watch?v=9zdFHzNagqs",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/9zdFHzNagqs"
+          },
+          {
+            "title": "What Is The Title Insurance? Protect Your Real Estate Investment",
+            "href": "https://www.youtube.com/watch?v=6EuboiPKtDg",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/6EuboiPKtDg"
+          },
+          {
+            "title": "Real Estate Litigation Explained: Resolving Contract Disputes And Property Issues",
+            "href": "https://www.youtube.com/watch?v=TVbTayZuGuk",
+            "date": "2024-04-30",
+            "video": "https://www.youtube.com/embed/TVbTayZuGuk"
+          },
+          {
+            "title": "Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida",
+            "href": "https://www.youtube.com/watch?v=ekRcoj3fKWs",
+            "date": "2024-04-26",
+            "video": "https://www.youtube.com/embed/ekRcoj3fKWs"
+          }
+        ],
+        "more": {
+          "text": "Visit our YouTube channel",
+          "href": "https://www.youtube.com/@Vaughnlawstpete"
+        }
+      }
+    }
+  ]
+}

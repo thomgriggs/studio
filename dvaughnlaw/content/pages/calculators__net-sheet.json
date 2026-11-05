@@ -1,0 +1,226 @@
+{
+ "url": "https://dvaughnlaw.com/calculators/net-sheet/",
+ "slug": "calculators__net-sheet",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2018-02-01",
+ "seo": {
+  "title_tag": "Net Sheet - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/calculators/net-sheet/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Net Sheet - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2021/12/Outside-group-2-min-scaled.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h1",
+   "text": "Net Sheet",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur tempor diam, nec facilisis dolor vestibulum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam blandit nisl quis elit commodo rutrum. Praesent vitae sem nunc. Donec non viverra lorem. Suspendisse mi mauris, pellentesque at mauris rhoncus, elementum facilisis sem. Vivamus ultrices elementum nisl, quis bibendum lorem varius sit amet. Ut pellentesque maximus ante, et ornare enim elementum in.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Sed id vestibulum ligula. Nulla id leo ut dolor eleifend vehicula. Curabitur vestibulum, urna nec maximus pretium, diam justo imperdiet urna, in tempor est arcu nec eros. Mauris fringilla tortor sit amet justo venenatis venenatis. Phasellus ac lobortis dolor, rutrum congue est. Suspendisse potenti. Mauris quis enim efficitur, ornare orci sed, tincidunt tellus. Mauris quis placerat nisi, vitae eleifend libero. Quisque ac magna a diam condimentum congue eget et justo. Nunc scelerisque venenatis odio, vel pellentesque orci tempor sit amet. Nullam tempor libero at tortor venenatis mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec mauris ut ante tincidunt lacinia. Nullam ultrices suscipit mi ac fringilla. Suspendisse laoreet massa sed porttitor hendrerit. Suspendisse vestibulum augue vel felis efficitur auctor.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Aliquam eu accumsan neque. Nunc enim nulla, convallis quis ullamcorper ut, feugiat in magna. Pellentesque fermentum eget diam id fringilla. Donec tincidunt dignissim orci, et commodo purus aliquam non. Nulla pellentesque condimentum quam, sed suscipit dui dictum a. Quisque aliquam nulla ac sapien ultrices convallis. Etiam nec feugiat ligula. Curabitur sed justo auctor, molestie risus ut, pretium enim. Aenean vitae hendrerit arcu. Pellentesque sollicitudin metus lacus, vitae faucibus nibh suscipit id. Ut malesuada dictum suscipit. Phasellus commodo vel diam a vulputate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Realtors",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/realtors/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Consumers",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/consumers/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Lenders",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/lenders/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Get in Touch",
+   "links": [],
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Phone: [(727) 223-6080](tel:(727) 223-6080)\nEmail: [Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:(727) 223-6080"
+    },
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Order Title",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/order-title/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Our Partners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-02.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-01.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-02.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-01.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps?q=27.9429265,-82.45176700000002",
+   "title": "Amalie Arena",
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Amalie Arena",
+   "links": [],
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "401 Channelside Dr<br>\n\nTampa, FL 33602",
+   "links": [],
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Our Location",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "405 6th Street South, Suite 102,\n\nSaint Petersburg, FL 33701",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Open Hours",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Mon-Fri:** 8:00am - 5:00pm\n\n**Weekends:** By Appointment",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Contact Us",
+   "href": "",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Order Title",
+   "href": "",
+   "is_button": true,
+   "region": "main"
+  }
+ ],
+ "word_count": 327
+}

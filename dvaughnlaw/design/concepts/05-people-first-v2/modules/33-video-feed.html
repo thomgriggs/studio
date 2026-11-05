@@ -1,0 +1,26 @@
+{#
+MODULE: video-feed
+PURPOSE: The firm's newest videos as a feature: a centered heading, one large rounded poster card (big round sage play button, date, serif title) beside two smaller horizontal cards stacked next to it, all on a soft sage ground, and a pill button to the Videos page. The whole card opens the video on YouTube in a new tab.
+SLOTS: eyebrow, title, text (optional), videos[title, href, date, video (YouTube embed or watch URL)], more[text, href]. The first video is the large one; with fewer than three the cards simply fill the row.
+SQUARESPACE: Section with a soft colour: centered Heading, then a Summary block (feature or grid layout, video thumbnails, title + date) pointed at a video collection, or a Video block for the lead video beside two Image blocks with captions; one Button block. No code for the grid; the round play button is the Video block's own overlay.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-vfeed" data-module="video-feed" data-tone="{{ tone }}" aria-labelledby="vfeed-title">
+  <div class="wrap">
+    <div class="m__head">{{ eyebrow(s.eyebrow) }}<h2 id="vfeed-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% if s.text %}<p class="vfeed__text">{{ s.text|md }}</p>{% endif %}</div>
+    <ul class="vfeed" role="list">
+      {% for v in s.videos %}{% set id = v.video|ytid %}
+      <li class="vcard{{ ' vcard--lead' if loop.first and s.videos|length > 1 }}">
+        <a class="vcard__link" href="{{ v.href|href }}"{% if "youtube.com" in v.href %} target="_blank" rel="noopener"{% endif %}>
+          <span class="vcard__poster"><img src="https://i.ytimg.com/vi/{{ id }}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vcard__body">
+            {% if v.date %}<span class="vcard__date"><time datetime="{{ v.date }}">{{ v.date|longdate }}</time></span>{% endif %}
+            <span class="vcard__title">{{ v.title }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if s.more %}<p class="feed__more"><a class="btn btn--ghost" href="{{ s.more.href|href }}">{{ s.more.text }}</a></p>{% endif %}
+  </div>
+</section>

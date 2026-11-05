@@ -1,0 +1,21 @@
+{#
+MODULE: contact-band
+PURPOSE: The page's one closing contact band: a short heading, a line, the primary button, and the firm's real address, phone and email (from the shared contact block) in a soft panel. The page's navy band; it replaces the global closing band on pages that carry their own (`own_closing`).
+SLOTS: title, text, lines[label, text, href] (filled from the live site's shared contact block: address, phone, email), button[text, href].
+SQUARESPACE: Section with a dark (navy) colour: Heading + Text + Button on one side, Text blocks (address, tel:/mailto: links) in a lighter rounded block on the other. In Squarespace this can also be the site footer section, shown on every page. No code.
+#}
+<section class="closing" data-module="contact-band" aria-labelledby="closing-title">
+  <div class="wrap closing__grid">
+    <div class="closing__main">
+      <h2 id="closing-title" data-orig-level="2">{{ s.title|md }}</h2>
+      {% if s.text %}<p>{{ s.text|md }}</p>{% endif %}
+      {% if s.button %}<p class="actions"><a class="btn btn--on-navy" href="{{ s.button.href|href }}">{{ s.button.text }}</a></p>{% endif %}
+    </div>
+    {% if s.lines %}
+    <dl class="closing__lines">
+      {% for l in s.lines %}<div><dt>{{ l.label }}</dt><dd>{% if l.href %}<a href="{{ l.href }}">{{ l.text }}</a>{% else %}{{ l.text|replace('\n', ' ')|md }}{% endif %}</dd></div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,96 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-additional-information-can-be-important/",
+ "slug": "understanding-your-loan-additional-information-can-be-important",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2017-01-07",
+ "seo": {
+  "title_tag": "Understanding Your Loan: Additional Information Can Be Important - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-your-loan-additional-information-can-be-important/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan: Additional Information Can Be Important - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Page 4 of your Closing Disclosure is important. It is NOT just standardized form information that is identical for every loan. Review these terms: Assumption: can this loan be transferred to another person if you sell or transfer the property? Demand: can the lender require early repayment of the loan? Late Payments: what penalty, after […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2017-01-07T06:07:45+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan: Additional Information Can Be Important",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/hns2b0ob55",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Page 4 of your Closing Disclosure is important. It is NOT just standardized form information that is identical for every loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Review these terms:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Assumption: can this loan be transferred to another person if you sell or transfer the property?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Demand: can the lender require early repayment of the loan?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Late Payments: what penalty, after what period, applies?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Negative Amortization: does this loan schedule or allow payments that do NOT fully cover the interest due, resulting in increased loan principal?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Partial Payments: what is THIS lender’s policy?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You should also review Escrow Account details to understand whether you will pay additional property costs via regular Escrow Account payments or handle them yourself directly.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 121
+}

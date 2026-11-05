@@ -1,0 +1,17 @@
+{#
+MODULE: steps
+PURPOSE: A short ordered list (3 to 6 items, each a lead-in plus at most about 40 words) as a row of white cards on a tinted band, each led by a numbered soft-sage disc and a serif lead-in. In a narrow reading column (articles) the cards stack as rows. Longer ordered lists stay in the list module.
+SLOTS: eyebrow, title, level, depth, items[lead, text], actions[text, href] (optional buttons under the steps). Variant `process`: the home page's three-step "How it starts": larger discs joined by small arrows, and the primary button centered beneath.
+SQUARESPACE: Section with an optional Heading block and a row of Text blocks (one per step, the number typed in a small sage-coloured circle image or a large Heading 3 numeral). No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-steps{{ ' m-steps--process' if variant == 'process' }}" data-module="steps" data-tone="{{ tone }}">
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(s.depth or 2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ol class="stepcards stepcards--{{ s["items"]|length }}" role="list">
+      {% for i in s["items"] %}<li class="stepcard">{% if i.lead and i.text[:1]|lower == i.text[:1] and i.text[:1]|upper != i.text[:1] %}<p><strong class="steps__lead steps__lead--run">{{ i.lead|md }}</strong> {{ i.text|md }}</p>{% else %}{% if i.lead %}<strong class="steps__lead">{{ i.lead|md }}</strong>{% endif %}<p>{{ i.text|md }}</p>{% endif %}</li>
+      {% endfor %}
+    </ol>
+    {% if s.actions %}<p class="actions steps__actions">{% for a in s.actions %}<a class="btn" href="{{ a.href|href }}">{{ a.text }}</a>{% endfor %}</p>{% endif %}
+  </div>
+</section>

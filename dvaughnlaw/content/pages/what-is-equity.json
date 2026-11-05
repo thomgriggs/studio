@@ -1,0 +1,79 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-equity/",
+ "slug": "what-is-equity",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is Equity? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-equity/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is Equity? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Equity is the value YOU own in property such as a house. It’s the difference between what’s OWED and what the property is WORTH in the current market. The example this video shows – you have a house worth $300,000 today and you owe the bank $200,000. Your equity would be $100,000. If the […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-04-04T23:31:43+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is Equity?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/569478b43g",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Equity is the value YOU own in property such as a house. It’s the difference between what’s OWED and what the property is WORTH in the current market.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The example this video shows – you have a house worth $300,000 today and you owe the bank $200,000. Your equity would be $100,000.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If the house is valued at $500,000 in five years, and you still owe $150,000 your equity will be $350,000.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Equity grows if the property value goes up or if the amount owed goes down. The key thing to remember, simple as it sounds, is that you “own” increases in value. The bank’s loan doesn’t go up if the home’s value goes up.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Equity in a home can be used as collateral for loans but a house is not a piggy bank. Home equity can become a key financial asset over time; treat it wisely.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 150
+}

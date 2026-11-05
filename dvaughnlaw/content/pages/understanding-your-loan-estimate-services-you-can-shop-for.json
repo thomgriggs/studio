@@ -1,0 +1,91 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-can-shop-for/",
+ "slug": "understanding-your-loan-estimate-services-you-can-shop-for",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Your Loan Estimate: Services You CAN Shop For - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-can-shop-for/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan Estimate: Services You CAN Shop For - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "These costs are paid to outside parties and YOU are free to shop and compare providers for a variety of services. These might include pest inspection, or a survey to verify property lines or a range of Title-related services. Title services might include: a Lender’s title policy, which protects their legal interest in their loan collateral- […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:26:37+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan Estimate: Services You CAN Shop For",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/sx7eii77s9",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These costs are paid to outside parties and YOU are free to shop and compare providers for a variety of services. These might include pest inspection, or a survey to verify property lines or a range of Title-related services.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Title services might include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "a Lender’s title policy, which protects their legal interest in their loan collateral- usually the property itself",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "settlement agent fees, paid to the individual or company responsible for facilitating the final transaction",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Title Search, which clarifies and documents legal ownership of the property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "a title insurance binder, which allows potential future use of the current title search results, conditions and exclusions for a short period to lower the cost of future title insurance.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you select service providers from the list provided by the lender, their fees cannot change by more than 10% between the Loan Estimate and the final Loan Disclosure. If you select other providers the lender is not responsible for changes in those costs.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 169
+}

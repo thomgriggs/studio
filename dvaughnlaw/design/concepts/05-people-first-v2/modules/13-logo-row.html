@@ -1,0 +1,11 @@
+{#
+MODULE: logo-row
+PURPOSE: A row of award badges or partner logos on white tiles, each linked where the old site linked it. The page shell places it last, immediately before the closing call-to-action band. Detected as consecutive logo or badge images.
+SLOTS: logos[src, alt, href].
+SQUARESPACE: Section with an Image block per logo in a one-row grid (or a gallery section, strip layout). Links on each image. No code.
+#}
+<section class="m m-logos" data-module="logo-row" data-tone="{{ tone }}">
+  <div class="wrap">
+    <ul class="logos" role="list">{% for l in s.logos %}<li>{% if l.href %}<a href="{{ l.href }}" target="_blank" rel="noopener"><img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy"></a>{% else %}<img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy">{% endif %}</li>{% endfor %}</ul>
+  </div>
+</section>

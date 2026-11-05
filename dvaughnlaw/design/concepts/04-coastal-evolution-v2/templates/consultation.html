@@ -1,0 +1,4 @@
+{# Page shell: consultation flow (step 1 choice cards, step 2 form, confirmation). Same flow as content-page; the page carries its own contact details, so no global closing band. #}
+{% extends "_base.html" %}
+{% block main %}{% for m in page.modules %}{{ render_module(m, page, {"root": root}) }}
+{% endfor %}{% endblock %}

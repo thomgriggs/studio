@@ -1,0 +1,238 @@
+{
+ "url": "https://dvaughnlaw.com/how-to-hurricane-proof-your-estate-plan/",
+ "slug": "how-to-hurricane-proof-your-estate-plan",
+ "template": "article",
+ "family": "post-article",
+ "title": "How to Hurricane-Proof Your Estate Plan",
+ "seo": {
+  "title_tag": "How to Hurricane-Proof Your Estate Plan - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-to-hurricane-proof-your-estate-plan/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How to Hurricane-Proof Your Estate Plan - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "When preparing for hurricane season, most people think about securing their homes, stocking up on supplies, and checking weather forecasts. While those steps are essential, there’s another area that often gets overlooked – your estate plan. In the chaos of a natural disaster, having a secure and up-to-date estate plan can provide peace of mind […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "How to Hurricane-Proof Your Estate Plan",
+    "date": "2025-07-21"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "When preparing for hurricane season, most people think about securing their homes, stocking up on supplies, and checking weather forecasts. While those steps are essential, there’s another area that often gets overlooked – your estate plan. In the chaos of a natural disaster, having a secure and up-to-date estate plan can provide peace of mind and ensure that your family is protected, no matter what happens.",
+     "Here’s how you can hurricane-proof your estate plan and be truly ready for anything:"
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Review and Update Your Estate Planning Documents",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Before hurricane season peaks, take time to review your estate planning documents, including:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Last Will and Testament",
+        "children": []
+       },
+       {
+        "text": "Power of Attorney",
+        "children": []
+       },
+       {
+        "text": "Healthcare Surrogate Designation",
+        "children": []
+       },
+       {
+        "text": "Living Will",
+        "children": []
+       },
+       {
+        "text": "Revocable Living Trust (if applicable)",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Make sure that each document still reflects your current wishes and that the individuals you’ve named to carry out your instructions—such as your personal representative, trustee, agent, or healthcare surrogate—are still the best choices. Circumstances change, and someone you trusted five years ago may no longer be available or suitable."
+     },
+     {
+      "type": "p",
+      "text": "If a storm strikes and you’re hospitalized, displaced, or otherwise incapacitated, you’ll want to know that your estate plan can be put into action without delay."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Safeguard Your Original Documents",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Original estate planning documents are often required to carry out your wishes. That’s why protecting them from fire, water, and storm damage is critical."
+     },
+     {
+      "type": "p",
+      "text": "Here’s how to store them safely:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Use a fireproof, waterproof safe, ideally kept off the floor",
+        "children": []
+       },
+       {
+        "text": "Keep copies with a trusted friend or family member",
+        "children": []
+       },
+       {
+        "text": "Let someone know where your originals are stored",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Create and Secure Digital Backups",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "In the digital age, having electronic access to your estate planning documents is just as important as keeping the physical copies safe."
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Scan and upload digital copies of your estate planning documents",
+        "children": []
+       },
+       {
+        "text": "Use secure cloud storage service",
+        "children": []
+       },
+       {
+        "text": "Protect these files with strong passwords and two-factor authentication.",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Being able to access your documents on a phone or laptop during an evacuation can be invaluable."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Plan for Digital Assets and Online Accounts",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "If something happens to you, your loved ones may need quick access to your digital assets and online accounts."
+     },
+     {
+      "type": "p",
+      "text": "Make sure you include the following information alongside your estate planning documents:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "A list of key online accounts (e.g., banking, investments, insurance, email)",
+        "children": []
+       },
+       {
+        "text": "Usernames and passwords, stored securely (e.g., in a password manager or written and locked away)",
+        "children": []
+       },
+       {
+        "text": "Two-factor authentication details, if applicable",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Without this information, family members could face lengthy delays or legal challenges trying to access or manage your accounts after a disaster."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Talk to Your Family and Advisors",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "The best estate plan in the world is useless if no one knows it exists or understands your wishes. Take time now to:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Communicate your plans with family members and key decision-makers",
+        "children": []
+       },
+       {
+        "text": "Discuss emergency roles—for example, who will act on your behalf if you’re hospitalized",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "These conversations may not be easy, but they are essential—especially in the face of a natural disaster that can leave little time for preparation."
+     },
+     {
+      "type": "p",
+      "text": "Hurricane season is unpredictable, but your estate plan shouldn’t be. Taking these proactive steps now ensures your wishes are honored and your family is protected, no matter what the storm brings. Contact Vaughn Law if you need to make any changes to your estate planning documents."
+     },
+     {
+      "type": "p",
+      "text": "*By: Allison Couri, Attorney*"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

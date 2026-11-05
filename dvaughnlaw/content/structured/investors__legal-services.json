@@ -1,0 +1,81 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/",
+ "slug": "investors__legal-services",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Legal Services",
+ "seo": {
+  "title_tag": "Legal Services - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Legal Services - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Legal Services"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law is a growth-oriented law firm in Saint Petersburg. We offer specialized services and a one stop shop to real property investors around the state of Florida.",
+     "Our services include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Real Estate Closings"
+     },
+     {
+      "text": "Contract Preparation and Review"
+     },
+     {
+      "text": "Liability Protection and Land Trusts"
+     },
+     {
+      "text": "Landlord/Tenant"
+     },
+     {
+      "text": "Code Enforcement Violations"
+     },
+     {
+      "text": "Title Searches"
+     },
+     {
+      "text": "Foreclosure Auctions and Tax Deed Sales"
+     },
+     {
+      "text": "LitigationLand Trusts"
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "No matter your situation, Vaughn Law is here to help. Schedule your [free consultation](https://dvaughnlaw.com/consultation/) with us today."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

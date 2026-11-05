@@ -1,0 +1,60 @@
+{
+ "url": "https://dvaughnlaw.com/category/credit/",
+ "slug": "category__credit",
+ "type": "category",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "Credit: Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/credit/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Credit: Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h2",
+   "text": "[How Can I Find Out Information About My Credit History?](https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/)",
+   "links": [
+    {
+     "text": "How Can I Find Out Information About My Credit History?",
+     "href": "https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Watch this video and take a few notes! There are three major credit reporting companies: Equifax – www.equifax.com 1-800-685-1111 Experian – www.experian.com 1-888-397-3742 Trans Union – www.transunion.com 1-800-916-8800 Obtaining your credit history...",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[What Is A Credit Bureau Score And How Do Lenders Use Them?](https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/)",
+   "links": [
+    {
+     "text": "What Is A Credit Bureau Score And How Do Lenders Use Them?",
+     "href": "https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "As we show you in this video, a credit bureau score, or “credit score” is a number based upon your credit history that represents the possibility that you will be unable to repay a loan. Lenders use it to determine your ability to qualify for a mortgage...",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 101
+}

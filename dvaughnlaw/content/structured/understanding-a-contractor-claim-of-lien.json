@@ -1,0 +1,338 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-a-contractor-claim-of-lien/",
+ "slug": "understanding-a-contractor-claim-of-lien",
+ "template": "article",
+ "family": "post-article",
+ "title": "Understanding a Contractor Claim of Lien",
+ "seo": {
+  "title_tag": "Understanding a Contractor Claim of Lien - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-a-contractor-claim-of-lien/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding a Contractor Claim of Lien - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "If you’re a homeowner, few things are more unsettling than discovering that a contractor has filed a lien against your property. And if you’re a contractor, few things are more frustrating than completing work and not getting paid. In Florida, the Claim of Lien is a powerful legal tool — but also one that comes […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Understanding a Contractor Claim of Lien",
+    "date": "2025-11-21"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "If you’re a homeowner, few things are more unsettling than discovering that a contractor has filed a lien against your property. And if you’re a contractor, few things are more frustrating than completing work and not getting paid.",
+     "In Florida, the Claim of Lien is a powerful legal tool — but also one that comes with strict rules and deadlines. Whether you’re filing one or facing one, it’s important to understand how these liens work and what rights and risks they create."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "⚖️ What Is a Claim of Lien?",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "A Claim of Lien (often called a “mechanic’s lien” or “construction lien”) is a legal claim filed by a contractor, subcontractor, or material supplier who has performed work or supplied materials to improve a property but hasn’t been paid."
+     },
+     {
+      "type": "p",
+      "text": "When properly filed, the lien attaches to the property itself, not just the owner — meaning the contractor may ultimately force the property to be sold to satisfy the debt if payment isn’t made."
+     },
+     {
+      "type": "p",
+      "text": "Florida’s lien law (Chapter 713, Florida Statutes) is designed to ensure that those who improve real property have a way to secure payment — but it also provides protections for property owners against improper or exaggerated claims."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "🧱 Who Can File a Claim of Lien in Florida?",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "The right to file a lien applies to most parties who provide labor, materials, or services for the improvement of real property, including:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "General contractors",
+        "children": []
+       },
+       {
+        "text": "Subcontractors",
+        "children": []
+       },
+       {
+        "text": "Laborers",
+        "children": []
+       },
+       {
+        "text": "Material suppliers",
+        "children": []
+       },
+       {
+        "text": "Design professionals (engineers, architects, etc.)",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "However, not everyone automatically has lien rights. To preserve those rights, strict statutory procedures must be followed."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "📜 The Process and Deadlines",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Florida’s lien process is deadline-driven. Missing a step or filing late can make the lien invalid."
+     },
+     {
+      "type": "p",
+      "text": "Here’s the general process:"
+     },
+     {
+      "type": "ol",
+      "items": [
+       {
+        "text": "**Notice to Owner (NTO):**",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Subcontractors and suppliers (who don’t have a direct contract with the property owner) must serve a Notice to Owner within 45 days of starting work or supplying materials.",
+            "children": []
+           },
+           {
+            "text": "This notice informs the owner that they’re working on the project and may later file a lien if unpaid.",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "**Filing the Claim of Lien:**",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "The contractor (or other lienor) must record the Claim of Lien with the county clerk within 90 days of the last day they furnished labor, materials, or services.",
+            "children": []
+           },
+           {
+            "text": "The lien must also be served on the property owner within 15 days after recording.",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "**Owner’s Right to Contest:**",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Property owners can respond by filing a Notice of Contest of Lien or Demand for Suit to Enforce Lien, which shortens the contractor’s time to file a lawsuit from one year to 60 days.",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "**Enforcing the Lien:**",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "If payment still isn’t made, the lienholder must file a lawsuit to foreclose the lien within one year after it’s recorded — or the lien automatically expires.",
+            "children": []
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "💡 For Homeowners: How to Protect Yourself",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "If you’re a property owner who receives a Notice to Owner or learns that a lien has been filed:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Don’t ignore it. Even an invalid lien can cloud your title and delay sales or refinancing.",
+        "children": []
+       },
+       {
+        "text": "Verify proper procedure. Many liens are invalid because contractors miss deadlines or fail to serve notices correctly.",
+        "children": []
+       },
+       {
+        "text": "Consider a lien release. Always require lien releases from contractors and subs as payments are made.",
+        "children": []
+       },
+       {
+        "text": "Consult an attorney early. Quick action can help resolve disputes before they escalate to foreclosure.",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "🔨 For Contractors: Protecting Your Right to Payment",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "For contractors, filing a lien is often the only way to secure payment for completed work — but it must be done by the book."
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Serve the Notice to Owner and file your Claim of Lien on time.",
+        "children": []
+       },
+       {
+        "text": "Keep detailed records of invoices, communications, and work performed.",
+        "children": []
+       },
+       {
+        "text": "Don’t inflate your claim — exaggerated liens can lead to attorney’s fees against you.",
+        "children": []
+       },
+       {
+        "text": "Be aware that liens expire after one year unless you file suit to enforce them.",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Proper legal guidance can ensure your lien is enforceable and that you don’t lose valuable rights through a missed step."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "⚖️ Resolving Lien Disputes",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Lien disputes can often be settled through negotiation or partial payment agreements, avoiding costly litigation. In other cases, a court will determine the validity and amount of the lien and may order the property sold to satisfy it."
+     },
+     {
+      "type": "p",
+      "text": "Because liens attach to property title, resolving them quickly is critical — especially if the property is for sale or refinance."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "🧭 How Vaughn Law PLLC Can Help",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "At Vaughn Law PLLC, we represent both property owners and contractors in Florida lien matters. Our firm helps:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Prepare and review construction contracts to prevent lien disputes",
+        "children": []
+       },
+       {
+        "text": "File or contest Claims of Lien",
+        "children": []
+       },
+       {
+        "text": "Verify lien validity and deadlines",
+        "children": []
+       },
+       {
+        "text": "Negotiate releases and settlements",
+        "children": []
+       },
+       {
+        "text": "Defend or prosecute lien foreclosure actions",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Whether you’re trying to get paid or protect your property, experienced legal guidance makes all the difference."
+     },
+     {
+      "type": "p",
+      "text": "**📞 Contact Vaughn Law PLLC today to discuss your options and protect your rights.**"
+     },
+     {
+      "type": "p",
+      "text": "*By: Danielle L. Vaughn, Board Certified Real Estate Attorney*"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

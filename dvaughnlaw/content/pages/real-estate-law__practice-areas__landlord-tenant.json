@@ -1,0 +1,661 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/",
+ "slug": "real-estate-law__practice-areas__landlord-tenant",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-10-05",
+ "seo": {
+  "title_tag": "Landlord / Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Landlord / Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2021/12/Outside-group-2-min-scaled.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h1",
+   "text": "Landlord / Tenant",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Landlord / Tenant",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you own rental property, you know anything can happen. Tenants stop paying, damage the property or refuse to leave. If you lease commercial space, a lease dispute can threaten your business. Vaughn Law handles landlord-tenant matters across Pinellas County and the Tampa Bay area. For residential properties, we represent landlords. For commercial properties, we represent landlords and tenants. Learn more below, or request your consultation today.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Residential",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your rental property is an investment, and problem tenants put it at risk. Vaughn Law represents residential landlords throughout the process, from the first notice to final judgment. We handle:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Evictions for nonpayment, lease violations and holdover tenants",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "3-day, 7-day and 15-day notices that comply with Chapter 83",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unpaid rent and debt recovery",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property damage claims",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Security deposit claims and disputes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Criminal activity on the property, including drug distribution and manufacture",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Aggressive or dangerous animals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Defending against tenant claims, including habitability, maintenance, rent withholding and alleged self-help",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lease drafting and review",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A defective notice can restart your eviction from day one. We get it right the first time.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Commercial",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether the property is your investment or your business location, a commercial lease dispute affects your livelihood. Vaughn Law represents commercial landlords and tenants alike in Florida, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Commercial evictions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Claims for unpaid rent and distress for rent",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Non-monetary defaults",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property damage disputes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maintenance, repair and CAM charge disputes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Illegal or unauthorized use of the property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lockouts and wrongful eviction",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Personal guaranty enforcement and defense",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lease negotiation, drafting and review, including renewals, options and assignments",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "FAQ",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Is the verbal notice to vacate sufficient?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No, any notice must be provided in writing!",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Is the landlord required to wait until the tenant is 30 days past due on my rent to evict the tenant?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "No, depending on the terms of the lease agreement, the landlord may evict the tenant even if the tenant is only a few days behind on rent.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Can the tenant withhold rent or move out of the property if the landlord will not maintain the property or make essential repairs?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Depends. The tenant must provide the Landlord with a written seven-day notice to make the repairs to the property. If the landlord does not make the repairs within the time frame the tenant may withhold a portion of rent or move out of the property depending on",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How long does an eviction take?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Depends. Evictions are expedited on the court docket and can be completed in less than 30 days. However, the timing depends on the judge’s case load, and whether a hearing(s) is required.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How much notice does the landlord need to provide a tenant to enter the property?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "The landlord must provide at least 12 hours’ notice before entering the property to make repairs. The landlord must enter the property during reasonable hours, which are defined as between 7:30 am and 8:00 pm. The landlord may however enter the property at **ANY TIME** for the protection or preservation of the property.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Does the tenant have to pay rent into the court registry once they have been served with a complaint for eviction?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Yes, but if the tenant disputes the amount of rent that is owed, the tenant may file a Motion to Determine Rent and the court will hold a hearing to decide on the rent amount to be paid into rent. The tenant must be prepared to pay rent into the court registry within the referenced time frame or at the hearing, or the tenant may be prevented from bringing any defenses to the eviction action.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Residential Landlord Tenant Notices**\n\nCheck out the notices we have provided below to better assist you with your landlord/tenant dispute.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tenants Notice to Landlord to Withhold Rent](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Tenant_s-Notice-to-Landlord-to-Withhold-Rent.pdf)",
+     "links": [
+      {
+       "text": "Tenants Notice to Landlord to Withhold Rent",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Tenant_s-Notice-to-Landlord-to-Withhold-Rent.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Notice of Intent to Make Claim Upon Securtiy Deposit](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Notice-of-Intent-to-Make-Claim-Upon-Securtiy-Deposit.pdf)",
+     "links": [
+      {
+       "text": "Notice of Intent to Make Claim Upon Securtiy Deposit",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Notice-of-Intent-to-Make-Claim-Upon-Securtiy-Deposit.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Application to Become Residential Tenant](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Application-To-Become-Residential-Tenant.pdf)",
+     "links": [
+      {
+       "text": "Application to Become Residential Tenant",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Application-To-Become-Residential-Tenant.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[15 Day Notice](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/15-Day-Notice-2.pdf)",
+     "links": [
+      {
+       "text": "15 Day Notice",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/15-Day-Notice-2.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[7 Day Non-Compliance non curable](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-non-curable.pdf)",
+     "links": [
+      {
+       "text": "7 Day Non-Compliance non curable",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-non-curable.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[7 Day Non-Compliance curable](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-curable.pdf)",
+     "links": [
+      {
+       "text": "7 Day Non-Compliance curable",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-curable.pdf"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[3 Day Notice](https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/3-Day-Notice.pdf)",
+     "links": [
+      {
+       "text": "3 Day Notice",
+       "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/3-Day-Notice.pdf"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "Get in touch with us",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "form",
+   "note": "Lawmatics intake",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+   "alt": "Vaughn law Logo",
+   "alt_missing": false,
+   "title": "",
+   "width": "666",
+   "height": "100",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "Vaughn Law offers its clients a different, more personalized and service orientated approach, by tailoring its representation to its client’s needs. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process.",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Address",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "350 Corey Avenue, St.\nPete Beach, FL 33706",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Phone Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 223-6080](tel:7272236080)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Fax Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 645-4226](tel:7276454226)",
+   "links": [
+    {
+     "text": "(727) 645-4226",
+     "href": "tel:7276454226"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Email",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Closing Services",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Realtors](https://dvaughnlaw.com/services/realtors/)",
+     "links": [
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Consumers](https://dvaughnlaw.com/services/consumers/)",
+     "links": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Lenders](https://dvaughnlaw.com/services/lenders/)",
+     "links": [
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Builders](https://dvaughnlaw.com/services/builders/)",
+     "links": [
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/services/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business Entity Formation](https://dvaughnlaw.com/practice-areas/business-entity-formation/)",
+     "links": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/practice-areas/business-entity-formation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/practice-areas/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/practice-areas/commercial/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Foreclosures](https://dvaughnlaw.com/practice-areas/foreclosures/)",
+     "links": [
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/practice-areas/foreclosures/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Land Trusts](https://dvaughnlaw.com/practice-areas/land-trusts/)",
+     "links": [
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/practice-areas/land-trusts/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Landlord/Tenant](https://dvaughnlaw.com/practice-areas/landlord-tenant/)",
+     "links": [
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/practice-areas/landlord-tenant/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Litigation](https://dvaughnlaw.com/practice-areas/litigation/)",
+     "links": [
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/practice-areas/litigation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Real Estate Transaction](https://dvaughnlaw.com/practice-areas/real-estate-transactions/)",
+     "links": [
+      {
+       "text": "Real Estate Transaction",
+       "href": "https://dvaughnlaw.com/practice-areas/real-estate-transactions/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2019/03/Beach-office-scaled.jpg",
+   "alt": "Architecture - Property",
+   "alt_missing": false,
+   "title": "Beach-office",
+   "width": "1800",
+   "height": "1200",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.197831041805!2d-82.74966069999999!3d27.7420435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fd5bea45f9c9%3A0xd5c4f4a1323a4f56!2s350%20Corey%20Ave%2C%20St%20Pete%20Beach%2C%20FL%2033706!5e0!3m2!1sen!2sus!4v1694102817362!5m2!1sen!2sus",
+   "title": "",
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 650
+}

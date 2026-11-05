@@ -1,0 +1,18 @@
+{#
+MODULE: list
+PURPOSE: A standalone bulleted or numbered list that carries the content of a section. Numbered items (longer than a step) become numbered rows with a sage disc beside serif lead-ins; short bulleted items (about a dozen words or fewer) become a grid of soft chips; longer bullets stay as rows with a green dot.
+SLOTS: ordered (bool), items[lead, text, children].
+SQUARESPACE: Section with a Text block holding a numbered or bulleted list; for the numbered-row look, one Text block per item in a grid, or keep the plain list. The chip grid is a Summary or Button-block grid with outline buttons turned off. No code.
+#}
+{% from "_macros.html" import lst %}
+{% set w = namespace(max=0) %}{% for i in s["items"] %}{% set c = ((i.lead or "") ~ " " ~ i.text)|wordcount %}{% if c > w.max %}{% set w.max = c %}{% endif %}{% endfor %}
+{% set chips = not s.ordered and w.max <= 12 and s["items"]|length >= 4 and not s["items"]|selectattr("children")|list %}
+<section class="m m-list" data-module="list" data-tone="{{ tone }}">
+  <div class="wrap {{ 'wrap--mid' if chips else 'wrap--narrow' }}">
+    <{{ 'ol' if s.ordered else 'ul' }} class="{{ 'chips' if chips else 'steps' }}{{ ' steps--plain' if not s["items"][0].lead and not chips }}" role="list">
+      {% for i in s["items"] %}
+      <li>{% if i.lead %}<strong class="steps__lead">{{ i.lead|md }}</strong> {% endif %}{{ i.text|md }}{% for c in i.children %}{{ lst(c) }}{% endfor %}</li>
+      {% endfor %}
+    </{{ 'ol' if s.ordered else 'ul' }}>
+  </div>
+</section>

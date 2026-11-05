@@ -1,0 +1,107 @@
+{
+ "url": "https://dvaughnlaw.com/how-do-i-set-the-price-on-my-house/",
+ "slug": "how-do-i-set-the-price-on-my-house",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "How Do I Set The Price On My House? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-do-i-set-the-price-on-my-house/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Do I Set The Price On My House? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "While this video simplifies things to help you remember: your aim is to get the best price AND terms in your market during the period you’re selling. Market conditions interest rates and competition all matter. The price you want, and the price a buyer will pay are framed by those complex conditions So pricing isn’t […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "going-to-market"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Do I Set The Price On My House?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/7u2k0y6qp2",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While this video simplifies things to help you remember: your aim is to get the best price AND terms in your market during the period you’re selling.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Market conditions interest rates and competition all matter.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The price you want, and the price a buyer will pay are framed by those complex conditions So pricing isn’t completely predictable.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Other factors include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "How your home compares to other homes for the same buyers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The inventory of homes and the level of buyer demand",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your needs also affect negotiations – for example, if you must sell quickly – but the final price will be determined by the market not by your needs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Buyers look at the same comparables and market conditions and they want to pay as little as possible while meeting their needs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember that the price isn’t the entire deal – repairs, closing, points, appliances and other factors can all change the value you finally receive. Listen to your broker, stay informed, be patient if you can and make your best reasonable, unemotional decisions.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 182
+}

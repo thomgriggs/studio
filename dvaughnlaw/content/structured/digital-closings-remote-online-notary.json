@@ -1,0 +1,130 @@
+{
+ "url": "https://dvaughnlaw.com/digital-closings-remote-online-notary/",
+ "slug": "digital-closings-remote-online-notary",
+ "template": "content-page",
+ "family": "faq-page",
+ "title": "Digital Closings & Remote Online Notary",
+ "seo": {
+  "title_tag": "Digital Closings & Remote Online Notary - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/digital-closings-remote-online-notary/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Digital Closings & Remote Online Notary - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Digital Closings & Remote Online Notary"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law stays updated on new technological changes as they occur. Vaughn Law is knowledgeable and experienced with Digital Closings and RON. We are ready to handle your digital closing and assist you along the way."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "What are Digital Closings?",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "A Digital Closing is when all or a portion of the closing documents may be signed electronically."
+     },
+     {
+      "type": "p",
+      "text": "Types of Digital Closings:"
+     }
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "slots": {
+    "cards": [
+     {
+      "title": "1. Hybrid",
+      "text": [
+       "Some documents are signed electronically, and some documents are “wet” signed, traditional ink signature on paper."
+      ]
+     },
+     {
+      "title": "2. In Person Electronic Closing",
+      "text": [
+       "Closing takes place with all parties in person at the agent’s office, but all documents are signed and notarized electronically."
+      ]
+     },
+     {
+      "title": "3. Remote Online Notary, RON",
+      "text": [
+       "RON is when the closing documents are signed digitally and electronically notarized using an online software platform which records the visual and audio communications of the parties to the signing of a document. All or some of the participants are not physically located in the same place"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "title": "FAQs?",
+    "level": 3,
+    "items": [
+     {
+      "title": "Is RON Secure?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Yes. The signor must present their photo identification, where the validity of the ID is confirmed through the software platform. Additionally, the signor must answer 5 or more “out of wallet” questions about themselves and must get 80% correct within a two-minute period to proceed with the online notarization."
+       }
+      ]
+     },
+     {
+      "title": "Can you go back and look at the video of the digital closing?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Depends. The software platform must keep all audio and video documentation of the closing for ten years. Access of the recording must be provided to certain participants under Florida Statute."
+       }
+      ]
+     },
+     {
+      "title": "Can I request a Digital Closing?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Yes, however your lender may or may not allow a digital closing. Digital closings are in the new stages of implementation. Some lenders are willing to allow them, while others are still implementing processes to allow for loan documents to be digitally signed. We will need to reach out to the lender to confirm approval before proceeding with a digital closing."
+       }
+      ]
+     },
+     {
+      "title": "Are there additional costs involved with a RON closing?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Yes, there are normally additional costs involved with a RON closing. Please contact us and we will provide you with a quote."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

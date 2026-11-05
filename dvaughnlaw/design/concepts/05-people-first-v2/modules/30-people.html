@@ -1,0 +1,35 @@
+{#
+MODULE: people
+PURPOSE: "Who you'll deal with". A heading, one line and a pill link to the team page beside the firm's intro video (rounded poster, round play button); under them the two lead attorneys as arch-topped portraits on either side of a sage quote tile with the founder's real words, and a centered row of round portraits for the rest of the team with names and roles.
+SLOTS: eyebrow, title, text, link[text, href], video[url (YouTube), title], people[name, role, image(src, alt)] (the two leads), quote[text, attribution], team[name, role, image(src, alt)] (the rest). Any slot may be empty; an absent video leaves the intro centered, no empty frame.
+SQUARESPACE: Section 1: two columns, Video block beside Heading + Text + Button. Section 2: three columns, Image block with a caption (name bold, role) for each lead (image shape: use rounded corners or a mask shape), Quote block between them in a sage section/block. Section 3: Gallery block (grid, circular crops are not native: use rounded squares) or six Image blocks with captions. Round crops and the arch top need a small code block or CSS if exactness matters; otherwise rounded squares are the native fallback.
+#}
+{% from "_macros.html" import poster %}
+<section class="m m-people" data-module="people" data-tone="{{ tone }}" aria-labelledby="people-title">
+  <div class="wrap">
+    <div class="people__top{{ ' people__top--solo' if not s.video }}">
+      {% if s.video %}<figure class="people__video">{{ poster(s.video.url, s.video.title) }}<figcaption><span>Watch</span> {{ s.video.title }}</figcaption></figure>{% endif %}
+      <div class="people__intro">
+        {% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}
+        <h2 id="people-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2>
+        {% if s.text %}<p class="people__lede">{{ s.text|md }}</p>{% endif %}
+        {% if s.link %}<p><a class="btn btn--ghost" href="{{ s.link.href|href }}">{{ s.link.text }}</a></p>{% endif %}
+      </div>
+    </div>
+    <div class="people__main">
+      {% for p in s.people[:1] %}
+      <figure class="ppl"><img src="{{ p.image.src }}" alt="{{ p.image.alt }}" loading="lazy"><figcaption><strong>{{ p.name }}</strong><span>{{ p.role }}</span></figcaption></figure>
+      {% endfor %}
+      {% if s.quote %}<figure class="pquote"><blockquote><p>{{ s.quote.text|md }}</p></blockquote>{% if s.quote.attribution %}<figcaption>{{ s.quote.attribution|md }}</figcaption>{% endif %}</figure>{% endif %}
+      {% for p in s.people[1:] %}
+      <figure class="ppl"><img src="{{ p.image.src }}" alt="{{ p.image.alt }}" loading="lazy"><figcaption><strong>{{ p.name }}</strong><span>{{ p.role }}</span></figcaption></figure>
+      {% endfor %}
+    </div>
+    {% if s.team %}
+    <ul class="team" role="list">
+      {% for p in s.team %}<li><img src="{{ p.image.src }}" alt="{{ p.image.alt }}" loading="lazy"><strong>{{ p.name }}</strong><span>{{ p.role }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>

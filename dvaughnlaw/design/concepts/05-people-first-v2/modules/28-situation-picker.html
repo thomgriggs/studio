@@ -1,0 +1,20 @@
+{#
+MODULE: situation-picker
+PURPOSE: The funnel's choice point. Six large tappable cards shaped like speech bubbles, each a first-person line the visitor recognises ("I need to change a deed."), one sentence, and the name of the page it opens with a round arrow. The whole card is the link; hover lifts and tints it.
+SLOTS: title, cards[title (first-person line), text (one sentence), href, link_text (name of the target page)].
+SQUARESPACE: Section with a Heading block and a 3 x 2 grid of Summary-style cards (Card layout, whole card linked) or Text blocks each linked. Rounded corners via the section/block style. Hover lift is a native block hover where available; otherwise the round arrow carries the affordance. No code.
+#}
+<section class="m m-sit" data-module="situation-picker" data-tone="{{ tone }}" aria-labelledby="sit-title">
+  <div class="wrap">
+    <div class="m__head"><h2 id="sit-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <ul class="sits" role="list">
+      {% for c in s.cards %}
+      <li class="sit">
+        <h3 class="sit__q" id="sit-{{ loop.index }}">{{ c.title }}</h3>
+        <p class="sit__text">{{ c.text|md }}</p>
+        <a class="sit__link" href="{{ c.href|href }}" aria-describedby="sit-{{ loop.index }}"><span>{{ c.link_text }}</span></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

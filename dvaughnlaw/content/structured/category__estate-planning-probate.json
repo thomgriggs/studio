@@ -1,0 +1,45 @@
+{
+ "url": "https://dvaughnlaw.com/category/estate-planning-probate/",
+ "slug": "category__estate-planning-probate",
+ "template": "listing",
+ "family": "archive-list",
+ "title": "Estate Planning / Probate Archives",
+ "seo": {
+  "title_tag": "Estate Planning / Probate Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/estate-planning-probate/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning / Probate Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Estate Planning / Probate Archives"
+   }
+  },
+  {
+   "module": "post-feed",
+   "slots": {
+    "posts": [
+     {
+      "title": "If You Can’t Speak for Yourself, Who Will?",
+      "href": "https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/",
+      "excerpt": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Imagine waking up in a hospital, unable to communicate. Doctors need to make urgent decisions about your care, but without the right legal documents, even your closest family members may have no..."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

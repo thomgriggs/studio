@@ -1,0 +1,13 @@
+{#
+MODULE: title-banner
+PURPOSE: Page title band at the top of every inner page. Charcoal ground with a teal rule and a left-aligned serif title; a post date sits above it as a small label. The old photo banners were shared template images and are not carried over.
+SLOTS: title (h1), image (optional background), date (posts only).
+SQUARESPACE: Section with a solid dark colour background and a Heading block set to H1 (a Text block above it for the date). A background image is an option on the same section. No code.
+#}
+{% from "_macros.html" import heading %}
+<section class="m m-banner" data-module="title-banner" data-tone="dark"{% if s.image %} style="--bg:url('{{ s.image.src }}')"{% endif %}>
+  <div class="wrap">
+    {% if s.date %}<p class="eyebrow"><time datetime="{{ s.date }}">{{ s.date|longdate }}</time></p>{% endif %}
+    {{ heading(1, s.title, 1) }}
+  </div>
+</section>

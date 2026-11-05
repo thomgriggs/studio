@@ -1,0 +1,87 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-closing-disclosure-page-1/",
+ "slug": "understanding-your-loan-closing-disclosure-page-1",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2017-01-07",
+ "seo": {
+  "title_tag": "Understanding Your Loan: Closing Disclosure Page 1 - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://localwebdesigncompany.com/vaughnlaw/understanding-your-loan-closing-disclosure-page-1/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan: Closing Disclosure Page 1 - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The first page of your Closing Disclosure documents: The Loan Amount – the total you will actually borrow The Interest Rate – which does NOT include the fees factored into the APR on Page 5 If this loan has a penalty for pre-payment or includes a balloon payment Page 1 will summarize the terms. Projected […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2017-01-07T06:07:45+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan: Closing Disclosure Page 1",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/f4dzvvfnle",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The first page of your Closing Disclosure documents:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The Loan Amount – the total you will actually borrow",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The Interest Rate – which does NOT include the fees factored into the APR on Page 5",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If this loan has a penalty for pre-payment or includes a balloon payment Page 1 will summarize the terms.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Projected Payments will show the chief cost components – Principal & Interest, Mortgage Insurance and estimates of your Escrow Payments over the life of the loan. You may see different columns for different periods if changes in terms such as mortgage insurance change payment totals.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Closing Costs summarizes your loan closing expenses, and Cash To Close adds the additional amounts due to give you the cash balance you will need in 3 business days.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 135
+}

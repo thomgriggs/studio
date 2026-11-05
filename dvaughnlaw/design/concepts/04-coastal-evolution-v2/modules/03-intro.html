@@ -1,0 +1,14 @@
+{#
+MODULE: intro
+PURPOSE: The opening paragraph or two of a page. The first paragraph is set in the serif at a large size, left-aligned in an eight-column measure, so the page begins with a clear statement.
+SLOTS: paragraphs[] (inline markdown for links, bold).
+SQUARESPACE: Section with one Text block: first paragraph in the Paragraph 1 style (serif, large), the rest in Paragraph 2. No code.
+#}
+<section class="m m-intro" data-module="intro" data-tone="{{ tone }}">
+  <div class="wrap">
+    <div class="intro__text">
+    {% for p in s.paragraphs %}<p class="{{ 'lead' if loop.first else '' }}">{{ p|md }}</p>
+    {% endfor %}
+    </div>
+  </div>
+</section>

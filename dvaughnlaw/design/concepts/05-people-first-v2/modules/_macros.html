@@ -1,0 +1,27 @@
+{# Shared macros, not a module. #}
+{% macro eyebrow(text) %}{% if text %}<p class="eyebrow">{{ text }}</p>{% endif %}{% endmacro %}
+
+{% macro heading(level, text, orig, cls="") %}<h{{ level }} class="{{ cls }}" data-orig-level="{{ orig }}">{{ text|md }}</h{{ level }}>{% endmacro %}
+
+{% macro lst(b) %}<{{ b.type }} class="list">{% for i in b["items"] %}<li>{{ i.text|md }}{% for c in i.children %}{{ lst(c) }}{% endfor %}</li>{% endfor %}</{{ b.type }}>{% endmacro %}
+
+{% macro table(rows, header) %}<div class="table-wrap"><table>{% for r in rows %}{% if loop.first and header %}<thead><tr>{% for c in r %}<th scope="col">{{ c|md }}</th>{% endfor %}</tr></thead><tbody>{% else %}{% if loop.first %}<tbody>{% endif %}<tr>{% for c in r %}<td>{{ c|md }}</td>{% endfor %}</tr>{% endif %}{% if loop.last %}</tbody>{% endif %}{% endfor %}</table></div>{% endmacro %}
+
+{# Renders a list of body blocks. sub = heading level used for bold sub-headings inside the block. #}
+{% macro body(blocks, sub=3, lead=false) %}{% for b in blocks %}{% if b.type == "p" %}{% set bfirst = loop.first %}{% for part in b.text.split("\n\n") %}<p{% if lead and bfirst and loop.first and (part|wordcount) <= 55 %} class="lead"{% endif %}>{{ part|md }}</p>{% endfor %}
+{% elif b.type in ("ul", "ol") %}{{ lst(b) }}
+{% elif b.type == "subhead" %}<h{{ sub }} class="subhead" data-orig-level="bold">{{ b.text|md }}</h{{ sub }}>
+{% elif b.type == "table" %}{{ table(b.rows, b.header) }}
+{% elif b.type == "quote" %}<blockquote>{{ b.text|md }}</blockquote>
+{% elif b.type == "button" %}<p><a class="btn" href="{{ b.href|href }}">{{ b.text }}</a></p>
+{% elif b.type == "embed-link" %}<p><a class="btn btn--ghost" href="{{ b.href }}" target="_blank" rel="noopener">{{ b.text }}</a></p>
+{% endif %}{% endfor %}{% endmacro %}
+
+{% macro img(i, cls="", lazy=true) %}<img{% if cls %} class="{{ cls }}"{% endif %} src="{{ i.src }}" alt="{{ i.alt }}"{% if lazy %} loading="lazy"{% endif %}>{% endmacro %}
+
+
+{# YouTube poster: the video's own thumbnail with a round play button, linking to the video (Squarespace: Video block). #}
+{% macro poster(url, title) %}{% set id = url|ytid %}<a class="video" href="https://www.youtube.com/watch?v={{ id }}" target="_blank" rel="noopener" aria-label="Play video: {{ title or 'YouTube video' }} (opens YouTube)"><img src="https://i.ytimg.com/vi/{{ id }}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></a>{% endmacro %}
+
+{# Number of paragraph blocks in a body. #}
+{% macro nparas(blocks) %}{{ blocks|selectattr("type", "equalto", "p")|list|length }}{% endmacro %}

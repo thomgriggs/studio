@@ -1,0 +1,15 @@
+{#
+MODULE: reasons
+PURPOSE: Three to five short reasons to choose the firm, each a serif claim with one line beneath. Heading on the left, claims in a two-by-two grid on the right, ruled, no icons. Links inside the line (a person's name to the bio) stay live.
+SLOTS: eyebrow, title, image (src, alt; optional), items[title, text]. With an image the left column holds the heading with a square photo under it, filling the column to the height of the four reasons (no dead space).
+SQUARESPACE: Section in a two-column layout: Heading + Image block on one side; on the other a 2 x 2 grid of Text blocks (Heading 3 + paragraph). A dark section colour. No code.
+#}
+<section class="m m-reasons{{ ' m-reasons--img' if s.image }}" data-module="reasons" data-tone="{{ tone }}" aria-labelledby="reasons-title">
+  <div class="wrap reasons__grid">
+    <div class="headed__head">{% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}<h2 id="reasons-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% if s.image %}<img class="reasons__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy">{% endif %}</div>
+    <ul class="reasons" role="list">
+      {% for i in s["items"] %}<li><h3>{{ i.title|md }}</h3><p>{{ i.text|md }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

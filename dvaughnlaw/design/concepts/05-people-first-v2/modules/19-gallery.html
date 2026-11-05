@@ -1,0 +1,11 @@
+{#
+MODULE: gallery
+PURPOSE: Three or more photos shown together as a mosaic of rounded tiles. Detected as a run of consecutive photos with no text between. (On the home page the shell moves these into the hero mosaic.)
+SLOTS: images[src, alt].
+SQUARESPACE: Section with a Gallery block (grid layout, or a gallery section with the "collage" style), rounded corners. No code.
+#}
+<section class="m m-gallery" data-module="gallery" data-tone="{{ tone }}">
+  <div class="wrap">
+    <ul class="mosaic mosaic--{{ [s.images|length, 5]|min }}" role="list">{% for i in (s.images|people_first)[:5] %}<li class="mo-{{ loop.index }}"><img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy"></li>{% endfor %}</ul>
+  </div>
+</section>

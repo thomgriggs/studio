@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-an-escrow-account-do-i-need-one/",
+ "slug": "what-is-an-escrow-account-do-i-need-one",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2020-10-01",
+ "seo": {
+  "title_tag": "What Is An Escrow Account? Do I Need One? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-an-escrow-account-do-i-need-one/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is An Escrow Account? Do I Need One? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "As we show you in this video, an escrow account is an account, established by your lender, to set aside a portion of your monthly mortgage payment to cover annual charges for homeowner’s insurance mortgage insurance (if applicable), and property taxes. Escrow accounts are a good idea because they assure money will always be available […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2020-08-29T21:47:50+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "title-and-closing"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is An Escrow Account? Do I Need One?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/je6yeo4prk",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As we show you in this video, an escrow account is an account, established by your lender, to set aside a portion of your monthly mortgage payment to cover annual charges for homeowner’s insurance mortgage insurance (if applicable), and property taxes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Escrow accounts are a good idea because they assure money will always be available for these payments.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you use an escrow account to pay property tax or homeowner’s insurance make sure you are not penalized for late payments since it is the lender’s responsibility to make those payments.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 99
+}

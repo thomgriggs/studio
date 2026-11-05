@@ -1,0 +1,336 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+ "slug": "estate-planning__estate-planning-documents",
+ "template": "content-page",
+ "family": "faq-page",
+ "title": "Estate Planning Documents",
+ "seo": {
+  "title_tag": "Estate Planning Documents - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning Documents - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Estate Planning Documents"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "There are five **Estate Planning Documents** to consider regardless of your age, health or wealth:"
+    ]
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "items": [
+     {
+      "title": "Durable Power of Attorney",
+      "body": [
+       {
+        "type": "p",
+        "text": "A **Durable Power of Attorney (POA)** protects your property in the event you become physically unable or lack the capacity to handle your financial affairs. A POA allows you to appoint someone (Agent) to act on your behalf while you are incapacitated. It protects you and your assets from being dissipated or stolen."
+       },
+       {
+        "type": "p",
+        "text": "The person you authorize to act on your behalf, can do things like pay your bills, collect benefits, watch over your investments and file taxes. You have many options with what powers you will allow your attorney in fact."
+       },
+       {
+        "type": "p",
+        "text": "There are general POAs and limited POAs."
+       },
+       {
+        "type": "p",
+        "text": "General POA:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Become effective immediately",
+          "children": []
+         },
+         {
+          "text": "Remains effective during disability",
+          "children": []
+         },
+         {
+          "text": "Give the agent broad authority to act on behalf of the principal for financial and business operations and to handle real estate",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Limited POA:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Used to appoint specific legal powers to an individual on behalf of another",
+          "children": [
+           {
+            "type": "ul",
+            "items": [
+             {
+              "text": "For example, limited POA’s are often used in the sale of a property to allow a person to execute the closing documents on behalf of the seller. One spouse may be out of the country, so the other spouse may have a limited poa to sign the closing documents.",
+              "children": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Healthcare POA:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Deals with healthcare decisions on behalf of the Principal",
+          "children": [
+           {
+            "type": "ul",
+            "items": [
+             {
+              "text": "Preserve the health and wellbeing of the principal",
+              "children": []
+             },
+             {
+              "text": "Keep the principal in their home",
+              "children": []
+             },
+             {
+              "text": "Pain Management",
+              "children": []
+             },
+             {
+              "text": "Hospice/palliative Care",
+              "children": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "There are two types of Durable POAs: (1) a standby Durable POA which is effective immediately (this is appropriate if you face a serious operation or illness), and (2) a springing Durable POA, which is not effective unless and until you are incapacitated."
+       },
+       {
+        "type": "p",
+        "text": "**NOTE:** Florida does not permit springing DPOAs."
+       }
+      ]
+     },
+     {
+      "title": "Advanced Medical Directive",
+      "body": [
+       {
+        "type": "p",
+        "text": "An **Advanced Medical Directive** clearly sets forth what medical treatment you desire in the event you are unable to speak for yourself or allows someone to make medical decisions on your behalf when you can’t express your wishes yourself. Without an Advanced Medical Directive, medical care providers are required to prolong your life using artificial means, if necessary. With today’s technology, physicians can sustain a person’s life indefinitely."
+       },
+       {
+        "type": "p",
+        "text": "There are three types of advanced medical directives. Each state allows only a certain type (or types). You may find that one, two, or all three types are necessary to carry out all of your wishes for medical treatment."
+       },
+       {
+        "type": "p",
+        "text": "**First**, a living will allows you to approve or decline certain types of medical care, even if you will dies as a result of that choice. In most states, living wills take effect only under certain circumstances, such as terminal injury or illness. Generally, one can be used only to decline medical treatment that ‘serves only to postpone the moment of death.” In those states that do not allow living wills, you may still want to have one to serve as evidence of your wishes."
+       },
+       {
+        "type": "p",
+        "text": "**Second**, a Durable POA for health care (known as a health-care proxy in some states) allows you to appoint a representative to make medical decisions for you. You decide how much power your representative will or won’t have."
+       },
+       {
+        "type": "p",
+        "text": "**Finally**, a **Do Not Resuscitate Order (DNR)** is a doctor’s order that tells medical personnel not to perform CPR if you go into cardiac arrest. There are two types of DNRs. One is effective only while you are hospitalized. The other is used while you are outside the hospital."
+       }
+      ]
+     },
+     {
+      "title": "Last Will and Testament (Will)",
+      "body": [
+       {
+        "type": "p",
+        "text": "A **Will** is often said to be a cornerstone of any estate plan. The main purpose of a Will is to disburse property to heirs and beneficiaries after your death. If you die without a Will, disbursements will be made according to state law, which might be contrary to your wishes.\nThere are two other equally important aspects of a Will:"
+       },
+       {
+        "type": "ol",
+        "items": [
+         {
+          "text": "You can name the person (executor/executrix or personal representative) who will manage and settle your estate in accordance with your written instructions. If you do not name someone the court will appoint an administrator who might be someone you do not know or is someone you would not have chosen.",
+          "children": []
+         },
+         {
+          "text": "You can name a legal guardian for minor children or dependents with special needs. If you do not appoint a guardian, the court will appoint one on your behalf. Again, this may be someone you may not have chosen.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "A **Will** is a legal document, and the courts are very reluctant to overturn any provisions within it. Therefore, it is critical your Will be property prepared, your wishes are clearly articulated, and it is executed in accordance with your state’s law."
+       },
+       {
+        "type": "p",
+        "text": "Types of Wills"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Last Will And Testament/ Attested Will",
+          "children": []
+         },
+         {
+          "text": "Non-conforming Will",
+          "children": []
+         },
+         {
+          "text": "Holographic Will",
+          "children": []
+         },
+         {
+          "text": "Military Will",
+          "children": []
+         },
+         {
+          "text": "Out of State Will",
+          "children": []
+         },
+         {
+          "text": "Noncupative/ Oral Will",
+          "children": []
+         },
+         {
+          "text": "Joint Will, Contractual Will, Mutual Will",
+          "children": []
+         },
+         {
+          "text": "Pour-Over Will",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Requirements of a Will"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Must be in writing",
+          "children": []
+         },
+         {
+          "text": "Must be signed by a Testator of Valid Proxy",
+          "children": []
+         },
+         {
+          "text": "Must be attested to by two valid witnesses",
+          "children": [
+           {
+            "type": "ul",
+            "items": [
+             {
+              "text": "Witness may not be an interested party",
+              "children": []
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "text": "Must be notarized to be a self-proving will",
+          "children": []
+         },
+         {
+          "text": "Testator must have testamentary intent and testamentary capacity",
+          "children": [
+           {
+            "type": "ul",
+            "items": [
+             {
+              "text": "Testamentary intent: Testator intended for this to serve as his/her will",
+              "children": []
+             },
+             {
+              "text": "Testamentary capacity: Over 18 years age and mental ability to understand the extent of one’s property",
+              "children": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "**Note:** Like all estate planning documents, circumstances change over time. You should review these documents every few years to ensure they still accurately reflect your estate and the disposition of your assets."
+       }
+      ]
+     },
+     {
+      "title": "Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "A **Trust** is a separate legal entity you create to own property, such as your home, investments and vehicles. It is often called a living trust because it is meant to function while you are alive. You retain complete control over all property in your trust, and you may change the trust terms, transfer property in or out of the trust or revoke the Trust entirely. Upon your death the successor trustee you have designated, will distribute your assets to your heirs and beneficiaries in accordance with your wishes as well as pay all debts of your estate."
+       },
+       {
+        "type": "p",
+        "text": "The primary function of a trust is to avoid probate, which can be costly and time consuming. Property, real or personal, titled in a trust, is not included in any probate estate overseen by a court. A trust enables the transfer of property quickly and cost effectively."
+       },
+       {
+        "type": "p",
+        "text": "Probate can also interfere with the management of property such as a closely held business or investment portfolio."
+       },
+       {
+        "type": "p",
+        "text": "Privacy is another consideration. A probate proceeding is public. Distribution of your assets according to your Trust is private."
+       },
+       {
+        "type": "p",
+        "text": "Even if you have a Trust, it is advisable to have a Will, often called a Pour Over Will, which authorizes the executor to transfer title to any assets you may have inadvertently neglected to place in the Trust."
+       }
+      ]
+     },
+     {
+      "title": "Letter of Instruction",
+      "body": [
+       {
+        "type": "p",
+        "text": "A **Letter of Instruction** (also called a testamentary or side letter) is an informal, non-legal document that generally accompanies your will and is used to express your personal thoughts and directions stated in the Will (or other things, such as your burial wishes, where to locate important documents). This can be helpful for your executor or family members. Unlike your Will, your Letter of Instruction remains private. The Letter provides you an opportunity to say things you may prefer remain private."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

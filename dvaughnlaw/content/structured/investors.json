@@ -1,0 +1,164 @@
+{
+ "url": "https://dvaughnlaw.com/investors/",
+ "slug": "investors",
+ "template": "hub",
+ "family": "hub-landing",
+ "title": "Investors",
+ "seo": {
+  "title_tag": "Investors - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Investors - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "title": "Investors",
+    "tagline": "Accessible | Reliable | Practical Real Estate & Business Law Firm",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161464196.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "card-grid",
+   "slots": {
+    "cards": [
+     {
+      "title": "Business Entity Formation",
+      "text": [
+       "The right legal counsel can make or break your business."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/business-entity-formation/"
+     },
+     {
+      "title": "Contract Preparation",
+      "text": [
+       "Protection and prevention of future disputes."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/contract-preparation-and-review/"
+     },
+     {
+      "title": "Foreclosure Auctions & Tax Deeds",
+      "text": [
+       "Highly educated on title review."
+      ],
+      "href": "https://dvaughnlaw.com/vaughnlaw/investors/foreclosure-auctions-and-tax-deed-sales/"
+     },
+     {
+      "title": "Land Trusts",
+      "text": [
+       "Land Trusts are an exceptional vehicle to hold title in Florida."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/land-trusts/"
+     },
+     {
+      "title": "LANDLORD / TENANT",
+      "text": [
+       "Experienced in Landlord Tenant Disputes."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/landlord-tenant/"
+     },
+     {
+      "title": "Litigation",
+      "text": [
+       "Conflict requires thoughtful representation."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/litigation/"
+     },
+     {
+      "title": "Private Lender Foreclosure",
+      "text": [
+       "Is your borrower behind on their mortgage payments?"
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/private-lender-foreclosure/"
+     },
+     {
+      "title": "Real Estate closings",
+      "text": [
+       "Highly knowledgeable in residential and commercial closings."
+      ],
+      "href": "https://dvaughnlaw.com/investors/legal-services/real-estate-closings/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+     "alt": ""
+    },
+    "title": "Lets Work Together for Your Real Estate Success",
+    "level": 2,
+    "buttons": [
+     {
+      "text": "Schedule Consultation",
+      "href": "https://dvaughnlaw.com/consultation/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "image-text",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Lobby.jpg",
+      "alt": "Office Lobby"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Reviewing-Docs.jpg",
+      "alt": "Danielle Reviewing Docs"
+     }
+    ],
+    "title": "About Vaughn law",
+    "level": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "We guarantee our agents are top-notch!"
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law is a boutique law firm that provides practical Real Estate Legal Solutions for your litigation, transactional, and title work needs. Vaughn Law offers its clients a different, more personalized, and service-oriented approach, by tailoring its representation to its client’s needs. At Vaughn Law, the client is always our first priority. We understand that this may be an overwhelming, unfamiliar, and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process. We offer valuable legal guidance while providing honest and straightforward opinions. We advise clients on all their options to provide them with the information necessary to make fully educated decisions."
+     },
+     {
+      "type": "p",
+      "text": "Our goal is to make the legal process a smooth one. Our experienced staff knows that every situation is unique. However, we have handled thousands of closings and legal cases throughout Florida."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law has tailored legal representation to assist investors with all of their real estate needs and to prevent future disputes. You will receive legal expertise that is professional and personal. Contact us today to schedule your free consultation."
+     }
+    ]
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_329829600.jpg",
+     "alt": ""
+    },
+    "title": "STRAIGHT FORWARD LEGAL EXPERTISE",
+    "level": 2
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0
+ }
+}

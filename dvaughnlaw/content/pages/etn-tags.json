@@ -1,0 +1,32 @@
+{
+ "url": "https://dvaughnlaw.com/etn-tags/",
+ "slug": "etn-tags",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-03-25",
+ "seo": {
+  "title_tag": "Etn Tags - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/etn-tags/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Etn Tags - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Etn Tags",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 2
+}

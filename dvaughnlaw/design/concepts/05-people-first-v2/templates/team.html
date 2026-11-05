@@ -1,0 +1,57 @@
+{# Page shell: team. Title banner, then a 3-column roster of square rounded portraits (serif name, sans role) that link down to each person's bio:
+   portrait beside name / role / bio text, with the bio's sub-sections (Education, Bar Admissions, ...) as tidy headed lists. People are grouped from the
+   module list: a profile module or a lone-photo image-text starts a person; the first headed-section after it is the bio, later ones are its lists,
+   anything else (certification block, accordion) follows that person. Only live team content is used. #}
+{% extends "_base.html" %}
+{% from "_macros.html" import heading, body %}
+{% macro role_of(g) %}{% set t = g.secs[0].slots.title if g.secs else "" %}{% if t and t[:g.name|length]|lower == g.name|lower %}{{ t[g.name|length:].lstrip(", ") }}{% else %}{{ g.role or (g.secs[0].slots.eyebrow if g.secs else "") }}{% endif %}{% endmacro %}
+{% block main %}
+{% set ns = namespace(groups=[], cur=none, pre=[]) %}
+{% for m in page.modules %}
+  {% if m.module == 'title-banner' %}
+  {% elif m.module == 'profile' %}
+    {% set g = {"name": m.slots.name|title, "image": m.slots.image, "links": m.slots.links, "role": m.slots.role, "secs": [], "extras": []} %}
+    {% set ns.groups = ns.groups + [g] %}{% set ns.cur = g %}
+  {% elif m.module == 'image-text' and m.slots.images|length == 1 and not m.slots.body %}
+    {% set g = {"name": m.slots.title, "image": m.slots.images[0], "links": [], "role": "", "secs": [], "extras": []} %}
+    {% set ns.groups = ns.groups + [g] %}{% set ns.cur = g %}
+  {% elif ns.cur is none %}{% set _ = ns.pre.append(m) %}
+  {% elif m.module == 'headed-section' %}{% set _ = ns.cur.secs.append(m) %}
+  {% else %}{% set _ = ns.cur.extras.append(m) %}
+  {% endif %}
+{% endfor %}
+{{ render_module(page.modules[0], page, {"root": root}) }}
+{% for m in ns.pre %}{{ render_module(m, page, {"root": root}) }}{% endfor %}
+<section class="m m-roster" data-module="team-roster" data-tone="a">
+  <div class="wrap">
+    <ul class="roster" role="list" aria-label="Team members">
+      {% for g in ns.groups %}
+      {% set role = role_of(g)|trim %}
+      <li class="person"><a href="#person-{{ loop.index }}"><img src="{{ g.image.src }}" alt="{{ g.image.alt }}" loading="lazy"><span class="person__name">{{ g.name }}</span><span class="person__role">{{ role }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% for g in ns.groups %}
+{% set tone = "pale" if loop.index is odd else "a" %}
+{% set role = role_of(g)|trim %}
+<section class="m m-bio" id="person-{{ loop.index }}" data-module="team-bio" data-tone="{{ tone }}">
+  <div class="wrap bio__grid">
+    <img class="bio__img" src="{{ g.image.src }}" alt="{{ g.image.alt }}" loading="lazy">
+    <div class="bio__text">
+      <h2 class="bio__name" data-orig-level="2">{{ g.name }}</h2>
+      <p class="profile__role">{{ role }}</p>
+      {% if g.secs %}<div class="prose">{{ body(g.secs[0].slots.body, 3, (g.secs[0].slots.body|selectattr("type","equalto","p")|list|length) > 3) }}</div>{% endif %}
+      {% if g.links %}<p class="actions">{% for l in g.links %}<a class="btn btn--ghost" href="{{ l.href }}" target="_blank" rel="noopener">{{ l.text }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </div>
+  {% if g.secs|length > 1 %}
+  <div class="wrap bio__lists">
+    {% for sx in g.secs[1:] %}<div class="biolist"><h3 data-orig-level="{{ sx.slots.level }}">{{ sx.slots.title|trim(":") }}</h3><div class="prose">{{ body(sx.slots.body, 4) }}</div></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% for m in g.extras %}{{ render_module(m, page, {"root": root, "tone": tone}) }}{% endfor %}
+{% endfor %}
+{% endblock %}

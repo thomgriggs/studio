@@ -1,0 +1,65 @@
+{
+ "url": "https://dvaughnlaw.com/services/",
+ "slug": "services",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Services",
+ "seo": {
+  "title_tag": "Services - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/services/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Services - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Services"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law offers an extensive list of services for all of your real estate closing needs. Learn more about the services that are right for you."
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Realtors"
+     },
+     {
+      "text": "Consumers"
+     },
+     {
+      "text": "Lenders"
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "No matter your real estate settlement needs, we can help. [Contact us](https://dvaughnlaw.com/vaughnlaw/contact/) to learn more."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

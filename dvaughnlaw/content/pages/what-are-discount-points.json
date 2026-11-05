@@ -1,0 +1,79 @@
+{
+ "url": "https://dvaughnlaw.com/what-are-discount-points/",
+ "slug": "what-are-discount-points",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Are Discount Points? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-are-discount-points/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Are Discount Points? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Discount points allow you to lower your interest rate. While this video simplifies things to help you remember, “points” are essentially prepaid interest with each point equaling 1% of the total loan amount. Generally, for each point paid on a 30-year mortgage the interest rate is reduced by 1/8 (or.125) of a percentage point. […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2020-08-29T21:47:50+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Are Discount Points?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/55102bnft3",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Discount points allow you to lower your interest rate. While this video simplifies things to help you remember, “points” are essentially prepaid interest with each point equaling 1% of the total loan amount.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Generally, for each point paid on a 30-year mortgage the interest rate is reduced by 1/8 (or.125) of a percentage point.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When shopping for loans, ask lenders for an interest rate with 0 points and then see how much the rate decreases with each point paid.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Discount points are smart if you plan to stay in a home for some time since they can lower the monthly loan payment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Points are tax deductible when you purchase a home and you may be able to negotiate for the seller to pay for some of them.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 131
+}

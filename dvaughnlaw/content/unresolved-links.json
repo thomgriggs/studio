@@ -1,0 +1,101 @@
+{
+  "_about": "Links on the live site to pages that were never crawled or do not exist in the mockup. The mockup shows the text without a link. To-do for the owner: decide whether each page should exist. Rebuilt by tools/build.py --all.",
+  "unresolved": [
+    {
+      "source_page": "investors",
+      "link_text": "Foreclosure Auctions & Tax Deeds",
+      "url": "https://dvaughnlaw.com/vaughnlaw/investors/foreclosure-auctions-and-tax-deed-sales/"
+    },
+    {
+      "source_page": "real-estate-law",
+      "link_text": "Deeds and Conveyances",
+      "url": "https://dvaughnlaw.com/deeds-and-conveyances/"
+    },
+    {
+      "source_page": "real-estate-law",
+      "link_text": "Homestead",
+      "url": "https://dvaughnlaw.com/homestead/"
+    },
+    {
+      "source_page": "real-estate-law",
+      "link_text": "PCCLB",
+      "url": "https://dvaughnlaw.com/pcclb/"
+    }
+  ],
+  "file_downloads": [
+    {
+      "url": "https://dvaughnlaw.com/vaughnlaw/wp-content/uploads/sites/238/2020/05/PreClosing-Checklist-Buyer.pdf",
+      "used_on": [
+        "services__consumers"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/vaughnlaw/wp-content/uploads/sites/238/2020/05/PreClosing-Checklist-Seller.pdf",
+      "used_on": [
+        "services__consumers"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/vaughnlaw/wp-content/uploads/sites/238/2020/05/Tips-on-Buying-a-Home-in-Florida.pdf",
+      "used_on": [
+        "services__consumers"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/15-Day-Notice-2.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/3-Day-Notice.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-curable.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-non-curable.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Application-To-Become-Residential-Tenant.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Notice-of-Intent-to-Make-Claim-Upon-Securtiy-Deposit.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    },
+    {
+      "url": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Tenant_s-Notice-to-Landlord-to-Withhold-Rent.pdf",
+      "used_on": [
+        "kit.html",
+        "real-estate-law__practice-areas__landlord-tenant",
+        "resources__forms-docs"
+      ]
+    }
+  ]
+}

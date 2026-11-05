@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-a-mortgage/",
+ "slug": "what-is-a-mortgage",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is A Mortgage? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-a-mortgage/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is A Mortgage? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The original phrase “mort gage” translates as “death pledge”! But as this video explains, a mortgage is a loan obtained to purchase real estate. The “mortgage” itself is a lien – a legal claim on the home or property that secures the promise to pay the debt. All mortgages have two features in common: […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:36+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is A Mortgage?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/ebt6j7h3uj",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The original phrase “mort gage” translates as “death pledge”! But as this video explains, a mortgage is a loan obtained to purchase real estate.\n\nThe “mortgage” itself is a lien – a legal claim on the home or property that secures the promise to pay the debt.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "All mortgages have two features in common: principal and interest.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The principal is the amount you are borrowing which is “secured” by the lender’s claim on the property.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The interest, usually stated as the percentage rate is the additional amount paid for borrowing. Mortgage interest is ‘compounded’ – interest on interest, over time.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 104
+}

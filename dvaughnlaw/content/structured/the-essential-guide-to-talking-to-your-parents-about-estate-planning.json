@@ -1,0 +1,158 @@
+{
+ "url": "https://dvaughnlaw.com/the-essential-guide-to-talking-to-your-parents-about-estate-planning/",
+ "slug": "the-essential-guide-to-talking-to-your-parents-about-estate-planning",
+ "template": "article",
+ "family": "post-article",
+ "title": "The Essential Guide to Talking to Your Parents About Estate Planning",
+ "seo": {
+  "title_tag": "The Essential Guide to Talking to Your Parents About Estate Planning - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/the-essential-guide-to-talking-to-your-parents-about-estate-planning/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "The Essential Guide to Talking to Your Parents About Estate Planning - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "(Without the Awkwardness) Introduction Talking to your parents about estate planning might not be your idea of a casual conversation, but it’s one of the most important talks you’ll ever have. Discussing wills, trusts, power of attorney, and healthcare directives ensures that your parents’ wishes are honored and your family avoids unnecessary legal and emotional […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "The Essential Guide to Talking to Your Parents About Estate Planning",
+    "date": "2025-06-19"
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "(Without the Awkwardness)",
+    "level": 3,
+    "depth": 2
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Introduction",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Talking to your parents about estate planning might not be your idea of a casual conversation, but it’s one of the most important talks you’ll ever have. Discussing wills, trusts, power of attorney, and healthcare directives ensures that your parents’ wishes are honored and your family avoids unnecessary legal and emotional stress. At Vaughn Law, we specialize in making these crucial conversations and decisions easier for families like yours."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Why Estate Planning Conversations Matter",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Waiting until a crisis to address estate planning can create chaos and conflict. Proactive planning gives your parents control over their legacy, avoids confusion, and protects their assets. It’s about much more than just money—it’s about family peace of mind, dignity, and clarity."
+     }
+    ]
+   }
+  },
+  {
+   "module": "steps",
+   "slots": {
+    "eyebrow": null,
+    "title": "How to Talk to Your Parents About Estate Planning: Proven Tips",
+    "level": 3,
+    "depth": 2,
+    "items": [
+     {
+      "lead": "Choose the Right Time and Place",
+      "text": "Create a calm environment where your family can focus. Avoid busy holidays; instead, set aside private time to talk about important topics like wills and trusts."
+     },
+     {
+      "lead": "Lead With Love and Empathy",
+      "text": "Begin the conversation with concern and compassion. Use “I” statements like “I want to make sure everything is set up the way you want it” to avoid sounding accusatory."
+     },
+     {
+      "lead": "Use Real-Life Examples",
+      "text": "Share a relatable story: “My friend’s family faced serious issues because their parents didn’t have a plan in place. I don’t want us to experience the same stress.”"
+     },
+     {
+      "lead": "Understand the Basics",
+      "text": "Be informed about essential documents like wills, living trusts, durable powers of attorney, and advance healthcare directives. Bring them up as conversation points, not ultimatums."
+     },
+     {
+      "lead": "Suggest Involving an Estate Planning Attorney",
+      "text": "Recommending a neutral expert like Vaughn Law can take the pressure off. We provide guidance and legal expertise to ensure everything is handled professionally and thoroughly."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "What to Discuss During Your Estate Planning Talk",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Do they have a current will or revocable trust?",
+        "children": []
+       },
+       {
+        "text": "Who is the designated executor or trustee?",
+        "children": []
+       },
+       {
+        "text": "Have they named someone for medical and financial power of attorney?",
+        "children": []
+       },
+       {
+        "text": "Are assets properly titled with updated beneficiary designations?",
+        "children": []
+       },
+       {
+        "text": "Where are their legal documents stored?",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Final Thoughts: Turning a Tough Talk Into a Loving Legacy",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Bringing up estate planning with your parents might feel uncomfortable, but it’s an act of love that protects your family’s future. With preparation, empathy, and the right resources, you can guide the conversation without awkwardness or conflict."
+     },
+     {
+      "type": "p",
+      "text": "At Vaughn Law, we specialize in creating customized estate plans that reflect your family’s values and needs. Let us help you get started with a compassionate, professional approach. Contact us today to schedule your free consultation and take the first step toward peace of mind."
+     },
+     {
+      "type": "p",
+      "text": "*By: Danielle Vaughn, Board Certified Real Estate Attorney*"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

@@ -1,0 +1,68 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/consultation/thanks/",
+  "slug": "consultation__thanks",
+  "template": "consultation",
+  "family": "consultation",
+  "title": "Thank you",
+  "own_closing": true,
+  "flow": true,
+  "seo": {
+    "title_tag": "Thank you | Vaughn Law, PLLC",
+    "meta_description": "Your request has been sent to Vaughn Law.",
+    "h1_count": 1
+  },
+  "_about": "Consultation flow, native Squarespace: step 1 is a page of seven links, step 2 is one page per situation each with its own Form block, step 3 is the form's post-submit message or redirect. The form on these mockup pages is visible but does not submit; its button opens the confirmation page.",
+  "verified": [
+    "'How it starts': three steps verbatim from content/proposed/home.json",
+    "Phone number: the live shared contact block"
+  ],
+  "confirm": [
+    "Thanks line \"Thanks, we've got your request.\", the band heading 'Need to talk sooner?', 'Call us. We pick up.' and the button 'Back to the home page' (new copy; 'one person to call, and they pick up' is itself unconfirmed, see the home page)",
+    "In Squarespace this is the form's post-submit message or redirect page"
+  ],
+  "modules": [
+    {
+      "module": "title-banner",
+      "slots": {
+        "title": "Thanks, we've got your request."
+      }
+    },
+    {
+      "module": "steps",
+      "variant": "process",
+      "slots": {
+        "title": "How it starts",
+        "items": [
+          {
+            "lead": "Call or send a note.",
+            "text": "Tell us what's going on."
+          },
+          {
+            "lead": "We tell you what it takes.",
+            "text": "What we'd do, how long it should take, and what it costs, before you commit."
+          },
+          {
+            "lead": "We handle it.",
+            "text": "You get one person to call and plain updates along the way."
+          }
+        ]
+      }
+    },
+    {
+      "module": "contact-band",
+      "slots": {
+        "title": "Need to talk sooner?",
+        "text": "Call us. We pick up.",
+        "lines_from": "closing",
+        "only": [
+          "Phone Number"
+        ],
+        "button": {
+          "text": "Back to the home page",
+          "page": "home"
+        }
+      }
+    }
+  ]
+}

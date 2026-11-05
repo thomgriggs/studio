@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-pmi/",
+ "slug": "what-is-pmi",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is PMI? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-pmi/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is PMI? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "This video tells you about it all. PMI stands for Private Mortgage Insurance or Insurer. These are privately-owned companies that provide mortgage insurance. They offer both standard and special affordable programs for borrowers. These companies provide guidelines to lenders that detail the types of loans they will insure. Lenders use these guidelines to determine […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is PMI?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/x9v896zori",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This video tells you about it all. PMI stands for Private Mortgage Insurance or Insurer. These are privately-owned companies that provide mortgage insurance. They offer both standard and special affordable programs for borrowers.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These companies provide guidelines to lenders that detail the types of loans they will insure. Lenders use these guidelines to determine borrower eligibility.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "PMI’s usually have stricter qualifying ratios and larger down payment requirements than the FHA but their premiums are often lower and they insure loans that exceed the FHA limit.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 88
+}

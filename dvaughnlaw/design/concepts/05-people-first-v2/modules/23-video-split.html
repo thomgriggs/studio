@@ -1,0 +1,13 @@
+{#
+MODULE: video-split
+PURPOSE: A short heading and text beside a YouTube video: the video as a rounded poster with a round play button on the left, heading, text (and buttons) on the right. Stacks on narrow screens.
+SLOTS: eyebrow, title, level, depth, body[], url (YouTube embed URL), video_title.
+SQUARESPACE: Section in a two-column layout: Video block (YouTube URL) on the left; Heading, Text and Button blocks on the right. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body, poster %}
+<section class="m m-vsplit" data-module="video-split" data-tone="{{ tone }}">
+  <div class="wrap vsplit__grid">
+    {{ poster(s.url, s.video_title or s.title) }}
+    <div class="vsplit__text">{{ eyebrow(s.eyebrow) }}{{ heading(s.depth or 2, s.title, s.level, "h-section") }}<div class="prose">{{ body(s.body, (s.depth or 2) + 1) }}</div></div>
+  </div>
+</section>

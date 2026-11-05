@@ -1,0 +1,37 @@
+{# Site footer (concept 05): a pale, friendly footer that follows the navy closing band without becoming a second slab. Brand and a rounded sage CTA on the left, link columns as soft rounded panels' worth of spacing, sage round social buttons, badges on white rounded tiles, a quiet legal bar.
+   `footer` = content/footer.json resolved by tools/build.py. The closing band right above already shows address, phone and email, so the footer does NOT repeat them: it keeps "Get directions" only (the band also shows the fax). The CTA is dropped when a band with its own button sits above (always, on this concept). #}
+{% macro icon(id) %}{% if id == 'facebook' %}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>{% elif id == 'linkedin' %}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>{% elif id == 'youtube' %}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>{% endif %}{% endmacro %}
+{% set c = footer.contact %}
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="sf__top">
+      <div class="sf__brand">
+        <a class="sf__logo" href="{{ footer.home }}" aria-label="{{ footer.firm }} home"><img src="{{ concept.logo.src }}" alt="{{ footer.firm }}" width="666" height="100" loading="lazy"></a>
+        {% if footer.licensed %}<p class="sf__licensed"><span class="sf__tick" aria-hidden="true"></span>{{ footer.licensed }}</p>{% endif %}
+        <ul class="sf__social" role="list">{% for so in footer.social %}<li><a href="{{ so.url }}" target="_blank" rel="noopener" aria-label="{{ so.label }} (opens in a new tab)">{{ icon(so.id) }}</a></li>{% endfor %}</ul>
+        {% if page.flow %}<address class="sf__addr">{% if c.address %}<span>{{ c.address }}</span>{% endif %}{% if c.phone %}<a href="{{ c.phone.href }}">{{ c.phone.text }}</a>{% endif %}{% if c.email %}<a href="{{ c.email.href }}">{{ c.email.text }}</a>{% endif %}</address>{% endif %}
+        <p class="sf__visit"><a href="{{ c.directions.href }}" target="_blank" rel="noopener">{{ c.directions.label }}<span class="sf__sr"> (opens in a new tab)</span></a></p>
+        {% if footer.extras %}<ul class="sf__pills" role="list">{% for e in footer.extras %}<li><a href="{{ e.href }}">{{ e.label }}</a></li>{% endfor %}</ul>{% endif %}
+      </div>
+      <nav class="sf__cols" aria-label="Footer">
+        {% for col in footer.columns %}
+        <div class="sf__col">
+          <h2 class="sf__h">{{ col.title }}</h2>
+          <ul role="list">{% for i in col["items"] %}<li><a href="{{ i.href }}">{{ i.label }}</a></li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </nav>
+    </div>
+    {% if footer.badges %}
+    <div class="sf__badges">
+      <p class="sf__h sf__h--inline">{{ footer.badges.heading }}</p>
+      <ul role="list">{% for l in footer.badges.logos %}<li class="sf__badge">{% if l.href %}<a href="{{ l.href }}" target="_blank" rel="noopener"><img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy"></a>{% else %}<img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy">{% endif %}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+    <div class="sf__legal">
+      <p>{{ footer.copyright }}</p>
+      <ul role="list">{% for l in footer.legal.links %}<li><a href="{{ l.href }}">{{ l.label }}</a></li>{% endfor %}</ul>
+      <p class="sf__meta">Design mockup, not for indexing &middot; <a href="{{ footer.root }}kit.html">Kit</a> &middot; <a href="{{ footer.root }}pages.html">Pages</a></p>
+    </div>
+  </div>
+</footer>

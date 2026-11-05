@@ -1,0 +1,319 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/estate-planning/",
+  "slug": "estate-planning",
+  "template": "hub",
+  "family": "hub-landing",
+  "title": "Estate Planning",
+  "seo": {
+    "title_tag": "Estate Planning – Wills, Trusts & Probate | Vaughn Law, St. Pete Beach",
+    "meta_description": "Estate planning in St. Pete Beach: wills, trusts, powers of attorney and probate in plain language. Vaughn Law, 350 Corey Avenue.",
+    "h1_count": 1
+  },
+  "_about": "Proposed practice-hub page: written for the redesign from the live crawl. Every factual line traces to a crawled page (see `verified`); newly written sentences that make any claim about the firm are in `confirm`. Ends with the concept's global closing band (no own contact section).",
+  "verified": [
+    "Hub title and the first four cards: live /estate-planning/ cards (Important Terms, Estate Planning Documents, Probate, Ancillary Probate); Wills, Trusts, and Estates is a crawled page under /real-estate-law/practice-areas/; the three planned cards are menu entries with no live page (content/nav.json)",
+    "The five documents and the plain-language definition of estate planning: live /estate-planning/important-terms/ and /estate-planning/estate-planning-documents/; \"a will does not avoid probate, a trust-based plan does\": live /estate-planning/probate/",
+    "Situations: the home page situation picker, verbatim",
+    "Workshop event band: the home page event data (live /person-workshops/ Upcoming Events)",
+    "People: Danielle Vaughn (Managing Attorney) and Joe Pritt (Paralegal, Estate Planning and Probate), live /about/our-team/; founder quote from /person-workshops/",
+    "Videos: jc_kTAVi7fE (trust funding), s7XckJYUlO0 (durable power of attorney), HFJ7gljWPvs (avoid probate); articles: newest three on wills, probate and personal representatives"
+  ],
+  "confirm": [
+    "The live /estate-planning/ page carries the title-services \"About Vaughn law\" text (closings), not estate planning copy; this page uses estate pages' own text instead. Confirm the owner wants the live text dropped",
+    "Hero \"who it is for\" wording is a summary of the live pages, not worded there (\"protect your home, savings and family\" echoes the workshop title)",
+    "Three planned pages (Powers of Attorney and Health Care, Moving to Florida, Business Succession) have no live content: write them, or drop the cards",
+    "Danielle Vaughn shown as the lead for estate planning because the crawl does not name an estate planning attorney; confirm who handles it",
+    "Photo use: Attorneys-in-the-Conference-Room.jpg, Group-Photo-2-1.jpg and portraits (2026/10 shoot); confirm consent"
+  ],
+  "modules": [
+    {
+      "module": "hero",
+      "slots": {
+        "eyebrow": "Vaughn Law · St. Pete Beach",
+        "title": "Estate Planning",
+        "tagline": "Wills, trusts, powers of attorney and probate, explained in plain language. For anyone who wants their home, savings and family protected, and for families facing probate.",
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+          "alt": "Three Vaughn Law attorneys in the conference room"
+        },
+        "images": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+            "alt": "Three Vaughn Law attorneys in the conference room"
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          },
+          {
+            "text": "See how we can help",
+            "href": "#services"
+          }
+        ]
+      }
+    },
+    {
+      "module": "card-grid",
+      "variant": "services",
+      "slots": {
+        "anchor": "services",
+        "title": "Estate planning services",
+        "cards": [
+          {
+            "title": "Estate Planning Documents",
+            "text": [
+              "There are five estate planning documents to consider, whatever your age, health or wealth."
+            ],
+            "page": "estate-planning__estate-planning-documents"
+          },
+          {
+            "title": "Wills, Trusts, and Estates",
+            "text": [
+              "What are your final wishes, and how do you want your assets managed, now or after you pass?"
+            ],
+            "page": "real-estate-law__practice-areas__wills-trusts-and-estates"
+          },
+          {
+            "title": "Probate",
+            "text": [
+              "The court-supervised process of identifying and gathering the assets of a person who has died."
+            ],
+            "page": "estate-planning__probate"
+          },
+          {
+            "title": "Ancillary Probate",
+            "text": [
+              "If you own property in more than one state, your estate could face probate in each of them."
+            ],
+            "page": "estate-planning__ancillary-probate"
+          },
+          {
+            "title": "Important Terms",
+            "text": [
+              "The words you will meet in estate planning, from beneficiary to trust, explained."
+            ],
+            "page": "estate-planning__important-terms"
+          },
+          {
+            "title": "Powers of Attorney and Health Care",
+            "text": [],
+            "planned": true
+          },
+          {
+            "title": "Moving to Florida",
+            "text": [],
+            "planned": true
+          },
+          {
+            "title": "Business Succession",
+            "text": [],
+            "planned": true
+          }
+        ]
+      }
+    },
+    {
+      "module": "situation-picker",
+      "slots": {
+        "title": "Is this you?",
+        "cards": [
+          {
+            "title": "A parent has died.",
+            "text": "We explain what probate is, whether you need it, and take it from there.",
+            "page": "estate-planning__probate",
+            "link_text": "Probate"
+          },
+          {
+            "title": "I need a will or a trust.",
+            "text": "We tell you plainly which one fits and what it involves.",
+            "page": "estate-planning__estate-planning-documents",
+            "link_text": "Estate Planning Documents"
+          },
+          {
+            "title": "I just moved to Florida.",
+            "text": "Your old plan may not work here. We'll show you what to update first.",
+            "page": "consultation__new-to-florida",
+            "link_text": "Schedule a consultation"
+          }
+        ]
+      }
+    },
+    {
+      "module": "headed-section",
+      "variant": "copy",
+      "slots": {
+        "title": "What estate planning is",
+        "level": 2,
+        "depth": 2,
+        "body": [
+          {
+            "type": "p",
+            "text": "Estate planning is arranging, during your lifetime, what happens to your property. It aims to remove or reduce the uncertainties around it, and to cut taxes and other expenses where it can."
+          },
+          {
+            "type": "p",
+            "text": "The goal of an estate plan comes from your own goals. It can be as simple or as complex as your needs call for."
+          },
+          {
+            "type": "p",
+            "text": "There are five documents to consider, whatever your age, health or wealth:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              {
+                "text": "Durable Power of Attorney"
+              },
+              {
+                "text": "Advanced Medical Directive"
+              },
+              {
+                "text": "Last Will and Testament (Will)"
+              },
+              {
+                "text": "Trust"
+              },
+              {
+                "text": "Letter of Instruction"
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Having a will does not avoid probate. If you want to avoid probate, you need a trust-based estate plan."
+          }
+        ]
+      }
+    },
+    {
+      "module": "people",
+      "variant": "hub",
+      "slots": {
+        "title": "Who handles estate planning",
+        "text": "The attorney and the paralegal you may work with.",
+        "people": [
+          {
+            "name": "Danielle Vaughn",
+            "role": "Managing Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+              "alt": "Danielle Vaughn"
+            }
+          },
+          {
+            "name": "Joe Pritt",
+            "role": "Paralegal, Estate Planning and Probate",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Joe-Pritt.jpg",
+              "alt": "Joe Pritt"
+            }
+          }
+        ],
+        "link": {
+          "text": "Meet the team",
+          "nav": "About/Our Team"
+        },
+        "quote": {
+          "text": "My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.",
+          "attribution": "Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC"
+        }
+      }
+    },
+    {
+      "module": "event-band",
+      "slots": {
+        "eyebrow": "Free workshop",
+        "title": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+        "text": "Free, in person, and in plain language.",
+        "events": [
+          {
+            "date": "Thursday, November 19th, 2026",
+            "time": "2:00 PM – 4:00 PM",
+            "venue": "Sunshine City Comedy Club",
+            "address": "5501 Gulf Blvd, St. Pete Beach, FL"
+          },
+          {
+            "date": "Tuesday, December 1st, 2026",
+            "time": "1PM – 3PM",
+            "venue": "Florida Lithuanian Center",
+            "address": "4880 46th Ave North, St Petersburg, FL"
+          }
+        ],
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2-1.jpg",
+          "alt": "The Vaughn Law team standing together in front of the teal Vaughn Law wall"
+        },
+        "buttons": [
+          {
+            "text": "See the workshop",
+            "page": "person-workshops"
+          }
+        ]
+      }
+    },
+    {
+      "module": "video-feed",
+      "slots": {
+        "title": "Watch",
+        "videos": [
+          {
+            "title": "The most important part of your trust, funding it!",
+            "href": "https://www.youtube.com/watch?v=jc_kTAVi7fE",
+            "date": "2026-03-23",
+            "video": "https://www.youtube.com/embed/jc_kTAVi7fE"
+          },
+          {
+            "title": "Durable Power Of Attorney Explained: When It’s Valid And Why You Need One In Florida",
+            "href": "https://www.youtube.com/watch?v=s7XckJYUlO0",
+            "date": "2024-08-22",
+            "video": "https://www.youtube.com/embed/s7XckJYUlO0"
+          },
+          {
+            "title": "How To Avoid Probate: How Estate Planning Can Save You Time, Money, And Family Conflicts | #shorts",
+            "href": "https://www.youtube.com/watch?v=HFJ7gljWPvs",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/HFJ7gljWPvs"
+          }
+        ],
+        "more": {
+          "text": "All videos",
+          "page": "videos"
+        }
+      }
+    },
+    {
+      "module": "post-feed",
+      "variant": "cards",
+      "slots": {
+        "title": "Estate planning articles",
+        "posts": [
+          {
+            "title": "You Don’t Have a Will. Florida Does, and You May Not Like It.",
+            "href": "https://dvaughnlaw.com/you-dont-have-a-will-florida-does-and-you-may-not-like-it/",
+            "date": "2026-10-05",
+            "excerpt": "Most people put off writing a will because they figure they’ll get around to it eventually."
+          },
+          {
+            "title": "Want Your Home to Skip Probate, Without Giving Up Control?",
+            "href": "https://dvaughnlaw.com/want-your-home-to-skip-probate-without-giving-up-control/",
+            "date": "2026-10-05",
+            "excerpt": "For most Floridians, the family home is their most valuable asset, and the one most likely to get stuck in probate."
+          },
+          {
+            "title": "The Role of a Personal Representative in Your Estate",
+            "href": "https://dvaughnlaw.com/the-role-of-a-personal-representative-in-your-estate/",
+            "date": "2026-06-04",
+            "excerpt": "One of the most important decisions you make when creating an estate plan is choosing a personal representative, also known as an executor."
+          }
+        ],
+        "more": {
+          "text": "All articles",
+          "page": "blog"
+        }
+      }
+    }
+  ]
+}

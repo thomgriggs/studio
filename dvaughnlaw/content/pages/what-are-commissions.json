@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/what-are-commissions/",
+ "slug": "what-are-commissions",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-04-04",
+ "seo": {
+  "title_tag": "What Are Real Estate Commissions? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-are-commissions/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Are Real Estate Commissions? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Like the video says – real estate agents aren’t paid by the hour!They’re paid a percentage of the purchase price in a successful real estate transaction. When one agent represents the sellers and another represents the buyers the commission is typically split between them. In the US, real estate commissions are commonly 6% of the […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-04-04T23:27:27+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "title-and-closing"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Are Real Estate Commissions?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/b8ncbarv2z",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Like the video says – real estate agents aren’t paid by the hour!They’re paid a percentage of the purchase price in a successful real estate transaction.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When one agent represents the sellers and another represents the buyers the commission is typically split between them.\n\nIn the US, real estate commissions are commonly 6% of the transaction usually 3%/3% when split.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No government or industry body sets commission rates. Legally, commission rates ARE negotiable. However, remember that agents only earn their commission on successful sales.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Consider the work you want them to do for you to evaluate the value you should put on the commission they earn.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 111
+}

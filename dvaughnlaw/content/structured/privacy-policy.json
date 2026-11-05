@@ -1,0 +1,60 @@
+{
+ "url": "https://dvaughnlaw.com/privacy-policy/",
+ "slug": "privacy-policy",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Privacy Policy",
+ "seo": {
+  "title_tag": "Privacy Policy - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/privacy-policy/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Privacy Policy - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Privacy Policy",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "We may use third-party remarketing services to advertise across the Internet. Remarketing will simply display relevant ads tailored to you based on what parts of our website you have viewed by placing a cookie on your machine. This cookie does not give access to your computer nor does it identify you personally in any way. The cookie is used to simply say “this person visited our site, so show them ads relating to how we can better serve them.” Remarketing allows us to tailor our marketing to better suit your needs and only display ads that are relevant to you."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "SMS Terms of Service",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "SMS consent is not shared with third parties or affiliates for marketing purposes. By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Vaughn Law, PLLC. This includes SMS messages for client appointment reminders and account notifications. Message frequency varies. Message and data rates may apply. For assistance, text HELP or visit our website at [https://dvaughnlaw.com](https://www.dvaughnlaw.com/) for Privacy Policy Terms of Service. Message HELP for help. Reply STOP to any message to opt out."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

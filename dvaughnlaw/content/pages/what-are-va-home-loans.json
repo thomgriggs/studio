@@ -1,0 +1,55 @@
+{
+ "url": "https://dvaughnlaw.com/what-are-va-home-loans/",
+ "slug": "what-are-va-home-loans",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2017-01-07",
+ "seo": {
+  "title_tag": "What Are VA Home Loans? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-are-va-home-loans/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Are VA Home Loans? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "What Are VA Loans? As the video says, the name is misleading – they’re not loans FROM the VA. The VA – short for “US Department of Veterans Affairs” – is the Federal military veteran benefit system. The VA administers benefits and services for Servicemembers, Veterans their dependents and survivors. […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2017-01-07T06:09:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "valoans"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Are VA Home Loans?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/ctobkhjzac",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What Are VA Loans?\n\nAs the video says, the name is misleading – they’re not loans FROM the VA.\n\nThe VA – short for “US Department of Veterans Affairs” – is the Federal military veteran benefit system.\n\nThe VA administers benefits and services for Servicemembers, Veterans their dependents and survivors.\n\nPrograms related to home loans are one of their key services.\n\nThe VA is not a bank; they do not provide home loans themselves.\n\nBut they do guarantee a portion of home loans provided to veterans and other eligible people by banks and mortgage companies.\n\nThese guarantees enable lenders to provide more favorable terms.\n\nThey are are commonly called “VA Loans”.\n\nThey cover buying, building, repairing, retaining and adapting homes for personal occupancy by eligible Veterans and survivors.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 133
+}

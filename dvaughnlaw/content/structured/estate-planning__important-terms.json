@@ -1,0 +1,484 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/important-terms/",
+ "slug": "estate-planning__important-terms",
+ "template": "content-page",
+ "family": "faq-page",
+ "title": "Important Terms",
+ "seo": {
+  "title_tag": "Important Terms - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/important-terms/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Important Terms - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Important Terms"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Estate planning is the process of anticipating and thoughtfully arranging for the disposal of property during a person’s lifetime. There are ordinarily many uncertainties that influence the accumulation and disposal of wealth. Estate planning seeks to eliminate (or at least greatly reduce) those uncertainties, while maximizing the value of a persons estate, in part by reducing taxes and other expenses.",
+     "The ultimate goal of an estate plan is determined by the specific goals of the client. It may be as simple or as complex as the client’s needs and desires may dictate."
+    ]
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "title": "Estate Planning Terms",
+    "level": 3,
+    "items": [
+     {
+      "title": "A-B Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "An arrangement used in a trust when a married testator has an estate with a value that exceeds his or her remaining estate tax exemption amount. A testator creates at the first death a marital trust or “A Trust” for the sole benefit of the surviving spouse for life (sometimes called a “Marital Trust” or “QTIP Trust”) and a bypass or “B Trust” for the benefit of the testator’s descendants or the testator’s surviving spouse and descendants for life (sometimes called the “Credit Shelter Trust” or “Family Trust”). After the death of the surviving spouse, the remaining assets of both trusts generally pass to the testator’s descendants. The B Trust passes at the death of the surviving spouse to the beneficiaries free of estate taxes regardless of the value of the B Trust at that time. It is important to designate assets to the A trust or B trust upon the death of the testator."
+       }
+      ]
+     },
+     {
+      "title": "Administrator",
+      "body": [
+       {
+        "type": "p",
+        "text": "The person(s) appointed to distribute the estate if someone dies without a valid will or without appointing executors, or if the appointed executor is unable or unwilling to act."
+       }
+      ]
+     },
+     {
+      "title": "Annual Exclusion",
+      "body": [
+       {
+        "type": "p",
+        "text": "The amount an individual may give annually to each of an unlimited number of recipients free of federal gift or other transfer taxes and without any IRS reporting requirements. In addition, these gifts do not use any of an individual’s federal gift tax exemption amount. Payments made directly to providers of education or medical care services also are tax-free and do not count against the annual exclusion or gift tax exemption amounts."
+       }
+      ]
+     },
+     {
+      "title": "Asset",
+      "body": [
+       {
+        "type": "p",
+        "text": "An item, owned by an individual, which may make up part of an inheritance or be used to pay debts."
+       }
+      ]
+     },
+     {
+      "title": "Attorney-in-Fact or Agent in Fact",
+      "body": [
+       {
+        "type": "p",
+        "text": "The person named as agent under a power of attorney to handle the financial affairs of another."
+       }
+      ]
+     },
+     {
+      "title": "Beneficiary",
+      "body": [
+       {
+        "type": "p",
+        "text": "A person entitled to benefit from a will or trust. A beneficiary can have either a current/future or contingent interest."
+       }
+      ]
+     },
+     {
+      "title": "Capacity",
+      "body": [
+       {
+        "type": "p",
+        "text": "Having the mental capability to make decisions to make a valid will or form a valid contract."
+       }
+      ]
+     },
+     {
+      "title": "Charitable Remainder Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "A tax-exempt trust created during lifetime or at death that distributes an annuity or unitrust amount to one or more designated non-charitable beneficiaries for life or a term of years, with the remaining trust assets passing to charity upon termination of the trust. If appreciated assets are transferred to a charitable remainder trust and sold by the trust, the trust does not pay capital gains tax. Instead, the non-charitable beneficiaries are taxed on a portion of the capital gains as they receive their annual distributions and, in this manner, the capital gains tax is deferred."
+       }
+      ]
+     },
+     {
+      "title": "Codicil",
+      "body": [
+       {
+        "type": "p",
+        "text": "A separate document amending the terms of an existing will."
+       }
+      ]
+     },
+     {
+      "title": "Conservator",
+      "body": [
+       {
+        "type": "p",
+        "text": "An individual or a corporate fiduciary appointed by a court to care for and manage the property of an incapacitated person, in the same way as a guardian cares for and manages the property of a minor."
+       }
+      ]
+     },
+     {
+      "title": "Devise",
+      "body": [
+       {
+        "type": "p",
+        "text": "To give land or other realty as by will."
+       }
+      ]
+     },
+     {
+      "title": "Estate",
+      "body": [
+       {
+        "type": "p",
+        "text": "All the assets of a person at the time of death."
+       }
+      ]
+     },
+     {
+      "title": "Estate planning",
+      "body": [
+       {
+        "type": "p",
+        "text": "A process by which an individual creates a strategy and executes a will, trust agreement, or other documents to provide for the administration of his or her assets upon his or her incapacity or death. Tax and liquidity planning are part of this process."
+       }
+      ]
+     },
+     {
+      "title": "Estate Tax",
+      "body": [
+       {
+        "type": "p",
+        "text": "A one-off tax paid on the value of a deceased’s estate above a set threshold. An estate tax is to be contrasted with an inheritance tax imposed by certain states on a beneficiary’s receipt of property. More than 20 states have state estate taxes that differ from the federal system, so your estate could be subject to a state estate tax even if it is not subject to a federal estate tax."
+       }
+      ]
+     },
+     {
+      "title": "Executor (M) / Executrix (F)",
+      "body": [
+       {
+        "type": "p",
+        "text": "Person appointed to put into effect the terms of a will and appointed by the court to carry out the terms of the will and administer the decedent’s estate."
+       }
+      ]
+     },
+     {
+      "title": "Fiduciary",
+      "body": [
+       {
+        "type": "p",
+        "text": "One who acts on behalf of another to manage money or property with responsibility and good faith."
+       }
+      ]
+     },
+     {
+      "title": "Generation-Skipping Transfer (GST) Tax",
+      "body": [
+       {
+        "type": "p",
+        "text": "A federal tax imposed on outright gifts and transfers in trust, whether during lifetime or at death, to or for beneficiaries two or more generations younger than the donor, such as grandchildren, that exceed the GST tax exemption. The GST tax imposes a tax on transfers that otherwise would avoid gift or estate tax at the skipped generational level. Some states impose a state generation-skipping transfer tax."
+       }
+      ]
+     },
+     {
+      "title": "Grantor",
+      "body": [
+       {
+        "type": "p",
+        "text": "See ‘Settlor’"
+       }
+      ]
+     },
+     {
+      "title": "Guardian",
+      "body": [
+       {
+        "type": "p",
+        "text": "An individual or bank or trust company appointed by a court to act for a minor or incapacitated person (the “ward”). A guardian of the person is empowered to make personal decisions for the ward. A guardian of the property (also called a “committee”) manages the property of the ward."
+       }
+      ]
+     },
+     {
+      "title": "Health Care Power of Attorney",
+      "body": [
+       {
+        "type": "p",
+        "text": "A document that appoints an individual (an “agent”) to make health care decisions when the grantor of the power is incapacitated. Also referred to as a “health care proxy.”"
+       }
+      ]
+     },
+     {
+      "title": "Heir",
+      "body": [
+       {
+        "type": "p",
+        "text": "One or more individuals that may receive assets from a decedent."
+       }
+      ]
+     },
+     {
+      "title": "Inter Vivos",
+      "body": [
+       {
+        "type": "p",
+        "text": "Between living persons – referring to a transfer or gift made during the donor’s lifetime, as opposed to in their will after their death."
+       }
+      ]
+     },
+     {
+      "title": "Intestate / Intestacy",
+      "body": [
+       {
+        "type": "p",
+        "text": "When a person dies without a valid Last Will and Testament they are said to be intestate. The estate is then distributed according to statutory regulations called the Rules of Intestacy."
+       }
+      ]
+     },
+     {
+      "title": "Irrevocable Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "A trust that cannot be terminated or revoked or otherwise modified or amended by the grantor. As modern trust law continues to evolve, however, it may be possible to effect changes to irrevocable trusts through court actions or a process called decanting, which allows the assets of an existing irrevocable trust to be transferred to a new trust with different provisions."
+       }
+      ]
+     },
+     {
+      "title": "Issue",
+      "body": [
+       {
+        "type": "p",
+        "text": "Children, grandchildren, adopted children but not stepchildren."
+       }
+      ]
+     },
+     {
+      "title": "Legacy",
+      "body": [
+       {
+        "type": "p",
+        "text": "A gift under the terms of a will. [See also ‘bequest’]"
+       }
+      ]
+     },
+     {
+      "title": "Letters of Administration",
+      "body": [
+       {
+        "type": "p",
+        "text": "Official acknowledgment by the Court of the appointment of administrators."
+       }
+      ]
+     },
+     {
+      "title": "Life Estate",
+      "body": [
+       {
+        "type": "p",
+        "text": "The interest in property owned by a life beneficiary (also called life tenant) with the legal right under state law to use the property for his or her lifetime, after which title fully vests in the remainderman (the person named in the deed, trust agreement, or other legal document as being the ultimate owner when the life estate ends)."
+       }
+      ]
+     },
+     {
+      "title": "No-Contest Clause",
+      "body": [
+       {
+        "type": "p",
+        "text": "A provision in a will or trust agreement that provides that someone who sues to receive more from the estate or trust or overturn the governing document will lose any inheritance rights he or she has. These clauses are not permissible in all instances or in all states."
+       }
+      ]
+     },
+     {
+      "title": "Personal Representative",
+      "body": [
+       {
+        "type": "p",
+        "text": "Generic term for executors and administrators to administer an estate."
+       }
+      ]
+     },
+     {
+      "title": "Pour Over Will",
+      "body": [
+       {
+        "type": "p",
+        "text": "A will used in conjunction with a revocable trust to pass title at death to property not transferred to the trust during lifetime."
+       }
+      ]
+     },
+     {
+      "title": "Power of Attorney",
+      "body": [
+       {
+        "type": "p",
+        "text": "A legal document that allows someone to make decisions on your behalf should there come a time when you lack the mental capacity to do so yourself."
+       }
+      ]
+     },
+     {
+      "title": "Probate",
+      "body": [
+       {
+        "type": "p",
+        "text": "The court process by which a will is determined to be valid and granted legal effect, or invalid with assets distributed by a personal representative."
+       }
+      ]
+     },
+     {
+      "title": "Revocable Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "A trust created during lifetime over which the grantor reserves the right to terminate, revoke, modify, or amend."
+       }
+      ]
+     },
+     {
+      "title": "Settlor",
+      "body": [
+       {
+        "type": "p",
+        "text": "The person who establishes a trust, held and administered by a trustee for the benefit of another. (In some legal systems, a *‘settlor’* is also referred to as a *‘trustor’*, or occasionally, a *‘grantor’* or *‘donor’)*."
+       }
+      ]
+     },
+     {
+      "title": "Special Needs Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "Trust established for the benefit of a disabled individual that is designed to allow him or her to be eligible for government financial aid by limiting the use of trust assets for purposes other than the beneficiary’s basic care."
+       }
+      ]
+     },
+     {
+      "title": "Spendthrift Provision",
+      "body": [
+       {
+        "type": "p",
+        "text": "A trust provision restricting both voluntary and involuntary transfers of a beneficiary’s interest, frequently in order to protect assets from claims of the beneficiary’s creditors."
+       }
+      ]
+     },
+     {
+      "title": "Tangible personal property",
+      "body": [
+       {
+        "type": "p",
+        "text": "Property that is capable of being touched and moved, such as personal effects, furniture, jewelry, and automobiles. Tangible personal property is distinguished from intangible personal property that has no physical substance but represents something of value, such as cash, stock certificates, bonds, and insurance policies. Tangible personal property also is distinguished from real property, such as land and items permanently affixed to land, such as buildings."
+       }
+      ]
+     },
+     {
+      "title": "Testate",
+      "body": [
+       {
+        "type": "p",
+        "text": "The condition of having died with a valid Last Will and Testament that covers a portion of or all of the decedent’s assets."
+       }
+      ]
+     },
+     {
+      "title": "Testator (m); Testatrix (f)",
+      "body": [
+       {
+        "type": "p",
+        "text": "The person making a will."
+       }
+      ]
+     },
+     {
+      "title": "Testamentary Capacity",
+      "body": [
+       {
+        "type": "p",
+        "text": "The term used to describe a person’s legal and mental ability to make or alter a valid will."
+       }
+      ]
+     },
+     {
+      "title": "Trust",
+      "body": [
+       {
+        "type": "p",
+        "text": "A fiduciary arrangement that allows a third party, or trustee, to hold assets on behalf of one or more beneficiaries. The individual or bank or trust company designated to hold and administer trust property (also generally referred to as a “fiduciary”). The term usually includes original (initial), additional, and successor trustees. A trustee has the duty to act in the best interests of the trust and its beneficiaries and in accordance with the terms of the trust instrument. A trustee must act personally (unless delegation is expressly permitted in the trust instrument), with the exception of certain administrative functions. A Trust can be revocable or irrevocable."
+       }
+      ]
+     },
+     {
+      "title": "Trust Protector",
+      "body": [
+       {
+        "type": "p",
+        "text": "One or more persons with limited powers over a trust, usually including the power to restrain or direct trustees in limited circumstances."
+       }
+      ]
+     },
+     {
+      "title": "Trustee",
+      "body": [
+       {
+        "type": "p",
+        "text": "A person or firm that holds or administers property or assets for the benefit of a third party."
+       }
+      ]
+     },
+     {
+      "title": "Trustor",
+      "body": [
+       {
+        "type": "p",
+        "text": "See ‘settlor’"
+       }
+      ]
+     },
+     {
+      "title": "Uniform Custodial Trust Act",
+      "body": [
+       {
+        "type": "p",
+        "text": "A law enacted by some states providing a simple way to create a trust for a minor or adult beneficiary without the need for a complex trust document. Such a trust typically is used for a trust of modest size, particularly for a disabled beneficiary. An adult beneficiary may terminate the trust at any time, otherwise the trust may continue for the life of the beneficiary."
+       }
+      ]
+     },
+     {
+      "title": "Uniform Transfers to Minors Act",
+      "body": [
+       {
+        "type": "p",
+        "text": "A law enacted by some states providing a convenient means to transfer property to a minor. An adult person known as a “custodian” is designated by the donor to receive and manage property for the benefit of a minor. Although the legal age of majority in many states may be 18, the donor may authorize the custodian to hold the property until the beneficiary reaches age 21. Formerly called the Uniform Gifts to Minors Act."
+       }
+      ]
+     },
+     {
+      "title": "Will (Last Will and Testament)",
+      "body": [
+       {
+        "type": "p",
+        "text": "A legal declaration in which a person names one or more others to manage their estate and oversee the distribution of their property as instructed upon their death."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

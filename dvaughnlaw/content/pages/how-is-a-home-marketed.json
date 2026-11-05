@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/how-is-a-home-marketed/",
+ "slug": "how-is-a-home-marketed",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "How Is A Home Marketed? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-is-a-home-marketed/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Is A Home Marketed? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "As you’ll see in the video, every home and market is a unique situation. Good marketing plans are specific to both. But every plan will include: Preparation Pricing and Marketing Activities. Preparation takes time – typically, months. Homes must be in “show” condition all repairs and upgrades complete and all photos and video completed before […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "going-to-market"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Is A Home Marketed?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/4oiv0ty236",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you’ll see in the video, every home and market is a unique situation. Good marketing plans are specific to both. But every plan will include: Preparation Pricing and Marketing Activities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Preparation takes time – typically, months. Homes must be in “show” condition all repairs and upgrades complete and all photos and video completed before the home goes on the market.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Pricing, likewise, should be planned in advance. Your broker will advise on both the best price and the best TERMS things like closing costs and seller credits to balance sales speed with sales price. Once the home is on the market it will quickly be entered in the MLS and will show up in Internet searches by agents and buyers.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your broker will advise other marketing activities including advertising, signage, showing and open house events so make the best of your situation. Their aim is to get negotiable offers, and then take the offer you accept through the closing process.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 166
+}

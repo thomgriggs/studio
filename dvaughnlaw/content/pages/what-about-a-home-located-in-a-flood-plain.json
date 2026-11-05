@@ -1,0 +1,72 @@
+{
+ "url": "https://dvaughnlaw.com/what-about-a-home-located-in-a-flood-plain/",
+ "slug": "what-about-a-home-located-in-a-flood-plain",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What About A Home Located In A Flood Plain? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-about-a-home-located-in-a-flood-plain/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What About A Home Located In A Flood Plain? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "A flood plain is an area of land adjacent to a stream or river that experiences flooding during periods of high discharge. Watch this video and it’ll make sense. If you live in a flood plain lenders will require that you have flood insurance before lending any money to you. But if you live […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:35+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "selecting"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What About A Home Located In A Flood Plain?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/footx0ad5k",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A flood plain is an area of land adjacent to a stream or river that experiences flooding during periods of high discharge. Watch this video and it’ll make sense.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you live in a flood plain lenders will require that you have flood insurance before lending any money to you. But if you live near a flood plain, you may choose whether or not to get flood insurance coverage for your home.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Check the National Flood Insurance Program site at [FloodSmart.gov](http://floodsmart.gov) for more information. And work with an insurance agent to construct a policy that fits your needs.",
+   "links": [
+    {
+     "text": "FloodSmart.gov",
+     "href": "http://floodsmart.gov"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 107
+}

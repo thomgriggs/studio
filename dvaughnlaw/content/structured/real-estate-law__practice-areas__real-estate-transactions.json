@@ -1,0 +1,110 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/real-estate-transactions/",
+ "slug": "real-estate-law__practice-areas__real-estate-transactions",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Real Estate Transactions",
+ "seo": {
+  "title_tag": "Real Estate Transactions - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/real-estate-transactions/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Real Estate Transactions - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Real Estate Transactions"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "If you own a home, lease a property, or have neighbors, real estate law impacts your life. At Vaughn Law we understand the Tampa Bay area and Florida laws and the repercussions they can have on your life and finances.",
+     "A real estate transaction can shape your future – positively or negatively. Our experienced team can guide you through a variety of personal and commercial real estate actions, including:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Contract Preparation and Review"
+     },
+     {
+      "text": "Title Searches and Opinions"
+     },
+     {
+      "text": "Loan Modifications"
+     },
+     {
+      "text": "Power of Attorney’s"
+     },
+     {
+      "text": "Land Use and Zoning Law"
+     },
+     {
+      "text": "Financing"
+     },
+     {
+      "text": "Redevelopment Incentives"
+     },
+     {
+      "text": "Leasing",
+      "children": [
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Commercial",
+          "children": []
+         },
+         {
+          "text": "Residential",
+          "children": []
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "text": "Condemnation Law"
+     },
+     {
+      "text": "Acquisition and Redevelopment"
+     },
+     {
+      "text": "Agreement for Deed"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Every property is unique – and so are our clients’ needs. Vaughn Law is dedicated to protecting your interests and meeting your real estate goals. [Contact us](https://dvaughnlaw.com/vaughnlaw/contact/) for your consultation."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

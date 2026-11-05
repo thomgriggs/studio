@@ -1,0 +1,9 @@
+{#
+MODULE: image
+PURPOSE: A single photo that stands on its own, as a wide rounded tile.
+SLOTS: image (src, alt).
+SQUARESPACE: Section with one Image block (fluid or wide) with rounded corners. No code.
+#}
+<section class="m m-image" data-module="image" data-tone="{{ tone }}">
+  <div class="wrap wrap--mid"><figure><img src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy"></figure></div>
+</section>

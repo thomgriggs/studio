@@ -1,0 +1,102 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/consultation/something-else/",
+  "slug": "consultation__something-else",
+  "template": "consultation",
+  "family": "consultation",
+  "title": "Something else.",
+  "own_closing": true,
+  "flow": true,
+  "seo": {
+    "title_tag": "Something else | Schedule a Consultation | Vaughn Law, PLLC",
+    "meta_description": "Send Vaughn Law a short request about this situation.",
+    "h1_count": 1
+  },
+  "_about": "Consultation flow, native Squarespace: step 1 is a page of seven links, step 2 is one page per situation each with its own Form block, step 3 is the form's post-submit message or redirect. The form on these mockup pages is visible but does not submit; its button opens the confirmation page.",
+  "verified": [
+    "Situation wording: content/proposed/home.json (situation-picker)"
+  ],
+  "confirm": [
+    "Page copy: 'What do you need help with?', 'Step 1 of 2' / 'Step 2 of 2', 'Change', 'Send my request', the seven choice cards (six are the home page situation cards verbatim; 'Something else.' and its line are new)",
+    "Disclaimer under every form: \"Sending this form does not create an attorney-client relationship. Please don't include confidential details.\" (new wording; the live site's disclaimer page says the site does not create a lawyer-client relationship)",
+    "Contact fields on every form: Name, Phone, Email, 'How should we reach you?' (Call / Email), 'How soon do you need help?' (There's a deadline / In the next month / Just planning ahead), 'Anything else we should know?'; Name and Email and the contact method are marked required",
+    "The native Squarespace form block cannot show or hide questions, so each situation has its own page with its own form; the step-2 pages carry no confidential-case fields",
+    "Questions on this page: What do you need help with? [textarea]"
+  ],
+  "modules": [
+    {
+      "module": "form",
+      "slots": {
+        "step": {
+          "label": "Step 2 of 2",
+          "current": 2,
+          "total": 2
+        },
+        "title": "Something else.",
+        "text": "Tell us in your own words, then your contact information.",
+        "change": {
+          "text": "Change",
+          "page": "consultation"
+        },
+        "form": {
+          "type": "form",
+          "note": "Native Squarespace Form block; not collected in the mockup",
+          "fields": [
+            {
+              "id": "what",
+              "label": "What do you need help with?",
+              "type": "textarea",
+              "required": true
+            },
+            {
+              "id": "name",
+              "label": "Name",
+              "type": "name",
+              "required": true
+            },
+            {
+              "id": "phone",
+              "label": "Phone",
+              "type": "phone"
+            },
+            {
+              "id": "email",
+              "label": "Email",
+              "type": "email",
+              "required": true
+            },
+            {
+              "id": "method",
+              "label": "How should we reach you?",
+              "type": "radio",
+              "options": [
+                "Call",
+                "Email"
+              ],
+              "required": true
+            },
+            {
+              "id": "soon",
+              "label": "How soon do you need help?",
+              "type": "radio",
+              "options": [
+                "There's a deadline",
+                "In the next month",
+                "Just planning ahead"
+              ]
+            }
+          ],
+          "submit": {
+            "text": "Send my request",
+            "page": "consultation__thanks"
+          },
+          "disclaimer": "Sending this form does not create an attorney-client relationship. Please don't include confidential details."
+        },
+        "call": {
+          "text": "Would you rather call?",
+          "phone_from": "closing"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+ "url": "https://dvaughnlaw.com/what-makes-up-closing-costs/",
+ "slug": "what-makes-up-closing-costs",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "What Makes Up Closing Costs? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-makes-up-closing-costs/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Makes Up Closing Costs? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "What you’ll see in this video is, there may be closing costs customary or unique to a certain locality but closing costs are usually made up of the following: Attorney’s or escrow fees (Yours and your lender’s if applicable) Property taxes (to cover tax period to date) Interest (paid from date of closing to 30 […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:46:46+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "title-and-closing"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Makes Up Closing Costs?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/hynz2yspzs",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What you’ll see in this video is, there may be closing costs customary or unique to a certain locality but closing costs are usually made up of the following:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Attorney’s or escrow fees (Yours and your lender’s if applicable)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property taxes (to cover tax period to date)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest (paid from date of closing to 30 days before first monthly payment)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Loan Origination fee (covers lenders administrative cost)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Recording fees Survey fee First premium of mortgage Insurance (if applicable)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Title Insurance (yours and lender’s)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Loan discount points",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "First payment to escrow account for future real estate taxes and insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Paid receipt for homeowner’s insurance policy (and fire and flood insurance if applicable)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "And any documentation preparation fees.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 121
+}

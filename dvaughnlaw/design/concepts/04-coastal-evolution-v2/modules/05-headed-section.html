@@ -1,0 +1,20 @@
+{#
+MODULE: headed-section
+PURPOSE: A heading with the text under it. Wide screens put the heading in a left column under a short teal rule and the text in the wider right column; articles and sub-sections stack. A heading with no body is a lead-in: it sits on a charcoal ground and joins the section that follows (no empty band). Variants: lead-in (a bold line that acted as a heading), on-image (text over a photo band). Depth 3 sections continue the previous section's ground.
+SLOTS: eyebrow, title, level (original heading level, kept as data-orig-level), depth (2 or 3, the level used on the page), image (on-image variant), body[].
+SQUARESPACE: Section with a Heading block (H2, or H3 for depth 3) and a Text block, in a two-column layout for the side-by-side form. A heading-only lead-in is the first block of the next section instead of a section of its own. On-image: section background image with an overlay. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body %}
+{% set d = s.depth or 2 %}
+{% if not s.body %}
+<section class="m m-headed m-headed--bare" data-module="headed-section" data-tone="{{ tone }}">
+  <div class="wrap"><div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(d, s.title, s.level, "h-section") }}</div></div>
+</section>
+{% else %}
+<section class="m m-headed{{ ' m-headed--' ~ variant if variant }}{{ ' m-headed--sub' if d == 3 }}" data-module="headed-section" data-tone="{{ tone }}"{% if s.image %} style="--bg:url('{{ s.image.src }}')"{% endif %}>
+  <div class="wrap headed__grid">
+    <div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(d, s.title, s.level, "h-section") }}</div>
+    <div class="headed__body prose">{{ body(s.body, d + 1) }}</div>
+  </div>
+</section>
+{% endif %}

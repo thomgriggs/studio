@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/why-use-a-realtor/",
+ "slug": "why-use-a-realtor",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "Why Use A REALTOR® - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/why-use-a-realtor/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Why Use A REALTOR® - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "A state license is required to sell real estate. But roughly half of those licensed take the additional step of becoming a REALTOR®. As we show you in this video, only members of the National Association of Realtors – NAR – are entitled to use that registered trademark and call themselves a REALTOR®. As […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:03+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "starting"
+  ],
+  "tags": [
+   "31"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Why Use A REALTOR®",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/81ie4iflm5",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A state license is required to sell real estate. But roughly half of those licensed take the additional step of becoming a REALTOR®.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As we show you in this video, only members of the National Association of Realtors – NAR – are entitled to use that registered trademark and call themselves a REALTOR®.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As members, they adhere to a strict Code of Ethics and have access to classes, seminars and certification. Their aim is to be experts in their community aware of real estate trends and local and neighborhood issues. They apply that expertise to help buyers and sellers succeed.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You can find a certified REALTOR® by looking in local sources asking around or searching here.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 120
+}

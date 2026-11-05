@@ -1,0 +1,9 @@
+{#
+MODULE: quote-tile
+PURPOSE: A short real quotation with its attribution as a soft sage tile with a large serif quote mark. Only emitted where the live page has a whole-paragraph quote followed by a "- Name" line; never invented.
+SLOTS: text, attribution.
+SQUARESPACE: Section with a Quote block (native) in a soft coloured, rounded section, or a Text block in Heading 3 style plus a small paragraph for the name. No code.
+#}
+<section class="m m-quote" data-module="quote-tile" data-tone="{{ tone }}">
+  <div class="wrap wrap--mid"><figure class="qtile"><blockquote><p>{{ s.text|md }}</p></blockquote>{% if s.attribution %}<figcaption>{{ s.attribution|md }}</figcaption>{% endif %}</figure></div>
+</section>

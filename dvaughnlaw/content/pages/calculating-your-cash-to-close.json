@@ -1,0 +1,90 @@
+{
+ "url": "https://dvaughnlaw.com/calculating-your-cash-to-close/",
+ "slug": "calculating-your-cash-to-close",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Calculating Your Cash To Close - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/calculating-your-cash-to-close/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Calculating Your Cash To Close - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Page 2 of the Loan Estimate provides the current ESTIMATED cash to close. Some costs will stay the same between estimate and closing. Some will change. A – Origination Charges – should match. B – Can’t Shop – 10% Tolerance C – Can Shop – no tolerance limit, BUT IF you select a provider from […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:30:07+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Calculating Your Cash To Close",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/hd1si183f6",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Page 2 of the Loan Estimate provides the current ESTIMATED cash to close. Some costs will stay the same between estimate and closing. Some will change.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A – Origination Charges – should match.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "B – Can’t Shop – 10% Tolerance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "C – Can Shop – no tolerance limit, BUT IF you select a provider from your lender’s list their actual cost should be no more than 10% greater than the estimate.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "E – Recording Fees are also subject to 10% tolerance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "F – Prepaids, G – Initial Escrow and H – Other, such as Owner’s Title may vary from the Loan Estimate without tolerance limits.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These estimates of closing costs plus loan details, Down Payment, Deposits Credits and Adjustments are used to calculate your estimated cash requirements when the loan finally closes. Consider the possible changes and tolerances when evaluating a loan decision.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 148
+}

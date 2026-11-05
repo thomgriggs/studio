@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/how-large-a-down-payment-do-i-need/",
+ "slug": "how-large-a-down-payment-do-i-need",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "How Large A Down Payment Do I Need? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-large-a-down-payment-do-i-need/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Large A Down Payment Do I Need? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "There are mortgage options now available that only require a down payment of 5% or less of the purchase price. You’ll see some pictures in this video to help you remember later – the larger the down payment, the less you have to borrow and the more equity you’ll have. Mortgages with less than […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2020-08-29T21:47:36+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Large A Down Payment Do I Need?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/axrta9slj3",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are mortgage options now available that only require a down payment of 5% or less of the purchase price. You’ll see some pictures in this video to help you remember later – the larger the down payment, the less you have to borrow and the more equity you’ll have.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Mortgages with less than a 20% down payment generally require a mortgage insurance policy to secure the loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When considering the size of your down payment consider that you’ll also need money for closing costs moving expenses, and – possibly – repairs and decorating.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 102
+}

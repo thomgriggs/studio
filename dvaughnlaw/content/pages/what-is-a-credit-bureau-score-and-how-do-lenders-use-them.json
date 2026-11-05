@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/",
+ "slug": "what-is-a-credit-bureau-score-and-how-do-lenders-use-them",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "What Is A Credit Bureau Score And How Do Lenders Use Them? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is A Credit Bureau Score And How Do Lenders Use Them? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "As we show you in this video, a credit bureau score, or “credit score” is a number based upon your credit history that represents the possibility that you will be unable to repay a loan. Lenders use it to determine your ability to qualify for a mortgage loan. The better the score, the better your […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:19+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "credit"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is A Credit Bureau Score And How Do Lenders Use Them?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/vkym0nc4ud",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As we show you in this video, a credit bureau score, or “credit score” is a number based upon your credit history that represents the possibility that you will be unable to repay a loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Lenders use it to determine your ability to qualify for a mortgage loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The better the score, the better your chances are of getting a favorable loan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Know your score and ensure that lenders have current information about it.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 86
+}

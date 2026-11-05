@@ -1,0 +1,39 @@
+{#
+MODULE: form
+PURPOSE: Step 2 of the consultation flow (and any form page): a calm, narrow column with "Step 2 of 2" and a "Change" link back to step 1, the choice echoed as the heading, a short line, then ONE form built from a field list: soft rounded fields on a white card, radio choices as rounded pills, one round sage Send button. Fields are real and visible but the form does not submit; the button opens the confirmation page. One short disclaimer line under it.
+SLOTS: step[label, current, total], title (h1), text, change[text, href], form[type "form", note, fields[id, label, type (name | text | textarea | select | radio | checkbox | date | email | phone), options[], required], submit[text, href], disclaimer], call[text, phone[text, href]].
+SQUARESPACE: Page with one Section: Text block ("Step 2 of 2" and a link "Change" to step 1), Heading (H1), Text, then a native Form block holding exactly the listed fields (Name, Phone, Email, Text, Textarea, Dropdown, Multiple choice / Checkboxes, Date), button label and a post-submit redirect to the confirmation page; the disclaimer is a small Text block under it. Field style and corner radius are Form block / Site Styles settings. The form block has no conditions or steps, which is why each situation is its own page. No code.
+#}
+{% from "_macros.html" import heading %}
+{% macro stepind(st) %}{% if st %}<p class="stepind"><span class="stepind__label">{{ st.label }}</span><span class="stepind__bar" aria-hidden="true">{% for i in range(1, st.total + 1) %}<i{% if i <= st.current %} class="on"{% endif %}></i>{% endfor %}</span></p>{% endif %}{% endmacro %}
+{% macro callline(c) %}{% if c and c.phone %}<p class="callline">{{ c.text }} <a href="{{ c.phone.href }}">{{ c.phone.text }}</a></p>{% endif %}{% endmacro %}
+{% macro req(f) %}{% if f.required %}<span class="req"> (required)</span>{% endif %}{% endmacro %}
+<section class="m m-cform" data-module="form" data-tone="{{ tone }}" aria-labelledby="cform-title">
+  <div class="wrap wrap--flow">
+    <div class="flow__top">{{ stepind(s.step) }}{% if s.change %}<a class="flow__change" href="{{ s.change.href|href }}">{{ s.change.text }}</a>{% endif %}</div>
+    <h1 id="cform-title" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.text %}<p class="flow__lead">{{ s.text|md }}</p>{% endif %}
+    {% set fm = s.form %}
+    <div class="cform" role="group" aria-label="{{ s.title }} (mockup form, does not submit)">
+      {% for f in fm.fields %}
+      {% if f.type == 'name' %}
+      <div class="fld fld--name"><span class="fld__label" id="f-{{ f.id }}-l">{{ f.label }}{{ req(f) }}</span>
+        <div class="fld__pair"><div><input id="f-{{ f.id }}-first" type="text" autocomplete="given-name" aria-labelledby="f-{{ f.id }}-l f-{{ f.id }}-first-l"><label id="f-{{ f.id }}-first-l" for="f-{{ f.id }}-first" class="fld__sub">First name</label></div><div><input id="f-{{ f.id }}-last" type="text" autocomplete="family-name" aria-labelledby="f-{{ f.id }}-l f-{{ f.id }}-last-l"><label id="f-{{ f.id }}-last-l" for="f-{{ f.id }}-last" class="fld__sub">Last name</label></div></div></div>
+      {% elif f.type in ('radio', 'checkbox') %}
+      <fieldset class="fld fld--{{ f.type }}"><legend class="fld__label">{{ f.label }}{{ req(f) }}</legend>
+        <div class="opts">{% for o in f.options %}<label class="opt"><input type="{{ f.type }}" name="f-{{ f.id }}" value="{{ o }}"><span>{{ o }}</span></label>{% endfor %}</div></fieldset>
+      {% elif f.type == 'select' %}
+      <div class="fld fld--select"><label class="fld__label" for="f-{{ f.id }}">{{ f.label }}{{ req(f) }}</label>
+        <select id="f-{{ f.id }}"><option value="">Choose one</option>{% for o in f.options %}<option>{{ o }}</option>{% endfor %}</select></div>
+      {% elif f.type == 'textarea' %}
+      <div class="fld fld--textarea"><label class="fld__label" for="f-{{ f.id }}">{{ f.label }}{{ req(f) }}</label><textarea id="f-{{ f.id }}" rows="4"></textarea></div>
+      {% else %}
+      <div class="fld fld--{{ f.type }}"><label class="fld__label" for="f-{{ f.id }}">{{ f.label }}{{ req(f) }}</label><input id="f-{{ f.id }}" type="{{ {'phone': 'tel', 'email': 'email', 'date': 'date'}.get(f.type, 'text') }}"{% if f.type == 'phone' %} autocomplete="tel"{% elif f.type == 'email' %} autocomplete="email"{% endif %}></div>
+      {% endif %}
+      {% endfor %}
+      <p class="cform__actions"><a class="btn" href="{{ fm.submit.href|href }}">{{ fm.submit.text }}</a></p>
+      {% if fm.disclaimer %}<p class="cform__note">{{ fm.disclaimer }}</p>{% endif %}
+    </div>
+    {{ callline(s.call) }}
+  </div>
+</section>

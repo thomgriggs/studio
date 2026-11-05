@@ -1,0 +1,29 @@
+{#
+MODULE: hero
+PURPOSE: Top of the home page and practice-area hubs. Centered serif title and one line on a pale ground, a row of pill buttons, then the live site's photos as rounded tiles below the text (never behind it). On hubs the photo is one wide rounded tile that straddles the hero's bottom edge, half on the pale ground and half on white. On the home page the page shell passes the gallery photos in as `mosaic`: people photos lead, and the photos form one mosaic of rounded tiles directly under the buttons (no empty tint tile).
+SLOTS: eyebrow (small pill above the title), title (h1), tagline, image (src, alt), images[src, alt] (the proposed home page's people-first photos: the shell passes them as the mosaic), inset (not used in this design), actions[text, href]. Empty slots are left out.
+SQUARESPACE: Section on a pale section colour with a Heading block set to H1, a Text block and Button blocks in one row, all centered. Below it a Gallery block (grid) or Image blocks with rounded corners; for the straddle, one Image block pulled up with a negative top margin / a section split into pale top and white bottom with the image overlapping. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+{% set tile = s.image and not mosaic %}
+<section class="m m-hero{{ ' m-hero--tile' if tile }}" data-module="hero" data-tone="pale">
+  <div class="wrap">
+    {% if s.eyebrow %}<p class="hero__eyebrow">{{ s.eyebrow }}</p>{% endif %}
+    {{ heading(1, s.title, 1) }}
+    {% if s.tagline %}<p class="hero__tag">{{ s.tagline|md }}</p>{% endif %}
+    {% if s.actions %}<ul class="actions" role="list">{% for a in s.actions %}<li><a class="btn{{ '' if loop.first else ' btn--ghost' }}" href="{{ a.href|href }}">{{ a.text }}</a></li>{% endfor %}</ul>{% endif %}
+  </div>
+  {% if mosaic and mosaic|length >= 4 %}
+  <div class="wrap hero__media">
+    {# the Vaughn-Law-Sign photo reads "VAUGHN LA" when cropped to a square tile, so it takes the wide tile (position 2) and the photo that was there moves to the sign's old place #}
+    {% set tiles = (mosaic[:5])|list %}{% set ns = namespace(i=-1) %}{% for t in tiles %}{% if 'Vaughn-Law-Sign' in t.src %}{% set ns.i = loop.index0 %}{% endif %}{% endfor %}
+    {% if ns.i > 1 and tiles|length >= 4 %}{% set t2 = tiles[1] %}{% set _ = tiles.__setitem__(1, tiles[ns.i]) %}{% set _ = tiles.__setitem__(ns.i, t2) %}{% endif %}
+    <ul class="mosaic mosaic--{{ [mosaic|length, 5]|min }}" role="list">
+      {% for i in tiles %}<li class="mo-{{ loop.index }}"><img src="{{ i.src }}" alt="{{ i.alt }}"{% if not loop.first %} loading="lazy"{% endif %}></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% elif tile %}
+  <div class="wrap wrap--mid hero__media"><img class="hero__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}"></div>
+  {% endif %}
+</section>

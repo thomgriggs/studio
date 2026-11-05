@@ -1,0 +1,27 @@
+{#
+MODULE: video-grid
+PURPOSE: Every video from the firm's YouTube channel, newest first, as a grid of poster cards (16:9 thumbnail with a small square teal play mark, the date in small teal capitals, the title in serif). Each card opens the video on YouTube in a new tab. One button to the channel. Hairline-ruled, square, no motion beyond a hover.
+SLOTS: eyebrow, title, videos[title, href (YouTube watch URL), date, video (YouTube embed or watch URL, for the poster)], more[text, href].
+SQUARESPACE: Section with a Heading and a grid of Video blocks (one per YouTube URL; Squarespace shows the thumbnail with a play button and plays in place, or opens YouTube if the Video block is set to link out), or a Summary block fed by a Video collection; plus a Button block to the channel. Title and date as a Text block under each Video block. No code.
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-vgrid" data-module="video-grid" data-tone="{{ tone }}" aria-labelledby="vgrid-title">
+  <div class="wrap">
+    <div class="m__head headed__head">{{ eyebrow(s.eyebrow) }}<h2 id="vgrid-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <ul class="vgrid" role="list">
+      {% for v in s.videos %}{% set id = v.video|ytid %}
+      <li class="vgcard">
+        <a class="vgcard__link" href="{{ v.href }}" target="_blank" rel="noopener">
+          <span class="vgcard__poster"><img src="https://i.ytimg.com/vi/{{ id }}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="vgcard__body">
+            {% if v.date %}<span class="vgcard__date"><time datetime="{{ v.date }}">{{ v.date|longdate }}</time></span>{% endif %}
+            <span class="vgcard__title">{{ v.title }}</span>
+            <span class="vgcard__sr"> (opens YouTube in a new tab)</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if s.more %}<p class="feed__more"><a class="btn" href="{{ s.more.href|href }}" target="_blank" rel="noopener">{{ s.more.text }}<span class="vgcard__sr"> (opens in a new tab)</span></a></p>{% endif %}
+  </div>
+</section>

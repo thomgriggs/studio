@@ -1,0 +1,19 @@
+{# The page's one navy band, last thing in <main>: the live site's shared contact block (closing object built by tools/build.py)
+   plus the header's consultation button linking to the contact page. #}
+{% if closing and closing.heading %}
+<section class="closing" data-module="closing" aria-labelledby="closing-title">
+  <div class="wrap closing__grid">
+    <div class="closing__main">
+      <h2 id="closing-title">{{ closing.heading }}</h2>
+      {% if closing.text %}<p>{{ closing.text|md }}</p>{% endif %}
+      {% if nav.button.available %}<p class="actions"><a class="btn btn--on-navy" href="{{ nav.button.href }}">{{ nav.button.label }}</a></p>{% endif %}
+    </div>
+    {% if closing.lines %}
+    <dl class="closing__lines">
+      {% for l in closing.lines %}<div><dt>{{ l.label }}</dt><dd>{% if l.href %}<a href="{{ l.href }}">{{ l.text }}</a>{% else %}{{ l.text|md }}{% endif %}</dd></div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

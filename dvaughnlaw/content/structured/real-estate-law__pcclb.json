@@ -1,0 +1,61 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/pcclb/",
+ "slug": "real-estate-law__pcclb",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "PCCLB",
+ "seo": {
+  "title_tag": "PCCLB - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/pcclb/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "PCCLB - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "PCCLB"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "The Pinellas County Construction Licensing Board investigates reports of unlicensed contractors."
+     },
+     {
+      "type": "p",
+      "text": "Did you know, if you are a Florida licensed contractor that works in Pinellas County you must also be licensed with Pinellas County? This is a seperate license, with an additional application required."
+     },
+     {
+      "type": "p",
+      "text": "Did you know that a homeowner can receive a citation or fine for hiring an unlicensed contractor to do work on their home?"
+     },
+     {
+      "type": "p",
+      "text": "Always make sure you check both the Florida and the Pinellas County sites below to ensure your contractor is properly licensed for the job before you hire them.\nDBPR: [https://www.myfloridalicense.com/wl11.asp](https://www.myfloridalicense.com/wl11.asp)\nPCCLB: [https://publicsecure.pinellascounty.org/clbsearch/index.jsp](https://publicsecure.pinellascounty.org/clbsearch/index.jsp)"
+     },
+     {
+      "type": "p",
+      "text": "If you have an issue with the PCCLB or a contractor who is not licensed, contact Vaughn Law for a consultation."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "url": "https://dvaughnlaw.com/",
+ "slug": "home",
+ "template": "home",
+ "family": "home",
+ "title": "Vaughn Law, PLLC",
+ "seo": {
+  "title_tag": "Real Estate Attorney - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Real Estate Attorney - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "title": "Vaughn Law, PLLC",
+    "tagline": "Accessible | Reliable | Practical Real Estate & Business Law Firm",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+     "alt": ""
+    },
+    "actions": [
+     {
+      "text": "Title Services",
+      "href": "https://dvaughnlaw.com/title-services/"
+     },
+     {
+      "text": "real Estate Law",
+      "href": "https://dvaughnlaw.com/real-estate-law/"
+     },
+     {
+      "text": "Investors",
+      "href": "https://dvaughnlaw.com/investors/"
+     },
+     {
+      "text": "Estate Planning",
+      "href": "https://dvaughnlaw.com/estate-planning/"
+     },
+     {
+      "text": "Subscription Plans",
+      "href": "https://dvaughnlaw.com/subscription-plans/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "logo-row",
+   "slots": {
+    "logos": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/mybadge.png",
+      "alt": "Super Lawyers Rising Stars Award"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/2023-PC-BLK-320px.png",
+      "alt": "The Fund 2023 President's Circle Award"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/BOFL-2023-Best-Web-234x60-1.jpg",
+      "alt": "Best of Florida 2023 Award"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/CTC-BLK-6-1200px.png",
+      "alt": "The Fund 2023 6th Circuit Top Contributor Award"
+     }
+    ]
+   }
+  },
+  {
+   "module": "gallery",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Vaughn-Law-Sign.jpg",
+      "alt": "Vaughn Law Sign"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2.jpg",
+      "alt": "Group Photo"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_188931800.jpg",
+      "alt": "City View"
+     },
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Lobby.jpg",
+      "alt": "Office Lobby"
+     }
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "slots": {
+    "cards": [
+     {
+      "title": "Mission Statement",
+      "text": [
+       "The Mission of Vaughn Law is to educate clients on their rights and support them in resolving their real estate issues and planning for their future estate needs, to empower them to make the best decisions possible to further their ultimate goals.",
+       "Vaughn Law is committed to providing knowledgeable, straightforward and timely legal services through consistent communication with all clients."
+      ]
+     },
+     {
+      "title": "Values",
+      "text": [
+       "Straightforward, customer service, quality product"
+      ]
+     },
+     {
+      "title": "Vision",
+      "text": [
+       "To educate and support the community to plan, prevent and resolve real estate legal and estate issues."
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_image": 1
+ }
+}

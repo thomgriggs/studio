@@ -1,0 +1,7 @@
+{# Page shell: home. Live home: the hero takes the gallery photos plus its own photo as one mosaic directly under the buttons, people photos first (people_first filter); the gallery module is not rendered a second time. Proposed home (page.source == 'proposed'): modules render in order, the hero's `images` become the mosaic, and the page carries its own contact-band (own_closing), so the global closing band is not added. #}
+{% extends "_base.html" %}
+{% block main %}{% if page.source == 'proposed' %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "mosaic": (m.slots.images|people_first) if m.module == 'hero' else none}) }}
+{% endfor %}{% else %}{% set g = page.modules|selectattr('module','equalto','gallery')|first %}{% set h = page.modules|selectattr('module','equalto','hero')|first %}
+{% set mosaic = ((g.slots.images + ([h.slots.image] if h and h.slots.image else []))|people_first) if g else none %}
+{% set skip = g %}
+{% include "_flow.html" %}{% endif %}{% endblock %}

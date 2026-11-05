@@ -1,0 +1,397 @@
+{
+ "url": "https://dvaughnlaw.com/blog-old/",
+ "slug": "blog-old",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-10-28",
+ "seo": {
+  "title_tag": "Blog - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/blog-old/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Blog - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2-1.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h1",
+   "text": "Blog",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[Fifty Percent of Paradise](https://dvaughnlaw.com/fifty-percent-of-paradise/)",
+   "links": [
+    {
+     "text": "Fifty Percent of Paradise",
+     "href": "https://dvaughnlaw.com/fifty-percent-of-paradise/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The rebuilding rule nobody mentioned while the water was going down By Danielle L. Vaughn, Board Certified Real Estate Attorney Two years after Helene and Milton, St. Pete Beach is still rebuilding, and plenty of owners are meeting a rule nobody mentioned while the...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[The Repairs You Inherit](https://dvaughnlaw.com/the-repairs-you-inherit/)",
+   "links": [
+    {
+     "text": "The Repairs You Inherit",
+     "href": "https://dvaughnlaw.com/the-repairs-you-inherit/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Due diligence before you buy a storm-repaired home By Danielle L. Vaughn, Board Certified Real Estate Attorney The listing photos look great. New kitchen, new drywall, fresh paint, and a price that seems almost reasonable for this zip code. What the photos do not show...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[What Your November Tax Bill Won’t Tell You](https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/)",
+   "links": [
+    {
+     "text": "What Your November Tax Bill Won’t Tell You",
+     "href": "https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The discount, the deadline, and the deed that can undo both By Danielle L. Vaughn, Board Certified Real Estate Attorney Your Pinellas County property tax notice goes in the mail by November 1. Most of us glance at the number, wince, and pay it. Try reading it instead....",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[10 Essential Steps to Take When Planning for Your Own Funeral](https://dvaughnlaw.com/10-essential-steps-to-take-when-planning-for-your-own-funeral/)",
+   "links": [
+    {
+     "text": "10 Essential Steps to Take When Planning for Your Own Funeral",
+     "href": "https://dvaughnlaw.com/10-essential-steps-to-take-when-planning-for-your-own-funeral/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Oct 4, 2026 · by: Danielle Leigh Vaughn, Board Certified Real Estate Attorney Planning your own funeral can feel uncomfortable at first. Yet it is one of the most thoughtful gifts you can leave for the people you love. When your wishes are written down, your family...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[How to Protect Your Family-Owned Real Estate](https://dvaughnlaw.com/how-to-protect-your-family-owned-real-estate/)",
+   "links": [
+    {
+     "text": "How to Protect Your Family-Owned Real Estate",
+     "href": "https://dvaughnlaw.com/how-to-protect-your-family-owned-real-estate/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A family beach cottage, a mountain cabin, acreage that has been farmed for decades, or the home where three generations gathered for holidays: family real estate carries meaning that goes well beyond its market value. That is also why it so often becomes a source of...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[You Don’t Have a Will. Florida Does, and You May Not Like It.](https://dvaughnlaw.com/you-dont-have-a-will-florida-does-and-you-may-not-like-it/)",
+   "links": [
+    {
+     "text": "You Don’t Have a Will. Florida Does, and You May Not Like It.",
+     "href": "https://dvaughnlaw.com/you-dont-have-a-will-florida-does-and-you-may-not-like-it/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Most people put off writing a will because they figure they'll get around to it eventually. They're busy. They're healthy. They're not that old. And besides, everything would just go to their spouse or...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[Want Your Home to Skip Probate, Without Giving Up Control?](https://dvaughnlaw.com/want-your-home-to-skip-probate-without-giving-up-control/)",
+   "links": [
+    {
+     "text": "Want Your Home to Skip Probate, Without Giving Up Control?",
+     "href": "https://dvaughnlaw.com/want-your-home-to-skip-probate-without-giving-up-control/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney For most Floridians, the family home is their most valuable asset, and the one most likely to get stuck in probate. Many people try to avoid that by adding a child to the deed. It feels simple, but it...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[The Role of a Personal Representative in Your Estate](https://dvaughnlaw.com/the-role-of-a-personal-representative-in-your-estate/)",
+   "links": [
+    {
+     "text": "The Role of a Personal Representative in Your Estate",
+     "href": "https://dvaughnlaw.com/the-role-of-a-personal-representative-in-your-estate/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By Danielle L. Vaughn, Esq., B.C.S., LL.M. One of the most important decisions you make when creating an estate plan is choosing a personal representative, also known as an executor. This individual is responsible for carrying out your wishes after you pass away....",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[When Should You Update Your Estate Plan?](https://dvaughnlaw.com/when-should-you-update-your-estate-plan/)",
+   "links": [
+    {
+     "text": "When Should You Update Your Estate Plan?",
+     "href": "https://dvaughnlaw.com/when-should-you-update-your-estate-plan/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By: Allison Couri, Attorney Many people feel a sense of relief once they have signed their estate planning documents. It is an important milestone, and for many, it brings peace of mind knowing that their wishes are in writing. However, one of the most common...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[If You Can’t Speak for Yourself, Who Will?](https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/)",
+   "links": [
+    {
+     "text": "If You Can’t Speak for Yourself, Who Will?",
+     "href": "https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/"
+    }
+   ],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Imagine waking up in a hospital, unable to communicate. Doctors need to make urgent decisions about your care, but without the right legal documents, even your closest family members may have no...",
+   "links": [],
+   "component": "blog",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Realtors",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/realtors/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Consumers",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/consumers/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Lenders",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/services/lenders/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Get in Touch",
+   "links": [],
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Phone: [(727) 223-6080](tel:(727) 223-6080)\nEmail: [Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:(727) 223-6080"
+    },
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Order Title",
+   "href": "http://localwebdesigncompany.com/vaughnlaw/order-title/",
+   "is_button": true,
+   "component": "sidebar",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Our Partners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-02.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-01.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-02.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2018/06/partner-01.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps?q=27.9429265,-82.45176700000002",
+   "title": "Amalie Arena",
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Amalie Arena",
+   "links": [],
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "401 Channelside Dr<br>\n\nTampa, FL 33602",
+   "links": [],
+   "component": "map",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Our Location",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "405 6th Street South, Suite 102,\n\nSaint Petersburg, FL 33701",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Open Hours",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Mon-Fri:** 8:00am - 5:00pm\n\n**Weekends:** By Appointment",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Contact Us",
+   "href": "",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Order Title",
+   "href": "",
+   "is_button": true,
+   "region": "main"
+  }
+ ],
+ "word_count": 584
+}

@@ -1,0 +1,424 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/probate/",
+ "slug": "estate-planning__probate",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Probate",
+ "seo": {
+  "title_tag": "Probate - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/probate/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Probate - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Probate"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "A Probate is a court supervised process for identifying and gathering assets of a deceased person."
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "The Process of winding down a decedents affairs"
+     },
+     {
+      "text": "Appointment of a personal representative"
+     },
+     {
+      "text": "Determination of validity of will"
+     },
+     {
+      "text": "Paying claims"
+     },
+     {
+      "text": "Distributing assets"
+     },
+     {
+      "text": "Filing necessary tax returns"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "It is important to know that having a will does not avoid Probate. If you want to avoid Probate you will need a trust based estate plan. Contact Vaughn Law for a consultation to discuss this further."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Summary Administration vs. Final Administration",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "There are different types of Probate Administration in Florida."
+     },
+     {
+      "type": "p",
+      "text": "Formal Administration is the traditional procedure for winding down a decedent’s affairs. This procedure can be used with any Probate regardless of assets but is a lengthy process that requires proper notice to be provided to those creditors who are known or unknown to the estate."
+     },
+     {
+      "type": "p",
+      "text": "Summary Administration is an expedited process to wind down a decedent’s affairs for small estates."
+     },
+     {
+      "type": "p",
+      "text": "To qualify for a Summary Administration the following must be true:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Less than $75,000, and",
+        "children": []
+       },
+       {
+        "text": "Dead more than two years",
+        "children": []
+       },
+       {
+        "text": "Or if the decedent only owned a homestead property, regardless of value",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Process of Probate",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Open the Estate",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Intestate vs. testate",
+            "children": []
+           },
+           {
+            "text": "Prove the Will",
+            "children": []
+           },
+           {
+            "text": "Letters of Administration",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "Administer the Estate",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Gather and inventory the assets",
+            "children": []
+           },
+           {
+            "text": "Provide notice to creditors",
+            "children": [
+             {
+              "type": "ul",
+              "items": [
+               {
+                "text": "Deal with creditors",
+                "children": []
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "text": "Sell Assets",
+            "children": []
+           },
+           {
+            "text": "File Necessary income tax returns",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "Close the Estate",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Obtain Orders to sell assets",
+            "children": []
+           },
+           {
+            "text": "Transfer assets to beneficiaries or Heirs",
+            "children": []
+           },
+           {
+            "text": "Final Accounting",
+            "children": []
+           },
+           {
+            "text": "Closing letter from IRS",
+            "children": []
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "table",
+   "slots": {
+    "title": "How do the Estate Documents affect a Probate?",
+    "level": 3,
+    "rows": [
+     [
+      "",
+      "WITH NO WILL",
+      "WITH A WILL",
+      "WITH A TRUST"
+     ],
+     [
+      "At Incapacity (unable to handle your financial affairs)",
+      "**Court Control:** Court appointee oversees your care, must keep detailed records, report to the court and usually post a bond (even if appointee is your spouse). Court oversees and approves all expenses & financial affairs.",
+      "**Court Control:** Same as no Will.",
+      "**No Court Involvement.** The named successor trustee manages your financial affairs and distributes your estate according to the instructions I your Trust."
+     ],
+     [
+      "At Death",
+      "**Probate:** Court orders your debts paid and assets distributed according to state law.",
+      "**Probate:** Same as no Will, but assets distributed per your will (if valid and any contests unsuccessful",
+      "**No Probate.** Debts paid and assets distributed by named successor trustee pursuant to Trust provisions."
+     ],
+     [
+      "Costs: Court, Legal and Executor",
+      "**Death:** Estimated 3-8% of estate’s value. **Incapacity:** Costs increase due to additional oversight",
+      "**Same as no Will** Costs may increase if Will is contested.",
+      "**Minimal or no court costs.** Reduced legal fees."
+     ],
+     [
+      "Time",
+      "**Death:** Usually 6 months to 2 years. Can be longer if sale of real property involved. Incapacity: Court involved until recovery or death.",
+      "**Same as no Will.**",
+      "**Death:** Assets distributed and debts paid within a short period of time unless Trust specifies payment to an heir/beneficiary over time. Complex estates may take longer for tax returns. Incapacity: No delays."
+     ],
+     [
+      "Flexibility & Control",
+      "**None:** Court processes, not your family; you have no control at incapacity or death. Whey you die assets are distributed according to state law.",
+      "**Limited:** Same as no Will, except when you die assets are distributed according to your Will.",
+      "**Maximum.** You may change or terminate your Trust at any time. Assets remain in your Trust regardless of incapacity or death."
+     ],
+     [
+      "Privacy",
+      "**None:** Court proceedings are public.",
+      "**None.** Same as no Will.",
+      "**Maximum** Trusts are not public. Your estate and distribution of assets remains private."
+     ]
+    ],
+    "header": true
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Problems with Probate",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Invitations for controversy or dispute",
+        "children": []
+       },
+       {
+        "text": "Expensive for court costs and attorney fees",
+        "children": []
+       },
+       {
+        "text": "Lack of Privacy the proceedings are public",
+        "children": []
+       },
+       {
+        "text": "Potential for delays",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Benefits to Probate",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Resolve creditors claims with finality",
+        "children": []
+       },
+       {
+        "text": "The proceeding is supervised by the court to ensure assets are properly disbursed",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "If you know there will be controversy",
+            "children": []
+           },
+           {
+            "text": "Trust issues",
+            "children": []
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "How to Avoid Probate",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Ensure there are no assets in the client’s name that do not automatically transfer to another upon the client’s death."
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Deeds",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Life Estate Deed, or Enhanced Life Estate Deed or Lady Bird Deed",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "Joint Ownership",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Real Estate and joint bank accounts",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "Lifetime Gifts : a gift made during the life of the decedent removes it from the estate",
+        "children": []
+       },
+       {
+        "text": "Beneficiary Designations:",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Payable On Death (POD) – cash distributed to beneficiaries",
+            "children": []
+           },
+           {
+            "text": "Transfer on Death (TOD) – assets distributed to beneficiaries",
+            "children": []
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "Revocable Living Trusts",
+        "children": [
+         {
+          "type": "ul",
+          "items": [
+           {
+            "text": "Fully funded Trust means that the Trust will handle assets at decedents death",
+            "children": []
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,4 @@
+{# Page shell: video-post. Same module flow; the video module sits wide, text stays in the reading column. #}
+{% extends "_base.html" %}
+{% block main %}{% for m in page.modules %}{{ render_module(m, page, {"root": root}) }}
+{% endfor %}{% endblock %}

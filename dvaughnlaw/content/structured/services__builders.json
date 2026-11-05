@@ -1,0 +1,57 @@
+{
+ "url": "https://dvaughnlaw.com/services/builders/",
+ "slug": "services__builders",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Builders",
+ "seo": {
+  "title_tag": "Builders - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/services/builders/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Builders - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Builders"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Law has established a solid track record with Saint Petersburg new construction builders. Whether it’s new construction or a remodel, we have the tools to keep your sales on schedule."
+     },
+     {
+      "type": "p",
+      "text": "We are available to answer questions and provide guidance as you get started building your first home. We can assist you with your first contract and we can personalize a new construction sales contract so you can sell your pre-build homes!"
+     },
+     {
+      "type": "p",
+      "text": "We also offer guidance on the several options for liability protection."
+     },
+     {
+      "type": "p",
+      "text": "[Learn more](https://dvaughnlaw.com/vaughnlaw/contact/) about how new and existing builders can benefit from working with Vaughn Law."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

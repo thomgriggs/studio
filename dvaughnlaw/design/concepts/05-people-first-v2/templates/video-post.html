@@ -1,0 +1,3 @@
+{# Page shell: video-post. The YouTube video (when the page kept one) becomes the poster straddling the pale title block; transcript text sits in the reading column; then the "more articles" row. #}
+{% extends "_base.html" %}
+{% block main %}{% set layout = "post" %}{% set vm = page.modules|selectattr('module','equalto','video')|first %}{% set video = vm.slots.url if vm else none %}{% set skip = vm %}{% include "_flow.html" %}{% include "_related.html" %}{% endblock %}

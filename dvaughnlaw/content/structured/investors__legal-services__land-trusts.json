@@ -1,0 +1,84 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/land-trusts/",
+ "slug": "investors__legal-services__land-trusts",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Land Trusts",
+ "seo": {
+  "title_tag": "Land Trusts - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/land-trusts/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Land Trusts - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Land Trusts"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Land Trusts are an exceptional vehicle to hold title in Florida real property for homestead and investment property alike. They offer numerous benefits for both U.S. Citizens and foreign individuals. However, they are unique, and must be properly understood to ensure that they are being utilized properly and effectively. We have a great deal of experience working with Land Trusts.",
+     "We can advise you on and prepare the necessary documentation for:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Land Trusts"
+     },
+     {
+      "text": "Deeds into and out of a Land Trust"
+     },
+     {
+      "text": "Letter of Directions"
+     },
+     {
+      "text": "Property Management Agreements"
+     },
+     {
+      "text": "Homestead"
+     },
+     {
+      "text": "Asset and liability protection"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Law has experience working with lenders and title companies to ensure Land Trusts are handled properly in each transaction. We have also built relationships with lenders and insurance companies that will work with land trusts, and our happy to provide you with a referral."
+     },
+     {
+      "type": "p",
+      "text": "If you are interested in establishing a Land Trust or have questions about Land Trusts, contact Vaughn Law at [727-223-6080](tel:7272239080) for a free consultation."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

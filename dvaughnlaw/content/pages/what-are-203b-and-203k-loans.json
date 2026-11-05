@@ -1,0 +1,89 @@
+{
+ "url": "https://dvaughnlaw.com/what-are-203b-and-203k-loans/",
+ "slug": "what-are-203b-and-203k-loans",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "What Are 203(B) And 203(K) Loans? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-are-203b-and-203k-loans/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Are 203(B) And 203(K) Loans? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The video puts this in more visual terms, but 203(b) is the most commonly used FHA program. It offers a low down payment, flexible qualifying guidelines limited lender’s fees, and a maximum loan amount. 203(k) loans enable homebuyers to finance both the purchase and rehabilitation of a home through a single mortgage. A portion of […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "federal-programs"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Are 203(B) And 203(K) Loans?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/batdbcljjp",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The video puts this in more visual terms, but 203(b) is the most commonly used FHA program. It offers a low down payment, flexible qualifying guidelines limited lender’s fees, and a maximum loan amount.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "203(k) loans enable homebuyers to finance both the purchase and rehabilitation of a home through a single mortgage. A portion of the loan is used to pay off the seller’s existing mortgage and the remainder is placed in an escrow account and released as rehabilitation is completed.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Basic guidelines for 203(k) loans are as follows:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The home must be at least one year old.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The cost of rehabilitation must be at least $5,000, but the total property value – including the cost of repairs must fall within the FHA maximum mortgage limit.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The 203(k) loan must follow many of the 203(b) eligibility requirements. Lenders will know specifics about improvement, energy efficiency, and structural guidelines.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 154
+}

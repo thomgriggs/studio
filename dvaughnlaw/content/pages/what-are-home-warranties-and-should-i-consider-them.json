@@ -1,0 +1,61 @@
+{
+ "url": "https://dvaughnlaw.com/what-are-home-warranties-and-should-i-consider-them/",
+ "slug": "what-are-home-warranties-and-should-i-consider-them",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Are \"Home Warranties\", And Should I Consider Them? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-are-home-warranties-and-should-i-consider-them/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Are \"Home Warranties\", And Should I Consider Them? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "You’ll see some pictures in this video to help you remember later, but essentially, home warranties offer you protection for a specific period of time, such as one year, against potentially costly problems like unexpected repairs on appliances or home systems which are not covered by homeowner’s insurance. Warranties are becoming more popular because […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:35+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "selecting"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Are “Home Warranties”, And Should I Consider Them?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/2hdm8fsk3n",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You’ll see some pictures in this video to help you remember later, but essentially, home warranties offer you protection for a specific period of time, such as one year, against potentially costly problems like unexpected repairs on appliances or home systems which are not covered by homeowner’s insurance.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Warranties are becoming more popular because they offer protection during the time immediately following the purchase of a home a time when many people find themselves cash-strapped.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 84
+}

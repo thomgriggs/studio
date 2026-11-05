@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/how-can-i-find-out-about-schools-community-resources/",
+ "slug": "how-can-i-find-out-about-schools-community-resources",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "How Can I Find Out About Schools & Community Resources? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-can-i-find-out-about-schools-community-resources/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Can I Find Out About Schools & Community Resources? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The video puts this in more visual terms, but basically, contact the local Chamber of Commerce for promotional literature or talk to your real estate agent about welcome kits, maps, and other information. You can get information about school systems by contacting the city or county school board or the local schools. You may […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-12T00:41:24+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "finding"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Can I Find Out About Schools & Community Resources?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/2t89h70wum",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The video puts this in more visual terms, but basically, contact the local Chamber of Commerce for promotional literature or talk to your real estate agent about welcome kits, maps, and other information.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You can get information about school systems by contacting the city or county school board or the local schools.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You may also want to visit the local library. It can be an excellent source for information on local events and resources and the librarians will probably be able to answer many of the questions you have.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 99
+}

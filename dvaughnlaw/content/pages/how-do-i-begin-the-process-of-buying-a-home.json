@@ -1,0 +1,87 @@
+{
+ "url": "https://dvaughnlaw.com/how-do-i-begin-the-process-of-buying-a-home/",
+ "slug": "how-do-i-begin-the-process-of-buying-a-home",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "How Do I Begin The Process Of Buying A Home? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-do-i-begin-the-process-of-buying-a-home/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Do I Begin The Process Of Buying A Home? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Remember these pointers from the video: start by thinking about your situation. Are you ready to buy a home? How much can you afford in a monthly mortgage payment? How much space do you need? What areas of town do you like? After you answer these questions, make a “To Do” list and start […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:19+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "starting"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Do I Begin The Process Of Buying A Home?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/72uzv0ula9",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember these pointers from the video: start by thinking about your situation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Are you ready to buy a home?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much can you afford in a monthly mortgage payment?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much space do you need?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What areas of town do you like?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "After you answer these questions, make a “To Do” list and start doing casual research. Talk to friends and family, drive through neighborhoods, and look in the “Homes” section of the newspaper, or online.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 86
+}

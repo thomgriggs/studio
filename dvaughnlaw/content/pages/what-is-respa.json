@@ -1,0 +1,55 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-respa/",
+ "slug": "what-is-respa",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is RESPA? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-respa/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is RESPA? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "RESPA stands for the Federal Real Estate Settlement Procedures Act. This video tells you about it all. RESPA requires lenders to disclose information to potential customers throughout the mortgage process. By doing so, it protects borrowers from abuses by lending institutions. RESPA mandates that lenders fully inform borrowers about all closing costs, lender servicing […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:46:46+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "financing"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is RESPA?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/9m67fx8llg",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "RESPA stands for the Federal Real Estate Settlement Procedures Act. This video tells you about it all.\n\nRESPA requires lenders to disclose information to potential customers throughout the mortgage process. By doing so, it protects borrowers from abuses by lending institutions.\n\nRESPA mandates that lenders fully inform borrowers about all closing costs, lender servicing and escrow account practices and business relationships between closing service providers and other parties to the transaction.\n\nFor more information on RESPA, visit HUD.GOV or call 1-800-569-4287 for a local counseling referral.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 89
+}

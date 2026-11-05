@@ -1,0 +1,12 @@
+{#
+MODULE: rich-text
+PURPOSE: Plain running text with no heading: paragraphs, short lists, tables, buttons. Narrow reading column; when the text is long the first paragraph is set as a larger lead. A run that is only buttons becomes a centered button row. The fallback module; a page that is mostly rich-text is a candidate for hand tuning.
+SLOTS: body[] of p, ul, ol, subhead, quote, button.
+SQUARESPACE: Section with one Text block (paragraphs, bulleted/numbered lists, links) and Button blocks. No code.
+#}
+{% from "_macros.html" import body %}
+{% set words = s.body|bodywords %}
+{% set only_buttons = s.body|rejectattr("type", "equalto", "button")|list|length == 0 %}
+<section class="m m-rich{{ ' m-rich--actions' if only_buttons }}" data-module="rich-text" data-tone="{{ tone }}">
+  <div class="wrap wrap--narrow prose{{ ' prose--actions' if only_buttons }}">{{ body(s.body, 3, words > 160 and s.body[0].type == "p") }}</div>
+</section>

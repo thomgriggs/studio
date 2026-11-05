@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-mortgage-insurance/",
+ "slug": "what-is-mortgage-insurance",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is Mortgage Insurance? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-mortgage-insurance/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is Mortgage Insurance? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Like the video shows, mortgage insurance is a policy that protects lenders against some or most of the losses that result from defaults on home mortgages. Like home or auto insurance, mortgage insurance requires payment of a premium, is for protection against loss, and is used in the event of an emergency. If a […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:03+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is Mortgage Insurance?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/fkv69jhozt",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Like the video shows, mortgage insurance is a policy that protects lenders against some or most of the losses that result from defaults on home mortgages. Like home or auto insurance, mortgage insurance requires payment of a premium, is for protection against loss, and is used in the event of an emergency.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If a borrower can’t repay an insured mortgage loan as agreed, the lender may foreclose on the property and file a claim with the mortgage insurer for some or most of the total losses.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You generally need mortgage insurance only if you plan to make a down payment of less than 20% of the purchase price of the home. The FHA offers several loan programs that may meet your needs.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 126
+}

@@ -1,0 +1,936 @@
+{
+ "source_page": "https://dvaughnlaw.com/",
+ "note": "Header variants across pages: 5; footer variants: 1. This is the most common (240 / 273 pages).",
+ "logo": [
+  {
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_All_Wht80x_Space.png",
+   "alt": "Raleigh, North Carolina Law Firm | Jackson Law",
+   "alt_missing": false,
+   "link_href": "https://localwebdesigncompany.com/vaughnlaw/"
+  },
+  {
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_All_Wht80x_Space.png",
+   "alt": "St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+   "alt_missing": false,
+   "link_href": "https://dvaughnlaw.com/"
+  }
+ ],
+ "header_top_bar": [
+  {
+   "type": "text",
+   "text": "[(727) 223-6080](tel:7272236080)\n\n[dv@dvaughnlaw.com](mailto:dv@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    },
+    {
+     "text": "dv@dvaughnlaw.com",
+     "href": "mailto:dv@dvaughnlaw.com"
+    }
+   ],
+   "region": "header"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Facebook](https://www.facebook.com/DVaughnLaw/?_rdc=2&_rdr)",
+     "links": [
+      {
+       "text": "Facebook",
+       "href": "https://www.facebook.com/DVaughnLaw/?_rdc=2&_rdr"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "header"
+  }
+ ],
+ "nav": [
+  {
+   "text": "Home",
+   "href": "https://dvaughnlaw.com/"
+  },
+  {
+   "text": "Type of Services",
+   "href": "#",
+   "children": [
+    {
+     "text": "Title Services",
+     "href": "https://dvaughnlaw.com/title-services/"
+    },
+    {
+     "text": "Real Estate Law",
+     "href": "https://dvaughnlaw.com/real-estate-law/"
+    },
+    {
+     "text": "Investors",
+     "href": "https://dvaughnlaw.com/investors/"
+    },
+    {
+     "text": "Estate Planning",
+     "href": "https://dvaughnlaw.com/estate-planning/"
+    }
+   ]
+  },
+  {
+   "text": "About",
+   "href": "https://dvaughnlaw.com/about/",
+   "children": [
+    {
+     "text": "Our Team",
+     "href": "https://dvaughnlaw.com/about/our-team/"
+    },
+    {
+     "text": "Best Practices",
+     "href": "https://dvaughnlaw.com/best-practices/"
+    },
+    {
+     "text": "Cyber Security",
+     "href": "https://dvaughnlaw.com/cyber-security/"
+    },
+    {
+     "text": "Disclaimer",
+     "href": "https://dvaughnlaw.com/disclaimer/"
+    },
+    {
+     "text": "Privacy Policy",
+     "href": "https://dvaughnlaw.com/privacy-policy/"
+    }
+   ]
+  },
+  {
+   "text": "Resources",
+   "href": "#",
+   "children": [
+    {
+     "text": "Closing Calculators",
+     "href": "https://dvaughnlaw.com/resources/closing-calculators/"
+    },
+    {
+     "text": "Video Library",
+     "href": "https://dvaughnlaw.com/resources/video-library/"
+    },
+    {
+     "text": "Blog",
+     "href": "https://dvaughnlaw.com/blog/"
+    },
+    {
+     "text": "Order Title",
+     "href": "https://dvaughnlaw.com/order-title/"
+    }
+   ]
+  },
+  {
+   "text": "Workshops",
+   "href": "https://dvaughnlaw.com/person-workshops/"
+  },
+  {
+   "text": "Contact",
+   "href": "https://dvaughnlaw.com/contact/"
+  },
+  {
+   "text": "Register Now",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true
+  }
+ ],
+ "footer": [
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[facebook](https://web.facebook.com/DVaughnLaw/?_rdc=1&_rdr)",
+     "links": [
+      {
+       "text": "facebook",
+       "href": "https://web.facebook.com/DVaughnLaw/?_rdc=1&_rdr"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/plugins/titletap-plugin/inc/icons/social/icon-facebook.png",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "30",
+   "height": "30",
+   "source": "img",
+   "region": "footer"
+  },
+  {
+   "type": "p",
+   "text": "© Copyright 2026 Vaughn Law | [TitleTap - Websites for Law Firms and Title Companies](http://titletap.com/) | [Privacy Policy](http://localwebdesigncompany.com/vaughnlaw/privacy-policy/)",
+   "links": [
+    {
+     "text": "TitleTap - Websites for Law Firms and Title Companies",
+     "href": "http://titletap.com/"
+    },
+    {
+     "text": "Privacy Policy",
+     "href": "http://localwebdesigncompany.com/vaughnlaw/privacy-policy/"
+    }
+   ],
+   "region": "footer"
+  }
+ ],
+ "nav_variants": [
+  {
+   "count": 240,
+   "example_page": "https://dvaughnlaw.com/",
+   "pages": [
+    "https://dvaughnlaw.com/",
+    "https://dvaughnlaw.com/portfolio/",
+    "https://dvaughnlaw.com/layouts-sections-modules/",
+    "https://dvaughnlaw.com/calculators/",
+    "https://dvaughnlaw.com/calculators/title-premium/",
+    "https://dvaughnlaw.com/calculators/net-sheet/",
+    "https://dvaughnlaw.com/events/locations/",
+    "https://dvaughnlaw.com/events/my-bookings/",
+    "https://dvaughnlaw.com/events/tags/",
+    "https://dvaughnlaw.com/events/categories/",
+    "https://dvaughnlaw.com/about/careers/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/bankruptcy/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/commercial/",
+    "https://dvaughnlaw.com/resources/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+    "https://dvaughnlaw.com/real-estate-law/pcclb/",
+    "https://dvaughnlaw.com/booklets/",
+    "https://dvaughnlaw.com/real-estate-law/homestead/",
+    "https://dvaughnlaw.com/subscription-plans/",
+    "https://dvaughnlaw.com/real-estate-law/deeds-and-conveyances/",
+    "https://dvaughnlaw.com/events/",
+    "https://dvaughnlaw.com/etn-speaker-category/",
+    "https://dvaughnlaw.com/etn-tags/",
+    "https://dvaughnlaw.com/etn_category/",
+    "https://dvaughnlaw.com/about/",
+    "https://dvaughnlaw.com/best-practices/",
+    "https://dvaughnlaw.com/cyber-security/",
+    "https://dvaughnlaw.com/disclaimer/",
+    "https://dvaughnlaw.com/privacy-policy/",
+    "https://dvaughnlaw.com/resources/closing-calculators/",
+    "https://dvaughnlaw.com/order-title/",
+    "https://dvaughnlaw.com/contact/",
+    "https://dvaughnlaw.com/resources/video-library/",
+    "https://dvaughnlaw.com/person-workshops/",
+    "https://dvaughnlaw.com/blog-old/",
+    "https://dvaughnlaw.com/about/our-team/",
+    "https://dvaughnlaw.com/blog/",
+    "https://dvaughnlaw.com/what-makes-up-closing-costs/",
+    "https://dvaughnlaw.com/what-can-i-expect-to-happen-on-closing-day/",
+    "https://dvaughnlaw.com/how-can-the-fha-assist-me-in-buying-a-home/",
+    "https://dvaughnlaw.com/what-types-of-closing-costs-are-associated-with-fha-insured-loans/",
+    "https://dvaughnlaw.com/what-are-the-steps-involved-in-the-fha-loan-process/",
+    "https://dvaughnlaw.com/what-details-can-i-ask-brokers-in-advance/",
+    "https://dvaughnlaw.com/how-do-i-evaluate-an-offer/",
+    "https://dvaughnlaw.com/what-is-a-counter-offer/",
+    "https://dvaughnlaw.com/how-can-i-improve-my-homes-value/",
+    "https://dvaughnlaw.com/what-do-i-get-at-closing/",
+    "https://dvaughnlaw.com/what-are-203b-and-203k-loans/",
+    "https://dvaughnlaw.com/how-do-i-make-a-home-ready-to-sell/",
+    "https://dvaughnlaw.com/how-do-i-set-the-price-on-my-house/",
+    "https://dvaughnlaw.com/how-is-a-home-marketed/",
+    "https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/",
+    "https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/",
+    "https://dvaughnlaw.com/what-does-the-closing-process-involve-when-i-sell/",
+    "https://dvaughnlaw.com/6-selling-mistakes/",
+    "https://dvaughnlaw.com/which-square-footage-figure-should-i-use/",
+    "https://dvaughnlaw.com/how-should-i-prepare-the-inside-for-an-open-house/",
+    "https://dvaughnlaw.com/how-should-i-prepare-the-outside-for-an-open-house/",
+    "https://dvaughnlaw.com/how-should-i-prepare-for-internet-showing/",
+    "https://dvaughnlaw.com/title-insurance-explained-visually/",
+    "https://dvaughnlaw.com/closing-explained-visually/",
+    "https://dvaughnlaw.com/what-are-commissions/",
+    "https://dvaughnlaw.com/what-do-lenders-have-to-tell-you-about-your-real-estate-loan/",
+    "https://dvaughnlaw.com/what-kinds-of-loans-do-trid-disclosures-cover/",
+    "https://dvaughnlaw.com/what-disclosures-are-used-for-loans-not-covered-by-trid/",
+    "https://dvaughnlaw.com/what-6-pieces-of-information-make-a-trid-loan-application/",
+    "https://dvaughnlaw.com/can-creditors-collect-information-beyond-the-6-required-pieces/",
+    "https://dvaughnlaw.com/do-creditors-have-to-approve-trid-loans-in-3-days/",
+    "https://dvaughnlaw.com/what-is-a-business-day-for-real-estate-loan-disclosures/",
+    "https://dvaughnlaw.com/how-long-must-creditors-keep-real-estate-loan-records/",
+    "https://dvaughnlaw.com/what-will-the-trid-loan-estimate-tell-me/",
+    "https://dvaughnlaw.com/could-my-loan-costs-exceed-the-loan-estimate/",
+    "https://dvaughnlaw.com/whats-refunded-if-my-loan-is-higher-than-my-estimate/",
+    "https://dvaughnlaw.com/can-creditors-revise-trid-loan-estimates/",
+    "https://dvaughnlaw.com/can-my-settlement-charges-change/",
+    "https://dvaughnlaw.com/understanding-your-loan-estimate-terms-payments-and-closing-costs/",
+    "https://dvaughnlaw.com/understanding-your-loan-estimate-page-2-loan-costs/",
+    "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-cannot-shop-for/",
+    "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-can-shop-for/",
+    "https://dvaughnlaw.com/understanding-your-loan-estimate-other-costs/",
+    "https://dvaughnlaw.com/calculating-your-cash-to-close/",
+    "https://dvaughnlaw.com/understanding-loan-estimate-comparisons/",
+    "https://dvaughnlaw.com/your-rights-and-rules-for-closing-disclosures/",
+    "https://dvaughnlaw.com/understanding-your-loan-closing-cost-details/",
+    "https://dvaughnlaw.com/understanding-your-loan-cash-and-transaction-summaries/",
+    "https://dvaughnlaw.com/when-do-i-get-my-loan-closing-disclosure/",
+    "https://dvaughnlaw.com/understanding-your-loan-closing-disclosure-page-1/",
+    "https://dvaughnlaw.com/understanding-your-loan-additional-information-can-be-important/",
+    "https://dvaughnlaw.com/what-are-va-home-loans/",
+    "https://dvaughnlaw.com/what-are-the-major-types-of-va-loans/",
+    "https://dvaughnlaw.com/what-is-a-certificate-of-eligibility-or-coe/",
+    "https://dvaughnlaw.com/what-is-an-escrow-account-do-i-need-one/",
+    "https://dvaughnlaw.com/intro-to-vaughn-law/",
+    "https://dvaughnlaw.com/landlord-tenant-misconceptions/",
+    "https://dvaughnlaw.com/july-2023-estate-planning/",
+    "https://dvaughnlaw.com/navigating-residential-real-estate-transactions-a-legal-perspective/",
+    "https://dvaughnlaw.com/navigating-property-ownership-in-florida/",
+    "https://dvaughnlaw.com/navigating-the-real-estate-jungle-a-legal-perspective-on-investing-in-real-estate/",
+    "https://dvaughnlaw.com/navigating-the-legal-landscape-of-commercial-lease-agreements-in-florida/",
+    "https://dvaughnlaw.com/cta-imposes-new-small-business-reporting-requirements-for-2024/",
+    "https://dvaughnlaw.com/what-to-consider-before-transferring-property-title/",
+    "https://dvaughnlaw.com/12-common-estate-planning-mistakes-and-how-to-avoid-them/",
+    "https://dvaughnlaw.com/discover-why-vaughn-law-is-your-top-choice-for-real-estate-and-estate-planning-in-florida/",
+    "https://dvaughnlaw.com/real-estate-litigation-explained-resolving-contract-disputes-and-property-issues/",
+    "https://dvaughnlaw.com/why-your-spouse-must-sign-the-mortgage-spousal-rights-mortgage-laws-explained/",
+    "https://dvaughnlaw.com/the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning/",
+    "https://dvaughnlaw.com/durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida/",
+    "https://dvaughnlaw.com/florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls/",
+    "https://dvaughnlaw.com/why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights/",
+    "https://dvaughnlaw.com/how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips/",
+    "https://dvaughnlaw.com/the-hidden-costs-of-not-updating-your-estate-plan-after-a-florida-move/",
+    "https://dvaughnlaw.com/when-the-boss-goes-silent-a-story-of-business-interrupted/",
+    "https://dvaughnlaw.com/the-high-cost-of-a-bad-lease-what-every-landlord-needs-to-know/",
+    "https://dvaughnlaw.com/the-empire-that-vanished-overnight-a-cautionary-tale-of-a-business-owner-without-a-succession-plan/",
+    "https://dvaughnlaw.com/capital-gains-step-up-in-basis-and-gifting-property-what-florida-property-owners-need-to-know/",
+    "https://dvaughnlaw.com/capital-gains-step-up-in-basis-and-your-florida-investment-property/",
+    "https://dvaughnlaw.com/the-essential-guide-to-talking-to-your-parents-about-estate-planning/",
+    "https://dvaughnlaw.com/how-to-avoid-probate-in-florida/",
+    "https://dvaughnlaw.com/what-is-the-difference-between-a-will-and-a-trust/",
+    "https://dvaughnlaw.com/why-a-pre-occupancy-agreement-matters/",
+    "https://dvaughnlaw.com/how-to-hurricane-proof-your-estate-plan/",
+    "https://dvaughnlaw.com/why-you-should-update-your-estate-plan-when-moving-to-florida/",
+    "https://dvaughnlaw.com/reasons-why-estate-planning-is-crucial-for-parents-with-minor-children/",
+    "https://dvaughnlaw.com/celebrity-estate-planning-mistakes-and-what-we-can-learn-from-them/",
+    "https://dvaughnlaw.com/florida-homestead-law-homestead-exemption-explained-protect-your-property-spousal-rights/",
+    "https://dvaughnlaw.com/what-is-the-title-insurance-protect-your-real-estate-investment/",
+    "https://dvaughnlaw.com/foreclosure-property-pitfalls-hidden-liens-title-issues-and-more/",
+    "https://dvaughnlaw.com/how-can-i-determine-my-housing-needs-before-i-begin-the-search/",
+    "https://dvaughnlaw.com/how-do-i-begin-the-process-of-buying-a-home/",
+    "https://dvaughnlaw.com/how-do-lenders-decide-the-maximum-loan-amount-that-buyers-can-afford/",
+    "https://dvaughnlaw.com/how-does-purchasing-a-home-compare-with-renting/",
+    "https://dvaughnlaw.com/why-use-a-realtor/",
+    "https://dvaughnlaw.com/how-can-i-find-out-about-schools-community-resources/",
+    "https://dvaughnlaw.com/what-should-i-look-for-when-walking-through-a-home/",
+    "https://dvaughnlaw.com/how-can-i-keep-track-of-all-the-homes-i-see/",
+    "https://dvaughnlaw.com/what-questions-should-i-ask-when-looking-at-homes/",
+    "https://dvaughnlaw.com/is-an-older-home-a-better-value-than-a-new-one/",
+    "https://dvaughnlaw.com/what-is-earnest-money-and-how-much-should-i-set-aside/",
+    "https://dvaughnlaw.com/what-does-a-home-inspector-do-and-how-does-an-inspection-figure-in-the-purchase-of-a-home/",
+    "https://dvaughnlaw.com/what-about-a-home-located-in-a-flood-plain/",
+    "https://dvaughnlaw.com/what-are-home-warranties-and-should-i-consider-them/",
+    "https://dvaughnlaw.com/what-should-i-look-out-for-during-the-final-walk-through/",
+    "https://dvaughnlaw.com/deed-transfers-explained-key-issues-before-transferring-property-titles-in-florida/",
+    "https://dvaughnlaw.com/what-is-a-rate-lock/",
+    "https://dvaughnlaw.com/what-is-a-mortgage/",
+    "https://dvaughnlaw.com/what-is-a-qualified-mortgage/",
+    "https://dvaughnlaw.com/what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan/",
+    "https://dvaughnlaw.com/how-large-a-down-payment-do-i-need/",
+    "https://dvaughnlaw.com/what-does-ability-to-repay-mean/",
+    "https://dvaughnlaw.com/are-there-special-mortgages-for-first-time-homebuyers/",
+    "https://dvaughnlaw.com/what-types-of-mortgage-loans-are-available/",
+    "https://dvaughnlaw.com/how-does-the-interest-rate-factor-in-securing-a-mortgage-loan/",
+    "https://dvaughnlaw.com/what-are-the-advantages-of-15-and-30-year-fixed-rate-mortgages/",
+    "https://dvaughnlaw.com/what-factors-affect-mortgage-payments/",
+    "https://dvaughnlaw.com/what-is-included-in-a-monthly-mortgage-payment/",
+    "https://dvaughnlaw.com/what-are-discount-points/",
+    "https://dvaughnlaw.com/what-is-mortgage-insurance/",
+    "https://dvaughnlaw.com/what-is-pmi/",
+    "https://dvaughnlaw.com/what-is-prime/",
+    "https://dvaughnlaw.com/what-is-equity/",
+    "https://dvaughnlaw.com/can-i-pay-off-my-loan-ahead-of-schedule/",
+    "https://dvaughnlaw.com/what-steps-need-to-be-taken-to-secure-a-loan/",
+    "https://dvaughnlaw.com/what-is-the-debt-to-income-ratio-dti/",
+    "https://dvaughnlaw.com/how-are-pre-qualifying-and-pre-approval-different/",
+    "https://dvaughnlaw.com/what-responsibilities-do-i-have-during-the-lending-process/",
+    "https://dvaughnlaw.com/what-happens-after-ive-applied-for-my-loan/",
+    "https://dvaughnlaw.com/how-do-i-choose-the-best-loan-program-for-me/",
+    "https://dvaughnlaw.com/how-do-i-choose-the-right-lender-for-me/",
+    "https://dvaughnlaw.com/what-is-the-best-way-to-compare-loan-terms-between-lenders/",
+    "https://dvaughnlaw.com/what-costs-or-fees-are-associated-with-loan-origination/",
+    "https://dvaughnlaw.com/what-is-a-good-faith-estimate-and-how-does-it-help-me/",
+    "https://dvaughnlaw.com/what-is-respa/",
+    "https://dvaughnlaw.com/what-is-an-appraisal/",
+    "https://dvaughnlaw.com/estate-planning-3-reasons-we-run-the-other-way/",
+    "https://dvaughnlaw.com/what-is-a-business-succession-plan/",
+    "https://dvaughnlaw.com/contractor-disputes-in-florida-why-your-agreement-must-be-in-writing/",
+    "https://dvaughnlaw.com/new-florida-law-landlords-must-disclose-flood-history-to-tenants-starting-october-1-2025/",
+    "https://dvaughnlaw.com/vaughn-voyage-navigating-lady-bird-deeds-in-florida/",
+    "https://dvaughnlaw.com/understanding-a-contractor-claim-of-lien/",
+    "https://dvaughnlaw.com/different-types-of-probate-in-florida/",
+    "https://dvaughnlaw.com/probate-in-florida/",
+    "https://dvaughnlaw.com/the-importance-of-funding-your-trust/",
+    "https://dvaughnlaw.com/10-types-of-trusts-a-quick-look/",
+    "https://dvaughnlaw.com/what-is-a-partition-action-and-when-do-you-need-one/",
+    "https://dvaughnlaw.com/estate-planning-for-individuals-without-close-family-what-you-need-to-know/",
+    "https://dvaughnlaw.com/vaughn-voyage-fincen-residential-real-estate-reporting-when-transfers-must-be-reported-and-when-they-are-not/",
+    "https://dvaughnlaw.com/vaughn-voyage-navigating-property-law-and-estate-planning/",
+    "https://dvaughnlaw.com/vaughn-voyage-navigating-property-law-and-estate-planning-2/",
+    "https://dvaughnlaw.com/vaughn-voyage-estate-planning/",
+    "https://dvaughnlaw.com/vaughn-voyage-deed-holds/",
+    "https://dvaughnlaw.com/residential-real-estate-transactions-a-legal-perspective/",
+    "https://dvaughnlaw.com/the-legal-landscape-of-commercial-lease-agreements-in-florida/",
+    "https://dvaughnlaw.com/vaughn-voyage-partition-actions-why-title-matters-more-than-you-think/",
+    "https://dvaughnlaw.com/vaughn-voyage-real-estate-scams-are-back/",
+    "https://dvaughnlaw.com/vaughn-voyage-why-a-revocable-living-trust-remains-the-smartest-path-for-protecting-your-estate/",
+    "https://dvaughnlaw.com/when-should-you-update-your-estate-plan/",
+    "https://dvaughnlaw.com/what-seniors-need-to-know-about-identity-theft-prevention/",
+    "https://dvaughnlaw.com/the-role-of-a-personal-representative-in-your-estate/",
+    "https://dvaughnlaw.com/you-shook-hands-on-the-deal-so-why-is-the-sale-falling-apart/",
+    "https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/",
+    "https://dvaughnlaw.com/want-your-home-to-skip-probate-without-giving-up-control/",
+    "https://dvaughnlaw.com/you-dont-have-a-will-florida-does-and-you-may-not-like-it/",
+    "https://dvaughnlaw.com/how-to-protect-your-family-owned-real-estate/",
+    "https://dvaughnlaw.com/10-essential-steps-to-take-when-planning-for-your-own-funeral/",
+    "https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/",
+    "https://dvaughnlaw.com/the-repairs-you-inherit/",
+    "https://dvaughnlaw.com/fifty-percent-of-paradise/",
+    "https://dvaughnlaw.com/etn/",
+    "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes/",
+    "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes-2/",
+    "https://dvaughnlaw.com/etn/applied-ai-machine-learning-summit-2026/",
+    "https://dvaughnlaw.com/author/www-dvaughnlaw-com/",
+    "https://dvaughnlaw.com/category/blog-posts/",
+    "https://dvaughnlaw.com/category/credit/",
+    "https://dvaughnlaw.com/category/estate-planning-probate/",
+    "https://dvaughnlaw.com/category/federal-programs/",
+    "https://dvaughnlaw.com/category/financing/",
+    "https://dvaughnlaw.com/category/finding/",
+    "https://dvaughnlaw.com/category/going-to-market/",
+    "https://dvaughnlaw.com/category/landlord-tenant/",
+    "https://dvaughnlaw.com/category/mortgages/",
+    "https://dvaughnlaw.com/category/newhomes/",
+    "https://dvaughnlaw.com/category/sales-process/",
+    "https://dvaughnlaw.com/category/selecting/",
+    "https://dvaughnlaw.com/category/starting/",
+    "https://dvaughnlaw.com/category/title-and-closing/",
+    "https://dvaughnlaw.com/category/trid/",
+    "https://dvaughnlaw.com/category/uncategorized/",
+    "https://dvaughnlaw.com/category/valoans/",
+    "https://dvaughnlaw.com/category/vaughn-voyage/",
+    "https://dvaughnlaw.com/etn-schedule/day-1-foundations/",
+    "https://dvaughnlaw.com/etn-schedule/day-2-systems/",
+    "https://dvaughnlaw.com/etn-schedule/day-3-scaling-wrap-up/",
+    "https://dvaughnlaw.com/etn-schedule/emerging-technologies-innovation-trends-2/",
+    "https://dvaughnlaw.com/etn-schedule/emerging-technologies-innovation-trends/",
+    "https://dvaughnlaw.com/etn-schedule/seo-content-marketing-strategies-2/",
+    "https://dvaughnlaw.com/etn-schedule/seo-content-marketing-strategies/",
+    "https://dvaughnlaw.com/etn_category/events/",
+    "https://dvaughnlaw.com/tag/17/",
+    "https://dvaughnlaw.com/tag/video/"
+   ],
+   "nav": [
+    {
+     "text": "Home",
+     "href": "https://dvaughnlaw.com/"
+    },
+    {
+     "text": "Type of Services",
+     "href": "#",
+     "children": [
+      {
+       "text": "Title Services",
+       "href": "https://dvaughnlaw.com/title-services/"
+      },
+      {
+       "text": "Real Estate Law",
+       "href": "https://dvaughnlaw.com/real-estate-law/"
+      },
+      {
+       "text": "Investors",
+       "href": "https://dvaughnlaw.com/investors/"
+      },
+      {
+       "text": "Estate Planning",
+       "href": "https://dvaughnlaw.com/estate-planning/"
+      }
+     ]
+    },
+    {
+     "text": "About",
+     "href": "https://dvaughnlaw.com/about/",
+     "children": [
+      {
+       "text": "Our Team",
+       "href": "https://dvaughnlaw.com/about/our-team/"
+      },
+      {
+       "text": "Best Practices",
+       "href": "https://dvaughnlaw.com/best-practices/"
+      },
+      {
+       "text": "Cyber Security",
+       "href": "https://dvaughnlaw.com/cyber-security/"
+      },
+      {
+       "text": "Disclaimer",
+       "href": "https://dvaughnlaw.com/disclaimer/"
+      },
+      {
+       "text": "Privacy Policy",
+       "href": "https://dvaughnlaw.com/privacy-policy/"
+      }
+     ]
+    },
+    {
+     "text": "Resources",
+     "href": "#",
+     "children": [
+      {
+       "text": "Closing Calculators",
+       "href": "https://dvaughnlaw.com/resources/closing-calculators/"
+      },
+      {
+       "text": "Video Library",
+       "href": "https://dvaughnlaw.com/resources/video-library/"
+      },
+      {
+       "text": "Blog",
+       "href": "https://dvaughnlaw.com/blog/"
+      },
+      {
+       "text": "Order Title",
+       "href": "https://dvaughnlaw.com/order-title/"
+      }
+     ]
+    },
+    {
+     "text": "Workshops",
+     "href": "https://dvaughnlaw.com/person-workshops/"
+    },
+    {
+     "text": "Contact",
+     "href": "https://dvaughnlaw.com/contact/"
+    },
+    {
+     "text": "Register Now",
+     "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+     "is_button": true
+    }
+   ]
+  },
+  {
+   "count": 11,
+   "example_page": "https://dvaughnlaw.com/investors/legal-services/",
+   "pages": [
+    "https://dvaughnlaw.com/investors/legal-services/",
+    "https://dvaughnlaw.com/landlordtenant/",
+    "https://dvaughnlaw.com/investors/legal-services/private-lender-foreclosure/",
+    "https://dvaughnlaw.com/investors/legal-services/real-estate-closings/",
+    "https://dvaughnlaw.com/investors/legal-services/business-entity-formation/",
+    "https://dvaughnlaw.com/investors/legal-services/contract-preparation-and-review/",
+    "https://dvaughnlaw.com/investors/legal-services/foreclosure-auctions-and-tax-deed-sales/",
+    "https://dvaughnlaw.com/investors/legal-services/land-trusts/",
+    "https://dvaughnlaw.com/investors/legal-services/landlord-tenant/",
+    "https://dvaughnlaw.com/investors/legal-services/litigation/",
+    "https://dvaughnlaw.com/investors/"
+   ],
+   "nav": [
+    {
+     "text": "Real Estate Attorney",
+     "href": "https://dvaughnlaw.com/"
+    },
+    {
+     "text": "Investors",
+     "href": "https://dvaughnlaw.com/investors/"
+    },
+    {
+     "text": "About",
+     "href": "https://dvaughnlaw.com/about/",
+     "children": [
+      {
+       "text": "Our Team",
+       "href": "https://dvaughnlaw.com/about/our-team/"
+      },
+      {
+       "text": "Best Practices",
+       "href": "https://dvaughnlaw.com/best-practices/"
+      },
+      {
+       "text": "Cyber Security",
+       "href": "https://dvaughnlaw.com/cyber-security/"
+      },
+      {
+       "text": "Disclaimer",
+       "href": "https://dvaughnlaw.com/disclaimer/"
+      }
+     ]
+    },
+    {
+     "text": "Resources",
+     "href": "#",
+     "children": [
+      {
+       "text": "Video Library",
+       "href": "https://dvaughnlaw.com/resources/video-library/"
+      }
+     ]
+    },
+    {
+     "text": "Legal Services",
+     "href": "https://dvaughnlaw.com/investors/legal-services/",
+     "children": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/investors/legal-services/business-entity-formation/"
+      },
+      {
+       "text": "Contract Preparation and Review",
+       "href": "https://dvaughnlaw.com/investors/legal-services/contract-preparation-and-review/"
+      },
+      {
+       "text": "Foreclosure Auctions and Tax Deed Sales",
+       "href": "https://dvaughnlaw.com/investors/legal-services/foreclosure-auctions-and-tax-deed-sales/"
+      },
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/investors/legal-services/land-trusts/"
+      },
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/investors/legal-services/landlord-tenant/"
+      },
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/investors/legal-services/litigation/"
+      },
+      {
+       "text": "Private Lender Foreclosure",
+       "href": "https://dvaughnlaw.com/investors/legal-services/private-lender-foreclosure/"
+      },
+      {
+       "text": "Real Estate Closings",
+       "href": "https://dvaughnlaw.com/investors/legal-services/real-estate-closings/"
+      }
+     ]
+    },
+    {
+     "text": "Order Title",
+     "href": "https://dvaughnlaw.com/order-title/"
+    },
+    {
+     "text": "Contact",
+     "href": "https://dvaughnlaw.com/contact/"
+    }
+   ]
+  },
+  {
+   "count": 9,
+   "example_page": "https://dvaughnlaw.com/digital-closings-remote-online-notary/",
+   "pages": [
+    "https://dvaughnlaw.com/digital-closings-remote-online-notary/",
+    "https://dvaughnlaw.com/resources/forms-docs/",
+    "https://dvaughnlaw.com/services/",
+    "https://dvaughnlaw.com/services/consumers/",
+    "https://dvaughnlaw.com/services/realtors/",
+    "https://dvaughnlaw.com/services/lenders/",
+    "https://dvaughnlaw.com/services/builders/",
+    "https://dvaughnlaw.com/services/commercial/",
+    "https://dvaughnlaw.com/title-services/"
+   ],
+   "nav": [
+    {
+     "text": "Real Estate Attorney",
+     "href": "https://dvaughnlaw.com/"
+    },
+    {
+     "text": "Title Services",
+     "href": "https://dvaughnlaw.com/title-services/"
+    },
+    {
+     "text": "About",
+     "href": "https://dvaughnlaw.com/about/",
+     "children": [
+      {
+       "text": "Our Team",
+       "href": "https://dvaughnlaw.com/about/our-team/"
+      },
+      {
+       "text": "Best Practices",
+       "href": "https://dvaughnlaw.com/best-practices/"
+      },
+      {
+       "text": "Cyber Security",
+       "href": "https://dvaughnlaw.com/cyber-security/"
+      }
+     ]
+    },
+    {
+     "text": "Resources",
+     "href": "https://dvaughnlaw.com/resources/",
+     "children": [
+      {
+       "text": "Digital Closings & Remote Online Notary",
+       "href": "https://dvaughnlaw.com/digital-closings-remote-online-notary/"
+      },
+      {
+       "text": "Video Library",
+       "href": "https://dvaughnlaw.com/resources/video-library/"
+      }
+     ]
+    },
+    {
+     "text": "Services",
+     "href": "https://dvaughnlaw.com/services/",
+     "children": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      },
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      },
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      },
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      },
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ]
+    },
+    {
+     "text": "Order Title",
+     "href": "https://dvaughnlaw.com/order-title/"
+    },
+    {
+     "text": "Contact",
+     "href": "https://dvaughnlaw.com/contact/"
+    }
+   ]
+  },
+  {
+   "count": 8,
+   "example_page": "https://dvaughnlaw.com/real-estate-law/practice-areas/wills-trusts-and-estates/",
+   "pages": [
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/wills-trusts-and-estates/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/land-trusts/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/litigation/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/real-estate-transactions/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/",
+    "https://dvaughnlaw.com/real-estate-law/practice-areas/foreclosures/",
+    "https://dvaughnlaw.com/real-estate-law/"
+   ],
+   "nav": [
+    {
+     "text": "Real Estate Attorney",
+     "href": "https://dvaughnlaw.com/"
+    },
+    {
+     "text": "Real Estate Law",
+     "href": "https://dvaughnlaw.com/real-estate-law/"
+    },
+    {
+     "text": "About",
+     "href": "https://dvaughnlaw.com/about/",
+     "children": [
+      {
+       "text": "Our Team",
+       "href": "https://dvaughnlaw.com/about/our-team/"
+      },
+      {
+       "text": "Disclaimer",
+       "href": "https://dvaughnlaw.com/disclaimer/"
+      }
+     ]
+    },
+    {
+     "text": "Resources",
+     "href": "https://dvaughnlaw.com/resources/",
+     "children": [
+      {
+       "text": "Video Library",
+       "href": "https://dvaughnlaw.com/resources/video-library/"
+      }
+     ]
+    },
+    {
+     "text": "Practice Areas",
+     "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+     "children": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/"
+      },
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/"
+      },
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/foreclosures/"
+      },
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/land-trusts/"
+      },
+      {
+       "text": "Landlord / Tenant",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/"
+      },
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/litigation/"
+      },
+      {
+       "text": "Real Estate Transactions",
+       "href": "https://dvaughnlaw.com/real-estate-law/practice-areas/real-estate-transactions/"
+      }
+     ]
+    },
+    {
+     "text": "Contact",
+     "href": "https://dvaughnlaw.com/contact/"
+    }
+   ]
+  },
+  {
+   "count": 5,
+   "example_page": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+   "pages": [
+    "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+    "https://dvaughnlaw.com/estate-planning/important-terms/",
+    "https://dvaughnlaw.com/estate-planning/probate/",
+    "https://dvaughnlaw.com/estate-planning/ancillary-probate/",
+    "https://dvaughnlaw.com/estate-planning/"
+   ],
+   "nav": [
+    {
+     "text": "Real Estate Attorney",
+     "href": "https://dvaughnlaw.com/"
+    },
+    {
+     "text": "Estate Planning",
+     "href": "https://dvaughnlaw.com/estate-planning/"
+    },
+    {
+     "text": "About",
+     "href": "https://dvaughnlaw.com/about/",
+     "children": [
+      {
+       "text": "Our Team",
+       "href": "https://dvaughnlaw.com/about/our-team/"
+      },
+      {
+       "text": "Best Practices",
+       "href": "https://dvaughnlaw.com/best-practices/"
+      },
+      {
+       "text": "Cyber Security",
+       "href": "https://dvaughnlaw.com/cyber-security/"
+      },
+      {
+       "text": "Disclaimer",
+       "href": "https://dvaughnlaw.com/disclaimer/"
+      }
+     ]
+    },
+    {
+     "text": "Resources",
+     "href": "#",
+     "children": [
+      {
+       "text": "Video Library",
+       "href": "https://dvaughnlaw.com/resources/video-library/"
+      }
+     ]
+    },
+    {
+     "text": "Practice Areas",
+     "href": "#",
+     "children": [
+      {
+       "text": "Important Terms",
+       "href": "https://dvaughnlaw.com/estate-planning/important-terms/"
+      },
+      {
+       "text": "Estate Planning Documents",
+       "href": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/"
+      },
+      {
+       "text": "Probate",
+       "href": "https://dvaughnlaw.com/estate-planning/probate/"
+      }
+     ]
+    },
+    {
+     "text": "Order Title",
+     "href": "https://dvaughnlaw.com/order-title/"
+    },
+    {
+     "text": "Contact",
+     "href": "https://dvaughnlaw.com/contact/"
+    }
+   ]
+  }
+ ],
+ "sidebar": {
+  "used_on_pages": 204,
+  "blocks": [
+   {
+    "href": "http://localwebdesigncompany.com/vaughnlaw/services/realtors/",
+    "is_button": true,
+    "region": "sidebar",
+    "text": "Realtors",
+    "type": "a"
+   },
+   {
+    "href": "http://localwebdesigncompany.com/vaughnlaw/services/consumers/",
+    "is_button": true,
+    "region": "sidebar",
+    "text": "Consumers",
+    "type": "a"
+   },
+   {
+    "href": "http://localwebdesigncompany.com/vaughnlaw/services/lenders/",
+    "is_button": true,
+    "region": "sidebar",
+    "text": "Lenders",
+    "type": "a"
+   },
+   {
+    "links": [],
+    "region": "sidebar",
+    "text": "Get in Touch",
+    "type": "h3"
+   },
+   {
+    "links": [
+     {
+      "href": "tel:(727) 223-6080",
+      "text": "(727) 223-6080"
+     },
+     {
+      "href": "mailto:Reception@dvaughnlaw.com",
+      "text": "Reception@dvaughnlaw.com"
+     }
+    ],
+    "region": "sidebar",
+    "text": "Phone: [(727) 223-6080](tel:(727) 223-6080)\nEmail: [Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+    "type": "text"
+   },
+   {
+    "href": "http://localwebdesigncompany.com/vaughnlaw/order-title/",
+    "is_button": true,
+    "region": "sidebar",
+    "text": "Order Title",
+    "type": "a"
+   }
+  ]
+ }
+}

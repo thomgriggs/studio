@@ -1,0 +1,23 @@
+{#
+MODULE: image-text
+PURPOSE: One or two photos with a heading and text. One photo sits beside the text (short text: large 4:3 tile centered on the text; long text: a 4:5 portrait tile at the top of a wide text column). Two photos stack: a wide row of rounded photo tiles above, then a narrow reading column with the heading and the text. A first paragraph is set larger when the text is long. Logo-like images (file name has logo, badge or seal) show uncropped on a white card.
+SLOTS: images[src, alt] (1 or 2), eyebrow, title, level, body[].
+SQUARESPACE: Section with an Image block (or two side by side) and Heading and Text blocks: two-column layout for short text, single column with the images on top for long text. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body, nparas %}
+{% set words = s.body|bodywords %}
+{% set src0 = (s.images[0].src|lower) if s.images else "" %}{% set logo = s.images|length == 1 and ('logo' in src0 or 'badge' in src0 or 'seal' in src0) %}{% set stacked = s.images|length > 1 and not logo %}
+{% set long = words > 160 %}
+<section class="m m-imgtext{{ ' m-imgtext--stacked' if stacked }}" data-module="image-text" data-tone="{{ tone }}">
+  {% if stacked %}
+  <div class="wrap wrap--mid">
+    <div class="imgtext__pics imgtext__pics--{{ s.images|length }}{{ ' imgtext__pics--logo' if logo }}">{% for i in s.images %}<img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy">{% endfor %}</div>
+    <div class="imgtext__text prose">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}{{ body(s.body, 3, (nparas(s.body)|int) > 5 or words > 220) }}</div>
+  </div>
+  {% else %}
+  <div class="wrap imgtext__grid{{ ' imgtext__grid--long' if long }}">
+    <div class="imgtext__pics imgtext__pics--{{ s.images|length }}{{ ' imgtext__pics--logo' if logo }}">{% for i in s.images %}<img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy">{% endfor %}</div>
+    <div class="imgtext__text prose">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}{{ body(s.body, 3, (nparas(s.body)|int) > 5 or words > 220) }}</div>
+  </div>
+  {% endif %}
+</section>

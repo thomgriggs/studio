@@ -1,0 +1,32 @@
+{# Page shell: head, skip link, header with menu (_nav.html), <main>, footer (_footer.html). #}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+{% if page.source == 'proposed' %}<title>{{ page.seo.title_tag }}</title>
+<meta name="description" content="{{ page.seo.meta_description }}">{% else %}<title>{{ page.title }} | Vaughn Law mockup | {{ concept.name }}</title>{% endif %}
+{% if concept.fonts.google_url %}<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ concept.fonts.google_url }}">{% endif %}
+<style>:root{ {% for k, v in concept.colors.items() %}--{{ k }}:{{ v }};{% endfor %} --font-head:"{{ concept.fonts.heading }}",Georgia,serif; --font-body:"{{ concept.fonts.body }}",Arial,sans-serif; }</style>
+<link rel="stylesheet" href="{{ root }}style.css">
+</head>
+<body class="t-{{ page.template|replace('_', '') }}">
+<a class="skip" href="#main">Skip to content</a>
+{% if page.live_back %}<div class="liveflag" role="note"><div class="wrap liveflag__in"><span><strong>Live site content, for comparison</strong> &middot; not a design proposal</span><a href="{{ page.live_back }}">Back to the proposed page</a></div></div>{% endif %}
+<header class="site-header" role="banner">
+  <div class="wrap site-header__in">
+    <a class="site-header__logo" href="{{ root }}index.html" aria-label="Vaughn Law, PLLC home"><img src="{{ concept.logo.src }}" alt="{{ concept.logo.alt }}" width="666" height="100"></a>
+    {% include "_nav.html" %}
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+{% if not page.own_closing %}{% include "_closing.html" %}{% endif %}
+</main>
+{% include "_footer.html" %}
+<script src="{{ root }}nav.js" defer></script>
+</body>
+</html>

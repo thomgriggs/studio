@@ -1,0 +1,82 @@
+{
+ "url": "https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/",
+ "slug": "how-can-i-find-out-information-about-my-credit-history-2",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "How Can I Find Out Information About My Credit History? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Can I Find Out Information About My Credit History? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Watch this video and take a few notes! There are three major credit reporting companies: Equifax – www.equifax.com 1-800-685-1111 Experian – www.experian.com 1-888-397-3742 Trans Union – www.transunion.com 1-800-916-8800 Obtaining your credit history is as easy as calling and requesting one. Once you receive the report, it’s important to verify its accuracy.",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:19+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "credit"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Can I Find Out Information About My Credit History?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/glzpn0uxmr",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Watch this video and take a few notes! There are three major credit reporting companies:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Equifax – www.equifax.com 1-800-685-1111",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Experian – www.experian.com 1-888-397-3742",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Trans Union – www.transunion.com 1-800-916-8800",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Obtaining your credit history is as easy as calling and requesting one. Once you receive the report, it’s important to verify its accuracy.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 61
+}

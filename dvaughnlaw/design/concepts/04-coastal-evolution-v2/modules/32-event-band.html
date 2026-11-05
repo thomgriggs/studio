@@ -1,0 +1,22 @@
+{#
+MODULE: event-band
+PURPOSE: An upcoming event as a band: a photo bleeding off the left edge beside a deep teal panel holding a small eyebrow, the event title, one line, each date with its time and venue as ruled rows, and one light button. Formal, square-cornered.
+SLOTS: eyebrow, title, text, image (src, alt), events[date, time, venue, address], buttons[text, href]. Empty slots are left out; with no image the panel spans the width.
+SQUARESPACE: Section with a deep teal colour, two columns: Image block (edge to edge) on one side; Heading, Text block (the title's line), a Text block listing each date / time / venue (bold the date) and a Button block on the other. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-event{{ ' m-event--img' if s.image }}" data-module="event-band" data-tone="accent">
+  <div class="evsplit">
+    {% if s.image %}<div class="evsplit__photo"><img src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy"></div>{% endif %}
+    <div class="evsplit__copy">
+      {{ eyebrow(s.eyebrow) }}
+      {{ heading(2, s.title, 2, "h-section") }}
+      {% if s.text %}<p class="event__text">{{ s.text|md }}</p>{% endif %}
+      {% if s.events %}<ul class="events" role="list">
+        {% for e in s.events %}<li><p class="events__when">{{ e.date }}<span>{{ e.time }}</span></p><p class="events__where"><strong>{{ e.venue }}</strong>{{ e.address }}</p></li>
+        {% endfor %}
+      </ul>{% endif %}
+      {% if s.buttons %}<p class="actions">{% for b in s.buttons %}<a class="btn btn--light" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </div>
+</section>

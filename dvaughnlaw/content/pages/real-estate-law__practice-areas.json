@@ -1,0 +1,426 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+ "slug": "real-estate-law__practice-areas",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2020-09-07",
+ "seo": {
+  "title_tag": "Practice Areas - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Practice Areas - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2021/12/Outside-group-2-min-scaled.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h1",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Vaughn Law is a growth-oriented law firm in Saint Petersburg. We serve a variety of clients around the state of Florida.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our practice areas include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Real Estate Closings",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Real Estate Transactions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business Entity Formation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Landlord/Tenant",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Litigation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Land Trusts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "HOA/Condo Disputes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Code Enforcement Violations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Foreclosures",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter your situation, Vaughn Law can help. Schedule your [free consultation](https://dvaughnlaw.com/vaughnlaw/contact/) with us today.",
+   "links": [
+    {
+     "text": "free consultation",
+     "href": "https://dvaughnlaw.com/vaughnlaw/contact/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "Get in touch with us",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "form",
+   "note": "Lawmatics intake",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+   "alt": "Vaughn law Logo",
+   "alt_missing": false,
+   "title": "",
+   "width": "666",
+   "height": "100",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "Vaughn Law offers its clients a different, more personalized and service orientated approach, by tailoring its representation to its client’s needs. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process.",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Address",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "350 Corey Avenue, St.\nPete Beach, FL 33706",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Phone Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 223-6080](tel:7272236080)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Fax Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 645-4226](tel:7276454226)",
+   "links": [
+    {
+     "text": "(727) 645-4226",
+     "href": "tel:7276454226"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Email",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Closing Services",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Realtors](https://dvaughnlaw.com/services/realtors/)",
+     "links": [
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Consumers](https://dvaughnlaw.com/services/consumers/)",
+     "links": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Lenders](https://dvaughnlaw.com/services/lenders/)",
+     "links": [
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Builders](https://dvaughnlaw.com/services/builders/)",
+     "links": [
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/services/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business Entity Formation](https://dvaughnlaw.com/practice-areas/business-entity-formation/)",
+     "links": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/practice-areas/business-entity-formation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/practice-areas/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/practice-areas/commercial/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Foreclosures](https://dvaughnlaw.com/practice-areas/foreclosures/)",
+     "links": [
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/practice-areas/foreclosures/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Land Trusts](https://dvaughnlaw.com/practice-areas/land-trusts/)",
+     "links": [
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/practice-areas/land-trusts/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Landlord/Tenant](https://dvaughnlaw.com/practice-areas/landlord-tenant/)",
+     "links": [
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/practice-areas/landlord-tenant/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Litigation](https://dvaughnlaw.com/practice-areas/litigation/)",
+     "links": [
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/practice-areas/litigation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Real Estate Transaction](https://dvaughnlaw.com/practice-areas/real-estate-transactions/)",
+     "links": [
+      {
+       "text": "Real Estate Transaction",
+       "href": "https://dvaughnlaw.com/practice-areas/real-estate-transactions/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2019/03/Beach-office-scaled.jpg",
+   "alt": "Architecture - Property",
+   "alt_missing": false,
+   "title": "Beach-office",
+   "width": "1800",
+   "height": "1200",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.197831041805!2d-82.74966069999999!3d27.7420435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fd5bea45f9c9%3A0xd5c4f4a1323a4f56!2s350%20Corey%20Ave%2C%20St%20Pete%20Beach%2C%20FL%2033706!5e0!3m2!1sen!2sus!4v1694102817362!5m2!1sen!2sus",
+   "title": "",
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 63
+}

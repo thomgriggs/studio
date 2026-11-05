@@ -1,0 +1,31 @@
+{#
+MODULE: headed-section
+PURPOSE: A heading with the text under it, laid out by length. Short sections (about 200 words or fewer) put the headline in a left column and the text in a right column; longer sections use a narrow reading column (about 760px) with the heading above, and when there are more than five paragraphs the first is set larger as a lead. A small label (eyebrow) sits above the heading when the live page has one. A heading with no text under it joins the section that follows (no empty band). Variants: lead-in (a bold line that acted as a heading), on-image (the photo shows as a rounded tile with the heading, never behind it). Depth 3 sections continue the previous section's ground.
+SLOTS: eyebrow, title, level (original heading level, kept as data-orig-level), depth (2 or 3, the level used on the page), image (on-image variant), body[].
+SQUARESPACE: Section with a Heading block (H2, or H3 for depth 3) and a Text block, in a two-column layout for the split form and a single narrow column for the long form; a small Text block above the heading for the label. On-image: an Image block under the heading. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body, nparas %}
+{% set d = s.depth or 2 %}
+{% set pic = s.image if s.image and 'footer-bg' not in s.image.src else none %}
+{% if not s.body %}
+<section class="m m-headed m-headed--bare" data-module="headed-section" data-tone="{{ tone }}">
+  <div class="wrap wrap--narrow">{{ eyebrow(s.eyebrow) }}{{ heading(d, s.title, s.level, "h-section") }}</div>
+</section>
+{% else %}
+{% set words = s.body|bodywords %}
+{% set split = words <= 200 and d == 2 and variant != "lead-in" %}
+<section class="m m-headed{{ ' m-headed--' ~ variant if variant }}{{ ' m-headed--sub' if d == 3 }}{{ ' m-headed--split' if split else ' m-headed--narrow' }}" data-module="headed-section" data-tone="{{ tone }}">
+  {% if split %}
+  <div class="wrap headed__grid">
+    <div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(d, s.title, s.level, "h-section") }}{% if pic %}<img class="headed__img" src="{{ pic.src }}" alt="{{ pic.alt }}" loading="lazy">{% endif %}</div>
+    <div class="headed__body prose">{{ body(s.body, d + 1) }}</div>
+  </div>
+  {% else %}
+  <div class="wrap wrap--narrow">
+    <div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(d, s.title, s.level, "h-section") }}</div>
+    {% if pic %}<img class="headed__img headed__img--wide" src="{{ pic.src }}" alt="{{ pic.alt }}" loading="lazy">{% endif %}
+    <div class="headed__body prose">{{ body(s.body, d + 1, (nparas(s.body)|int) > 5) }}</div>
+  </div>
+  {% endif %}
+</section>
+{% endif %}

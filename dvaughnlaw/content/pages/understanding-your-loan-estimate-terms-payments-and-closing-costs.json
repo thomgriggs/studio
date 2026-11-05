@@ -1,0 +1,77 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-terms-payments-and-closing-costs/",
+ "slug": "understanding-your-loan-estimate-terms-payments-and-closing-costs",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Your Loan Estimate: Terms, Payments and Closing Costs - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-your-loan-estimate-terms-payments-and-closing-costs/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan Estimate: Terms, Payments and Closing Costs - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The first page of your Loan Disclosure shows the Loan Terms Projected Payments and Costs at Closing. The Loan Amount, of course is the total you are borrowing. But the Interest Rate alone doesn’t represent all of your borrowing costs. The APR figure on Page 3 shows that. Likewise, Monthly Principal & Interest aren’t the […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:15:12+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan Estimate: Terms, Payments and Closing Costs",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/ttim6rll5r",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The first page of your Loan Disclosure shows the Loan Terms Projected Payments and Costs at Closing.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Loan Amount, of course is the total you are borrowing. But the Interest Rate alone doesn’t represent all of your borrowing costs. The APR figure on Page 3 shows that.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Likewise, Monthly Principal & Interest aren’t the complete amount you will actually PAY each month.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Projected Payments figures add other costs, such as Mortgage Insurance Estimated Escrow, Taxes, Insurances and Assessment to show the approximate amount you will pay each month, over time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Estimated Closing Costs are directly loan-related. while the Estimated Cash to Close adds other known closing costs to tell you the estimated cash you’ll need to have to close this loan.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 133
+}

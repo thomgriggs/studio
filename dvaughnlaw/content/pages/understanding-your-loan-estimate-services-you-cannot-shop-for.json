@@ -1,0 +1,90 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-cannot-shop-for/",
+ "slug": "understanding-your-loan-estimate-services-you-cannot-shop-for",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Your Loan Estimate: Services You Cannot Shop For - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-cannot-shop-for/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan Estimate: Services You Cannot Shop For - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "These costs are paid to outside parties, not the lender, but you don’t get to choose them. They may include: appraisal, which puts a value on your property on the lender’s behalf a credit report on you fees to assess flood risk of your property, or for ongoing monitoring of flood zone changes related to […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:24:11+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan Estimate: Services You Cannot Shop For",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/3q81h7ycq9",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These costs are paid to outside parties, not the lender, but you don’t get to choose them. They may include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "appraisal, which puts a value on your property on the lender’s behalf",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "a credit report on you",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "fees to assess flood risk of your property, or for ongoing monitoring of flood zone changes related to your property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "tax monitoring to keep track of your property tax payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "tax status research to assess the state of tax payments on the property.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While you can’t shop for these services, the price for these services in your final loan disclosure MUST match the price on the Loan Estimate; items in “Cannot Shop” have 0 tolerance for change.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 123
+}

@@ -1,0 +1,13 @@
+{# Three more posts from the same category (related object from build.py): title + date, each card links to the built page. #}
+{% if related and related.posts %}
+<section class="m m-feed m-related" data-module="related-posts" data-tone="pale" aria-labelledby="related-title">
+  <div class="wrap">
+    <div class="m__head"><p class="eyebrow">{{ related.category.title }}</p><h2 id="related-title" class="h-section">More articles</h2></div>
+    <ul class="cards cards--feed" role="list">
+      {% for p in related.posts %}
+      <li class="card card--link"><h3 class="card__title"><a href="{{ p.url|href }}">{{ p.title }}</a></h3><p class="card__date"><time datetime="{{ p.date }}">{{ p.date|longdate }}</time></p><span class="card__go" aria-hidden="true"></span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

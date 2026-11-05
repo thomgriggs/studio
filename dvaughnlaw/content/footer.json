@@ -1,0 +1,116 @@
+{
+  "_about": "Design-free site footer shared by every concept (build.py resolves it into the `footer` object passed to templates). Everything here is traced to the crawl; nothing written new except short functional labels. columns come from nav.json (one per folder, items with no live page left out, the same rule as the header). contact.from=closing takes address, phone, fax and email from the live shared contact block. page = a built mockup page slug (resolved to a relative href); url = an external link.",
+  "firm": "Vaughn Law, PLLC",
+  "copyright": "© 2026 Vaughn Law, PLLC",
+  "columns_from": "nav",
+  "cta": {
+    "label": "Schedule a Consultation",
+    "page": "consultation"
+  },
+  "contact": {
+    "heading": "Contact",
+    "from": "closing",
+    "directions": {
+      "label": "Get directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=350+Corey+Avenue%2C+St.+Pete+Beach%2C+FL+33706"
+    },
+    "hours": null
+  },
+  "social": [
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/DVaughnLaw/?_rdc=2&_rdr",
+      "source": "live header top bar and footer, every page"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn (Danielle Vaughn)",
+      "url": "https://www.linkedin.com/in/danielle-vaughn-56037015",
+      "source": "live /about/our-team/ 'Follow' link (a personal profile, not a firm page)"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@Vaughnlawstpete",
+      "source": "found via embedded videos, not linked on the live site — confirm with client"
+    }
+  ],
+  "social_not_found": [
+    "Instagram",
+    "X / Twitter",
+    "Google Business / reviews",
+    "Avvo",
+    "Super Lawyers profile (badge only, no link)",
+    "Florida Bar member profile (only the board-certification info page)",
+    "Yelp",
+    "Pinterest",
+    "TikTok"
+  ],
+  "extras": [
+    {
+      "id": "workshop",
+      "label": "Free workshop",
+      "page": "person-workshops"
+    },
+    {
+      "id": "order-title",
+      "label": "Order title",
+      "page": "order-title"
+    }
+  ],
+  "legal": {
+    "heading": "Legal",
+    "links": [
+      {
+        "label": "Disclaimer",
+        "page": "disclaimer"
+      },
+      {
+        "label": "Privacy Policy",
+        "page": "privacy-policy"
+      }
+    ],
+    "missing": [
+      "Terms of use",
+      "Accessibility statement",
+      "Sitemap page",
+      "Attorney-advertising line",
+      "Footer disclaimer sentence (the live footer has only the copyright and TitleTap credit)"
+    ]
+  },
+  "licensed": "Licensed throughout Florida",
+  "badges": {
+    "heading": "Recognition",
+    "logos": [
+      {
+        "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Board-Certified-Logo-242x300.jpeg",
+        "alt": "The Florida Bar Board Certified",
+        "href": "https://www.floridabar.org/about/cert/cert-re-info/",
+        "kind": "board"
+      },
+      {
+        "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/mybadge.png",
+        "alt": "Super Lawyers Rising Stars Award",
+        "kind": "award"
+      },
+      {
+        "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/BOFL-2023-Best-Web-234x60-1.jpg",
+        "alt": "Best of Florida 2023 Award",
+        "kind": "award"
+      },
+      {
+        "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/2023-PC-BLK-320px.png",
+        "alt": "The Fund 2023 President's Circle Award",
+        "kind": "award"
+      },
+      {
+        "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/CTC-BLK-6-1200px.png",
+        "alt": "The Fund 2023 6th Circuit Top Contributor Award",
+        "kind": "award"
+      }
+    ]
+  },
+  "newsletter": null,
+  "client_portal": null
+}

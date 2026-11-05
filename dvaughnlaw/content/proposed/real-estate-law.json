@@ -1,0 +1,340 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/real-estate-law/",
+  "slug": "real-estate-law",
+  "template": "hub",
+  "family": "hub-landing",
+  "title": "Real Estate Law",
+  "seo": {
+    "title_tag": "Real Estate Law – St. Pete Beach | Vaughn Law",
+    "meta_description": "Real estate law in St. Pete Beach and across Florida: buying and selling, deeds, homestead, landlord and tenant, foreclosures and disputes. Vaughn Law, 350 Corey Avenue.",
+    "h1_count": 1
+  },
+  "_about": "Proposed practice-hub page: written for the redesign from the live crawl. Every factual line traces to a crawled page (see `verified`); newly written sentences that make any claim about the firm are in `confirm`. Ends with the concept's global closing band (no own contact section).",
+  "verified": [
+    "Hub title, 13 child pages and their one-line themes: live /real-estate-law/ cards plus the pages under /real-estate-law/ (Commercial and Bankruptcy are in the crawl but not on the live hub cards), Consumers from the menu's Buying and Selling, Investors hub from the menu",
+    "About copy: live /real-estate-law/ \"About Vaughn law\" (boutique firm, practical real estate legal solutions, personalized, client first, informed throughout, honest opinions, many legal cases throughout Florida); the line \"We guarantee our agents are top-notch!\" was not carried",
+    "Situations: the home page situation picker, verbatim",
+    "People: names, roles and portraits from the live /about/our-team/ (Danielle Vaughn Managing Attorney, Whitney L. Smith Real Estate Litigation Attorney, Barbara Trawinski Licensed Title Agent/Closer); founder quote from live /person-workshops/",
+    "Videos: firm YouTube channel (content/videos.json) IsNXzmJxrr0, -ZAfyS8dKzw, hZ-6oyWfP80; articles: three newest real estate posts (2026-10-06)",
+    "Tools: Order Title, Closing Calculators and Digital Closings pages exist on the live site"
+  ],
+  "confirm": [
+    "Hero sentence: \"who this is for\" (buying, selling, renting out or disputing property) is a plain-language summary of the live copy, not worded there",
+    "Short card summaries are condensed from each child page's own text; check each still says what the firm wants said",
+    "Whether Bankruptcy and Commercial belong on a hub the live site did not list them on",
+    "Card titles are the live page titles (Consumers, PCCLB, Landlord / Tenant): consider friendlier names (Buying and Selling, Contractor licensing) as the menu does",
+    "Barbara Trawinski shown for real estate because her role is Licensed Title Agent/Closer",
+    "Photo use: Front-Office.jpg and team portraits (2026/10 shoot); confirm consent"
+  ],
+  "modules": [
+    {
+      "module": "hero",
+      "slots": {
+        "eyebrow": "Vaughn Law · St. Pete Beach",
+        "title": "Real Estate Law",
+        "tagline": "Buying, selling, renting out or disputing property in Florida? Vaughn Law is a boutique firm that handles real estate transactions and litigation, and keeps you informed along the way.",
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Front-Office.jpg",
+          "alt": "A Vaughn Law team member greets a client at the front office reception"
+        },
+        "images": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Front-Office.jpg",
+            "alt": "A Vaughn Law team member greets a client at the front office reception"
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          },
+          {
+            "text": "See how we can help",
+            "href": "#services"
+          }
+        ]
+      }
+    },
+    {
+      "module": "card-grid",
+      "variant": "services",
+      "slots": {
+        "anchor": "services",
+        "title": "Real estate services",
+        "cards": [
+          {
+            "title": "Consumers",
+            "text": [
+              "Buying or selling a home? Vaughn Law is here for you."
+            ],
+            "page": "services__consumers"
+          },
+          {
+            "title": "Real Estate Transactions",
+            "text": [
+              "Contracts, title searches, financing, leasing and more, for personal and commercial real estate."
+            ],
+            "page": "real-estate-law__practice-areas__real-estate-transactions"
+          },
+          {
+            "title": "Deeds and Conveyances",
+            "text": [
+              "The type of deed you use decides who owns what, and how well you are protected."
+            ],
+            "page": "real-estate-law__deeds-and-conveyances"
+          },
+          {
+            "title": "Homestead",
+            "text": [
+              "Florida homestead protections reach beyond the tax discount, to certain creditors and forced sale."
+            ],
+            "page": "real-estate-law__homestead"
+          },
+          {
+            "title": "Landlord / Tenant",
+            "text": [
+              "We represent landlords in residential matters, and landlords and tenants in commercial ones."
+            ],
+            "page": "real-estate-law__practice-areas__landlord-tenant"
+          },
+          {
+            "title": "Commercial",
+            "text": [
+              "Commercial landlord-tenant disputes, for landlords and tenants alike."
+            ],
+            "page": "real-estate-law__practice-areas__commercial"
+          },
+          {
+            "title": "Foreclosures",
+            "text": [
+              "Behind on your mortgage? You may have options you have not considered."
+            ],
+            "page": "real-estate-law__practice-areas__foreclosures"
+          },
+          {
+            "title": "Bankruptcy",
+            "text": [
+              "Guidance in a financial emergency, including whether Chapter 7 or Chapter 13 might fit."
+            ],
+            "page": "real-estate-law__practice-areas__bankruptcy"
+          },
+          {
+            "title": "Land Trusts",
+            "text": [
+              "A way to hold title to Florida real property, for homestead and investment property alike."
+            ],
+            "page": "real-estate-law__practice-areas__land-trusts"
+          },
+          {
+            "title": "Business Entity Formation",
+            "text": [
+              "Help forming a business entity, or selling and retiring as a seasoned owner."
+            ],
+            "page": "real-estate-law__practice-areas__business-entity-formation"
+          },
+          {
+            "title": "Litigation",
+            "text": [
+              "Civil disputes such as quiet title, partition, breach of contract and boundary disputes."
+            ],
+            "page": "real-estate-law__practice-areas__litigation"
+          },
+          {
+            "title": "PCCLB",
+            "text": [
+              "Check that your contractor is licensed with both Florida and Pinellas County before you hire."
+            ],
+            "page": "real-estate-law__pcclb"
+          },
+          {
+            "title": "Investors",
+            "text": [
+              "Legal services for real estate investors: closings, contracts, land trusts, foreclosure auctions and more."
+            ],
+            "page": "investors"
+          }
+        ]
+      }
+    },
+    {
+      "module": "situation-picker",
+      "slots": {
+        "title": "Is this you?",
+        "cards": [
+          {
+            "title": "I'm buying or selling a home.",
+            "text": "We handle the contract, the title and the closing, with a lawyer at the table.",
+            "page": "services__consumers",
+            "link_text": "Consumers"
+          },
+          {
+            "title": "I need to change a deed.",
+            "text": "Adding a spouse, removing a name, or moving a home into a trust, prepared and recorded the right way.",
+            "page": "real-estate-law__deeds-and-conveyances",
+            "link_text": "Deeds and Conveyances"
+          },
+          {
+            "title": "I have a problem with a tenant.",
+            "text": "Notices, leases and evictions, handled start to finish.",
+            "page": "real-estate-law__practice-areas__landlord-tenant",
+            "link_text": "Landlord / Tenant"
+          }
+        ]
+      }
+    },
+    {
+      "module": "headed-section",
+      "variant": "copy",
+      "slots": {
+        "title": "About Vaughn Law",
+        "level": 2,
+        "depth": 2,
+        "body": [
+          {
+            "type": "p",
+            "text": "Vaughn Law is a boutique law firm that provides practical real estate legal solutions for litigation and transactional needs."
+          },
+          {
+            "type": "p",
+            "text": "We take a more personal, service-oriented approach. We tailor our representation to each client, and the client is always our first priority."
+          },
+          {
+            "type": "p",
+            "text": "This can be an overwhelming, unfamiliar and stressful time. We help you understand the legal system, keep you informed throughout, and give honest and straightforward opinions on all your options, so you can make fully informed decisions."
+          },
+          {
+            "type": "p",
+            "text": "Every situation is unique. We have handled many legal cases throughout Florida."
+          }
+        ]
+      }
+    },
+    {
+      "module": "link-list",
+      "variant": "tools",
+      "slots": {
+        "title": "Buying or selling? Tools that help",
+        "links": [
+          {
+            "text": "Order Title",
+            "page": "order-title"
+          },
+          {
+            "text": "Closing Calculators",
+            "page": "resources__closing-calculators"
+          },
+          {
+            "text": "Digital Closings & Remote Online Notary",
+            "page": "digital-closings-remote-online-notary"
+          }
+        ]
+      }
+    },
+    {
+      "module": "people",
+      "variant": "hub",
+      "slots": {
+        "title": "Who handles real estate matters",
+        "text": "The attorneys and the closer you may work with.",
+        "people": [
+          {
+            "name": "Danielle Vaughn",
+            "role": "Managing Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+              "alt": "Danielle Vaughn"
+            }
+          },
+          {
+            "name": "Whitney L. Smith",
+            "role": "Real Estate Litigation Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Whitney-Smith.jpg",
+              "alt": "Whitney L. Smith"
+            }
+          }
+        ],
+        "link": {
+          "text": "Meet the team",
+          "nav": "About/Our Team"
+        },
+        "team": [
+          {
+            "name": "Barbara Trawinski",
+            "role": "Licensed Title Agent/Closer",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Barbara-Trawinski.jpg",
+              "alt": "Barbara Trawinski"
+            }
+          }
+        ],
+        "quote": {
+          "text": "My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.",
+          "attribution": "Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC"
+        }
+      }
+    },
+    {
+      "module": "video-feed",
+      "slots": {
+        "title": "Watch",
+        "videos": [
+          {
+            "title": "What happens if your tenant cannot pay the rent?",
+            "href": "https://www.youtube.com/watch?v=IsNXzmJxrr0",
+            "date": "2024-09-25",
+            "video": "https://www.youtube.com/embed/IsNXzmJxrr0"
+          },
+          {
+            "title": "Florida Homestead Law & Homestead Exemption Explained: Protect Your Property & Spousal Rights",
+            "href": "https://www.youtube.com/watch?v=-ZAfyS8dKzw",
+            "date": "2024-08-21",
+            "video": "https://www.youtube.com/embed/-ZAfyS8dKzw"
+          },
+          {
+            "title": "Deed Transfers Explained: Key Issues Before Transferring Property Titles In Florida",
+            "href": "https://www.youtube.com/watch?v=hZ-6oyWfP80",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/hZ-6oyWfP80"
+          }
+        ],
+        "more": {
+          "text": "All videos",
+          "page": "videos"
+        }
+      }
+    },
+    {
+      "module": "post-feed",
+      "variant": "cards",
+      "slots": {
+        "title": "Real estate articles",
+        "posts": [
+          {
+            "title": "Fifty Percent of Paradise",
+            "href": "https://dvaughnlaw.com/fifty-percent-of-paradise/",
+            "date": "2026-10-06",
+            "excerpt": "The rebuilding rule nobody mentioned while the water was going down"
+          },
+          {
+            "title": "The Repairs You Inherit",
+            "href": "https://dvaughnlaw.com/the-repairs-you-inherit/",
+            "date": "2026-10-06",
+            "excerpt": "Due diligence before you buy a storm-repaired home"
+          },
+          {
+            "title": "What Your November Tax Bill Won’t Tell You",
+            "href": "https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/",
+            "date": "2026-10-06",
+            "excerpt": "The discount, the deadline, and the deed that can undo both"
+          }
+        ],
+        "more": {
+          "text": "All articles",
+          "page": "blog"
+        }
+      }
+    }
+  ]
+}

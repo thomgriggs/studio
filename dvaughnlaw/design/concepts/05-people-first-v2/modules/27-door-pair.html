@@ -1,0 +1,24 @@
+{#
+MODULE: door-pair
+PURPOSE: The two ways in: one large rounded tile per practice area with a rounded photo, serif title, a sentence, the subpages as pill links and one button to the overview. Equal height, side by side; stacks on narrow screens. `anchor` makes the section a jump target for the hero's second button.
+SLOTS: anchor, title, items[title, text, image(src, alt), links[text, href, link_text, planned], button[text, href]]. A link with `planned` (a menu item whose page is not built yet, pointing at the overview) gets data-planned="true" and looks the same.
+SQUARESPACE: Section (with an anchor/section ID) holding a Heading block and a two-column row: per column an Image block (rounded corners), Heading 3, Text block, a row of small Buttons (secondary style, pill) for the subpages and one Button (primary). No code.
+#}
+<section class="m m-doors" data-module="door-pair" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %} aria-labelledby="doors-title">
+  <div class="wrap">
+    <div class="m__head"><h2 id="doors-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <div class="doors">
+      {% for d in s["items"] %}
+      <article class="door">
+        {% if d.image %}<img class="door__img" src="{{ d.image.src }}" alt="{{ d.image.alt }}" loading="lazy">{% endif %}
+        <div class="door__body">
+          <h3 class="door__title">{{ d.title }}</h3>
+          <p class="door__text">{{ d.text|md }}</p>
+          {% if d.links %}<ul class="door__links" role="list">{% for l in d.links %}<li><a href="{{ l.href|href }}"{% if l.planned %} data-planned="true"{% endif %}>{{ l.link_text or l.text }}</a></li>{% endfor %}</ul>{% endif %}
+          {% if d.button %}<p class="door__btn"><a class="btn" href="{{ d.button.href|href }}">{{ d.button.text }}</a></p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

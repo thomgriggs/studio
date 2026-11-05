@@ -1,0 +1,57 @@
+{
+ "url": "https://dvaughnlaw.com/services/commercial/",
+ "slug": "services__commercial",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Commercial",
+ "seo": {
+  "title_tag": "Commercial - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/services/commercial/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Commercial - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Commercial"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Commercial property transactions have a unique set of components. Vaughn Law understands the ins and outs of these specific transactions."
+     },
+     {
+      "type": "p",
+      "text": "We’ve closed many recognizable commercial transactions around the Tampa Bay Area. These include commercial vacant lots, office buildings, multi-family units, restaurants, and shopping centers."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law stays on top of commercial real estate laws and regulation changes. This means our commercial clients close on their properties on time. Our transactions are done right."
+     },
+     {
+      "type": "p",
+      "text": "Your sales are too valuable to leave to chance. [Learn how](https://dvaughnlaw.com/vaughnlaw/contact/) Vaughn Law can help."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

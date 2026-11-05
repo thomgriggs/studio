@@ -1,0 +1,95 @@
+{
+ "url": "https://dvaughnlaw.com/etn/",
+ "slug": "etn",
+ "type": "event",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-08-21",
+ "seo": {
+  "title_tag": "Events Archive - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/etn/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Events Archive - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/plugins/wp-event-solution/assets/images/placeholder.jpg",
+   "alt": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "link_href": "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes-2/",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "[Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes](https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes-2/)",
+   "links": [
+    {
+     "text": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+     "href": "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes-2/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Limited seats — reserve yours today",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "April 30, 2026",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/plugins/wp-event-solution/assets/images/placeholder.jpg",
+   "alt": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "link_href": "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes/",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "[Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes](https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes/)",
+   "links": [
+    {
+     "text": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+     "href": "https://dvaughnlaw.com/etn/estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Limited seats — reserve yours today",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "April 24, 2026",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 44
+}

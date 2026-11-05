@@ -1,0 +1,37 @@
+{
+ "url": "https://dvaughnlaw.com/contact/",
+ "slug": "contact",
+ "template": "content-page",
+ "family": "form-page",
+ "title": "Contact",
+ "seo": {
+  "title_tag": "Contact - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/contact/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Contact - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Contact",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2.jpg",
+     "alt": ""
+    }
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0
+ }
+}

@@ -1,0 +1,13 @@
+{#
+MODULE: video-split
+PURPOSE: A short heading and text beside a YouTube video: text in the left column under a teal rule, the video in a charcoal frame on the right.
+SLOTS: eyebrow, title, level, depth, body[], url (YouTube embed URL), video_title.
+SQUARESPACE: Section in a two-column layout: Heading and Text blocks on one side, Video block (YouTube URL) on the other. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body %}
+<section class="m m-vsplit" data-module="video-split" data-tone="{{ tone }}">
+  <div class="wrap vsplit__grid">
+    <div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(s.depth or 2, s.title, s.level, "h-section") }}<div class="prose">{{ body(s.body, (s.depth or 2) + 1) }}</div></div>
+    <div class="video"><iframe src="{{ s.url }}" title="{{ s.video_title or 'YouTube video' }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+  </div>
+</section>

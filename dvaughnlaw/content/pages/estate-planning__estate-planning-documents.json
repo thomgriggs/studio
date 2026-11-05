@@ -1,0 +1,767 @@
+{
+ "url": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+ "slug": "estate-planning__estate-planning-documents",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2023-03-06",
+ "seo": {
+  "title_tag": "Estate Planning Documents - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/estate-planning/estate-planning-documents/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning Documents - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2021/12/Outside-group-2-min-scaled.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h1",
+   "text": "Estate Planning Documents",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Estate Planning Documents",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are five **Estate Planning Documents** to consider regardless of your age, health or wealth:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Durable Power of Attorney",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "A **Durable Power of Attorney (POA)** protects your property in the event you become physically unable or lack the capacity to handle your financial affairs. A POA allows you to appoint someone (Agent) to act on your behalf while you are incapacitated. It protects you and your assets from being dissipated or stolen.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The person you authorize to act on your behalf, can do things like pay your bills, collect benefits, watch over your investments and file taxes. You have many options with what powers you will allow your attorney in fact.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are general POAs and limited POAs.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "General POA:",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Become effective immediately",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Remains effective during disability",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Give the agent broad authority to act on behalf of the principal for financial and business operations and to handle real estate",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Limited POA:",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Used to appoint specific legal powers to an individual on behalf of another",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "For example, limited POA’s are often used in the sale of a property to allow a person to execute the closing documents on behalf of the seller. One spouse may be out of the country, so the other spouse may have a limited poa to sign the closing documents.",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Healthcare POA:",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Deals with healthcare decisions on behalf of the Principal",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Preserve the health and wellbeing of the principal",
+         "links": [],
+         "children": []
+        },
+        {
+         "text": "Keep the principal in their home",
+         "links": [],
+         "children": []
+        },
+        {
+         "text": "Pain Management",
+         "links": [],
+         "children": []
+        },
+        {
+         "text": "Hospice/palliative Care",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are two types of Durable POAs: (1) a standby Durable POA which is effective immediately (this is appropriate if you face a serious operation or illness), and (2) a springing Durable POA, which is not effective unless and until you are incapacitated.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**NOTE:** Florida does not permit springing DPOAs.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Advanced Medical Directive",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "An **Advanced Medical Directive** clearly sets forth what medical treatment you desire in the event you are unable to speak for yourself or allows someone to make medical decisions on your behalf when you can’t express your wishes yourself. Without an Advanced Medical Directive, medical care providers are required to prolong your life using artificial means, if necessary. With today’s technology, physicians can sustain a person’s life indefinitely.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are three types of advanced medical directives. Each state allows only a certain type (or types). You may find that one, two, or all three types are necessary to carry out all of your wishes for medical treatment.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**First**, a living will allows you to approve or decline certain types of medical care, even if you will dies as a result of that choice. In most states, living wills take effect only under certain circumstances, such as terminal injury or illness. Generally, one can be used only to decline medical treatment that ‘serves only to postpone the moment of death.” In those states that do not allow living wills, you may still want to have one to serve as evidence of your wishes.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Second**, a Durable POA for health care (known as a health-care proxy in some states) allows you to appoint a representative to make medical decisions for you. You decide how much power your representative will or won’t have.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Finally**, a **Do Not Resuscitate Order (DNR)** is a doctor’s order that tells medical personnel not to perform CPR if you go into cardiac arrest. There are two types of DNRs. One is effective only while you are hospitalized. The other is used while you are outside the hospital.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Last Will and Testament (Will)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A **Will** is often said to be a cornerstone of any estate plan. The main purpose of a Will is to disburse property to heirs and beneficiaries after your death. If you die without a Will, disbursements will be made according to state law, which might be contrary to your wishes.\nThere are two other equally important aspects of a Will:",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "You can name the person (executor/executrix or personal representative) who will manage and settle your estate in accordance with your written instructions. If you do not name someone the court will appoint an administrator who might be someone you do not know or is someone you would not have chosen.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You can name a legal guardian for minor children or dependents with special needs. If you do not appoint a guardian, the court will appoint one on your behalf. Again, this may be someone you may not have chosen.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A **Will** is a legal document, and the courts are very reluctant to overturn any provisions within it. Therefore, it is critical your Will be property prepared, your wishes are clearly articulated, and it is executed in accordance with your state’s law.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Types of Wills",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Last Will And Testament/ Attested Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Non-conforming Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Holographic Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Military Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Out of State Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Noncupative/ Oral Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Joint Will, Contractual Will, Mutual Will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pour-Over Will",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Requirements of a Will",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Must be in writing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Must be signed by a Testator of Valid Proxy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Must be attested to by two valid witnesses",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Witness may not be an interested party",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "text": "Must be notarized to be a self-proving will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Testator must have testamentary intent and testamentary capacity",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Testamentary intent: Testator intended for this to serve as his/her will",
+         "links": [],
+         "children": []
+        },
+        {
+         "text": "Testamentary capacity: Over 18 years age and mental ability to understand the extent of one’s property",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Note:** Like all estate planning documents, circumstances change over time. You should review these documents every few years to ensure they still accurately reflect your estate and the disposition of your assets.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Trust",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A **Trust** is a separate legal entity you create to own property, such as your home, investments and vehicles. It is often called a living trust because it is meant to function while you are alive. You retain complete control over all property in your trust, and you may change the trust terms, transfer property in or out of the trust or revoke the Trust entirely. Upon your death the successor trustee you have designated, will distribute your assets to your heirs and beneficiaries in accordance with your wishes as well as pay all debts of your estate.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The primary function of a trust is to avoid probate, which can be costly and time consuming. Property, real or personal, titled in a trust, is not included in any probate estate overseen by a court. A trust enables the transfer of property quickly and cost effectively.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Probate can also interfere with the management of property such as a closely held business or investment portfolio.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Privacy is another consideration. A probate proceeding is public. Distribution of your assets according to your Trust is private.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even if you have a Trust, it is advisable to have a Will, often called a Pour Over Will, which authorizes the executor to transfer title to any assets you may have inadvertently neglected to place in the Trust.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Letter of Instruction",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A **Letter of Instruction** (also called a testamentary or side letter) is an informal, non-legal document that generally accompanies your will and is used to express your personal thoughts and directions stated in the Will (or other things, such as your burial wishes, where to locate important documents). This can be helpful for your executor or family members. Unlike your Will, your Letter of Instruction remains private. The Letter provides you an opportunity to say things you may prefer remain private.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "Get in touch with us",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "form",
+   "note": "Lawmatics intake",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+   "alt": "Vaughn law Logo",
+   "alt_missing": false,
+   "title": "",
+   "width": "666",
+   "height": "100",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "Vaughn Law offers its clients a different, more personalized and service orientated approach, by tailoring its representation to its client’s needs. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process.",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Address",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "350 Corey Avenue, St.\nPete Beach, FL 33706",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Phone Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 223-6080](tel:7272236080)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Fax Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 645-4226](tel:7276454226)",
+   "links": [
+    {
+     "text": "(727) 645-4226",
+     "href": "tel:7276454226"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Email",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Closing Services",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Realtors](https://dvaughnlaw.com/services/realtors/)",
+     "links": [
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Consumers](https://dvaughnlaw.com/services/consumers/)",
+     "links": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Lenders](https://dvaughnlaw.com/services/lenders/)",
+     "links": [
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Builders](https://dvaughnlaw.com/services/builders/)",
+     "links": [
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/services/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business Entity Formation](https://dvaughnlaw.com/practice-areas/business-entity-formation/)",
+     "links": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/practice-areas/business-entity-formation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/practice-areas/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/practice-areas/commercial/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Foreclosures](https://dvaughnlaw.com/practice-areas/foreclosures/)",
+     "links": [
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/practice-areas/foreclosures/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Land Trusts](https://dvaughnlaw.com/practice-areas/land-trusts/)",
+     "links": [
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/practice-areas/land-trusts/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Landlord/Tenant](https://dvaughnlaw.com/practice-areas/landlord-tenant/)",
+     "links": [
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/practice-areas/landlord-tenant/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Litigation](https://dvaughnlaw.com/practice-areas/litigation/)",
+     "links": [
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/practice-areas/litigation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Real Estate Transaction](https://dvaughnlaw.com/practice-areas/real-estate-transactions/)",
+     "links": [
+      {
+       "text": "Real Estate Transaction",
+       "href": "https://dvaughnlaw.com/practice-areas/real-estate-transactions/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2019/03/Beach-office-scaled.jpg",
+   "alt": "Architecture - Property",
+   "alt_missing": false,
+   "title": "Beach-office",
+   "width": "1800",
+   "height": "1200",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.197831041805!2d-82.74966069999999!3d27.7420435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fd5bea45f9c9%3A0xd5c4f4a1323a4f56!2s350%20Corey%20Ave%2C%20St%20Pete%20Beach%2C%20FL%2033706!5e0!3m2!1sen!2sus!4v1694102817362!5m2!1sen!2sus",
+   "title": "",
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 1220
+}

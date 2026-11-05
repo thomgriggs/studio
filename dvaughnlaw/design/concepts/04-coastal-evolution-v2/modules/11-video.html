@@ -1,0 +1,12 @@
+{#
+MODULE: video
+PURPOSE: A YouTube video at a wide size in a charcoal frame. Only YouTube embeds are carried over; videos from a former vendor are not carried over.
+SLOTS: url (YouTube embed URL), title. Variant `poster`: the video's own thumbnail with a square teal play mark that opens YouTube in a new tab (used on the Videos page).
+SQUARESPACE: Section with a Video block (paste the YouTube URL). No code.
+#}
+{% from "_macros.html" import poster %}
+<section class="m m-video" data-module="video" data-tone="{{ tone }}">
+  <div class="wrap">
+    {% if variant == 'poster' %}{{ poster(s.url, s.title) }}{% else %}<div class="video"><iframe src="{{ s.url }}" title="{{ s.title or 'YouTube video' }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>{% endif %}
+  </div>
+</section>

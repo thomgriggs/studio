@@ -1,0 +1,6 @@
+{# Renders the page's modules in order, except: logo-rows (badges) go last, right before the closing band; `skip` = module to leave out
+   (taken by the shell). Extra context per module comes from the shell: layout, related, video, mosaic. #}
+{% for m in page.modules %}{% if m.module != 'logo-row' and m is not sameas skip %}{{ render_module(m, page, {"root": root, "layout": layout, "related": related, "video": video if m.module == 'title-banner' else none, "mosaic": mosaic if m.module == 'hero' else none}) }}
+{% endif %}{% endfor %}
+{% for m in page.modules if m.module == 'logo-row' %}{{ render_module(m, page, {"root": root}) }}
+{% endfor %}

@@ -1,0 +1,241 @@
+{
+  "_about": "Design-free header menu shared by every concept. Squarespace 7.1 header rules: folders are one level deep and a folder label is not a link, so a folder with a live hub page lists it first as 'Overview' (overview: true). target_slug is the live page the item opens in this mockup; null means no live page yet. also_merges is information only (live pages the proposal folds into the item).",
+  "menu": [
+    {
+      "label": "Real Estate",
+      "proposed_url": "/real-estate/",
+      "folder": true,
+      "children": [
+        {
+          "label": "Overview",
+          "proposed_url": "/real-estate/",
+          "target_slug": "real-estate-law",
+          "status": "live-page",
+          "also_merges": [
+            "real-estate-law__practice-areas",
+            "services"
+          ],
+          "overview": true
+        },
+        {
+          "label": "Buying and Selling",
+          "proposed_url": "/real-estate/buying-and-selling/",
+          "target_slug": "services__consumers",
+          "status": "live-page",
+          "also_merges": [
+            "services__lenders",
+            "services__builders",
+            "title-services",
+            "order-title",
+            "digital-closings-remote-online-notary",
+            "real-estate-law__practice-areas__real-estate-transactions",
+            "investors__legal-services__real-estate-closings",
+            "investors__legal-services__contract-preparation-and-review"
+          ]
+        },
+        {
+          "label": "Deeds and Title",
+          "proposed_url": "/real-estate/deeds-and-title/",
+          "target_slug": "real-estate-law__homestead",
+          "status": "live-page",
+          "also_merges": [
+            "real-estate-law__deeds-and-conveyances"
+          ]
+        },
+        {
+          "label": "Landlord and Tenant",
+          "proposed_url": "/real-estate/landlord-tenant/",
+          "target_slug": "real-estate-law__practice-areas__landlord-tenant",
+          "status": "live-page",
+          "also_merges": [
+            "investors__legal-services__landlord-tenant",
+            "landlordtenant"
+          ]
+        },
+        {
+          "label": "Investors",
+          "proposed_url": "/real-estate/investors/",
+          "target_slug": "investors",
+          "status": "live-page",
+          "also_merges": [
+            "investors__legal-services",
+            "services__commercial",
+            "real-estate-law__practice-areas__land-trusts",
+            "investors__legal-services__land-trusts",
+            "real-estate-law__practice-areas__business-entity-formation",
+            "investors__legal-services__business-entity-formation",
+            "investors__legal-services__foreclosure-auctions-and-tax-deed-sales",
+            "investors__legal-services__private-lender-foreclosure"
+          ]
+        },
+        {
+          "label": "Disputes",
+          "proposed_url": "/real-estate/disputes/",
+          "target_slug": "real-estate-law__practice-areas__litigation",
+          "status": "live-page",
+          "also_merges": [
+            "investors__legal-services__litigation",
+            "real-estate-law__practice-areas__foreclosures",
+            "real-estate-law__practice-areas__commercial",
+            "real-estate-law__practice-areas__bankruptcy",
+            "real-estate-law__pcclb"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Estate Planning",
+      "proposed_url": "/estate-planning/",
+      "folder": true,
+      "children": [
+        {
+          "label": "Overview",
+          "proposed_url": "/estate-planning/",
+          "target_slug": "estate-planning",
+          "status": "live-page",
+          "also_merges": [
+            "subscription-plans"
+          ],
+          "overview": true
+        },
+        {
+          "label": "Wills and Trusts",
+          "proposed_url": "/estate-planning/wills-and-trusts/",
+          "target_slug": "estate-planning__estate-planning-documents",
+          "status": "live-page",
+          "also_merges": [
+            "estate-planning__important-terms",
+            "real-estate-law__practice-areas__wills-trusts-and-estates"
+          ]
+        },
+        {
+          "label": "Probate",
+          "proposed_url": "/estate-planning/probate/",
+          "target_slug": "estate-planning__probate",
+          "status": "live-page",
+          "also_merges": [
+            "estate-planning__ancillary-probate"
+          ]
+        },
+        {
+          "label": "Powers of Attorney and Health Care",
+          "proposed_url": "/estate-planning/powers-of-attorney/",
+          "target_slug": null,
+          "status": "no-live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Moving to Florida",
+          "proposed_url": "/estate-planning/moving-to-florida/",
+          "target_slug": null,
+          "status": "no-live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Business Succession",
+          "proposed_url": "/estate-planning/business-succession/",
+          "target_slug": null,
+          "status": "no-live-page",
+          "also_merges": []
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "proposed_url": "/about/",
+      "folder": true,
+      "children": [
+        {
+          "label": "The Firm",
+          "proposed_url": "/about/",
+          "target_slug": "about",
+          "status": "live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Our Team",
+          "proposed_url": "/about/our-team/",
+          "target_slug": "about__our-team",
+          "status": "live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Workshops and Events",
+          "proposed_url": "/about/workshops/",
+          "target_slug": "person-workshops",
+          "status": "live-page",
+          "also_merges": []
+        },
+        {
+          "label": "For Realtors",
+          "proposed_url": "/about/for-realtors/",
+          "target_slug": "services__realtors",
+          "status": "live-page",
+          "also_merges": [
+            "cyber-security",
+            "best-practices"
+          ]
+        },
+        {
+          "label": "Contact",
+          "proposed_url": "/contact/",
+          "target_slug": "contact",
+          "status": "live-page",
+          "also_merges": []
+        }
+      ],
+      "also_merges": []
+    },
+    {
+      "label": "Resources",
+      "proposed_url": "/resources/articles/",
+      "folder": true,
+      "children": [
+        {
+          "label": "Articles",
+          "proposed_url": "/resources/articles/",
+          "target_slug": "blog",
+          "status": "live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Videos",
+          "proposed_url": "/resources/videos/",
+          "target_slug": "videos",
+          "status": "proposed-page",
+          "also_merges": [
+            "resources__video-library"
+          ]
+        },
+        {
+          "label": "FAQ",
+          "proposed_url": "/resources/faq/",
+          "target_slug": null,
+          "status": "no-live-page",
+          "also_merges": []
+        },
+        {
+          "label": "Guides and Calculators",
+          "proposed_url": "/resources/guides/",
+          "target_slug": "resources",
+          "status": "live-page",
+          "also_merges": [
+            "resources__forms-docs",
+            "booklets",
+            "resources__closing-calculators"
+          ]
+        }
+      ],
+      "also_merges": []
+    }
+  ],
+  "button": {
+    "label": "Schedule a Consultation",
+    "proposed_url": "/consultation/",
+    "target_slug": "consultation",
+    "status": "proposed-page",
+    "also_merges": [
+      "contact"
+    ]
+  }
+}

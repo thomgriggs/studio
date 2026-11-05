@@ -1,0 +1,1281 @@
+{
+ "_about": "Pages the redesign drops. Read by tools/modulize.py (no structured output) and tools/build.py (no page, post-feed teasers and listings pruned). Nothing is deleted from content/pages or site/raw. `redirect` is the suggested 301 target. stock_posts = the vendor (title-website) stock Wistia videos + transcript; video_posts = the firm's own YouTube video posts, now listed on the Videos page (each is only the embed plus a title, 9-16 words, well under the 150-word article threshold); listings = archives that became empty or are replaced; other = reserved.",
+ "identified_by": "family post-video (layout analysis) AND a Wistia embed in the raw crawl (embed provider \"wistia\"); all 100 are dated 2014-2020 in the old stock categories (trid, mortgages, financing, sales-process, title-and-closing, starting, selecting, finding, going-to-market, federal-programs, valoans, credit, newhomes). The other 12 post-video pages carry a YouTube embed.",
+ "stock_posts": [
+  {
+   "slug": "6-selling-mistakes",
+   "url": "https://dvaughnlaw.com/6-selling-mistakes/",
+   "title": "6 Selling Mistakes",
+   "date": "2014-03-28",
+   "categories": [
+    "going-to-market"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "are-there-special-mortgages-for-first-time-homebuyers",
+   "url": "https://dvaughnlaw.com/are-there-special-mortgages-for-first-time-homebuyers/",
+   "title": "Are There Special Mortgages For First-Time Homebuyers?",
+   "date": "2014-01-13",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "calculating-your-cash-to-close",
+   "url": "https://dvaughnlaw.com/calculating-your-cash-to-close/",
+   "title": "Calculating Your Cash To Close",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "can-creditors-collect-information-beyond-the-6-required-pieces",
+   "url": "https://dvaughnlaw.com/can-creditors-collect-information-beyond-the-6-required-pieces/",
+   "title": "Can Creditors Collect Information Beyond The 6 Required Pieces?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "can-creditors-revise-trid-loan-estimates",
+   "url": "https://dvaughnlaw.com/can-creditors-revise-trid-loan-estimates/",
+   "title": "Can Creditors Revise TRID Loan Estimates?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "can-i-pay-off-my-loan-ahead-of-schedule",
+   "url": "https://dvaughnlaw.com/can-i-pay-off-my-loan-ahead-of-schedule/",
+   "title": "Can I Pay Off My Loan Ahead Of Schedule?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "can-my-settlement-charges-change",
+   "url": "https://dvaughnlaw.com/can-my-settlement-charges-change/",
+   "title": "Can My Settlement Charges Change?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "closing-explained-visually",
+   "url": "https://dvaughnlaw.com/closing-explained-visually/",
+   "title": "Closing Costs Explained Visually",
+   "date": "2014-04-03",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "could-my-loan-costs-exceed-the-loan-estimate",
+   "url": "https://dvaughnlaw.com/could-my-loan-costs-exceed-the-loan-estimate/",
+   "title": "Could My Loan Costs Exceed The Loan Estimate?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "do-creditors-have-to-approve-trid-loans-in-3-days",
+   "url": "https://dvaughnlaw.com/do-creditors-have-to-approve-trid-loans-in-3-days/",
+   "title": "Do Creditors Have To Approve TRID Loans In 3 Days?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-are-pre-qualifying-and-pre-approval-different",
+   "url": "https://dvaughnlaw.com/how-are-pre-qualifying-and-pre-approval-different/",
+   "title": "How Are Pre-Qualifying And Pre-Approval Different?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-i-determine-my-housing-needs-before-i-begin-the-search",
+   "url": "https://dvaughnlaw.com/how-can-i-determine-my-housing-needs-before-i-begin-the-search/",
+   "title": "How Can I Determine My Housing Needs Before I Begin The Search?",
+   "date": "2014-01-12",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-i-find-out-about-schools-community-resources",
+   "url": "https://dvaughnlaw.com/how-can-i-find-out-about-schools-community-resources/",
+   "title": "How Can I Find Out About Schools & Community Resources?",
+   "date": "2014-01-12",
+   "categories": [
+    "finding"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-i-find-out-information-about-my-credit-history-2",
+   "url": "https://dvaughnlaw.com/how-can-i-find-out-information-about-my-credit-history-2/",
+   "title": "How Can I Find Out Information About My Credit History?",
+   "date": "2014-01-13",
+   "categories": [
+    "credit"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-i-improve-my-homes-value",
+   "url": "https://dvaughnlaw.com/how-can-i-improve-my-homes-value/",
+   "title": "How Can I Improve My Home’s Value?",
+   "date": "2014-01-13",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-i-keep-track-of-all-the-homes-i-see",
+   "url": "https://dvaughnlaw.com/how-can-i-keep-track-of-all-the-homes-i-see/",
+   "title": "How Can I Keep Track Of All The Homes I See?",
+   "date": "2014-01-13",
+   "categories": [
+    "finding"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-can-the-fha-assist-me-in-buying-a-home",
+   "url": "https://dvaughnlaw.com/how-can-the-fha-assist-me-in-buying-a-home/",
+   "title": "How Can The FHA Assist Me In Buying A Home?",
+   "date": "2014-01-13",
+   "categories": [
+    "federal-programs"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-begin-the-process-of-buying-a-home",
+   "url": "https://dvaughnlaw.com/how-do-i-begin-the-process-of-buying-a-home/",
+   "title": "How Do I Begin The Process Of Buying A Home?",
+   "date": "2014-01-13",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-choose-the-best-loan-program-for-me",
+   "url": "https://dvaughnlaw.com/how-do-i-choose-the-best-loan-program-for-me/",
+   "title": "How Do I Choose The Best Loan Program For Me?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-choose-the-right-lender-for-me",
+   "url": "https://dvaughnlaw.com/how-do-i-choose-the-right-lender-for-me/",
+   "title": "How Do I Choose The Right Lender For Me?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-evaluate-an-offer",
+   "url": "https://dvaughnlaw.com/how-do-i-evaluate-an-offer/",
+   "title": "How Do I Evaluate An Offer?",
+   "date": "2014-01-13",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-make-a-home-ready-to-sell",
+   "url": "https://dvaughnlaw.com/how-do-i-make-a-home-ready-to-sell/",
+   "title": "How Do I Make A Home Ready To Sell?",
+   "date": "2014-01-13",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-i-set-the-price-on-my-house",
+   "url": "https://dvaughnlaw.com/how-do-i-set-the-price-on-my-house/",
+   "title": "How Do I Set The Price On My House?",
+   "date": "2014-01-13",
+   "categories": [
+    "going-to-market"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-do-lenders-decide-the-maximum-loan-amount-that-buyers-can-afford",
+   "url": "https://dvaughnlaw.com/how-do-lenders-decide-the-maximum-loan-amount-that-buyers-can-afford/",
+   "title": "How Do Lenders Decide The Maximum Loan Amount That Buyers Can Afford?",
+   "date": "2014-01-13",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-does-purchasing-a-home-compare-with-renting",
+   "url": "https://dvaughnlaw.com/how-does-purchasing-a-home-compare-with-renting/",
+   "title": "How Does Purchasing A Home Compare With Renting?",
+   "date": "2014-01-13",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-does-the-interest-rate-factor-in-securing-a-mortgage-loan",
+   "url": "https://dvaughnlaw.com/how-does-the-interest-rate-factor-in-securing-a-mortgage-loan/",
+   "title": "How Does The Interest Rate Factor In Securing A Mortgage Loan?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-is-a-home-marketed",
+   "url": "https://dvaughnlaw.com/how-is-a-home-marketed/",
+   "title": "How Is A Home Marketed?",
+   "date": "2014-01-13",
+   "categories": [
+    "going-to-market"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-large-a-down-payment-do-i-need",
+   "url": "https://dvaughnlaw.com/how-large-a-down-payment-do-i-need/",
+   "title": "How Large A Down Payment Do I Need?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-long-must-creditors-keep-real-estate-loan-records",
+   "url": "https://dvaughnlaw.com/how-long-must-creditors-keep-real-estate-loan-records/",
+   "title": "How Long Must Creditors Keep Real Estate Loan Records?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-should-i-prepare-for-internet-showing",
+   "url": "https://dvaughnlaw.com/how-should-i-prepare-for-internet-showing/",
+   "title": "How Should I Prepare For Internet Showing?",
+   "date": "2014-03-28",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-should-i-prepare-the-inside-for-an-open-house",
+   "url": "https://dvaughnlaw.com/how-should-i-prepare-the-inside-for-an-open-house/",
+   "title": "How Should I Prepare The Inside For An Open House?",
+   "date": "2014-03-28",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "how-should-i-prepare-the-outside-for-an-open-house",
+   "url": "https://dvaughnlaw.com/how-should-i-prepare-the-outside-for-an-open-house/",
+   "title": "How Should I Prepare The Outside For An Open House?",
+   "date": "2014-03-28",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "is-an-older-home-a-better-value-than-a-new-one",
+   "url": "https://dvaughnlaw.com/is-an-older-home-a-better-value-than-a-new-one/",
+   "title": "Is An Older Home A Better Value Than A New One?",
+   "date": "2014-01-13",
+   "categories": [
+    "finding"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "title-insurance-explained-visually",
+   "url": "https://dvaughnlaw.com/title-insurance-explained-visually/",
+   "title": "Title Insurance Explained Visually",
+   "date": "2014-04-03",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-loan-estimate-comparisons",
+   "url": "https://dvaughnlaw.com/understanding-loan-estimate-comparisons/",
+   "title": "Understanding Loan Estimate Comparisons",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-additional-information-can-be-important",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-additional-information-can-be-important/",
+   "title": "Understanding Your Loan: Additional Information Can Be Important",
+   "date": "2017-01-07",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-cash-and-transaction-summaries",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-cash-and-transaction-summaries/",
+   "title": "Understanding Your Loan: Cash And Transaction Summaries",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-closing-cost-details",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-closing-cost-details/",
+   "title": "Understanding Your Loan: Closing Cost Details",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-closing-disclosure-page-1",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-closing-disclosure-page-1/",
+   "title": "Understanding Your Loan: Closing Disclosure Page 1",
+   "date": "2017-01-07",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-estimate-other-costs",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-other-costs/",
+   "title": "Understanding Your Loan Estimate: Other Costs",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-estimate-page-2-loan-costs",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-page-2-loan-costs/",
+   "title": "Understanding Your Loan Estimate: Page 2, Loan Costs",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-estimate-services-you-can-shop-for",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-can-shop-for/",
+   "title": "Understanding Your Loan Estimate: Services You CAN Shop For",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-estimate-services-you-cannot-shop-for",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-services-you-cannot-shop-for/",
+   "title": "Understanding Your Loan Estimate: Services You Cannot Shop For",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "understanding-your-loan-estimate-terms-payments-and-closing-costs",
+   "url": "https://dvaughnlaw.com/understanding-your-loan-estimate-terms-payments-and-closing-costs/",
+   "title": "Understanding Your Loan Estimate: Terms, Payments and Closing Costs",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-6-pieces-of-information-make-a-trid-loan-application",
+   "url": "https://dvaughnlaw.com/what-6-pieces-of-information-make-a-trid-loan-application/",
+   "title": "What 6 Pieces of Information Make A TRID Loan Application?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-about-a-home-located-in-a-flood-plain",
+   "url": "https://dvaughnlaw.com/what-about-a-home-located-in-a-flood-plain/",
+   "title": "What About A Home Located In A Flood Plain?",
+   "date": "2014-01-13",
+   "categories": [
+    "selecting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-203b-and-203k-loans",
+   "url": "https://dvaughnlaw.com/what-are-203b-and-203k-loans/",
+   "title": "What Are 203(B) And 203(K) Loans?",
+   "date": "2014-01-13",
+   "categories": [
+    "federal-programs"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-commissions",
+   "url": "https://dvaughnlaw.com/what-are-commissions/",
+   "title": "What Are Real Estate Commissions?",
+   "date": "2014-04-04",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-discount-points",
+   "url": "https://dvaughnlaw.com/what-are-discount-points/",
+   "title": "What Are Discount Points?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-home-warranties-and-should-i-consider-them",
+   "url": "https://dvaughnlaw.com/what-are-home-warranties-and-should-i-consider-them/",
+   "title": "What Are “Home Warranties”, And Should I Consider Them?",
+   "date": "2014-01-13",
+   "categories": [
+    "selecting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-the-advantages-of-15-and-30-year-fixed-rate-mortgages",
+   "url": "https://dvaughnlaw.com/what-are-the-advantages-of-15-and-30-year-fixed-rate-mortgages/",
+   "title": "What Are The Advantages Of 15- And 30-Year Fixed-Rate Mortgages?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-the-major-types-of-va-loans",
+   "url": "https://dvaughnlaw.com/what-are-the-major-types-of-va-loans/",
+   "title": "What Are The Major Types Of VA Loans?",
+   "date": "2017-01-07",
+   "categories": [
+    "valoans"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-the-steps-involved-in-the-fha-loan-process",
+   "url": "https://dvaughnlaw.com/what-are-the-steps-involved-in-the-fha-loan-process/",
+   "title": "What Are The Steps Involved In The FHA Loan Process?",
+   "date": "2014-01-13",
+   "categories": [
+    "federal-programs"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-are-va-home-loans",
+   "url": "https://dvaughnlaw.com/what-are-va-home-loans/",
+   "title": "What Are VA Home Loans?",
+   "date": "2017-01-07",
+   "categories": [
+    "valoans"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-can-i-expect-to-happen-on-closing-day",
+   "url": "https://dvaughnlaw.com/what-can-i-expect-to-happen-on-closing-day/",
+   "title": "What Can I Expect To Happen On Closing Day?",
+   "date": "2014-01-13",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-costs-or-fees-are-associated-with-loan-origination",
+   "url": "https://dvaughnlaw.com/what-costs-or-fees-are-associated-with-loan-origination/",
+   "title": "What Costs or Fees Are Associated With Loan Origination?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-details-can-i-ask-brokers-in-advance",
+   "url": "https://dvaughnlaw.com/what-details-can-i-ask-brokers-in-advance/",
+   "title": "What Details Can I Ask Brokers In Advance?",
+   "date": "2014-01-13",
+   "categories": [
+    "going-to-market"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-disclosures-are-used-for-loans-not-covered-by-trid",
+   "url": "https://dvaughnlaw.com/what-disclosures-are-used-for-loans-not-covered-by-trid/",
+   "title": "What Disclosures Are Used For Loans Not Covered By TRID?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-do-i-get-at-closing",
+   "url": "https://dvaughnlaw.com/what-do-i-get-at-closing/",
+   "title": "What Do I Get At Closing?",
+   "date": "2014-01-13",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-do-lenders-have-to-tell-you-about-your-real-estate-loan",
+   "url": "https://dvaughnlaw.com/what-do-lenders-have-to-tell-you-about-your-real-estate-loan/",
+   "title": "What Do Lenders Have To Tell You About Your Real Estate Loan?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-does-a-home-inspector-do-and-how-does-an-inspection-figure-in-the-purchase-of-a-home",
+   "url": "https://dvaughnlaw.com/what-does-a-home-inspector-do-and-how-does-an-inspection-figure-in-the-purchase-of-a-home/",
+   "title": "What Does A Home Inspector Do, And How Does An Inspection Figure In The Purchase Of A Home?",
+   "date": "2014-01-13",
+   "categories": [
+    "selecting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-does-ability-to-repay-mean",
+   "url": "https://dvaughnlaw.com/what-does-ability-to-repay-mean/",
+   "title": "What Does Ability To Repay Mean?",
+   "date": "2017-01-07",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-does-the-closing-process-involve-when-i-sell",
+   "url": "https://dvaughnlaw.com/what-does-the-closing-process-involve-when-i-sell/",
+   "title": "What Does The Closing Process Involve When I Sell?",
+   "date": "2014-03-28",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-factors-affect-mortgage-payments",
+   "url": "https://dvaughnlaw.com/what-factors-affect-mortgage-payments/",
+   "title": "What Factors Affect Mortgage Payments?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-happens-after-ive-applied-for-my-loan",
+   "url": "https://dvaughnlaw.com/what-happens-after-ive-applied-for-my-loan/",
+   "title": "What Happens After I’ve Applied For My Loan?",
+   "date": "2014-01-12",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-business-day-for-real-estate-loan-disclosures",
+   "url": "https://dvaughnlaw.com/what-is-a-business-day-for-real-estate-loan-disclosures/",
+   "title": "What Is A ‘Business Day’ For Real Estate Loan Disclosures?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-certificate-of-eligibility-or-coe",
+   "url": "https://dvaughnlaw.com/what-is-a-certificate-of-eligibility-or-coe/",
+   "title": "What Is A Certificate of Eligibility, or COE?",
+   "date": "2017-01-07",
+   "categories": [
+    "valoans"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-counter-offer",
+   "url": "https://dvaughnlaw.com/what-is-a-counter-offer/",
+   "title": "What Is A Counter-Offer?",
+   "date": "2014-01-13",
+   "categories": [
+    "sales-process"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-credit-bureau-score-and-how-do-lenders-use-them",
+   "url": "https://dvaughnlaw.com/what-is-a-credit-bureau-score-and-how-do-lenders-use-them/",
+   "title": "What Is A Credit Bureau Score And How Do Lenders Use Them?",
+   "date": "2014-01-13",
+   "categories": [
+    "credit"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-good-faith-estimate-and-how-does-it-help-me",
+   "url": "https://dvaughnlaw.com/what-is-a-good-faith-estimate-and-how-does-it-help-me/",
+   "title": "What Is A Loan Estimate And How Does It Help Me?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-mortgage",
+   "url": "https://dvaughnlaw.com/what-is-a-mortgage/",
+   "title": "What Is A Mortgage?",
+   "date": "2014-01-13",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-qualified-mortgage",
+   "url": "https://dvaughnlaw.com/what-is-a-qualified-mortgage/",
+   "title": "What Is A Qualified Mortgage?",
+   "date": "2017-01-07",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-a-rate-lock",
+   "url": "https://dvaughnlaw.com/what-is-a-rate-lock/",
+   "title": "What Is A Rate Lock?",
+   "date": "2017-01-07",
+   "categories": [
+    "newhomes"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-an-appraisal",
+   "url": "https://dvaughnlaw.com/what-is-an-appraisal/",
+   "title": "What Is An Appraisal?",
+   "date": "2014-03-28",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-an-escrow-account-do-i-need-one",
+   "url": "https://dvaughnlaw.com/what-is-an-escrow-account-do-i-need-one/",
+   "title": "What Is An Escrow Account? Do I Need One?",
+   "date": "2020-08-29",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-earnest-money-and-how-much-should-i-set-aside",
+   "url": "https://dvaughnlaw.com/what-is-earnest-money-and-how-much-should-i-set-aside/",
+   "title": "What Is Earnest Money, And How Much Should I Set Aside?",
+   "date": "2014-01-13",
+   "categories": [
+    "selecting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-equity",
+   "url": "https://dvaughnlaw.com/what-is-equity/",
+   "title": "What Is Equity?",
+   "date": "2014-04-04",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-included-in-a-monthly-mortgage-payment",
+   "url": "https://dvaughnlaw.com/what-is-included-in-a-monthly-mortgage-payment/",
+   "title": "What Is Included In A Monthly Mortgage Payment?",
+   "date": "2014-01-13",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan",
+   "url": "https://dvaughnlaw.com/what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan/",
+   "title": "What Is Loan To Value (LTV) And How Does It Affect The Size Of My Loan?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-mortgage-insurance",
+   "url": "https://dvaughnlaw.com/what-is-mortgage-insurance/",
+   "title": "What Is Mortgage Insurance?",
+   "date": "2014-01-13",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-pmi",
+   "url": "https://dvaughnlaw.com/what-is-pmi/",
+   "title": "What Is PMI?",
+   "date": "2014-01-13",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-prime",
+   "url": "https://dvaughnlaw.com/what-is-prime/",
+   "title": "What Is “Prime”?",
+   "date": "2014-04-04",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-respa",
+   "url": "https://dvaughnlaw.com/what-is-respa/",
+   "title": "What Is RESPA?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-the-best-way-to-compare-loan-terms-between-lenders",
+   "url": "https://dvaughnlaw.com/what-is-the-best-way-to-compare-loan-terms-between-lenders/",
+   "title": "What Is The Best Way To Compare Loan Terms Between Lenders?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-is-the-debt-to-income-ratio-dti",
+   "url": "https://dvaughnlaw.com/what-is-the-debt-to-income-ratio-dti/",
+   "title": "What Is The Debt-To-Income Ratio (DTI)?",
+   "date": "2017-01-07",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-kinds-of-loans-do-trid-disclosures-cover",
+   "url": "https://dvaughnlaw.com/what-kinds-of-loans-do-trid-disclosures-cover/",
+   "title": "What Kinds Of Loans Do TRID Disclosures Cover?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-makes-up-closing-costs",
+   "url": "https://dvaughnlaw.com/what-makes-up-closing-costs/",
+   "title": "What Makes Up Closing Costs?",
+   "date": "2014-01-13",
+   "categories": [
+    "title-and-closing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-questions-should-i-ask-when-looking-at-homes",
+   "url": "https://dvaughnlaw.com/what-questions-should-i-ask-when-looking-at-homes/",
+   "title": "What Questions Should I Ask When Looking At Homes?",
+   "date": "2014-01-13",
+   "categories": [
+    "finding"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-responsibilities-do-i-have-during-the-lending-process",
+   "url": "https://dvaughnlaw.com/what-responsibilities-do-i-have-during-the-lending-process/",
+   "title": "What Responsibilities Do I Have During The Lending Process?",
+   "date": "2014-01-13",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-should-i-look-for-when-walking-through-a-home",
+   "url": "https://dvaughnlaw.com/what-should-i-look-for-when-walking-through-a-home/",
+   "title": "What Should I Look For When Walking Through A Home?",
+   "date": "2014-01-13",
+   "categories": [
+    "finding"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-should-i-look-out-for-during-the-final-walk-through",
+   "url": "https://dvaughnlaw.com/what-should-i-look-out-for-during-the-final-walk-through/",
+   "title": "What Should I Look Out For During The Final Walk-Through?",
+   "date": "2014-01-13",
+   "categories": [
+    "selecting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-steps-need-to-be-taken-to-secure-a-loan",
+   "url": "https://dvaughnlaw.com/what-steps-need-to-be-taken-to-secure-a-loan/",
+   "title": "What Steps Need To Be Taken To Secure A Loan?",
+   "date": "2020-08-29",
+   "categories": [
+    "financing"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-types-of-closing-costs-are-associated-with-fha-insured-loans",
+   "url": "https://dvaughnlaw.com/what-types-of-closing-costs-are-associated-with-fha-insured-loans/",
+   "title": "What Types Of Closing Costs Are Associated With FHA-Insured Loans?",
+   "date": "2014-01-13",
+   "categories": [
+    "federal-programs"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-types-of-mortgage-loans-are-available",
+   "url": "https://dvaughnlaw.com/what-types-of-mortgage-loans-are-available/",
+   "title": "What Types Of Mortgage Loans Are Available?",
+   "date": "2020-08-29",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "what-will-the-trid-loan-estimate-tell-me",
+   "url": "https://dvaughnlaw.com/what-will-the-trid-loan-estimate-tell-me/",
+   "title": "What Will The TRID Loan Estimate Tell Me?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "whats-refunded-if-my-loan-is-higher-than-my-estimate",
+   "url": "https://dvaughnlaw.com/whats-refunded-if-my-loan-is-higher-than-my-estimate/",
+   "title": "What’s Refunded If My Loan Is Higher Than My Estimate?",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "when-do-i-get-my-loan-closing-disclosure",
+   "url": "https://dvaughnlaw.com/when-do-i-get-my-loan-closing-disclosure/",
+   "title": "When Do I Get My Loan Closing Disclosure?",
+   "date": "2017-01-07",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "which-square-footage-figure-should-i-use",
+   "url": "https://dvaughnlaw.com/which-square-footage-figure-should-i-use/",
+   "title": "Which Square Footage Figure Should I Use?",
+   "date": "2014-03-28",
+   "categories": [
+    "going-to-market"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "why-use-a-realtor",
+   "url": "https://dvaughnlaw.com/why-use-a-realtor/",
+   "title": "Why Use A REALTOR®",
+   "date": "2014-01-13",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  },
+  {
+   "slug": "your-rights-and-rules-for-closing-disclosures",
+   "url": "https://dvaughnlaw.com/your-rights-and-rules-for-closing-disclosures/",
+   "title": "Your Rights And Rules For Closing Disclosures",
+   "date": "2015-06-24",
+   "categories": [
+    "trid"
+   ],
+   "redirect": "https://dvaughnlaw.com/services/consumers/"
+  }
+ ],
+ "video_posts": [
+  {
+   "slug": "deed-transfers-explained-key-issues-before-transferring-property-titles-in-florida",
+   "url": "https://dvaughnlaw.com/deed-transfers-explained-key-issues-before-transferring-property-titles-in-florida/",
+   "title": "Deed Transfers Explained: Key Issues Before Transferring Property Titles In Florida",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "hZ-6oyWfP80",
+   "words_beyond_embed": 11
+  },
+  {
+   "slug": "discover-why-vaughn-law-is-your-top-choice-for-real-estate-and-estate-planning-in-florida",
+   "url": "https://dvaughnlaw.com/discover-why-vaughn-law-is-your-top-choice-for-real-estate-and-estate-planning-in-florida/",
+   "title": "Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "ekRcoj3fKWs",
+   "words_beyond_embed": 16
+  },
+  {
+   "slug": "durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida",
+   "url": "https://dvaughnlaw.com/durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida/",
+   "title": "Durable Power Of Attorney Explained: When It’s Valid And Why You Need One In Florida",
+   "date": "2024-09-23",
+   "categories": [
+    "estate-planning-probate"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "s7XckJYUlO0",
+   "words_beyond_embed": 15
+  },
+  {
+   "slug": "florida-homestead-law-homestead-exemption-explained-protect-your-property-spousal-rights",
+   "url": "https://dvaughnlaw.com/florida-homestead-law-homestead-exemption-explained-protect-your-property-spousal-rights/",
+   "title": "Florida Homestead Law & Homestead Exemption Explained: Protect Your Property & Spousal Rights",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "-ZAfyS8dKzw",
+   "words_beyond_embed": 13
+  },
+  {
+   "slug": "florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls",
+   "url": "https://dvaughnlaw.com/florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls/",
+   "title": "Florida Landlord-Tenant Laws Explained: Avoid Eviction, Rent Increase, and Lease Renewal Pitfalls",
+   "date": "2024-09-23",
+   "categories": [
+    "landlord-tenant"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "DtrW2icVx_c",
+   "words_beyond_embed": 12
+  },
+  {
+   "slug": "foreclosure-property-pitfalls-hidden-liens-title-issues-and-more",
+   "url": "https://dvaughnlaw.com/foreclosure-property-pitfalls-hidden-liens-title-issues-and-more/",
+   "title": "Foreclosure Property Pitfalls: Hidden Liens, Title Issues, and More",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "eLV191AQAlI",
+   "words_beyond_embed": 9
+  },
+  {
+   "slug": "how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips",
+   "url": "https://dvaughnlaw.com/how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips/",
+   "title": "How To Serve Notice Of Non-Payment Of Rent: Proper Procedure For Landlords & Eviction Tips",
+   "date": "2024-09-23",
+   "categories": [
+    "landlord-tenant"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "nWVW4B72kfE",
+   "words_beyond_embed": 15
+  },
+  {
+   "slug": "real-estate-litigation-explained-resolving-contract-disputes-and-property-issues",
+   "url": "https://dvaughnlaw.com/real-estate-litigation-explained-resolving-contract-disputes-and-property-issues/",
+   "title": "Real Estate Litigation Explained: Resolving Contract Disputes And Property Issues",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "TVbTayZuGuk",
+   "words_beyond_embed": 10
+  },
+  {
+   "slug": "the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning",
+   "url": "https://dvaughnlaw.com/the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning/",
+   "title": "The Importance Of Estate Planning: Protect Your Family’s Future With Estate Planning",
+   "date": "2024-09-23",
+   "categories": [
+    "estate-planning-probate"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "kFP-C57h2sg",
+   "words_beyond_embed": 12
+  },
+  {
+   "slug": "what-is-the-title-insurance-protect-your-real-estate-investment",
+   "url": "https://dvaughnlaw.com/what-is-the-title-insurance-protect-your-real-estate-investment/",
+   "title": "What Is The Title Insurance? Protect Your Real Estate Investment",
+   "date": "2024-09-23",
+   "categories": [
+    "starting"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "6EuboiPKtDg",
+   "words_beyond_embed": 10
+  },
+  {
+   "slug": "why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights",
+   "url": "https://dvaughnlaw.com/why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights/",
+   "title": "Why Your Landlord Can Raise Rent: Facts About Rent Hikes & Tenant Rights",
+   "date": "2024-09-23",
+   "categories": [
+    "landlord-tenant"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "IdZt7PQac1I",
+   "words_beyond_embed": 13
+  },
+  {
+   "slug": "why-your-spouse-must-sign-the-mortgage-spousal-rights-mortgage-laws-explained",
+   "url": "https://dvaughnlaw.com/why-your-spouse-must-sign-the-mortgage-spousal-rights-mortgage-laws-explained/",
+   "title": "Why Your Spouse Must Sign The Mortgage: Spousal Rights & Mortgage Laws Explained",
+   "date": "2024-09-23",
+   "categories": [
+    "mortgages"
+   ],
+   "redirect": "https://dvaughnlaw.com/resources/videos/",
+   "youtube_id": "9zdFHzNagqs",
+   "words_beyond_embed": 13
+  }
+ ],
+ "listings": [
+  {
+   "slug": "tag__video",
+   "url": "https://dvaughnlaw.com/tag/video/",
+   "title": "video Archives",
+   "reason": "tag archive of the dropped video posts (all of them excluded)",
+   "redirect": "https://dvaughnlaw.com/resources/videos/"
+  },
+  {
+   "slug": "resources__video-library",
+   "url": "https://dvaughnlaw.com/resources/video-library/",
+   "title": "Video Library",
+   "reason": "old video library: 112 links to the stock and video post pages; replaced by the proposed Videos page (YouTube clips only)",
+   "redirect": "https://dvaughnlaw.com/resources/videos/"
+  },
+  {
+   "slug": "category__credit",
+   "url": "https://dvaughnlaw.com/category/credit/",
+   "title": "Credit: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__federal-programs",
+   "url": "https://dvaughnlaw.com/category/federal-programs/",
+   "title": "Federal Programs Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__financing",
+   "url": "https://dvaughnlaw.com/category/financing/",
+   "title": "Financing: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__finding",
+   "url": "https://dvaughnlaw.com/category/finding/",
+   "title": "Finding: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__going-to-market",
+   "url": "https://dvaughnlaw.com/category/going-to-market/",
+   "title": "Going To Market: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__landlord-tenant",
+   "url": "https://dvaughnlaw.com/category/landlord-tenant/",
+   "title": "Landlord / Tenant Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__mortgages",
+   "url": "https://dvaughnlaw.com/category/mortgages/",
+   "title": "Mortgages: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__newhomes",
+   "url": "https://dvaughnlaw.com/category/newhomes/",
+   "title": "New Homes Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__sales-process",
+   "url": "https://dvaughnlaw.com/category/sales-process/",
+   "title": "Sales Process: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__selecting",
+   "url": "https://dvaughnlaw.com/category/selecting/",
+   "title": "Selecting: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__starting",
+   "url": "https://dvaughnlaw.com/category/starting/",
+   "title": "Starting: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__title-and-closing",
+   "url": "https://dvaughnlaw.com/category/title-and-closing/",
+   "title": "Title and Closing Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__trid",
+   "url": "https://dvaughnlaw.com/category/trid/",
+   "title": "TRID Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "category__valoans",
+   "url": "https://dvaughnlaw.com/category/valoans/",
+   "title": "VA Loans: Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "tag__17",
+   "url": "https://dvaughnlaw.com/tag/17/",
+   "title": "17 Archives",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  },
+  {
+   "slug": "author__www-dvaughnlaw-com",
+   "url": "https://dvaughnlaw.com/author/www-dvaughnlaw-com/",
+   "title": "www.dvaughnlaw.com, Author at St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+   "reason": "listing became empty once the stock and video posts were dropped",
+   "redirect": "https://dvaughnlaw.com/blog/"
+  }
+ ],
+ "other": []
+}

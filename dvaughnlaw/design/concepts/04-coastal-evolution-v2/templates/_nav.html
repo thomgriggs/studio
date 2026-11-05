@@ -1,0 +1,19 @@
+{# Header menu, rendered from content/nav.json (see design/kit/README.md "Navigation"). Squarespace 7.1 header model:
+   folders one level deep, a folder label is a button not a link, one header button, mobile panel with accordions.
+   Items with no live page are muted, not links (aria-disabled) and tagged "no page yet": deliberate gap markers. #}
+<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav__toggle-bars" aria-hidden="true"></span><span class="nav__toggle-label">Menu</span></button>
+<nav class="nav" id="site-nav" aria-label="Main">
+  <ul class="nav__list">
+  {% for f in nav.menu %}
+    <li class="nav__item{% if f.active %} is-active{% endif %}">
+      <button class="nav__trigger" type="button" aria-expanded="false" aria-controls="nav-sub-{{ loop.index }}"><span>{{ f.label }}</span></button>
+      <ul class="nav__sub" id="nav-sub-{{ loop.index }}">
+      {% for c in f.children %}
+        <li>{% if c.available %}<a href="{{ c.href }}"{% if c.current %} aria-current="page"{% endif %}>{{ c.label }}</a>{% else %}<span class="nav__off" role="link" aria-disabled="true">{{ c.label }}<small class="nav__tag">no page yet</small></span>{% endif %}</li>
+      {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
+  {% if nav.button.available %}<a class="btn nav__cta" href="{{ nav.button.href }}"{% if nav.button.current %} aria-current="page"{% endif %}>{{ nav.button.label }}</a>{% else %}<span class="btn nav__cta nav__cta--off" role="link" aria-disabled="true">{{ nav.button.label }}</span>{% endif %}
+</nav>

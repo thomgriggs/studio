@@ -1,0 +1,23 @@
+{#
+MODULE: post-feed
+PURPOSE: Post teasers on the blog index and archive pages as a three-column grid of equal white cards: serif title, date (when the post is a known page), then the excerpt as crawled. The whole card links to the post; the link to older entries is a button under the grid.
+SLOTS: title (optional section heading), posts[title, href, excerpt, date (derived from the post page when known)], more[text, href]. Variant `cards` (home page, "From the firm"): the same grid under a centered heading.
+SQUARESPACE: Blog page with the native Blog collection or a Summary block pointed at the blog (grid layout, 3 columns, title + date + excerpt); pagination is built in. No code.
+#}
+{% from "_macros.html" import heading %}
+<section class="m m-feed{{ ' m-feed--home' if s.title }}" data-module="post-feed" data-tone="{{ tone }}">
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ heading(2, s.title, 2, "h-section") }}</div>{% endif %}
+    <ul class="cards cards--feed" role="list">
+      {% for p in s.posts %}
+      <li class="card card--link">
+        <h{{ 3 if s.title else 2 }} class="card__title" data-orig-level="2"><a href="{{ p.href|href }}">{{ p.title }}</a></h{{ 3 if s.title else 2 }}>
+        {% if p.date %}<p class="card__date"><time datetime="{{ p.date }}">{{ p.date|longdate }}</time></p>{% endif %}
+        {% if p.excerpt %}<p class="card__ex">{{ p.excerpt|md }}</p>{% endif %}
+        <span class="card__go" aria-hidden="true"></span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if s.more %}<p class="feed__more"><a class="btn btn--ghost" href="{{ s.more.href|href }}">{{ s.more.text }}</a></p>{% endif %}
+  </div>
+</section>

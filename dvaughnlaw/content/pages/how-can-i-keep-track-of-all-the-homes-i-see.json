@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/how-can-i-keep-track-of-all-the-homes-i-see/",
+ "slug": "how-can-i-keep-track-of-all-the-homes-i-see",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "How Can I Keep Track Of All The Homes I See? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-can-i-keep-track-of-all-the-homes-i-see/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Can I Keep Track Of All The Homes I See? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "There are some great tips in this video, like: if possible, take photographs of each house: the outside, the major rooms, the yard and extra features that you like or ones you see as potential problems. Write things down as you go. And don’t hesitate to return for a second look. Use the HUD […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:20+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "finding"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Can I Keep Track Of All The Homes I See?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/09jwxt28ux",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are some great tips in this video, like:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "if possible, take photographs of each house: the outside, the major rooms, the yard and extra features that you like or ones you see as potential problems.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Write things down as you go. And don’t hesitate to return for a second look.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Use the HUD Home Scorecard (www.hud.gov/buying/checklist.pdf) to organize your photos and notes for each house.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 77
+}

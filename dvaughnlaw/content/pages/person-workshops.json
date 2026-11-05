@@ -1,0 +1,792 @@
+{
+ "url": "https://dvaughnlaw.com/person-workshops/",
+ "slug": "person-workshops",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2026-10-26",
+ "seo": {
+  "title_tag": "Person Workshops - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/person-workshops/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Person Workshops - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h1",
+   "text": "Estate Planning:\nHow To Protect Your Home,\nSavings & Family From Costly Mistakes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Join Attorney Danielle Vaughn for a FREE informative and interactive workshop.\nPlain language. Real answers. Walk away knowing exactly how to protect everything you’ve worked for.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "N",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Completely Free",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "N",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No Obligation",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "N",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "All Ages Welcome",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "N",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Seats Are Limited",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reserve My Free Seat",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Seats fill quickly — registration closes when capacity is reached",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Upcoming Events",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Thursday, November 19th, 2026 from 2:00 PM – 4:00 PM at Sunshine City Comedy Club, 5501 Gulf Blvd, St. Pete Beach, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tuesday, December 1st, 2026 from 1PM – 3PM at Florida Lithuanian Center, 4880 46th Ave North, St Petersburg, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Watch Before You Register",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "“My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*— Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC*",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "other",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/03/Workshop-Video-2-1.mp4",
+   "title": "",
+   "component": "video",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*Danielle Vaughn, Managing Attorney – Vaughn Law, PLLC*",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reserve My Free Seat",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What You’ll Learn",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Two Hours That Could Protect Everything",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How to Keep Your Home Out of Court",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Why a will alone isn’t enough — and the one document that keeps your family out of probate court entirely.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Who's in Charge If You Can't Be",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The two legal documents that name the right person to handle your finances and medical decisions if you ever can’t.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How to Protect Your Children",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Legally name the right guardian — and make sure your children are cared for exactly the way you want, not a judge.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "The 4 Documents Every Family Needs",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Know exactly which documents make up a complete estate plan — and what happens to your family without each one.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How to Protect What You've Built",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Shield your assets from unnecessary taxes, creditors, and costly legal fees with the right plan in place.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Your Personal Next Step",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Leave with a clear, customized action plan — not just general information. Know exactly what YOU need to do.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Who Should Attend",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "This Workshop Is for You If…",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You Have Children",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Make sure your kids are protected and the right guardian is legally named — no matter what.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You're Married",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ensure your spouse can access everything they need without court delays or legal roadblocks.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You Own a Home",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Pass your home directly to your family — no probate, no courthouse, no delays.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You Have Savings",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Protect what you’ve worked for and make sure it goes exactly where you intend.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Your Plan Is Outdated",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Had a major life change? Marriage, divorce, new children? Your old documents may no longer protect you.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "u",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You Have No Plan Yet",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No pressure. This free workshop is the perfect place to start — and to finally get it done.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "You Recently Moved to Florida",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Florida has its own unique estate planning laws. A plan from another state may not protect you here — come find out what needs to change.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reserve My Free Seat",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2021/12/RTM02838-HDR-min-min.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Your Presenter",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our workshops are led by Attorney Danielle Vaughn who is committed to educating families so they can make proper decisions and ensure their loved ones are truly protected.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/06/blue-blazer-blue-background.jpeg",
+   "alt": "Danielle Vaughn, Board Certified Real Estate Attorney and Founder of Vaughn Law, PLLC in St. Pete Beach, Florida",
+   "alt_missing": false,
+   "title": "Danielle Vaughn, Managing Attorney and Founder of Vaughn Law, PLLC",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Danielle Vaughn",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Managing Attorney – Founder",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Danielle Vaughn is the founder and Managing Attorney of Vaughn Law, PLLC, serving families and businesses across St. Petersburg, Tampa, and Pinellas County. Recognized by Super Lawyers as a Rising Star and voted Best of Florida, Danielle is known for making complex legal topics feel accessible and actionable. She founded Vaughn Law with one mission: to help every family have a plan that truly protects them.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Workshop Host Estate Planning Super Lawyers Rising Star",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Upcoming Events",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Choose Your Date & Reserve Your Seat",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We host free workshops at locations across St. Petersburg, Tampa, and Pinellas County. Seating is intentionally kept small — personal and interactive, not a lecture. Spots fill quickly.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Thursday, October 8th, 2026 · 10:00 AM Florida Lithuanian Center, 4880 46th Ave North, St Petersburg, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Limited seats — reserve yours today",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reserve My Free Seat",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "More dates coming soon. Join our waitlist — we’ll notify you when new workshops are added.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What to Expect",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Here’s How the Evening Works",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Arrive & Get Settled",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Check in at the welcome table, grab a seat, and enjoy light refreshments before we begin.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "The Workshop",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our attorney(s) walk you through the three biggest estate planning mistakes — and how to fix every one of them.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Real Stories",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Hear real family examples from our practice. You’ll understand exactly why this matters — and why now is the right time.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "h4",
+   "text": "Your Next Step",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Book a private Legacy Design Meeting with one of our attorneys at a special rate — exclusively for workshop attendees.",
+   "links": [],
+   "component": "blurb",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "After the Workshop — Your Legacy Design Meeting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Book a private Legacy Design Meeting with one of our estate planning attorneys — a full hour to design your personal estate plan. A special rate exclusively for workshop attendees.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Regular $350 **$200** Workshop attendees only · credited toward your completed estate plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reserve My Free Workshop Seat",
+   "href": "https://protectpreserveandplan.com/vaughn-law-st-petersburg-event",
+   "is_button": true,
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Attend the free workshop first — Legacy Design Meeting scheduling happens at the event.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Common Questions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Frequently Asked Questions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Is this workshop really free?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Yes — completely free. No cost to attend, no obligation to purchase anything, and no pressure. Vaughn Law hosts these workshops because we genuinely care about protecting families in our community.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Who is this workshop for?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Anyone who has family, owns anything, or wants to make sure their wishes are honored. Whether you’re 30 or 70, a first-time planner or someone with an outdated will — this workshop was designed for you.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "How long is the workshop?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Approximately two hours. We start on time, end on time, and reserve time at the end for questions and one-on-one conversation with our attorney(s).",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Should I bring my spouse or partner?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Absolutely — we encourage it. Estate planning is a family decision, and couples who attend together get much more out of the experience. Just note how many guests are coming when you register.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "What is the Legacy Design Meeting?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A private, one-hour session with one of our estate planning attorneys where they design your personal estate plan — built specifically for your family situation. Available to workshop attendees at $200 (regularly $350), with your full $200 credited toward your completed estate plan.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Who is this workshop for?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Anyone who has family, owns anything, or wants to make sure their wishes are honored. Whether you’re 30 or 70, a first-time planner or someone with an outdated will — this workshop was designed for you.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "Do I need to bring anything?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just yourself and your questions. If you have an existing will or trust, you’re welcome to bring it — but it’s not required to attend or benefit from the workshop.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h5",
+   "text": "What if I can't make any of the listed dates?",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Use the waitlist link below the event listings and we’ll contact you as soon as a new workshop is available. We add new dates every month across St. Petersburg and Tampa.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "VL Vaughn Law, PLLC",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Real Estate Legal Solutions · Estate Planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "(727) 223-6080 · Reception@dvaughnlaw.com · [www.dvaughnlaw.com](http://www.dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "www.dvaughnlaw.com",
+     "href": "http://www.dvaughnlaw.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "St. Petersburg, FL | Serving Tampa, Pinellas County & surrounding areas",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The information presented at this workshop is for general educational purposes only and does not constitute legal advice or create an attorney-client relationship. Every family’s situation is unique. Please consult with a licensed estate planning attorney regarding your specific circumstances. © 2026 Vaughn Law, PLLC. All rights reserved.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 1242
+}

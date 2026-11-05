@@ -1,0 +1,271 @@
+{
+ "url": "https://dvaughnlaw.com/what-seniors-need-to-know-about-identity-theft-prevention/",
+ "slug": "what-seniors-need-to-know-about-identity-theft-prevention",
+ "template": "article",
+ "family": "post-article",
+ "title": "What Seniors Need to Know About Identity Theft Prevention",
+ "seo": {
+  "title_tag": "What Seniors Need to Know About Identity Theft Prevention - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-seniors-need-to-know-about-identity-theft-prevention/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Seniors Need to Know About Identity Theft Prevention - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Identity theft is becoming more common, and unfortunately, seniors are often targeted because scammers assume they have established credit, retirement savings, and may be less familiar with evolving technology scams. The good news is that a few proactive steps can go a long way in protecting your finances, personal information, and peace of mind. At […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "What Seniors Need to Know About Identity Theft Prevention",
+    "date": "2026-06-04"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Identity theft is becoming more common, and unfortunately, seniors are often targeted because scammers assume they have established credit, retirement savings, and may be less familiar with evolving technology scams.",
+     "The good news is that a few proactive steps can go a long way in protecting your finances, personal information, and peace of mind.",
+     "At Vaughn Law, we believe protecting your future means more than just creating an estate plan. It also means helping you safeguard the assets and personal information you’ve worked so hard to build."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Understand Common Scams",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Many identity theft cases begin with phone calls, emails, or text messages that appear legitimate."
+     },
+     {
+      "type": "p",
+      "text": "Scammers may pretend to be from Medicare, the IRS, your bank, or even a family member in an emergency. These messages are often designed to create panic and pressure you into acting quickly."
+     },
+     {
+      "type": "p",
+      "text": "Be cautious anytime someone asks for:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Social Security numbers",
+        "children": []
+       },
+       {
+        "text": "Banking information",
+        "children": []
+       },
+       {
+        "text": "Passwords",
+        "children": []
+       },
+       {
+        "text": "Gift cards or wire transfers",
+        "children": []
+       },
+       {
+        "text": "Immediate payments",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "If something feels urgent or suspicious, pause and verify the source before responding."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Safeguard Your Personal Information",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Simple habits can dramatically reduce your risk of identity theft."
+     },
+     {
+      "type": "p",
+      "text": "Shred documents that contain sensitive information such as:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Bank statements",
+        "children": []
+       },
+       {
+        "text": "Medical records",
+        "children": []
+       },
+       {
+        "text": "Tax documents",
+        "children": []
+       },
+       {
+        "text": "Credit card offers",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Store important legal and financial documents in a secure place, such as a locked cabinet or safe."
+     },
+     {
+      "type": "p",
+      "text": "You should also avoid carrying your Social Security card in your wallet unless absolutely necessary."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Monitor Your Accounts and Credit",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "One of the best ways to catch fraud early is by regularly reviewing your financial accounts."
+     },
+     {
+      "type": "p",
+      "text": "Check your:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Bank statements",
+        "children": []
+       },
+       {
+        "text": "Credit card activity",
+        "children": []
+       },
+       {
+        "text": "Retirement accounts",
+        "children": []
+       },
+       {
+        "text": "Insurance statements",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Look carefully for unfamiliar charges or withdrawals."
+     },
+     {
+      "type": "p",
+      "text": "You are also entitled to receive a free annual credit report from each of the three major credit bureaus. Reviewing these reports can help you spot suspicious activity before it becomes a larger problem."
+     },
+     {
+      "type": "p",
+      "text": "If you believe your information has been compromised, consider placing a fraud alert or credit freeze on your credit profile."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Be Careful Online",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Technology makes life more convenient, but it also creates opportunities for scammers."
+     },
+     {
+      "type": "p",
+      "text": "Avoid clicking on suspicious links or downloading attachments from unknown senders."
+     },
+     {
+      "type": "p",
+      "text": "Use strong passwords that are different for each account, and update them regularly. Whenever possible, enable two-factor authentication for added protection."
+     },
+     {
+      "type": "p",
+      "text": "When shopping or banking online, make sure the website address begins with “https” and avoid using public Wi-Fi for sensitive transactions."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Ask for Help When Needed",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "There is no shame in asking for help when it comes to protecting yourself from scams and fraud."
+     },
+     {
+      "type": "p",
+      "text": "Trusted family members, financial professionals, and attorneys can help you stay informed and recognize warning signs before serious damage occurs."
+     },
+     {
+      "type": "p",
+      "text": "Many scams today are extremely sophisticated, and having a trusted support system can make all the difference."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "In Summary",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Identity theft can happen to anyone, but seniors are often especially vulnerable to financial scams and fraud."
+     },
+     {
+      "type": "p",
+      "text": "By staying alert, protecting your personal information, monitoring your accounts, and taking online safety seriously, you can greatly reduce your risk and better protect your future."
+     },
+     {
+      "type": "p",
+      "text": "At Vaughn Law, we are committed to helping individuals and families throughout St. Pete Beach and the surrounding communities protect what matters most."
+     },
+     {
+      "type": "p",
+      "text": "📍 Join Danielle Vaughn and the team at Vaughn Law for our upcoming workshop on ****May 27, 2026 at 10:00 AM at the Beach Theatre****, where we’ll discuss important estate planning strategies and ways to safeguard your future."
+     },
+     {
+      "type": "p",
+      "text": "📞 To learn more or schedule a consultation, contact Vaughn Law at ****727-223-6080**** or visit [****www.dvaughnlaw.com****](http://www.dvaughnlaw.com/) today."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

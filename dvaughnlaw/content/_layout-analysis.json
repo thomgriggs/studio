@@ -1,0 +1,2705 @@
+{
+ "families": [
+  {
+   "id": "hub-landing",
+   "name": "Practice-area hub",
+   "description": "Full-width image hero (h1 + tagline) > grid of 5-9 linked blurb cards > image CTA band > about split (2 photos + text) > second image band; two hubs add a partner-logo row",
+   "count": 4,
+   "modules": [
+    "hero-fullwidth",
+    "blurb-grid",
+    "cta-band",
+    "image-inline",
+    "rich-text",
+    "logo-row"
+   ]
+  },
+  {
+   "id": "text-page",
+   "name": "Standard text page",
+   "description": "Title banner on photo > one column: h2 repeating the title, intro, short sections, bullets (optional side image, video, table); 24-722 words",
+   "count": 33,
+   "modules": [
+    "title-banner",
+    "rich-text",
+    "list-bulleted",
+    "headed-sections",
+    "image-inline",
+    "video-youtube",
+    "table"
+   ]
+  },
+  {
+   "id": "faq-page",
+   "name": "Text page with accordion",
+   "description": "Title banner > intro text > one or more Divi accordions carrying most of the content (FAQ, definitions, plan tiers); 362-1899 words",
+   "count": 9,
+   "modules": [
+    "title-banner",
+    "rich-text",
+    "accordion",
+    "headed-sections",
+    "list-bulleted",
+    "link-list"
+   ]
+  },
+  {
+   "id": "index-list",
+   "name": "Link index page",
+   "description": "Title banner > grouped lists of links (documents or videos)",
+   "count": 2,
+   "modules": [
+    "title-banner",
+    "link-list",
+    "download-links",
+    "headed-sections"
+   ]
+  },
+  {
+   "id": "form-page",
+   "name": "Form page",
+   "description": "Title banner > contact or order form (the form is the shared footer block on Contact; Order Title has its own)",
+   "count": 2,
+   "modules": [
+    "title-banner",
+    "form"
+   ]
+  },
+  {
+   "id": "archive-list",
+   "name": "Post listing (blog index and archives)",
+   "description": "Banner or heading > stack of post titles (h2 link) + byline/excerpt > Older Entries link; blog uses the Divi blog module, category/tag/author use the WordPress archive with right sidebar",
+   "count": 22,
+   "modules": [
+    "post-feed"
+   ]
+  },
+  {
+   "id": "post-video",
+   "name": "Video post",
+   "description": "Right sidebar. h1 > video embed > short transcript/summary (100 Wistia 2014-2020 with 55-246 words; 12 YouTube-only 2024-26 posts with no text at all)",
+   "count": 112,
+   "modules": [
+    "post-title",
+    "video-wistia",
+    "video-youtube",
+    "rich-text",
+    "list-bulleted"
+   ]
+  },
+  {
+   "id": "post-article",
+   "name": "Article post",
+   "description": "Right sidebar. h1 > running text with h3 subheads, bulleted/numbered lists; 5 'Vaughn Voyage' posts open with a lead image",
+   "count": 58,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "lead-image",
+    "table"
+   ]
+  },
+  {
+   "id": "legacy-template-demo",
+   "name": "Legacy template demo",
+   "description": "Old Divi demo: banner > lorem ipsum or blog list > in-page sidebar block > Our Partners logos > map > hours > two buttons. Placeholder content",
+   "count": 5,
+   "modules": [
+    "title-banner",
+    "inline-sidebar-legacy",
+    "logo-row",
+    "map",
+    "cta-button",
+    "post-feed"
+   ]
+  },
+  {
+   "id": "plugin-stub",
+   "name": "Eventin / plugin stub",
+   "description": "Events plugin (and portfolio shortcode) pages with right sidebar, almost no content: stubs, 'CONTENTS', 404 'No Results Found' or 2-3 line event details",
+   "count": 21,
+   "modules": [
+    "event-details"
+   ]
+  },
+  {
+   "id": "home",
+   "name": "Home",
+   "description": "Hero with 5 buttons > badge row > contact band > 3-up mission/values blurbs with photo mosaic",
+   "count": 1,
+   "modules": [
+    "hero-fullwidth",
+    "hero-buttons",
+    "logo-row",
+    "blurb-grid",
+    "image-inline"
+   ]
+  },
+  {
+   "id": "our-team",
+   "name": "Team page",
+   "description": "Banner > per attorney: photo, name, role, long bio, headed lists (Education, Bar, Memberships, Awards...), plus Board Certified section with accordion",
+   "count": 1,
+   "modules": [
+    "team-member",
+    "accordion",
+    "list-bulleted",
+    "image-inline"
+   ]
+  },
+  {
+   "id": "workshop-landing",
+   "name": "Workshop landing page",
+   "description": "Hero > 4 stat blurbs > CTA > upcoming events > video > accordion agenda > audience blurbs > CTA; 11 Divi sections",
+   "count": 1,
+   "modules": [
+    "blurb-grid",
+    "accordion",
+    "video-self-hosted",
+    "cta-button",
+    "event-list"
+   ]
+  },
+  {
+   "id": "calculator-page",
+   "name": "Calculator embeds page",
+   "description": "Banner > six accordion toggles each wrapping a third-party calculator iframe",
+   "count": 1,
+   "modules": [
+    "accordion",
+    "calculator-embed"
+   ]
+  },
+  {
+   "id": "empty-stub",
+   "name": "Empty page",
+   "description": "Banner + h1/h2 only; no body content (Booklets)",
+   "count": 1,
+   "modules": [
+    "title-banner"
+   ]
+  }
+ ],
+ "pages": {
+  "10-essential-steps-to-take-when-planning-for-your-own-funeral": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "10-types-of-trusts-a-quick-look": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "12-common-estate-planning-mistakes-and-how-to-avoid-them": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "6-selling-mistakes": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "about": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "about__careers": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "about__our-team": {
+   "family": "our-team",
+   "outlier": true,
+   "modules": [
+    "PSEUDO:team-bio-as-heading-runs",
+    "accordion",
+    "image-inline",
+    "list-bulleted",
+    "rich-text",
+    "social-link",
+    "team-member",
+    "title-banner"
+   ]
+  },
+  "are-there-special-mortgages-for-first-time-homebuyers": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "author__www-dvaughnlaw-com": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "best-practices": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "blog-old": {
+   "family": "legacy-template-demo",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "headed-sections",
+    "inline-sidebar-legacy",
+    "logo-row",
+    "map",
+    "post-feed",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "blog": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "title-banner"
+   ]
+  },
+  "booklets": {
+   "family": "empty-stub",
+   "outlier": true,
+   "modules": [
+    "title-banner"
+   ]
+  },
+  "calculating-your-cash-to-close": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "calculators": {
+   "family": "legacy-template-demo",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "headed-sections",
+    "inline-sidebar-legacy",
+    "link-list",
+    "logo-row",
+    "map",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "calculators__net-sheet": {
+   "family": "legacy-template-demo",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "headed-sections",
+    "inline-sidebar-legacy",
+    "logo-row",
+    "map",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "calculators__title-premium": {
+   "family": "legacy-template-demo",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "headed-sections",
+    "inline-sidebar-legacy",
+    "logo-row",
+    "map",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "can-creditors-collect-information-beyond-the-6-required-pieces": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "can-creditors-revise-trid-loan-estimates": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "can-i-pay-off-my-loan-ahead-of-schedule": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "can-my-settlement-charges-change": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "capital-gains-step-up-in-basis-and-gifting-property-what-florida-property-owners-need-to-know": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "capital-gains-step-up-in-basis-and-your-florida-investment-property": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "category__blog-posts": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__credit": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__estate-planning-probate": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__federal-programs": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__financing": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__finding": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__going-to-market": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__landlord-tenant": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed"
+   ]
+  },
+  "category__mortgages": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__newhomes": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__sales-process": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__selecting": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__starting": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-band",
+    "cta-button",
+    "post-feed"
+   ]
+  },
+  "category__title-and-closing": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__trid": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__uncategorized": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__valoans": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "category__vaughn-voyage": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "celebrity-estate-planning-mistakes-and-what-we-can-learn-from-them": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "closing-explained-visually": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "contact": {
+   "family": "form-page",
+   "outlier": false,
+   "modules": [
+    "title-banner"
+   ]
+  },
+  "contractor-disputes-in-florida-why-your-agreement-must-be-in-writing": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "could-my-loan-costs-exceed-the-loan-estimate": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "cta-imposes-new-small-business-reporting-requirements-for-2024": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "cyber-security": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "headed-sections",
+    "list-numbered",
+    "rich-text",
+    "title-banner",
+    "video-youtube"
+   ]
+  },
+  "deed-transfers-explained-key-issues-before-transferring-property-titles-in-florida": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "different-types-of-probate-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "digital-closings-remote-online-notary": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "blurb-grid",
+    "headed-sections",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "disclaimer": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "discover-why-vaughn-law-is-your-top-choice-for-real-estate-and-estate-planning-in-florida": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "do-creditors-have-to-approve-trid-loans-in-3-days": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "durable-power-of-attorney-explained-when-its-valid-and-why-you-need-one-in-florida": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "estate-planning-3-reasons-we-run-the-other-way": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "estate-planning-for-individuals-without-close-family-what-you-need-to-know": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "estate-planning": {
+   "family": "hub-landing",
+   "outlier": false,
+   "modules": [
+    "blurb-grid",
+    "cta-band",
+    "cta-button",
+    "hero-fullwidth",
+    "image-inline",
+    "logo-row",
+    "rich-text"
+   ]
+  },
+  "estate-planning__ancillary-probate": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "estate-planning__estate-planning-documents": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "estate-planning__important-terms": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "estate-planning__probate": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "rich-text",
+    "table",
+    "title-banner"
+   ]
+  },
+  "etn-schedule__day-1-foundations": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__day-2-systems": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__day-3-scaling-wrap-up": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__emerging-technologies-innovation-trends-2": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__emerging-technologies-innovation-trends": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__seo-content-marketing-strategies-2": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-schedule__seo-content-marketing-strategies": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn-speaker-category": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "title-banner"
+   ]
+  },
+  "etn-tags": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "title-banner"
+   ]
+  },
+  "etn": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "rich-text"
+   ]
+  },
+  "etn__applied-ai-machine-learning-summit-2026": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "etn__estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes-2": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "link-list",
+    "list-bulleted",
+    "rich-text"
+   ]
+  },
+  "etn__estate-planning-how-to-protect-your-home-savings-family-from-costly-mistakes": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "link-list",
+    "list-bulleted",
+    "rich-text"
+   ]
+  },
+  "etn_category": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "title-banner"
+   ]
+  },
+  "etn_category__events": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "events": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text"
+   ]
+  },
+  "events__categories": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "events__locations": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "events__my-bookings": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "events__tags": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "fifty-percent-of-paradise": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "florida-homestead-law-homestead-exemption-explained-protect-your-property-spousal-rights": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "foreclosure-property-pitfalls-hidden-liens-title-issues-and-more": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "home": {
+   "family": "home",
+   "outlier": true,
+   "modules": [
+    "blurb-grid",
+    "cta-button",
+    "hero-buttons",
+    "hero-fullwidth",
+    "image-inline",
+    "logo-row"
+   ]
+  },
+  "how-are-pre-qualifying-and-pre-approval-different": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-i-determine-my-housing-needs-before-i-begin-the-search": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-i-find-out-about-schools-community-resources": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-i-find-out-information-about-my-credit-history-2": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-i-improve-my-homes-value": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-i-keep-track-of-all-the-homes-i-see": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-can-the-fha-assist-me-in-buying-a-home": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-begin-the-process-of-buying-a-home": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-choose-the-best-loan-program-for-me": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-choose-the-right-lender-for-me": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-evaluate-an-offer": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-make-a-home-ready-to-sell": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-i-set-the-price-on-my-house": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-do-lenders-decide-the-maximum-loan-amount-that-buyers-can-afford": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-does-purchasing-a-home-compare-with-renting": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-does-the-interest-rate-factor-in-securing-a-mortgage-loan": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-is-a-home-marketed": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-large-a-down-payment-do-i-need": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-long-must-creditors-keep-real-estate-loan-records": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-should-i-prepare-for-internet-showing": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-should-i-prepare-the-inside-for-an-open-house": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-should-i-prepare-the-outside-for-an-open-house": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "how-to-avoid-probate-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "how-to-hurricane-proof-your-estate-plan": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "how-to-protect-your-family-owned-real-estate": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "if-you-cant-speak-for-yourself-who-will": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "intro-to-vaughn-law": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "investors": {
+   "family": "hub-landing",
+   "outlier": false,
+   "modules": [
+    "blurb-grid",
+    "cta-band",
+    "cta-button",
+    "hero-fullwidth",
+    "image-inline",
+    "rich-text"
+   ]
+  },
+  "investors__legal-services": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__business-entity-formation": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__contract-preparation-and-review": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__foreclosure-auctions-and-tax-deed-sales": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__land-trusts": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__landlord-tenant": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__litigation": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__private-lender-foreclosure": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "investors__legal-services__real-estate-closings": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "is-an-older-home-a-better-value-than-a-new-one": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "july-2023-estate-planning": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "landlord-tenant-misconceptions": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "landlordtenant": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "layouts-sections-modules": {
+   "family": "legacy-template-demo",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "headed-sections",
+    "inline-sidebar-legacy",
+    "logo-row",
+    "map",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "navigating-property-ownership-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "navigating-residential-real-estate-transactions-a-legal-perspective": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "navigating-the-legal-landscape-of-commercial-lease-agreements-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "navigating-the-real-estate-jungle-a-legal-perspective-on-investing-in-real-estate": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "new-florida-law-landlords-must-disclose-flood-history-to-tenants-starting-october-1-2025": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "order-title": {
+   "family": "form-page",
+   "outlier": false,
+   "modules": [
+    "form",
+    "title-banner"
+   ]
+  },
+  "person-workshops": {
+   "family": "workshop-landing",
+   "outlier": true,
+   "modules": [
+    "PSEUDO:stat-blurbs-text",
+    "accordion",
+    "blurb-grid",
+    "cta-button",
+    "event-list",
+    "image-inline",
+    "rich-text",
+    "title-banner",
+    "video-self-hosted"
+   ]
+  },
+  "portfolio": {
+   "family": "plugin-stub",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "privacy-policy": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "probate-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "real-estate-law": {
+   "family": "hub-landing",
+   "outlier": false,
+   "modules": [
+    "blurb-grid",
+    "cta-band",
+    "cta-button",
+    "hero-fullwidth",
+    "image-inline",
+    "rich-text"
+   ]
+  },
+  "real-estate-law__deeds-and-conveyances": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "headed-sections",
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__homestead": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__pcclb": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__bankruptcy": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__business-entity-formation": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__commercial": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__foreclosures": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "headed-sections",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__land-trusts": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "accordion",
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__landlord-tenant": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "download-links",
+    "headed-sections",
+    "link-list",
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__litigation": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__real-estate-transactions": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-law__practice-areas__wills-trusts-and-estates": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "real-estate-litigation-explained-resolving-contract-disputes-and-property-issues": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "reasons-why-estate-planning-is-crucial-for-parents-with-minor-children": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "residential-real-estate-transactions-a-legal-perspective": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "resources": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "resources__closing-calculators": {
+   "family": "calculator-page",
+   "outlier": true,
+   "modules": [
+    "accordion",
+    "calculator-embed",
+    "title-banner"
+   ]
+  },
+  "resources__forms-docs": {
+   "family": "index-list",
+   "outlier": false,
+   "modules": [
+    "download-links",
+    "link-list",
+    "title-banner"
+   ]
+  },
+  "resources__video-library": {
+   "family": "index-list",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "link-list",
+    "title-banner"
+   ]
+  },
+  "services": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "services__builders": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "services__commercial": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "services__consumers": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "download-links",
+    "headed-sections",
+    "link-list",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "services__lenders": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "services__realtors": {
+   "family": "text-page",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "subscription-plans": {
+   "family": "faq-page",
+   "outlier": false,
+   "modules": [
+    "accordion",
+    "rich-text",
+    "title-banner"
+   ]
+  },
+  "tag__17": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "tag__video": {
+   "family": "archive-list",
+   "outlier": false,
+   "modules": [
+    "cta-button",
+    "post-feed",
+    "rich-text"
+   ]
+  },
+  "the-empire-that-vanished-overnight-a-cautionary-tale-of-a-business-owner-without-a-succession-plan": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-essential-guide-to-talking-to-your-parents-about-estate-planning": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-hidden-costs-of-not-updating-your-estate-plan-after-a-florida-move": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-high-cost-of-a-bad-lease-what-every-landlord-needs-to-know": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-importance-of-estate-planning-protect-your-familys-future-with-estate-planning": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "the-importance-of-funding-your-trust": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-legal-landscape-of-commercial-lease-agreements-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-repairs-you-inherit": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "the-role-of-a-personal-representative-in-your-estate": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "title-insurance-explained-visually": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "title-services": {
+   "family": "hub-landing",
+   "outlier": false,
+   "modules": [
+    "blurb-grid",
+    "cta-band",
+    "cta-button",
+    "hero-fullwidth",
+    "image-inline",
+    "logo-row",
+    "rich-text"
+   ]
+  },
+  "understanding-a-contractor-claim-of-lien": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "understanding-loan-estimate-comparisons": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-additional-information-can-be-important": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-cash-and-transaction-summaries": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-closing-cost-details": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-closing-disclosure-page-1": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-estimate-other-costs": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-estimate-page-2-loan-costs": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-estimate-services-you-can-shop-for": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-estimate-services-you-cannot-shop-for": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "understanding-your-loan-estimate-terms-payments-and-closing-costs": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "vaughn-voyage-deed-holds": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-estate-planning": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "lead-image",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-fincen-residential-real-estate-reporting-when-transfers-must-be-reported-and-when-they-are-not": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-navigating-lady-bird-deeds-in-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-navigating-property-law-and-estate-planning-2": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "image-inline",
+    "lead-image",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-navigating-property-law-and-estate-planning": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-partition-actions-why-title-matters-more-than-you-think": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "lead-image",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-real-estate-scams-are-back": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "lead-image",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "vaughn-voyage-why-a-revocable-living-trust-remains-the-smartest-path-for-protecting-your-estate": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "image-inline",
+    "lead-image",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "want-your-home-to-skip-probate-without-giving-up-control": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "what-6-pieces-of-information-make-a-trid-loan-application": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-about-a-home-located-in-a-flood-plain": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-203b-and-203k-loans": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-commissions": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-discount-points": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-home-warranties-and-should-i-consider-them": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-the-advantages-of-15-and-30-year-fixed-rate-mortgages": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-the-major-types-of-va-loans": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-the-steps-involved-in-the-fha-loan-process": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-are-va-home-loans": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-can-i-expect-to-happen-on-closing-day": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-costs-or-fees-are-associated-with-loan-origination": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-details-can-i-ask-brokers-in-advance": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-disclosures-are-used-for-loans-not-covered-by-trid": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-do-i-get-at-closing": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-do-lenders-have-to-tell-you-about-your-real-estate-loan": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-does-a-home-inspector-do-and-how-does-an-inspection-figure-in-the-purchase-of-a-home": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-does-ability-to-repay-mean": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-does-the-closing-process-involve-when-i-sell": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-factors-affect-mortgage-payments": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-happens-after-ive-applied-for-my-loan": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-business-day-for-real-estate-loan-disclosures": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-business-succession-plan": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "what-is-a-certificate-of-eligibility-or-coe": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-counter-offer": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-credit-bureau-score-and-how-do-lenders-use-them": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-good-faith-estimate-and-how-does-it-help-me": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-mortgage": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-partition-action-and-when-do-you-need-one": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "what-is-a-qualified-mortgage": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-a-rate-lock": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-an-appraisal": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-an-escrow-account-do-i-need-one": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-earnest-money-and-how-much-should-i-set-aside": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-equity": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-included-in-a-monthly-mortgage-payment": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-mortgage-insurance": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-pmi": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-prime": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-respa": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-the-best-way-to-compare-loan-terms-between-lenders": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-the-debt-to-income-ratio-dti": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-is-the-difference-between-a-will-and-a-trust": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:faq-as-h+p",
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "table"
+   ]
+  },
+  "what-is-the-title-insurance-protect-your-real-estate-investment": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "what-kinds-of-loans-do-trid-disclosures-cover": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-makes-up-closing-costs": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-questions-should-i-ask-when-looking-at-homes": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-responsibilities-do-i-have-during-the-lending-process": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-seniors-need-to-know-about-identity-theft-prevention": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "what-should-i-look-for-when-walking-through-a-home": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-should-i-look-out-for-during-the-final-walk-through": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-steps-need-to-be-taken-to-secure-a-loan": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-to-consider-before-transferring-property-title": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "what-types-of-closing-costs-are-associated-with-fha-insured-loans": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-types-of-mortgage-loans-are-available": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-will-the-trid-loan-estimate-tell-me": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "what-your-november-tax-bill-wont-tell-you": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "whats-refunded-if-my-loan-is-higher-than-my-estimate": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "when-do-i-get-my-loan-closing-disclosure": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "when-should-you-update-your-estate-plan": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "when-the-boss-goes-silent-a-story-of-business-interrupted": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "PSEUDO:bold-lead-as-heading",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "which-square-footage-figure-should-i-use": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "why-a-pre-occupancy-agreement-matters": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-numbered",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "why-use-a-realtor": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  },
+  "why-you-should-update-your-estate-plan-when-moving-to-florida": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "headed-sections",
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "why-your-spouse-must-sign-the-mortgage-spousal-rights-mortgage-laws-explained": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "video-youtube"
+   ]
+  },
+  "you-dont-have-a-will-florida-does-and-you-may-not-like-it": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "you-shook-hands-on-the-deal-so-why-is-the-sale-falling-apart": {
+   "family": "post-article",
+   "outlier": false,
+   "modules": [
+    "list-bulleted",
+    "post-title",
+    "rich-text"
+   ]
+  },
+  "your-rights-and-rules-for-closing-disclosures": {
+   "family": "post-video",
+   "outlier": false,
+   "modules": [
+    "post-title",
+    "rich-text",
+    "video-wistia"
+   ]
+  }
+ }
+}

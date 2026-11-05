@@ -1,0 +1,39 @@
+{
+  "templates": {
+    "home": "The home page: hero with a mosaic of rounded photos (people first), mission cards, badges, closing band.",
+    "hub": "A practice-area hub: hero, linked cards, about split, CTA band, partner logos.",
+    "content-page": "Standard page: title banner, then any run of text modules. Covers text pages, FAQ/accordion pages, link indexes, form pages.",
+    "article": "Blog article: title block with byline row, narrow reading column, intro, headed sections, lists, steps, more articles from the category.",
+    "video-post": "Video post: title block with the YouTube poster, text in the reading column, more articles from the category.",
+    "listing": "Blog index and category/tag/author archives: grid of post cards (title, date, excerpt).",
+    "team": "Our Team: roster of square portraits linking down to each person's bio (portrait beside name, role and text), sub-sections as headed lists.",
+    "workshop": "Workshop landing page: hero, benefit cards, event dates, accordion agenda, presenter.",
+    "consultation": "Consultation flow (proposed pages only, `flow: true`, `own_closing: true`): step 1 choice cards, step 2 one page per situation with a native Form block, confirmation. Normal header and footer, one narrow calm column, no global closing band."
+  },
+  "family_to_template": {
+    "hub-landing": "hub",
+    "text-page": "content-page",
+    "faq-page": "content-page",
+    "index-list": "content-page",
+    "form-page": "content-page",
+    "post-article": "article",
+    "post-video": "video-post",
+    "archive-list": "listing",
+    "home": "home",
+    "our-team": "team",
+    "workshop-landing": "workshop",
+    "calculator-page": "content-page",
+    "empty-stub": "content-page"
+  },
+  "slug_overrides": {
+    "home": "home",
+    "about__our-team": "team",
+    "person-workshops": "workshop",
+    "resources__closing-calculators": "content-page",
+    "booklets": "content-page"
+  },
+  "excluded_families": [
+    "legacy-template-demo",
+    "plugin-stub"
+  ]
+}

@@ -1,0 +1,9 @@
+{#
+MODULE: gallery
+PURPOSE: Three or more photos shown together as a full-bleed strip, edge to edge with thin gaps, one row on wide screens and two columns on narrow. Detected as a run of consecutive photos with no text between.
+SLOTS: images[src, alt].
+SQUARESPACE: Section with a Gallery block (grid layout, no padding, full-width section). No code.
+#}
+<section class="m m-gallery" data-module="gallery" data-tone="{{ tone }}">
+  <ul class="strip strip--{{ [s.images|length, 4]|min }}" role="list">{% for i in s.images %}<li><img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy"></li>{% endfor %}</ul>
+</section>

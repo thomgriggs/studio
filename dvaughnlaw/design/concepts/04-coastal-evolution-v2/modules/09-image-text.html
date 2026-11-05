@@ -1,0 +1,18 @@
+{#
+MODULE: image-text
+PURPOSE: One or two photos with a heading and text. One photo, or two with short text: photos in a column beside the text. Two photos with long text: the photos sit side by side in a row above, then heading and text run in two columns beneath, so the section stays balanced.
+SLOTS: images[src, alt] (1 or 2), eyebrow, title, level, body[].
+SQUARESPACE: Section in a two-column layout: Image block on one side, Heading and Text blocks on the other. For the long form, a first section with two Image blocks side by side, then a section with Heading and Text in two columns. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body %}
+{% set long = ((s.body or "")|tojson|length) > 1100 %}
+{% set stacked = s.images|length > 1 and long %}
+<section class="m m-imgtext{{ ' imgtext--stacked' if stacked }}" data-module="image-text" data-tone="{{ tone }}">
+  <div class="wrap imgtext__grid">
+    <div class="imgtext__pics imgtext__pics--{{ s.images|length }}">{% for i in s.images %}<img src="{{ i.src }}" alt="{{ i.alt }}" loading="lazy">{% endfor %}</div>
+    <div class="imgtext__text">
+      <div class="headed__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>
+      <div class="prose{{ ' prose--cols' if stacked }}">{{ body(s.body, 3) }}</div>
+    </div>
+  </div>
+</section>

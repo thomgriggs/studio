@@ -1,0 +1,97 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/litigation/",
+ "slug": "real-estate-law__practice-areas__litigation",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Litigation",
+ "seo": {
+  "title_tag": "Litigation - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/litigation/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Litigation - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Litigation"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Conflict requires thoughtful representation. Vaughn Law has experience resolving a variety of civil disputes.",
+     "Trial represents risk. It also requires financial investment and dedicated time. That’s why we usually explore negotiation, arbitration, or mediation before moving on to litigation. We analyze the details of your case and will provide you with straightforward and honest opinions on your options to proceed. But when litigation is necessary, we represent our clients aggressively and strategically.",
+     "Vaughn Law has experience resolving a variety of civil disputes.These include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Ejectment and Unlawful Detainer"
+     },
+     {
+      "text": "Quiet Title"
+     },
+     {
+      "text": "Partition"
+     },
+     {
+      "text": "Breach of Contract"
+     },
+     {
+      "text": "Escrow Disputes"
+     },
+     {
+      "text": "Boundary Disputes"
+     },
+     {
+      "text": "Trespass"
+     },
+     {
+      "text": "Real Estate Fraud"
+     },
+     {
+      "text": "Slander of Title"
+     },
+     {
+      "text": "Construction Liens and Disputes"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "No matter your dispute, you’ll receive thorough, efficient guidance. Our focus is building a strong case and representing you with integrity and care."
+     },
+     {
+      "type": "p",
+      "text": "Get intelligent advocacy. Request your [consultation](https://dvaughnlaw.com/consultation/) today."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

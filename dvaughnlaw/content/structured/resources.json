@@ -1,0 +1,57 @@
+{
+ "url": "https://dvaughnlaw.com/resources/",
+ "slug": "resources",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Resources",
+ "seo": {
+  "title_tag": "Resources - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/resources/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Resources - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Resources"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Law has invested in the resources to make the closing process quicker, easier, and more efficient. We pride ourselves in helping our customers achieve success by being informed and empowered."
+     },
+     {
+      "type": "p",
+      "text": "**Check out these great resources below!**"
+     },
+     {
+      "type": "p",
+      "text": "To view our Video Library: [Click Here](http://localwebdesigncompany.com/vaughnlaw/resources/video-library)"
+     },
+     {
+      "type": "p",
+      "text": "To be taken to our Calculator page: [Click Here](http://localwebdesigncompany.com/vaughnlaw/calculators)"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

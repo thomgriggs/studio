@@ -1,0 +1,16 @@
+{#
+MODULE: cta-band
+PURPOSE: A call-to-action band: one heading, an optional line, one or more buttons, left-aligned on deep teal or over a photo under a charcoal wash.
+SLOTS: eyebrow, title, level, text, buttons[text, href], image (optional background).
+SQUARESPACE: Section with a background image (or solid colour) and overlay, a Heading block, optional Text block and a Button block. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-cta{{ ' m-cta--photo' if s.image }}" data-module="cta-band" data-tone="{{ 'dark' if s.image else 'accent' }}"{% if s.image %} style="--bg:url('{{ s.image.src }}')"{% endif %}>
+  <div class="wrap">
+    <div class="cta__copy">
+    {{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}
+    {% if s.text %}<p>{{ s.text|md }}</p>{% endif %}
+    {% if s.buttons %}<p class="actions">{% for b in s.buttons %}<a class="btn{{ '' if s.image else ' btn--light' }}" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</p>{% endif %}
+    </div>
+  </div>
+</section>

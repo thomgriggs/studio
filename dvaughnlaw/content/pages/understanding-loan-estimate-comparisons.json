@@ -1,0 +1,71 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-loan-estimate-comparisons/",
+ "slug": "understanding-loan-estimate-comparisons",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Loan Estimate Comparisons - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-loan-estimate-comparisons/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Loan Estimate Comparisons - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Page 3 of your Loan Estimate includes measures to help you compare loans. “In X Years” shows the total amount you will have paid in that time, and the dollar amount applied to your loan principal. The ratio between total paid and principal reduced may change over time. The APR shows interest PLUS fees as […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:31:00+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Loan Estimate Comparisons",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/lu5xesr058",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Page 3 of your Loan Estimate includes measures to help you compare loans.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "“In X Years” shows the total amount you will have paid in that time, and the dollar amount applied to your loan principal. The ratio between total paid and principal reduced may change over time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The APR shows interest PLUS fees as an annual ratio – APR is the actual percentage this loan costs per year.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The TIP figure relates the interest you will pay over the life of the loan to the loan amount. For example – a TIP value of 25% on a $100,000 loan means you will pay $125,000 – $100K principal plus $25K interest – over the life of the loan.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 122
+}

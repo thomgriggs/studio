@@ -1,0 +1,53 @@
+{# Browsable style guide: tokens, type, then every module rendered once with real site content, labelled with its slots and Squarespace equivalent. #}
+{% extends "_base.html" %}
+{% block main %}
+<section class="kit-intro m" data-tone="a"><div class="wrap">
+  <p class="eyebrow">{{ concept.name }}</p>
+  <h1>Kit</h1>
+  <p class="lead">Every module rendered once with real content from the live site. Labels show the slots each module takes and how to build it in Squarespace 7.1.</p>
+  <h2 class="kit-h">Colour</h2>
+  <ul class="swatches">{% for k, v in concept.colors.items() %}<li><span class="swatch" style="background:{{ v }}"></span><strong>{{ k }}</strong><code>{{ v }}</code></li>{% endfor %}</ul>
+  <h2 class="kit-h">Type</h2>
+  <div class="specimen">
+    <p class="eyebrow">Eyebrow, {{ concept.fonts.body }}</p>
+    <p class="spec-h1">Heading one, {{ concept.fonts.heading }}</p>
+    <p class="spec-h2">Heading two, section title</p>
+    <p class="spec-h3">Heading three, card or item title</p>
+    <p>Body text in {{ concept.fonts.body }}. <a href="#">A link</a> and <strong>bold text</strong> sit inside running copy.</p>
+    <p><a class="btn" href="#">Primary button</a> <a class="btn btn--ghost" href="#">Secondary button</a></p>
+  </div>
+  <h2 class="kit-h">Modules</h2>
+  <ul class="kit-toc">{% for k in kit %}<li><a href="#mod-{{ k.name }}">{{ k.name }}</a></li>{% endfor %}</ul>
+</div></section>
+{% for k in kit %}
+<section class="kit-mod" id="mod-{{ k.name }}">
+  <div class="wrap kit-label">
+    <h2 class="kit-name">{{ k.name }} <small>{{ k.file }}</small></h2>
+    <dl>
+      <dt>Purpose</dt><dd>{{ k.doc.purpose }}</dd>
+      <dt>Slots</dt><dd>{{ k.doc.slots }}</dd>
+      <dt>Squarespace 7.1</dt><dd>{{ k.doc.squarespace }}</dd>
+    </dl>
+  </div>
+  {% for i in k.instances %}
+  <div class="kit-sample">
+    <p class="wrap kit-src">{% if i.variant %}Variant <strong>{{ i.variant }}</strong>, {% endif %}sample from <a href="{{ i.url }}">{{ i.url }}</a>. Filled slots: {{ i.slots.keys()|join(", ") }}.</p>
+    <div class="kit-render">{{ i.html }}</div>
+  </div>
+  {% else %}
+  <p class="wrap kit-src">No instance of this module in the current content.</p>
+  {% endfor %}
+</section>
+{% endfor %}
+
+<section class="kit-mod" id="mod-site-footer">
+  <div class="wrap kit-label">
+    <h2 class="kit-name">site-footer <small>templates/_footer.html</small></h2>
+    <dl>
+      <dt>Purpose</dt><dd>Site-wide footer, included from _base.html on every page (this page's own footer is the live sample, at the bottom). charcoal ground, logo (light version), licensed line and consultation button on the left, four ruled link columns with small teal uppercase headings, then a row with Contact (compact when a contact band sits directly above), Follow us (square outlined icons) plus Free workshop / Order title links, and Recognition (badges on white tiles); thin legal bar below.</dd>
+      <dt>Slots</dt><dd>footer.json: columns (from nav.json), contact (address, phone, fax, email from the shared contact block, directions link), social[id, label, url], extras[label, page], legal links, copyright, licensed line, badges[src, alt, href]. Newsletter and client portal: not on the live site, so left out.</dd>
+      <dt>Squarespace 7.1</dt><dd>Footer sections: link columns = Text blocks or Navigation-style link lists; Social Links block (native icons, new tab); Image blocks for logo and badges; Button for the consultation CTA; Text block for address, phone, email and copyright. Custom CSS only for the small-caps teal headings, the rule above each column and the badge tiles.</dd>
+    </dl>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{
+ "url": "https://dvaughnlaw.com/closing-explained-visually/",
+ "slug": "closing-explained-visually",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-04-03",
+ "seo": {
+  "title_tag": "Closing Costs Explained Visually - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/closing-explained-visually/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Closing Costs Explained Visually - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Purchasing a home is exciting. Once escrow begins, the excitement can change to frustration, particularly if you are not ready for the closing costs that quickly accumulate. Closing costs simply refer to the fees associated with various things associated with the escrow process in a real estate transaction. In the excitement of having an offer accepted for your dream home, […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-04-03T20:13:58+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "title-and-closing"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Closing Costs Explained Visually",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/jc2noq55xd",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Purchasing a home is exciting. Once escrow begins, the excitement can change to frustration, particularly if you are not ready for the closing costs that quickly accumulate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Closing costs simply refer to the fees associated with various things associated with the escrow process in a real estate transaction. In the excitement of having an offer accepted for your dream home, you can easily lose track of the fact you are going to need to have some serious cash on hand to pay them. Many people make the mistake of only assuming they need the down payment money, and have to rush around town trying to come up with money for the closing fees.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Do yourself a favor, and discuss closing costs in advance with your real estate or mortgage person. And watch this video to have a good mental picture of the costs that you’re likely to incur.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 152
+}

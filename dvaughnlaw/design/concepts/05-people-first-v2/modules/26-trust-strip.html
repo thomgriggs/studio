@@ -1,0 +1,12 @@
+{#
+MODULE: trust-strip
+PURPOSE: Proof directly under the hero. Up to three short verified facts as soft rounded tiles, each with a sage check disc, then the award and credential badges on white rounded tiles. No numbers, years or rankings unless they are in the crawl.
+SLOTS: facts[lead, text] (0 to 3), logos[src, alt, href].
+SQUARESPACE: Section with a row of three Text blocks (a small round check image or emoji above Heading 4 and a small paragraph; a block background or a section with rounded corners for the tile) and a row of Image blocks (one per badge, or a Gallery block in strip layout). No code.
+#}
+<section class="m m-trust" data-module="trust-strip" data-tone="{{ tone }}" aria-label="Credentials and awards">
+  <div class="wrap">
+    {% if s.facts %}<ul class="trust__facts" role="list">{% for f in s.facts %}<li><span class="trust__tick" aria-hidden="true"></span><p><strong>{{ f.lead|md }}</strong>{% if f.text %}<span>{{ f.text|md }}</span>{% endif %}</p></li>{% endfor %}</ul>{% endif %}
+    {% if s.logos %}<ul class="logos trust__logos" role="list">{% for l in s.logos %}<li>{% if l.href %}<a href="{{ l.href }}" target="_blank" rel="noopener"><img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy"></a>{% else %}<img src="{{ l.src }}" alt="{{ l.alt }}" loading="lazy">{% endif %}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</section>

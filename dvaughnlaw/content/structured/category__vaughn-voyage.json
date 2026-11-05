@@ -1,0 +1,50 @@
+{
+ "url": "https://dvaughnlaw.com/category/vaughn-voyage/",
+ "slug": "category__vaughn-voyage",
+ "template": "listing",
+ "family": "archive-list",
+ "title": "VAUGHN VOYAGE Archives",
+ "seo": {
+  "title_tag": "VAUGHN VOYAGE Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/vaughn-voyage/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "VAUGHN VOYAGE Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "VAUGHN VOYAGE Archives"
+   }
+  },
+  {
+   "module": "post-feed",
+   "slots": {
+    "posts": [
+     {
+      "title": "If You Can’t Speak for Yourself, Who Will?",
+      "href": "https://dvaughnlaw.com/if-you-cant-speak-for-yourself-who-will/",
+      "excerpt": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Imagine waking up in a hospital, unable to communicate. Doctors need to make urgent decisions about your care, but without the right legal documents, even your closest family members may have no..."
+     },
+     {
+      "title": "You Shook Hands on the Deal. So Why Is the Sale Falling Apart?",
+      "href": "https://dvaughnlaw.com/you-shook-hands-on-the-deal-so-why-is-the-sale-falling-apart/",
+      "excerpt": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney You found the perfect Florida home. The seller accepted your offer. Everyone’s smiling and then, somewhere between contract and closing, everything unravels. Sound familiar? You’re not alone. In..."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

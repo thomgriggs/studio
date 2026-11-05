@@ -1,0 +1,85 @@
+{
+ "url": "https://dvaughnlaw.com/landlordtenant/",
+ "slug": "landlordtenant",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Landlord/Tenant",
+ "seo": {
+  "title_tag": "Landlord/Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/landlordtenant/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Landlord/Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Landlord/Tenant"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "If you own a rental property, you know anything can happen – tenants can stop paying rent, tenants can cause damage, neighbors can report criminal activity.",
+     "That is where Vaughn Law comes in. We have experience in disputes between landlords and tenants. Our team understands the real estate laws and regulations in Florida and around the Tampa Bay area. We can help you navigate your legal solutions.",
+     "We have expertise managing a variety of landlord/tenant disputes. These include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Unpaid rent and debt recovery"
+     },
+     {
+      "text": "Residential and Commercial Evictions"
+     },
+     {
+      "text": "Landlord Self help"
+     },
+     {
+      "text": "Security Deposit Disputes"
+     },
+     {
+      "text": "Property damage and maintenance disputes"
+     },
+     {
+      "text": "Illegal use of the property"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Law has prepared a residential lease agreement to protect the landlord’s best interests. We offer licenses for use of the lease agreement for a low one-time fee."
+     },
+     {
+      "type": "p",
+      "text": "Do not let your landlord/tenant dispute get out of hand. Call Vaughn Law at [727-223-6080](tel:727-223-6080) to schedule a [free consultation](https://dvaughnlaw.com/consultation/)."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "04 Coastal Evolution v2",
+  "based_on": "04-home-and-legacy",
+  "description": "The firm's own identity, elevated: charcoal and teal, Newsreader serif headings, square corners and hairline rules, left-aligned editorial layouts, a deliberate rhythm of dark, light, tinted and photo sections. Content-driven: every module renders slots from content/structured.",
+  "logo": {
+    "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_All_Wht80x_Space.png",
+    "alt": "Vaughn Law, PLLC",
+    "on": "dark",
+    "href_home": true
+  },
+  "fonts": {
+    "heading": "Georgia",
+    "body": "Arial",
+    "google_url": ""
+  },
+  "colors": {
+    "charcoal": "#242b30",
+    "charcoal-deep": "#1a2024",
+    "teal": "#008fa5",
+    "teal-text": "#006f83",
+    "teal-light": "#5cc8da",
+    "tint": "#edf5f7",
+    "paper": "#ffffff",
+    "ink": "#1f282d",
+    "muted": "#465058",
+    "line": "#cfdee1"
+  },
+  "tones": {
+    "alternate": [
+      "b",
+      "a"
+    ],
+    "fixed": {
+      "hero": "dark",
+      "title-banner": "dark",
+      "intro": "a",
+      "cta-band": "accent",
+      "headed-section:on-image": "dark",
+      "logo-row": "a",
+      "gallery": "a",
+      "form-placeholder": "b",
+      "trust-strip": "b",
+      "door-pair": "a",
+      "situation-picker": "b",
+      "reasons": "dark",
+      "people": "a",
+      "contact-band": "band",
+      "steps:process": "b",
+      "post-feed:cards": "a",
+      "event-band": "accent",
+      "video-feed": "deep",
+      "video-grid": "b",
+      "choice-cards": "b",
+      "form": "b"
+    },
+    "continue": [
+      "headed-section:sub"
+    ]
+  },
+  "notes": {
+    "tone a": "white ground",
+    "tone b": "pale teal tint ground",
+    "dark": "charcoal ground (header, hero, title banner, photo sections)",
+    "accent": "deep teal ground with white text, or photo with charcoal overlay",
+    "teal usage": "#008fa5 for rules, numerals 24px and up and borders only; #006f83 for text and button grounds on light; #5cc8da for text on charcoal",
+    "band": "closing contact band: deeper teal tint, thick teal rule on top, charcoal text; set apart from the charcoal footer"
+  }
+}

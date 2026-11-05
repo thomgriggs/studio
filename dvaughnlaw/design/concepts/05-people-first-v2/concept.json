@@ -1,0 +1,106 @@
+{
+  "name": "05 People First v2",
+  "based_on": "05-people-first",
+  "description": "Light, warm, people-first. White header, pale blue-grey hero ground, centered serif headlines in navy, pill buttons, rounded photo tiles that straddle section edges, soft sage and mist panels. Grounds flip white, pale, white, sage tint down every page; one navy band per page (the closing call to action) is the only dark area. Content-driven: every module renders slots from content/structured.",
+  "logo": {
+    "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+    "alt": "Vaughn Law, PLLC",
+    "on": "light",
+    "href_home": true
+  },
+  "fonts": {
+    "heading": "Georgia",
+    "body": "Arial",
+    "google_url": ""
+  },
+  "colors": {
+    "navy": "#1f3350",
+    "navy-deep": "#142238",
+    "sage": "#dce8a7",
+    "sage-soft": "#f1f5e4",
+    "mist": "#e6eef5",
+    "pale": "#f5f7fc",
+    "paper": "#ffffff",
+    "ink": "#1f2a3a",
+    "muted": "#4a5a70",
+    "line": "#cfd9e3",
+    "green-deep": "#476428"
+  },
+  "tones": {
+    "alternate": [
+      "a",
+      "pale",
+      "a",
+      "b"
+    ],
+    "fixed": {
+      "hero": "pale",
+      "title-banner": "pale",
+      "cta-band": "a",
+      "form-placeholder": "b",
+      "logo-row": "a",
+      "quote-tile": "a",
+      "gallery": "a",
+      "trust-strip": "a",
+      "door-pair": "pale",
+      "situation-picker": "a",
+      "reasons": "b",
+      "people": "a",
+      "contact-band": "a",
+      "steps:process": "pale",
+      "post-feed:cards": "a",
+      "event-band": "pale",
+      "video-feed": "b",
+      "video-grid": "pale",
+      "choice-cards": "pale",
+      "form": "pale"
+    },
+    "after_fixed": "a",
+    "tinted": [
+      "card-grid",
+      "post-feed",
+      "stat-row",
+      "steps"
+    ],
+    "continue": [
+      "headed-section:sub"
+    ],
+    "by_template": {
+      "article": {
+        "alternate": [
+          "a"
+        ],
+        "tinted": []
+      },
+      "video-post": {
+        "alternate": [
+          "a"
+        ],
+        "tinted": []
+      },
+      "listing": {
+        "alternate": [
+          "pale",
+          "a"
+        ],
+        "tinted": []
+      },
+      "home": {
+        "alternate": [
+          "b",
+          "a",
+          "pale",
+          "a"
+        ],
+        "after_fixed": null
+      }
+    }
+  },
+  "notes": {
+    "tone a": "white ground",
+    "tone b": "soft sage tint ground",
+    "pale": "pale blue-grey ground (hero, title banner)",
+    "closing band": "the one navy band, rendered by _base.html from the closing object, last thing above the footer",
+    "rule": "navy is a ground only in the closing band; everywhere else it is text and small accents"
+  }
+}

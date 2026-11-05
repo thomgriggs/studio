@@ -1,0 +1,84 @@
+{
+ "url": "https://dvaughnlaw.com/best-practices/",
+ "slug": "best-practices",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Best Practices",
+ "seo": {
+  "title_tag": "Best Practices - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/best-practices/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Best Practices - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Best Practices",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "We have implemented multiple industry procedures to ensure your privacy and security. These include ALTA’s Best Practices, TRID, and Data Call. Powerful tools help us ensure that the largest transaction of your life is completed the right way the first time.",
+     "For example, weekly staff meetings and quarterly trainings keeps our team up-to-date on the latest industry requirement and company policies.",
+     "Here are a few of the ways we have gone above and beyond industry requirements to protect you and your information:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "lead": "Secure website",
+      "text": "– We want to protect your information from the moment you first contact us."
+     },
+     {
+      "lead": "Secure email",
+      "text": "– Much of today’s wire fraud[Link] starts in email. This is why any emails we send that contain private information are sent encrypted."
+     },
+     {
+      "lead": "Vulnerability scan",
+      "text": "– We hired a third-party compliance firm to conduct an assessment. They tested our systems to make sure hackers don’t have easy access."
+     },
+     {
+      "lead": "Firewall",
+      "text": "– Call us overprotective, but our offices have a firewall as added security for all Internet traffic going in and coming out."
+     },
+     {
+      "lead": "Frequent backups",
+      "text": "– We frequently back up your data to prevent data loss in the event of a disaster."
+     },
+     {
+      "lead": "Cybersecurity insurance",
+      "text": "– We also carry cyber insurance to protect any affected parties if there ever was a data breach."
+     },
+     {
+      "lead": "Clean-desk policy",
+      "text": "– It is company policy to lock up all files and paperwork each night."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

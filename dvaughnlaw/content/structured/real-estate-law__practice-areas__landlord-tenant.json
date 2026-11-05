@@ -1,0 +1,265 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/",
+ "slug": "real-estate-law__practice-areas__landlord-tenant",
+ "template": "content-page",
+ "family": "faq-page",
+ "title": "Landlord / Tenant",
+ "seo": {
+  "title_tag": "Landlord / Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/landlord-tenant/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Landlord / Tenant - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Landlord / Tenant"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "If you own rental property, you know anything can happen. Tenants stop paying, damage the property or refuse to leave. If you lease commercial space, a lease dispute can threaten your business. Vaughn Law handles landlord-tenant matters across Pinellas County and the Tampa Bay area. For residential properties, we represent landlords. For commercial properties, we represent landlords and tenants. Learn more below, or request your consultation today."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Residential",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Your rental property is an investment, and problem tenants put it at risk. Vaughn Law represents residential landlords throughout the process, from the first notice to final judgment. We handle:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Evictions for nonpayment, lease violations and holdover tenants",
+        "children": []
+       },
+       {
+        "text": "3-day, 7-day and 15-day notices that comply with Chapter 83",
+        "children": []
+       },
+       {
+        "text": "Unpaid rent and debt recovery",
+        "children": []
+       },
+       {
+        "text": "Property damage claims",
+        "children": []
+       },
+       {
+        "text": "Security deposit claims and disputes",
+        "children": []
+       },
+       {
+        "text": "Criminal activity on the property, including drug distribution and manufacture",
+        "children": []
+       },
+       {
+        "text": "Aggressive or dangerous animals",
+        "children": []
+       },
+       {
+        "text": "Defending against tenant claims, including habitability, maintenance, rent withholding and alleged self-help",
+        "children": []
+       },
+       {
+        "text": "Lease drafting and review",
+        "children": []
+       },
+       {
+        "text": "A defective notice can restart your eviction from day one. We get it right the first time.",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Commercial",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Whether the property is your investment or your business location, a commercial lease dispute affects your livelihood. Vaughn Law represents commercial landlords and tenants alike in Florida, including:"
+     },
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Commercial evictions",
+        "children": []
+       },
+       {
+        "text": "Claims for unpaid rent and distress for rent",
+        "children": []
+       },
+       {
+        "text": "Non-monetary defaults",
+        "children": []
+       },
+       {
+        "text": "Property damage disputes",
+        "children": []
+       },
+       {
+        "text": "Maintenance, repair and CAM charge disputes",
+        "children": []
+       },
+       {
+        "text": "Illegal or unauthorized use of the property",
+        "children": []
+       },
+       {
+        "text": "Lockouts and wrongful eviction",
+        "children": []
+       },
+       {
+        "text": "Personal guaranty enforcement and defense",
+        "children": []
+       },
+       {
+        "text": "Lease negotiation, drafting and review, including renewals, options and assignments",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "title": "FAQ",
+    "level": 3,
+    "items": [
+     {
+      "title": "Is the verbal notice to vacate sufficient?",
+      "body": [
+       {
+        "type": "p",
+        "text": "No, any notice must be provided in writing!"
+       }
+      ]
+     },
+     {
+      "title": "Is the landlord required to wait until the tenant is 30 days past due on my rent to evict the tenant?",
+      "body": [
+       {
+        "type": "p",
+        "text": "No, depending on the terms of the lease agreement, the landlord may evict the tenant even if the tenant is only a few days behind on rent."
+       }
+      ]
+     },
+     {
+      "title": "Can the tenant withhold rent or move out of the property if the landlord will not maintain the property or make essential repairs?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Depends. The tenant must provide the Landlord with a written seven-day notice to make the repairs to the property. If the landlord does not make the repairs within the time frame the tenant may withhold a portion of rent or move out of the property depending on"
+       }
+      ]
+     },
+     {
+      "title": "How long does an eviction take?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Depends. Evictions are expedited on the court docket and can be completed in less than 30 days. However, the timing depends on the judge’s case load, and whether a hearing(s) is required."
+       }
+      ]
+     },
+     {
+      "title": "How much notice does the landlord need to provide a tenant to enter the property?",
+      "body": [
+       {
+        "type": "p",
+        "text": "The landlord must provide at least 12 hours’ notice before entering the property to make repairs. The landlord must enter the property during reasonable hours, which are defined as between 7:30 am and 8:00 pm. The landlord may however enter the property at **ANY TIME** for the protection or preservation of the property."
+       }
+      ]
+     },
+     {
+      "title": "Does the tenant have to pay rent into the court registry once they have been served with a complaint for eviction?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Yes, but if the tenant disputes the amount of rent that is owed, the tenant may file a Motion to Determine Rent and the court will hold a hearing to decide on the rent amount to be paid into rent. The tenant must be prepared to pay rent into the court registry within the referenced time frame or at the hearing, or the tenant may be prevented from bringing any defenses to the eviction action."
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Residential Landlord Tenant Notices**\n\nCheck out the notices we have provided below to better assist you with your landlord/tenant dispute."
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Tenants Notice to Landlord to Withhold Rent",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Tenant_s-Notice-to-Landlord-to-Withhold-Rent.pdf"
+     },
+     {
+      "text": "Notice of Intent to Make Claim Upon Securtiy Deposit",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Notice-of-Intent-to-Make-Claim-Upon-Securtiy-Deposit.pdf"
+     },
+     {
+      "text": "Application to Become Residential Tenant",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Application-To-Become-Residential-Tenant.pdf"
+     },
+     {
+      "text": "15 Day Notice",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/15-Day-Notice-2.pdf"
+     },
+     {
+      "text": "7 Day Non-Compliance non curable",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-non-curable.pdf"
+     },
+     {
+      "text": "7 Day Non-Compliance curable",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-curable.pdf"
+     },
+     {
+      "text": "3 Day Notice",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/3-Day-Notice.pdf"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

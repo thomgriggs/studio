@@ -13,9 +13,9 @@ Platform decision (2026-10-26): fresh Squarespace install. Content only carries 
 
 ## Folders
 - research/  — inventory, Lighthouse, comparables, call notes, sitemap draft
-- content/   — exported/consolidated content, redirect map
-- design/    — references, palette, type, mood board
-- mockup/    — staged pages for the new site
+- content/   — exported/consolidated content, redirect map; structured/ (pages as kit modules, from tools/modulize.py)
+- design/    — references, palette, type, mood board; kit/ (design-free module + template definitions), concepts/<name>/ (a concept's module templates and CSS)
+- mockup/    — staged pages for the new site; mockup/<concept>/ is built by tools/build.py
 - site/      — static mirror of the current site
 - emails/    — correspondence and proposal drafts
 

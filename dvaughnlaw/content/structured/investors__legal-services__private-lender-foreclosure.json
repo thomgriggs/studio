@@ -1,0 +1,49 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/private-lender-foreclosure/",
+ "slug": "investors__legal-services__private-lender-foreclosure",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Private Lender Foreclosure",
+ "seo": {
+  "title_tag": "Private Lender Foreclosure - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/private-lender-foreclosure/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Private Lender Foreclosure - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Private Lender Foreclosure"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Is your borrower behind on their mortgage payments? Vaughn Law has experience working with private lenders to resolve or foreclose on borrowers who are unable to make their mortgage payments. We are knowledgeable on alternative options that may resolve the issue in a faster and less expensive manner. We will review the details of your situation and consider all options to resolve the borrower’s non-payment and advise you accordingly."
+     },
+     {
+      "type": "p",
+      "text": "We offer straightforward and honest options on how to proceed under the circumstances. Contact Vaughn Law today at [727-223-6080](tel:7272236080) to discuss your options."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

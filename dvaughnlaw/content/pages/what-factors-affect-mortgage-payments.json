@@ -1,0 +1,92 @@
+{
+ "url": "https://dvaughnlaw.com/what-factors-affect-mortgage-payments/",
+ "slug": "what-factors-affect-mortgage-payments",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Factors Affect Mortgage Payments? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-factors-affect-mortgage-payments/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Factors Affect Mortgage Payments? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Well, as this story shows, the amount of the down payment the size of the mortgage loan, the interest rate the length of the repayment term and payment schedule will all affect the size of your mortgage payment. In bullets: down payment loan size interest rate – fixed or adjustable repayment term – how […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2020-08-29T21:47:36+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Factors Affect Mortgage Payments?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/0w53n0spuz",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Well, as this story shows, the amount of the down payment the size of the mortgage loan, the interest rate the length of the repayment term and payment schedule will all affect the size of your mortgage payment.\n\nIn bullets:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "down payment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "loan size",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "interest rate – fixed or adjustable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "repayment term – how long",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "payment schedule – how often",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "all affect the size of your payment.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 72
+}

@@ -1,0 +1,53 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/",
+ "slug": "real-estate-law__practice-areas__business-entity-formation",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Business Entity Formation",
+ "seo": {
+  "title_tag": "Business Entity Formation - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/business-entity-formation/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Entity Formation - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Business Entity Formation"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "The right legal counsel can make or break your business. Vaughn Law is committed to pursuing positive outcomes for our corporate clients."
+     },
+     {
+      "type": "p",
+      "text": "Whether you are an entrepreneur looking to form a business entity, or a seasoned owner looking to sell and retire, Vaughn Law can help. We listen and work to understand the needs of our clients. You can expect careful evaluation of the legal and regulatory needs specific to your situation."
+     },
+     {
+      "type": "p",
+      "text": "No matter your need, our team will provide knowledgeable advice and offer effective solutions. Put the expertise of Vaughn Law to work for you. Request your [consultation](https://dvaughnlaw.com/consultation/) today."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

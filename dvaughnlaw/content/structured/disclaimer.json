@@ -1,0 +1,53 @@
+{
+ "url": "https://dvaughnlaw.com/disclaimer/",
+ "slug": "disclaimer",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Disclaimer",
+ "seo": {
+  "title_tag": "Disclaimer - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/disclaimer/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Disclaimer - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Disclaimer",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Unless you are an existing client, before communicating with Vaughn Law via this “Contact Us” form (or otherwise), please note that until you have received from us a written statement that we represent you in a particular matter (the “Authority to Represent”) you should not send to us any confidential information about any such matter. After we have undertaken representation of you concerning a matter, you will be our client, and we may thereafter exchange confidential information freely."
+     },
+     {
+      "type": "p",
+      "text": "This website is not intended to create a lawyer-client relationship between you and Vaughn Law. You should not act or rely on information in this website without seeking the advice of a lawyer. We would be pleased to communicate with you concerning legal matters, but we cannot do so until we first know that doing so would not create a conflict of interest. If you are interested in having Vaughn Law represent you in a legal matter, the best way to initiate possible representation is to contact the firm at [727-223-6080](tel:727-223-6080) to schedule an appointment."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

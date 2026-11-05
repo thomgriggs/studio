@@ -1,0 +1,65 @@
+{
+ "url": "https://dvaughnlaw.com/your-rights-and-rules-for-closing-disclosures/",
+ "slug": "your-rights-and-rules-for-closing-disclosures",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Your Rights And Rules For Closing Disclosures - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/your-rights-and-rules-for-closing-disclosures/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Rights And Rules For Closing Disclosures - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "The Closing Disclosure documents the actual terms of your loan transaction. You should receive it no later than 3 business days before consummation. It must be in writing – paper or digital. If the loan terms or costs change prior to consummation, your lender must provide a corrected disclosure AND an additional 3-business-day waiting period […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:31:53+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Your Rights And Rules For Closing Disclosures",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/tx9p8qhf0d",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Closing Disclosure documents the actual terms of your loan transaction. You should receive it no later than 3 business days before consummation. It must be in writing – paper or digital.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If the loan terms or costs change prior to consummation, your lender must provide a corrected disclosure AND an additional 3-business-day waiting period until loan consummation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Waiving the 3-day waiting period is only permitted in certain circumstances, and only when the waiting period would cause a bona fide personal financial emergency.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 90
+}

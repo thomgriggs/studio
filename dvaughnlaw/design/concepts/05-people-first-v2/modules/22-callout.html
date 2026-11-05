@@ -1,0 +1,9 @@
+{#
+MODULE: callout
+PURPOSE: One short standalone statement (at most about 25 words) between sections, set as one large serif sentence inside a soft rounded panel (sage tint on white, white on a tinted ground). No gradient or rainbow border.
+SLOTS: text (inline markdown).
+SQUARESPACE: Section with a soft colour and rounded corners (inset), containing one Text block in the Heading 3 / large paragraph style, centered. No code.
+#}
+<section class="m m-callout" data-module="callout" data-tone="{{ tone }}">
+  <div class="wrap wrap--mid"><div class="callout__panel"><p class="callout__text">{{ s.text|md }}</p></div></div>
+</section>

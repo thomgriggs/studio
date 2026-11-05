@@ -1,0 +1,41 @@
+{
+ "pages": 273,
+ "failed": [],
+ "by_type": {
+  "page": 70,
+  "post": 170,
+  "event": 4,
+  "author": 1,
+  "category": 18,
+  "event-schedule": 7,
+  "event-category": 1,
+  "tag": 2
+ },
+ "blocks_by_type": {
+  "img": 369,
+  "h1": 243,
+  "p": 1861,
+  "a": 56,
+  "h2": 282,
+  "form": 56,
+  "text": 274,
+  "h4": 434,
+  "h3": 196,
+  "ul": 292,
+  "embed": 180,
+  "h5": 52,
+  "ol": 21,
+  "table": 2,
+  "hr": 7
+ },
+ "images": 372,
+ "shared_blocks": 21,
+ "with_meta_desc": 0,
+ "with_meta_kw": 0,
+ "header_variants": 5,
+ "footer_variants": 1,
+ "main_images": 369,
+ "main_img_missing_alt": 20,
+ "css_bg": 185,
+ "links": 1261
+}

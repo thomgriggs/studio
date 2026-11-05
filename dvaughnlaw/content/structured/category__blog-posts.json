@@ -1,0 +1,74 @@
+{
+ "url": "https://dvaughnlaw.com/category/blog-posts/",
+ "slug": "category__blog-posts",
+ "template": "listing",
+ "family": "archive-list",
+ "title": "Written Blog Post Archives",
+ "seo": {
+  "title_tag": "Written Blog Post Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/blog-posts/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Written Blog Post Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Written Blog Post Archives"
+   }
+  },
+  {
+   "module": "post-feed",
+   "slots": {
+    "posts": [
+     {
+      "title": "Fifty Percent of Paradise",
+      "href": "https://dvaughnlaw.com/fifty-percent-of-paradise/",
+      "excerpt": "The rebuilding rule nobody mentioned while the water was going down By Danielle L. Vaughn, Board Certified Real Estate Attorney Two years after Helene and Milton, St. Pete Beach is still rebuilding, and plenty of owners are meeting a rule nobody mentioned while the..."
+     },
+     {
+      "title": "The Repairs You Inherit",
+      "href": "https://dvaughnlaw.com/the-repairs-you-inherit/",
+      "excerpt": "Due diligence before you buy a storm-repaired home By Danielle L. Vaughn, Board Certified Real Estate Attorney The listing photos look great. New kitchen, new drywall, fresh paint, and a price that seems almost reasonable for this zip code. What the photos do not show..."
+     },
+     {
+      "title": "What Your November Tax Bill Won’t Tell You",
+      "href": "https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/",
+      "excerpt": "The discount, the deadline, and the deed that can undo both By Danielle L. Vaughn, Board Certified Real Estate Attorney Your Pinellas County property tax notice goes in the mail by November 1. Most of us glance at the number, wince, and pay it. Try reading it instead...."
+     },
+     {
+      "title": "10 Essential Steps to Take When Planning for Your Own Funeral",
+      "href": "https://dvaughnlaw.com/10-essential-steps-to-take-when-planning-for-your-own-funeral/",
+      "excerpt": "Oct 4, 2026 · by: Danielle Leigh Vaughn, Board Certified Real Estate Attorney Planning your own funeral can feel uncomfortable at first. Yet it is one of the most thoughtful gifts you can leave for the people you love. When your wishes are written down, your family..."
+     },
+     {
+      "title": "How to Protect Your Family-Owned Real Estate",
+      "href": "https://dvaughnlaw.com/how-to-protect-your-family-owned-real-estate/",
+      "excerpt": "A family beach cottage, a mountain cabin, acreage that has been farmed for decades, or the home where three generations gathered for holidays: family real estate carries meaning that goes well beyond its market value. That is also why it so often becomes a source of..."
+     },
+     {
+      "title": "You Don’t Have a Will. Florida Does, and You May Not Like It.",
+      "href": "https://dvaughnlaw.com/you-dont-have-a-will-florida-does-and-you-may-not-like-it/",
+      "excerpt": "By Danielle L. Vaughn, Esq., Board Certified Real Estate Attorney Most people put off writing a will because they figure they’ll get around to it eventually. They’re busy. They’re healthy. They’re not that old. And besides, everything would..."
+     }
+    ],
+    "more": {
+     "text": "« Older Entries",
+     "href": "https://dvaughnlaw.com/category/blog-posts/page/2/"
+    }
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

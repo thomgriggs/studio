@@ -1,0 +1,20 @@
+{#
+MODULE: situation-picker
+PURPOSE: The funnel's choice point. Six large tappable cards, each a first-person line the visitor recognises ("I need to change a deed."), one sentence, and the name of the page it opens. The whole card is the link; hover fills it.
+SLOTS: title, cards[title (first-person line), text (one sentence), href, link_text (name of the target page)].
+SQUARESPACE: Section with a Heading block and a 3 x 2 grid of Summary-style cards or a grid of Text blocks, the whole block linked (Squarespace 7.1 Summary block, "Card" layout, or Image-less Collection items). Hover fill is a section/block hover style; if the template lacks it, the arrow and underline carry the affordance. No code.
+#}
+<section class="m m-sit" data-module="situation-picker" data-tone="{{ tone }}" aria-labelledby="sit-title">
+  <div class="wrap">
+    <div class="m__head"><h2 id="sit-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <ul class="sits" role="list">
+      {% for c in s.cards %}
+      <li class="sit">
+        <h3 class="sit__q" id="sit-{{ loop.index }}">{{ c.title }}</h3>
+        <p class="sit__text">{{ c.text|md }}</p>
+        <a class="sit__link" href="{{ c.href|href }}" aria-describedby="sit-{{ loop.index }}"><span>{{ c.link_text }}</span></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

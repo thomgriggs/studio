@@ -1,0 +1,247 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/investors/",
+  "slug": "investors",
+  "template": "hub",
+  "family": "hub-landing",
+  "title": "Investors",
+  "seo": {
+    "title_tag": "Real Estate Investor Legal Services – Florida | Vaughn Law",
+    "meta_description": "Legal services for Florida real estate investors: closings, contracts, land trusts, landlord-tenant, foreclosure auctions and litigation. Vaughn Law, St. Pete Beach.",
+    "h1_count": 1
+  },
+  "_about": "Proposed practice-hub page: written for the redesign from the live crawl. Every factual line traces to a crawled page (see `verified`); newly written sentences that make any claim about the firm are in `confirm`. Ends with the concept's global closing band (no own contact section).",
+  "verified": [
+    "Hub title and the eight service cards with their lines: live /investors/ cards; Subscription Plans line: live /subscription-plans/ intro (no prices carried)",
+    "About copy: live /investors/ \"About Vaughn law\"; the lines \"We guarantee our agents are top-notch!\" and \"thousands of closings and legal cases\" were not carried",
+    "People: Danielle Vaughn, Whitney L. Smith (Real Estate Litigation Attorney), live /about/our-team/",
+    "Videos: IsNXzmJxrr0 (tenant cannot pay rent), eLV191AQAlI (foreclosure property pitfalls), TVbTayZuGuk (real estate litigation); articles: newest on commercial leases, landlord disclosure and investment property",
+    "No situation row: only one home page situation (tenant problem) fits this area"
+  ],
+  "confirm": [
+    "Hero sentence summarises the live investor copy (\"growth-oriented\", \"one stop shop to real property investors around the state of Florida\" appear on /investors/legal-services/); confirm the framing",
+    "Subscription Plans card is added from the crawl's /subscription-plans/ page; confirm it should be promoted on this hub",
+    "Photo use: Danielle-Reviewing-Docs.jpg and portraits (2026/10 shoot); confirm consent"
+  ],
+  "modules": [
+    {
+      "module": "hero",
+      "slots": {
+        "eyebrow": "Vaughn Law · St. Pete Beach",
+        "title": "Investors",
+        "tagline": "Practical legal help for real estate investors across Florida, from closings and contracts to landlord-tenant matters and litigation.",
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Reviewing-Docs.jpg",
+          "alt": "Danielle Vaughn reviewing documents with a client"
+        },
+        "images": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Reviewing-Docs.jpg",
+            "alt": "Danielle Vaughn reviewing documents with a client"
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          },
+          {
+            "text": "See how we can help",
+            "href": "#services"
+          }
+        ]
+      }
+    },
+    {
+      "module": "card-grid",
+      "variant": "services",
+      "slots": {
+        "anchor": "services",
+        "title": "Legal services for investors",
+        "cards": [
+          {
+            "title": "Business Entity Formation",
+            "text": [
+              "The right legal counsel can make or break your business."
+            ],
+            "page": "investors__legal-services__business-entity-formation"
+          },
+          {
+            "title": "Contract Preparation",
+            "text": [
+              "Protection and prevention of future disputes."
+            ],
+            "page": "investors__legal-services__contract-preparation-and-review"
+          },
+          {
+            "title": "Foreclosure Auctions & Tax Deeds",
+            "text": [
+              "Highly educated on title review."
+            ],
+            "page": "investors__legal-services__foreclosure-auctions-and-tax-deed-sales"
+          },
+          {
+            "title": "Land Trusts",
+            "text": [
+              "Land Trusts are an exceptional vehicle to hold title in Florida."
+            ],
+            "page": "investors__legal-services__land-trusts"
+          },
+          {
+            "title": "Landlord / Tenant",
+            "text": [
+              "Experienced in Landlord Tenant Disputes."
+            ],
+            "page": "investors__legal-services__landlord-tenant"
+          },
+          {
+            "title": "Litigation",
+            "text": [
+              "Conflict requires thoughtful representation."
+            ],
+            "page": "investors__legal-services__litigation"
+          },
+          {
+            "title": "Private Lender Foreclosure",
+            "text": [
+              "Is your borrower behind on their mortgage payments?"
+            ],
+            "page": "investors__legal-services__private-lender-foreclosure"
+          },
+          {
+            "title": "Real Estate Closings",
+            "text": [
+              "Highly knowledgeable in residential and commercial closings."
+            ],
+            "page": "investors__legal-services__real-estate-closings"
+          },
+          {
+            "title": "Subscription Plans",
+            "text": [
+              "An affordable way to retain legal services on a limited basis, for investors, landlords and property managers."
+            ],
+            "page": "subscription-plans"
+          }
+        ]
+      }
+    },
+    {
+      "module": "headed-section",
+      "variant": "copy",
+      "slots": {
+        "title": "About Vaughn Law",
+        "level": 2,
+        "depth": 2,
+        "body": [
+          {
+            "type": "p",
+            "text": "Vaughn Law is a boutique law firm that provides practical real estate legal solutions for litigation, transactional and title work. We tailor our representation to help investors with all of their real estate needs and to prevent future disputes."
+          },
+          {
+            "type": "p",
+            "text": "We take a personal, service-oriented approach. We help you understand the legal system, keep you informed, and give honest and straightforward opinions on your options."
+          },
+          {
+            "type": "p",
+            "text": "Every situation is unique, and you will receive legal expertise that is professional and personal."
+          }
+        ]
+      }
+    },
+    {
+      "module": "people",
+      "variant": "hub",
+      "slots": {
+        "title": "Who handles investor matters",
+        "text": "The attorneys you may work with.",
+        "people": [
+          {
+            "name": "Danielle Vaughn",
+            "role": "Managing Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+              "alt": "Danielle Vaughn"
+            }
+          },
+          {
+            "name": "Whitney L. Smith",
+            "role": "Real Estate Litigation Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Whitney-Smith.jpg",
+              "alt": "Whitney L. Smith"
+            }
+          }
+        ],
+        "link": {
+          "text": "Meet the team",
+          "nav": "About/Our Team"
+        },
+        "quote": {
+          "text": "My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.",
+          "attribution": "Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC"
+        }
+      }
+    },
+    {
+      "module": "video-feed",
+      "slots": {
+        "title": "Watch",
+        "videos": [
+          {
+            "title": "What happens if your tenant cannot pay the rent?",
+            "href": "https://www.youtube.com/watch?v=IsNXzmJxrr0",
+            "date": "2024-09-25",
+            "video": "https://www.youtube.com/embed/IsNXzmJxrr0"
+          },
+          {
+            "title": "Foreclosure Property Pitfalls: Hidden Liens, Title Issues, and More",
+            "href": "https://www.youtube.com/watch?v=eLV191AQAlI",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/eLV191AQAlI"
+          },
+          {
+            "title": "Real Estate Litigation Explained: Resolving Contract Disputes And Property Issues",
+            "href": "https://www.youtube.com/watch?v=TVbTayZuGuk",
+            "date": "2024-04-30",
+            "video": "https://www.youtube.com/embed/TVbTayZuGuk"
+          }
+        ],
+        "more": {
+          "text": "All videos",
+          "page": "videos"
+        }
+      }
+    },
+    {
+      "module": "post-feed",
+      "variant": "cards",
+      "slots": {
+        "title": "Articles for investors and landlords",
+        "posts": [
+          {
+            "title": "The Legal Landscape of Commercial Lease Agreements in Florida",
+            "href": "https://dvaughnlaw.com/the-legal-landscape-of-commercial-lease-agreements-in-florida/",
+            "date": "2026-03-27",
+            "excerpt": "As the beating heart of the Sunshine State’s thriving business sector, Florida is a hub for commercial real estate transactions."
+          },
+          {
+            "title": "New Florida Law: Landlords Must Disclose Flood History to Tenants Starting October 1, 2025",
+            "href": "https://dvaughnlaw.com/new-florida-law-landlords-must-disclose-flood-history-to-tenants-starting-october-1-2025/",
+            "date": "2025-11-21",
+            "excerpt": "Beginning October 1, 2025, a new Florida law will require landlords to provide flood disclosures to prospective tenants before signing a residential lease of one year or longer."
+          },
+          {
+            "title": "Capital Gains, Step-Up in Basis, and Your Florida Investment Property",
+            "href": "https://dvaughnlaw.com/capital-gains-step-up-in-basis-and-your-florida-investment-property/",
+            "date": "2025-04-22",
+            "excerpt": "Florida is a popular destination for real estate investors, and not just because of the sunshine and beaches."
+          }
+        ],
+        "more": {
+          "text": "All articles",
+          "page": "blog"
+        }
+      }
+    }
+  ]
+}

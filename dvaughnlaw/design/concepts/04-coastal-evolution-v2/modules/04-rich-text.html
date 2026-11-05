@@ -1,0 +1,10 @@
+{#
+MODULE: rich-text
+PURPOSE: Plain running text with no heading: paragraphs, short lists, tables, buttons. Left-aligned reading column. The fallback module; a page that is mostly rich-text is a candidate for hand tuning.
+SLOTS: body[] of p, ul, ol, subhead, quote, button.
+SQUARESPACE: Section with one Text block (paragraphs, bulleted/numbered lists, links) and Button blocks. No code.
+#}
+{% from "_macros.html" import body %}
+<section class="m m-rich" data-module="rich-text" data-tone="{{ tone }}">
+  <div class="wrap"><div class="prose prose--col">{{ body(s.body, 3) }}</div></div>
+</section>

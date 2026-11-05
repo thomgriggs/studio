@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan/",
+ "slug": "what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is Loan To Value (LTV) And How Does It Affect The Size Of My Loan? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-loan-to-value-ltv-and-how-does-it-affect-the-size-of-my-loan/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is Loan To Value (LTV) And How Does It Affect The Size Of My Loan? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "While this video simplifies things to help you remember, the loan to value ratio is the amount of money you borrow compared with the price or appraised value of the home you are purchasing. Each loan has a specific LTV limit. For example: With a 75% LTV loan on a home priced at $100,000 […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2020-08-29T21:47:36+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "mortgages"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is Loan To Value (LTV) And How Does It Affect The Size Of My Loan?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/9qr3ycbxqs",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While this video simplifies things to help you remember, the loan to value ratio is the amount of money you borrow compared with the price or appraised value of the home you are purchasing.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Each loan has a specific LTV limit. For example: With a 75% LTV loan on a home priced at $100,000 you could borrow up to $75,000 (75% of $100,000) and would have to pay $25000 as a down payment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The LTV ratio reflects the amount of equity borrowers have in their homes. The higher the LTV the less cash homebuyers are required to pay out of their own funds.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "So, to protect lenders against potential loss in case of default, higher LTV loans (80% or more) usually require mortgage insurance policies.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 141
+}

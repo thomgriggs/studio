@@ -1,0 +1,77 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-cash-and-transaction-summaries/",
+ "slug": "understanding-your-loan-cash-and-transaction-summaries",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Your Loan: Cash And Transaction Summaries - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://localwebdesigncompany.com/vaughnlaw/understanding-your-loan-cash-and-transaction-summaries/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan: Cash And Transaction Summaries - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Page 3 of your Closing Disclosure will compare cash requirements from your Loan Estimate to your actual final charges. If “Did this change?” is “YES” notes for changed sections should be provided. The bottom line final “Cash to Close” is the money you will need in-hand in three business days. If your transaction has a Seller […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:36:35+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan: Cash And Transaction Summaries",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/6c5em0poro",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Page 3 of your Closing Disclosure will compare cash requirements from your Loan Estimate to your actual final charges. If “Did this change?” is “YES” notes for changed sections should be provided.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The bottom line final “Cash to Close” is the money you will need in-hand in three business days.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If your transaction has a Seller the summary table will show a line by line comparison of Borrower to Seller transaction details.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If there is no Seller you may see a Payoffs and Payments table instead.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Review the summary tables to understand the transaction and your financial commitments at loan consummation.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 108
+}

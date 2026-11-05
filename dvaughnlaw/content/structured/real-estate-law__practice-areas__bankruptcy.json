@@ -1,0 +1,73 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/practice-areas/bankruptcy/",
+ "slug": "real-estate-law__practice-areas__bankruptcy",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Bankruptcy",
+ "seo": {
+  "title_tag": "Bankruptcy - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/practice-areas/bankruptcy/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Bankruptcy - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Bankruptcy"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "When you have a financial emergency, your future hangs in the balance. Efficient legal expertise is key.",
+     "Turn to Vaughn Law for timely, knowledgeable guidance during this stressful time. Our team will listen and work to fully understand your situation. We’ll help you navigate the team can guide you through the bankruptcy process. Thanks to our experience and know-how, we can help you decide if a Chapter 7 or Chapter 13 filing might be best for you.",
+     "Your bankruptcy filing doesn’t stand alone – it’s just one part of your financial roadmap. We can also advise you on issues that often accompany bankruptcy. These include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Wage garnishment"
+     },
+     {
+      "text": "Foreclosure"
+     },
+     {
+      "text": "Repossession"
+     },
+     {
+      "text": "Divorce"
+     },
+     {
+      "text": "Tax implications"
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "Your actions today can impact your family for decades to come. Make sure you’re making informed decisions. Contact Vaughn Law for your [order title](https://dvaughnlaw.com/vaughnlaw/order-title/)."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

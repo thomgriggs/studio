@@ -1,0 +1,84 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/real-estate-closings/",
+ "slug": "investors__legal-services__real-estate-closings",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Real Estate Closings",
+ "seo": {
+  "title_tag": "Real Estate Closings - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/real-estate-closings/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Real Estate Closings - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Real Estate Closings"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Vaughn Law is highly experienced in both residential and commercial closings. We handle closings in office in the same manner as a title company, however an attorney will closely manage and oversee your closing. You will also have an attorney present at the closing table to answer any questions or assist with any minor last-minute changes.",
+     "At Vaughn Law, we have the ability to correct any title defects or liens that may arise in the title search. We have the knowledge and experience to provide solutions to correct most issues in an expedited fashion to prevent delays in closings. We also have direct contact with our underwriter to discuss and resolve any unique issues to your property.",
+     "At Vaughn Law it is our priority to do everything in our power to make closing happen!"
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Builders",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Vaughn Law has established a solid track record with investors who rehabilitate homes and build new construction homes. We understand the extra steps that may be involved in the closing process and the potential delays that can occur."
+     },
+     {
+      "type": "p",
+      "text": "Whether it is new construction or a remodel, we have the tools to keep your sales on schedule."
+     },
+     {
+      "type": "p",
+      "text": "We are available to answer questions and provide guidance as you get started building your first home. We can assist you with your first contract or we can personalize a new construction sales contract so you can sell your pre-build homes!"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Commercial",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Commercial property transactions have a unique set of components. Vaughn Law understands the ins and outs of these specific transactions. We have closed many recognizable commercial transactions around the Tampa Bay Area. These include commercial vacant lots, office buildings, multi-family units, restaurants, and shopping centers."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law stays on top of commercial real estate laws and regulation changes. This means our commercial clients close on their properties on time. Our transactions are done right."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,215 @@
+{
+ "url": "https://dvaughnlaw.com/probate-in-florida/",
+ "slug": "probate-in-florida",
+ "template": "article",
+ "family": "post-article",
+ "title": "Probate in Florida",
+ "seo": {
+  "title_tag": "Probate in Florida - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/probate-in-florida/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Probate in Florida - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "What is Probate? Probate is the legal process used to ensure the decedent’s assets are properly collected, debts are settled, and remaining property is distributed to the rightful beneficiaries. Types of Probate in Florida Formal Administration – The standard process for most estates. A personal representative is appointed to manage the estate under court supervision. […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Probate in Florida",
+    "date": "2025-11-21"
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "What is Probate?",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Probate is the legal process used to ensure the decedent’s assets are properly collected, debts are settled, and remaining property is distributed to the rightful beneficiaries."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Types of Probate in Florida",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Formal Administration – The standard process for most estates. A personal representative is appointed to manage the estate under court supervision.",
+        "children": []
+       },
+       {
+        "text": "Summary Administration – A simplified procedure available when the estate is valued under $75,000 or the decedent has been deceased for more than two years.",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "The Personal Representative",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "The individual or institution appointed to oversee the administration of the estate.",
+        "children": []
+       },
+       {
+        "text": "Responsible for managing assets, settling debts, and distributing property to beneficiaries.",
+        "children": []
+       },
+       {
+        "text": "Must comply with Florida law and act in the best interests of all parties involved.",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Assets that typically go through probate:",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Real estate owned solely by the decedent",
+        "children": []
+       },
+       {
+        "text": "Financial accounts held in the decedent’s name alone",
+        "children": []
+       },
+       {
+        "text": "Individually owned business interests",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Assets that typically do NOT go through probate:",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Property with rights of survivorship",
+        "children": []
+       },
+       {
+        "text": "Life insurance or retirement accounts with designated beneficiaries",
+        "children": []
+       },
+       {
+        "text": "Pay-on-death (POD) or transfer-on-death (TOD) accounts",
+        "children": []
+       },
+       {
+        "text": "Property held in a living trust",
+        "children": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Costs & Timeframe",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Probate expenses, including court fees, required notices, and attorney or personal representative fees, are paid from the estate. Simple estates may be resolved within a few months, while complex or contested cases can take significantly longer."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Legal Representation",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "In most Florida probate cases, a licensed attorney is required to represent the estate and ensure compliance with state law."
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Key Points to Remember",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "ul",
+      "items": [
+       {
+        "text": "Probate ensures debts are properly settled and assets are distributed fairly.",
+        "children": []
+       },
+       {
+        "text": "Not all assets pass through probate; some transfer automatically according to law or beneficiary designation.",
+        "children": []
+       },
+       {
+        "text": "Consulting a qualified Florida probate attorney is essential to understand how probate applies to your specific circumstances.",
+        "children": []
+       }
+      ]
+     },
+     {
+      "type": "p",
+      "text": "If you have questions regarding probate or believe your loved one’s estate may require probate, we encourage you to contact Vaughn Law. Our experienced team can provide clear guidance, explain your legal options, and ensure the estate is administered properly and efficiently."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ }
+}

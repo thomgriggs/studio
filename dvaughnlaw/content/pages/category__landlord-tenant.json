@@ -1,0 +1,59 @@
+{
+ "url": "https://dvaughnlaw.com/category/landlord-tenant/",
+ "slug": "category__landlord-tenant",
+ "type": "category",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2024-09-23",
+ "seo": {
+  "title_tag": "Landlord / Tenant Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/category/landlord-tenant/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Landlord / Tenant Archives - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 0
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h2",
+   "text": "[How To Serve Notice Of Non-Payment Of Rent: Proper Procedure For Landlords & Eviction Tips](https://dvaughnlaw.com/how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips/)",
+   "links": [
+    {
+     "text": "How To Serve Notice Of Non-Payment Of Rent: Proper Procedure For Landlords & Eviction Tips",
+     "href": "https://dvaughnlaw.com/how-to-serve-notice-of-non-payment-of-rent-proper-procedure-for-landlords-eviction-tips/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[Why Your Landlord Can Raise Rent: Facts About Rent Hikes & Tenant Rights](https://dvaughnlaw.com/why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights/)",
+   "links": [
+    {
+     "text": "Why Your Landlord Can Raise Rent: Facts About Rent Hikes & Tenant Rights",
+     "href": "https://dvaughnlaw.com/why-your-landlord-can-raise-rent-facts-about-rent-hikes-tenant-rights/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "[Florida Landlord-Tenant Laws Explained: Avoid Eviction, Rent Increase, and Lease Renewal Pitfalls](https://dvaughnlaw.com/florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls/)",
+   "links": [
+    {
+     "text": "Florida Landlord-Tenant Laws Explained: Avoid Eviction, Rent Increase, and Lease Renewal Pitfalls",
+     "href": "https://dvaughnlaw.com/florida-landlord-tenant-laws-explained-avoid-eviction-rent-increase-and-lease-renewal-pitfalls/"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 40
+}

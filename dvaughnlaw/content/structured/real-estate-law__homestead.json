@@ -1,0 +1,347 @@
+{
+ "url": "https://dvaughnlaw.com/real-estate-law/homestead/",
+ "slug": "real-estate-law__homestead",
+ "template": "content-page",
+ "family": "faq-page",
+ "title": "Homestead",
+ "seo": {
+  "title_tag": "Homestead - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/real-estate-law/homestead/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Homestead - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Homestead"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Florida has excellent homestead protections that are unique to this state. Many people only think of the tax benefits when they hear the word homestead, and you would be correct, Florida does provide a discount on your taxes as well as other real estate tax benefits on your homestead property. But there are additional benefits that protect your homestead.",
+     "Do you know homestead exemptions can protect your property from certain creditors and forced sale?",
+     "Vaughn Law is knowledgeable on your homestead rights. [Contact us](https://dvaughnlaw.com/contact/) for a consultation to discuss any questions you may have, and to ensure you are receiving all the homestead benefits you are entitled to."
+    ]
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "title": "Frequently Asked Questions About Homestead",
+    "level": 3,
+    "items": [
+     {
+      "title": "What is Homestead?",
+      "body": [
+       {
+        "type": "subhead",
+        "text": "Understanding Homestead in Florida: A Simple Guide"
+       },
+       {
+        "type": "p",
+        "text": "Your homestead is essentially the primary residence where you live with the intention of staying permanently. If your home is within a legally recognized municipality, your homestead can include up to ½ acre of land along with the residence. For homes located outside of such municipalities, the homestead may encompass up to 160 acres of contiguous land."
+       },
+       {
+        "type": "p",
+        "text": "It’s important to note that if you initially own a parcel of land without a residence and later acquire an adjacent parcel that includes a home, you can file for homestead exemption for both parcels, adhering to the specified acreage limits. This also applies if you expand your homestead by purchasing more adjoining or surrounding land in the future. This allows you to extend the protective benefits of homestead exemption to the additional land, within the set acreage restrictions."
+       },
+       {
+        "type": "p",
+        "text": "The legal framework governing homesteads in Florida includes provisions from the Florida Constitution, its amendments, Florida Statutes, and the Florida Administrative Code. These laws offer protection against certain types of judgment liabilities and provide financial relief on property taxes through exemptions, reductions, and other measures."
+       }
+      ]
+     },
+     {
+      "title": "Is my homestead protected from legal judgments?",
+      "body": [
+       {
+        "type": "p",
+        "text": "Yes, generally, your homestead is safeguarded against legal judgments that might be entered against you. For instance, if you are involved in an automobile accident and the other party successfully sues you for personal injuries or death, they cannot seize your homestead, levy against it, or place a lien on it as a result of the judgment."
+       },
+       {
+        "type": "p",
+        "text": "Indeed, there are several exceptions to this rule:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "**Property Taxes**: If you fail to pay your property taxes, the city or county can initiate a process involving a Tax Certificate and Tax Deed to eventually claim your homestead.",
+          "children": []
+         },
+         {
+          "text": "**Mortgages**: If you use your homestead as collateral for a loan and sign a mortgage giving the lender a security interest, the lender can foreclose on your homestead if you default on the loan.",
+          "children": []
+         },
+         {
+          "text": "**Contractor Liens**: If you have work done on your homestead by a plumber, carpenter, or other worker protected under Florida lien laws, and fail to pay for their services, the worker can place a lien against your property. If unresolved, they may eventually foreclose on the lien, similar to a mortgage foreclosure.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "**What about bankruptcy?**\nIn Florida, individuals filing for bankruptcy can generally exempt their homestead from the bankruptcy estate. However, this exemption is subject to the rights of any mortgage or other lien holders as mentioned above."
+       }
+      ]
+     },
+     {
+      "title": "How Does Filing for Homestead Save Money on Property Taxes in Florida?",
+      "body": [
+       {
+        "type": "subhead",
+        "text": "What does “Ad Valorem” mean?"
+       },
+       {
+        "type": "p",
+        "text": "“Ad Valorem” is a Latin term meaning “based on value.” In the context of property taxes, it refers to the taxation of your home based on its assessed value. Filing for Homestead exemption impacts the Ad Valorem taxes you pay."
+       },
+       {
+        "type": "subhead",
+        "text": "How does Homestead save me money?"
+       },
+       {
+        "type": "p",
+        "text": "Homestead savings are realized in two primary ways:"
+       },
+       {
+        "type": "ol",
+        "items": [
+         {
+          "text": "**Exemptions:** These reduce the “Assessed Value” of your home, which is the value subject to taxation. For example, the most common exemption automatically reduces the assessed value by $50,000 if your home is worth at least $75,000, potentially saving you almost $1,000 annually on your tax bill.",
+          "children": []
+         },
+         {
+          "text": "**Assessment Cap:** This cap limits the annual increase in your home’s assessed value to either 3% or the rate of the Consumer Price Index, whichever is lower. This means that even if the market value of your home increases significantly, the assessed value — and consequently your property taxes — will not increase drastically.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "subhead",
+        "text": "What is the difference between Market Value and Assessed Value?"
+       },
+       {
+        "type": "p",
+        "text": "The Market Value is what your home could sell for under current market conditions, whereas the Assessed Value is the valuation used for tax purposes. Thanks to the Assessment Cap, as your home’s market value increases, your assessed value remains relatively stable, leading to savings. This feature often represents the most significant tax saving under the Homestead Laws."
+       },
+       {
+        "type": "subhead",
+        "text": "Are there additional exemptions?"
+       },
+       {
+        "type": "p",
+        "text": "Yes, there are several specific exemptions available for different groups, including senior citizens, disabled veterans, active duty service members, un-remarried surviving spouses of first responders who died in the line of duty, widows/widowers, blind persons, individuals who use wheelchairs for mobility, and other disabled persons. Each of these exemptions can provide additional tax relief."
+       }
+      ]
+     },
+     {
+      "title": "How Does Homestead Portability Work in Florida?",
+      "body": [
+       {
+        "type": "subhead",
+        "text": "What is Homestead Portability?"
+       },
+       {
+        "type": "p",
+        "text": "Homestead Portability is a feature of Florida’s Homestead Laws that allows you to transfer accrued Homestead savings from one property to another within Florida, up to a maximum of $500,000. This can result in significant property tax savings when moving to a new home."
+       },
+       {
+        "type": "subhead",
+        "text": "How does it work?"
+       },
+       {
+        "type": "p",
+        "text": "Imagine you bought a home for $250,000 and over 20 years its market value increases to $650,000. Due to the Assessment Cap discussed earlier, you are only paying property taxes on an assessed value of $275,000. If you decide to move to a new home priced at $700,000, normally, you would start paying property taxes based on the new home’s higher market value. However, with Portability, you can transfer the difference between the market value and the assessed value of your old home ($650,000 – $275,000 = $375,000) to the new home, effectively reducing its taxable value."
+       },
+       {
+        "type": "subhead",
+        "text": "What are the conditions?"
+       },
+       {
+        "type": "ol",
+        "items": [
+         {
+          "text": "Timing: You must establish your new homestead within approximately 2 years of relinquishing your previous homestead in Florida.",
+          "children": []
+         },
+         {
+          "text": "Filing for Portability: It’s crucial to remember to file for Portability when setting up your new homestead. Failing to do so is a common mistake that can lead to losing out on these savings.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "**Example Scenario:**\nIf you move into a new home on December 28, 2018, and file for Homestead by March 1, 2019, your Homestead status is effective as of January 1, 2019. If you had a Homestead in Florida in 2017 or 2018, you are eligible to transfer your Homestead Savings™."
+       },
+       {
+        "type": "subhead",
+        "text": "What if I don’t sell my old home?"
+       },
+       {
+        "type": "p",
+        "text": "Portability also applies if you don’t sell your current home but instead relinquish its Homestead status. This flexibility allows for various personal circumstances when moving."
+       },
+       {
+        "type": "subhead",
+        "text": "Why is this beneficial?"
+       },
+       {
+        "type": "p",
+        "text": "Using the example above, transferring your Homestead Savings of $375,000 to the new $700,000 home could save you approximately $7,500 every year in property taxes. This makes moving to a more suitable home financially easier, especially during significant life changes like retirement or when children move out."
+       },
+       {
+        "type": "p",
+        "text": "Remember, the effective date for Homestead filing is January 1st, provided you resided in the home with the intent to permanently remain there by that date and did not have a Homestead elsewhere. This timing is crucial for maximizing your benefits under Florida’s Homestead Laws"
+       }
+      ]
+     },
+     {
+      "title": "What is the Time Test for Eligibility for Homestead Portability?",
+      "body": [
+       {
+        "type": "p",
+        "text": "To determine if you are eligible for Homestead Portability when moving to a new home in Florida, follow these steps:"
+       },
+       {
+        "type": "ol",
+        "items": [
+         {
+          "text": "Identify the Effective Year of Your New Homestead: Determine the year when your new Homestead status became effective. For instance, let’s say it became effective in 2024.",
+          "children": []
+         },
+         {
+          "text": "Review the Two Prior Calendar Years: Look at the two years preceding the effective year of your new Homestead. In this example, those years would be 2023 and 2022. If your previous home’s Homestead status was in effect during either of these years, you are eligible to file for Portability.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "This means you can transfer your accumulated Homestead Savings™ from your previous home to your new home, potentially reducing your property taxes significantly. Remember, maintaining continuous Homestead status during these specified years is key to taking advantage of the Portability benefit."
+       }
+      ]
+     },
+     {
+      "title": "How Do I File for Homestead Exemption?",
+      "body": [
+       {
+        "type": "p",
+        "text": "To file for Homestead exemption, you will need to visit the Property Appraiser’s Office in the county where your new home is located. This can also be done at any designated annex or other authorized filing site within the county."
+       },
+       {
+        "type": "subhead",
+        "text": "Finding the Property Appraiser’s Office:"
+       },
+       {
+        "type": "p",
+        "text": "To locate the correct office, simply search online for the name of your county followed by “Property Appraiser.” For example, if your home is in Pinellas County, you would search for “Pinellas County Property Appraiser.” The official website usually has a dedicated section for Homestead exemption information, including how to file."
+       },
+       {
+        "type": "subhead",
+        "text": "What to Bring When Filing:"
+       },
+       {
+        "type": "p",
+        "text": "Ensure you have all necessary documents with you to avoid any setbacks. Typically, you will need to bring:"
+       },
+       {
+        "type": "ol",
+        "items": [
+         {
+          "text": "Driver’s License: Must show your new address.",
+          "children": []
+         },
+         {
+          "text": "Vehicle Registration: Should show a Florida address; it does not necessarily need to be updated to your new address.",
+          "children": []
+         },
+         {
+          "text": "Utility Bill: Must be mailed to your new address and serve as proof of residence.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "While it’s helpful to have a copy of your recorded property deed, it’s not mandatory if it has been recorded in public records post-closing (usually within 30 days)."
+       },
+       {
+        "type": "p",
+        "text": "Forms Required:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "**DR501:** The primary form for filing for Homestead exemption.",
+          "children": []
+         },
+         {
+          "text": "**DR501T:** If you are transferring Homestead Savings™ from a previous property (Portability), this form is also required.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Make sure to review the specific requirements and documents listed on your county’s Property Appraiser’s website before heading to file, to ensure a smooth and successful filing process."
+       }
+      ]
+     },
+     {
+      "title": "How Often Do I Need to File for Homestead Exemption in Florida?",
+      "body": [
+       {
+        "type": "p",
+        "text": "In Florida, you are only required to file for Homestead exemption once for each home you own. After your initial application is approved, you will receive an annual confirmation card in the mail from the Property Appraiser’s office. This card confirms that your property is still recorded as having Homestead exemption."
+       },
+       {
+        "type": "p",
+        "text": "What to do when you receive the annual confirmation card:"
+       },
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "**If you still reside in the home:** No further action is required on your part if the property remains your primary residence. Simply keep the card for your records.",
+          "children": []
+         },
+         {
+          "text": "**If you no longer reside in the home:** If the property is no longer your primary residence (for example, if you have moved and it is now a rental property), you must actively relinquish the Homestead exemption. This can be done by contacting the Property Appraiser’s office directly or by checking the appropriate box on the annual confirmation card indicating that the property is no longer your Homestead.",
+          "children": []
+         }
+        ]
+       },
+       {
+        "type": "subhead",
+        "text": "Important to note:"
+       },
+       {
+        "type": "p",
+        "text": "Failure to inform the Property Appraiser’s office that you no longer qualify for the Homestead exemption on a property can lead to severe penalties. It is crucial to keep your Homestead status updated to reflect your current living situation accurately."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

@@ -1,0 +1,19 @@
+{#
+MODULE: cta-band
+PURPOSE: A call to action from the live page as a rounded soft panel (sage, then mist if a second follows) with navy text and a pill button. If the live site had a photo here, it shows as a rounded tile beside the text, not behind it. (The page's closing band, in navy, is separate: it comes from the shared contact block.)
+SLOTS: eyebrow, title, level, text, buttons[text, href], image (optional, shown as a tile).
+SQUARESPACE: Section with a soft colour and rounded corners (section corner radius, inset), a Heading block, optional Text block, a Button block, and an Image block beside them in a two-column layout. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-cta{{ ' m-cta--img' if s.image }}" data-module="cta-band" data-tone="a">
+  <div class="wrap">
+    <div class="cta__panel">
+      <div class="cta__text">
+        {{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}
+        {% if s.text %}<p>{{ s.text|md }}</p>{% endif %}
+        {% if s.buttons %}<p class="actions">{% for b in s.buttons %}<a class="btn" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</p>{% endif %}
+      </div>
+      {% if s.image %}<img class="cta__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy">{% endif %}
+    </div>
+  </div>
+</section>

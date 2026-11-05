@@ -1,0 +1,24 @@
+{#
+MODULE: choice-cards
+PURPOSE: Step 1 of the consultation flow: a calm, narrow column with a "Step 1 of 2" indicator, one question as the page heading, a short line, and a stack of large soft rounded choice cards (a first-person line and one sentence each, tinted in turn, a round sage arrow). Each card is a plain link to its step-2 page. A "would you rather call?" line with the phone number closes the column.
+SLOTS: step[label, current, total], title (h1), text, cards[title, text, href], call[text, phone[text, href]].
+SQUARESPACE: Page with one Section: a Text block ("Step 1 of 2"), Heading (H1), Text, then seven Button blocks (large, full width, rounded) each linked to its step-2 page, with a short Text block under each; or one Summary block (list or card layout) listing the seven step-2 pages as children of the consultation page. A Text block with a tel: link. No code.
+#}
+{% from "_macros.html" import heading %}
+{% macro stepind(st) %}{% if st %}<p class="stepind"><span class="stepind__label">{{ st.label }}</span><span class="stepind__bar" aria-hidden="true">{% for i in range(1, st.total + 1) %}<i{% if i <= st.current %} class="on"{% endif %}></i>{% endfor %}</span></p>{% endif %}{% endmacro %}
+{% macro callline(c) %}{% if c and c.phone %}<p class="callline">{{ c.text }} <a href="{{ c.phone.href }}">{{ c.phone.text }}</a></p>{% endif %}{% endmacro %}
+<section class="m m-choice" data-module="choice-cards" data-tone="{{ tone }}" aria-labelledby="choice-title">
+  <div class="wrap wrap--flow">
+    {{ stepind(s.step) }}
+    <h1 id="choice-title" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.text %}<p class="flow__lead">{{ s.text|md }}</p>{% endif %}
+    <ul class="choices" role="list">
+      {% for c in s.cards %}
+      <li class="choice">
+        <a class="choice__link" href="{{ c.href|href }}"><span class="choice__q">{{ c.title }}</span>{% if c.text %}<span class="choice__text">{{ c.text }}</span>{% endif %}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {{ callline(s.call) }}
+  </div>
+</section>

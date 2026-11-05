@@ -1,0 +1,69 @@
+{
+ "url": "https://dvaughnlaw.com/resources/forms-docs/",
+ "slug": "resources__forms-docs",
+ "template": "content-page",
+ "family": "index-list",
+ "title": "Forms & Docs",
+ "seo": {
+  "title_tag": "Forms & Docs - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/resources/forms-docs/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Forms & Docs - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Forms & Docs"
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "3 Day Notice",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/3-Day-Notice.pdf"
+     },
+     {
+      "text": "7 Day Non Compliance (curable)",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-curable.pdf"
+     },
+     {
+      "text": "7 Day Non Compliance (non-curable)",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/7-Day-Non-Compliance-non-curable.pdf"
+     },
+     {
+      "text": "15 Day Notice",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/15-Day-Notice-2.pdf"
+     },
+     {
+      "text": "Application To Become Residential Tenant",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Application-To-Become-Residential-Tenant.pdf"
+     },
+     {
+      "text": "Notice of Intent to Make Claim Upon Security Deposit",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Notice-of-Intent-to-Make-Claim-Upon-Securtiy-Deposit.pdf"
+     },
+     {
+      "text": "Tenants Notice to Landlord to Withhold Rent",
+      "href": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/05/Tenant_s-Notice-to-Landlord-to-Withhold-Rent.pdf"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

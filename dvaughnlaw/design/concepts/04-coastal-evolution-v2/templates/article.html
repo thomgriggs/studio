@@ -1,0 +1,4 @@
+{# Page shell: article. Same module flow; CSS narrows the reading column for this template. #}
+{% extends "_base.html" %}
+{% block main %}{% for m in page.modules %}{{ render_module(m, page, {"root": root}) }}
+{% endfor %}{% endblock %}

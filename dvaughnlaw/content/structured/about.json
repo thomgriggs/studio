@@ -1,0 +1,77 @@
+{
+ "url": "https://dvaughnlaw.com/about/",
+ "slug": "about",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "About",
+ "seo": {
+  "title_tag": "About - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/about/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "About - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "About",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2-1.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "image-text",
+   "slots": {
+    "images": [
+     {
+      "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+      "alt": "Danielle Vaughn"
+     }
+    ],
+    "title": "About",
+    "level": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Founded in April 2018, Vaughn Law is a boutique law firm that provides practical Real Estate Legal Solutions for your litigation, transactional, and title work needs. Vaughn Law offers its clients a different, more personalized and service-oriented approach, by tailoring its representation to its client’s needs. At Vaughn Law the client is always our first priority. We understand that this may be an overwhelming, unfamiliar, and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process. We offer valuable legal guidance while providing honest and straightforward opinions. We advise clients on all their options to provide them with the information necessary to make fully educated decisions."
+     },
+     {
+      "type": "p",
+      "text": "Vaughn Law is a full service title and real estate settlement provider that operates in the state of Florida. It is currently owned and operated by Danielle Vaughn."
+     },
+     {
+      "type": "p",
+      "text": "At Vaughn Law, the client is always our first priority. Our goal is to make the closing process a smooth one and as easy as possible for all parties involved. Our experienced staff has handled thousands of closings throughout the state of Florida."
+     },
+     {
+      "type": "p",
+      "text": "If you are buying, selling or refinancing a residential home, investment property, commercial building or vacant land our staff will ensure the closing process is handled properly and in a professional manner."
+     },
+     {
+      "type": "p",
+      "text": "Our goal is to make the legal process a smooth one. Our experienced staff knows that every situation is unique. However, we have handled thousands of closings and legal cases throughout Florida."
+     },
+     {
+      "type": "p",
+      "text": "Whether you are a real estate developer, you are buying or selling your first home, or you are in a dispute with your neighbor, Vaughn Law has your Real Estate Legal Solutions. You’ll receive legal expertise that’s professional and personal. Contact us today to schedule your consultation."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_image": 1
+ }
+}

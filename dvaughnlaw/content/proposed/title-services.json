@@ -1,0 +1,254 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/title-services/",
+  "slug": "title-services",
+  "template": "hub",
+  "family": "hub-landing",
+  "title": "Title Services",
+  "seo": {
+    "title_tag": "Title Services & Closings – St. Pete Beach | Vaughn Law",
+    "meta_description": "Title and real estate closing services across Florida for buyers, sellers, realtors, lenders, builders and commercial clients. Vaughn Law, St. Pete Beach.",
+    "h1_count": 1
+  },
+  "_about": "Proposed practice-hub page: written for the redesign from the live crawl. Every factual line traces to a crawled page (see `verified`); newly written sentences that make any claim about the firm are in `confirm`. Ends with the concept's global closing band (no own contact section).",
+  "verified": [
+    "Hub title, the five audience cards and their lines: live /title-services/ cards (each child page's own opening line); Digital Closings page and its line: live /digital-closings-remote-online-notary/",
+    "About copy: live /title-services/ \"About Vaughn law\" (full-service title and closing services in Florida, personal attention, smooth closing, developers and first homes, licensed throughout Florida, new resources and technology); the mission line about being \"the leading\" provider was not carried",
+    "Order Title and Closing Calculators: live pages /order-title/ and /resources/closing-calculators/",
+    "People: Barbara Trawinski (Licensed Title Agent/Closer), Daniela Brown (Closing Assistant), Danielle Vaughn, live /about/our-team/",
+    "Videos: 6EuboiPKtDg (title insurance), hZ-6oyWfP80 (deed transfers); only two clearly match",
+    "No situation row: only one home page situation (buying or selling) fits this area"
+  ],
+  "confirm": [
+    "\"Ready to order title? Send us the details and we will take it from there.\" is new wording for the order band; the live band says \"Let's work together for your online success\"",
+    "The hero names developers and first-time buyers because the live copy does; confirm that is the audience to lead with",
+    "The partner logo row on the live hub (The Fund, Old Republic National Title, Secure Insight, Bay Area Real Estate Council, E-Closing) is not shown; confirm whether to keep it",
+    "Daniela Brown listed because her role is Closing Assistant; confirm",
+    "Photo use: Lobby.jpg and portraits (2026/10 shoot); confirm consent"
+  ],
+  "modules": [
+    {
+      "module": "hero",
+      "slots": {
+        "eyebrow": "Vaughn Law · St. Pete Beach",
+        "title": "Title Services",
+        "tagline": "Vaughn Law is a boutique law firm that provides full-service title and real estate closing services in Florida, for first-time buyers and developers alike.",
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Lobby.jpg",
+          "alt": "The Vaughn Law office lobby"
+        },
+        "images": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Lobby.jpg",
+            "alt": "The Vaughn Law office lobby"
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          },
+          {
+            "text": "See how we can help",
+            "href": "#services"
+          }
+        ]
+      }
+    },
+    {
+      "module": "card-grid",
+      "variant": "services",
+      "slots": {
+        "anchor": "services",
+        "title": "Who we do title work for",
+        "cards": [
+          {
+            "title": "Realtors",
+            "text": [
+              "Vaughn Law will assist in making the transaction an easy one."
+            ],
+            "page": "services__realtors"
+          },
+          {
+            "title": "Consumers",
+            "text": [
+              "Buying or selling a home? Vaughn Law is here for you."
+            ],
+            "page": "services__consumers"
+          },
+          {
+            "title": "Lenders",
+            "text": [
+              "Vaughn Law will work with you to ensure your mortgage is in first lien position."
+            ],
+            "page": "services__lenders"
+          },
+          {
+            "title": "Builders",
+            "text": [
+              "Vaughn Law will assist you with your new construction builders."
+            ],
+            "page": "services__builders"
+          },
+          {
+            "title": "Commercial",
+            "text": [
+              "Vaughn Law understands the unique nature of commercial closings."
+            ],
+            "page": "services__commercial"
+          },
+          {
+            "title": "Digital Closings & Remote Online Notary",
+            "text": [
+              "Vaughn Law is knowledgeable and experienced with digital closings and RON."
+            ],
+            "page": "digital-closings-remote-online-notary"
+          }
+        ]
+      }
+    },
+    {
+      "module": "cta-band",
+      "slots": {
+        "title": "Ready to order title?",
+        "text": "Send us the details and we will take it from there.",
+        "buttons": [
+          {
+            "text": "Order Title",
+            "page": "order-title"
+          },
+          {
+            "text": "Closing Calculators",
+            "page": "resources__closing-calculators"
+          }
+        ]
+      }
+    },
+    {
+      "module": "headed-section",
+      "variant": "copy",
+      "slots": {
+        "title": "About Vaughn Law",
+        "level": 2,
+        "depth": 2,
+        "body": [
+          {
+            "type": "p",
+            "text": "Vaughn Law is a boutique law firm that provides full-service title and real estate closing services in the state of Florida."
+          },
+          {
+            "type": "p",
+            "text": "A closing can be overwhelming, unfamiliar and exciting for everyone involved, so we give each closing personal attention. Our goal is to make it as smooth and as easy as possible for all parties."
+          },
+          {
+            "type": "p",
+            "text": "Whether you are a real estate developer or buying or selling your first home, we can handle your closing. We are licensed to practice throughout Florida, not only in the Tampa Bay area."
+          },
+          {
+            "type": "p",
+            "text": "Our team pays attention to the details, and we keep developing resources and technology to help you."
+          }
+        ]
+      }
+    },
+    {
+      "module": "people",
+      "variant": "hub",
+      "slots": {
+        "title": "Who handles your closing",
+        "text": "The closer and the closing assistant, with Danielle Vaughn behind them.",
+        "people": [
+          {
+            "name": "Danielle Vaughn",
+            "role": "Managing Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+              "alt": "Danielle Vaughn"
+            }
+          },
+          {
+            "name": "Barbara Trawinski",
+            "role": "Licensed Title Agent/Closer",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Barbara-Trawinski.jpg",
+              "alt": "Barbara Trawinski"
+            }
+          }
+        ],
+        "link": {
+          "text": "Meet the team",
+          "nav": "About/Our Team"
+        },
+        "team": [
+          {
+            "name": "Daniela Brown",
+            "role": "Closing Assistant",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Daniela-Brown.jpg",
+              "alt": "Daniela Brown"
+            }
+          }
+        ],
+        "quote": {
+          "text": "My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.",
+          "attribution": "Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC"
+        }
+      }
+    },
+    {
+      "module": "video-feed",
+      "slots": {
+        "title": "Watch",
+        "videos": [
+          {
+            "title": "What Is The Title Insurance? Protect Your Real Estate Investment",
+            "href": "https://www.youtube.com/watch?v=6EuboiPKtDg",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/6EuboiPKtDg"
+          },
+          {
+            "title": "Deed Transfers Explained: Key Issues Before Transferring Property Titles In Florida",
+            "href": "https://www.youtube.com/watch?v=hZ-6oyWfP80",
+            "date": "2024-08-20",
+            "video": "https://www.youtube.com/embed/hZ-6oyWfP80"
+          }
+        ],
+        "more": {
+          "text": "All videos",
+          "page": "videos"
+        }
+      }
+    },
+    {
+      "module": "post-feed",
+      "variant": "cards",
+      "slots": {
+        "title": "Closing and title articles",
+        "posts": [
+          {
+            "title": "You Shook Hands on the Deal. So Why Is the Sale Falling Apart?",
+            "href": "https://dvaughnlaw.com/you-shook-hands-on-the-deal-so-why-is-the-sale-falling-apart/",
+            "date": "2026-06-04",
+            "excerpt": "You found the perfect Florida home. The seller accepted your offer."
+          },
+          {
+            "title": "Residential Real Estate Transactions: A Legal Perspective",
+            "href": "https://dvaughnlaw.com/residential-real-estate-transactions-a-legal-perspective/",
+            "date": "2026-03-27",
+            "excerpt": "Residential real estate transactions can be exciting yet intricate endeavors, often laden with legal complexities."
+          },
+          {
+            "title": "What to Consider Before Transferring Property Title",
+            "href": "https://dvaughnlaw.com/what-to-consider-before-transferring-property-title/",
+            "date": "2024-04-26",
+            "excerpt": "Transferring the title of a property might seem straightforward, but it involves several considerations that can have significant financial and legal implications."
+          }
+        ],
+        "more": {
+          "text": "All articles",
+          "page": "blog"
+        }
+      }
+    }
+  ]
+}

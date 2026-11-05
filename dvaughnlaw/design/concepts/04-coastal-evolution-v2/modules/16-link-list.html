@@ -1,0 +1,13 @@
+{#
+MODULE: link-list
+PURPOSE: A titled list of links as ruled rows with an arrow, such as the video library by topic or the forms and documents list.
+SLOTS: eyebrow, title, level, links[text, href].
+SQUARESPACE: Section with a Heading block and a Text block of linked lines, or a stack of Button blocks (outline style) for short lists. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-links" data-module="link-list" data-tone="{{ tone }}">
+  <div class="wrap{{ ' acc__grid' if s.title }}">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ul class="linkrows" role="list">{% for l in s.links %}<li><a href="{{ l.href|href }}"{% if l.href.startswith('http') and 'dvaughnlaw.com' not in l.href %} target="_blank" rel="noopener"{% endif %}>{{ l.text }}</a></li>{% endfor %}</ul>
+  </div>
+</section>

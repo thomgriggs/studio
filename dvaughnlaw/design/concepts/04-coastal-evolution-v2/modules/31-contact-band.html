@@ -1,0 +1,21 @@
+{#
+MODULE: contact-band
+PURPOSE: The page's one closing contact band: a short heading, a line, the primary button, and the firm's real address, phone and email (from the shared contact block) as a ruled list. Set on a deeper teal tint with a thick teal rule, so the charcoal footer beneath it reads as a separate area. Also rendered on every page without its own band (templates/_closing.html passes the shared contact block).
+SLOTS: title, text, lines[label, text, href] (filled from the live site's shared contact block: address, phone, email), button[text, href].
+SQUARESPACE: Section with a dark colour: Heading + Text + Button on one side, a Text block (address) and Text blocks with tel:/mailto: links (or a Contact Details / Social block) on the other. Squarespace's footer would carry this on every page; here it is a section so the home page owns its closing. No code.
+#}
+<section class="m m-contact{{ ' m-contact--closing' if variant == 'closing' }}" data-module="contact-band" data-tone="{{ tone }}" aria-labelledby="contact-title">
+  <div class="wrap contact__grid">
+    <div class="contact__main">
+      <h2 id="contact-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2>
+      {% if s.text %}<p class="contact__text">{{ s.text|md }}</p>{% endif %}
+      {% if s.button %}<p class="actions"><a class="btn" href="{{ s.button.href|href }}">{{ s.button.text }}</a></p>{% endif %}
+    </div>
+    {% if s.lines %}
+    <dl class="contact__lines">
+      {% for l in s.lines %}<div><dt>{{ l.label }}</dt><dd>{% if l.href %}<a href="{{ l.href }}">{{ l.text }}</a>{% else %}{{ l.text|replace('\n', ' ')|md }}{% endif %}</dd></div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+  </div>
+</section>

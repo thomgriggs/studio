@@ -1,0 +1,20 @@
+{#
+MODULE: accordion
+PURPOSE: Question-and-answer or topic list where each item opens to show its text, as a stack of soft rounded rows with a round sage plus button. Carries most of the content on FAQ pages. Found in the old site's Divi accordions and detected where runs of question headings sit above paragraphs.
+SLOTS: eyebrow, title, items[title, body[] of p, ul, ol, subhead, button].
+SQUARESPACE: Section with a Heading block and an Accordion block (native in 7.1). Lists and bold sub-headings inside an item are rich text in the item. No code.
+#}
+{% from "_macros.html" import heading, eyebrow, body %}
+<section class="m m-accordion" data-module="accordion" data-tone="{{ tone }}">
+  <div class="wrap wrap--mid">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <div class="acc">
+      {% for it in s["items"] %}
+      <details class="acc__item"{% if loop.first and s["items"]|length == 1 %} open{% endif %}>
+        <summary><span class="acc__q" data-orig-level="accordion">{{ it.title }}</span></summary>
+        <div class="acc__a prose">{{ body(it.body, 3) }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

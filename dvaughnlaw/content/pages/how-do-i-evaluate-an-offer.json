@@ -1,0 +1,94 @@
+{
+ "url": "https://dvaughnlaw.com/how-do-i-evaluate-an-offer/",
+ "slug": "how-do-i-evaluate-an-offer",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2014-01-13",
+ "seo": {
+  "title_tag": "How Do I Evaluate An Offer? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/how-do-i-evaluate-an-offer/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How Do I Evaluate An Offer? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Well, as this story shows, there’s more to an offer than the price tag. Factors you should consider: Is this offer at, near or above my asking price? Are there clauses and additions in their offer that change the terms and final price substantially? How long since I had another offer, or expect another offer? […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:03+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "sales-process"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "How Do I Evaluate An Offer?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/4gsy0lly1t",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Well, as this story shows, there’s more to an offer than the price tag. Factors you should consider:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Is this offer at, near or above my asking price?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are there clauses and additions in their offer that change the terms and final price substantially?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How long since I had another offer, or expect another offer? Can I wait?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember every month you’re probably still paying mortgage, taxes and insurance. If you have several offers… remember that an offer isn’t a completed sale.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Compare the risk and likelihood of a completed sale for each buyer including things like “contingencies”, where your sale depends on their sale. and whether they’re pre-approved for the offer they’re making.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember you have three options for an offer – accept it reject it or prepare a counter-offer that improves the terms for you in some way.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 146
+}

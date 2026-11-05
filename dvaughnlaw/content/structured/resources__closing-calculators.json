@@ -1,0 +1,105 @@
+{
+ "url": "https://dvaughnlaw.com/resources/closing-calculators/",
+ "slug": "resources__closing-calculators",
+ "template": "content-page",
+ "family": "calculator-page",
+ "title": "Closing Calculators",
+ "seo": {
+  "title_tag": "Closing Calculators - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/resources/closing-calculators/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Closing Calculators - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Closing Calculators",
+    "image": {
+     "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2.jpg",
+     "alt": ""
+    }
+   }
+  },
+  {
+   "module": "accordion",
+   "slots": {
+    "items": [
+     {
+      "title": "Closing Costs",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "Closing Costs",
+        "href": "https://thefundrecalc.com/calcs/closing-costs?utm_content=version01&utm_source=TheFund&utm_medium=embed&utm_campaign=calculator&utm_term=closing_costs&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     },
+     {
+      "title": "Buyer Cost Sheet",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "Buyer Cost Sheet",
+        "href": "https://thefundrecalc.com/calcs/buyers-closing-cost?utm_content=version01&utm_source=TheFund&utm_medium=embed&utm_campaign=calculator&utm_term=buyer_net_sheet&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     },
+     {
+      "title": "Seller Net Sheet",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "Seller Net Sheet",
+        "href": "https://thefundrecalc.com/calcs/sellers-closing-costs?utm_content=version01&utm_source=The%2520Fund&utm_medium=embed&utm_campaign=calculator&utm_term=seller%2520closing%2520cost&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     },
+     {
+      "title": "Critical Dates – FRBAR Standard",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "Critical Dates – FRBAR Standard",
+        "href": "https://thefundrecalc.com/calcs/critical-dates-frbar-standard?utm_content=version01&utm_source=TheFund&utm_medium=embed&utm_campaign=calculator&utm_term=frbar_standardundefined&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     },
+     {
+      "title": "CRITICAL DATES – FRBAR “AS IS”",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "CRITICAL DATES – FRBAR “AS IS”",
+        "href": "https://thefundrecalc.com/calcs/critical-dates-frbar-as-is?utm_content=version01&utm_source=TheFund&utm_medium=embed&utm_campaign=calculator&utm_term=frbar_as_is&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     },
+     {
+      "title": "CRITICAL DATES – CONTRACT FOR RESIDENTIAL SALE & PURCHASE",
+      "body": [
+       {
+        "type": "embed-link",
+        "text": "CRITICAL DATES – CONTRACT FOR RESIDENTIAL SALE & PURCHASE",
+        "href": "https://thefundrecalc.com/calcs/critical-dates-crsp?utm_content=version01&utm_source=TheFund&utm_medium=embed&utm_campaign=calculator&utm_term=crsp&embedEmail=kdolan@ralaw.com&embedStreet=405%206th%20St.%20S.,%20Suite%20102&embedCity=St.%20Petersburg&embedState=Florida&embedZip=33701"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 20,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

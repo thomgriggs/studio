@@ -1,0 +1,24 @@
+{#
+MODULE: event-band
+PURPOSE: An upcoming event as a soft rounded sage panel: a small pill eyebrow, the event title, one line, each date with its time and venue as friendly white mini-cards, a pill button, and a rounded photo of the people beside it.
+SLOTS: eyebrow, title, text, image (src, alt), events[date, time, venue, address], buttons[text, href]. Empty slots are left out; with no image the panel is one centered column.
+SQUARESPACE: Section with a soft colour and rounded corners (inset), two columns: Heading + Text + two Text blocks with white background and rounded corners (date bold, time, venue, address) + Button on one side, Image block with rounded corners on the other. No code.
+#}
+{% from "_macros.html" import heading %}
+<section class="m m-event" data-module="event-band" data-tone="pale">
+  <div class="wrap">
+    <div class="event__panel{{ ' event__panel--img' if s.image }}">
+      <div class="event__main">
+        {% if s.eyebrow %}<p class="hero__eyebrow">{{ s.eyebrow }}</p>{% endif %}
+        {{ heading(2, s.title, 2, "h-section") }}
+        {% if s.text %}<p class="event__text">{{ s.text|md }}</p>{% endif %}
+        {% if s.events %}<ul class="events" role="list">
+          {% for e in s.events %}<li><p class="events__when">{{ e.date }}</p><p class="events__time">{{ e.time }}</p><p class="events__where"><strong>{{ e.venue }}</strong>{{ e.address }}</p></li>
+          {% endfor %}
+        </ul>{% endif %}
+        {% if s.buttons %}<p class="actions">{% for b in s.buttons %}<a class="btn" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</p>{% endif %}
+      </div>
+      {% if s.image %}<img class="event__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy">{% endif %}
+    </div>
+  </div>
+</section>

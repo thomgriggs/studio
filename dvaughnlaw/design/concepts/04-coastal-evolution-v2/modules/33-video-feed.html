@@ -1,0 +1,24 @@
+{#
+MODULE: video-feed
+PURPOSE: A short row of the firm's newest video posts on a deep charcoal band: three equal cards, each a 16:9 YouTube poster with a small square teal play mark, the date and the post's title in serif; the whole card opens the video on YouTube in a new tab. One outline button to the Videos page. Restrained: no autoplay, no embeds, nothing animated.
+SLOTS: eyebrow, title, text (optional), videos[title, href, date, video (YouTube embed or watch URL)], more[text, href].
+SQUARESPACE: Section with a dark colour: Heading, then a Summary block (grid, 3 columns, with the video posts' thumbnails, title and date) pointed at a video collection, plus a Button block. Or three Video blocks with Heading 4 captions. The square play mark comes from the Video block's own thumbnail overlay; no code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-vfeed" data-module="video-feed" data-tone="deep" aria-labelledby="vfeed-title">
+  <div class="wrap">
+    <div class="m__head headed__head">{{ eyebrow(s.eyebrow) }}<h2 id="vfeed-title" class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% if s.text %}<p class="vfeed__text">{{ s.text|md }}</p>{% endif %}</div>
+    <ul class="vfeed" role="list">
+      {% for v in s.videos %}{% set id = v.video|ytid %}
+      <li class="vcard">
+        <a class="vcard__link" href="{{ v.href|href }}"{% if "youtube.com" in v.href %} target="_blank" rel="noopener"{% endif %}>
+          <span class="vcard__poster"><img src="https://i.ytimg.com/vi/{{ id }}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          {% if v.date %}<span class="vcard__date"><time datetime="{{ v.date }}">{{ v.date|longdate }}</time></span>{% endif %}
+          <span class="vcard__title">{{ v.title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if s.more %}<p class="feed__more"><a class="btn btn--outline" href="{{ s.more.href|href }}">{{ s.more.text }}</a></p>{% endif %}
+  </div>
+</section>

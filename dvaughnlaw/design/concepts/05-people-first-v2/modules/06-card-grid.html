@@ -1,0 +1,27 @@
+{#
+MODULE: card-grid
+PURPOSE: A set of short cards on a tinted band: white, equal height, a short serif title (one or two lines), then a line or two of text. Where a card has a link the whole card is the link. Cards with no link and uneven text (e.g. Mission, Values, Vision) switch to a balanced layout: the long card is a tall card on the left and the short ones stack beside it, so no card is a big empty box.
+SLOTS: eyebrow, title, anchor (section id, for jump links), cards[title, text[], href, link_text, image, planned]. A card with `planned: true` and no href is a page the site menu lists but the live site does not have yet: shown without link or arrow, quieter, with a small "Page planned" tag.
+SQUARESPACE: Section with Summary-style layout of Cards (or a grid of Image/Text/Button blocks in a multi-column row; Summary block "cards" layout makes the whole card a link). The tall-plus-two balanced layout is a 2-column section with one tall Text block and two stacked Text blocks. No code.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+{% set linked = s.cards|selectattr("href")|list|length > 0 %}
+{% set n = s.cards|length %}
+{% set feature = not linked and n == 3 and (s.cards[0].text|join(" ")|wordcount) > 3 * (s.cards[1].text|join(" ")|wordcount) %}
+<section class="m m-cards" data-module="card-grid" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <div class="wrap">
+    {% if s.title %}<div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}</div>{% endif %}
+    <ul class="cards cards--{{ n if n < 5 else 'many' }}{{ ' cards--feature' if feature }}{{ ' cards--plain' if not linked }}" role="list">
+      {% for c in s.cards %}
+      <li class="card{{ ' card--link' if c.href }}{{ ' card--planned' if c.planned }}">
+        {% if c.image %}<img class="card__img" src="{{ c.image.src }}" alt="{{ c.image.alt }}" loading="lazy">{% endif %}
+        {% if c.title %}<h{{ 3 if s.title else 2 }} class="card__title" data-orig-level="blurb">{% if c.href %}<a href="{{ c.href|href }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h{{ 3 if s.title else 2 }}>{% endif %}
+        {% for t in c.text %}<p>{{ t|md }}</p>{% endfor %}
+        {% if c.planned %}<p class="card__planned">Page planned</p>{% endif %}
+        {% if c.link_text %}<p><a class="more" href="{{ c.href|href }}">{{ c.link_text }}</a></p>{% endif %}
+        {% if c.href %}<span class="card__go" aria-hidden="true"></span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

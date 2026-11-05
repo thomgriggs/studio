@@ -1,0 +1,87 @@
+{
+ "url": "https://dvaughnlaw.com/investors/legal-services/contract-preparation-and-review/",
+ "slug": "investors__legal-services__contract-preparation-and-review",
+ "template": "content-page",
+ "family": "text-page",
+ "title": "Contract Preparation and Review",
+ "seo": {
+  "title_tag": "Contract Preparation and Review - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/investors/legal-services/contract-preparation-and-review/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Contract Preparation and Review - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Contract Preparation and Review"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "In nearly every transaction you are involved in, whether it be buying a property, hiring contractors, entering into a listing or property management agreement, or leasing a property to a tenant you are entering into a contract. Contracts are a big part of everyday life, because of that people can get nonchalant and complacent about entering into a contract before reviewing it.",
+     "But what happens if there is a dispute over the contract?",
+     "Vaughn Law is experienced in reviewing and preparing a wide variety of different types of contracts and can properly advise you on your rights. Vaughn Law has the knowledge and expertise to ensure your contract protects you and will prevent future disputes.",
+     "If a contract dispute has already occurred, Vaughn Law will provide strategic, honest, and straightforward legal advice on how you should proceed.",
+     "Vaughn Law has prepared the following contracts and offers a license of use for a one-time fee:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "New Construction Home Purchase Agreement"
+     },
+     {
+      "text": "Residential Lease"
+     },
+     {
+      "text": "Apartment Building Lease"
+     },
+     {
+      "text": "Commercial Triple Net Lease",
+      "children": [
+       {
+        "type": "ul",
+        "items": [
+         {
+          "text": "Standalone Building",
+          "children": []
+         },
+         {
+          "text": "Plaza",
+          "children": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "[Contact Vaughn Law](https://dvaughnlaw.com/vaughnlaw/contact/) today to discuss your contract questions or needs!"
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 21,
+  "non_youtube_video": 0,
+  "duplicate_title": 1
+ }
+}

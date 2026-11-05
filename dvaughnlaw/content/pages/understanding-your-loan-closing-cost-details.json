@@ -1,0 +1,83 @@
+{
+ "url": "https://dvaughnlaw.com/understanding-your-loan-closing-cost-details/",
+ "slug": "understanding-your-loan-closing-cost-details",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Understanding Your Loan: Closing Cost Details - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/understanding-your-loan-closing-cost-details/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Understanding Your Loan: Closing Cost Details - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Page 2 of your Closing Disclosure details specific closing costs. Section A includes: Origination charges collected by the lender Origination fees paid to brokers, loan officers or other parties and Discount Points – prepaid interest. These figures should match your original Loan Estimate. Section B covers services for which you could NOT shop. The total […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:35:24+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Understanding Your Loan: Closing Cost Details",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/mb22pk8spp",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Page 2 of your Closing Disclosure details specific closing costs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Section A includes: Origination charges collected by the lender Origination fees paid to brokers, loan officers or other parties and Discount Points – prepaid interest. These figures should match your original Loan Estimate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Section B covers services for which you could NOT shop. The total of these should be within 10% of the total from your Loan Estimate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Section C covers services you could shop. If you chose providers from the lender’s written list, costs should be within 10% of Loan Estimate. The set of services you can shop may vary on different loans.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Recording Fees in Section E should be within 10%; other costs in E, plus F, G and H, may vary from your Loan Estimate without tolerance limits.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This page will also break out the costs YOU will pay, before or at closing; the costs the Seller will pay, any costs paid by others and any credits from your Lender.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 170
+}

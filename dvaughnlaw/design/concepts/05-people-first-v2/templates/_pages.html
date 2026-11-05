@@ -1,0 +1,17 @@
+{# All pages by template: built ones link to the mockup, the rest are listed as pending. #}
+{% extends "_base.html" %}
+{% block main %}
+<section class="kit-intro m" data-tone="a"><div class="wrap">
+  <p class="eyebrow">{{ concept.name }}</p>
+  <h1>Pages</h1>
+  <p class="lead">{{ built }} of {{ total }} modulized pages built. Pages are grouped by template.</p>
+  {% for t, items in groups.items() %}
+  <h2 class="kit-h">{{ t }} <small>{{ items|length }} pages</small></h2>
+  <p class="muted">{{ templates[t] }}</p>
+  <ul class="pagelist">{% for p in items if p.built %}
+    <li><a href="{{ root }}{{ p.path ~ '/' if p.path }}">{{ p.title }}</a> <code>/{{ p.path }}</code> <small>{{ p.modules|join(" · ") }}</small></li>
+  {% else %}<li class="muted">No pages of this template built yet.</li>{% endfor %}</ul>
+  <p class="muted">{{ items|rejectattr("built")|list|length }} more {{ t }} pages modulized but not built.</p>
+  {% endfor %}
+</div></section>
+{% endblock %}

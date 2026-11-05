@@ -1,0 +1,61 @@
+{
+ "url": "https://dvaughnlaw.com/what-is-earnest-money-and-how-much-should-i-set-aside/",
+ "slug": "what-is-earnest-money-and-how-much-should-i-set-aside",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-11-20",
+ "seo": {
+  "title_tag": "What Is Earnest Money, And How Much Should I Set Aside? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/what-is-earnest-money-and-how-much-should-i-set-aside/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is Earnest Money, And How Much Should I Set Aside? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Like the video shows, “earnest money” is money you put down to demonstrate your seriousness about buying a home. It must be substantial enough to demonstrate good faith and is usually between 1-5% of the purchase price though the amount can vary with local customs and conditions. If your offer is accepted the earnest […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2014-01-13T21:47:35+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "selecting"
+  ],
+  "tags": [
+   "video"
+  ]
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "What Is Earnest Money, And How Much Should I Set Aside?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/xyzcdq0s3x",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Like the video shows, “earnest money” is money you put down to demonstrate your seriousness about buying a home. It must be substantial enough to demonstrate good faith and is usually between 1-5% of the purchase price though the amount can vary with local customs and conditions.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If your offer is accepted the earnest money becomes part of your down payment or closing costs. If the offer is rejected, your earnest money is returned to you. If you back out of a deal, you may forfeit the entire amount.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 100
+}

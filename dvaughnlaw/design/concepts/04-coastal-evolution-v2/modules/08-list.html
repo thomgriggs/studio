@@ -1,0 +1,16 @@
+{#
+MODULE: list
+PURPOSE: A standalone bulleted or numbered list that carries the content of a section. Numbered items with a bold lead-in become ruled rows with a large teal numeral, the lead-in in the serif and the text beside it.
+SLOTS: ordered (bool), items[lead, text, children].
+SQUARESPACE: Section with a Text block holding a numbered or bulleted list; for the ruled-row look, one two-column row per item (numeral and text) or keep the plain list. No code.
+#}
+{% from "_macros.html" import lst %}
+<section class="m m-list" data-module="list" data-tone="{{ tone }}">
+  <div class="wrap">
+    <{{ 'ol' if s.ordered else 'ul' }} class="steps{{ ' steps--plain' if not s["items"][0].lead }}" role="list">
+      {% for i in s["items"] %}
+      <li>{% if i.lead %}<strong class="steps__lead">{{ i.lead|md }}</strong> {% endif %}<span class="steps__text">{{ i.text|md }}</span>{% for c in i.children %}{{ lst(c) }}{% endfor %}</li>
+      {% endfor %}
+    </{{ 'ol' if s.ordered else 'ul' }}>
+  </div>
+</section>

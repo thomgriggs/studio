@@ -1,0 +1,86 @@
+{
+ "url": "https://dvaughnlaw.com/can-my-settlement-charges-change/",
+ "slug": "can-my-settlement-charges-change",
+ "type": "post",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2015-06-24",
+ "seo": {
+  "title_tag": "Can My Settlement Charges Change? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/can-my-settlement-charges-change/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Can My Settlement Charges Change? - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "Yes, if circumstances change, such as: a natural disaster damages the property or affects closing costs the title insurer providing the estimate goes out of business during underwriting new information on you or the transaction affecting settlement is discovered. If any of these events change 3rd-party charges beyond the 10% tolerance limit creditors may issue […]",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "post": {
+  "date": "2015-06-24T16:12:04+00:00",
+  "author": "www.dvaughnlaw.com",
+  "categories": [
+   "trid"
+  ],
+  "tags": []
+ },
+ "sidebar": "global",
+ "blocks": [
+  {
+   "type": "h1",
+   "text": "Can My Settlement Charges Change?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "wistia",
+   "src": "https://fast.wistia.com/embed/medias/nouv4njnrh",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Yes, if circumstances change, such as:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "a natural disaster damages the property or affects closing costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "the title insurer providing the estimate goes out of business during underwriting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "new information on you or the transaction affecting settlement is discovered.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If any of these events change 3rd-party charges beyond the 10% tolerance limit creditors may issue a revised Loan Estimate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If a creditor issues a Loan Estimate they are presumed to have collected all 6 pieces of required information. They may not claim a change in circumstances by receiving one of these pieces of information AFTER issuing a Loan Estimate.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 104
+}

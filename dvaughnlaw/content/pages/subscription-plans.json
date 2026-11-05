@@ -1,0 +1,979 @@
+{
+ "url": "https://dvaughnlaw.com/subscription-plans/",
+ "slug": "subscription-plans",
+ "type": "page",
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2025-04-21",
+ "seo": {
+  "title_tag": "Subscription Plans - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://dvaughnlaw.com/subscription-plans/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Subscription Plans - St. Petersburg, Tampa FL, Pinellas County | Vaughn Law, PLLC",
+  "og_description": "",
+  "og_image": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/09/OG-Image.jpg",
+  "twitter_card": "summary_large_image",
+  "lang": "en-US",
+  "json_ld_types": [],
+  "h1_count": 1
+ },
+ "blocks": [
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2021/12/Outside-group-2-min-scaled.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h1",
+   "text": "Subscription Plans",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Subscription Plans",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Overview:** These subscription plans provide an affordable way to retain legal services on a limited basis. Each plan is designed for different levels of real estate investors, landlords, and property managers. Monthly fees are earned upon receipt, non-refundable, and automatically billed.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Registered Agent Plan - $25/month or $200/year (per LLC)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Registered Agent filed with State Department & Sunbiz listing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "All Registered Agent mail will be forwarded to Company per email",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Complimentary call when papers are served on Company",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Entry-Level Attorney Access - $19.99/month",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Perfect for those looking to explore the benefits of having legal support without a long-term commitment.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Included Services:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**Introductory Legal Support:** A cost-effective way to experience having an attorney on call.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Limited Scheduled Zoom/Calls:** Access to brief, pre-scheduled consultations with priority access to an attorney on staff.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Flat-Fee Services:** Eligibility for select legal services at discounted flat rates.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Knowledge Base Access:** Access to a continuously expanding library of real estate legal resources, FAQs and a monthly legal newsletter.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Essential Legal Questions Plan - $165 per month",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Access to client portal for questions and answers from an Attorney, up to 10 messages per month.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Priority access to an attorney on staff",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Flat-Fee Services:** Eligibility for select legal services at discounted flat rates.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Knowledge Base Access:** Access to a continuously expanding library of real estate legal resources and FAQs.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Comprehensive Legal Support Plan - $375 per month",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Access to client portal for questions and answers from an Attorney, up to 15 messages per month",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Includes review of one document less than 5 pages per year.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "4 – 30-minute phone calls with an attorney per year",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Priority access to an attorney on staff",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Flat-Fee Services: Eligibility for select legal services at discounted flat rates.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Knowledge Base Access:** Access to a continuously expanding library of real estate legal resources and FAQs.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Investor LLC Subscription Plan - $450 per month ($5,400/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**LLC Formation:** Creation of up to **2 LLCs per year**. This includes filing the LLC, obtaining the EIN, and preparing a personalized operating agreement for each LLC.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**BOI Requirements:** Preparation and filing of any required Business Ownership Information (BOI) documentation as needed.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Client Portal Access:** Access to the client portal for up to **50 questions per year** regarding your LLCs and real estate transactions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Deed Preparation and Recording:** Preparation and recording of up to **2 deeds per year** (note: doc stamps, if applicable, are not included).",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Registered Agent Service:** Includes Registered Agent Plan.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Rent Right Core Retainer - $400/month ($4,800/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Best for:** Private landlords or property managers with less than 10 units (1 LLC).",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**Registered Agent Plan Included**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Minute Book Maintenance**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Lease & Property Management Agreement Templates**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Semiannual Document Review (Includes a Complimentary Legal Conference)**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Annual State & Local Law Compliance Checks**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Limited Annual HOA Compliance Checks**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**2, 30-minute scheduled attorney phone conferences per year**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**One Authorized Member will have Access to Attorney via Client Portal (Up to 5 messages per month)**",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Rent Right Premier Retainer - $550/month ($6,600/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Best for:** Landlords or property managers with 20-50 units (3 LLCs).",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**All Core Retainer Features Plus:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Limited modifications to lease/property management agreement templates",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lease & agreement renewals/addenda",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Authorized Member will have access to Attorney via Client Portal (Up to 5 more messages per month)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**4 additional 30-minute scheduled attorney phone conferences per year**",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Rent Right Elite Retainer - $800/month ($9,600/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Best for:** Landlords and property managers with 50-75 units (5 LLCs).",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**All Premier Retainer Features Plus:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**Quarterly Document Review (Includes Complimentary Legal Phone Conference)**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**1 Uncontested Eviction Per Year, not including costs**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Preparation of 2 tenant notices per year (Tenant Nonpayment or NonCompliance)**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**One Authorized Member to have Unlimited Access to Attorney via Client Portal**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**6, 30-minute scheduled attorney phone conferences per year**",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Rent Right Pro Retainer - $1,200/month ($14,400/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "**Best for:** Landlords and property managers with 75-200 units (6 LLCs).",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**All Elite Retainer Features Plus:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**2 Uncontested Evictions Per Year, not including costs**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Preparation of 2 tenant notices per year (Tenant Nonpayment or NonCompliance)**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**One Additional Authorized Members/Managers with Unlimited Portal Access**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**6, 30-minute scheduled attorney phone conferences per year**",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Estate Essentials Plan - $250/month ($3,000/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Ideal for individuals and families seeking ongoing legal support for foundational estate planning needs.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Included Services:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**Annual Estate Plan Review & Updates** – Ensure your will, trust, and beneficiary designations remain up to date.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Power of Attorney & Healthcare Directives** – Preparation and updates for financial and medical decision-making documents.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Priority Access to Attorney** – Up to 5 legal questions per month via client portal.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Discounted Flat-Fee Services** – Reduced pricing on additional estate planning services, such as trust amendments and property transfers.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Access to Estate Planning Knowledge Base** – Stay informed with legal updates and guidance.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Legacy Protection Plan - $500/month ($6,000/year)",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Designed for individuals, families, and business owners needing comprehensive estate planning and asset protection.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Included Services:**",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "**All Estate Essentials Plan Features Plus:**",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Custom Trust & Asset Protection Planning** – Guidance on irrevocable trusts, special needs trusts, and asset protection strategies.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Annual Business Succession Review** – Ensure your business interests are properly structured and aligned with your estate plan.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Client Portal Access** – Submit legal questions for priority responses up to 10 messages per month",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Quarterly Strategy Calls** – 4 scheduled attorney phone consultations per year to review and adjust estate planning strategies.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Complimentary Deed Preparation (Up to 2 per year)** – Transfer real estate into trusts or update ownership structures. (Does not include recording fees and costs.)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Terms and Conditions for Legal Questions Retainer Subscription Plans",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Designed for individuals, families, and business owners needing comprehensive estate planning and asset protection.",
+   "links": [],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "**12-Month Commitment** All subscription plans require a 12-month commitment. Early termination of the subscription prior to the completion of the 12-month period will result in a cancellation fee.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Eviction Requests** Eviction services do not roll over and must be utilized within the month in which they are allocated. Unused eviction requests will not carry over to the following month.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Response Time** The Firm commits to responding to your legal inquiries within 24-48 hours of receiving a message from the client, in the client portal, during regular business hours (Monday to Friday, 9:00 AM – 5:00 PM). All phone calls with firm attorneys will be scheduled in advance. Subscribers will receive priority access to an attorney on staff, which includes expedited responses to messages during business hours.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Leases Utilized by the Firm** The Firm will provide updates and compliance checks For units that utilize the Firm’s leases only to ensure that your leases remain up-to-date with applicable laws and regulations.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Client Portal Access** Subscribers will have access to a client portal, where legal questions will be answered, and communication with the Firm can be managed efficiently. All messages must be communicated with firm attorneys through the client portal.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Payment and Fees** Payment is due monthly as outlined in the subscription plan. Failure to make timely payments may result in suspension of services until the account is brought current. Payments are processed automatically on a recurring monthly basis. If there is an issue with the payment method, the client will be notified, and services may be suspended until the issue is resolved.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Confidentiality** All communications between the Firm and the client are confidential and will be handled in accordance with applicable confidentiality and attorney-client privilege rules. However, the Firm is not responsible for maintaining confidentiality if the client shares information with third parties outside of the Firm.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Attorney Availability** While the Firm commits to responding to client inquiries within the stated timeframe, attorney availability may vary based on workload, scheduled time off, or unforeseen circumstances. In such cases, the Firm will notify the client as soon as possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Scope of Services** These services are limited to the scope defined in the specific retainer plan. Any services beyond what is included may be subject to additional fees and require a separate agreement.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**No Guarantee of Outcome** The Firm cannot guarantee any specific legal outcomes or results. All legal matters are subject to a variety of factors beyond the Firm’s control, including judicial decisions and the facts of each case.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Force Majeure** The Firm will not be liable for any failure or delay in the performance of its obligations under these terms caused by events beyond its reasonable control, including but not limited to natural disasters, pandemics, labor strikes, or government restrictions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Termination** Both the Firm and the client have the right to terminate the agreement after the 12-month commitment period with 30 days’ written notice. If the client wishes to terminate early, a cancellation fee may apply. All unused services will be forfeited upon termination.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Indemnification** The client agrees to indemnify and hold harmless the Firm from any claims, losses, or damages resulting from the client’s misuse of the services, including but not limited to wrongful evictions or violations of applicable law.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Legal Advice Limitations** The services provided under these plans are not intended to replace full legal representation for complex matters. Should a matter require extensive legal representation, a separate agreement and fee structure will be discussed.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Client Responsibilities** Clients are responsible for providing accurate and timely information to the Firm. Failure to do so may impact the Firm’s ability to provide accurate legal advice or services.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Modifications** The Firm reserves the right to modify these terms and conditions at any time. Subscribers will be notified of any changes, and continued use of the services will constitute acceptance of the updated terms.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "**Limitation of Liability** The Firm will not be liable for any indirect, special, or consequential damages arising from the use of the Legal Questions Retainer service.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "component": "accordion",
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/08/Depositphotos_161462410.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "Get in touch with us",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "form",
+   "note": "Lawmatics intake",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/VL_Logo_Blk100x.png",
+   "alt": "Vaughn law Logo",
+   "alt_missing": false,
+   "title": "",
+   "width": "666",
+   "height": "100",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "Vaughn Law offers its clients a different, more personalized and service orientated approach, by tailoring its representation to its client’s needs. At Vaughn Law, we understand that this may be an overwhelming, unfamiliar and stressful time for our clients, therefore we strive to help our clients understand the intricacies of the legal system and to keep them informed throughout the process.",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Address",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "350 Corey Avenue, St.\nPete Beach, FL 33706",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Phone Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 223-6080](tel:7272236080)",
+   "links": [
+    {
+     "text": "(727) 223-6080",
+     "href": "tel:7272236080"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Fax Number",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[(727) 645-4226](tel:7276454226)",
+   "links": [
+    {
+     "text": "(727) 645-4226",
+     "href": "tel:7276454226"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Email",
+   "links": [],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "p",
+   "text": "[Reception@dvaughnlaw.com](mailto:Reception@dvaughnlaw.com)",
+   "links": [
+    {
+     "text": "Reception@dvaughnlaw.com",
+     "href": "mailto:Reception@dvaughnlaw.com"
+    }
+   ],
+   "component": "blurb",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2020/04/footer-bg.jpg",
+   "alt": "",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "css-background",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Closing Services",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Realtors](https://dvaughnlaw.com/services/realtors/)",
+     "links": [
+      {
+       "text": "Realtors",
+       "href": "https://dvaughnlaw.com/services/realtors/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Consumers](https://dvaughnlaw.com/services/consumers/)",
+     "links": [
+      {
+       "text": "Consumers",
+       "href": "https://dvaughnlaw.com/services/consumers/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Lenders](https://dvaughnlaw.com/services/lenders/)",
+     "links": [
+      {
+       "text": "Lenders",
+       "href": "https://dvaughnlaw.com/services/lenders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Builders](https://dvaughnlaw.com/services/builders/)",
+     "links": [
+      {
+       "text": "Builders",
+       "href": "https://dvaughnlaw.com/services/builders/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/services/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/services/commercial/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h4",
+   "text": "Practice Areas",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business Entity Formation](https://dvaughnlaw.com/practice-areas/business-entity-formation/)",
+     "links": [
+      {
+       "text": "Business Entity Formation",
+       "href": "https://dvaughnlaw.com/practice-areas/business-entity-formation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Commercial](https://dvaughnlaw.com/practice-areas/commercial/)",
+     "links": [
+      {
+       "text": "Commercial",
+       "href": "https://dvaughnlaw.com/practice-areas/commercial/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Foreclosures](https://dvaughnlaw.com/practice-areas/foreclosures/)",
+     "links": [
+      {
+       "text": "Foreclosures",
+       "href": "https://dvaughnlaw.com/practice-areas/foreclosures/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Land Trusts](https://dvaughnlaw.com/practice-areas/land-trusts/)",
+     "links": [
+      {
+       "text": "Land Trusts",
+       "href": "https://dvaughnlaw.com/practice-areas/land-trusts/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Landlord/Tenant](https://dvaughnlaw.com/practice-areas/landlord-tenant/)",
+     "links": [
+      {
+       "text": "Landlord/Tenant",
+       "href": "https://dvaughnlaw.com/practice-areas/landlord-tenant/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Litigation](https://dvaughnlaw.com/practice-areas/litigation/)",
+     "links": [
+      {
+       "text": "Litigation",
+       "href": "https://dvaughnlaw.com/practice-areas/litigation/"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Real Estate Transaction](https://dvaughnlaw.com/practice-areas/real-estate-transactions/)",
+     "links": [
+      {
+       "text": "Real Estate Transaction",
+       "href": "https://dvaughnlaw.com/practice-areas/real-estate-transactions/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://localwebdesigncompany.com/vaughnlaw/wp-content/uploads/sites/238/2019/03/Beach-office-scaled.jpg",
+   "alt": "Architecture - Property",
+   "alt_missing": false,
+   "title": "Beach-office",
+   "width": "1800",
+   "height": "1200",
+   "source": "img",
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "embed",
+   "provider": "google-maps",
+   "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.197831041805!2d-82.74966069999999!3d27.7420435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2fd5bea45f9c9%3A0xd5c4f4a1323a4f56!2s350%20Corey%20Ave%2C%20St%20Pete%20Beach%2C%20FL%2033706!5e0!3m2!1sen!2sus!4v1694102817362!5m2!1sen!2sus",
+   "title": "",
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 1588
+}
