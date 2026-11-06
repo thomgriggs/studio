@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-location.html",
+ "slug": "small-business-location.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Location of a Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-location.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Importance of Location to a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Importance of Location to a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-location.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "small-business-location",
+   "width": "300",
+   "height": "204",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It is possible to have the best business plan, the best people, the best product – and still operate an unsuccessful business. How? Location, location, location. A good location can actually help a mediocre business survive, but a poor location can drive even a well-run business into insolvency. Superficially, of course, it’s important to locate the business where people can find it. But it’s just as important to understand zoning issues and potential legal restrictions to properly protect your corporate assets.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you decide the best place to set up shop, and whether it’s more advantageous to buy the property or to lease it. The small business consultants from Reliance have helped hundreds of companies reach maximum profitability since opening our doors in 1984. We’ll help answer all your questions about location, and if you choose to rent your office space, we’ll help make sure you enter a lease negotiation with the knowledge you need to protect your business. The major components of a lease agreement include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Non-compete clause – no competitors allowed to rent in the same building or retail center.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dispute resolution – Mediation? Arbitration? Court?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Default and termination – what are the notice requirements for both parties?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rent – how much will you pay now, and how much to renew the lease?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Utilities, taxes, maintenance – make sure you pay the proper proportion based on your projected use of the rental space.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Buildouts – what improvements or modifications are allowed, and who will pay for them?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sublease – if the business fails or the space proves inadequate, can you sublet the space?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For all the answers about why location is important to your small business, [contact](http://www.reliancecpa.com//contact.html)Reliance Consulting today. Our goal is to provide small business accounting services and advice that deliver extraordinary value to your company.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 319
+}

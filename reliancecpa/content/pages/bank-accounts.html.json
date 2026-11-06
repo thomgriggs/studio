@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/bank-accounts.html",
+ "slug": "bank-accounts.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "A Tampa CPA Discusses the Need for Bank Accounts",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/bank-accounts.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Need for Bank Accounts",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Need for Bank Accounts",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/bank-accounts.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s a quiet rite of passage for many American families: At a certain age, usually just before high school, a child receives a sum of money from his or her parents or grandparents in order to open a savings account. The amount of money doesn’t matter. It’s the initial exposure to the banking system that counts, with an underlying lesson in financial responsibility. Perhaps because it was passed on from one generation to the next, many of us take for granted the need for bank accounts.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you have a personal savings account, a checking account, a money market account, a certificate of deposit (CD) or other funds installed with a bank, your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC is here to help make sense of it all.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Why do you need a bank account? Primarily, for convenience. A bank account enables you to:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Manage your finances",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Earn interest on your money",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use a debit card or check card, rather than cash",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Transfer money online between savings and checking accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pay bills online",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Demonstrate your assets to a potential lender",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Write personal checks",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Of course, none of these benefits is available to you if you keep your money stashed under a mattress at home. However, unlike a bank, your mattress won’t charge you a fee to take care of your money. A Tampa CPA at Reliance Consulting can help get the most out of your bank accounts. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 255
+}

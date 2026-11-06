@@ -1,0 +1,4 @@
+{# Page shell: service detail. Breadcrumbs and section nav of the tier above the title, then the modules (title, intro, who it is for, what we do, list, text). Inherits the tier's territory; a local or untiered page is plain brand. #}
+{% extends "_base.html" %}
+{% block main %}{% include "_crumbs.html" %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "nav": nav}) }}
+{% endfor %}{% endblock %}

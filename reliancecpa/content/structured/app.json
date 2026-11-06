@@ -1,0 +1,138 @@
+{
+ "url": "https://www.reliancecpa.com/app",
+ "slug": "app",
+ "template": "client-resources",
+ "family": "S1",
+ "title": "Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet",
+ "seo": {
+  "title_tag": "Reliance Consulting iPhone | iPad | Android | Mobile Financial App",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/app",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet"
+   }
+  },
+  {
+   "module": "image",
+   "slots": {
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/app-logo3.png",
+     "alt": "Reliance Consulting App"
+    }
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "We are delighted to launch the Reliance mobile app! Our mobile app has been under development for over one year and we are proud to announce its availability to all our clients. Using the mobile app, you should be able to access, any document we produce, including tax returns and financials, through your smart phone or tablet."
+     },
+     {
+      "type": "p",
+      "text": "The iPhone, iPad and Android app is available to download in the iTunes® store and the Android® market. Simply follow these easy steps to log into your private portal on your smart phone."
+     },
+     {
+      "type": "p",
+      "text": "**Downloading the Reliance Consulting App:**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "steps",
+   "slots": {
+    "items": [
+     {
+      "text": "Connect to iTunes or the Android market on your smart phone."
+     },
+     {
+      "text": "Search for NetClient CS"
+     },
+     {
+      "text": "Download the free app"
+     },
+     {
+      "text": "Login with the same user name and password that you use for client login on our website."
+     },
+     {
+      "text": "Voila—All your tax and financial documents are now available to you on your mobile device. You have the ability to print and forward the documents via email."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Helpful Tips**:"
+     }
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": true,
+    "items": [
+     {
+      "text": "If you are not setup on our net client portals, you can call our office to quickly sign up. Once your user name and password is established, you can access your portal from any computer or an Apple or Android device."
+     },
+     {
+      "text": "If you do not see a particular document in your portal, please contact us and we will be more than happy to upload it for your convenience."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "At Reliance, we are continuously committed improve our client experience. The mobile app is our latest effort to offer 24/7 access to important financial documents literally at your fingertips. [Contact us](http://www.reliancecpa.com/contact.html) to learn more about the services offered from Reliance Consulting, LLC, or to schedule your free, no obligation consultation regarding your financial needs."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/mobile-app/",
+  "role": "client-resource",
+  "old_path": "/app"
+ },
+ "short_title": "Mobile App"
+}

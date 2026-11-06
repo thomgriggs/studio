@@ -1,0 +1,112 @@
+{
+ "url": "https://www.reliancecpa.com/articles.html/romney/",
+ "slug": "articles.html__romney",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/articles.html/romney",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "romney - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/articles.html/romney/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "romney",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Articles](https://www.reliancecpa.com/articles.html)",
+   "links": [
+    {
+     "text": "← Articles",
+     "href": "https://www.reliancecpa.com/articles.html"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "romney",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 15, 2012 | Full size is [268 × 188](https://www.reliancecpa.com/wp-content/uploads/romney.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "268 × 188",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/romney.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/romney.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "268",
+   "height": "188",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/articles.html/obama",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "irs dispute",
+   "href": "https://www.reliancecpa.com/articles.html/irs-1",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "obama",
+   "href": "https://www.reliancecpa.com/articles.html/obama",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/articles.html/romney).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/articles.html/romney"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 19
+}

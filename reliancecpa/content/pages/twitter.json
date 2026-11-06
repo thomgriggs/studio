@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/twitter",
+ "slug": "twitter",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "insights-index",
+  "first_pass_action": "Consolidate",
+  "notes": "→ /insights/"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Twitter for Small Business | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/twitter",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Effective Uses of Twitter for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Effective Uses of Twitter for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Twitter-300x200.jpg",
+   "alt": "Twitter",
+   "alt_missing": false,
+   "title": "Twitter",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You might have been told by a marketing consultant – Internet marketing or otherwise – that social media was a waste of your time if you own a small business that deals in the service industry. If so, go back to that consultant and ask them to give specifics about why they think the way they do. Why? Because any marketing consultant that does not fully embrace the current and (especially) future relevance of social media platforms like Twitter is doing a disservice to its clients. Nothing could be more important, especially for small businesses, in terms of customer service that is nimble and creating meaningful conversions and brand loyalty.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, is particularly well-positioned to help small business owners embrace the use of Twitter and other social media outlets, because our firm is at the forefront of social media and the use of online marketing techniques. The key for small businesses is to avoid the mistakes that novice social media and Twitter users often make. These include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Not responding in a timely manner to customer complaints and other comments via Twitter, Facebook, and comments on Google+ Places.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Responding in an unprofessional or dismissive manner.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Failing to provide useful, relevant content on a website, then failing to share that non-existent content with a wide audience by using hash tags on Twitter.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Creating, then ignoring, a branded Twitter account.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Failing to take advantage of the many monitor-and-respond software platforms available for small businesses to take advantage of geographical targeting on Twitter.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Not engaging with the industry at large in order to build their reputation as an industry thought leader.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Twitter and other social media platforms used to be a novelty, especially for small businesses. Not anymore. No business these days would dare operate without a phone system, or a secure internal network, or a customized business email account. All of those things are required for quality customer service, and so is the proper utilization of Twitter. [Contact](http://reliancecpa.com/contact.html) Reliance today to learn more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 350
+}

@@ -1,0 +1,18 @@
+{#
+MODULE: profile
+PURPOSE: One person on the team page: a portrait (3:4) beside name in the serif, role in small caps, the bio paragraphs and an email link, as the original's leadership card scaled up. With no photo a neutral placeholder block is labelled "Photo needed".
+SLOTS: image, name, role, links[text, href], body[].
+SQUARESPACE: Two-column Section: Image block + Heading 3 + Text blocks, repeated per person (or Summary block over a team collection). Placeholder = an empty Image block.
+#}
+{% from "_macros.html" import body, img, ph %}
+<section class="m m-profile" data-module="profile" data-tone="{{ tone }}">
+  <div class="split split--profile">
+    <figure class="profile__pic">{% if s.image %}{{ img(s.image) }}{% else %}{{ ph("portrait of " ~ s.name) }}{% endif %}</figure>
+    <div class="profile__text">
+      <p class="eyebrow">{{ s.role }}</p>
+      <h2 class="h-row" data-orig-level="2">{{ s.name }}</h2>
+      <div class="prose">{{ body(s.body, 4) }}</div>
+      {% for l in s.links %}<p class="profile__mail"><a href="{{ l.href|href }}">{{ l.text }}</a></p>{% endfor %}
+    </div>
+  </div>
+</section>

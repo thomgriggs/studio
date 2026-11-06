@@ -1,0 +1,120 @@
+{
+  "name": "01 Guided clarity",
+  "based_on": "reliancecpa/concept-01-source (deployed concept 01) + design/concepts-audit.md",
+  "description": "The deployed Guided clarity look as a Liftkit concept: Georgia 500 headlines with tight tracking over Arial body (system stacks, nothing loaded), ink green / coral / lime / sky / mint on cream and sand, full-bleed bands with 110px padding in a 1240px column, 8/16/22px radii, the 34px utility bar and sticky nav, ink buttons with coral, lime and outline variants. Signature modules (chart-card hero, the dark audience section, the 4-card service grid, the numbered flow, ruled journey rows, image-and-copy band, big pull quote, question cards, coral CTA band, dark footer) carried onto the shared module set; every other module and the ten page templates are extended in the same language. Three tier territories (teal, sage, amber) change only thin rules, eyebrows, tags, active nav, icon tiles and section tints.",
+  "logo": {
+    "src": "assets/reliance-logo.png",
+    "alt": "Reliance Consulting, LLC",
+    "href_home": true
+  },
+  "fonts": {
+    "heading": "Georgia, serif (500)",
+    "body": "Arial, Helvetica, sans-serif",
+    "google_url": ""
+  },
+  "colors": {
+    "ink": "#173e37",
+    "ink-2": "#294c45",
+    "footer": "#102e29",
+    "coral": "#ef765f",
+    "lime": "#c9e56d",
+    "sky": "#b9dfe5",
+    "mint": "#d7e8de",
+    "pink-chip": "#f6b3a6",
+    "cream": "#f7f6f2",
+    "sand": "#e9eee9",
+    "pale-green": "#edf1e8",
+    "mid-green": "#6fa18f",
+    "white": "#ffffff"
+  },
+  "territories": {
+    "teal": {
+      "label": "Tax Preparation",
+      "accent": "#2f8c93",
+      "ink": "#1c6269",
+      "tint": "#e3f0f1"
+    },
+    "sage": {
+      "label": "Business Accounting",
+      "accent": "#6fa18f",
+      "ink": "#3d6f5c",
+      "tint": "#e4efe8"
+    },
+    "gold": {
+      "label": "Business & Tax Consulting",
+      "accent": "#d79a22",
+      "ink": "#865a00",
+      "tint": "#f6eed7"
+    }
+  },
+  "tier_territory": {
+    "tax-preparation": "teal",
+    "business-accounting": "sage",
+    "business-tax-consulting": "gold"
+  },
+  "tier_photos": {
+    "tax-preparation": "assets/tax-planning.jpg",
+    "business-accounting": "assets/bookkeeping.jpg",
+    "business-tax-consulting": "assets/consulting-office.jpg"
+  },
+  "tones": {
+    "alternate": [
+      "a",
+      "b"
+    ],
+    "by_template": {
+      "insight-article": {
+        "alternate": [
+          "a"
+        ]
+      },
+      "content-page": {
+        "alternate": [
+          "a"
+        ]
+      },
+      "get-started": {
+        "alternate": [
+          "a"
+        ]
+      }
+    },
+    "fixed": {
+      "hero": "hero",
+      "title-banner": "hero",
+      "card-grid:tiers": "dark",
+      "card-grid:industries": "cream",
+      "card-grid:service-cards": "sand",
+      "card-grid:resources": "sand",
+      "reasons": "flow",
+      "steps": "flow",
+      "post-feed:cards": "pale",
+      "cta-band": "coral",
+      "contact-band": "cream",
+      "video-split": "mint",
+      "quote-tile": "a",
+      "callout": "a",
+      "stat-row": "cream",
+      "trust-strip": "cream",
+      "people": "a",
+      "choice-cards": "cream"
+    }
+  },
+  "notes": {
+    "tone a": "white ground",
+    "tone b": "cream ground (territory tint is kept for the hero, service cards, feed and tags)",
+    "territory": "wrapper class terr-teal | terr-sage | terr-gold sets --terr (thin rules, active nav), --terr-ink (eyebrows, tags), --terr-tint (section tint), --terr-soft (icon tiles). Brand ink and coral are never replaced."
+  },
+  "tag_territory": {
+    "tax": "teal",
+    "accounting": "sage",
+    "consulting": "gold",
+    "general": ""
+  },
+  "tag_labels": {
+    "tax": "Tax",
+    "accounting": "Accounting",
+    "consulting": "Business and consulting",
+    "general": "General"
+  }
+}

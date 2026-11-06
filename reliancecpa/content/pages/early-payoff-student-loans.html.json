@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/early-payoff-student-loans.html",
+ "slug": "early-payoff-student-loans.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Pay Student Debt Sooner | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/early-payoff-student-loans.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How to Pay Off Student Debt Sooner",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How to Pay Off Student Debt Sooner",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/early-payoff-student-loans.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "CPA in Tampa",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You’ve made it through college, and a rewarding career is (hopefully) on the horizon. If you were not fortunate enough to be able to pay cash for your education – or lucky enough to have earned a full-ride scholarship – chances are you left school with a substantial amount of student loan debt hanging over your head. It’s not uncommon in this day and age for students to leave school with $40,000 or more in debt, which only increases the urgency of finding a good-paying job as soon as possible.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine the best strategy for paying off your student loans. Many graduates decide to take the longest allowable period to pay off their loans, and some might even request deferments. However, depending on your circumstance, what usually makes the most sense is paying off student loans as soon as possible in order to free up income for investments and other large purchases, such as a house. There are a number of ways to attack student debt for faster payoff, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Start making payments during the post-graduate grace period, if possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pay extra each month to the principal amount of the loan in order to reduce the overall amount of interest you’ll owe over the life of the loan.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If any extra money comes your way, apply it to the student loan.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ultimately, it will be up to you what steps you take to make good on your student loans. It may be that the student loan interest deduction of $2,500 per year makes it worthwhile to take your time paying off the loan – but most people will find that it makes more sense to eliminate the debt altogether. Either way, it’s a good idea to get some advice from a trained financial expert from Reliance Consulting. [Contact](http://www.reliancecpa.com/contact.html) us today to get started with a complimentary financial health checkup, and for advice about paying off your student loan as soon as possible.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 345
+}

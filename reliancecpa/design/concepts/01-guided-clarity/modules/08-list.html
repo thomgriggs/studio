@@ -1,0 +1,11 @@
+{#
+MODULE: list
+PURPOSE: A list that carries a section, as the original's ruled detail list: each item a hairline-ruled row with a coral (territory on a tier page) dot, or the numeral for an ordered list. With a title it is a split, the Georgia h2 left, the list right (two columns when long); without a title it sits in the reading column.
+SLOTS: title, ordered, items[lead, text, children].
+SQUARESPACE: Text block with a bulleted or numbered list (Heading 2 above it in the left column). The ruled rows and coloured dots are custom CSS; native fallback is the default bullets.
+#}
+{% from "_macros.html" import lst %}
+<section class="m m-list{{ ' m-list--titled' if s.title }}" data-module="list" data-tone="{{ tone }}">
+  {% if s.title %}<div class="headed__head"><h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>{% endif %}
+  <div class="listbody prose{{ ' listbody--cols' if s["items"]|length >= 8 }}">{{ lst({"type": "ol" if s.ordered else "ul", "items": s["items"]}) }}</div>
+</section>

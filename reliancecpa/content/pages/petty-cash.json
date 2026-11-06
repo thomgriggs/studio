@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/petty-cash",
+ "slug": "petty-cash",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Petty Cash | Tampa CPA | Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/petty-cash",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Why a Small Business Needs Petty Cash On Hand",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Why a Small Business Needs Petty Cash On Hand",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/petty-cash-300x200.jpg",
+   "alt": "Petty Cash",
+   "alt_missing": false,
+   "title": "Petty Cash",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A petty cash fund is how some companies pay minor expenses that crop up from time to time. While not every business needs to keep petty cash on hand, it can be a valuable tool for maintaining sound bookkeeping practices. For example, an Internet marketing firm lives and dies on the reliability and security of its inter-office network. If part of that network unexpectedly malfunctions – the wireless router, for instance – it has to be addressed quickly. Not every company has a corporate credit card, but a relatively inexpensive piece of hardware such as a new router is the perfect item to purchase with petty cash.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether your business needs to keep petty cash on hand, and if so, how much is necessary. Every company has its own unique day-to-day requirements, and the amount of money to set aside “just in case” will naturally differ from business to business. Similarly, the amount of money needed by a particular company might fluctuate, depending on whether the business is seasonal, or during times of critical upheaval. The one thing every business owner should remember to do is to pay back the amount of money taken from petty cash as soon as possible, because failing to do so can throw the books into disarray.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information about this and other savvy business practices, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting. Since opening our doors in 1984, we have helped hundreds of small businesses in the Tampa Bay area achieve profitability. We are here to help business owners make the best use of their time.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 283
+}

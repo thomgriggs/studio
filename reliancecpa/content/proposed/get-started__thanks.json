@@ -1,0 +1,60 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/get-started/thanks/",
+ "slug": "get-started__thanks",
+ "template": "get-started",
+ "family": "proposed",
+ "title": "Thank you",
+ "flow": true,
+ "own_closing": true,
+ "seo": {
+  "title_tag": "Thank you | Reliance Consulting",
+  "meta_description": "Your request has been sent to Reliance Consulting.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`. Step 3: the form's post-submit page.",
+ "verified": [
+  "Phone and address: live /contact.html",
+  "Client portal page: live /reliance-consulting-netclient-portals"
+ ],
+ "confirm": [
+  "Thanks heading and lines (new copy)",
+  "'A member of the team will follow up by the way you chose.' is a promise about follow-up; the firm should confirm how and how fast it can follow up before launch"
+ ],
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Thanks, we have your request."
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "A member of the team will follow up by the way you chose."
+     }
+    ]
+   }
+  },
+  {
+   "module": "contact-band",
+   "slots": {
+    "title": "Need to talk sooner?",
+    "text": "Call us.",
+    "lines": [
+     {
+      "label": "Phone",
+      "value": "(813) 931-7258"
+     }
+    ],
+    "button": {
+     "text": "Back to the home page",
+     "page": "home"
+    }
+   }
+  }
+ ]
+}

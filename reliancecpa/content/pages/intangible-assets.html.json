@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/intangible-assets.html",
+ "slug": "intangible-assets.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Intangible Assets",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/intangible-assets.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Intangible Assets",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Intangible Assets",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/intangible-assets.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When it comes to composing a balance sheet or financial statement, one of the first items to determine is your list of assets. There are three main types of assets. Current assets are cash and other items that mature in a year or less. Fixed assets are land, machinery and other items that take longer than a year to mature or appreciate. These two types of assets are fairly easy to determine, primarily because most of them already have an assigned cash value. Intangible assets, on the other hand, are a bit more complicated. In fact, because of the difficulty in determining their actual worth, many analysts ignore them as assets altogether.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine whether it’s worth your time and effort to assign a value to your intangible assets. What are they, exactly? They are aspects of your business that require a certain amount of financial investment, but may never mature into cash or may provide non-cash benefits over a long period of time. Examples include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Research and development",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Patents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Market research",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Goodwill in the community or industry",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Organizational expense",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has helped hundreds of small businesses throughout the state of Florida with accounting and tax services. [Contact](http://www.reliancecpa.com/contact.html) us today for a free financial health checkup or for help determining the value of your company’s intangible assets.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 235
+}

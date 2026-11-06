@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/advertising-budget",
+ "slug": "advertising-budget",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Advertising Budget | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/advertising-budget",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Gives Advice on Setting an Advertising Budget for a New Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Gives Advice on Setting an Advertising Budget for a New Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Advertising-Budget-300x284.jpg",
+   "alt": "Advertising Budget",
+   "alt_missing": false,
+   "title": "Advertising Budget",
+   "width": "300",
+   "height": "284",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are no absolutes when it comes to advertising, and that includes setting the budget for how much money your company needs to spend on it. By its very nature, most advertising – even targeted ads, like the panel ads that sometimes seem to follow you around on the Internet – is ultimately only as persuasive as the potential customers allow it to be. That said, there is no argument to be made that you can get by without spending at least some money on advertising. The question, especially for a new business, is how much is the right amount?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you figure out the right amount of money to spend on advertising. Keep in mind that the advertising and marketing budget will almost always be fluid, depending on a wide range of factors. These include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The industry",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Season fluctuations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sales projections",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Start by defining the goals of your advertising campaign. Is it simply to increase sales? To improve company visibility? To build your brand? All of this and more will be factored in as you determine how much is the right amount to spend. To learn more about the factors that influence your advertising budget, and to get started working on a smart, cost-effective advertising strategy, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 239
+}

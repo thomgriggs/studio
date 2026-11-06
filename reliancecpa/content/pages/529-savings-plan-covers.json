@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/529-savings-plan-covers",
+ "slug": "529-savings-plan-covers",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-09-04",
+ "seo": {
+  "title_tag": "What a 529 Savings Plan Covers | CPA in Tampa",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/529-savings-plan-covers",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help Parents Understand the Details of a 529 College Savings Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help Parents Understand the Details of a 529 College Savings Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/529-Savings-Plan-Covers-300x237.jpg",
+   "alt": "529 Savings Plan",
+   "alt_missing": false,
+   "title": "529 Savings Plan",
+   "width": "300",
+   "height": "237",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service has relatively broad definitions laid out for what a 529 college savings plan covers and what it does not. The items covered by a 529 plan are known as qualified education expenses. These include a few things you might expect: tuition, fees, room, and board. Where the confusion might come in about what a 529 savings plan covers is in the precise definitions of “room” and “board.” Before housing and food costs are deducted from your 529 account, they should be confirmed with the university’s or college’s financial aid office. This holds true for nearly every expense.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are interested in setting up a 529 college savings plan, or if you are a Florida resident interested in taking advantage of the college pre-paid program, let a [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, be your guide. A 529 savings plan, which provides certain tax benefits, is a good way to go if you don’t want to have to worry about how to pay for your college in the future. Similarly, the Florida pre-paid program allows you to plan now for college expenses, while also locking in the current tuition rate. However, don’t expect either kind of plan to cover all expenses of school. The excess cost can run into the thousands each semester, money that might not be covered if you haven’t taken the over-run into account. These hidden expenses can include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Personal lifestyle expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Off-campus housing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Travel between home and school",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain activity fees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Don’t let the promise of a 529 savings plan turn into heart break later when more money is required for college than you planned for. To make a thorough examination of your child’s potential college costs – and to determine whether you are setting aside enough money now to cover them – [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 324
+}

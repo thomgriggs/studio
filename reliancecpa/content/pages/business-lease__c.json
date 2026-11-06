@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/business-lease/c/",
+ "slug": "business-lease__c",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/business-lease/c",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Business Lease - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-lease/c/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Lease",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Tells You What to Watch Out for in a Business Lease](https://www.reliancecpa.com/business-lease)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Tells You What to Watch Out for in a Business Lease",
+     "href": "https://www.reliancecpa.com/business-lease"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Business Lease",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished November 2, 2012 | Full size is [900 × 602](https://www.reliancecpa.com/wp-content/uploads/Business-Lease.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 602",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Business-Lease.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Business-Lease.jpg",
+   "alt": "Business Lease",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "602",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Business-Lease.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/business-lease/c).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/business-lease/c"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

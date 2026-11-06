@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/before-big-purchase",
+ "slug": "before-big-purchase",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Before a Big Purchase | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/before-big-purchase",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains What Not to do Before Making a Big Purchase",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains What Not to do Before Making a Big Purchase",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Before-Big-Purchase-300x200.jpg",
+   "alt": "Before Big Purchase",
+   "alt_missing": false,
+   "title": "Before Big Purchase",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you prepare to take out a loan to make a big purchase, such as a home, there are a number of steps you must take. Most of them have to do with getting your financial history in order, so that a financing body can make an informed decision about your credit-worthiness and ability to meet your payment obligations. Even as you pull together the virtual mountain of data you’ll need to help you get approved for your purchase, there are a number of missteps you’ll want to avoid along the way.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can give you all the details about what you’ll need to do as you move toward securing a loan for a major purchase. This means avoiding those potential missteps, which might include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Spending big on another item during the closing process",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Failing to thoroughly vet your lending company",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Not exploring other financing options",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Not willfully disclosing important information about your financial past",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rushing through the process",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dragging your feet on your responsibilities as a buyer, such as supplying relevant documents",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting wants to help you achieve your dreams, like buying a new home or reaching financial security in retirement. It starts with planning, which will help you make the right decisions as you reach various crossroads along the way. If you have any questions about your ability to afford the house of your dreams – now or in the near future – [contact](http://reliancecpa.com/contact.html) Reliance today and we will be happy to help you find the answers.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 269
+}

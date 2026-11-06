@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/employer-responsibilities.html",
+ "slug": "employer-responsibilities.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Employer Responsibilities",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/employer-responsibilities.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Employer Responsibilities With New Hires",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Employer Responsibilities With New Hires",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/employer-responsibilities.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "287",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you are the owner of a growing business or starting from the ground floor, when it’s time to hire new employees, the process is far more complex than merely posting a want ad on-line or in the local newspaper. An employer has many legal responsibilities to honor when it comes to employees, and ignoring these responsibilities – or proceeding without gaining a thorough knowledge of them – can be extremely damaging to the business.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can provide all the guidance and advice you need to live up to your legal responsibilities as an employer. Since opening our doors in 1984, Reliance has helped hundreds of businesses find and stay on the path to profitability. Ensuring proper procedures are followed when making new hires is only one of many services we can provide. Here are just a few of the basics of making new hires:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Obtain an employer identification number",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set up records for withholding taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Verify employee eligibility to work in the U.S.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Register with the state new hire reporting program",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtain worker’s compensation insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Register for unemployment insurance tax payment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtain disability insurance, if required",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Post required notices in the workplace",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "File taxes in a timely manner",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The staff at Reliance is always reachable and takes pride in being extraordinarily responsive to our clients’ needs. A business consultant from Reliance can help you find more time to focus on the big picture, while we handle the small – but incredibly important – details that are the pulse of any thriving business. [Contact](http://www.reliancecpa.com/contact.html) us today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 277
+}

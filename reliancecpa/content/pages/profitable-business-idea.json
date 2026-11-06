@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/profitable-business-idea",
+ "slug": "profitable-business-idea",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Profitable Business Idea | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/profitable-business-idea",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Turn Your Idea Into a Profitable Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Turn Your Idea Into a Profitable Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Idea-300x218.jpg",
+   "alt": "Business Idea",
+   "alt_missing": false,
+   "title": "Business Idea",
+   "width": "300",
+   "height": "218",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just because you have a brilliant idea for a product or service, it doesn’t necessarily mean you’re ready to turn that idea into a money-making proposition. On the other hand, if you are absolutely certain that you have a winning concept for a new company, you owe it to yourself to do everything in your power to get that product or service on the market in as strategic a fashion as possible. The last thing you want to do is rush into creating a new business, especially considering the attrition rate for small businesses in the U.S. is so high.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can provide the advice you need to give your new company a leg up right from the start. Among the items you’ll need to consider before you start a new business:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Will you rent office space or be on-line only?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Where will you get seed money?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you have what it takes to face the daily ups and downs of owning a business?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are you willing to put in long, often difficult hours?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will you need to hire employees?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What legal form will you give your business? Sole proprietorship? LLC? Partnership?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you have the entrepreneurial know-how to create a business plan?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have you conducted the right kind of market research?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These questions are only the beginning. Ultimately, only you can answer the question about your durability in the face of potential adversity. But with the help of a small business consultant from Reliance Consulting, you can get a head start on many other questions and lay the groundwork for a profitable business. To get started, [contact](http://www.reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 291
+}

@@ -1,0 +1,1952 @@
+{
+ "source_page": "https://www.reliancecpa.com/",
+ "note": "Header variants across pages: 1; footer variants: 1. This is the most common (909 / 909 pages).",
+ "logo": [
+  {
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/logo.png",
+   "alt": "Reliance Consulting Logo",
+   "alt_missing": false,
+   "link_href": "https://www.reliancecpa.com/"
+  }
+ ],
+ "header_top_bar": [
+  {
+   "type": "p",
+   "text": "Call Us: (813) 931-7258 |[Client Login](https://www.reliancecpa.com/client-portal-login)",
+   "links": [
+    {
+     "text": "Client Login",
+     "href": "https://www.reliancecpa.com/client-portal-login"
+    }
+   ],
+   "region": "header"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Follow Us On:",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Reliance Consulting Facebook Page](http://www.facebook.com/pages/Reliance-Consulting/100601013341144?sk=info)",
+     "links": [
+      {
+       "text": "Reliance Consulting Facebook Page",
+       "href": "http://www.facebook.com/pages/Reliance-Consulting/100601013341144?sk=info"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Reliance Consulting Twitter Page](https://twitter.com/#!/RelianceCPA)",
+     "links": [
+      {
+       "text": "Reliance Consulting Twitter Page",
+       "href": "https://twitter.com/#!/RelianceCPA"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Reliance Consulting LinkedIn Page](http://www.linkedin.com/in/amolnirgudkar)",
+     "links": [
+      {
+       "text": "Reliance Consulting LinkedIn Page",
+       "href": "http://www.linkedin.com/in/amolnirgudkar"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Reliance Consulting Google + Page](https://plus.google.com/112203268693511335048)",
+     "links": [
+      {
+       "text": "Reliance Consulting Google + Page",
+       "href": "https://plus.google.com/112203268693511335048"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Reliance Consulting Wordpress Blog](http://reliancecpa.wordpress.com/)",
+     "links": [
+      {
+       "text": "Reliance Consulting Wordpress Blog",
+       "href": "http://reliancecpa.wordpress.com/"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "header"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/facebook.png",
+   "alt": "Reliance Consulting Facebook Page",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "header"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/twitter.png",
+   "alt": "Reliance Consulting Twitter Page",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "header"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/linkedin.png",
+   "alt": "Reliance Consulting LinkedIn Page",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "header"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/google-plus.png",
+   "alt": "Reliance Consulting Google + Page",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "header"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/themes/relianceconsulting/images/wordpress.png",
+   "alt": "Reliance Consulting Wordpress Blog",
+   "alt_missing": false,
+   "title": "",
+   "width": "",
+   "height": "",
+   "source": "img",
+   "region": "header"
+  }
+ ],
+ "nav": [
+  {
+   "text": "Home",
+   "href": "https://www.reliancecpa.com/"
+  },
+  {
+   "text": "Tax Preparation",
+   "href": "https://www.reliancecpa.com/tax-preparation.htm",
+   "children": [
+    {
+     "text": "Tampa CPA for Tax Planning",
+     "href": "https://www.reliancecpa.com/tax-planning.htm"
+    },
+    {
+     "text": "Business Tax Accountant",
+     "href": "https://www.reliancecpa.com/business-tax.htm"
+    },
+    {
+     "text": "Income Tax Services",
+     "href": "https://www.reliancecpa.com/income-tax-services.htm"
+    },
+    {
+     "text": "Tax Preparer",
+     "href": "https://www.reliancecpa.com/tax-preparer.htm"
+    },
+    {
+     "text": "Tax Problems & IRS Problem Resolution",
+     "href": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm"
+    }
+   ]
+  },
+  {
+   "text": "Small Business Accountant",
+   "href": "https://www.reliancecpa.com/small-business-accounting.htm",
+   "children": [
+    {
+     "text": "Bookkeeping",
+     "href": "https://www.reliancecpa.com/bookkeeping.htm"
+    },
+    {
+     "text": "QuickBooks Accountant",
+     "href": "https://www.reliancecpa.com/quickbooks-accountant.htm"
+    },
+    {
+     "text": "Reliance BackOffice",
+     "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+    },
+    {
+     "text": "Payroll Services",
+     "href": "https://www.reliancecpa.com/payroll-services.htm"
+    },
+    {
+     "text": "Cash Flow Management",
+     "href": "https://www.reliancecpa.com/cash-flow-management.htm"
+    },
+    {
+     "text": "Business Finance Consultant",
+     "href": "https://www.reliancecpa.com/business-finance-consultant.htm"
+    },
+    {
+     "text": "Strategic Business Planning",
+     "href": "https://www.reliancecpa.com/business-planning-services.htm"
+    },
+    {
+     "text": "New Business Planning",
+     "href": "https://www.reliancecpa.com/new-business-planning.htm"
+    }
+   ]
+  },
+  {
+   "text": "Business Consultants",
+   "href": "https://www.reliancecpa.com/business-consultants.htm",
+   "children": [
+    {
+     "text": "Physician Accountant & CPA",
+     "href": "https://www.reliancecpa.com/physician-accountants.htm"
+    },
+    {
+     "text": "Reliance BackOffice",
+     "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+    },
+    {
+     "text": "Retail Accounting",
+     "href": "https://www.reliancecpa.com/retail-accounting.htm"
+    },
+    {
+     "text": "Restaurant, Hotel & Hospitality",
+     "href": "https://www.reliancecpa.com/restaurant-hotel-accountant.htm"
+    },
+    {
+     "text": "Real Estate CPA & Accountant",
+     "href": "https://www.reliancecpa.com/real-estate-cpa.htm"
+    },
+    {
+     "text": "Financial Planning",
+     "href": "https://www.reliancecpa.com/financial-planning.htm"
+    }
+   ]
+  },
+  {
+   "text": "Dental CPA",
+   "href": "https://www.reliancecpa.com/dental-cpa",
+   "children": [
+    {
+     "text": "Accounting and Tax Services",
+     "href": "https://www.reliancecpa.com/dental-accounting-tax-services"
+    },
+    {
+     "text": "Financing Assistance",
+     "href": "https://www.reliancecpa.com/dental-financing-assistance"
+    },
+    {
+     "text": "Practice Acquisition Analysis",
+     "href": "https://www.reliancecpa.com/dental-practice-acquisition-analysis"
+    },
+    {
+     "text": "Basic Valuation Analysis",
+     "href": "https://www.reliancecpa.com/basic-valuation-analysis"
+    },
+    {
+     "text": "Choosing a Bank",
+     "href": "https://www.reliancecpa.com/dental-choosing-a-bank"
+    },
+    {
+     "text": "Asset Protection Planning",
+     "href": "https://www.reliancecpa.com/dental-asset-protection-planning"
+    },
+    {
+     "text": "Dental Marketing",
+     "href": "https://www.reliancecpa.com/dental-marketing-advertising-agency"
+    },
+    {
+     "text": "Reliance BackOffice",
+     "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+    }
+   ]
+  },
+  {
+   "text": "Veterinary CPA",
+   "href": "https://www.reliancecpa.com/veterinary-cpa",
+   "children": [
+    {
+     "text": "Bill Pay",
+     "href": "https://www.reliancecpa.com/veterinary-bill-pay"
+    },
+    {
+     "text": "Benchmarking",
+     "href": "https://www.reliancecpa.com/veterinary-benchmarking"
+    },
+    {
+     "text": "Budgets and Financial Projections",
+     "href": "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections"
+    },
+    {
+     "text": "Business Entity Structuring",
+     "href": "https://www.reliancecpa.com/veterinary-business-entity-structuring"
+    },
+    {
+     "text": "Business Plan Development",
+     "href": "https://www.reliancecpa.com/veterinary-business-plan-development"
+    },
+    {
+     "text": "Business Loan Assistance",
+     "href": "https://www.reliancecpa.com/veterinary-business-loan-assistance"
+    },
+    {
+     "text": "Buying vs. Leasing",
+     "href": "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis"
+    },
+    {
+     "text": "Cash Flow Planning",
+     "href": "https://www.reliancecpa.com/veterinary-cash-flow-planning"
+    },
+    {
+     "text": "Financial and Consulting Services",
+     "href": "https://www.reliancecpa.com/veterinary-financial-and-consulting-services"
+    },
+    {
+     "text": "Financial Statement Preparation",
+     "href": "https://www.reliancecpa.com/veterinary-financial-statement-preparation"
+    },
+    {
+     "text": "Hiring Assistance",
+     "href": "https://www.reliancecpa.com/veterinary-hiring-assistance"
+    },
+    {
+     "text": "Offsite Bookkeeping",
+     "href": "https://www.reliancecpa.com/veterinary-bookkeeping"
+    },
+    {
+     "text": "Outsourced Controller",
+     "href": "https://www.reliancecpa.com/veterinary-outsourced-controller"
+    },
+    {
+     "text": "IRS Problem Resolution",
+     "href": "https://www.reliancecpa.com/veterinary-irs-problem-resolution"
+    },
+    {
+     "text": "Purchasing a Practice",
+     "href": "https://www.reliancecpa.com/veterinary-purchasing-a-practice"
+    },
+    {
+     "text": "Retirement Planning",
+     "href": "https://www.reliancecpa.com/veterinary-retirement-planning"
+    },
+    {
+     "text": "Succession Planning",
+     "href": "https://www.reliancecpa.com/veterinary-succession-planning"
+    },
+    {
+     "text": "Tax Planning",
+     "href": "https://www.reliancecpa.com/veterinary-tax-planning"
+    },
+    {
+     "text": "Virtual Accounting",
+     "href": "https://www.reliancecpa.com/veterinary-virtual-accounting"
+    },
+    {
+     "text": "QuickBooks",
+     "href": "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support"
+    }
+   ]
+  },
+  {
+   "text": "About Us",
+   "href": "https://www.reliancecpa.com/firmprofile.html"
+  },
+  {
+   "text": "Contact Us",
+   "href": "https://www.reliancecpa.com/contact.html"
+  },
+  {
+   "text": "Employment Opportunities",
+   "href": "https://www.reliancecpa.com/custom2.html"
+  },
+  {
+   "text": "Reliance Blog",
+   "href": "http://reliancecpa.wordpress.com/"
+  },
+  {
+   "text": "Accessibility",
+   "href": "https://www.reliancecpa.com/accessibility"
+  }
+ ],
+ "footer": [
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Articles",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "[Obama pragmatist or ideologue?](https://www.reliancecpa.com/obama-pragmatist-or-ideologue)",
+         "links": [
+          {
+           "text": "Obama pragmatist or ideologue?",
+           "href": "https://www.reliancecpa.com/obama-pragmatist-or-ideologue"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[The Romney Tax Plan](https://www.reliancecpa.com/the-romney-tax-plan)",
+         "links": [
+          {
+           "text": "The Romney Tax Plan",
+           "href": "https://www.reliancecpa.com/the-romney-tax-plan"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Appealing a Tax Dispute](https://www.reliancecpa.com/appealing-a-tax-dispute)",
+         "links": [
+          {
+           "text": "Appealing a Tax Dispute",
+           "href": "https://www.reliancecpa.com/appealing-a-tax-dispute"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[More Reliance Articles](http://www.reliancecpa.com/articles.html)",
+         "links": [
+          {
+           "text": "More Reliance Articles",
+           "href": "http://www.reliancecpa.com/articles.html"
+          }
+         ],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "[The ‘Bottom Line’ in Accounting](https://www.reliancecpa.com/bottom-line)",
+         "links": [
+          {
+           "text": "The ‘Bottom Line’ in Accounting",
+           "href": "https://www.reliancecpa.com/bottom-line"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Paying quarterly estimated tax](https://www.reliancecpa.com/estimated-tax.html)",
+         "links": [
+          {
+           "text": "Paying quarterly estimated tax",
+           "href": "https://www.reliancecpa.com/estimated-tax.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Know Your Taxpayer Rights](https://www.reliancecpa.com/taxpayer-rights.html)",
+         "links": [
+          {
+           "text": "Know Your Taxpayer Rights",
+           "href": "https://www.reliancecpa.com/taxpayer-rights.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Health Reform and Hire Act](https://www.reliancecpa.com/health-reform-and-hire-act.html)",
+         "links": [
+          {
+           "text": "Health Reform and Hire Act",
+           "href": "https://www.reliancecpa.com/health-reform-and-hire-act.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Making Money in Medicine](https://www.reliancecpa.com/making-money-in-medicine.htm)",
+         "links": [
+          {
+           "text": "Making Money in Medicine",
+           "href": "https://www.reliancecpa.com/making-money-in-medicine.htm"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Cancellation of Debt Income](https://www.reliancecpa.com/cancellation-of-debt-income.htm)",
+         "links": [
+          {
+           "text": "Cancellation of Debt Income",
+           "href": "https://www.reliancecpa.com/cancellation-of-debt-income.htm"
+          }
+         ],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "[Health Coverage Tax Credit](https://www.reliancecpa.com/health-care-tax-credit)",
+         "links": [
+          {
+           "text": "Health Coverage Tax Credit",
+           "href": "https://www.reliancecpa.com/health-care-tax-credit"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Real Estate Losses](https://www.reliancecpa.com/real-estate-losses.html)",
+         "links": [
+          {
+           "text": "Real Estate Losses",
+           "href": "https://www.reliancecpa.com/real-estate-losses.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Increase Your Tax Refund](https://www.reliancecpa.com/increase-tax-return.html)",
+         "links": [
+          {
+           "text": "Increase Your Tax Refund",
+           "href": "https://www.reliancecpa.com/increase-tax-return.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Trillion is the New Billion: Part 1](https://www.reliancecpa.com/trillion-is-the-new-billion.html)",
+         "links": [
+          {
+           "text": "Trillion is the New Billion: Part 1",
+           "href": "https://www.reliancecpa.com/trillion-is-the-new-billion.html"
+          }
+         ],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "[Trillion is the New Billion: Part 2](https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html)",
+         "links": [
+          {
+           "text": "Trillion is the New Billion: Part 2",
+           "href": "https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[The Time for Asset Protection](https://www.reliancecpa.com/the-time-for-asset-protection-s-now.html)",
+         "links": [
+          {
+           "text": "The Time for Asset Protection",
+           "href": "https://www.reliancecpa.com/the-time-for-asset-protection-s-now.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Whole Life Insurance](https://www.reliancecpa.com/whole_life_insurance.html)",
+         "links": [
+          {
+           "text": "Whole Life Insurance",
+           "href": "https://www.reliancecpa.com/whole_life_insurance.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[Variable Universal Life](https://www.reliancecpa.com/variable_universal_life.html)",
+         "links": [
+          {
+           "text": "Variable Universal Life",
+           "href": "https://www.reliancecpa.com/variable_universal_life.html"
+          }
+         ],
+         "children": []
+        },
+        {
+         "text": "[More From Your Tampa CPA …](https://www.reliancecpa.com/more-information.htm)",
+         "links": [
+          {
+           "text": "More From Your Tampa CPA …",
+           "href": "https://www.reliancecpa.com/more-information.htm"
+          }
+         ],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "a",
+   "text": "More Information +",
+   "href": "",
+   "is_button": false,
+   "region": "footer"
+  },
+  {
+   "type": "h3",
+   "text": "Serving Greater Tampa Bay",
+   "links": [],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tampa Bay Area](https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm)",
+     "links": [
+      {
+       "text": "Tampa Bay Area",
+       "href": "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Tampa, Brandon, Hillsborough](https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm)",
+     "links": [
+      {
+       "text": "Tampa, Brandon, Hillsborough",
+       "href": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[St Petersburg, Clearwater](https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm)",
+     "links": [
+      {
+       "text": "St Petersburg, Clearwater",
+       "href": "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Pasco County](https://www.reliancecpa.com/cpa-firm-pasco-county.htm)",
+     "links": [
+      {
+       "text": "Pasco County",
+       "href": "https://www.reliancecpa.com/cpa-firm-pasco-county.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Brooksville, Spring Hill, Hernando](https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm)",
+     "links": [
+      {
+       "text": "Brooksville, Spring Hill, Hernando",
+       "href": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Lakeland, Winter Haven & Polk](https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm)",
+     "links": [
+      {
+       "text": "Lakeland, Winter Haven & Polk",
+       "href": "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Sarasota, Bradenton, Venice](https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm)",
+     "links": [
+      {
+       "text": "Sarasota, Bradenton, Venice",
+       "href": "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "footer"
+  },
+  {
+   "type": "text",
+   "text": "© 2026 Reliance Consulting, LLC. All Rights Reserved. 13940 N Dale Mabry Hwy Tampa, FL, 33618 Phone: (813) 931-7258\n\n[Internet Marketing](http://www.reliancecpa.com/) by DPS Marketing",
+   "links": [
+    {
+     "text": "Internet Marketing",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "footer"
+  }
+ ],
+ "nav_variants": [
+  {
+   "count": 909,
+   "example_page": "https://www.reliancecpa.com/",
+   "pages": [
+    "https://www.reliancecpa.com/",
+    "https://www.reliancecpa.com/real-estate-cpa.htm",
+    "https://www.reliancecpa.com/early-retirement.html",
+    "https://www.reliancecpa.com/cutting-costs-home.html",
+    "https://www.reliancecpa.com/cutting-costs-office.html",
+    "https://www.reliancecpa.com/income-tax-preparer.html",
+    "https://www.reliancecpa.com/late-retirement-planning.html",
+    "https://www.reliancecpa.com/estimated-tax.html",
+    "https://www.reliancecpa.com/health-reform-and-hire-act.html",
+    "https://www.reliancecpa.com/making-money-in-medicine.htm",
+    "https://www.reliancecpa.com/cancellation-of-debt-income.htm",
+    "https://www.reliancecpa.com/increase-tax-return.html",
+    "https://www.reliancecpa.com/trillion-is-the-new-billion.html",
+    "https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html",
+    "https://www.reliancecpa.com/whole_life_insurance.html",
+    "https://www.reliancecpa.com/variable_universal_life.html",
+    "https://www.reliancecpa.com/401k-plans.html",
+    "https://www.reliancecpa.com/adjusted-gross-income.html",
+    "https://www.reliancecpa.com/antitrust-law.html",
+    "https://www.reliancecpa.com/april-15-tax-day.html",
+    "https://www.reliancecpa.com/audit.html",
+    "https://www.reliancecpa.com/audit-help.htm",
+    "https://www.reliancecpa.com/avoid-probate.html",
+    "https://www.reliancecpa.com/bank-accounts.html",
+    "https://www.reliancecpa.com/barter-exchanges.html",
+    "https://www.reliancecpa.com/best-practices.html",
+    "https://www.reliancecpa.com/big-purchase.html",
+    "https://www.reliancecpa.com/bi-weekly-mortgage.html",
+    "https://www.reliancecpa.com/bookkeeping.htm",
+    "https://www.reliancecpa.com/business-advice.html",
+    "https://www.reliancecpa.com/business-consultants.htm",
+    "https://www.reliancecpa.com/business-finance-consultant.htm",
+    "https://www.reliancecpa.com/business-idea.html",
+    "https://www.reliancecpa.com/business-impediment.html",
+    "https://www.reliancecpa.com/business-insurance-tips.html",
+    "https://www.reliancecpa.com/business-plan.html",
+    "https://www.reliancecpa.com/business-planning-services.htm",
+    "https://www.reliancecpa.com/business-record-retention.htm",
+    "https://www.reliancecpa.com/business-tax-extension.html",
+    "https://www.reliancecpa.com/business-tax.htm",
+    "https://www.reliancecpa.com/business-valuation.htm",
+    "https://www.reliancecpa.com/buying-a-business.html",
+    "https://www.reliancecpa.com/buying-car.html",
+    "https://www.reliancecpa.com/buying-home.html",
+    "https://www.reliancecpa.com/money-market.html",
+    "https://www.reliancecpa.com/married-filing-jointly.html",
+    "https://www.reliancecpa.com/buying-life-insurance.html",
+    "https://www.reliancecpa.com/marketing-budget.html",
+    "https://www.reliancecpa.com/capital-gains.html",
+    "https://www.reliancecpa.com/cash-flow.html",
+    "https://www.reliancecpa.com/cash-flow-management.htm",
+    "https://www.reliancecpa.com/ceo.html",
+    "https://www.reliancecpa.com/changing-business-structure.html",
+    "https://www.reliancecpa.com/charitable-contributions.html",
+    "https://www.reliancecpa.com/charitable-trust.html",
+    "https://www.reliancecpa.com/checkup-financial-health.htm",
+    "https://www.reliancecpa.com/child-care-credit.html",
+    "https://www.reliancecpa.com/child-dependents.html",
+    "https://www.reliancecpa.com/college-savings.html",
+    "https://www.reliancecpa.com/commercial-lease.html",
+    "https://www.reliancecpa.com/corporate-divestiture.html",
+    "https://www.reliancecpa.com/corporation.htm",
+    "https://www.reliancecpa.com/cost-segregation.html",
+    "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm",
+    "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm",
+    "https://www.reliancecpa.com/cpa-firm-pasco-county.htm",
+    "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm",
+    "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm",
+    "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm",
+    "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm",
+    "https://www.reliancecpa.com/credit-card-offer.html",
+    "https://www.reliancecpa.com/credit-scores.html",
+    "https://www.reliancecpa.com/credit-unions.html",
+    "https://www.reliancecpa.com/current-assets.html",
+    "https://www.reliancecpa.com/custom2.html",
+    "https://www.reliancecpa.com/customer-base.html",
+    "https://www.reliancecpa.com/customer-service.html",
+    "https://www.reliancecpa.com/debt.html",
+    "https://www.reliancecpa.com/debt-restructuring.html",
+    "https://www.reliancecpa.com/delegating-tasks.html",
+    "https://www.reliancecpa.com/depreciation.html",
+    "https://www.reliancecpa.com/disclaimer.htm",
+    "https://www.reliancecpa.com/diversification.html",
+    "https://www.reliancecpa.com/doctor-decisions.htm",
+    "https://www.reliancecpa.com/downsizing.html",
+    "https://www.reliancecpa.com/due-diligence.html",
+    "https://www.reliancecpa.com/early-payoff-student-loans.html",
+    "https://www.reliancecpa.com/earned-income-credit.html",
+    "https://www.reliancecpa.com/elder-financial-care.htm",
+    "https://www.reliancecpa.com/electronic-discovery.html",
+    "https://www.reliancecpa.com/emergency-cash.html",
+    "https://www.reliancecpa.com/employee-tax-records.html",
+    "https://www.reliancecpa.com/employee-vs-independent-contractor.htm",
+    "https://www.reliancecpa.com/employer-identification-number.htm",
+    "https://www.reliancecpa.com/employer-responsibilities.html",
+    "https://www.reliancecpa.com/estate-planning.htm",
+    "https://www.reliancecpa.com/existing-business.html",
+    "https://www.reliancecpa.com/exit-strategy.html",
+    "https://www.reliancecpa.com/fair-value.html",
+    "https://www.reliancecpa.com/financial-advice.html",
+    "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+    "https://www.reliancecpa.com/financially-preparing-marriage.htm",
+    "https://www.reliancecpa.com/financial-planning.htm",
+    "https://www.reliancecpa.com/financing-growth.html",
+    "https://www.reliancecpa.com/five-cs-of-credit.html",
+    "https://www.reliancecpa.com/flood-insurance.html",
+    "https://www.reliancecpa.com/florida-prepaid.html",
+    "https://www.reliancecpa.com/florida-taxes.html",
+    "https://www.reliancecpa.com/forms-to-start-business.htm",
+    "https://www.reliancecpa.com/general-ledger.html",
+    "https://www.reliancecpa.com/get-started-estate-planning.htm",
+    "https://www.reliancecpa.com/getting-good-financial-advice.htm",
+    "https://www.reliancecpa.com/global-business.html",
+    "https://www.reliancecpa.com/green-business.htm",
+    "https://www.reliancecpa.com/gsa-schedules.html",
+    "https://www.reliancecpa.com/hiring-employees.htm",
+    "https://www.reliancecpa.com/hiring-family-members.htm",
+    "https://www.reliancecpa.com/home-based-business.htm",
+    "https://www.reliancecpa.com/home-business.html",
+    "https://www.reliancecpa.com/homestead-exemption.html",
+    "https://www.reliancecpa.com/household-employee-tax.htm",
+    "https://www.reliancecpa.com/how-payroll-processing-helps.htm",
+    "https://www.reliancecpa.com/how-to-choose-cpa.htm",
+    "https://www.reliancecpa.com/identity-theft.htm",
+    "https://www.reliancecpa.com/importance-of-a-will.htm",
+    "https://www.reliancecpa.com/improved-financial-situation.html",
+    "https://www.reliancecpa.com/income-tax-services.htm",
+    "https://www.reliancecpa.com/income-tax-withholding.html",
+    "https://www.reliancecpa.com/information-security.html",
+    "https://www.reliancecpa.com/intangible-assets.html",
+    "https://www.reliancecpa.com/intellectual-property.html",
+    "https://www.reliancecpa.com/internal-audit.html",
+    "https://www.reliancecpa.com/internal-controls-evaluation.htm",
+    "https://www.reliancecpa.com/investment-plan.html",
+    "https://www.reliancecpa.com/irs-email-scams.html",
+    "https://www.reliancecpa.com/irs-problems.htm",
+    "https://www.reliancecpa.com/keep-financial-records.htm",
+    "https://www.reliancecpa.com/late-income-tax-return.htm",
+    "https://www.reliancecpa.com/leasing-car.html",
+    "https://www.reliancecpa.com/liabilities.html",
+    "https://www.reliancecpa.com/life-events.html",
+    "https://www.reliancecpa.com/life-insurance-needs-analysis.htm",
+    "https://www.reliancecpa.com/limited-liability-corporation.htm",
+    "https://www.reliancecpa.com/liquidating-assets.html",
+    "https://www.reliancecpa.com/living-will.htm",
+    "https://www.reliancecpa.com/long-term-care.htm",
+    "https://www.reliancecpa.com/motivating-employees.html",
+    "https://www.reliancecpa.com/mutual-fund.html",
+    "https://www.reliancecpa.com/naming-business.html",
+    "https://www.reliancecpa.com/net-worth.html",
+    "https://www.reliancecpa.com/new-business-financing.html",
+    "https://www.reliancecpa.com/new-business-planning.htm",
+    "https://www.reliancecpa.com/new-business-priorities.html",
+    "https://www.reliancecpa.com/new-business.html",
+    "https://www.reliancecpa.com/non-cash-transactions.html",
+    "https://www.reliancecpa.com/obama-versus-mccain.html",
+    "https://www.reliancecpa.com/on-line-business.html",
+    "https://www.reliancecpa.com/organizational-structure.html",
+    "https://www.reliancecpa.com/part-time-cfo.htm",
+    "https://www.reliancecpa.com/partnership.htm",
+    "https://www.reliancecpa.com/performance-management.html",
+    "https://www.reliancecpa.com/personal-assets.html",
+    "https://www.reliancecpa.com/personal-budget.html",
+    "https://www.reliancecpa.com/personal-financial-goals.html",
+    "https://www.reliancecpa.com/personal-record-retention.htm",
+    "https://www.reliancecpa.com/personal-tax-extension.html",
+    "https://www.reliancecpa.com/physician-accountants.htm",
+    "https://www.reliancecpa.com/post-mortem-letter.htm",
+    "https://www.reliancecpa.com/potential-employees.html",
+    "https://www.reliancecpa.com/power-of-attorney.htm",
+    "https://www.reliancecpa.com/privacy-policy.htm",
+    "https://www.reliancecpa.com/processes.html",
+    "https://www.reliancecpa.com/property-depreciation.html",
+    "https://www.reliancecpa.com/quickbooks-accountant.htm",
+    "https://www.reliancecpa.com/purchase-business-franchise.html",
+    "https://www.reliancecpa.com/ready-to-incorporate.html",
+    "https://www.reliancecpa.com/real-estate-losses.html",
+    "https://www.reliancecpa.com/reasons-to-choose-reliance.htm",
+    "https://www.reliancecpa.com/recording-transactions.html",
+    "https://www.reliancecpa.com/records-for-cpa-meeting.htm",
+    "https://www.reliancecpa.com/refinance.html",
+    "https://www.reliancecpa.com/refinancing-home-mortgage.html",
+    "https://www.reliancecpa.com/rent-or-buy-home.html",
+    "https://www.reliancecpa.com/restaurant-hotel-accountant.htm",
+    "https://www.reliancecpa.com/retail-accounting.htm",
+    "https://www.reliancecpa.com/retirement-expenses.htm",
+    "https://www.reliancecpa.com/retirement-planning-money.html",
+    "https://www.reliancecpa.com/retirement-taxes.html",
+    "https://www.reliancecpa.com/reverse-mortgage.htm",
+    "https://www.reliancecpa.com/revocable-trusts.html",
+    "https://www.reliancecpa.com/risk-management.html",
+    "https://www.reliancecpa.com/roth-traditional-ira.html",
+    "https://www.reliancecpa.com/running-green-business.html",
+    "https://www.reliancecpa.com/s-corporation.htm",
+    "https://www.reliancecpa.com/sales-strategy.html",
+    "https://www.reliancecpa.com/sales-tax-law.htm",
+    "https://www.reliancecpa.com/saving-energy.html",
+    "https://www.reliancecpa.com/savings-plan.html",
+    "https://www.reliancecpa.com/search-engine-marketing.html",
+    "https://www.reliancecpa.com/self-employment-tax.html",
+    "https://www.reliancecpa.com/small-business-accountant.html",
+    "https://www.reliancecpa.com/small-business-accounting.htm",
+    "https://www.reliancecpa.com/small-business-defined.html",
+    "https://www.reliancecpa.com/small-business-ecommerce.html",
+    "https://www.reliancecpa.com/small-business-efficiency.html",
+    "https://www.reliancecpa.com/small-business-failure.html",
+    "https://www.reliancecpa.com/small-business-insurance.html",
+    "https://www.reliancecpa.com/small-business-location.html",
+    "https://www.reliancecpa.com/small-business-networking.html",
+    "https://www.reliancecpa.com/small-business-planning.html",
+    "https://www.reliancecpa.com/small-business-success.html",
+    "https://www.reliancecpa.com/sole-proprietorship.htm",
+    "https://www.reliancecpa.com/source-document.html",
+    "https://www.reliancecpa.com/staff-profiles.htm",
+    "https://www.reliancecpa.com/start-my-own-business.html",
+    "https://www.reliancecpa.com/starting-a-business.html",
+    "https://www.reliancecpa.com/startup-costs.html",
+    "https://www.reliancecpa.com/staying-on-budget.htm",
+    "https://www.reliancecpa.com/strategic-business-planning.htm",
+    "https://www.reliancecpa.com/student-loans.html",
+    "https://www.reliancecpa.com/successful-small-businesses.html",
+    "https://www.reliancecpa.com/succession-planning.htm",
+    "https://www.reliancecpa.com/tampa-cpa-areas-served.htm",
+    "https://www.reliancecpa.com/tax-form.html",
+    "https://www.reliancecpa.com/tax-preparation.htm",
+    "https://www.reliancecpa.com/tax-preparer.htm",
+    "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm",
+    "https://www.reliancecpa.com/tax-saving-strategies.htm",
+    "https://www.reliancecpa.com/tax-scams.html",
+    "https://www.reliancecpa.com/taxable-income.html",
+    "https://www.reliancecpa.com/taxpayer-burden.html",
+    "https://www.reliancecpa.com/taxpayer-rights.html",
+    "https://www.reliancecpa.com/temporary-employees.html",
+    "https://www.reliancecpa.com/the-time-for-asset-protection-s-now.html",
+    "https://www.reliancecpa.com/time-management.html",
+    "https://www.reliancecpa.com/title-insurance.html",
+    "https://www.reliancecpa.com/trade-shows.html",
+    "https://www.reliancecpa.com/transfer-ownership.html",
+    "https://www.reliancecpa.com/understanding-estate-tax.html",
+    "https://www.reliancecpa.com/unemployment-tax.html",
+    "https://www.reliancecpa.com/upside-down-mortgage.html",
+    "https://www.reliancecpa.com/vacation-budgeting.html",
+    "https://www.reliancecpa.com/value-added-tax.html",
+    "https://www.reliancecpa.com/voluntary-tax.html",
+    "https://www.reliancecpa.com/wage-and-hour-laws.html",
+    "https://www.reliancecpa.com/what-is-a-cpa.htm",
+    "https://www.reliancecpa.com/what-is-a-trust.htm",
+    "https://www.reliancecpa.com/who-must-file.html",
+    "https://www.reliancecpa.com/why-you-need-life-insurance.htm",
+    "https://www.reliancecpa.com/tax-planning.htm",
+    "https://www.reliancecpa.com/medicare-cuts.html",
+    "https://www.reliancecpa.com/reliance-consulting-netclient-portals",
+    "https://www.reliancecpa.com/accountable-care-organizations",
+    "https://www.reliancecpa.com/tax-advantages",
+    "https://www.reliancecpa.com/federal-taxes",
+    "https://www.reliancecpa.com/business-expenses",
+    "https://www.reliancecpa.com/effective-tax-rate",
+    "https://www.reliancecpa.com/online-reputation-management",
+    "https://www.reliancecpa.com/email-marketing",
+    "https://www.reliancecpa.com/market-condition-research",
+    "https://www.reliancecpa.com/hidden-college-costs",
+    "https://www.reliancecpa.com/how-to-handle-an-irs-audit",
+    "https://www.reliancecpa.com/insurance-costs",
+    "https://www.reliancecpa.com/reliable-insurance",
+    "https://www.reliancecpa.com/ipo-costs",
+    "https://www.reliancecpa.com/hiring-incentives",
+    "https://www.reliancecpa.com/personal-budget",
+    "https://www.reliancecpa.com/budget-discipline",
+    "https://www.reliancecpa.com/home-improvements",
+    "https://www.reliancecpa.com/tax-forms",
+    "https://www.reliancecpa.com/tax-records-to-keep",
+    "https://www.reliancecpa.com/crowd-funding",
+    "https://www.reliancecpa.com/tax-exempt-organizations",
+    "https://www.reliancecpa.com/health-care-tax-credit",
+    "https://www.reliancecpa.com/tax-compliance",
+    "https://www.reliancecpa.com/risk-management-controls",
+    "https://www.reliancecpa.com/tax-valuation-allowance",
+    "https://www.reliancecpa.com/human-resources-delegation",
+    "https://www.reliancecpa.com/transaction-taxes",
+    "https://www.reliancecpa.com/retirement-readiness",
+    "https://www.reliancecpa.com/related-party-transactions",
+    "https://www.reliancecpa.com/bottom-line",
+    "https://www.reliancecpa.com/cloud-based-accounting",
+    "https://www.reliancecpa.com/equilibrium-price",
+    "https://www.reliancecpa.com/fungibility-liquidity",
+    "https://www.reliancecpa.com/passive-income",
+    "https://www.reliancecpa.com/petty-cash",
+    "https://www.reliancecpa.com/real-property",
+    "https://www.reliancecpa.com/velocity",
+    "https://www.reliancecpa.com/estate-executor",
+    "https://www.reliancecpa.com/inherit-money-or-property",
+    "https://www.reliancecpa.com/leveraged-buyout",
+    "https://www.reliancecpa.com/sec-role",
+    "https://www.reliancecpa.com/appealing-a-tax-dispute",
+    "https://www.reliancecpa.com/social-media-small-business",
+    "https://www.reliancecpa.com/demand-up-capital-down",
+    "https://www.reliancecpa.com/costs-of-consumer-bankruptcy",
+    "https://www.reliancecpa.com/reit-retirement",
+    "https://www.reliancecpa.com/keogh-plan",
+    "https://www.reliancecpa.com/flexible-hours",
+    "https://www.reliancecpa.com/profitable-business-idea",
+    "https://www.reliancecpa.com/small-business-defined",
+    "https://www.reliancecpa.com/business-blog",
+    "https://www.reliancecpa.com/key-performance-indicators",
+    "https://www.reliancecpa.com/the-romney-tax-plan",
+    "https://www.reliancecpa.com/workplace-monotony",
+    "https://www.reliancecpa.com/market-indicators",
+    "https://www.reliancecpa.com/international-business",
+    "https://www.reliancecpa.com/finding-employees",
+    "https://www.reliancecpa.com/learn-from-mistakes",
+    "https://www.reliancecpa.com/tax-planning-year-round",
+    "https://www.reliancecpa.com/irs-frivolous-arguments",
+    "https://www.reliancecpa.com/federal-reserve",
+    "https://www.reliancecpa.com/uncertain-tax-positions",
+    "https://www.reliancecpa.com/indirect-taxes",
+    "https://www.reliancecpa.com/business-travel",
+    "https://www.reliancecpa.com/employee-benefits",
+    "https://www.reliancecpa.com/second-career",
+    "https://www.reliancecpa.com/brick-and-mortar",
+    "https://www.reliancecpa.com/college-tax-benefits",
+    "https://www.reliancecpa.com/ad-laws",
+    "https://www.reliancecpa.com/breakeven-analysis",
+    "https://www.reliancecpa.com/sba-assistance",
+    "https://www.reliancecpa.com/small-business-tax",
+    "https://www.reliancecpa.com/self-directed-ira",
+    "https://www.reliancecpa.com/federal-gift-tax",
+    "https://www.reliancecpa.com/tax-return-error",
+    "https://www.reliancecpa.com/social-media-strategy",
+    "https://www.reliancecpa.com/communication-guidelines",
+    "https://www.reliancecpa.com/firmprofile.html",
+    "https://www.reliancecpa.com/remarketing",
+    "https://www.reliancecpa.com/pay-per-click",
+    "https://www.reliancecpa.com/revocable-trust",
+    "https://www.reliancecpa.com/reverse-mortgage",
+    "https://www.reliancecpa.com/mortgage-refinance",
+    "https://www.reliancecpa.com/college-tax-concerns",
+    "https://www.reliancecpa.com/florida-small-business",
+    "https://www.reliancecpa.com/personal-financial-goals",
+    "https://www.reliancecpa.com/business-plan",
+    "https://www.reliancecpa.com/network-security",
+    "https://www.reliancecpa.com/long-term-care",
+    "https://www.reliancecpa.com/529-savings-plan-covers",
+    "https://www.reliancecpa.com/franchise-or-brand",
+    "https://www.reliancecpa.com/rent-vs-buy",
+    "https://www.reliancecpa.com/before-big-purchase",
+    "https://www.reliancecpa.com/contract-for-deed",
+    "https://www.reliancecpa.com/underwater-mortgage",
+    "https://www.reliancecpa.com/credit-card-rewards",
+    "https://www.reliancecpa.com/tax-rules-home-sale",
+    "https://www.reliancecpa.com/accrual-accounting",
+    "https://www.reliancecpa.com/bookkeeping-accounting",
+    "https://www.reliancecpa.com/internet-advertising",
+    "https://www.reliancecpa.com/obama-pragmatist-or-ideologue",
+    "https://www.reliancecpa.com/articles.html",
+    "https://www.reliancecpa.com/small-business-brand",
+    "https://www.reliancecpa.com/mergers",
+    "https://www.reliancecpa.com/advertising-budget",
+    "https://www.reliancecpa.com/time-management-business-owner",
+    "https://www.reliancecpa.com/home-based-businesses",
+    "https://www.reliancecpa.com/demonstrating-trust",
+    "https://www.reliancecpa.com/business-lease",
+    "https://www.reliancecpa.com/twitter",
+    "https://www.reliancecpa.com/boost-employee-morale",
+    "https://www.reliancecpa.com/social-media-mistakes",
+    "https://www.reliancecpa.com/app",
+    "https://www.reliancecpa.com/dental-retirement-planning",
+    "https://www.reliancecpa.com/dental-buy-lease-analysis",
+    "https://www.reliancecpa.com/dental-virtual-client-office",
+    "https://www.reliancecpa.com/dental-marketing-advertising-agency",
+    "https://www.reliancecpa.com/dental-practice-acquisition-analysis",
+    "https://www.reliancecpa.com/dental-financing-assistance",
+    "https://www.reliancecpa.com/basic-valuation-analysis",
+    "https://www.reliancecpa.com/dental-choosing-a-bank",
+    "https://www.reliancecpa.com/dental-wage-accounts",
+    "https://www.reliancecpa.com/dental-monthly-financial-statements",
+    "https://www.reliancecpa.com/dental-quickbooks-accounting",
+    "https://www.reliancecpa.com/dental-breaking-down-a-lease",
+    "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers",
+    "https://www.reliancecpa.com/dental-s-corporation",
+    "https://www.reliancecpa.com/dental-customized-retirement-strategy",
+    "https://www.reliancecpa.com/dental-payroll-services",
+    "https://www.reliancecpa.com/dental-practice-budgets",
+    "https://www.reliancecpa.com/negotiating-dental-loan-terms",
+    "https://www.reliancecpa.com/dental-paying-bills",
+    "https://www.reliancecpa.com/dental-insurance-planning",
+    "https://www.reliancecpa.com/dental-c-corporation",
+    "https://www.reliancecpa.com/dental-leases",
+    "https://www.reliancecpa.com/dental-tax-diversification",
+    "https://www.reliancecpa.com/titling-dental-assets",
+    "https://www.reliancecpa.com/dental-inventory-system",
+    "https://www.reliancecpa.com/dental-location-analysis",
+    "https://www.reliancecpa.com/dental-partnership",
+    "https://www.reliancecpa.com/dental-disregarded-entity",
+    "https://www.reliancecpa.com/dental-depreciation",
+    "https://www.reliancecpa.com/dental-corporate-tax",
+    "https://www.reliancecpa.com/dental-tax-returns",
+    "https://www.reliancecpa.com/dental-mobile-marketing",
+    "https://www.reliancecpa.com/insurance-settlement",
+    "https://www.reliancecpa.com/ongoing-medical-expenses",
+    "https://www.reliancecpa.com/dental-optimal-tax-structure",
+    "https://www.reliancecpa.com/dental-asset-protection-planning",
+    "https://www.reliancecpa.com/capital-items",
+    "https://www.reliancecpa.com/dental-accounting-tax-services",
+    "https://www.reliancecpa.com/patient-accounts",
+    "https://www.reliancecpa.com/dental-financial-roadmap",
+    "https://www.reliancecpa.com/dental-llp",
+    "https://www.reliancecpa.com/dental-selection-business-entity",
+    "https://www.reliancecpa.com/dental-email",
+    "https://www.reliancecpa.com/dental-internet-marketing",
+    "https://www.reliancecpa.com/dental-microsoft-office",
+    "https://www.reliancecpa.com/filing-quarterly-taxes",
+    "https://www.reliancecpa.com/tax-exempt-status",
+    "https://www.reliancecpa.com/itemization-tax-return",
+    "https://www.reliancecpa.com/withdrawal-from-ira",
+    "https://www.reliancecpa.com/self-employment-tax-questions",
+    "https://www.reliancecpa.com/tax-benefits-home-ownership",
+    "https://www.reliancecpa.com/brick-and-mortar-business",
+    "https://www.reliancecpa.com/charitable-donations-personal-taxes",
+    "https://www.reliancecpa.com/charitable-donations-business-taxes",
+    "https://www.reliancecpa.com/tax-benefits-home-office",
+    "https://www.reliancecpa.com/losses-tax-deductions",
+    "https://www.reliancecpa.com/business-expenses-tax-deductible",
+    "https://www.reliancecpa.com/standard-deduction-tax-return",
+    "https://www.reliancecpa.com/green-companies-taxes",
+    "https://www.reliancecpa.com/taxpayer-advocate-service",
+    "https://www.reliancecpa.com/government-contracts",
+    "https://www.reliancecpa.com/great-business-plan",
+    "https://www.reliancecpa.com/more-information.htm",
+    "https://www.reliancecpa.com/unpaid-payroll-taxes",
+    "https://www.reliancecpa.com/tampa-cpa-back-taxes",
+    "https://www.reliancecpa.com/audit-reconsideration",
+    "https://www.reliancecpa.com/dental-bookkeeping",
+    "https://www.reliancecpa.com/dental-cash-flow-management",
+    "https://www.reliancecpa.com/veterinary-irs-problem-resolution",
+    "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support",
+    "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections",
+    "https://www.reliancecpa.com/veterinary-bookkeeping",
+    "https://www.reliancecpa.com/veterinary-bill-pay",
+    "https://www.reliancecpa.com/veterinary-business-loan-assistance",
+    "https://www.reliancecpa.com/veterinary-financial-statement-preparation",
+    "https://www.reliancecpa.com/veterinary-tax-planning",
+    "https://www.reliancecpa.com/veterinary-business-plan-development",
+    "https://www.reliancecpa.com/veterinary-benchmarking",
+    "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis",
+    "https://www.reliancecpa.com/veterinary-cash-flow-planning",
+    "https://www.reliancecpa.com/veterinary-business-entity-structuring",
+    "https://www.reliancecpa.com/veterinary-purchasing-a-practice",
+    "https://www.reliancecpa.com/veterinary-hiring-assistance",
+    "https://www.reliancecpa.com/veterinary-outsourced-controller",
+    "https://www.reliancecpa.com/veterinary-retirement-planning",
+    "https://www.reliancecpa.com/veterinary-succession-planning",
+    "https://www.reliancecpa.com/veterinary-virtual-accounting",
+    "https://www.reliancecpa.com/veterinary-financial-and-consulting-services",
+    "https://www.reliancecpa.com/dental-cpa",
+    "https://www.reliancecpa.com/client-portal-login",
+    "https://www.reliancecpa.com/veterinary-cpa",
+    "https://www.reliancecpa.com/accessibility",
+    "https://www.reliancecpa.com/reliance-consulting-backoffice",
+    "https://www.reliancecpa.com/payroll-services.htm",
+    "https://www.reliancecpa.com/contact.html",
+    "https://www.reliancecpa.com/401k-plans.html/401k-plans/",
+    "https://www.reliancecpa.com/529-savings-plan-covers/young-african-american-college-student/",
+    "https://www.reliancecpa.com/accrual-accounting/sales-report-2/",
+    "https://www.reliancecpa.com/ad-laws/ad-laws/",
+    "https://www.reliancecpa.com/adjusted-gross-income.html/adjusted-gross-income/",
+    "https://www.reliancecpa.com/advertising-budget/advertising-budget-2/",
+    "https://www.reliancecpa.com/antitrust-law.html/antitrust-law/",
+    "https://www.reliancecpa.com/app/app-logo-2/",
+    "https://www.reliancecpa.com/app/app-logo-3/",
+    "https://www.reliancecpa.com/app/app-logo-4/",
+    "https://www.reliancecpa.com/app/app-logo/",
+    "https://www.reliancecpa.com/april-15-tax-day.html/april-15-tax-day/",
+    "https://www.reliancecpa.com/articles.html/bigstock_female_doctor_in_intensive_car_17340602/",
+    "https://www.reliancecpa.com/articles.html/cloud/",
+    "https://www.reliancecpa.com/articles.html/couple01_isp/",
+    "https://www.reliancecpa.com/articles.html/irs-1/",
+    "https://www.reliancecpa.com/articles.html/irs/",
+    "https://www.reliancecpa.com/articles.html/medical/",
+    "https://www.reliancecpa.com/articles.html/money/",
+    "https://www.reliancecpa.com/articles.html/money03_isp/",
+    "https://www.reliancecpa.com/articles.html/money06_isp/",
+    "https://www.reliancecpa.com/articles.html/money10_isp/",
+    "https://www.reliancecpa.com/articles.html/obama/",
+    "https://www.reliancecpa.com/articles.html/pen_and_money01_isp/",
+    "https://www.reliancecpa.com/articles.html/retirement-income/",
+    "https://www.reliancecpa.com/articles.html/romney/",
+    "https://www.reliancecpa.com/articles.html/secure01_isp/",
+    "https://www.reliancecpa.com/audit-help.htm/audit-help/",
+    "https://www.reliancecpa.com/audit.html/audit/",
+    "https://www.reliancecpa.com/avoid-probate.html/avoid-probate/",
+    "https://www.reliancecpa.com/bank-accounts.html/bank-accounts/",
+    "https://www.reliancecpa.com/barter-exchanges.html/barter-exchanges/",
+    "https://www.reliancecpa.com/basic-valuation-analysis/dentist-chair-and-equipment/",
+    "https://www.reliancecpa.com/before-big-purchase/before-big-purchase-2/",
+    "https://www.reliancecpa.com/best-practices.html/best-practices/",
+    "https://www.reliancecpa.com/bi-weekly-mortgage.html/bi-weekly-mortgage/",
+    "https://www.reliancecpa.com/big-purchase.html/big-purchase/",
+    "https://www.reliancecpa.com/bookkeeping-accounting/bookkeeping-acounting/",
+    "https://www.reliancecpa.com/bookkeeping.htm/bookkeeping/",
+    "https://www.reliancecpa.com/boost-employee-morale/boost-employee-morale/",
+    "https://www.reliancecpa.com/bottom-line/bottom-line-2/",
+    "https://www.reliancecpa.com/breakeven-analysis/breakeven-analysis-2/",
+    "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling/",
+    "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2/",
+    "https://www.reliancecpa.com/budget-discipline/budget-discipline-2/",
+    "https://www.reliancecpa.com/budget-discipline/budget-discipline-3/",
+    "https://www.reliancecpa.com/business-advice.html/business-advice/",
+    "https://www.reliancecpa.com/business-blog/business-blog-2/",
+    "https://www.reliancecpa.com/business-consultants.htm/business-consultant/",
+    "https://www.reliancecpa.com/business-expenses-tax-deductible/business-expenses-deductible/",
+    "https://www.reliancecpa.com/business-expenses/tax-preparer-3/",
+    "https://www.reliancecpa.com/business-finance-consultant.htm/business-finance-consultant/",
+    "https://www.reliancecpa.com/business-idea.html/business-ideas/",
+    "https://www.reliancecpa.com/business-impediment.html/business-impediment/",
+    "https://www.reliancecpa.com/business-insurance-tips.html/business-insurance-tips/",
+    "https://www.reliancecpa.com/business-lease/c/",
+    "https://www.reliancecpa.com/business-plan.html/business-plan/",
+    "https://www.reliancecpa.com/business-plan/business-marketing-and-planning/",
+    "https://www.reliancecpa.com/business-planning-services.htm/business-planning/",
+    "https://www.reliancecpa.com/business-record-retention.htm/business-record-retention/",
+    "https://www.reliancecpa.com/business-tax-extension.html/business-tax-extension/",
+    "https://www.reliancecpa.com/business-tax.htm/business-tax/",
+    "https://www.reliancecpa.com/business-travel/business-travel-2/",
+    "https://www.reliancecpa.com/business-valuation.htm/business-valuation/",
+    "https://www.reliancecpa.com/buying-a-business.html/buying-a-business/",
+    "https://www.reliancecpa.com/buying-car.html/buying-car/",
+    "https://www.reliancecpa.com/buying-home.html/buying-home/",
+    "https://www.reliancecpa.com/buying-life-insurance.html/buying-life-insurance/",
+    "https://www.reliancecpa.com/capital-gains.html/capital-gains/",
+    "https://www.reliancecpa.com/capital-items/capital-items-2/",
+    "https://www.reliancecpa.com/cash-flow-management.htm/cash-flow-management/",
+    "https://www.reliancecpa.com/cash-flow.html/cash-flow/",
+    "https://www.reliancecpa.com/ceo.html/ceo/",
+    "https://www.reliancecpa.com/changing-business-structure.html/changing-business-structure/",
+    "https://www.reliancecpa.com/charitable-contributions.html/charitable-contributions/",
+    "https://www.reliancecpa.com/charitable-donations-business-taxes/tax-forms-3/",
+    "https://www.reliancecpa.com/charitable-donations-personal-taxes/tax-forms-2/",
+    "https://www.reliancecpa.com/charitable-trust.html/charitable-trust/",
+    "https://www.reliancecpa.com/checkup-financial-health.htm/checkup-financial-health/",
+    "https://www.reliancecpa.com/child-care-credit.html/child-care-credit/",
+    "https://www.reliancecpa.com/child-dependents.html/child-dependent/",
+    "https://www.reliancecpa.com/college-savings.html/college-savings/",
+    "https://www.reliancecpa.com/college-tax-benefits/college-tax-benefits-2/",
+    "https://www.reliancecpa.com/college-tax-concerns/college-tax-concerns-2/",
+    "https://www.reliancecpa.com/commercial-lease.html/commercial-lease/",
+    "https://www.reliancecpa.com/communication-guidelines/communication-guidelines-2/",
+    "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers/",
+    "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture/",
+    "https://www.reliancecpa.com/corporation.htm/corporation/",
+    "https://www.reliancecpa.com/cost-segregation.html/cost-segregation-survey/",
+    "https://www.reliancecpa.com/costs-of-consumer-bankruptcy/costs-of-bankruptcy/",
+    "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm/cpa-firm-brooksville-hernando/",
+    "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm/lakelandfl/",
+    "https://www.reliancecpa.com/cpa-firm-pasco-county.htm/pasco-county/",
+    "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm/sarasota/",
+    "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm/stpetersburg-clearwater-pinellas/",
+    "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm/tampa-brandon-hillsborough/",
+    "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm/tampa-stpetersburg-clearwater/",
+    "https://www.reliancecpa.com/credit-card-offer.html/credit-card-offer/",
+    "https://www.reliancecpa.com/credit-card-rewards/credit/",
+    "https://www.reliancecpa.com/credit-scores.html/credit-scores/",
+    "https://www.reliancecpa.com/credit-unions.html/credit-unions/",
+    "https://www.reliancecpa.com/crowd-funding/crowdfunding/",
+    "https://www.reliancecpa.com/current-assets.html/current-assets/",
+    "https://www.reliancecpa.com/customer-base.html/customer-base/",
+    "https://www.reliancecpa.com/customer-service.html/customer-service/",
+    "https://www.reliancecpa.com/cutting-costs-home.html/cutting-costs-home/",
+    "https://www.reliancecpa.com/cutting-costs-office.html/cutting-costs-office/",
+    "https://www.reliancecpa.com/debt-restructuring.html/debt-restructuring/",
+    "https://www.reliancecpa.com/debt.html/debt/",
+    "https://www.reliancecpa.com/delegating-tasks.html/delegating-tasks/",
+    "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital/",
+    "https://www.reliancecpa.com/demonstrating-trust/demonstrating-trust/",
+    "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services/",
+    "https://www.reliancecpa.com/dental-asset-protection-planning/dental-asset-protection-planning/",
+    "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers/billboards-yellow-pages-flyers/",
+    "https://www.reliancecpa.com/dental-breaking-down-a-lease/dentist/",
+    "https://www.reliancecpa.com/dental-buy-lease-analysis/dental-buy-lease-analysis-2/",
+    "https://www.reliancecpa.com/dental-c-corporation/dental-c-corporation/",
+    "https://www.reliancecpa.com/dental-choosing-a-bank/choosing-a-bank/",
+    "https://www.reliancecpa.com/dental-corporate-tax/corporate-tax-returns/",
+    "https://www.reliancecpa.com/dental-customized-retirement-strategy/customized-retirement-strategy/",
+    "https://www.reliancecpa.com/dental-depreciation/depreciation-considerations/",
+    "https://www.reliancecpa.com/dental-disregarded-entity/disregarded-entity/",
+    "https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents./",
+    "https://www.reliancecpa.com/dental-financial-roadmap/accounting-2/",
+    "https://www.reliancecpa.com/dental-financing-assistance/dental-financing-assistance/",
+    "https://www.reliancecpa.com/dental-insurance-planning/dental-insurance-planning/",
+    "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up/",
+    "https://www.reliancecpa.com/dental-inventory-system/inventory-system/",
+    "https://www.reliancecpa.com/dental-leases/dental-operating-leases/",
+    "https://www.reliancecpa.com/dental-llp/tax-calculator-pen-and-glasses/",
+    "https://www.reliancecpa.com/dental-location-analysis/dental-equipment/",
+    "https://www.reliancecpa.com/dental-marketing-advertising-agency/business-marketing-and-planning-2/",
+    "https://www.reliancecpa.com/dental-microsoft-office/microsoft-office/",
+    "https://www.reliancecpa.com/dental-mobile-marketing/mobile-marketing/",
+    "https://www.reliancecpa.com/dental-monthly-financial-statements/monthly-financial-statements/",
+    "https://www.reliancecpa.com/dental-optimal-tax-structure/optimal-tax-structure/",
+    "https://www.reliancecpa.com/dental-partnership/dental-partnership-2/",
+    "https://www.reliancecpa.com/dental-paying-bills/dental-paying-bills/",
+    "https://www.reliancecpa.com/dental-payroll-services/dental-payroll-services/",
+    "https://www.reliancecpa.com/dental-practice-acquisition-analysis/dental-practice-acquisition-analysis-2/",
+    "https://www.reliancecpa.com/dental-practice-budgets/close-up-of-patienta%c2%80%c2%99s-open-mouth-during-oral-inspection-with-mirror-and-hook/",
+    "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity/",
+    "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist/",
+    "https://www.reliancecpa.com/dental-s-corporation/s-corporation-2/",
+    "https://www.reliancecpa.com/dental-selection-business-entity/dental-selection-of-business-entity/",
+    "https://www.reliancecpa.com/dental-tax-diversification/dental-tax-diversification/",
+    "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery/",
+    "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist/",
+    "https://www.reliancecpa.com/dental-wage-accounts/dentist-and-assistant-checking-x-ray-at-dental-clinic/",
+    "https://www.reliancecpa.com/depreciation.html/depreciation/",
+    "https://www.reliancecpa.com/diversification.html/tax-diversification/",
+    "https://www.reliancecpa.com/doctor-decisions.htm/doctor-decisions/",
+    "https://www.reliancecpa.com/downsizing.html/downsizing/",
+    "https://www.reliancecpa.com/due-diligence.html/due-diligence/",
+    "https://www.reliancecpa.com/early-payoff-student-loans.html/early-payoff-student-loans/",
+    "https://www.reliancecpa.com/early-retirement.html/early-retirement/",
+    "https://www.reliancecpa.com/earned-income-credit.html/earned-income-credit/",
+    "https://www.reliancecpa.com/elder-financial-care.htm/holding-the-dollar/",
+    "https://www.reliancecpa.com/electronic-discovery.html/electronic-discovery/",
+    "https://www.reliancecpa.com/emergency-cash.html/emergency-cash/",
+    "https://www.reliancecpa.com/employee-benefits/employee-benefits-2/",
+    "https://www.reliancecpa.com/employee-tax-records.html/tax-records/",
+    "https://www.reliancecpa.com/employee-vs-independent-contractor.htm/employee-vs-independent-contractor/",
+    "https://www.reliancecpa.com/employer-identification-number.htm/employer-identification-number/",
+    "https://www.reliancecpa.com/employer-responsibilities.html/employer-responsibilities/",
+    "https://www.reliancecpa.com/equilibrium-price/equilibrium-price/",
+    "https://www.reliancecpa.com/estate-executor/estate-executor/",
+    "https://www.reliancecpa.com/estate-planning.htm/senior-couple-meeting-with-agent/",
+    "https://www.reliancecpa.com/estimated-tax.html/estimated-tax/",
+    "https://www.reliancecpa.com/existing-business.html/existing-business/",
+    "https://www.reliancecpa.com/exit-strategy.html/exit-strategy/",
+    "https://www.reliancecpa.com/fair-value.html/fair-value/",
+    "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2/",
+    "https://www.reliancecpa.com/federal-reserve/federal-reserve-2/",
+    "https://www.reliancecpa.com/filing-quarterly-taxes/quarterly-taxes/",
+    "https://www.reliancecpa.com/financial-advice.html/worse-finances/",
+    "https://www.reliancecpa.com/financial-planning.htm/financial-planning/",
+    "https://www.reliancecpa.com/financially-preparing-divorce.htm/financially-preparing-divorce/",
+    "https://www.reliancecpa.com/financially-preparing-marriage.htm/financially-preparing-marriage/",
+    "https://www.reliancecpa.com/financing-growth.html/financing-growth/",
+    "https://www.reliancecpa.com/finding-employees/right-employees/",
+    "https://www.reliancecpa.com/firmprofile.html/navigating-the-business-of-medicine/",
+    "https://www.reliancecpa.com/five-cs-of-credit.html/five-cs-of-credit/",
+    "https://www.reliancecpa.com/flexible-hours/flexible-hours-2/",
+    "https://www.reliancecpa.com/flood-insurance.html/flood-insurance/",
+    "https://www.reliancecpa.com/florida-prepaid.html/florida-prepaid/",
+    "https://www.reliancecpa.com/florida-small-business/florida-small-business-2/",
+    "https://www.reliancecpa.com/florida-taxes.html/florida-taxes/",
+    "https://www.reliancecpa.com/forms-to-start-business.htm/forms-to-start-new-business/",
+    "https://www.reliancecpa.com/franchise-or-brand/franchise/",
+    "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2/",
+    "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity/",
+    "https://www.reliancecpa.com/general-ledger.html/general-ledger/",
+    "https://www.reliancecpa.com/get-started-estate-planning.htm/get-started-estate-planning/",
+    "https://www.reliancecpa.com/getting-good-financial-advice.htm/getting-good-financial-advice/",
+    "https://www.reliancecpa.com/global-business.html/global-business/",
+    "https://www.reliancecpa.com/government-contracts/sba-government-contract/",
+    "https://www.reliancecpa.com/great-business-plan/business-plan-2/",
+    "https://www.reliancecpa.com/green-business.htm/greenbusiness/",
+    "https://www.reliancecpa.com/green-companies-taxes/solar-panel./",
+    "https://www.reliancecpa.com/gsa-schedules.html/gsa-schedules/",
+    "https://www.reliancecpa.com/health-care-tax-credit/health-care-tax-credit-2/",
+    "https://www.reliancecpa.com/health-reform-and-hire-act.html/health-reform/",
+    "https://www.reliancecpa.com/hiring-employees.htm/hiring-employees/",
+    "https://www.reliancecpa.com/hiring-family-members.htm/hiring-family-members/",
+    "https://www.reliancecpa.com/hiring-incentives/hiring-incentives-2/",
+    "https://www.reliancecpa.com/home-based-business.htm/workingathome/",
+    "https://www.reliancecpa.com/home-based-businesses/home-based-business-2/",
+    "https://www.reliancecpa.com/home-business.html/home-based-business/",
+    "https://www.reliancecpa.com/home-improvements/insurance-costs-2/",
+    "https://www.reliancecpa.com/homestead-exemption.html/homestead-exemption/",
+    "https://www.reliancecpa.com/household-employee-tax.htm/household-employee-tax/",
+    "https://www.reliancecpa.com/how-payroll-processing-helps.htm/payroll-processing-helps/",
+    "https://www.reliancecpa.com/how-to-choose-cpa.htm/how-to-choose-cpa/",
+    "https://www.reliancecpa.com/human-resources-delegation/human-resources/",
+    "https://www.reliancecpa.com/identity-theft.htm/idtheft/",
+    "https://www.reliancecpa.com/importance-of-a-will.htm/importance-of-a-will/",
+    "https://www.reliancecpa.com/improved-financial-situation.html/financial-improvement/",
+    "https://www.reliancecpa.com/income-tax-preparer.html/tax-preparer-2/",
+    "https://www.reliancecpa.com/income-tax-services.htm/income-tax-services/",
+    "https://www.reliancecpa.com/income-tax-withholding.html/income-tax-withholding/",
+    "https://www.reliancecpa.com/indirect-taxes/indirect-taxes/",
+    "https://www.reliancecpa.com/information-security.html/small-business-security/",
+    "https://www.reliancecpa.com/inherit-money-or-property/substantial-inheritance/",
+    "https://www.reliancecpa.com/insurance-costs/insurance-costs-1/",
+    "https://www.reliancecpa.com/insurance-settlement/file-marked-with-insurance/",
+    "https://www.reliancecpa.com/intangible-assets.html/intangible-assets/",
+    "https://www.reliancecpa.com/intellectual-property.html/intellectual-property/",
+    "https://www.reliancecpa.com/internal-audit.html/internal-audit/",
+    "https://www.reliancecpa.com/internal-controls-evaluation.htm/internal-controls-evaluation/",
+    "https://www.reliancecpa.com/international-business/international-business-2/",
+    "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing/",
+    "https://www.reliancecpa.com/investment-plan.html/investment-plan/",
+    "https://www.reliancecpa.com/ipo-costs/ipo-costs-2/",
+    "https://www.reliancecpa.com/irs-email-scams.html/irs-email-scams/",
+    "https://www.reliancecpa.com/irs-frivolous-arguments/irs-frivolous-arguments/",
+    "https://www.reliancecpa.com/irs-problems.htm/irs-problems/",
+    "https://www.reliancecpa.com/itemization-tax-return/tax-forms./",
+    "https://www.reliancecpa.com/keep-financial-records.htm/keep-financial-records/",
+    "https://www.reliancecpa.com/keogh-plan/keogh-plan-2/",
+    "https://www.reliancecpa.com/key-performance-indicators/key-performance-indicators-2/",
+    "https://www.reliancecpa.com/late-income-tax-return.htm/late-income-tax-return/",
+    "https://www.reliancecpa.com/late-retirement-planning.html/late-retirement-planning/",
+    "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes/",
+    "https://www.reliancecpa.com/leasing-car.html/leasing-car/",
+    "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout/",
+    "https://www.reliancecpa.com/liabilities.html/liabilities/",
+    "https://www.reliancecpa.com/life-events.html/life-events/",
+    "https://www.reliancecpa.com/life-insurance-needs-analysis.htm/life-insurance-needs-analysis/",
+    "https://www.reliancecpa.com/limited-liability-corporation.htm/limited-liability-corporation/",
+    "https://www.reliancecpa.com/liquidating-assets.html/liquidating-assets/",
+    "https://www.reliancecpa.com/living-will.htm/livingwill/",
+    "https://www.reliancecpa.com/long-term-care.htm/longtermcare/",
+    "https://www.reliancecpa.com/long-term-care/long-term-planning/",
+    "https://www.reliancecpa.com/losses-tax-deductions/trashed-room/",
+    "https://www.reliancecpa.com/making-money-in-medicine.htm/making-money-in-medicine/",
+    "https://www.reliancecpa.com/market-indicators/market-indicators/",
+    "https://www.reliancecpa.com/marketing-budget.html/marketing-budget/",
+    "https://www.reliancecpa.com/married-filing-jointly.html/married-filing-jointly/",
+    "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands/",
+    "https://www.reliancecpa.com/money-market.html/money-market/",
+    "https://www.reliancecpa.com/mortgage-refinance/mortgage-refinance-2/",
+    "https://www.reliancecpa.com/motivating-employees.html/motivating-employees/",
+    "https://www.reliancecpa.com/mutual-fund.html/mutual-fund/",
+    "https://www.reliancecpa.com/naming-business.html/naming-business/",
+    "https://www.reliancecpa.com/negotiating-dental-loan-terms/dental-negotiatiing-loan-terms/",
+    "https://www.reliancecpa.com/net-worth.html/net-worth/",
+    "https://www.reliancecpa.com/network-security/network-server-room/",
+    "https://www.reliancecpa.com/new-business-financing.html/new-business-financing/",
+    "https://www.reliancecpa.com/new-business-planning.htm/new-business-planning/",
+    "https://www.reliancecpa.com/new-business-priorities.html/new-business-priorities/",
+    "https://www.reliancecpa.com/new-business.html/new-business/",
+    "https://www.reliancecpa.com/non-cash-transactions.html/non-cash-transactions/",
+    "https://www.reliancecpa.com/on-line-business.html/on-line-business/",
+    "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses/",
+    "https://www.reliancecpa.com/organizational-structure.html/organizational-structure/",
+    "https://www.reliancecpa.com/part-time-cfo.htm/part-time-cfo/",
+    "https://www.reliancecpa.com/partnership.htm/partnership/",
+    "https://www.reliancecpa.com/passive-income/passive-income/",
+    "https://www.reliancecpa.com/patient-accounts/accounting./",
+    "https://www.reliancecpa.com/pay-per-click/pay-per-click/",
+    "https://www.reliancecpa.com/payroll-services.htm/payroll-services/",
+    "https://www.reliancecpa.com/performance-management.html/performance-management/",
+    "https://www.reliancecpa.com/personal-assets.html/personal-assets/",
+    "https://www.reliancecpa.com/personal-budget.html/personal-budget/",
+    "https://www.reliancecpa.com/personal-budget/personal-budget-2/",
+    "https://www.reliancecpa.com/personal-financial-goals.html/personal-financial-goals/",
+    "https://www.reliancecpa.com/personal-financial-goals/in-home-sales/",
+    "https://www.reliancecpa.com/personal-record-retention.htm/personal-record-retention/",
+    "https://www.reliancecpa.com/personal-tax-extension.html/personal-tax-extension/",
+    "https://www.reliancecpa.com/petty-cash/petty-cash/",
+    "https://www.reliancecpa.com/physician-accountants.htm/physician-accountants/",
+    "https://www.reliancecpa.com/post-mortem-letter.htm/post-mortem-letter/",
+    "https://www.reliancecpa.com/potential-employees.html/potential-employees/",
+    "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney/",
+    "https://www.reliancecpa.com/processes.html/processes/",
+    "https://www.reliancecpa.com/profitable-business-idea/business-idea/",
+    "https://www.reliancecpa.com/property-depreciation.html/property-depreciation/",
+    "https://www.reliancecpa.com/purchase-business-franchise.html/purchase-business-franchise/",
+    "https://www.reliancecpa.com/quickbooks-accountant.htm/quickbooks-accountant/",
+    "https://www.reliancecpa.com/ready-to-incorporate.html/ready-to-incorporate/",
+    "https://www.reliancecpa.com/real-estate-cpa.htm/digital-image-by-sean-lockedigital-planet-designwww.digitalplanetdesign.com",
+    "https://www.reliancecpa.com/real-property/real-property/",
+    "https://www.reliancecpa.com/reasons-to-choose-reliance.htm/reasons-choose-reliance/",
+    "https://www.reliancecpa.com/recording-transactions.html/business-ledger/",
+    "https://www.reliancecpa.com/records-for-cpa-meeting.htm/records-for-cpa-meeting/",
+    "https://www.reliancecpa.com/refinance.html/refinance/",
+    "https://www.reliancecpa.com/refinancing-home-mortgage.html/refinancing-home-mortgage/",
+    "https://www.reliancecpa.com/reit-retirement/reit-for-retirement/",
+    "https://www.reliancecpa.com/related-party-transactions/related-party-transaction/",
+    "https://www.reliancecpa.com/reliable-insurance/reliable-insurance-2/",
+    "https://www.reliancecpa.com/reliance-consulting-netclient-portals/client-login/",
+    "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2/",
+    "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient/",
+    "https://www.reliancecpa.com/remarketing/remarketing-2/",
+    "https://www.reliancecpa.com/rent-or-buy-home.html/rent-or-buy-home/",
+    "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy/",
+    "https://www.reliancecpa.com/restaurant-hotel-accountant.htm/restaurant-hotel-accountant/",
+    "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting/",
+    "https://www.reliancecpa.com/retirement-expenses.htm/retirement-expenses/",
+    "https://www.reliancecpa.com/retirement-planning-money.html/retirement-planning-money/",
+    "https://www.reliancecpa.com/retirement-readiness/ready-to-retire/",
+    "https://www.reliancecpa.com/retirement-taxes.html/retirement-taxes/",
+    "https://www.reliancecpa.com/reverse-mortgage.htm/reversemortgage/",
+    "https://www.reliancecpa.com/reverse-mortgage/reverse-mortgage-2/",
+    "https://www.reliancecpa.com/revocable-trust/revocable-trust/",
+    "https://www.reliancecpa.com/revocable-trusts.html/revocable-trusts/",
+    "https://www.reliancecpa.com/risk-management-controls/risk-management-2/",
+    "https://www.reliancecpa.com/risk-management.html/risk-management/",
+    "https://www.reliancecpa.com/roth-traditional-ira.html/roth-traditional-ira/",
+    "https://www.reliancecpa.com/running-green-business.html/running-green-business/",
+    "https://www.reliancecpa.com/s-corporation.htm/s-corporation/",
+    "https://www.reliancecpa.com/sales-strategy.html/sales-strategy/",
+    "https://www.reliancecpa.com/sales-tax-law.htm/floridasalestax/",
+    "https://www.reliancecpa.com/saving-energy.html/saving-energy/",
+    "https://www.reliancecpa.com/savings-plan.html/savings-amount/",
+    "https://www.reliancecpa.com/sba-assistance/sba-assistance-2/",
+    "https://www.reliancecpa.com/search-engine-marketing.html/internet-marketing/",
+    "https://www.reliancecpa.com/sec-role/sec/",
+    "https://www.reliancecpa.com/second-career/second-career/",
+    "https://www.reliancecpa.com/self-directed-ira/self-directed-ira-2/",
+    "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2/",
+    "https://www.reliancecpa.com/self-employment-tax.html/self-employment-tax/",
+    "https://www.reliancecpa.com/small-business-accountant.html/small-business-accountant-2/",
+    "https://www.reliancecpa.com/small-business-accounting.htm/small-business-accountant/",
+    "https://www.reliancecpa.com/small-business-brand/woman-working-at-flower-shop-smiling/",
+    "https://www.reliancecpa.com/small-business-defined.html/small-business-defined/",
+    "https://www.reliancecpa.com/small-business-defined/small-business-defined-2/",
+    "https://www.reliancecpa.com/small-business-ecommerce.html/small-business-ecommerce/",
+    "https://www.reliancecpa.com/small-business-efficiency.html/small-business-efficiency/",
+    "https://www.reliancecpa.com/small-business-failure.html/small-business-failure/",
+    "https://www.reliancecpa.com/small-business-insurance.html/small-business-insurance/",
+    "https://www.reliancecpa.com/small-business-location.html/small-business-location/",
+    "https://www.reliancecpa.com/small-business-networking.html/small-business-networking/",
+    "https://www.reliancecpa.com/small-business-planning.html/small-business-planning/",
+    "https://www.reliancecpa.com/small-business-success.html/small-business-success/",
+    "https://www.reliancecpa.com/small-business-tax/small-business-tax-2/",
+    "https://www.reliancecpa.com/social-media-mistakes/social-media-diagram/",
+    "https://www.reliancecpa.com/social-media-small-business/social-media-small-business-2/",
+    "https://www.reliancecpa.com/social-media-strategy/social-media-strategy/",
+    "https://www.reliancecpa.com/sole-proprietorship.htm/sole-proprietorship/",
+    "https://www.reliancecpa.com/source-document.html/source-document/",
+    "https://www.reliancecpa.com/staff-profiles.htm/briana-mcnulty/",
+    "https://www.reliancecpa.com/staff-profiles.htm/jamie-partin/",
+    "https://www.reliancecpa.com/staff-profiles.htm/kim-nguyen/",
+    "https://www.reliancecpa.com/staff-profiles.htm/nicole-frenier/",
+    "https://www.reliancecpa.com/staff-profiles.htm/tara-govindaraju/",
+    "https://www.reliancecpa.com/standard-deduction-tax-return/preparing-taxes/",
+    "https://www.reliancecpa.com/start-my-own-business.html/start-my-own-business/",
+    "https://www.reliancecpa.com/starting-a-business.html/starting-new-business/",
+    "https://www.reliancecpa.com/startup-costs.html/startup-costs/",
+    "https://www.reliancecpa.com/staying-on-budget.htm/budget/",
+    "https://www.reliancecpa.com/strategic-business-planning.htm/strategic-business-planning/",
+    "https://www.reliancecpa.com/student-loans.html/student-loan/",
+    "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business/",
+    "https://www.reliancecpa.com/succession-planning.htm/succession-planning/",
+    "https://www.reliancecpa.com/tampa-cpa-areas-served.htm/greater-tampa-bay/",
+    "https://www.reliancecpa.com/tampa-cpa-firm-tampa-accountants-serve-all-business-tax-income-tax-bookkeeping-payroll-accounting-needs/cpa-certified-public-accountant/",
+    "https://www.reliancecpa.com/tax-benefits-home-office/home-office/",
+    "https://www.reliancecpa.com/tax-benefits-home-ownership/couple-standing-outside-new-house/",
+    "https://www.reliancecpa.com/tax-compliance/tax-compliance-2/",
+    "https://www.reliancecpa.com/tax-exempt-organizations/tax-exempt-organizations-2/",
+    "https://www.reliancecpa.com/tax-exempt-status/tax-form-2/",
+    "https://www.reliancecpa.com/tax-form.html/tax-form/",
+    "https://www.reliancecpa.com/tax-forms/tax-form-types/",
+    "https://www.reliancecpa.com/tax-planning-year-round/tax-planning-year-round/",
+    "https://www.reliancecpa.com/tax-planning.htm/tax-planning/",
+    "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant/",
+    "https://www.reliancecpa.com/tax-preparer.htm/tax-preparer/",
+    "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm/tax-problem-irs-audit-help/",
+    "https://www.reliancecpa.com/tax-records-to-keep/tax-records-to-keep-2/",
+    "https://www.reliancecpa.com/tax-return-error/tax-return-error-2/",
+    "https://www.reliancecpa.com/tax-rules-home-sale/accounting/",
+    "https://www.reliancecpa.com/tax-saving-strategies.htm/tax-saving-strategies/",
+    "https://www.reliancecpa.com/tax-scams.html/tax-scams/",
+    "https://www.reliancecpa.com/tax-valuation-allowance/tax-valuation-allowance-2/",
+    "https://www.reliancecpa.com/taxable-income.html/taxable-income/",
+    "https://www.reliancecpa.com/taxpayer-advocate-service/tas-irs/",
+    "https://www.reliancecpa.com/taxpayer-burden.html/taxpayer-burden/",
+    "https://www.reliancecpa.com/taxpayer-rights.html/taxpayer-rights/",
+    "https://www.reliancecpa.com/temporary-employees.html/temporary-employees/",
+    "https://www.reliancecpa.com/time-management-business-owner/time-management-business-owner/",
+    "https://www.reliancecpa.com/time-management.html/time-management/",
+    "https://www.reliancecpa.com/title-insurance.html/title-insurance/",
+    "https://www.reliancecpa.com/titling-dental-assets/dental-titling-of-assets/",
+    "https://www.reliancecpa.com/trade-shows.html/trade-shows/",
+    "https://www.reliancecpa.com/transaction-taxes/transaction-tax/",
+    "https://www.reliancecpa.com/transfer-ownership.html/transfer-ownership/",
+    "https://www.reliancecpa.com/twitter/woman-in-home-office-with-computer-smiling/",
+    "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business/",
+    "https://www.reliancecpa.com/understanding-estate-tax.html/understanding-estate-tax/",
+    "https://www.reliancecpa.com/underwater-mortgage/underwater-mortgage-2/",
+    "https://www.reliancecpa.com/unemployment-tax.html/unemployment-tax/",
+    "https://www.reliancecpa.com/upside-down-mortgage.html/upside-down-mortgage/",
+    "https://www.reliancecpa.com/vacation-budgeting.html/vacation-budgeting/",
+    "https://www.reliancecpa.com/value-added-tax.html/value-added-tax/",
+    "https://www.reliancecpa.com/velocity/velocity-2/",
+    "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support/quickbooks-logo/",
+    "https://www.reliancecpa.com/veterinary-benchmarking/benchmarking-benefits/",
+    "https://www.reliancecpa.com/veterinary-bookkeeping/bookkeeping-1/",
+    "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections/budget-istock_000041295790_large/",
+    "https://www.reliancecpa.com/veterinary-business-entity-structuring/business_structures/",
+    "https://www.reliancecpa.com/veterinary-business-loan-assistance/contentimagehandler/",
+    "https://www.reliancecpa.com/veterinary-business-plan-development/business-plan-images/",
+    "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis/market-analysis/",
+    "https://www.reliancecpa.com/veterinary-cash-flow-planning/freecashflowtocommonequity/",
+    "https://www.reliancecpa.com/veterinary-cpa/veterinarian-assessing-a-puppy/",
+    "https://www.reliancecpa.com/veterinary-financial-and-consulting-services/veterinarian-job-description/",
+    "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports/",
+    "https://www.reliancecpa.com/veterinary-hiring-assistance/staff-b4412c66/",
+    "https://www.reliancecpa.com/veterinary-irs-problem-resolution/tax-problems/",
+    "https://www.reliancecpa.com/veterinary-outsourced-controller/time-is-money/",
+    "https://www.reliancecpa.com/veterinary-purchasing-a-practice/istock_000009819502small/",
+    "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan/",
+    "https://www.reliancecpa.com/veterinary-succession-planning/vets-examining-an-australian-shepherds-radiography-in-front-of-white-background/",
+    "https://www.reliancecpa.com/veterinary-tax-planning/year-end-tax-planning-morell-open-forum-432/",
+    "https://www.reliancecpa.com/veterinary-virtual-accounting/virtualbookkeeping/",
+    "https://www.reliancecpa.com/voluntary-tax.html/voluntary-tax/",
+    "https://www.reliancecpa.com/wage-and-hour-laws.html/wage-and-hour-laws/",
+    "https://www.reliancecpa.com/what-is-a-cpa.htm/what-is-a-cpa/",
+    "https://www.reliancecpa.com/what-is-a-trust.htm/trust/",
+    "https://www.reliancecpa.com/who-must-file.html/who-must-file/",
+    "https://www.reliancecpa.com/why-you-need-life-insurance.htm/why-you-need-life-insurance/",
+    "https://www.reliancecpa.com/withdrawal-from-ira/nest-egg/",
+    "https://www.reliancecpa.com/workplace-monotony/employee-monotony/",
+    "https://www.reliancecpa.com/contact",
+    "https://www.reliancecpa.com/crowd-fundin"
+   ],
+   "nav": [
+    {
+     "text": "Home",
+     "href": "https://www.reliancecpa.com/"
+    },
+    {
+     "text": "Tax Preparation",
+     "href": "https://www.reliancecpa.com/tax-preparation.htm",
+     "children": [
+      {
+       "text": "Tampa CPA for Tax Planning",
+       "href": "https://www.reliancecpa.com/tax-planning.htm"
+      },
+      {
+       "text": "Business Tax Accountant",
+       "href": "https://www.reliancecpa.com/business-tax.htm"
+      },
+      {
+       "text": "Income Tax Services",
+       "href": "https://www.reliancecpa.com/income-tax-services.htm"
+      },
+      {
+       "text": "Tax Preparer",
+       "href": "https://www.reliancecpa.com/tax-preparer.htm"
+      },
+      {
+       "text": "Tax Problems & IRS Problem Resolution",
+       "href": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm"
+      }
+     ]
+    },
+    {
+     "text": "Small Business Accountant",
+     "href": "https://www.reliancecpa.com/small-business-accounting.htm",
+     "children": [
+      {
+       "text": "Bookkeeping",
+       "href": "https://www.reliancecpa.com/bookkeeping.htm"
+      },
+      {
+       "text": "QuickBooks Accountant",
+       "href": "https://www.reliancecpa.com/quickbooks-accountant.htm"
+      },
+      {
+       "text": "Reliance BackOffice",
+       "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+      },
+      {
+       "text": "Payroll Services",
+       "href": "https://www.reliancecpa.com/payroll-services.htm"
+      },
+      {
+       "text": "Cash Flow Management",
+       "href": "https://www.reliancecpa.com/cash-flow-management.htm"
+      },
+      {
+       "text": "Business Finance Consultant",
+       "href": "https://www.reliancecpa.com/business-finance-consultant.htm"
+      },
+      {
+       "text": "Strategic Business Planning",
+       "href": "https://www.reliancecpa.com/business-planning-services.htm"
+      },
+      {
+       "text": "New Business Planning",
+       "href": "https://www.reliancecpa.com/new-business-planning.htm"
+      }
+     ]
+    },
+    {
+     "text": "Business Consultants",
+     "href": "https://www.reliancecpa.com/business-consultants.htm",
+     "children": [
+      {
+       "text": "Physician Accountant & CPA",
+       "href": "https://www.reliancecpa.com/physician-accountants.htm"
+      },
+      {
+       "text": "Reliance BackOffice",
+       "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+      },
+      {
+       "text": "Retail Accounting",
+       "href": "https://www.reliancecpa.com/retail-accounting.htm"
+      },
+      {
+       "text": "Restaurant, Hotel & Hospitality",
+       "href": "https://www.reliancecpa.com/restaurant-hotel-accountant.htm"
+      },
+      {
+       "text": "Real Estate CPA & Accountant",
+       "href": "https://www.reliancecpa.com/real-estate-cpa.htm"
+      },
+      {
+       "text": "Financial Planning",
+       "href": "https://www.reliancecpa.com/financial-planning.htm"
+      }
+     ]
+    },
+    {
+     "text": "Dental CPA",
+     "href": "https://www.reliancecpa.com/dental-cpa",
+     "children": [
+      {
+       "text": "Accounting and Tax Services",
+       "href": "https://www.reliancecpa.com/dental-accounting-tax-services"
+      },
+      {
+       "text": "Financing Assistance",
+       "href": "https://www.reliancecpa.com/dental-financing-assistance"
+      },
+      {
+       "text": "Practice Acquisition Analysis",
+       "href": "https://www.reliancecpa.com/dental-practice-acquisition-analysis"
+      },
+      {
+       "text": "Basic Valuation Analysis",
+       "href": "https://www.reliancecpa.com/basic-valuation-analysis"
+      },
+      {
+       "text": "Choosing a Bank",
+       "href": "https://www.reliancecpa.com/dental-choosing-a-bank"
+      },
+      {
+       "text": "Asset Protection Planning",
+       "href": "https://www.reliancecpa.com/dental-asset-protection-planning"
+      },
+      {
+       "text": "Dental Marketing",
+       "href": "https://www.reliancecpa.com/dental-marketing-advertising-agency"
+      },
+      {
+       "text": "Reliance BackOffice",
+       "href": "https://www.reliancecpa.com/reliance-consulting-backoffice"
+      }
+     ]
+    },
+    {
+     "text": "Veterinary CPA",
+     "href": "https://www.reliancecpa.com/veterinary-cpa",
+     "children": [
+      {
+       "text": "Bill Pay",
+       "href": "https://www.reliancecpa.com/veterinary-bill-pay"
+      },
+      {
+       "text": "Benchmarking",
+       "href": "https://www.reliancecpa.com/veterinary-benchmarking"
+      },
+      {
+       "text": "Budgets and Financial Projections",
+       "href": "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections"
+      },
+      {
+       "text": "Business Entity Structuring",
+       "href": "https://www.reliancecpa.com/veterinary-business-entity-structuring"
+      },
+      {
+       "text": "Business Plan Development",
+       "href": "https://www.reliancecpa.com/veterinary-business-plan-development"
+      },
+      {
+       "text": "Business Loan Assistance",
+       "href": "https://www.reliancecpa.com/veterinary-business-loan-assistance"
+      },
+      {
+       "text": "Buying vs. Leasing",
+       "href": "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis"
+      },
+      {
+       "text": "Cash Flow Planning",
+       "href": "https://www.reliancecpa.com/veterinary-cash-flow-planning"
+      },
+      {
+       "text": "Financial and Consulting Services",
+       "href": "https://www.reliancecpa.com/veterinary-financial-and-consulting-services"
+      },
+      {
+       "text": "Financial Statement Preparation",
+       "href": "https://www.reliancecpa.com/veterinary-financial-statement-preparation"
+      },
+      {
+       "text": "Hiring Assistance",
+       "href": "https://www.reliancecpa.com/veterinary-hiring-assistance"
+      },
+      {
+       "text": "Offsite Bookkeeping",
+       "href": "https://www.reliancecpa.com/veterinary-bookkeeping"
+      },
+      {
+       "text": "Outsourced Controller",
+       "href": "https://www.reliancecpa.com/veterinary-outsourced-controller"
+      },
+      {
+       "text": "IRS Problem Resolution",
+       "href": "https://www.reliancecpa.com/veterinary-irs-problem-resolution"
+      },
+      {
+       "text": "Purchasing a Practice",
+       "href": "https://www.reliancecpa.com/veterinary-purchasing-a-practice"
+      },
+      {
+       "text": "Retirement Planning",
+       "href": "https://www.reliancecpa.com/veterinary-retirement-planning"
+      },
+      {
+       "text": "Succession Planning",
+       "href": "https://www.reliancecpa.com/veterinary-succession-planning"
+      },
+      {
+       "text": "Tax Planning",
+       "href": "https://www.reliancecpa.com/veterinary-tax-planning"
+      },
+      {
+       "text": "Virtual Accounting",
+       "href": "https://www.reliancecpa.com/veterinary-virtual-accounting"
+      },
+      {
+       "text": "QuickBooks",
+       "href": "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support"
+      }
+     ]
+    },
+    {
+     "text": "About Us",
+     "href": "https://www.reliancecpa.com/firmprofile.html"
+    },
+    {
+     "text": "Contact Us",
+     "href": "https://www.reliancecpa.com/contact.html"
+    },
+    {
+     "text": "Employment Opportunities",
+     "href": "https://www.reliancecpa.com/custom2.html"
+    },
+    {
+     "text": "Reliance Blog",
+     "href": "http://reliancecpa.wordpress.com/"
+    },
+    {
+     "text": "Accessibility",
+     "href": "https://www.reliancecpa.com/accessibility"
+    }
+   ]
+  }
+ ],
+ "phones": [
+  "(813) 931-7258"
+ ],
+ "emails": [],
+ "addresses": [],
+ "json_ld_organisation": [],
+ "social_links": [
+  {
+   "text": "Reliance Consulting Facebook Page",
+   "href": "http://www.facebook.com/pages/Reliance-Consulting/100601013341144?sk=info"
+  },
+  {
+   "text": "Reliance Consulting Twitter Page",
+   "href": "https://twitter.com/#!/RelianceCPA"
+  },
+  {
+   "text": "Reliance Consulting LinkedIn Page",
+   "href": "http://www.linkedin.com/in/amolnirgudkar"
+  }
+ ],
+ "client_login_links": [
+  {
+   "text": "Client Login",
+   "href": "https://www.reliancecpa.com/client-portal-login"
+  },
+  {
+   "text": "",
+   "href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals"
+  }
+ ],
+ "sidebar": {
+  "used_on_pages": 0,
+  "blocks": []
+ }
+}

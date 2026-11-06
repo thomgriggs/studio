@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/business-lease",
+ "slug": "business-lease",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Business Lease | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-lease",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Tells You What to Watch Out for in a Business Lease",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Tells You What to Watch Out for in a Business Lease",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Lease-300x200.jpg",
+   "alt": "Business Lease",
+   "alt_missing": false,
+   "title": "Business Lease",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you have operated a business out of your home and are considering leasing office space, or you own or operate a company that is expanding and needs more office space, or your lease is expiring and you simply want to find a new place to conduct business every day, you need to be aware of several potential pitfalls in your business lease. Failure to understand the small print in your lease could cost you financially and emotionally.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine what you actually need in terms of office space, as well as what you can afford, based on income, projected sales, expenditures, etc. Once you have decided on a place, our experienced business consultants can help make sure that the language in the lease does not prove financially detrimental to your company. Some things to be aware of:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Is the language broad enough to permit your company to maximize profitability?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Does the language restrict the leasing company from leasing adjacent or nearby office space to competitors?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If the company is a franchise, are the franchisor’s rights protected?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Is there language that allows for renegotiation in case of expansion?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Is all maintenance covered by the landlord?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Who is responsible for disruption of services?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are there parking or signage restrictions?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The place you’ve found might seem like the office of your dreams, but before you sign that lease, [contact](http://reliancecpa.com/contact.html) Reliance Consulting and let us help you make sure that dream doesn’t turn into a nightmare because of inequities within the contract.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 276
+}

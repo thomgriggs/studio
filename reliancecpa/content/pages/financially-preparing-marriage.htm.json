@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/financially-preparing-marriage.htm",
+ "slug": "financially-preparing-marriage.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Financially Preparing for Marriage: Meet with Your Accountant in Tampa Beforehand",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financially-preparing-marriage.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financially Preparing for Marriage: Meet with Your Accountant in Tampa Beforehand",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Financially Preparing for Marriage: Meet with Your Accountant in Tampa Beforehand",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financially-preparing-marriage.jpg",
+   "alt": "Financially Preparing for Marriage & How Your Accountant in Tampa Can Help",
+   "alt_missing": false,
+   "title": "Financially Preparing for Marriage & How Your Accountant in Tampa Can Help",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Getting married is a joyous occasion. In the months leading up to the wedding, Tampa Bay lovebirds are often busy choosing flower arrangements, selecting a menu for the reception, and planning their honeymoon. In the midst of these happy times, sometimes it’s difficult to think about serious matters like finances, but this doesn’t change the fact that newlyweds have some important financial decisions to make.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [accountant in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC would be honored to assist you and your future spouse with financially preparing for marriage. We have decades of experience working with Tampa area couples from before their wedding to their retirement years, and this experience has proven invaluable to singles who are about to tie the knot. Some of the financial decisions we can discuss with you before your marriage include:",
+   "links": [
+    {
+     "text": "accountant in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Managing money—You should discuss your expectations for spending and saving money, as well as your plans for bank accounts and investments.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Life insurance—Make sure you have coverage to sustain your spouse and family after you die.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Owing property—Whether you and your future spouse already own property together, or you own property separately, you should discuss how property ownership will be handled after you are married.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning for the future—Saving for your children’s education and retirement are two big issues to discuss before walking down the aisle.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning—Not all couples plan to leave everything to each other after they pass away, especially if they have children from previous marriages.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s not fun to think about, but financial troubles create a lot of stress in marriages, so it makes sense to iron out financial details before your wedding. This one undertaking has the potential to help your marriage start off on the right foot and remain strong in the years to come.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please contact an accountant in Tampa from Reliance Consulting to learn more about financially preparing for marriage. We look forward to assisting you.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 330
+}

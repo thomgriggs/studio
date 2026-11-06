@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/florida-taxes.html",
+ "slug": "florida-taxes.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Florida Business Taxes",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/florida-taxes.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Talks About What Taxes Must Be Paid By a Florida Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Talks About What Taxes Must Be Paid By a Florida Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/florida-taxes.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Florida traditionally is considered a tax-friendly environment, whether pertaining to businesses or individuals. The fact that there is no individual state income tax has helped attract new residents for years. Yet, as tax-friendly as Florida is, company owners still have many taxes to be aware of as they conduct business in the Sunshine State.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help a business owner sort through all the rules and regulations – and help find ways to minimize the tax burden in the short-term and long-term. Since 1984, Reliance has helped hundreds of Tampa Bay area businesses find and stay on the path to profitability. One way to do that is through smart tax planning and a thorough knowledge of how best to navigate Florida’s tax laws for companies. Among the taxes a Florida business can expect to pay are:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Sales and use tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unemployment tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Corporate income tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Many others, depending on the type of business – including taxes on communications, documents, fuel, gross receipts, insurance premiums, pollutants, severance, and solid waste",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether it’s tax planning, payroll services, cash flow management, or other day-to-day financial responsibility, Reliance can handle it while you focus on production and the big picture. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn more about our small business consulting service or for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 237
+}

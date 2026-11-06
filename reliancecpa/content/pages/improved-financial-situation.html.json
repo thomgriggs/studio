@@ -1,0 +1,141 @@
+{
+ "url": "https://www.reliancecpa.com/improved-financial-situation.html",
+ "slug": "improved-financial-situation.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Improved Financial Situation",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/improved-financial-situation.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help with Decisions if Your Financial Situation Improves",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help with Decisions if Your Financial Situation Improves",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financial-improvement.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "CPA in Tampa",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You’ve struck it rich. Happy days, right? Well, certainly a measure of relief comes with knowing you can afford to meet your financial obligations. No more worrying about how to make the mortgage payment, the car payment or the credit card payments. Goodbye, money related stress. Yet, many people find that sudden wealth – especially if it came from an unexpected source – can have an almost irrational paralyzing effect.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC, understands that a sudden, unexpected improvement of your financial situation can create a whole new set of questions and responsibilities. Where might this “found” money originate? A number of sources, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Investment windfall",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance settlement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inheritance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Major job promotion",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marriage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sale of business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pro sports contract",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lottery winnings",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What, you may ask, is so bad about any of these? Nothing, of course. After all, most people spend their lives working to achieve financial security. Still, should you come into a substantial amount of money, the choices available to you about how to spend or invest that money can be overwhelming. Should you pay off your mortgage in full? Should you put it all in a mutual fund or a college savings plan for the kids? Is that dream vacation or fancy car now within reach? In addition to figuring out how best to place your new money, you’ll need to become familiar with a different set of tax rules.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, your response to coming into a lot of money is not as simple as quitting your job and joining the local yacht club. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting for a free financial health checkup and to develop a sound strategy for how to use your newfound wealth.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

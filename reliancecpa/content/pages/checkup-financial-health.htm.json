@@ -1,0 +1,90 @@
+{
+ "url": "https://www.reliancecpa.com/checkup-financial-health.htm",
+ "slug": "checkup-financial-health.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/checkup-financial-health.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/checkup-financial-health.jpg",
+   "alt": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+   "alt_missing": false,
+   "title": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+   "width": "300",
+   "height": "382",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since we opened our doors in 1984, the staff here at Reliance Consulting, LLC has worked hard to establish ourselves as a leading accounting firm in the greater Tampa, FL area. We are completely dedicated to providing our clients with unparalleled service, and thanks to this dedication, we have grown by leaps and bounds since our inception. Today, more than 800 businesses and 1,000 individuals rely upon Reliance Consulting for our expertise, integrity, one-on-one service, and desire to go above-and-beyond for every client.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are looking for an accountant or [CPA in Tampa](http://www.reliancecpa.com/), FL, we invite you to contact Reliance Consulting for a free initial consultation. During this consultation, we will discuss your needs, goals, questions, and concerns. We also will review your current situation and provide you with a free checkup of your financial health. This invaluable service has helped countless people be more aware of where they stand financially, as well as how to plan for where they want to be.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "After this consultation, if you decide to hire us as your CPA, we will be happy to tailor our services to your unique needs. We believe that our clients should receive only the accounting services they want, and this philosophy helps our clients save money.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you are a small business owner, physician, married couple, or single retiree, Reliance Consulting would like to hear from you. Please contact us today to learn more about our firm and to take us up on our offer of a free initial consultation. We look forward to meeting you and providing you with the individualized service you deserve.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 279
+}

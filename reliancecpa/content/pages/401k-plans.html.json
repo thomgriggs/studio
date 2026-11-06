@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/401k-plans.html",
+ "slug": "401k-plans.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA Discusses 401(k) Plans",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/401k-plans.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses 401(k) Plans",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses 401(k) Plans",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/401k-plans.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "208",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A 401(k) plan allows employees to save money for retirement while deferring income taxes on the 401(k) deposits and investment earnings until the money is withdrawn. The pre-tax contributions to a 401(k) usually are taken directly from an employees’ paycheck. Some companies offer incentives to a 401(k) plan by offering to match the employee’s contribution up to a certain amount.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC can help you understand the benefits and potential disadvantages of using a 401(k) plan as part of your retirement fund. The primary benefit is the relative security and ease of administration – most employees set up their 401(k) plan and forget about it until tax time. The primary potential drawback is that the money typically is unavailable for withdrawal without penalty before you are within six months of your 60th birthday.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When it comes to retirement planning and your 401(k), a CPA in Tampa from Reliance Consulting can help you:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Understand the investment options available within your plan – long-term and short-term",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine how much you should contribute each year",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Monitor your investments and suggest potential improvements",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Explain the initial tax benefits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provide guidance if you want to transition to an IRA or other retirement plan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Explain the potential tax hit and penalty fee for early withdrawal of funds",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your CPA in Tampa at Reliance is a valuable resource for retirement and estate planning. We’ll work with you to make sure you have the peace of mind you want in retirement. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a free financial health checkup and to learn more about how a 401(k) plan fits in your long-term plan.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 279
+}

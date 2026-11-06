@@ -1,0 +1,132 @@
+{
+ "url": "https://www.reliancecpa.com/medicare-cuts.html",
+ "slug": "medicare-cuts.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-13",
+ "seo": {
+  "title_tag": "Medicare Cuts | Reliance Consulting LLC | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/medicare-cuts.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A 27% Medicare Cut: Medicare Aims to Cut Doctor Pay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "3 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A 27% Medicare Cut: Medicare Aims to Cut Doctor Pay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Medical professionals throughout the country are waiting to see if Congress can reach a deal to postpone a 27.4 percent reduction in Medicare reimbursements for physician services scheduled to take effect on Jan. 1. While there is optimism that a temporary agreement can be reached between Democrats and Republicans in the Senate and House of Representatives, the potential solutions being aired publicly do nothing to substantially alter the annual trepidation surrounding the sustainable growth rate (SGR) formula for setting Medicare’s fee-for-service rates. The danger, doctors say, is that they simply might not be able to afford to see Medicare patients in a fee-for-service environment. Many physicians also worry that such cuts will disengage them from the practice of medicine and force them eventually into some managed care arrangement. Ultimately the patients will suffer and the quality of healthcare as we have come to enjoy and expect will take a severe beating.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Massive Money Shift**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Over the past two decades, there has been a seismic shift of health care dollars – out of physicians’ pockets – into the pockets of ancillary health entities. Many physicians allege that the proposed reduction will merely shift the dollars from one bucket to another and ultimately will have no impact on health care costs. For the past two decades, policy makers have focused all their efforts on “bending the cost curve.” Costs are simply defined as dollars spent by the government or insurance companies on paying providers. The cost to actually deliver the care to patients is never calculated. Most of the complex payment mechanisms that exist today have failed to address costs in an appropriate manner and health care costs have continued to skyrocket as a result.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The SGR is an annual target for Medicare spending on physician services. It is based, in part, on growth of the gross domestic product. More often than not, actual spending on physician services has exceeded the target, triggering an even greater reduction the following year. Each year since 2003, Congress has postponed the reduction with what has come to be known as the annual “doc fix,” a practice that has steadily reduced the SGR spending target year to year. In addition, private health insurance companies base their reimbursement rates on the SGR formula, meaning this is not merely a Medicare issue – it potentially affects every American with health insurance.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**What Are Your Options?**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One short-term solution floated by members of Congress is a two-year freeze of Medicare rates through the year 2013, which would cost $38.6 billion over a 10-year period, according to a Congressional Budget Office estimate. This would give lawmakers a two-year window to do something about the unsustainable SGR system, and some on both sides of the aisle have already begun to tout bills that eliminate the SGR altogether. As far as Medicare participation goes, physicians have until December 31, 2011 to change their status within the Medicare program. Physicians have three options within the Medicare program:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Participate and sign participation (PAR) agreement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Opt out of participation (non-PAR)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Become private contractor physician",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To explain Medicare participation options, the American Medical Association (AMA) has created an information guide titled: “Know your options: Medicare Participation Guide.” The guide can be found at [http://ama-assn.org/go/medicareoptions](http://ama-assn.org/go/medicareoptions). Physicians should carefully evaluate each choice and make an informed decision by year end.\n\nNo matter how Congress eventually decides to respond to this potential financial calamity, it is more important than ever for doctors to understand that the future of medicine is going to undergo significant change in the next few years.",
+   "links": [
+    {
+     "text": "http://ama-assn.org/go/medicareoptions",
+     "href": "http://ama-assn.org/go/medicareoptions"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC ([www.reliancecpa.com](http://www.reliancecpa.com/)). He can be reached at (813) 931-7258 or via email at [amol@reliancecpa.com](mailto:amol@reliancecpa.com)*",
+   "links": [
+    {
+     "text": "www.reliancecpa.com",
+     "href": "http://www.reliancecpa.com/"
+    },
+    {
+     "text": "amol@reliancecpa.com",
+     "href": "mailto:amol@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 625
+}

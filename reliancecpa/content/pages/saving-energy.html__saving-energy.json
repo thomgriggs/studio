@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/saving-energy.html/saving-energy/",
+ "slug": "saving-energy.html__saving-energy",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/saving-energy.html/saving-energy",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "saving-energy - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/saving-energy.html/saving-energy/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "saving-energy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Gives Tips for Saving Energy (and Money) With Your Small Business](https://www.reliancecpa.com/saving-energy.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Gives Tips for Saving Energy (and Money) With Your Small Business",
+     "href": "https://www.reliancecpa.com/saving-energy.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "saving-energy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 200](https://www.reliancecpa.com/wp-content/uploads/2011/12/saving-energy.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 200",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/saving-energy.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/saving-energy.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/saving-energy.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/saving-energy.html/saving-energy).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/saving-energy.html/saving-energy"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 17
+}

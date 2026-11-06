@@ -1,0 +1,24 @@
+{# Site footer, the original's dark footer grown to the site's needs: a white-plate logo and the Get Started button over a hairline, then the link grid (the three tiers, each with a thin territory rule, then Resources, About and Legal / Follow, headings in lime), the contact block, and a bottom row with the copyright, address and the mockup links. From footer.json. #}
+<footer class="site-footer" role="contentinfo">
+  <div class="foot__top">
+    <a class="foot__logo" href="{{ root }}index.html" aria-label="Reliance Consulting home"><img src="{{ root }}{{ concept.logo.src }}" alt="{{ concept.logo.alt }}" width="220" height="48"></a>
+    <p class="foot__tag">{{ footer.firm }} &middot; Tampa, Florida &middot; since 1984</p>
+    {% if nav.button.available %}<a class="btn btn-coral" href="{{ nav.button.href }}">{{ nav.button.label }}</a>{% endif %}
+  </div>
+  <div class="foot">
+    {% for c in footer.columns[:3] %}
+    <div class="foot__col terr-{{ ['teal', 'sage', 'gold'][loop.index0] }}"><h2 class="foot__h foot__h--tier">{{ c.title }}</h2><ul>{% for i in c['items'] %}<li><a href="{{ i.href }}">{{ i.label }}</a></li>{% endfor %}</ul></div>
+    {% endfor %}
+    <div class="foot__col foot__contact"><h2 class="foot__h">{{ footer.contact.heading }}</h2>
+      <p>{{ footer.contact.address }}</p>
+      <p><a href="{{ footer.contact.phone.href }}">{{ footer.contact.phone.text }}</a>{% if footer.contact.email %}<br><a href="{{ footer.contact.email.href }}">{{ footer.contact.email.text }}</a>{% endif %}</p>
+      <p><a href="{{ footer.contact.directions.href }}" target="_blank" rel="noopener">{{ footer.contact.directions.label }} &rarr;</a></p>
+    </div>
+    {% for c in footer.columns[3:] %}
+    <div class="foot__col"><h2 class="foot__h">{{ c.title }}</h2><ul>{% for i in c['items'] %}<li><a href="{{ i.href }}">{{ i.label }}</a></li>{% endfor %}</ul></div>
+    {% endfor %}
+    <div class="foot__col"><h2 class="foot__h">{{ footer.legal.heading }}</h2><ul>{% for l in footer.legal.links %}<li><a href="{{ l.href }}">{{ l.label }}</a></li>{% endfor %}{% for l in footer.extras %}<li><a href="{{ l.href }}">{{ l.label }}</a></li>{% endfor %}</ul>
+      <h2 class="foot__h foot__h--next">Follow</h2><ul>{% for s in footer.social if s.id in ['facebook', 'linkedin', 'youtube'] %}<li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.label }}</a></li>{% endfor %}{% if footer.client_login %}<li><a href="{{ footer.client_login.url }}">{{ footer.client_login.label }}</a></li>{% endif %}</ul></div>
+  </div>
+  <p class="foot__copy"><span>{{ footer.copyright }}. All rights reserved.</span><span>Mockup pages: <a href="{{ root }}kit.html">Kit</a> &middot; <a href="{{ root }}pages.html">All pages</a></span></p>
+</footer>

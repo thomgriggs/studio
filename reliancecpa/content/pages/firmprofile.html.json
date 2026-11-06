@@ -1,0 +1,349 @@
+{
+ "url": "https://www.reliancecpa.com/firmprofile.html",
+ "slug": "firmprofile.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "about",
+  "first_pass_action": "Refresh",
+  "notes": "about/team"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-08-27",
+ "seo": {
+  "title_tag": "CPA & Accountant Serving the Tampa, FL Area: Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/firmprofile.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Full Service Tampa CPA Firm Serving All Your Personal & Business Accounting Needs",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "4 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Full Service Tampa CPA Firm Serving All Your Personal & Business Accounting Needs",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting LLC has established itself in the Tampa, Florida, as the premier accounting firm specializing in tax planning, tax preparation, bookkeeping, payroll and business consulting. Since inception in 1984, the firm has grown tremendously, thanks to the hard work, professionalism and dedication of our partners and staff who go above and beyond and deliver extraordinary value. We take extreme pride in the success of our clients and attribute their success to ours. It is this shared spirit of success that enables us to look well beyond the numbers and into the services that add value.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Over the years, we have developed great expertise that goes well beyond preparation of tax returns and financial statements. Because we serve over 800 businesses and 1000 individuals, we have amazing insights into the workings of our clients. These insights allow us to find solutions to complex day to day problems by merely looking at what our successful clients do or don’t do. We believe the role of CPAs is evolving and in order to be successful you have to look beyond the traditional services of bookkeeping and tax returns.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance has developed key strengths of expertise in the Tampa and offers the following services to our clients:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Accounting](http://www.reliancecpa.com/) and [Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)",
+     "links": [
+      {
+       "text": "Accounting",
+       "href": "http://www.reliancecpa.com/"
+      },
+      {
+       "text": "Bookkeeping",
+       "href": "http://www.reliancecpa.com/bookkeeping.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Tax Returns Preparation](http://www.reliancecpa.com/tax-preparation.htm) and [Tax Planning](http://www.reliancecpa.com/tax-planning.htm)",
+     "links": [
+      {
+       "text": "Tax Returns Preparation",
+       "href": "http://www.reliancecpa.com/tax-preparation.htm"
+      },
+      {
+       "text": "Tax Planning",
+       "href": "http://www.reliancecpa.com/tax-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Corporate, Partnership, Individuals, Multi-State Returns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[QuickBooks Accountant Support](http://www.reliancecpa.com/quickbooks-accountant.htm)",
+     "links": [
+      {
+       "text": "QuickBooks Accountant Support",
+       "href": "http://www.reliancecpa.com/quickbooks-accountant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Payroll Services](http://www.reliancecpa.com/payroll-services.htm)",
+     "links": [
+      {
+       "text": "Payroll Services",
+       "href": "http://www.reliancecpa.com/payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Tax Problem & IRS Problem Resolution](http://www.reliancecpa.com/tax-problem-irs-audit-help.htm)",
+     "links": [
+      {
+       "text": "Tax Problem & IRS Problem Resolution",
+       "href": "http://www.reliancecpa.com/tax-problem-irs-audit-help.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Electronic Filing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate Planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asset Protection",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement Planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business Loan Assistance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Financial Forecasting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "New Business Advisory Services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Comparative Business Reports",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Industry Expertise",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance has specifically developed accounting and tax expertise in four industry groups which comprise the bulk of our clients:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Healthcare Accounting & Professional Accounting",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Physicians, Dentists, Lawyers, IT Professionals, Engineering Firms",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "text": "Retail Industry Accounting",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Convenience Stores, Gas Stations, Franchise stores (Subway, McDonalds etc)",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "text": "Hospitality Accounting",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Hotels, Motels",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "text": "Real Estate Accounting",
+     "links": [],
+     "children": [
+      {
+       "type": "ul",
+       "items": [
+        {
+         "text": "Development Companies, Investment Companies, Management Companies, Mortgage Companies",
+         "links": [],
+         "children": []
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Click here to read our manual, [Navigating the Business of Medicine](http://www.reliancecpa.com/wp-content/uploads/2011/12/navigating-the-business-of-medicine.pdf) (pdf). Click here to read our other [tax & accounting articles](http://www.reliancecpa.com/articles.html).",
+   "links": [
+    {
+     "text": "Navigating the Business of Medicine",
+     "href": "http://www.reliancecpa.com/wp-content/uploads/2011/12/navigating-the-business-of-medicine.pdf"
+    },
+    {
+     "text": "tax & accounting articles",
+     "href": "http://www.reliancecpa.com/articles.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Team Approach",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We are one of the few firms in Florida (especially Tampa area) who take a team approach in helping our clients succeed. The team approach involves us inserting ourselves in clients businesses, from both operational and financial perspectives. In our view, it is important for CPAs to know their clients’ numbers. But it does not stop there. The role of the CPA goes well beyond number crunching. We try to understand the decision making process that produces the numbers. We strongly believe that good management decisions that are efficiently and effectively executed determine the future of any business. Financial success is merely a by-product of superior decision-making concerning each dollar that a business earns or spends.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every business owner seeks to be successful using two major strategies:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "Increase Revenues",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reduce Expenses",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We help the business owner look at all aspects connected to both the major strategies. By advising clients on marketing strategies that have worked in their industry to incorporating time-tested cost saving strategies, we are uniquely equipped to add significant value to the bottom line.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Tax Strategy & Planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Building an effective tax strategy is an integral part of superior decision making. Taxes constitute a significant portion of business expenses, and effectively managing them can lead to significant benefits over time. It is important to distinguish between tax planning and compliance. Preparation of tax returns is called compliance and most CPAs do a fairly good job at doing that. However, tax planning involves formulating a strategy that minimizes the effective tax rate over long periods of time. Tax planning involves discussing the entire business plan with a client and making the appropriate time-sensitive choices to ensure maximum savings. Keeping up with the ever-changing tax code and its practical implications to our clients is a task we take seriously. Monitoring the court cases and their impact is also a crucial planning component.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Free Business Check-Up",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We are so convinced in our superior approach that we invite all prospective clients to come visit our offices and undergo our free no-obligation “check-up” of your business or individual health. We certainly believe that knowledge has a liberating power and sometimes even knowing what the possibilities are, can lead to meaningful change in your personal or business financial health.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We encourage you to call us and make an appointment and see for yourself the difference a perspective can make.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the success of our clients lies our own!!",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 750
+}

@@ -1,0 +1,24 @@
+{#
+MODULE: people
+PURPOSE: The original's team teaser grown into a roster: the lead(s) as the original's compact card (portrait, role in small caps accent, name), the rest as a row of small portraits with name and role (a neutral "Photo needed" block where there is no photo), the italic pull quote, and a "Meet the full team" link.
+SLOTS: eyebrow, title, text, link[text, href], video[url, title], people[name, role, image], quote[text, attribution], team[name, role, image].
+SQUARESPACE: Heading + Text; Image blocks with captions (name bold, role) in a 6-column Section or a Gallery block with captions; Quote block; Button. The compact lead card is a two-column Section on a grey background.
+#}
+{% from "_macros.html" import eyebrow, img, ph, poster %}
+<section class="m m-people" data-module="people" data-tone="{{ tone }}">
+  {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+  {% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}
+  {% if s.text %}<p class="lead">{{ s.text|md }}</p>{% endif %}
+  {% if s.video %}<figure class="people__video">{{ poster(s.video.url, s.video.title) }}</figure>{% endif %}
+  {% for p in s.people %}
+  <div class="lead-card card elev-sm">
+    <div class="lead-card__pic">{% if p.image %}{{ img(p.image) }}{% else %}{{ ph("portrait of " ~ p.name) }}{% endif %}</div>
+    <div class="lead-card__t"><span class="card-kicker">{{ p.role }}</span><h3 class="card-title">{{ p.name }}</h3></div>
+  </div>
+  {% endfor %}
+  {% if s.team %}
+  <ul class="team" role="list">{% for p in s.team %}<li><div class="team__pic">{% if p.image %}{{ img(p.image) }}{% else %}{{ ph("portrait of " ~ p.name, "ph--sm") }}{% endif %}</div><strong>{{ p.name }}</strong><span>{{ p.role }}</span></li>{% endfor %}</ul>
+  {% endif %}
+  {% if s.link %}<p class="people__link"><a class="btn btn-ghost" href="{{ s.link.href|href }}">{{ s.link.text }} →</a></p>{% endif %}
+  {% if s.quote %}<figure class="people__quote"><blockquote class="pull">{{ s.quote.text|md }}</blockquote>{% if s.quote.attribution %}<figcaption class="pull__by">— {{ s.quote.attribution|md }}</figcaption>{% endif %}</figure>{% endif %}
+</section>

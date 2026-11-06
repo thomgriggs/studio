@@ -1,0 +1,162 @@
+{
+ "url": "https://www.reliancecpa.com/post-mortem-letter.htm",
+ "slug": "post-mortem-letter.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about the Importance of a Post-Mortem Letter",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/post-mortem-letter.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about the Importance of a Post-Mortem Letter",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Ask Your CPA in Tampa about the Importance of a Post-Mortem Letter",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/post-mortem-letter.jpg",
+   "alt": "Ask Your CPA in Tampa about the Importance of a Post-Mortem Letter",
+   "alt_missing": false,
+   "title": "post-mortem-letter",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you meet with an attorney and CPA to compose your last will and testament, it may seem like you’re done with your estate planning and you have nothing left to worry about. Not so fast, however, because there are other documents you need to consider, one of them being a post-mortem letter.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A post-mortem letter is a relatively simple, yet powerful, document that tells your survivors where to find everything they need to carry out the instructions in your will. For example, where is the deed to the income property you own in north Tampa? How about the account number for the CD you opened at a small Clearwater bank? Or the burial plot you purchased in St Petersburg – does your family know where the paperwork is for that?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While you can write a post-mortem letter yourself, you may want to consult with your [CPA in Tampa](http://www.reliancecpa.com/), since a CPA will remind you about the many details your post-mortem letter should include, such as:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Bank account numbers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit card numbers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Deeds to property you own",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mortgage papers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance policies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax returns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Titles to vehicles",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contact information for your attorney, insurance agent, CPA in Tampa, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The location of your birth certificate, social security card, passport, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "User names and passwords to access digital information",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contact information for your employer, family members, friends, and associates who should be notified of your death",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Special instructions for the care of your pets, property, vehicles, etc.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Without a post-mortem letter, a lot of important matters can slip through the cracks after you pass away. In addition, a post-mortem letter can make the difficult and painful situation of your passing a little easier on your loved ones. Your post-mortem letter can also help ensure that all of your assets are accounted for and not lost in the shuffle.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To make sure your post-mortem letter is able to do its job, leave copies of it with your spouse, attorney, CPA, executor, and in any other location(s) you think it can be easily found after your death. To learn more about writing a post-mortem letter, contact Reliance Consulting, LLC, for a free initial consultation and checkup of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 377
+}

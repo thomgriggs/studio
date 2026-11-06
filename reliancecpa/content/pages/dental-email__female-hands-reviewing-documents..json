@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents./",
+ "slug": "dental-email__female-hands-reviewing-documents.",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Email - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents./",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Email",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Dental CPA Explains the Importance of Maintaining an Accurate Dental Practice Email Database](https://www.reliancecpa.com/dental-email)",
+   "links": [
+    {
+     "text": "← A Dental CPA Explains the Importance of Maintaining an Accurate Dental Practice Email Database",
+     "href": "https://www.reliancecpa.com/dental-email"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Email",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished May 1, 2013 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Email-Administration.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Email-Administration.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Email-Administration.jpg",
+   "alt": "Dental Email",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Email-Administration.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Close up of female hands reviewing accounting documents on table.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents.).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents."
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 42
+}

@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/adjusted-gross-income.html",
+ "slug": "adjusted-gross-income.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Adjusted Gross Income",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/adjusted-gross-income.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains Adjusted Gross Income",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains Adjusted Gross Income",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/adjusted-gross-income.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Adjusted gross income is the adjusted dollar amount used by the IRS to determine how much income tax you must pay. The gross amount of money you received through salary, wages and other forms of income constitute your gross income. Most people are eligible to make deductions and other adjustments to their gross income, producing the bottom-line taxable figure. This is not to be confused with tax credits, which are figured in after your income tax is determined. Sound complicated? Not to worry.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you formulate a tax plan that takes into account every aspect of your income, including deductions and tax credits. The more attention you pay to tax planning during the year, the less likely you are to have an unpleasant surprise sprung on you at tax time. Since Reliance was founded in 1984, our certified public accountants have helped thousands of individuals and hundreds of businesses in the Tampa Bay area develop comprehensive tax strategies to maximize returns. Factors that help determine adjustable gross income include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Business expenses, including rental activity",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Health savings account deposits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Some moving expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fifty percent of self-employment taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contributions to a 401(k), traditional IRA and other retirement accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Alimony payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "College tuition and student loan interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Charitable donations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Childcare and dependent care expenses",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you lay the groundwork for a profitable fiscal year, let Reliance Consulting show you the way. [Contact](http://www.reliancecpa.com/contact.html) us today for sound advice on tax planning, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 259
+}

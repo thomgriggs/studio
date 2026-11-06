@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/current-assets.html",
+ "slug": "current-assets.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Current Assets Definition",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/current-assets.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Definition of Current Assets",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Definition of Current Assets",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/current-assets.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A balance sheet can be a confusing document for the uninitiated. All the different types of assets, liabilities, equity … unless you are a trained accountant or a supremely savvy and experienced business person, it can get more than a little overwhelming. On the other hand, if you know what you’re looking at, a perfectly constructed balance sheet can be a thing of beauty.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To gain a better understanding of accounting terms, you could take an accounting class. Or you could simply allow your [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, to figure it all out for you. Since 1984, the accounting professionals from Reliance have helped thousands of individuals and hundreds of businesses in the Tampa Bay area and beyond sort through their complicated financial documents. It’s our job to know the ins and outs of a balance sheet, so you don’t have to.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Still, it’s wise to know as much as you can about your own financial situation, because the decisions ultimately have to come from you. To that end, let’s look at one important term: current assets. In short, current assets are assets that mature in less than one year. They are the sum of the following:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Cash",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accounts receivable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inventory",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Notes receivable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Prepaid expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other non-fixed or intangible assets",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Current assets are not to be confused with fixed assets, items whose cash maturity exceeds a year. These include land, buildings, machinery, equipment, furniture, and leasehold improvements. To learn more about the different types of assets used to compose a balance sheet, or for a free financial health checkup, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 274
+}

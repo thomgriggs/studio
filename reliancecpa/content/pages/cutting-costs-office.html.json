@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/cutting-costs-office.html",
+ "slug": "cutting-costs-office.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Cutting Office Costs | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cutting-costs-office.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Office Frugality: Cutting Costs in the Workplace",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Office Frugality: Cutting Costs in the Workplace",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cutting-costs-office.gif",
+   "alt": "Cutting Costs at the Office",
+   "alt_missing": false,
+   "title": "Cutting Costs at the Office",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how much a business is thriving, it’s always wise to keep a close eye on the big and small expenses that constantly assault the bottom line. That means taking the time to annually review costs for big-ticket items, like insurance and travel. But it also means scrutinizing the costs of day-to-day activities in the office, which can be an almost invisible drain on monetary resources.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help make sure your company is getting the most out of its revenue streams. Accurate record-keeping is a start, whether it’s through QuickBooks or another financial software. Smart tax planning is another good way to save money, and Reliance can help with that, as well.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "But there are other, simple steps a company owner or office manager can take to keep costs to a minimum, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Use refurbished office furniture, rather than buying new every time.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Don’t leave lights on in unused rooms.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Store files electronically, rather than in printed form, when possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If printing is necessary, avoid the excessive use of color ink, if possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Upgrade software and memory capacity on the company network, rather than buying new computers every year.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today to get started with a free financial health checkup of your company’s finances. We’ll do everything we can to help you make your business a success.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 238
+}

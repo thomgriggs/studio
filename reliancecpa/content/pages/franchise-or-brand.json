@@ -1,0 +1,101 @@
+{
+ "url": "https://www.reliancecpa.com/franchise-or-brand",
+ "slug": "franchise-or-brand",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Franchise or Brand | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/franchise-or-brand",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Helps Weigh the Options of Buying into a Franchise & Creating Your Own Brand",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Helps Weigh the Options of Buying into a Franchise & Creating Your Own Brand",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Franchise-300x200.jpg",
+   "alt": "Franchise or Brand",
+   "alt_missing": false,
+   "title": "Franchise or Brand",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are thinking about getting into business for yourself, one decision you may face is whether to buy into an existing franchise, or starting out with your own, unique brand. There are benefits and potential drawbacks for both. In fact, it may be that the potential drawbacks dissuade you from choosing either route – there’s always the option of buying an existing business not associated with a larger brand. Or even of staying out of business, altogether. As always, education is key.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can provide all the direction you need to make an informed decision about whether buying into a franchise or starting your own brand from scratch is the right move for you. Naturally, much will depend on how developed your business idea is. If research has shown that your idea for a product or service is not currently available and affordable, then you might be better served putting your own brand-building project into motion. On the other hand, if you simply are seeking a solid commercial investment opportunity and are willing to follow the entrepreneurial vision and rules of an existing company, franchising could be the better way to go.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Keep in mind that people who buy into franchises are typically limited in that:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "• They must adhere to someone else’s rules for advertising, branding, and service\n\n• Are not readily able to diversify services and products offered\n\n• Are required to pay relatively high franchise fees",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting opened in 1984, and since then we have helped hundreds of Tampa Bay area businesses reach the path of prosperity. For business consulting help, including information about franchising versus starting your own brand, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 301
+}

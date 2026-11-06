@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/dental-tax-returns",
+ "slug": "dental-tax-returns",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Tax Returns | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-tax-returns",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains the Difference Between Filing Individual Tax Returns for an Outright Owner and for a Partner of a Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains the Difference Between Filing Individual Tax Returns for an Outright Owner and for a Partner of a Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Individual-Tax-Returns-300x211.jpg",
+   "alt": "Dental Tax Returns",
+   "alt_missing": false,
+   "title": "Dental Tax Returns",
+   "width": "300",
+   "height": "211",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are the outright owner of a dental practice, there is a difference between how the IRS recognizes your business than if the company was structured as a partnership or a C corporation. In essence, if your practice is structured as a limited liability corporation, and you are the only owner, the IRS disregards the entity and considers the practice a sole proprietorship for tax purposes. This can have real implications when it comes to employment tax, but it is less of an issue for a business like a dental practice. That’s because the owner of a sole proprietorship is subject to self-employment tax if there are no employees. And what dental practice, no matter how small, has no employees?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "On the other hand, a partnership or a C corporation is recognized as a separate entity by the IRS, and the individuals involved will generally [file tax returns](http://reliancecpa.com/dental-accounting-tax-services) separately from the business.",
+   "links": [
+    {
+     "text": "file tax returns",
+     "href": "http://reliancecpa.com/dental-accounting-tax-services"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If all of this sounds a bit complex, don’t worry. A dental CPA from Reliance Consulting can sort it all out and is here to answer all of your questions when it comes to tax planning and tax preparation for your dental practice and for you, as an individual. No matter if you are just starting out, or if you are the owner of a large chain of dental offices looking to expand even further, the dental accounting experts from Reliance can provide assistance. Our dental CPA services cater to your every accounting need and more, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Finding the best sources of financing, if necessary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Calculating equipment depreciation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conducting a practice location analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Advice about marketing your practice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Budgeting for staff, supplies, and advertising",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Choosing a bank",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information about the comprehensive dental CPA services offered by Reliance Consulting, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 321
+}

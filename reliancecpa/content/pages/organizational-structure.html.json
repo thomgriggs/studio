@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/organizational-structure.html",
+ "slug": "organizational-structure.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Organizational Structure for Small Business | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/organizational-structure.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Explains the Need for a Formal Organizational Structure for a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Explains the Need for a Formal Organizational Structure for a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/organizational-structure.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "organizational-structure",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any business, big or small, will benefit from the efficiency that is a product of a well-conceived, well-designed organizational structure. This is defined as the way jobs are arranged and responsibility is formally delegated. This includes delineating departments or divisions, setting up a management hierarchy, and establishing rules, procedures and goals.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are about to start a new small business, or would like to improve the efficiency and profitability of an existing business, your [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can provide an in-depth organizational analysis and suggest a formal structure based on your needs. A small business accountant from Reliance can shed light on every aspect of the ideal organizational structure, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Legal and financial advantages and disadvantages of different organizational structures",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How projected growth patterns of the company are a factor",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The best manager-to-subordinate ratio",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Levels of autonomy and responsibility to be granted to workers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Channels of communication between departments",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once your organizational structure is in place, your CPA from Reliance can help make sure things continue to run smoothly by handling all of your business accountancy needs. While you take care of day-to-day operations, Reliance handles the financial end – tax planning, bookkeeping, payroll services, balance sheets, cash flow analysis and more. Our goal is to help your company reach maximum profitability – and sustain that level of success over the long term. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free, no-obligation financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 254
+}

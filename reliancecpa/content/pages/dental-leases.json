@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/dental-leases",
+ "slug": "dental-leases",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Lease | Dental CPA | Operating Lease | Capital Lease",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-leases",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains Capital Versus Operating Leases",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains Capital Versus Operating Leases",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Operating-Leases-200x300.jpg",
+   "alt": "Dental Operating Leases",
+   "alt_missing": false,
+   "title": "Dental Operating Leases",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Unless an owner-dentist owns the building that houses his or her office, there will be a lease involved. And because there will be a lease involved, the owner of the practice will need to determine whether to go with a capital lease or an operating lease. Understandably, the difference might be lost on some non-accountants, which is why it is important to enlist the aid of a dental CPA from Reliance Consulting, LLC.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most leases are operating leases. These are the best-understood forms of leases, corresponding to transactions such as renting an apartment or leasing a car without the intention to buy it at the end of the lease period. In terms of a dental practice, however, a [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance can explain that there are specific accounting effects of capital versus operating leases. Here is a brief definition of both:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Operating lease – the owner transfers the right to use the property to the lessee, and the property is returned to the owner at the end of the lease period.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital lease – the lessee assumes some of the benefits and risks of ownership, and the signed lease is considered an asset (the property) and a liability (the payments) on a balance sheet.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It is important to distinguish capital versus operating leases because no one wants to run afoul of accounting rules, and the tax implications of each type of lease will differ. A good rule of thumb to remember is that a lease is considered a capital lease if the life of the lease will exceed 75 percent of the life of the building. It might also be considered a capital lease if the lessee intends to purchase the property outright at the end of the lease. Finally, it is a capital lease if the current value of the lease payments is more than 90 percent of the fair market value of the property.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, there are many complicated factors when it comes to capital versus operating leases. To learn more, [contact](http://reliancecpa.com/contact.html) Reliance Consulting, a premier dental CPA firm serving the Tampa Bay area and beyond.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 360
+}

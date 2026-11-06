@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers/",
+ "slug": "contract-for-deed__senior-home-buyers",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Contract for Deed - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Contract for Deed",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Defines a Contract for Deed in a Real Estate Transaction](https://www.reliancecpa.com/contract-for-deed)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Defines a Contract for Deed in a Real Estate Transaction",
+     "href": "https://www.reliancecpa.com/contract-for-deed"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Contract for Deed",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 1, 2012 | Full size is [900 × 609](https://www.reliancecpa.com/wp-content/uploads/Contract-for-Deed.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 609",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Contract-for-Deed.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Contract-for-Deed.jpg",
+   "alt": "Contract for Deed",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "609",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Contract-for-Deed.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "realtor showing a home to a senior couple",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/contract-for-deed/senior-home-buyers).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 40
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/dental-disregarded-entity",
+ "slug": "dental-disregarded-entity",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Disregarded Entity | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-disregarded-entity",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains a Disregarded Entity and How it Applies to a Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains a Disregarded Entity and How it Applies to a Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Disregarded-Entity-300x200.jpg",
+   "alt": "Disregarded Entity",
+   "alt_missing": false,
+   "title": "Disregarded Entity",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many ways to structure the business side of a dental practice, all of which are designed to best position the stakeholders for long-term profitability. This includes minimizing the tax burden of the company, as well as the individuals in leadership roles. A dental CPA from Reliance Consulting, LLC, can help the owner (or owners) of a new dental practice determine what might be the best tax structure, as well as define unfamiliar accounting terms related to tax structure, such as “disregarded entity.”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In most cases, the IRS considers a limited liability corporation (LLC) owned and operated by one person a sole proprietorship for [tax structure](http://reliancecpa.com/dental-optimal-tax-structure) purposes. In these cases, the LLC is considered a “disregarded entity,” because the business is disregarded as being separate from its owner (in most cases of a small dental practice, the dentist-owner). The difference for a dental practice is that in a single-person disregarded entity, the owner is subject to self-employment tax. Even the smallest dental practices have employees, of course, so the IRS treats the business as a separate entity for purposes of employment taxes.",
+   "links": [
+    {
+     "text": "tax structure",
+     "href": "http://reliancecpa.com/dental-optimal-tax-structure"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many more facets to the business structure of a dental practice, and a dental CPA from Reliance can answer all of your questions. If you are the owner of a new dental practice, or an existing practice looking to expand, [contact](http://reliancecpa.com/contact.html) Reliance for advice on helping your practice grow into profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 250
+}

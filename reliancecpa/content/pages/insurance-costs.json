@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/insurance-costs",
+ "slug": "insurance-costs",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Save on Insurance Costs",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/insurance-costs",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Find Ways to Save on Insurance Costs",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Find Ways to Save on Insurance Costs",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/insurance-costs-1-300x225.jpg",
+   "alt": "Insurance Costs",
+   "alt_missing": false,
+   "title": "Insurance Costs",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One area of your budget that provides potential cost savings is insurance. That’s not to say that you should always seek the lowest premiums available for your homeowners, auto, life, business, and other types of policies. In the long run, sometimes it’s better to pay slightly more each month to contract with an insurance company with a favorable rating and that you know you can trust. However, because there are so many options on the market place, it can pay to shop around, and find a balance between reasonable premiums and trustworthy coverage.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you with everything having to do with your budget, including determining where insurance premiums fit in. When it comes to insurance, we also can help you determine which type of coverage is absolutely necessary, how much insurance you need to meet your requirements if something bad should happen, and whether you are getting the best possible deal from your insurance company.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are a number of steps you can take before you sign your policy that will help you save money. These steps include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Acquiring multiple quotes based on similar deductibles and coverage levels",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Purchasing all or most of your insurance policies from the same company to receive a potential multi-coverage discount",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asking for discounts based on a safe driving record or home safety devices, such as burglar alarms and smoke alarms",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Weighing the benefits of purchasing policies that would replace your belongings versus policies that would pay you the depreciated value of damaged or ruined items",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This is just the tip of the iceberg, however, when it comes to making financially smart decisions about insurance. To learn more, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

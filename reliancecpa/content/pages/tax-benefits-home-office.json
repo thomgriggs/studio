@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/tax-benefits-home-office",
+ "slug": "tax-benefits-home-office",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Home Office | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-benefits-home-office",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Details the Tax Benefits of Working Out of the Home",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Details the Tax Benefits of Working Out of the Home",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Home-Office-Taxes-300x200.jpg",
+   "alt": "Home Office Taxes",
+   "alt_missing": false,
+   "title": "Home Office Taxes",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While working at home clearly has its benefits for some – starting with the elimination of the daily commute – many small business owners who use a portion of their home as an office can get even more out of the experience. That’s because the IRS allows small business owners whose homes double as office space to deduct a certain amount of money from their tax bill each year. However, it’s not as simple as listing your entire house, apartment or condominium as the office. There will be many extra forms to fill out, and you might want to find a tape measure before you sit down to figure out how much money you can save in taxes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you wade through the complex process of figuring out how much you are allowed to deduct based on the use of a portion of your home as an office. There are two main rules laid out by the IRS if you intend to deduct for a home office:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The space must be used regularly and exclusively for business.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The space must be your principal place of business.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are also provisions in place for employees of other companies who conduct business at home. If you work for a company that allows workers to work at home, rather than at an office, you might be eligible for a deduction if the business use is for the “convenience of your employer” and no portion of your home is rented to your employer for business use.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The IRS has taken steps recently to simplify the filing process for those who wish to claim a deduction for a home office. Under the new rule, a business owner can choose to deduct up to $5 per square foot of the office space up to 300 square feet without itemizing. Taxpayers can also opt to determine the actual expenses incurred (mortgage interest, utilities, etc.) and deduct that way. For more information about how best to get the most out of your home office’s tax benefits, [contact](http://reliancecpa.com/contact.html) a Tampa CPA from Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 367
+}

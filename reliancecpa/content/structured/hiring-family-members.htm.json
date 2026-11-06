@@ -1,0 +1,109 @@
+{
+ "url": "https://www.reliancecpa.com/hiring-family-members.htm",
+ "slug": "hiring-family-members.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about the Benefits of Hiring Family",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about the Benefits of Hiring Family",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/hiring-family-members.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about the Benefits of Hiring Family",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about the Benefits of Hiring Family",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/hiring-family-members.jpg",
+     "alt": "Ask Your CPA in Tampa about the Benefits of Hiring Family"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Hiring a family member to help with your Tampa, FL area business can be extremely beneficial, but it also can create potential complications when not handled correctly.",
+     "Nepotism, or the act of favoring family members, is not prohibited at the Federal level, although some states have enacted nepotism policies regarding public jobs. In addition, some companies have nepotism policies written into the company bylaws. The potential pitfalls of hiring family members include incurring dissatisfaction among other employees and creating tension within the family when things don’t go well at work. These pitfalls can be avoided by maintaining open and honest lines of communication and by making sure the family member hired is qualified to do the job.",
+     "The potential benefits of hiring family members are many, especially at a small business. In addition to potential federal tax benefits, the emotional support you are likely to receive from family members can sometimes be the difference between giving up and pushing through a problem.",
+     "As you weigh the benefits and drawbacks of hiring family members, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you think of everything so that you’re able to make an informed decision.",
+     "Here are just a few possible financial benefits of hiring a family member:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Savings on federal taxes and state unemployment insurance payments"
+     },
+     {
+      "text": "Health insurance savings"
+     },
+     {
+      "text": "Increased social security earnings for an otherwise unemployed spouse"
+     },
+     {
+      "text": "Opportunities to establish early savings or retirement accounts for employed children"
+     },
+     {
+      "text": "Savings on child care costs"
+     },
+     {
+      "text": "A chance to establish a relative as the successor to ownership"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Keep in mind, however, that in a family-owned, family-run business, it’s important to establish early on a hierarchy of decision-making. This can help reduce tension within the confines of the business, as well as during family events."
+     },
+     {
+      "type": "p",
+      "text": "For advice about hiring family members, contact your CPA in Tampa at Reliance Consulting, LLC. Let our more than a quarter-century of experience advising businesses be your guide."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/hiring-family-members/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/hiring-family-members.htm"
+ }
+}

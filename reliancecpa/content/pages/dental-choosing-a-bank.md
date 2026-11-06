@@ -1,0 +1,23 @@
+---
+url: https://www.reliancecpa.com/dental-choosing-a-bank
+type: page
+title_tag: "Dental CPA | Choosing the Right Bank"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2013-02-11
+status: 200
+---
+
+[h3] A Dental CPA from Reliance Consulting Provides Advice for Choosing the Right Bank
+[img] alt="Choosing a Bank" src=http://www.reliancecpa.com/wp-content/uploads/Choosing-a-Bank-300x200.jpg
+[p] Choosing the right bank to handle the financial aspects of your dental practice is one of the most importance decisions you will make. A dental CPA from Reliance Consulting, LLC, can help you understand why not all banks are created equal. While there is every possibility that the bank you use for your personal transactions might also be right for you professionally, it is vital that you make the decision based on how the bank can help you professionally, rather than how it has served you personally. In other words, brand loyalty is fine, but it is only an admirable trait if it does no harm to your business.
+[p] How, then, can a [dental CPA](http://reliancecpa.com/dental-cpa) help when it comes to choosing the right bank for your dental practice? To begin with, he or she will conduct a thorough analysis of your business, including assets, goals, market conditions in your service area, and more. Then, armed with that knowledge, your dental CPA can match your requirements with the services of the financial institution that is best prepared to help your practice thrive. All banks basically offer the same products (loans, deposits etc). Two major questions have to be answered before selecting the right banking partner for your dental practice. First, does the bank have significant experience in underwriting dental practice loans? Second, does the bank have special lending programs specifically geared towards dental practices? A dental CPA at Reliance can help interview your business banker and determine capabilities.
+[p] Other factors to consider as you sort through your banking options include:
+[ul]
+- Fees – What will your business be charged for transactions, account maintenance, etc.?
+- Convenience – How extensive is the online presence of the institution, and how simple is the user interface? Does the bank have mobile banking capabilities?
+- Rates – Does the institution offer competitive rates on loans, credit lines, and deposits?
+- Security – Is your money safe?
+[p] It might be as you weigh your options for choosing the right bank that you find one of the megabanks (Wachovia, BB&T, Bank of America, etc.) is the right choice. Or, you might prefer the lower fees and more personalized service offered at a locally operated credit union or small bank. Certain banks have developed specific expertise in dental practices and can underwrite loans at a much faster rate due to relevant expertise developed within their practice group.
+[p] Before you decide, however, make sure to talk with a dental practice management expert from Reliance Consulting. Since 1984, we have helped small businesses throughout the Tampa Bay area reach and sustain profitability, with a particular focus on dentists and other healthcare professionals. [Contact](http://reliancecpa.com/contact.html) us today for details about how we can help your dental practice thrive.

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/reit-retirement",
+ "slug": "reit-retirement",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "REIT | Retirement Strategy | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reit-retirement",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Examines the REIT as a Retirement Strategy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Examines the REIT as a Retirement Strategy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/REIT-for-Retirement-300x200.jpg",
+   "alt": "REIT for Retirement",
+   "alt_missing": false,
+   "title": "REIT for Retirement",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Through 2006, before the Great Recession and the collapse of the real estate bubble, a REIT (real estate investment trust) was considered a go-to investment for people seeking a decent return for post-retirement income. Steady increases in property values throughout the United States would enable certain REITs to produce double-digit yields in a given year. While that figure has dropped off dramatically since the recession of 2007-2008, REITs still are liable to return in the neighborhood of 3 percent. Yet, are REITs still considered a viable part of a retirement strategy?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine what steps you need to take in order to plan for a secure retirement. While investment advice is not necessarily under a CPA’s purview, you can come to Reliance to learn how a REIT works and to sort out your own financial situation so that you know how much you’ll have to invest for post-retirement income. In general, a REIT remains as viable as some dividend-paying stocks and mutual funds. If you work with an investment firm, be sure to ask how much of your capital is dedicated to real estate, as well as other equities.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we’ve helped thousands of individuals and hundreds of businesses achieve profitability since opening our doors in 1984. To learn more about how we might be able to help you plan for retirement, [contact](http://www.reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 246
+}

@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/dental-wage-accounts",
+ "slug": "dental-wage-accounts",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental CPA | Wage Accounts | Dental Practice Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-wage-accounts",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA from Reliance Explains Wage Accounts & How They Help Dentist-Owners",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA from Reliance Explains Wage Accounts & How They Help Dentist-Owners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Wage-Accounts-300x199.jpg",
+   "alt": "Wage Accounts",
+   "alt_missing": false,
+   "title": "Wage Accounts",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Asset protection should be paramount for any business owner, but dentists and other healthcare professionals are subjected to even more legal scrutiny because of the ever-present potential for patient lawsuits. No one starts a dental practice expecting to have to do legal battle with patients, creditors, or others, of course. The possibility should not be dismissed, however, and the wise course of action is to ask a dental CPA from Reliance Consulting, LLC, about wage accounts and other methods of asset protection.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The most important lesson in protecting yourself from creditors is to understand the fundamentals of why people or companies with money get sued. When is the last time you saw a bankrupt person or company getting sued? The fundamental truth is that lawsuits are filed only against parties that have some money to part with or have insurance policies that will pay up in case the tort is proven against the defendant. For most dentists, most lawsuits do not originate in the dental office. Unless there was gross negligence on part of the dentist, the chances of a dentist getting sued by a patient are rare. Most creditor claims arise out of torts that happen outside the office. Understanding those types of situation is essential for developing a strategy that protects your hard-earned money, and [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance can help.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A wage account is a separate bank account set up by the head of a household. That person’s wages are deposited into that account, and nothing else. This prevents comingling of monetary assets, thereby specifying exactly what money is protected in cases of bankruptcy filings or other legal actions against you or your practice. A dental CPA from Reliance can answer all your questions regarding protecting your assets during bankruptcy filings, creditor lawsuits, and malpractice suits through wage accounts, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "How are wages defined?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can wages earned by a dentist in a large practice be attacked?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What is meant by “head of household?”",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How long are wages deposited into wage accounts protected?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What is the best way to preserve wages from garnishment?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What documents are required to record the relationship between dentist and employer?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how wage accounts come into play for the business side of your dental practice, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today. Please remember that the laws of each state differ with respect to creditors’ rights. At Reliance, we want to help your practice thrive and prosper. Part of achieving and maintaining prosperity is understanding the state and federal laws as they relate to protecting your assets.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 439
+}

@@ -1,0 +1,152 @@
+{
+ "url": "https://www.reliancecpa.com/business-tax.htm",
+ "slug": "business-tax.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-tax",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Business Tax Services for Tampa St Petersburg Clearwater Lakeland Sarasota Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-tax.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Business Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax.jpg",
+   "alt": "Business Tax Services in the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Business Tax Services in the Tampa, FL Area",
+   "width": "300",
+   "height": "197",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Business tax is one of the most complicated areas of tax law, filling volumes of tax code on a federal, state, and local level. No matter how hard business owners try, it is virtually impossible to keep up with the filing deadlines, records, deductions, payroll tax, and countless other tax requirements that go along with running a business.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The accountants and CPAs at Reliance Consulting, LLC provide businesses throughout the greater Tampa, Florida area with comprehensive, experienced business tax services so that business owners can devote their time to running and growing their enterprises. Our [Tampa CPA](http://www.reliancecpa.com/)s and tax accountants are committed to showing businesses how they can take advantage of business tax incentives, avoid costly fines, and keep more money in their pockets.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "From Tampa to Lakeland, St Petersburg to Pasco, and Sarasota to Ft Myers, Reliance Consulting has decades of experience providing business tax services for:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Partnerships",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Limited Liability Companies (LLC)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "S-Corporations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sole Proprietors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Individuals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Payroll](http://www.reliancecpa.com/payroll-services.htm)",
+     "links": [
+      {
+       "text": "Payroll",
+       "href": "http://www.reliancecpa.com/payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)",
+     "links": [
+      {
+       "text": "Bookkeeping",
+       "href": "http://www.reliancecpa.com/bookkeeping.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we care about each client’s success. We are committed to ensuring that our clients have the latest business tax information so that they are able to make timely decisions and possibly save a tremendous amount of money on taxes. In addition to our business tax services, Reliance Consulting goes above and beyond for our clients by always being accessible to their questions and concerns.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To speak to an accountant about our business tax services in the greater Tampa, FL area, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 280
+}

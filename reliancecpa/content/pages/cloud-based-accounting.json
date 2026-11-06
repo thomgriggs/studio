@@ -1,0 +1,94 @@
+{
+ "url": "https://www.reliancecpa.com/cloud-based-accounting",
+ "slug": "cloud-based-accounting",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Cloud-Based Accounting | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cloud-based-accounting",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Cloud-Based Accounting: Convenient, Secure, Cost-effective",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "4 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Cloud-Based Accounting: Convenient, Secure, Cost-effective",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Internet-based accounting has been available for more than a decade, but only recently has the term “cloud accounting” come into vogue. Cloud computing uses an online connection to access data that is stored on a secure server, rather than in the hard memory of your desktop or portable device. The term gained traction when big smartphone companies and cellular networks began to advertise cloud computing as a way to avoid over-loading mobile phone devices with music, images, videos, and other data-intensive files. Today, cloud computing is ubiquitous; and, it is going to become even more prominent in the accounting industry as technology continues to improve and as more people adapt to the mobile culture.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the financial world, a parallel for cloud-based accounting is online banking, a concept, which met with some resistance early on. The thought of accessing bank accounts and making transactions from a computer or smartphone, rather than at an ATM or face-to-face with a teller, took some time to be accepted. However, once bank customers experienced the convenience of 24-hour access to their accounts – and began to trust their banks’ online security procedures – online banking became commonplace. There is no doubt that the same will become true for cloud-based accounting. Indeed, it already is happening at Reliance Consulting, where our sophisticated client portals allow convenient, secure, 24-hour access and communication. Cloud accounting is not only the wave of the future – but, in a global economy, where the financial wheel never stops turning, it is a vital tool for personal and business accounting. The potential savings in money and time are substantial, and should not be ignored.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you implement cloud-based accounting for business or personal use, it will tilt work-life balance in your favor by reducing the amount of time spent focusing on accounting tasks such as budgeting, bookkeeping, payroll services, and cash flow management. You may choose to spend that time focusing on other aspects of your business, or on your family. Ease of use is another time saver with could-based accounting. As practiced at Reliance, a client has merely to access our website, log in using a personal ID and password, and gain instant access to all financial data that is securely stored in a Tier 4 Thompson Reuters data center, one of the largest and most secure servers available. In addition, the user interface is intuitive and simple.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you have entered the client portal, all of your financial information is at your fingertips. The document presentation feature allows you to instantly view all of your financial documents, including electronic copies of tax returns. You also can exchange working files and accounting-related information with your CPA safely and securely. Individuals can instantly upload and securely store tax information online with the 1040 Individual Client Web Organizer. The portal is also a source for financial news and information, along with continually updated stock quotes. Those who choose to expand their client portal service can take advantage of online hosting of QuickBooks and Microsoft Office, eliminating the hassle of creating backups, as well as file imports and exports. In addition, clients may choose the account aggregation feature, which collects financial information from several sources and integrates the data into an easy-to-read format for streamlined analysis. Also available is the FileCabinet CS application, which allows you to instantly access, view, e-mail, and fax documents while reducing the office space required for storage.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One concern about cloud-based accounting raised by some in the financial world is the potential loss of the “personal touch.” If a client can access all of his or her financial information online 24 hours a day, how will the client-CPA relationship be affected? This is the challenge being addressed by forward-thinking accounting firms across the nation. It is important to remember that even as technology has enhanced our ability to remain informed, the world of accounting and finance has also become increasingly complex. What was true five years ago is not necessarily true today, and what is true today will almost certainly be different five years from now. While raw data on a computer screen is useful – even essential – making sense of accounting questions will always require an experienced, knowledgeable source. The advent of cloud-based accounting is nothing short of a revolution in the industry, but nothing will ever replace the sound advice and guidance of a trusted CPA.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC (*[*www.reliancecpa.com*](https://www.reliancecpa.com/)*). He can be reached at (813) 931-7258 or via email at* [*amol@reliancecpa.com*](mailto:amol@reliancecpa.com)",
+   "links": [
+    {
+     "text": "*www.reliancecpa.com*",
+     "href": "https://www.reliancecpa.com/"
+    },
+    {
+     "text": "*amol@reliancecpa.com*",
+     "href": "mailto:amol@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 760
+}

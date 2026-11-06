@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports/",
+ "slug": "veterinary-financial-statement-preparation__financial-reports",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Financial-Reports - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financial-Reports",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Business Stability with Financial Statement Preparation](https://www.reliancecpa.com/veterinary-financial-statement-preparation)",
+   "links": [
+    {
+     "text": "← Business Stability with Financial Statement Preparation",
+     "href": "https://www.reliancecpa.com/veterinary-financial-statement-preparation"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Financial-Reports",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [Kim Nguyen](https://www.reliancecpa.com) |\nPublished May 17, 2016 | Full size is [1600 × 1067](https://www.reliancecpa.com/wp-content/uploads/Financial-Reports.jpg) pixels",
+   "links": [
+    {
+     "text": "Kim Nguyen",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "1600 × 1067",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Financial-Reports.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Financial-Reports.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Financial-Reports.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 24
+}

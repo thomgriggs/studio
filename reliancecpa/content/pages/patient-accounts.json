@@ -1,0 +1,132 @@
+{
+ "url": "https://www.reliancecpa.com/patient-accounts",
+ "slug": "patient-accounts",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental CPA | Accounts Receivable | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/patient-accounts",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Assist in Maintaining Accounts Receivable",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Assist in Maintaining Accounts Receivable",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Patient-Account-Records-300x200.jpg",
+   "alt": "Patient Accounts",
+   "alt_missing": false,
+   "title": "Patient Accounts",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most crucial aspects of developing a profitable dental practice is streamlining the maintenance of accounts receivable. A dental CPA from Reliance Consulting, LLC, can help ensure that your practice’s patient financial management system is efficient, with a tight collection process and closely defined protocols that will reduce or even eliminate collection waits of 90 days or longer.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In our opinion, your dental practice should not extend credit to customers on a routine basis. Exceptions can be made to certain known customers. If credit is extended over period of the treatment plan, the associated fees should be collected as each stage of the treatment plan is completed.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In order to help keep the money you are owed coming in at a steady rate, your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance can help you determine if:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Your practice has a clearly written and documented patient financial management system in place",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The financial/treatment plan coordinator is fully trained in your financial options and collection systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "There are pre-set times when the financial/treatment plan coordinator attempts to collect on overdue accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "An effective collections system is in place and followed by the financial/treatment plan coordinator. *Tip: Collecting money upfront is the most successful strategy for eliminating accounts receivable and increasing patient engagement*.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Uncollectable accounts are written off correctly. This should be a rare occurrence.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most dentists use third party credit systems like CareCredit to ensure prompt collection and thus eliminating the accounts receivable headache all-together. It is important to train your financial coordinator in all the nuances of the credit systems so that the patients will readily accept plans without worrying about coughing up the funds right away.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your Reliance dental CPA can also help you establish financing practices, or other means of patient payment that are designed to encourage patients to pay for needed dental care, and to discourage non-payment once the care has been rendered. To learn more about how a dental CPA from Reliance Consulting can help you establish accounts receivable practices that work for your practice, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 349
+}

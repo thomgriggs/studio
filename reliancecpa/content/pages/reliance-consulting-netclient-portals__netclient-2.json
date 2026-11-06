@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2/",
+ "slug": "reliance-consulting-netclient-portals__netclient-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "View the Net Client Demo - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "View the Net Client Demo",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Reliance Consulting NetClient Portals](https://www.reliancecpa.com/reliance-consulting-netclient-portals)",
+   "links": [
+    {
+     "text": "← Reliance Consulting NetClient Portals",
+     "href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "View the Net Client Demo",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished January 11, 2012 | Full size is [644 × 150](https://www.reliancecpa.com/wp-content/uploads/2012/01/netclient1.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "644 × 150",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2012/01/netclient1.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2012/01/netclient1.jpg",
+   "alt": "View the Net Client Demo",
+   "alt_missing": false,
+   "title": "",
+   "width": "644",
+   "height": "150",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/client-login",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "View Net Client Demo",
+   "href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Client Portal Login",
+   "href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/client-login",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 32
+}

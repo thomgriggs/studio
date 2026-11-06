@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/key-performance-indicators",
+ "slug": "key-performance-indicators",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Key Performance Indicators | KPI | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/key-performance-indicators",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Helps You Set Key Performance Indicators for Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Helps You Set Key Performance Indicators for Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Key-Performance-Indicators-300x199.jpg",
+   "alt": "Key Performance Indicators",
+   "alt_missing": false,
+   "title": "Key Performance Indicators",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A key performance indicator (KPI) is a way for a business to prioritize its goals and to keep track of how well those goals are met. They are used to measure performance, but they also are used to determine the progress of particular projects. Determining KPI gives managers and business owners insight into what the company is capable of achieving. Just as important, knowing distinct KPI helps the people in charge understand a company’s limitations. Which, in turn, serves as a guidepost that prevents the company from over-reaching.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can sit down with you and evaluate everything about your company in order to determine KPI, and how best to meet them as consistently as possible. If you find that your employees are consistently missing the goals laid out in the KPI plan, you might need to consider lowering your sights. On the other hand, if employees consistently meet or exceed KPI, perhaps it’s time to trust your employees with more responsibility – or even expand the company’s outlook beyond its current scope. The key is to make sure that you take into consideration everything you know to be true about your business before setting the KPI. The more you know, the closer your ambitions will match your company’s actual capabilities.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about KPI, or to work with an experienced, knowledgeable small business consultant from Reliance, [contact](http://www.reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 251
+}

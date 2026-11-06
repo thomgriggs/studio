@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/employee-vs-independent-contractor.htm",
+ "slug": "employee-vs-independent-contractor.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Hiring an Employee vs. an Independent Contractor: A Tampa Accountant Explains Some Differences",
+ "seo": {
+  "title_tag": "Hiring an Employee vs. an Independent Contractor: A Tampa Accountant Explains Some Differences",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/employee-vs-independent-contractor.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Hiring an Employee vs. an Independent Contractor: A Tampa Accountant Explains Some Differences",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Hiring an Employee vs. an Independent Contractor: A Tampa Accountant Explains Some Differences",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/employee-vs-independent-contractor.jpg",
+     "alt": "Tampa Accountant Explains the Differences between an Employee vs. an Independent Contractor"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Many Tampa Bay area businesses have found that they can save money and boost their workforce by hiring independent contractors. There are several financial benefits to hiring independent contractors. First, they can be hired on an as-needed basis to help existing employees during times of increased workflow. In addition, employers do not have to pay for an independent contractor’s payroll taxes or benefits like vacation, sick leave, and health insurance. Finally, independent contractors are not entitled to unemployment benefits or workers compensation and are not covered by labor or anti-discrimination laws, further reducing an employer’s liability.",
+     "When you are thinking about hiring independent contractors, it is important to consult with a [Tampa accountant](http://www.reliancecpa.com/) for advice. There are volumes of IRS rules and regulations involved in hiring independent contractors, and being out-of-compliance with these rules can be very costly to a business. Making the mistake of classifying an employee as an independent contractor could result in you being charged with paying employment taxes for that worker for the entire time he or she worked for you, plus a penalty, to the IRS.",
+     "We have consulted with hundreds of area businesses about the legal nuances that define an independent contractor. For example, an independent contractor typically:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Is not told when, where, and how to work"
+     },
+     {
+      "text": "Signs a contract with the employer that outline the terms of employment"
+     },
+     {
+      "text": "Uses his or her own equipment, tools, facilities, and resources to do the job"
+     },
+     {
+      "text": "Is paid by the job and not by the time they spend working"
+     },
+     {
+      "text": "Does not receive training from an employer"
+     },
+     {
+      "text": "Does not get reimbursed for business expenses"
+     },
+     {
+      "text": "Does not receive benefits like vacation time, sick pay, or health insurance"
+     },
+     {
+      "text": "Works for other employers, too"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Often, businesses in the Tampa, FL area make the mistake of misclassifying a worker as an independent contractor because they are simply ignorant of the laws on this issue. Unfortunately, ignorance will not help you avoid an investigation or the cost of fines and hiring an attorney to defend you."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/employee-vs-independent-contractor/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/employee-vs-independent-contractor.htm"
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "url": "https://www.reliancecpa.com/tampa-cpa-areas-served.htm",
+ "slug": "tampa-cpa-areas-served.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA Offering Tax Preparation Bookkeeping Payroll & More: Contact Our Tampa Accounting Firm for Assistance",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tampa-cpa-areas-served.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA Offering Tax Preparation, Bookkeeping, Payroll & More: Contact Our Tampa Accounting Firm for Assistance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tampa CPA Offering Tax Preparation, Bookkeeping, Payroll & More: Contact Our Tampa Accounting Firm for Assistance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/greater-tampa-bay.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "greater-tampa-bay",
+   "width": "300",
+   "height": "195",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Centrally based in Tampa, Florida, Reliance Consulting, LLC is a leading accounting firm serving the entire Tampa Bay area, from Pinellas to Polk and Hernando to Charlotte counties and beyond. Backed by more than 25 years of experience, the certified public accountants and staff here at Reliance Consulting are completely committed to the personalized care of our clients and their finances.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are few, if any, CPA firms in the Tampa Bay area that provide their clients with the same thorough, year-round, one-on-one approach that Reliance Consulting is known for. Once you become our client, your Reliance Consulting CPA will be available to you anytime you have a question. For instance, if you’re wondering about the future tax consequences of a car purchase or you’re experiencing a [cash flow management](http://www.reliancecpa.com/cash-flow-management.htm) issue at your business, Reliance Consulting welcomes your call or e-mail seeking advice.",
+   "links": [
+    {
+     "text": "cash flow management",
+     "href": "http://www.reliancecpa.com/cash-flow-management.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Over the years, word of mouth has spread about our impeccable service. Thanks to our reputation of always doing right by our clients, we now serve thousands of businesses and individuals throughout the greater Tampa Bay, FL area including these communities and many more:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Hillsborough County—Tampa, Brandon, Carrollwood, Temple Terrace, Lutz, Riverview, Thonotosassa, Ybor City, Plant City, Apollo Beach, Sun City Center",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pinellas County—Clearwater, St Petersburg, Oldsmar, Dunedin, Palm Harbor, Safety Harbor, Seminole, Pinellas Park, Largo, Belleair, Indian Rocks Beach, Madeira Beach, Tarpon Springs, Ozona",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pasco County—Hudson, Zephyrhills, Dade City, Port Richey, New Port Richey, Trinity, Holiday, St Leo, San Antonio, Land O’ Lakes, Wesley Chapel, Odessa",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Polk County— Lakeland, Winter Haven, Bartow, Auburndale, Davenport, Dundee, Frostproof, Haines City, Lake Wales",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Manatee County—Bradenton, Bradenton Beach, Ellenton, Anna Maria, Palmetto, Longboat Key",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sarasota County—Sarasota, North Port, Longboat Key, Venice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Hernando County— Hernando Beach, Brooksville, Ridge Manor, Weeki Wachee, Spring Hill",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Charlotte County—Englewood, Port Charlotte, Punta Gorda, Cleveland, Rotonda, Grove City, Boca Grande, Solana",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we understand that each client’s success directly affects our own success. Therefore, our comprehensive list of services is meant to address any financial issue a client may be confronted with, now and in the future. Some of the most popular items from our menu of CPA and accounting services include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tax preparation](http://www.reliancecpa.com/tax-preparation.htm)",
+     "links": [
+      {
+       "text": "Tax preparation",
+       "href": "http://www.reliancecpa.com/tax-preparation.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Individual Income and business tax accountant services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning CPA services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax problems and IRS problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping, [QuickBooks accountant](http://www.reliancecpa.com/quickbooks-accountant.htm), and payroll services",
+     "links": [
+      {
+       "text": "QuickBooks accountant",
+       "href": "http://www.reliancecpa.com/quickbooks-accountant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Strategic Business Planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Specialized accounting and tax services for a range of professional occupations such as dentists, doctors, hospitality, real estate, and retail, among many others",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protecting your assets from lawsuits, funding your children’s educational plans, and managing retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter where you are located in the Tampa Bay, Florida area, we invite you to[contact](http://www.reliancecpa.com/contact.html) Reliance Consulting for any accounting or tax need, whether it’s for your personal finances or your business or both. We look forward to providing you with a free financial checkup and learning more about your accounting needs.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 494
+}

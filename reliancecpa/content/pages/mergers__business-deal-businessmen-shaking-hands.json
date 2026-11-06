@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands/",
+ "slug": "mergers__business-deal-businessmen-shaking-hands",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Mergers - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Mergers",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← How a Tampa CPA Can Help Navigate Tax Implications for Mergers and Acquisitions](https://www.reliancecpa.com/mergers)",
+   "links": [
+    {
+     "text": "← How a Tampa CPA Can Help Navigate Tax Implications for Mergers and Acquisitions",
+     "href": "https://www.reliancecpa.com/mergers"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Mergers",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished November 2, 2012 | Full size is [900 × 675](https://www.reliancecpa.com/wp-content/uploads/Mergers.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 675",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Mergers.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Mergers.jpg",
+   "alt": "Mergers",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "675",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Mergers.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 30
+}

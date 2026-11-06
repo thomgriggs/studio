@@ -1,0 +1,116 @@
+{
+ "url": "https://www.reliancecpa.com/business-valuation.htm",
+ "slug": "business-valuation.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+ "seo": {
+  "title_tag": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-valuation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-valuation.jpg",
+     "alt": "Business Valuation by Tampa Accountant"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Just about anyone in the Tampa Bay area could make an accurate guess as to what their car is worth and their house is worth. But if you own a business in Tampa, what you really want to know is, what is your business worth? This is not an easy question to answer, but by working with the right people, you should be able to come up with a reliable figure.",
+     "Analyzing the value of a business, or business valuation, is a complex task that requires years of hands-on experience. Far from an exact science, business valuation is almost an art form and is best handled by a [Tampa accountant](http://www.reliancecpa.com/) or CPA from an established firm. Reliance Consulting, LLC has been performing business valuations in the Tampa Bay area for more than 25 years. Our area-specific experience, combined with our dedication to meticulous work and the highest standards, has made us the natural choice as the Tampa accountant for hundreds of local businesses needing business valuation services.",
+     "Your Tampa accountant and CPA from Reliance Consulting can provide you with a business valuation for the following purposes and more:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Sale or purchase of a business"
+     },
+     {
+      "text": "Bank financing"
+     },
+     {
+      "text": "Divorce"
+     },
+     {
+      "text": "Bankruptcy"
+     },
+     {
+      "text": "Estate planning"
+     },
+     {
+      "text": "Restructuring of the business"
+     },
+     {
+      "text": "Starting an employee stock ownership plan (ESOP)"
+     },
+     {
+      "text": "Partnership or management buyouts"
+     },
+     {
+      "text": "Assessing business damage after a misfortune"
+     },
+     {
+      "text": "IRS problems and disputes"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "As a business owner, your company obviously means the world to you personally, but it’s important to know what your business is worth in financial terms. Thankfully, a Tampa accountant from Reliance Consulting can evaluate every facet of your business and give you the numbers you need."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/business-valuation/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/business-valuation.htm"
+ }
+}

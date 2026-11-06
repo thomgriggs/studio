@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/avoid-probate.html",
+ "slug": "avoid-probate.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA in Tampa | Avoid Probate | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/avoid-probate.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How to Avoid Probate",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How to Avoid Probate",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/avoid-probate.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "CPA in Tampa",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Careful estate planning is all about taking care of your loved ones and, if you are in business, your partners once you’re gone. Of course, the top priority is making sure they aren’t left in need after your death. But another consideration is the legal wrangling that often accompanies probate court proceedings. One way you can take care of those you leave behind is plan for the avoidance of the long, expensive, and complex process of probate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) can help you with all of your estate planning needs, including the drafting of wills, the establishment of trusts, and other actions you can take to maximize assets while minimizing the tax burden for your heirs. Although it may not be entirely possible to eliminate probate altogether, there are ways to expedite the process and spare your family and/or business partners as much hassle as possible. These methods include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Living trusts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Joint ownership of assets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payable-on-death designation for bank accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Transfer-on-death registration for securities, vehicles, and real estate deeds",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To get started on a conscientious estate planning strategy, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today. We’ll advise you on every aspect of estate planning, including ways to mitigate the sometimes-painful process of probate.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 210
+}

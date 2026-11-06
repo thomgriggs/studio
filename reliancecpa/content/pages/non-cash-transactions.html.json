@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/non-cash-transactions.html",
+ "slug": "non-cash-transactions.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Non-Cash Transactions | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/non-cash-transactions.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Ways to Manage Non-Cash Transactions in Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Ways to Manage Non-Cash Transactions in Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/non-cash-transactions.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "non-cash-transactions",
+   "width": "300",
+   "height": "213",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Cash may still be king in business, but it’s not always practical to accept only cash when making business transactions. In fact, even if your business operates primarily on a cash-only basis – such as a lawn service, or a flea market vendor – there are almost always going to be exceptions to the cash-only rule. For instance, will you take a check? Of course you will. And when you do, you’ve participated in one of the simplest non-cash transactions available. Unfortunately, non-cash transactions can be a lot more complicated than that, especially as technology has advanced over the years.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help make sure you aren’t caught off guard by the potential complications of conducting non-cash transactions. Accepting forms of payment other than cash requires an understanding of potential fees and regulations, as well as formulating your own policies regarding acceptance of these other forms. The bottom line? With education and planning, there is no need to risk losing business because of a hard-and-fast cash-only policy.\n\nHere are a few forms of non-cash payment, along with a brief description of what to anticipate with each:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Checks – Set the policy based on your own well-established guidelines, and deposit the checks as quickly as possible after you receive them.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit/debit cards – Beware of credit card fraud, and expect to pay a processing fee for each transaction.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Company credit lines – Will you extend credit through card payments or invoices? Do you have enough operating capital on hand to temporarily recoup the cost of extending credit?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Online payments – You will need to set up accounts with an online payment service, such as PayPal™ or Bill Me Later®, and include a “shopping cart” on your company’s website.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses establish best practices, including developing the best way to manage non-cash transactions. [Contact](http://www.reliancecpa.com//contact.html) us today to learn more, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 347
+}

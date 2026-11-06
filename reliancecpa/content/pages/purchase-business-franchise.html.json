@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/purchase-business-franchise.html",
+ "slug": "purchase-business-franchise.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Franchise Purchase",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/purchase-business-franchise.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Plan a Franchise Purchase",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Plan a Franchise Purchase",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/purchase-business-franchise.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "purchase-business-franchise",
+   "width": "300",
+   "height": "169",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When you are considering getting into business as an owner-operator or investor, one option you might consider is purchasing a franchise. It’s all well and good to start from scratch, especially if your product or service is truly unique. But if you want to parlay your particular skill set into a profitable business, it might behoove you to first check the franchise market to see if any existing opportunities match your vision.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Should you decide to explore the possibility of buying a franchise, a [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, would be a valuable resource. We have our collective fingers on the pulse of the business world, which means we will be able to help you determine if an existing franchise is right for your skill set and vision. Of course, no major business investment should be made without first conducting thorough research, and a consultant from Reliance can help with that every step of the way. During your research, you should seek to answer the following questions:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "What is the name recognition and brand reputation of the franchise?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Is there a registered trademark?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How long has the company been in business?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What complaints, if any, have been filed against the company to the Better Business Bureau or consumer protection agencies?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What is the history of other franchisees within the same company, especially in your market or similar markets?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, we have helped hundreds of businesses in the Tampa Bay area reach and sustain maximum profitability. Because time is your most valuable commodity, it makes good business sense to let Reliance handle the day-to-day issues like cash flow management, payroll services and tax planning, while you focus your attention on the big picture. [Contact](http://www.reliancecpa.com//contact.html) us today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 310
+}

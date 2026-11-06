@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/startup-costs.html",
+ "slug": "startup-costs.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Startup Costs",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/startup-costs.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains How to Estimate Startup Costs for a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains How to Estimate Startup Costs for a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/startup-costs.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "startup-costs",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You have an idea for a product or service that you believe you can parlay into a successful business. You’ve done your market research, and you’ve pondered the pros and cons of the different legal structures (partnership, corporation, LLC, etc.). Before you dive into your new enterprise, though, stop to consider the startup costs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A financial strategy session with a[Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, is a must when you are about to embark on a new business venture. Plowing ahead with a business idea without first considering how much it will cost – short-term and long-term – is a path toward certain failure. A Tampa CPA at Reliance will help you consider every potential expense, including:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Raw materials, equipment and shipping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Legal fees for copyrights, trademarks, patents, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Technology such as computers, cell phones and website development",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Administrative costs, such as insurance, office supplies and office furniture",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll, including wages for your employees and yourself",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marketing and advertising",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even after you have determined the startup costs, continuing to work with your Tampa CPA at Reliance Consulting can be the best business decision of your life. While you are free to focus on perfecting your chosen product or service, a Tampa CPA at Reliance can cover the time-consuming details that make or break your business. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a complete financial health checkup and to learn more about our small business support services.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 247
+}

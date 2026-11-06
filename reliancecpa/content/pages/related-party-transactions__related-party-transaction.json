@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/related-party-transactions/related-party-transaction/",
+ "slug": "related-party-transactions__related-party-transaction",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/related-party-transactions/related-party-transaction",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Related Party Transaction - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/related-party-transactions/related-party-transaction/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Related Party Transaction",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains Related-Party Transactions](https://www.reliancecpa.com/related-party-transactions)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains Related-Party Transactions",
+     "href": "https://www.reliancecpa.com/related-party-transactions"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Related Party Transaction",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished March 26, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Related-Party-Transaction.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Related-Party-Transaction.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Related-Party-Transaction.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Related-Party-Transaction.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/related-party-transactions/related-party-transaction).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/related-party-transactions/related-party-transaction"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 25
+}

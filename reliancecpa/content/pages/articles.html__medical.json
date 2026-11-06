@@ -1,0 +1,112 @@
+{
+ "url": "https://www.reliancecpa.com/articles.html/medical/",
+ "slug": "articles.html__medical",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/articles.html/medical",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "medical - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/articles.html/medical/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "medical",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Articles](https://www.reliancecpa.com/articles.html)",
+   "links": [
+    {
+     "text": "← Articles",
+     "href": "https://www.reliancecpa.com/articles.html"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "medical",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 15, 2012 | Full size is [200 × 245](https://www.reliancecpa.com/wp-content/uploads/medical.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "200 × 245",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/medical.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/medical.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "200",
+   "height": "245",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/articles.html/money",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "retirement-income",
+   "href": "https://www.reliancecpa.com/articles.html/retirement-income",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "money",
+   "href": "https://www.reliancecpa.com/articles.html/money",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/articles.html/medical).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/articles.html/medical"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 18
+}

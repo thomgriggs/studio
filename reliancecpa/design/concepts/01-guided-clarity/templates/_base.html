@@ -1,0 +1,32 @@
+{# Page shell: head, skip link, the 34px utility bar (tagline left, Client login right), the sticky 86px header with the menu (_nav.html), <main>, closing band (_closing.html), footer (_footer.html). Full-bleed bands with the original's padding max(24px, 50vw - 620px). The wrapper carries the page's territory class (terr-teal | terr-sage | terr-gold) when the page belongs to a tier; everything else is brand. System fonts only: nothing is loaded. #}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+{% if page.source == 'proposed' %}<title>{{ page.seo.title_tag }} | 01 Guided clarity mockup</title>
+<meta name="description" content="{{ page.seo.meta_description }}">{% else %}<title>{{ page.title }} | Reliance Consulting mockup | {{ concept.name }}</title>{% endif %}
+<link rel="stylesheet" href="{{ root }}style.css">
+</head>
+{% set terr = concept.tier_territory[page.tier] if page.tier and concept.tier_territory[page.tier] else '' %}
+<body class="t-{{ page.template|replace('_', '') }}">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page{{ ' terr-' ~ terr if terr }}">
+{% if page.live_back %}<div class="liveflag" role="note"><span><strong>Live site content, for comparison</strong> &middot; not a design proposal</span><a href="{{ page.live_back }}">Back to the proposed page</a></div>{% endif %}
+<div class="utility"><span>Serving Tampa Bay since 1984</span>{% for l in nav.links if l.label == 'Client Login' %}<a href="{{ l.href }}">{{ l.label }} <span aria-hidden="true">&nearr;</span></a>{% endfor %}</div>
+<header class="site-header" role="banner">
+  <a class="brand" href="{{ root }}index.html" aria-label="Reliance Consulting home"><img src="{{ root }}{{ concept.logo.src }}" alt="{{ concept.logo.alt }}" width="260" height="57"></a>
+  {% include "_nav.html" %}
+</header>
+{% set last = page.modules[-1].module if page.modules else '' %}
+{% set show_band = (not page.own_closing) and page.template not in ['_kit', '_pages', 'get-started', 'contact', 'home'] and last not in ['cta-band', 'contact-band'] %}
+<main id="main">
+{% block main %}{% endblock %}
+{% if show_band %}{% include "_closing.html" %}{% endif %}
+</main>
+{% include "_footer.html" %}
+</div>
+<script src="{{ root }}nav.js" defer></script>
+</body>
+</html>

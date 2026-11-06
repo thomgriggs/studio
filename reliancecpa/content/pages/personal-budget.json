@@ -1,0 +1,132 @@
+{
+ "url": "https://www.reliancecpa.com/personal-budget",
+ "slug": "personal-budget",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Budget Discipline | Budget Advice",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-budget",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Advises Discipline for Personal Budgeting",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Advises Discipline for Personal Budgeting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/personal-budget-300x225.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Personal Budget",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how organized and logical your personal budget may look on paper, it is meaningless unless you stick to it, and this requires a great deal of discipline. Life presents many monetary challenges. Unexpected expenses crop up, as in the aftermath of a natural disaster. Temptation may also be a factor, as in a flashy, new electronic gadget or spontaneous weekend trip. These monetary challenges can play havoc with your budget unless you steel yourself against them.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you develop a personal budget that makes sense and one that doesn’t require a super-human effort on your part to stay within. Although it’s not possible to predict every event in your life, there are ways to build a budget that takes into account life’s uncertainties. Any budget is about choices, and the decisions you make as you consider your known expenses will go a long way toward preparing you to deal with unexpected costs.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most people are able to break down their known expenses in the following general categories:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Housing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Investments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Living expenses",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Of course, within each of these categories are sub-categories, some everyday expenses like food, others as complex as estate planning. It is within these sub-categories that the most cost variance can occur. While devising your budget, you should take the potential variances into account. If you are able, you might also decide to build an “emergency fund” into your budget in order to be prepared for unexpected financial burdens.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information about building and sticking to a personal budget, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 274
+}

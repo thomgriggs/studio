@@ -1,0 +1,122 @@
+{
+ "url": "https://www.reliancecpa.com/dental-monthly-financial-statements",
+ "slug": "dental-monthly-financial-statements",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental CPA | Monthly Financial Statements | Dental Practice Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-monthly-financial-statements",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Preparing, Processing & Filing Monthly Financial Statements for Your Dental Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Preparing, Processing & Filing Monthly Financial Statements for Your Dental Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Monthly-Financial-Statements-300x300.jpg",
+   "alt": "Monthly Financial Statements",
+   "alt_missing": false,
+   "title": "Monthly Financial Statements",
+   "width": "300",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your dental CPA from Reliance Consulting, LLC, can handle all of the monthly financial statements for your dental practice, freeing you and your office staff to focus on your patients rather than accounting. In addition to planning and preparing annual financial documents such as a profit and loss statements and tax returns, a dental practice management expert from Reliance can be a valuable asset when it comes to month-to-month analysis of expenses and revenue.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Sometimes, financial decisions can’t wait until the end of the fiscal year. It can be helpful to stay abreast of your dental practice’s financial health on a regular basis, which is why it is so important for a dental practice to maintain accurate and updated monthly financial statements. Rather than dedicate an office staffer’s valuable workday time to financial paperwork, why not let a [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance apply his or her expertise to the matter? The information in your monthly statements needs to be accurate, current, and complete, especially if you are about to make decisions related to expansion of your practice. The ability to analyze up-to-date information also allows us to engage in pro-active tax planning that can cut your tax bill, sometimes significantly.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The virtual client office offered through our portals allows you to move your accounting and tax function on the cloud. A dental CPA at our firm updates your information on a monthly basis or in real-time (if you choose). You have 24/7 access to your practice numbers and relevant financial documents through our client portals off our website. In December 2012, we launched iPhone, iPad and Android apps that enable you to access all your important financial information on your phone or tablet. At Reliance we believe that technology is the major accelerator of businesses in the 21st century. Leveraging it to help your business can free up valuable time that can be utilized for business growth planning. Alternatively, the excess time can help tilt the work life balance in your favor.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Here are the three main types of financial paperwork that pertain to most dental practices:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Bank Statements – Your business bank account statements form the basis of monthly reconciliations and preparation of financial statements.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Invoices/Checks – These are bills for services rendered or for dental supplies. Checks are the primary source of capturing data but invoices need to be retained.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Packing slips – These are itemized listings of supplies and other goods shipped to the practice and should be checked against the actual supplies that arrive. This is a management control issue and the office manager should develop procedures to ensure propriety.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A dental CPA from Reliance maintains expense records; reconciles bank statements, sorts through NSF (not sufficient funds) checks from patients, and much more. Reliance has always had a special relationship with our dental clients, and we want to help your practice thrive, too. [Contact](http://reliancecpa.com/contact.html) us today for help with your monthly financial statements or any facet of managing your practice.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 505
+}

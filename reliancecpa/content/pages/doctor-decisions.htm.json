@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/doctor-decisions.htm",
+ "slug": "doctor-decisions.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa Bay Doctors Face Many Decisions, but a Tampa CPA from Reliance Consulting Can Help",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/doctor-decisions.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa Bay Doctors Face Many Decisions, but a Tampa CPA from Reliance Consulting Can Help",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tampa Bay Doctors Face Many Decisions, but a Tampa CPA from Reliance Consulting Can Help",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/doctor-decisions.jpg",
+   "alt": "Tampa CPA Helps Doctors",
+   "alt_missing": false,
+   "title": "Tampa CPA Helps Doctors",
+   "width": "200",
+   "height": "216",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "After years of undergraduate school, medical school, internship, residency, and fellowship, doctors in the Tampa Bay area are finally ready to transition from the academic world to the business world. With so many decisions on the table, one of the most important steps an area doctor can take is selecting a Tampa CPA.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just like a Tampa physician has studied for years to help treat injuries and illnesses, a [Tampa CPA](http://www.reliancecpa.com/) who specializes in physician accounting has studied for years to help people in the medical community navigate the complex issues of their field. Reliance Consulting, LLC is a group of Tampa CPAs and accountants with more than 25 years of experience serving the unique needs of physicians. As your Tampa CPA, Reliance Consulting can assist you with:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Deciding whether to start your own practice, join a group, or work for a hospital",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Forming a business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtaining business licenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Selecting your tax entity",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Figuring out what types of insurance you need",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dealing with billing (either in-house or by outsourcing it)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protecting your assets from lawsuits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning to pay off student loans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning for retirement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You have worked hard to get where you are, and you deserve to give yourself the best chance at a lucrative, rewarding future in your profession. This being said, there is always going to be the chance of stumbling blocks, but your Tampa CPA from Reliance Consulting is here to warn you of those stumbling blocks and help you avoid them. Please contact us today for a free consultation. We look forward to speaking with you.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 277
+}

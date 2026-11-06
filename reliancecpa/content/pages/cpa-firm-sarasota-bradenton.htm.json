@@ -1,0 +1,187 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm",
+ "slug": "cpa-firm-sarasota-bradenton.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA & Accountants Serving Bradenton Sarasota & Venice FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA & Accountants Serving Bradenton, Sarasota & Venice, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tampa CPA & Accountants Serving Bradenton, Sarasota & Venice, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/sarasota.jpg",
+   "alt": "Tampa CPA & Accountants Serving Bradenton, Sarasota & Venice, FL",
+   "alt_missing": false,
+   "title": "Tampa CPA & Accountants Serving Bradenton, Sarasota & Venice, FL",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Nestled between the waters of Tampa Bay to the north and the Gulf of Mexico to the west, the Bradenton, Sarasota, and Venice area has become an oasis for tourism, businesses, retirees, and families. It’s no wonder, since this area is surrounded by pristine rivers, theaters, shops, restaurants, and many booming businesses.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you’re a resident of the Bradenton, Sarasota, or Venice area—or you own a business there—Reliance Consulting, LLC is a [Tampa CPA](http://www.reliancecpa.com/) and accounting firm that can help you plan out and achieve your financial goals. Due to our staff’s decades of experience and our commitment to an individualized approach, we are exceptionally qualified to offer our clients a range of solutions for the many economic issues they face very day.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Tampa CPAs and accountants at Reliance Consulting go above and beyond for our clients. We believe that the only way to serve our clients at the high level they deserve is to look beyond traditional services like yearly tax returns, and be there for them 365 days a year, providing smart financial insights in these areas and more:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tax planning](http://www.reliancecpa.com/tax-planning.htm)",
+     "links": [
+      {
+       "text": "Tax planning",
+       "href": "http://www.reliancecpa.com/tax-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Educational plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Financial planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Electronic filing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business tax services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS tax problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asset protection",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "QuickBooks accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Payroll services](http://www.reliancecpa.com/payroll-services.htm)",
+     "links": [
+      {
+       "text": "Payroll services",
+       "href": "http://www.reliancecpa.com/payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Remember, financial success is a result of superior planning for each dollar that comes into your wallet—and leaves it, too. Thankfully, your CPA and accountant at Reliance Consulting is here to tell you about strategies you can use to be financially successful in Bradenton, Sarasota, Venice, or anywhere else in the Tampa, Florida area.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To inquire about our services and to receive a free financial check up by the Tampa accountants at Reliance Consulting, please contact us today.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 303
+}

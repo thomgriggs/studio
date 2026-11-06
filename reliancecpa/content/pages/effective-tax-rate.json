@@ -1,0 +1,85 @@
+{
+ "url": "https://www.reliancecpa.com/effective-tax-rate",
+ "slug": "effective-tax-rate",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Effective Tax Rate | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/effective-tax-rate",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Defines the Effective Tax Rate",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Defines the Effective Tax Rate",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/voluntary-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "voluntary-tax",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many potentially confusing aspects of personal and business tax planning, not the least of which is the effective tax rate. What is it, exactly? Why does it matter? In short, the effective tax rate is the actual percentage of your income that you or your company paid in taxes. It differs from the marginal tax rate, which is the percentage of tax on the last dollar of taxable income earned during the fiscal year. For individuals, effective tax rate is determined by taxable income. For corporations, it is determined by before-tax earnings.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A Tampa CPA from Reliance Consulting, LLC, can help you and your business sort through the complexities of tax terminology and offer advice about how it might affect your financial well-being. As an individual tax payer, do you really need to know your effective tax rate? Perhaps not, but doesn’t everyone want to know how much of their gross income is going to the federal government, if only to know how to vote in future elections?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "On the other hand, the effective tax rate is a vital accounting tool in business. It simplifies comparisons of tax liability among different companies, and helps analysts rate a company’s ability to handle its tax burden. It is also a far more accurate measurement than the marginal rate for helping companies understand the evolution of year-to-year shifts in tax burden, as well.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Contact Reliance Consulting today to learn more about how knowing your effective tax rate can help you better understand your company’s bottom line. Reliance has been one of the Tampa Bay area’s most respected and trusted tax planning and business consulting firms since 1984.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 284
+}

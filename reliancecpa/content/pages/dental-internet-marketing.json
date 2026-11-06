@@ -1,0 +1,171 @@
+{
+ "url": "https://www.reliancecpa.com/dental-internet-marketing",
+ "slug": "dental-internet-marketing",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental Internet Marketing | Dental CPA | Dental Accounting Services",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-internet-marketing",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Marketing with the Internet, Including Social Media & SEO Techniques",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Dental Marketing with the Internet, Including Social Media & SEO Techniques",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Internet-Marketing-300x200.jpg",
+   "alt": "Dental Internet Marketing",
+   "alt_missing": false,
+   "title": "Dental Internet Marketing",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internet, including social media and SEO, has changed the way dental practices interact with patients. For example, unsatisfied patients who once might have scribbled a harshly worded hand-written or typed complaint or placed an angry phone call now have access to a wide range of communication methods online. No longer can the concept of patient relations be considered separate from the Internet. Social media outreach is no longer a novelty. For dental practices that are serious about success, Internet marketing is as integral as traditional dental marketing ever was.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help your practice determine how best to implement a sound Internet marketing strategy that includes elements of social media and SEO (search engine optimization). It’s not only about interacting with upset patients. Social media also has become an important part of how some companies build a memorable and recognizable brand. Patients expect their dental practice to have an online presence, and that often means more than just a nice website. Social media sites are used most effectively to spark a conversation, which is the first step toward generating a new customer.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Some tools a dental practice can use to enhance its online presence include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Twitter",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Facebook",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Mobile marketing](http://www.reliancecpa.com/dental-mobile-marketing)",
+     "links": [
+      {
+       "text": "Mobile marketing",
+       "href": "http://www.reliancecpa.com/dental-mobile-marketing"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Email marketing](http://www.reliancecpa.com/dental-email)",
+     "links": [
+      {
+       "text": "Email marketing",
+       "href": "http://www.reliancecpa.com/dental-email"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Google+",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retargeting campaigns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pay-per-click campaigns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Blogs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "LinkedIn",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pinterest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tumblr",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Interactive sites are not for every practice, especially if there is no plan for maintaining them and keeping the content updated and relevant. Yet, even the smallest practice might be able to use Internet marketing with social media and SEO strategies to help increase the number of patients, if it is used correctly. [Contact](http://reliancecpa.com/contact.html) Reliance today to learn more about how social media might help your dental practice thrive.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

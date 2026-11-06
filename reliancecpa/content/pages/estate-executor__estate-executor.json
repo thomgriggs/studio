@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/estate-executor/estate-executor/",
+ "slug": "estate-executor__estate-executor",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/estate-executor/estate-executor",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Estate Executor - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/estate-executor/estate-executor/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Executor",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Talks About the Choice of Executor of Your Estate](https://www.reliancecpa.com/estate-executor)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Talks About the Choice of Executor of Your Estate",
+     "href": "https://www.reliancecpa.com/estate-executor"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Estate Executor",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished April 30, 2012 | Full size is [900 × 598](https://www.reliancecpa.com/wp-content/uploads/estate-executor.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 598",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/estate-executor.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/estate-executor.jpg",
+   "alt": "Estate Executor",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "598",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/estate-executor.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/estate-executor/estate-executor).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/estate-executor/estate-executor"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

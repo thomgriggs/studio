@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/home-business.html",
+ "slug": "home-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Starting a Home-Based Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/home-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Starting a Home-Based Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Starting a Home-Based Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/home-based-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many advantages to starting a home-based business – as long as the service or product you plan to provide is something that is truly worthy of building a company around. Even if that is the case, though, you’ll need to make sure of two very important matters: Are you absolutely certain that you have what it takes to be a business owner? And, are you willing to work where you live?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you answer all of the pertinent questions as you determine whether starting a home-based business is the right move. Our small business consultants take pride in being accessible and extremely responsive to our clients’ needs. We can handle the day-to-day financial responsibilities – payroll, cash flow management, etc. – and allow you to focus on the big picture. When you’re just starting out, Reliance can be an invaluable partner to help ensure that your first step is directly onto the path to profitability. But first, here are just a few of the questions you will need to consider before starting a home-based business:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Are you willing to invest a significant portion of your savings to start the business?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you have experience and/or training in business management?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will your business require special licenses or permits?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you know your target market?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you know how to research your potential competitors?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you know the components of a business plan?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What form of legal ownership will your business take?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Tampa Bay area businesses reach and sustain their maximum potential. [Contact](http://www.reliancecpa.com/contact.html) us today for a complimentary financial health checkup or to help determine the best way to get your home-based business idea off the ground.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 307
+}

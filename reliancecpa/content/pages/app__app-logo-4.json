@@ -1,0 +1,104 @@
+{
+ "url": "https://www.reliancecpa.com/app/app-logo-4/",
+ "slug": "app__app-logo-4",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/app/app-logo-4",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Reliance Consulting App - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/app/app-logo-4/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Reliance Consulting App",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet](https://www.reliancecpa.com/app)",
+   "links": [
+    {
+     "text": "← Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet",
+     "href": "https://www.reliancecpa.com/app"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Reliance Consulting App",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [Kim Nguyen](https://www.reliancecpa.com) |\nPublished November 29, 2012 | Full size is [133 × 127](https://www.reliancecpa.com/wp-content/uploads/app-logo3.png) pixels",
+   "links": [
+    {
+     "text": "Kim Nguyen",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "133 × 127",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/app-logo3.png"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/app-logo3.png",
+   "alt": "Reliance Consulting App",
+   "alt_missing": false,
+   "title": "",
+   "width": "133",
+   "height": "127",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/app/app-logo",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Reliance Consulting App",
+   "href": "https://www.reliancecpa.com/app/app-logo-3",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/app/app-logo-4).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/app/app-logo-4"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 35
+}

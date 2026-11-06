@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+ "slug": "financially-preparing-divorce.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+ "seo": {
+  "title_tag": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financially-preparing-divorce.jpg",
+     "alt": "Financially Preparing for a Divorce & How Your Tampa CPA Can Help"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Ending a marriage is not only a personal decision, it’s a financial decision, too. And, while a divorce can be an emotional time, it is vital to take stock of your monetary situation so that you are able to make the best decisions possible for yourself and your family.",
+     "Your [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC is here to be a calm, experienced voice as you go through the big changes that divorce brings your way. We can help you with the huge financial impact that divorce could have on your life and prepare you to be fiscally strong for your fresh start. One of the many subjects we can discuss with you about your impending divorce includes making a full inventory of your:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Budget"
+     },
+     {
+      "text": "Possessions and when you acquired them"
+     },
+     {
+      "text": "Debts, including personal debts and joint debts such as mortgages, credit cards, car loans, etc."
+     },
+     {
+      "text": "Assets including bank accounts, savings, investments, property, vehicles, jewelry, furniture, etc."
+     },
+     {
+      "text": "Tax returns"
+     },
+     {
+      "text": "College savings for children"
+     },
+     {
+      "text": "Retirement savings and pensions"
+     },
+     {
+      "text": "Child care needs"
+     },
+     {
+      "text": "Need for child support and spousal support"
+     },
+     {
+      "text": "Personal salary as well as your spouse’s salary"
+     },
+     {
+      "text": "Insurance policies"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Once you have gathered all the information relating to your marital finances, then it’s time to calculate what you think your living expenses will be after your divorce. Most of our clients in this situation find that living on their own income – instead of the two-income situation they had while married – can be quite challenging, especially if they plan on staying in the marital home. Other financial considerations during a divorce include closing joint accounts as well as what to do if your spouse has a poor credit rating that could affect your future purchasing power."
+     },
+     {
+      "type": "p",
+      "text": "Please contact a Tampa CPA from Reliance Consulting, LLC to learn more about financially preparing for a divorce. We look forward to providing you with compassionate, competent, and confidential service."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/financially-preparing-divorce/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/financially-preparing-divorce.htm"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "url": "https://www.reliancecpa.com/hiring-employees.htm",
+ "slug": "hiring-employees.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "A CPA in Tampa Can Help With Hiring Employees",
+ "seo": {
+  "title_tag": "A CPA in Tampa Can Help With Hiring Employees",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/hiring-employees.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help With Hiring Employees",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "A CPA in Tampa Can Help With Hiring Employees",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/hiring-employees.jpg",
+     "alt": "A CPA in Tampa Can Help With Hiring Employees"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "As your business grows, you may discover you can’t keep up with the demands of your increasing client base. This usually is good news, and it probably means it’s time to expand the company’s roster.",
+     "When that happens, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you navigate the legalities and financial technicalities that come with hiring new employees.",
+     "First, before advertising the position, you’ll need to develop a job description and salary range. Be sure the description encourages a diverse and talented group of applicants. Then, once you have your description ready, there are many websites available for job posting, some of which cater to specific industries. The depth of your job posting will be determined by your budget and how specialized you need your new employee to be. You might wish to devise an initial screening process, after which you’ll schedule interviews with your top candidates.",
+     "Once you’ve chosen the best person or persons for the job, the Internal Revenue Service has a set of rules to follow in order to make the hire legal. Here are the basics of bringing someone new into your business family:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Verify that the employee is legally eligible to work in the United States. New employees must fill out a Form I-9 and provide documentation, such as a passport, valid driver’s license, birth certificate, or social security card."
+     },
+     {
+      "text": "Have the new employee fill out a Form W-4, which determines how much income tax will be withheld during each pay period."
+     },
+     {
+      "text": "Acquire the new employee’s social security number from the W-4, which you will need to enter on Form W-2.You may want to make a copy of the employee’s social security card for your records."
+     },
+     {
+      "text": "Determine whether your new employee is eligible for earned income credit. If so, and if the employee wants to receive advance earned income credit payments, he or she must fill out Form W-5, an advance earned income credit payment certificate."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "In addition to IRS forms for new employees, there is other documentation you should give to all employees on their first day. For instance, if you offer direct deposit, your employees will need to fill out paperwork from your bank. You may also want your new employees to receive an employee handbook that outlines the policies of your company such as your pay periods, vacations, sick days, retirement plans, and so on."
+     },
+     {
+      "type": "p",
+      "text": "For more information, contact your CPA in Tampa at Reliance Consulting, LLC, where since 1984 we have helped businesses develop sound practices when hiring employees."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/hiring-employees/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/hiring-employees.htm"
+ }
+}

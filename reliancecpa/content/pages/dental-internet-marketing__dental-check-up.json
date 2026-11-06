@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up/",
+ "slug": "dental-internet-marketing__dental-check-up",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Internet Marketing - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Internet Marketing",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Dental Marketing with the Internet, Including Social Media & SEO Techniques](https://www.reliancecpa.com/dental-internet-marketing)",
+   "links": [
+    {
+     "text": "← Dental Marketing with the Internet, Including Social Media & SEO Techniques",
+     "href": "https://www.reliancecpa.com/dental-internet-marketing"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Internet Marketing",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished February 6, 2013 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Dental-Internet-Marketing.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Internet-Marketing.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Dental-Internet-Marketing.jpg",
+   "alt": "Dental Internet Marketing",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Internet-Marketing.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A smiling woman at the dentist ready for a check-up",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-internet-marketing/dental-check-up).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 40
+}

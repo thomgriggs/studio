@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/human-resources-delegation",
+ "slug": "human-resources-delegation",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Human Resources | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/human-resources-delegation",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Benefits of Outsourcing Your Company’s Human Resources",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Benefits of Outsourcing Your Company’s Human Resources",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Human-Resources-300x173.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Human Resources",
+   "width": "300",
+   "height": "173",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most important responsibilities of any company is to provide reliable, efficient human resources services to its employees. Depending on the size of your business, though, you may discover that maintaining a health care plan, coordinating employee benefits, and other human resources functions take up far more time than you expected. Many small businesses turn to professional employer organizations (PEOs) to handle human resources and payroll.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether outsourcing your company’s human resources makes sense for you. A lot depends on the size of your company. In general, small businesses receive the most benefit from utilizing a PEO for human resources. The reason is most small companies rely heavily on the owner and other officers for sales and performing the actual services provided by the business. That leaves very little time for focusing on the day-to-day responsibilities of human resources. Once a company has grown to a certain level (for example, 100 or more employees), the cost of using a PEO typically can become prohibitive and it makes more sense to hire an in-house human resources officer.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Another factor is control. When a company uses a PEO, it usually relinquishes some flexibility in order to adhere to its contract with the PEO. Other options for small businesses include using an accounting firm such as Reliance Consulting for certain human resources functions and payroll services. To learn more about the benefits and potential drawbacks of outsourcing your company’s human resources, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 266
+}

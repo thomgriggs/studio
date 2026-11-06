@@ -1,0 +1,7 @@
+{#
+MODULE: review-line
+PURPOSE: One line of client praise with reviewer and source (defined, unused: the crawl has no client reviews). Italic line, small-caps byline.
+SLOTS: text, author, source, rating, href.
+SQUARESPACE: Quote block or Testimonials block.
+#}
+<section class="m m-quote" data-module="review-line" data-tone="{{ tone }}"><figure><blockquote class="pull">{{ s.text|md }}</blockquote><figcaption class="pull__by">— {{ s.author }}{% if s.source %}, {{ s.source }}{% endif %}</figcaption></figure></section>

@@ -1,0 +1,8 @@
+{#
+MODULE: image
+PURPOSE: One photo or logo in the reading column, 4px radius.
+SLOTS: image[src, alt].
+SQUARESPACE: Image block.
+#}
+{% from "_macros.html" import img %}
+<section class="m m-image" data-module="image" data-tone="{{ tone }}"><figure class="single">{{ img(s.image) }}</figure></section>

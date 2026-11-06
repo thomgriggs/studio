@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/business-tax-extension.html",
+ "slug": "business-tax-extension.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | How to File for a Business Tax Extension",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-tax-extension.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How to File for a Business Tax Extension",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How to File for a Business Tax Extension",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax-extension.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service allows individuals and businesses unable to file their tax returns on time to apply for an automatic extension. It’s important to note, however, that filing for an extension applies to the paperwork, not to the amount of tax owed by the deadline. The deadline for individuals is, of course, mid-April. For businesses, the filing deadline depends on several factors, including the legal structure of the business and the date upon which that company’s fiscal year ends.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For businesses that seek to streamline the tax preparation and planning process, a [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can be an invaluable partner. Business owners who feel overwhelmed by the complicated tax code can rely on sound advice from an experienced CPA from Reliance, who can help you answer these and other extension-related questions:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "How can I determine estimated tax owed when I file for an extension?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How does the legal structure of my business affect my tax-filing deadline?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How does the legal structure of my business affect my personal income tax filing status?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If I have filed for a business extension in the past, what forms will I need to file this time around?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Tampa Bay businesses and thousands of individuals with efficient, comprehensive tax preparation and planning. [Contact](http://www.reliancecpa.com/contact.html) us today to learn how we can help maximize your tax return, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 254
+}

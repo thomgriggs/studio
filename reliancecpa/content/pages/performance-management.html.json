@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/performance-management.html",
+ "slug": "performance-management.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Performance Management | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/performance-management.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Performance Management for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Performance Management for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/performance-management.gif",
+   "alt": "Tampa CPA Performance Management",
+   "alt_missing": false,
+   "title": "performance-management",
+   "width": "300",
+   "height": "192",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Performance management means ensuring that goals are being met by individual employees, by the workforce as a whole, or by the business at large. Proper performance management is particularly important for small businesses, which generally rely on a smaller budget and a smaller workforce, and therefore have a thinner margin for error than a large corporation. The bottom line is, without a sound strategy for performance management, a small business – or any business, for that matter – is almost never going to reach its full potential.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) at Reliance Consulting, LLC, can help your company develop and implement a performance management plan that will build on the inherent strengths of your organization and take it to the next level. Since opening its doors in 1984, Reliance has been a premier accounting firm in the Tampa Bay area, dedicated to helping individuals achieve long-term financial stability and helping businesses meet and exceed their goals.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Among the purposes of performance management is setting up a consistent evaluation process for employees. The U.S. Office of Personnel Management recommends a five-step process to ensure employee effectiveness:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Planning – set expectations and goals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Monitoring – measure performance and provide ongoing feedback",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Developing – provide training and developmental opportunities",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rating – summarize employee performance, usually on an annual basis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rewarding – raises, time off, or nonmonetary incentives for good performance",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you have questions about how to establish a performance management strategy for your business, [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today. We’ll perform a financial health checkup and do everything we can to help your company reach maximum profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 275
+}

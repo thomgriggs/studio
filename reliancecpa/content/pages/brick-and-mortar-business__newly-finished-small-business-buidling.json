@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling/",
+ "slug": "brick-and-mortar-business__newly-finished-small-business-buidling",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Brick and Mortar Business - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Brick and Mortar Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA can Help Determine if Your Business Needs a ‘Brick and Mortar’ Presence](https://www.reliancecpa.com/brick-and-mortar-business)",
+   "links": [
+    {
+     "text": "← A Tampa CPA can Help Determine if Your Business Needs a ‘Brick and Mortar’ Presence",
+     "href": "https://www.reliancecpa.com/brick-and-mortar-business"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Brick and Mortar Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished June 28, 2013 | Full size is [900 × 628](https://www.reliancecpa.com/wp-content/uploads/Brick-and-Mortar.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 628",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Brick-and-Mortar.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Brick-and-Mortar.jpg",
+   "alt": "Brick and Mortar Business",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "628",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Brick-and-Mortar.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 35
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/social-media-small-business",
+ "slug": "social-media-small-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Social Media | Small Business | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/social-media-small-business",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Social Media Can Be Used by Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Social Media Can Be Used by Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Social-Media-Small-Business-291x300.jpg",
+   "alt": "Social Media Small Business",
+   "alt_missing": false,
+   "title": "Social Media Small Business",
+   "width": "291",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Social media has changed the way businesses, big or small, interact with clients. For example, unsatisfied customers who once might have dashed off a tersely worded hand-written or typed complaint or placed an angry phone call now have access to a wide array of online communication avenues. No longer can the concept of customer service be considered separate from the Internet. Social media outreach is not a novelty anymore. For companies who are serious about success, it is as integral as traditional marketing ever was.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help your company determine how best to implement a sound social media strategy. It’s not only about interacting with upset customers. Social media also has become an important part of the how some companies brand themselves. Customers expect businesses to have an online presence, and that often means more than just a nifty website. Social media sites are used most effectively to spark a conversation, which is the first step toward generating a sale.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Interactive sites like Facebook, Twitter, Pinterest, Instagram, Google Plus, and others are not for every company. Yet, even the smallest boutique agency might be able to use social media to help grow the business, if it is used correctly. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn more about how social media might help your company achieve profitability.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 235
+}

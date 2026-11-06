@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/on-line-business.html",
+ "slug": "on-line-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Starting an On-line Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/on-line-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Starting an On-line Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Starting an On-line Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/on-line-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "on-line-business",
+   "width": "300",
+   "height": "270",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are one of the millions of business owners worldwide who would like to take advantage of the growth opportunities offered by Internet commerce (e-commerce), it’s important not to jump in blindly. Just as with any brick-and-mortar business, starting an on-line business requires a thorough understanding of the rules and regulations, as well as the sound principals that help any business grow.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting can help you take the first step to e-commerce profitability by ensuring that the “business” side of your on-line business is on a firm footing. After all, all those Web shoppers out there aren’t going to care about your spiffy, entertaining website if they aren’t provided the service or product they’re after. A Reliance business consultant will take care of the financial details – payroll services, cash flow management, tax planning, etc. – while you focus on production and the big picture. Once you have the business side in hand, here are the basic steps to taking your commerce on-line:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Prepare a business plan to help crystallize your vision",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Register a domain name",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Select a Web host",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Design your website",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Optimize and market your website",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Learn and comply with on-line business regulations and compliance information",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Learn and comply with federal, state, and local tax requirements",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Learn and understand international trade laws",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has been the Tampa Bay’s trusted source for business advice and tax preparation. Our certified public accountants are always accessible, and will respond to your needs immediately. [Contact](http://www.reliancecpa.com//contact.html) us today to learn more about using the Internet to grow your business or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 282
+}

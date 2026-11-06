@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/fair-value.html",
+ "slug": "fair-value.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Determining Fair Value",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/fair-value.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses What Determines Fair Value",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses What Determines Fair Value",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/fair-value.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the United States, generally accepted accounting principles (GAAP) hold that fair value – also called fair price – is the rational and unbiased estimate of the potential market price of a good, service or asset between willing parties. This is distinguished from market value in that the actual market for a good, service or asset may not exist or may not yield the hypothetical fair price. The term fair value is associated with a previously obscure accounting practice known as “mark-to-market,” a term which became prominent in the public discourse as accounting rules were strengthened by the U.S. Financial Accounting Standards Board in the wake of the subprime credit crisis in 2007.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To gain a greater understanding of how fair value is relevant to your business, let a [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, explain it to you in detail. For now, it’s enough to understand the various objective and subjective factors taken into account as fair value is determined. These factors include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Production costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Distribution costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Acquisition costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Replacement costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Actual utility, or measurable satisfaction provided to society",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Risk characteristics",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital outlay and return",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Perceived utility, as opposed to measurable utility",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In essence, fair value becomes important for financial reporting or when a change of ownership occurs. [Contact](http://www.reliancecpa.com/contact.html) Reliance to learn more, or for a free financial health checkup and analysis of your business or personal financial objectives.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 238
+}

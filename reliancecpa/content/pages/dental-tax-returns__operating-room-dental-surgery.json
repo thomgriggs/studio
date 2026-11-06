@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery/",
+ "slug": "dental-tax-returns__operating-room-dental-surgery",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Tax Returns - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Tax Returns",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Dental CPA Explains the Difference Between Filing Individual Tax Returns for an Outright Owner and for a Partner of a Practice](https://www.reliancecpa.com/dental-tax-returns)",
+   "links": [
+    {
+     "text": "← A Dental CPA Explains the Difference Between Filing Individual Tax Returns for an Outright Owner and for a Partner of a Practice",
+     "href": "https://www.reliancecpa.com/dental-tax-returns"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Tax Returns",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished March 5, 2013 | Full size is [900 × 634](https://www.reliancecpa.com/wp-content/uploads/Individual-Tax-Returns.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 634",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Individual-Tax-Returns.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Individual-Tax-Returns.jpg",
+   "alt": "Dental Tax Returns",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "634",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Individual-Tax-Returns.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 41
+}

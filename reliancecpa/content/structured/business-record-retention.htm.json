@@ -1,0 +1,146 @@
+{
+ "url": "https://www.reliancecpa.com/business-record-retention.htm",
+ "slug": "business-record-retention.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-record-retention.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-record-retention.jpg",
+     "alt": "Ask Your CPA in Tampa about what Business Records You Should Keep"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Over the years, you may notice that your Tampa, FL area business is running out of room to store records. From time cards to tax returns and cancelled checks to contracts, your office can begin to look like a paperwork jungle with filing cabinets overflowing and work surfaces shrinking.",
+     "Knowing what records to keep and what records can be tossed – also known as record retention guidelines – is a tricky area for businesses to navigate through. Since federal, state, county, and local laws can differ on the issue of records retention, it is recommended that Tampa Bay business owners consult with their [CPA in Tampa](http://www.reliancecpa.com/) regularly to discuss this gray area.",
+     "The following are some general guidelines regarding record retention:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Audit reports by accountants – indefinitely"
+     },
+     {
+      "text": "Bank reconciliations – 1 year"
+     },
+     {
+      "text": "Cancelled checks – 7 years"
+     },
+     {
+      "text": "Cancelled checks for important payments – indefinitely"
+     },
+     {
+      "text": "Cash books (an accounting of money going in and out of the business) – indefinitely"
+     },
+     {
+      "text": "Contracts and leases still in effect – indefinitely"
+     },
+     {
+      "text": "Correspondence with customers or vendors – 3 years"
+     },
+     {
+      "text": "Correspondence on legal and other important matters – indefinitely"
+     },
+     {
+      "text": "Deposit slips – 1 year"
+     },
+     {
+      "text": "Employment applications – 3 years"
+     },
+     {
+      "text": "Employee personnel records (after termination) – 3 years"
+     },
+     {
+      "text": "Expired insurance policies – 3 years"
+     },
+     {
+      "text": "Expired contracts and leases – 7 years"
+     },
+     {
+      "text": "Financial statements (end-of-year) – indefinitely"
+     },
+     {
+      "text": "General correspondence – 3 years"
+     },
+     {
+      "text": "Invoices to customers – 7 years"
+     },
+     {
+      "text": "Invoices from vendors – 7 years"
+     },
+     {
+      "text": "Payroll records – 7 years"
+     },
+     {
+      "text": "Sales records – 7 years"
+     },
+     {
+      "text": "Tax returns and related documents – indefinitely"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Again, while the above list provides a general outline of the most common record retention guidelines, you should check with your CPA in Tampa before disposing of any records that you have questions about."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/business-record-retention/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/business-record-retention.htm"
+ }
+}

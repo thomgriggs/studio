@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/successful-small-businesses.html",
+ "slug": "successful-small-businesses.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Characteristics of Successful Small Businesses",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/successful-small-businesses.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Examines Characteristics of Successful Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Examines Characteristics of Successful Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/successful-small-business-285x300.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "successful-small-business",
+   "width": "285",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "According to the U.S. Small Business Administration, about 70 percent of new firms survive at least two years, but only about one-third last at least 10 years. Clearly, maintaining a successful business over the long haul is not a simple matter. If you are determined to make sure your small business is among the one in three that can sustain itself for a decade or longer, think ahead – and seek sound financial advice.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, will enable you to make sure your business reaches maximum profitability and stays there for the long haul. Since opening our doors in 1984, we have helped hundreds of Tampa Bay area businesses become as efficient and financially strong as possible. While the business world is certainly challenging, there are certain characteristics shared by successful companies, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Strong long-term company vision, with clear goals and objectives",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Thorough understanding of what clients want and need",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Complete understanding of the competition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Smart financial planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Strong leadership and internal communications",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Effective and streamlined procedures and systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Adaptability, creativity, integrity",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A certified public accountant from Reliance Consulting can help with tax planning and preparation, bank account reconciliation, payroll services, cash flow analysis, bookkeeping, best practices and more. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free financial health checkup and to take the first step to ensuring your small business is around for years, rather than months.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 242
+}

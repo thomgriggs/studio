@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/barter-exchanges.html",
+ "slug": "barter-exchanges.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Rules That Apply to Barter Exchanges",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/barter-exchanges.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Tax Rules That Apply to Barter Exchanges",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Tax Rules That Apply to Barter Exchanges",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/barter-exchanges.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "157",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Bartering is a way for individuals or businesses to exchange services or products without using cash. Most bartering takes place informally, between people on a one-on-one basis. Some companies and organizations exchange goods or services with clients or other companies. Another way for people or companies to barter is through an independent third entity known as a barter exchange. These entities provide a virtual marketplace in which members can buy and sell services and goods among themselves.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help an individual or business understand the tax rules that apply to the use of a barter exchange. The most important thing to remember about a barter exchange is that the units of currency used by a particular exchange (known as trade dollars) are valued in United States dollars for tax return purposes. In general, whether the transaction is Internet-based or conducted at a physical location, a Form 1099B must be filed. There are some exceptions, including:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Exchanges of property or services with a fair market value of less than $1",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Transactions through a barter exchange with less than 100 exchanges during the year",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Exchanges involving certain foreign persons, as defined by IRS regulations",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped thousands of individuals and hundreds of Tampa Bay area businesses understand the intricacies of tax issues such as those that apply to barter exchanges. [Contact](http://www.reliancecpa.com/contact.html) us today for sound, comprehensive advice on tax planning and preparation.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 257
+}

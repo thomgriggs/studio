@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-accounting.htm",
+ "slug": "small-business-accounting.htm",
+ "template": "tier-landing",
+ "family": "S1",
+ "title": "Small Business Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Small Business Accountant for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-accounting.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Small Business Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Small Business Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-accountant.jpg",
+     "alt": "Small Business Accountant for the Tampa, FL area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Small business accounting can consume days and weeks of a business owner’s valuable time. If you own a small business in the Tampa, Florida area, Reliance Consulting, LLC is committed to saving you time and money by providing you with a comprehensive assortment of small business accounting services so that you can spend your time on more lucrative activities.",
+     "Since you, as a business owner, want to be focused on your products, services, and profits, let your CPA and accountant at Reliance Consulting put together a customized small business accounting package that will keep your [payroll](http://www.reliancecpa.com//payroll-services.htm), tax returns, and bank accounts running smoothly.",
+     "Whether you own a doctor’s or dentist’s office in Tampa, a hotel in Clearwater, or a retail store in Pasco County, we invite you to inquire about our range of small business accounting services, such as:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Business tax, self employment tax, and income [tax preparation](http://www.reliancecpa.com//tax-preparation.htm)"
+     },
+     {
+      "text": "Tax planning accountant"
+     },
+     {
+      "text": "Tax problem and IRS audit help"
+     },
+     {
+      "text": "[Bookkeeping](http://www.reliancecpa.com//bookkeeping.htm) and QuickBooks accounting support"
+     },
+     {
+      "text": "Payroll services"
+     },
+     {
+      "text": "Bank account reconciliation"
+     },
+     {
+      "text": "Prevention of embezzlement from within your company"
+     },
+     {
+      "text": "Income statements"
+     },
+     {
+      "text": "Balance sheets"
+     },
+     {
+      "text": "Cash flow analysis"
+     },
+     {
+      "text": "New business planning"
+     },
+     {
+      "text": "Unlimited consultations"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "The primary goal at Reliance Consulting is to offer you small business accounting services that deliver extraordinary value to your company. This goal means that our services will more than pay for themselves in the time they save you and your employees, as well as possible savings in taxes owed. Since 1984, our CPAs and accountants have been helping small businesses throughout the area grow and prosper—from Tampa to Lakeland, St Petersburg to Sarasota, and beyond—and we would like to assist you, too."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-accounting/",
+  "role": "tier-landing",
+  "tier": "business-accounting",
+  "old_path": "/small-business-accounting.htm"
+ }
+}

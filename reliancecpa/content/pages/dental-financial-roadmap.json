@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/dental-financial-roadmap",
+ "slug": "dental-financial-roadmap",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental CPA | Financial Roadmap | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-financial-roadmap",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Helps Develop a Customized Financial Roadmap for a Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Helps Develop a Customized Financial Roadmap for a Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Customized-Financial-Roadmap-300x225.jpg",
+   "alt": "Dental Financial Roadmap",
+   "alt_missing": false,
+   "title": "Dental Financial Roadmap",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It is especially important when you are just starting out with your own dental practice to enlist the aid of a dental CPA who can help you develop a financial roadmap customized for your specific career and personal goals. Most dentists start out as associates in either a large dental care chain or within an independent practice owned by someone else. Even at this early stage, dentists must set long-term goals or risk having a stagnant career based on the whims of some other entrepreneurial dentist. Dentistry is truly at the crossroads of a renaissance today and there has never been a better time in history to be a dentist entrepreneur.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter what stage of your career you might be in, a [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help keep you focused on the important things in life. This might mean having a conversation about your personal and professional goals, then prioritizing those goals with eye toward paying for them. For instance, do your priorities skew toward buying a fancy new car now, or toward financial security 30 years from now? There really is no wrong answer when it comes to developing your financial roadmap, because these are your goals, your priorities. What a Reliance dental CPA can help you do is turn those dreams and goals into reality by putting together a plan based on your needs and desires.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how a dental CPA from Reliance Consulting can help you plan for the short-term and long-term, [contact](http://reliancecpa.com/contact.html) us today. Since 1984, Reliance has prioritized our services for dentists and physicians. We understand the challenges confronting healthcare professionals in today’s economy. Let us help you sort through the issues and find the path to profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 302
+}

@@ -1,0 +1,10 @@
+{#
+MODULE: trust-strip
+PURPOSE: Proof directly under the hero: the original's trust strip, a row of up to three facts each marked with a coloured dot (coral, sky, lime), lead in bold, hairline below. On the home page the dateline stat-row that follows carries the same facts as pills, so CSS hides this strip there.
+SLOTS: facts[lead, text] (0 to 3), logos[src, alt, href].
+SQUARESPACE: Row of Text blocks (bold lead + small paragraph) with a coloured dot character.
+#}
+<section class="m m-trust" data-module="trust-strip" data-tone="{{ tone }}">
+  <ul class="dots dots--facts">{% for f in s.facts %}<li><b>{{ f.lead }}</b> <span>{{ f.text }}</span></li>{% endfor %}</ul>
+  {% if s.logos %}<ul class="logos" role="list">{% for l in s.logos %}<li><img src="{{ l.src|asset }}" alt="{{ l.alt }}" loading="lazy"></li>{% endfor %}</ul>{% endif %}
+</section>

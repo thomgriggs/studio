@@ -1,0 +1,137 @@
+{
+ "url": "https://www.reliancecpa.com/real-estate-cpa.htm",
+ "slug": "real-estate-cpa.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Real Estate CPA for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Real Estate CPA for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/real-estate-cpa.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Real Estate CPA for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Real Estate CPA for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/real-estate-cpa.jpg",
+     "alt": "Real Estate CPA for the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Over the past few years, the Tampa Bay real estate industry has been experiencing a rollercoaster ride of fluctuating property values, interest rates, rental rates, and a host of other issues. If that weren’t enough to deal with, real estate dealings also are burdened with volumes of tax code on a local, state, and federal level. Without the services of an experienced real estate CPA and accountant, it’s almost impossible for a real estate office, investor, broker, agent, developer, or buyer to keep up with the many financial implications of buying, selling, and renting property.",
+     "Reliance Consulting, LLC is a firm of real estate CPA and accounting professionals serving the greater Tampa Bay area, from Tampa to Lakeland, Sarasota to Pasco, St Petersburg to Clearwater, and beyond. Collectively, our accountants have decades of experience in local real estate industry and we have developed specific services to address the challenges you face. Whether you are involved in commercial real estate, residential properties, or both, a real estate CPA from Reliance Consulting can assist you with:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Individual [income tax services](http://www.reliancecpa.com/income-tax-services.htm)"
+     },
+     {
+      "text": "Business tax services"
+     },
+     {
+      "text": "Tax planning"
+     },
+     {
+      "text": "Deducting Real Estate Losses"
+     },
+     {
+      "text": "Qualifying as a Real Estate Professional"
+     },
+     {
+      "text": "Evaluating the financial implications of investment properties"
+     },
+     {
+      "text": "Analyzing rental rates"
+     },
+     {
+      "text": "Mortgage refinancing analysis and evaluations"
+     },
+     {
+      "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)"
+     },
+     {
+      "text": "Protecting assets"
+     },
+     {
+      "text": "Debt restructuring"
+     },
+     {
+      "text": "Property tax questions"
+     },
+     {
+      "text": "Property insurance questions"
+     },
+     {
+      "text": "[Estate planning](http://www.reliancecpa.com/estate-planning.htm)"
+     },
+     {
+      "text": "Asset protection"
+     },
+     {
+      "text": "Owning Real estate through IRAs"
+     },
+     {
+      "text": "Much more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "It is common knowledge that the Tampa Bay area has some of the most beautiful real estate in the world. It is not common, however, to find a real estate CPA in our area that can provide you with the same level of personalized service and support that sets Reliance Consulting apart from other accountants and CPAs in the greater Tampa area."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-tax-consulting/industries/real-estate/",
+  "role": "industry-example",
+  "tier": "business-tax-consulting",
+  "old_path": "/real-estate-cpa.htm"
+ },
+ "short_title": "Real Estate"
+}

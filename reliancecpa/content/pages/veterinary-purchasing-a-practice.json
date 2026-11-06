@@ -1,0 +1,230 @@
+{
+ "url": "https://www.reliancecpa.com/veterinary-purchasing-a-practice",
+ "slug": "veterinary-purchasing-a-practice",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "veterinary",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2016-05-17",
+ "seo": {
+  "title_tag": "Purchasing a Veterinary Practice – Tampa, FL",
+  "meta_description": "We can take the stress out of purchasing a veterinary practice. We will help you decide if it is a good investment, and we will assist with all paperwork.",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/veterinary-purchasing-a-practice",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Assistance When Purchasing a Veterinary Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "4 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Assistance When Purchasing a Veterinary Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/iStock_000009819502Small-300x232.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "300",
+   "height": "232",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you want to go into business for yourself, you may be thinking about **purchasing a veterinary practice**. This is a major step in your career, and it is not one that you should take lightly. At Reliance Consulting, LLC, we can help you assess a potential purchase. With a thorough investigation, you can determine whether that clinic would be a wise investment. If you decide to go through with the purchase, we can provide business loan assistance. We can also help with [budgeting](http://www.reliancecpa.com/veterinary-budgets-and-financial-projections), [tax planning](http://www.reliancecpa.com/veterinary-tax-planning), [business plan development](http://www.reliancecpa.com/veterinary-business-plan-development), and the other aspects of practice ownership. Buying a practice is a huge financial and mental investment. We will help you make a solid economic decision, and we will guide you as you structure your business for success. [Contact us today](http://www.reliancecpa.com/contact.html) for assistance with this important milestone.",
+   "links": [
+    {
+     "text": "budgeting",
+     "href": "http://www.reliancecpa.com/veterinary-budgets-and-financial-projections"
+    },
+    {
+     "text": "tax planning",
+     "href": "http://www.reliancecpa.com/veterinary-tax-planning"
+    },
+    {
+     "text": "business plan development",
+     "href": "http://www.reliancecpa.com/veterinary-business-plan-development"
+    },
+    {
+     "text": "Contact us today",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Buying vs. Starting Your Own Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you want to go into business for yourself, you could purchase an existing practice, or you could open up a brand new clinic. Both options have their pros and cons. The right choice for you will largely depend on your financial resources, personality, and professional goals. The advantages of purchasing an existing practice include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "You will not need to invest in equipment or the various items needed to run a clinic. At the same time, however, you may have higher upfront costs.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "It may be easier to obtain loan approval.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You will already have an existing clientele, as well as regular suppliers and service providers.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "However, when you purchase an older practice, you will be somewhat bound by the existing structure of the clinic. You will also have to work with someone else’s team, rather than handpicked employees.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Evaluating Whether a Practice Is a Good Investment",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you have decided to buy a practice, you should do your homework. Choose a clinic that is a good fit for you and that has a sound financial footing. We can help you during this process. First, we will estimate the overall value of your practice. This will help you decide if purchase is a profitable investment. It will also tell you whether the current owner is asking a fair price. We will also investigate details of a business that you might otherwise overlook. Among other things, we will consider:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Financial statements for the last 3 to 5 years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax returns from the last 3 to 5 years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contracts and leases that are still in effect",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Client lists",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marketing and PR material",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Information regarding current employees",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We will then provide an honest assessment about whether you should purchase the practice. We can also guide you as you negotiate a lower price.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Buying into a Franchise",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Franchises are less common in veterinary medicine than in other industries. Nevertheless, purchasing a franchise can still be a great option, especially if you are a first-time business owner. Franchises give you instant name recognition. In some cases, you may also receive financial assistance with the purchase. However, you may have to pay ongoing fees, including advertising fees and royalty payments. In addition, you will not have the same freedom that you would have if you owned a non-franchised practice.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When purchasing a franchise, you should do the same research listed above. Examine the financial stability of the company. Consider their history, client satisfaction levels, and rankings with the Better Business Bureau. At Reliance Consulting, we can also help you with these investigations.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Reliance Consulting Can Help You with Your Important Purchase",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you decide to buy a business, there are a number of factors that you must consider. First, you will need to obtain financing. We can explain the various types of lenders and small business loans. Then we can help you select the right type for your new practice. We can also assist you with all loan paperwork and any additional forms related to the purchase. These may include promissory notes, security agreements, leases, transfer documents, settlement sheets, non-compete agreements, and more.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, LLC, we have helped hundreds of professionals go into business for themselves. We understand the ins and outs of buying a practice. We also offer services specifically for veterinarians and can help you establish policies that will move your new business into the future.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Schedule a Consultation Today",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Buying a veterinary practice involves exhaustive research. Our consultants can take the stress and worry out of the process. [Contact our firm](http://www.reliancecpa.com/contact.html) for assistance with your purchase. We proudly serve clients from Tampa, St. Petersburg, Clearwater, Sarasota, Pasco, Lakeland, and the greater Tampa Bay area.",
+   "links": [
+    {
+     "text": "Contact our firm",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 761
+}

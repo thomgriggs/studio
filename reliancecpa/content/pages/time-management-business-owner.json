@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/time-management-business-owner",
+ "slug": "time-management-business-owner",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Time Management Business Owner | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/time-management-business-owner",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Helps with Time Management for Small Business Owners",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Helps with Time Management for Small Business Owners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Time-Management-Business-Owner-300x200.jpg",
+   "alt": "Time Management Business Owner",
+   "alt_missing": false,
+   "title": "Time Management Business Owner",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As a small business owner, the company naturally belongs to you and is your responsibility. Yet, sometimes it seems as if your time belongs to anyone and everyone but you. This is particularly true for new businesses that are just getting off the ground, and even truer if you are the only employee on the payroll. If only there was a way to delegate the many time-consuming tasks that rob so many business owners of precious time each day. Actually, there is.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can contribute to a small business owner’s time management strategy by taking on responsibility for all of the business-related tasks that are important, yet often distract from actually making the product or providing the service that is the cornerstone of the company. How do we do that? At Reliance, an experienced, competent CPA can:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Study your business and give you a much deeper understanding of your financial picture.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Listen to your concerns and help you assess the financial impact of any decision you make.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Work tirelessly to watch, protect, and improve the financial side of your company.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Act as a liaison with your banks, lenders, attorneys, insurance agents, vendors, and more.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish controls in your business to reduce the chance of employee theft or other dishonest activities.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Show you strategies that can improve cash flow and reduce your tax burden.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Take care of all record keeping and reporting.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has helped thousands of individuals and hundreds of companies find the best way to achieve and maintain financial independence through a common-sense approach to tax planning, business planning, and more. Let us serve as your company’s virtual chief financial officer, and you’ll be amazed at how much more time you have to focus on growing your company. [Contact](http://reliancecpa.com/contact.html) Reliance today for ideas about how a Tampa CPA can help you better manage your time.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 331
+}

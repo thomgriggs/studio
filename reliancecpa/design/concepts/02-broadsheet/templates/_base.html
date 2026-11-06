@@ -1,0 +1,39 @@
+{# Page shell: head, skip link, header with the menu (_nav.html), <main>, closing band (_closing.html), footer (_footer.html). The 1200px column and the gutter are the original concept's. The wrapper carries the page's territory class (terr-teal | terr-sage | terr-gold) when the page belongs to a tier; everything else is brand. #}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+{% if page.source == 'proposed' %}<title>{{ page.seo.title_tag }} | 02 Broadsheet mockup</title>
+<meta name="description" content="{{ page.seo.meta_description }}">{% else %}<title>{{ page.title }} | Reliance Consulting mockup | {{ concept.name }}</title>{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ concept.fonts.google_url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css">
+<link rel="stylesheet" href="{{ root }}style.css">
+{# Mockup only: apply the light switches (classes on <html>) before first paint. ?sw=topbar,lines,... sets them, ?sw=all turns all on, ?sw=none clears; the choice is kept in localStorage while browsing. &nopanel hides the review panel (for screenshots). The panel itself is sw.js. #}
+<script>(function(){try{var d=document.documentElement,u=new URLSearchParams(location.search),q=u.get('sw'),s,K=['topbar','lines','headings','bands','measure','media-top','media-side','media-band'];if(q!==null){s=q==='all'?K:(q===''||q==='none'?[]:q.split(','));localStorage.setItem('c02sw3',JSON.stringify(s))}else{var v=localStorage.getItem('c02sw3');s=v===null?['topbar','lines','bands','measure','media-top','media-band']:JSON.parse(v)}s.forEach(function(k){if(K.indexOf(k)>-1)d.classList.add('sw-'+k)});if(u.has('nopanel'))d.classList.add('sw-nopanel')}catch(e){}})();</script>
+</head>
+{% set terr = concept.tier_territory[page.tier] if page.tier and concept.tier_territory[page.tier] else '' %}
+<body class="t-{{ page.template|replace('_', '') }}">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page{{ ' terr-' ~ terr if terr }}">
+{% if page.live_back %}<div class="liveflag" role="note"><span><strong>Live site content, for comparison</strong> &middot; not a design proposal</span><a href="{{ page.live_back }}">Back to the proposed page</a></div>{% endif %}
+<div class="topbar" role="region" aria-label="Firm details"><p class="topbar__l">Serving Tampa Bay since 1984</p><p class="topbar__r"><a href="{{ footer.contact.phone.href }}">{{ footer.contact.phone.text }}</a>{% for l in nav.links if l.label == 'Client Login' %}<a href="{{ l.href }}">{{ l.label }}</a>{% endfor %}</p></div>
+<header class="site-header" role="banner">
+  <a class="brand" href="{{ root }}index.html" aria-label="Reliance Consulting home"><img src="{{ root }}{{ concept.logo.src }}" alt="{{ concept.logo.alt }}" width="165" height="36"></a>
+  {% include "_nav.html" %}
+</header>
+{% set last = page.modules[-1].module if page.modules else '' %}
+{% set show_band = (not page.own_closing) and page.template not in ['_kit', '_pages', 'get-started', 'contact', 'home'] and last not in ['cta-band', 'contact-band'] %}
+<main id="main">
+{% block main %}{% endblock %}
+{% if show_band %}{% include "_closing.html" %}{% endif %}
+</main>
+{% include "_footer.html" %}
+</div>
+<script src="{{ root }}nav.js" defer></script>
+<script src="{{ root }}sw.js" defer></script>
+</body>
+</html>

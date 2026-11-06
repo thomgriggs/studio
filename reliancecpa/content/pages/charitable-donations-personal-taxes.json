@@ -1,0 +1,116 @@
+{
+ "url": "https://www.reliancecpa.com/charitable-donations-personal-taxes",
+ "slug": "charitable-donations-personal-taxes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Personal Charity Tax Ramifications | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/charitable-donations-personal-taxes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Charitable Donations Affect Personal Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Charitable Donations Affect Personal Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Charity-Personal-Taxes-300x200.jpg",
+   "alt": "Personal Charity",
+   "alt_missing": false,
+   "title": "Personal Charity",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We all make donations during the course of a given year. Some of those charitable contributions are made simply because we want to make a difference in the world. Some – such as old clothes or toys – are made to create space in an increasingly crowded house. In some cases, we don’t even think of what we give to others as a “charitable” donation. In others, what we think of as charity might not be interpreted as such by the IRS. No matter how much we give each year, though, we would be remiss if we did not at least consider how those accumulated donations might affect what we owe in federal income taxes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether your charitable donations are eligible for tax deduction. Or, if you know want to donate to a charity, but you are not sure how to go about it (or how to maximize the potential tax deduction), we can help you with that, as well. For now, it is enough to know that in order to deduct some or all of the money or product that you donate, it must be given to an IRS-qualified organization. These include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Non-profit religious groups",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Non-profit educational groups",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Non-profit charitable groups",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many rules that govern the amount of a donation that is tax deductible, and the IRS requires different forms of proof of the donation, depending on the value of the contribution. The best way to be sure that you receive the tax deduction that you are entitled to after a charitable contribution is to let a Tampa CPA from Reliance help prepare your taxes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance today for more information about how donating money or goods can affect your personal taxes.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 306
+}

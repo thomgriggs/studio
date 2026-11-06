@@ -1,0 +1,38 @@
+{#
+MODULE: hero
+PURPOSE: Opener. Home variant (a background_video slot): the original Broadsheet hero, full-bleed looping video with a dark scrim, two-line h1, lead and a primary plus an outlined button. Tier variant (a tier slot): 7/5 split, the tier eyebrow in its territory colour with a short thin rule, h1, tagline, buttons, and a photo (the concept's own photograph for that tier). Without either: text only.
+SLOTS: eyebrow, title, tagline, tier, background_video, image, actions[text, href].
+SQUARESPACE: Home: Section with background video (fall back to its image), Heading 1, Text, two Buttons; the scrim is the section overlay (opacity only, not the gradient) and the autoplay keep-alive script is not possible, see SQUARESPACE.md. Tier: two-column Section, Heading + Text + Buttons beside an Image block; the eyebrow is a small Text block (territory colour from the page's custom CSS block).
+#}
+{% from "_macros.html" import eyebrow, actions, img, ph %}
+{% if s.background_video %}
+<section class="m m-hero m-hero--video" data-module="hero" data-tone="{{ tone }}">
+  <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="{{ 'concept-02/assets/hero-building.jpg'|asset }}"><source src="{{ s.background_video|asset }}" type="video/mp4"></video>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__in">
+    {% if s.eyebrow %}<p class="hero__eyebrow">{{ s.eyebrow }}</p>{% endif %}
+    <h1 data-orig-level="1">{% for part in s.title.split('. ') %}<span>{{ part }}{{ '.' if not part.endswith('.') }}</span>{% endfor %}</h1>
+    {% if s.tagline %}<p class="hero__lead">{{ s.tagline|md }}</p>{% endif %}
+    {{ actions(s.actions, true) }}
+  </div>
+</section>
+{% elif s.tier %}
+<section class="m m-hero m-hero--tier {{ 'terr-' ~ concept.tier_territory[s.tier] }}" data-module="hero" data-tone="{{ tone }}">
+  <div class="split">
+    <div class="tierhero__text">
+      {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+      <h1 class="h-page" data-orig-level="1">{{ s.title|md }}</h1>
+      {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
+      {{ actions(s.actions) }}
+    </div>
+    <figure class="tierhero__photo">{% if s.image %}{{ img(s.image) }}{% elif concept.tier_photos[s.tier] %}<img src="{{ root }}{{ concept.tier_photos[s.tier] }}" alt="">{% else %}{{ ph("Reliance team or office, " ~ s.title) }}{% endif %}</figure>
+  </div>
+</section>
+{% else %}
+<section class="m m-hero m-hero--plain" data-module="hero" data-tone="{{ tone }}">
+  {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+  <h1 class="h-page" data-orig-level="1">{{ s.title|md }}</h1>
+  {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
+  {{ actions(s.actions) }}
+</section>
+{% endif %}

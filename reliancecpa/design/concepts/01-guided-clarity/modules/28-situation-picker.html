@@ -1,0 +1,10 @@
+{#
+MODULE: situation-picker
+PURPOSE: The visitor picks their situation: three question cards, each a first-person line and one sentence (defined for kit parity, unused by Reliance, whose Get Started page does this).
+SLOTS: title, cards[title, text, href, link_text].
+SQUARESPACE: Summary block (card layout, whole card linked) or linked Text blocks, 3 x 2.
+#}
+<section class="m m-cards m-cards--picker" data-module="situation-picker" data-tone="{{ tone }}">
+  {% if s.title %}<div class="section-intro"><h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>{% endif %}
+  <div class="cards">{% for c in s.cards %}<a class="card" href="{{ c.href|href }}"><span class="card-title">{{ c.title }}</span><span class="card-body">{{ c.text|md }}</span><span class="card-go">{{ c.link_text or 'Go' }} &rarr;</span></a>{% endfor %}</div>
+</section>

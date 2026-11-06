@@ -1,0 +1,141 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-efficiency.html",
+ "slug": "small-business-efficiency.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Small Business Efficiency",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-efficiency.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Can Improve Efficiency at Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Can Improve Efficiency at Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-efficiency.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "small-business-efficiency",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When you start your small business, you wear all the hats. Everything is your responsibility – production, customer service, marketing, planning, merchandising, sales, and much more. It’s a busy but glorious time, full of promise, full of energy. But as the business grows, there’s a real concern that you’re stretching yourself too thin. There aren’t enough hours in the day to get it all done. You find you no longer can go it alone.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Let your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, lend a hand while you focus on what made your business unique in the first place – the product or service you provide. With Reliance beside you, you won’t feel overwhelmed by day-to-day operations that are the foundation of any successful business. In addition, Reliance will help you formulate a long-range plan that will ensure continued growth and profitability.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has been the accountancy firm Tampa Bay area small businesses have turned to for:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Help with hiring employees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Handling CFO responsibilities",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Market and competitor research",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Evaluation of best practices and internal controls",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Record keeping and reporting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether your small business is in the development stage or firmly established and growing fast, Reliance Consulting can help you keep the operation running smoothly and at peak efficiency. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a free financial health checkup, the first step to long-term business success.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 245
+}

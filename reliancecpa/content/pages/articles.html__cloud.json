@@ -1,0 +1,112 @@
+{
+ "url": "https://www.reliancecpa.com/articles.html/cloud/",
+ "slug": "articles.html__cloud",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/articles.html/cloud",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "cloud - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/articles.html/cloud/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "cloud",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Articles](https://www.reliancecpa.com/articles.html)",
+   "links": [
+    {
+     "text": "← Articles",
+     "href": "https://www.reliancecpa.com/articles.html"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "cloud",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 15, 2012 | Full size is [260 × 194](https://www.reliancecpa.com/wp-content/uploads/cloud.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "260 × 194",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/cloud.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/cloud.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "260",
+   "height": "194",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/articles.html/irs-1",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "irs",
+   "href": "https://www.reliancecpa.com/articles.html/irs",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "irs dispute",
+   "href": "https://www.reliancecpa.com/articles.html/irs-1",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/articles.html/cloud).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/articles.html/cloud"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 19
+}

@@ -1,0 +1,12 @@
+{#
+MODULE: contact-band
+PURPOSE: The page's own closing contact band on the neutral band: heading and line left, the contact lines (label in small caps, value in the serif) in a column, a primary button. Used at the end of home and the thank-you page.
+SLOTS: title, text, lines[label, value (or text, href)], button[text, href].
+SQUARESPACE: Section on a grey background: Heading, Text, Button, and the contact lines as Text blocks (or the site footer section).
+#}
+<section class="m m-contactband" data-module="contact-band" data-tone="{{ tone }}">
+  <div class="split">
+    <div><h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% if s.text %}<p class="lead">{{ s.text|md }}</p>{% endif %}{% if s.button %}<p><a class="btn btn-primary" href="{{ s.button.href|href }}">{{ s.button.text }}</a></p>{% endif %}</div>
+    <dl class="clines">{% for l in s.lines %}<div><dt>{{ l.label }}</dt><dd>{% if l.href %}<a href="{{ l.href }}">{{ l.value or l.text }}</a>{% else %}{{ l.value or l.text }}{% endif %}</dd></div>{% endfor %}</dl>
+  </div>
+</section>

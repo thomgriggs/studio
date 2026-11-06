@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/recording-transactions.html",
+ "slug": "recording-transactions.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Recording Business Transactions",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/recording-transactions.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How Business Transactions Should Be Recorded",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How Business Transactions Should Be Recorded",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-ledger.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "business-ledger",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any business, big or small, must maintain thorough and effective records of transactions in order to stay on the path to profitability. The best-known methods of transaction recording are the journal and the ledger, in which daily (journal) and long-term (ledger) lists of transactions are recorded. Often, businesses create specific journals and ledgers for different accounts. In the case of a small business – a sole proprietorship, for example – keeping a complete journal and ledger every day is a vital exercise, if something of a monotonous burden.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) can help a business of any size develop sound procedures for recording transactions. It’s one of the many services we offer that are designed to help businesses reach their maximum potential – and stay there. Our business consultants will work with you to design a plan that will help you streamline and modernize your ability to efficiently record your transactions. We’ll also take on the responsibilities of a Chief Financial Officer, handling cash flow management, payroll services, and more, allowing you to focus on production and the big picture.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to the journal and ledger, a small business might use one or more of the following to record transactions:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A business checkbook",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A daily summary of cash receipts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A monthly summary of cash receipts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A check disbursements journal",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A depreciation worksheet",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Employee compensation records",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses flourish. [Contact](http://www.reliancecpa.com//contact.html) us today for more information about our small business consultancy or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 271
+}

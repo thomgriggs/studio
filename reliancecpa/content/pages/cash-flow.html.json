@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/cash-flow.html",
+ "slug": "cash-flow.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Small Business Cash Flow Management | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cash-flow.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Explains How to Manage Cash Flow in a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Explains How to Manage Cash Flow in a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cash-flow.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Cash flow is defined as the movement of cash into and out of a business. It usually is measured over a specified period of time and is a vital indicator of a company’s ability to meet its financial obligations, as well as its bottom-line profitability. Proper cash flow management also is important during times of growth, when a business needs cash to invest upfront money on materials and payroll to keep up with growing demand.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC, can assist you with cash flow management, as well as a wide range of small business planning and accounting services. Our goal is to help your business reach maximum profitability, and sustain that level of success over the long haul. Cash flow can be complicated, but there’s no reason to let it dominate the time you could be spending on day-to-day operations. Instead, let a small business accountant from Reliance handle cash flow and other financial details. Our cash flow solutions include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Examining and improving the efficiency of invoicing to ensure timely payment from your clients",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Forecasting cash flow and developing a financial plan based on the projections",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Making sure the bookkeeping and payroll services are in order",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Developing strategies for collecting past due invoices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establishing a suitable time table for paying your bills",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Tampa Bay area small businesses grow and prosper. [Contact](http://www.reliancecpa.com/contact.html) us today for a free, no-obligation financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 261
+}

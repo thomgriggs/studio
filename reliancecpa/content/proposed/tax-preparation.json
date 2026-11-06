@@ -1,0 +1,261 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/tax-preparation/",
+ "slug": "tax-preparation",
+ "template": "tier-landing",
+ "family": "proposed",
+ "title": "Tax Preparation",
+ "tier": "tax-preparation",
+ "accent": "teal",
+ "consolidates": [
+  "tax-preparation.htm"
+ ],
+ "seo": {
+  "title_tag": "Tax Preparation in Tampa | Reliance Consulting",
+  "meta_description": "Income tax, business tax, tax planning and IRS problem help from the CPAs at Reliance Consulting in Tampa, Florida.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`.",
+ "verified": [
+  "Service pages: the live pages mapped to this tier in nav.json (tax-planning.htm, business-tax.htm, income-tax-services.htm, tax-problem-irs-audit-help.htm); each card's one-line summary is drawn from that page's own text (see nav.json mega links).",
+  "Intro: first sentences of the live landing tax-preparation.htm",
+  "'Who it is for' and the problems list are verbatim from tax-preparation.htm and tax-problem-irs-audit-help.htm",
+  "Team names, roles and photos: live /staff-profiles.htm. Kim Nguyen is the owner (confirmed by Thom, 2026-11-06; the live page still says Staff Accountant)",
+  "Related articles: live pages tax-saving-strategies.htm, audit-help.htm, late-income-tax-return.htm; excerpt = the article's first sentence"
+ ],
+ "confirm": [
+  "Tagline 'Returns, planning and IRS problems, for individuals and businesses.' and the tier description (new copy)",
+  "Service card summaries (one sentence each, condensed from the page text; check each reads true)",
+  "CTA: 'Not sure which tax service you need? Tell us what is going on.' and 'Choose what you need help with and send a short request.' (new copy)",
+  "Which team members work in this tier: the crawl does not say, so every tier shows the whole team",
+  "Kim Nguyen's portrait comes from concept-02, not from the live site; confirm it is the one she wants used. Her exact title wording ('Owner') and credentials are to confirm",
+  "SEO title and meta description (new copy, not from the live site, which has none)",
+  "The live 'Who it is for' sentences are used as written ('we are committed to helping you take advantage of the tax benefits that apply to your unique situation'); confirm they stand"
+ ],
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "eyebrow": "Tax Preparation",
+    "title": "Tax Preparation",
+    "tagline": "Returns, planning and IRS problems, for individuals and businesses.",
+    "tier": "tax-preparation",
+    "actions": [
+     {
+      "text": "Get Started",
+      "page": "get-started__tax-preparation"
+     }
+    ]
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Reliance Consulting, LLC is a group of tax preparation professionals serving businesses and individuals throughout the greater Tampa, Florida area."
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "service-cards",
+   "slots": {
+    "eyebrow": "Services",
+    "title": "Tax Preparation services",
+    "tier": "tax-preparation",
+    "cards": [
+     {
+      "title": "Tax Planning",
+      "text": [
+       "A strategy for using the tax incentives, deductions and credits available to you, all year and not just on April 15."
+      ],
+      "page": "tax-planning.htm",
+      "href": "https://www.reliancecpa.com/tax-preparation/tax-planning/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Business Tax",
+      "text": [
+       "Business tax filing and planning for partnerships, LLCs, S-corporations and sole proprietors."
+      ],
+      "page": "business-tax.htm",
+      "href": "https://www.reliancecpa.com/tax-preparation/business-tax/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Income Tax Services",
+      "text": [
+       "Individual income tax returns, estimated tax, deductions and capital gains tax."
+      ],
+      "page": "income-tax-services.htm",
+      "href": "https://www.reliancecpa.com/tax-preparation/income-tax-services/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "IRS Problem Resolution",
+      "text": [
+       "Help with IRS audits, notices, liens, back taxes and unfiled returns."
+      ],
+      "page": "tax-problem-irs-audit-help.htm",
+      "href": "https://www.reliancecpa.com/tax-preparation/irs-problem-resolution/",
+      "link_text": "Learn more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Who it is for",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Reliance Consulting, LLC is a group of tax preparation professionals serving businesses and individuals throughout the greater Tampa, Florida area. Whether you are a physician in Clearwater, a small business in Lakeland, or a hotel owner in Sarasota, we are committed to helping you take advantage of the tax benefits that apply to your unique situation."
+     }
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "title": "Problems we help with",
+    "ordered": false,
+    "items": [
+     {
+      "text": "Business tax and individual income tax problems"
+     },
+     {
+      "text": "Failure to file tax returns"
+     },
+     {
+      "text": "IRS audit notifications"
+     },
+     {
+      "text": "IRS liens"
+     },
+     {
+      "text": "IRS seizures of bank accounts and personal property"
+     },
+     {
+      "text": "Payroll tax problems"
+     },
+     {
+      "text": "Wage garnishments"
+     },
+     {
+      "text": "Back taxes"
+     },
+     {
+      "text": "Payment plans"
+     }
+    ]
+   }
+  },
+  {
+   "module": "people",
+   "slots": {
+    "eyebrow": "People",
+    "title": "Who you will work with",
+    "people": [
+     {
+      "name": "Kim Nguyen",
+      "role": "Owner",
+      "image": {
+       "src": "concept-02/assets/kim-m-nguyen.png",
+       "alt": "Kim Nguyen, Owner",
+       "origin": "concept-02 asset; confirm it is the portrait Kim wants used"
+      }
+     }
+    ],
+    "team": [
+     {
+      "name": "Valerie Stickeler",
+      "role": "Certified Public Accountant"
+     },
+     {
+      "name": "Tara Govindaraju",
+      "role": "Accounting Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
+       "alt": "Tara Govindaraju, Accounting Manager"
+      }
+     },
+     {
+      "name": "Nicole Frenier",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
+       "alt": "Nicole Frenier, Staff Accountant"
+      }
+     },
+     {
+      "name": "Jamie Partin",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
+       "alt": "Jamie Partin, Staff Accountant"
+      }
+     },
+     {
+      "name": "Briana McNulty",
+      "role": "Office Administrator & Billing Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
+       "alt": "Briana McNulty, Office Administrator & Billing Manager"
+      }
+     }
+    ],
+    "link": {
+     "text": "Meet the team",
+     "page": "staff-profiles.htm"
+    }
+   }
+  },
+  {
+   "module": "post-feed",
+   "variant": "cards",
+   "slots": {
+    "title": "Related articles",
+    "posts": [
+     {
+      "title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+      "page": "tax-saving-strategies.htm",
+      "href": "https://www.reliancecpa.com/resources/tax-saving-strategies/",
+      "excerpt": "A primary benefit of hiring a CPA in Tampa from Reliance Consulting, LLC is the fact that we can help you plan ways to legally reduce your tax liability."
+     },
+     {
+      "title": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+      "page": "audit-help.htm",
+      "href": "https://www.reliancecpa.com/resources/audit-help/",
+      "excerpt": "Almost any organization in the Tampa Bay area, from small businesses to churches to branches of government, might need an audit."
+     },
+     {
+      "title": "Filing a Late Income Tax Return? Tampa Accountants Might Be Able to Assist You",
+      "page": "late-income-tax-return.htm",
+      "href": "https://www.reliancecpa.com/resources/late-income-tax-return/",
+      "excerpt": "The income tax deadline on April 15 is enough to make anyone nervous, but filing an income tax return after this deadline is not necessarily the end of the world, especially if you have an experienced accountant to advise you on the best course of action."
+     }
+    ],
+    "more": {
+     "text": "All articles",
+     "page": "articles.html"
+    }
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "title": "Not sure which tax service you need? Tell us what is going on.",
+    "text": "Choose what you need help with and send a short request.",
+    "buttons": [
+     {
+      "text": "Get Started",
+      "page": "get-started__tax-preparation"
+     }
+    ]
+   }
+  }
+ ]
+}

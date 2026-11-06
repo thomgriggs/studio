@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/transaction-taxes",
+ "slug": "transaction-taxes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Transaction Taxes | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/transaction-taxes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Transaction Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Transaction Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Transaction-Tax-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Transaction Tax",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A general definition of transaction taxes includes levies placed upon monetary transactions for particular purposes. However, the term is used most commonly to refer to taxes placed on specific types of financial transactions, such as those carried out by Wall Street firms. Economist John Maynard Keynes was a proponent of the financial transaction tax as a way to curb unchecked market speculators. Today, it is considered by its supporters to be a crucial element in the reduction of price volatility for commodities and other financial instruments. On the other hand, some opponents believe that some forms of the transaction tax might negatively affect monetary liquidity and actually increase price volatility.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you interpret the role transaction taxes play – if any – in your financial situation. Potentially the most visible effect of a tax on familiar transactions such as stock purchases might be to depress the price of those stocks. Again, though, experts disagree on the potential macro-effect of the transaction tax. For example, some argue that a tax of a quarter of a percent on stock purchases would depress stock prices by as much as 10 percent. Others argue the exact opposite, that a transaction tax on stock purchases would actually increase the value of stocks.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, it is a complex issue. Because it is so important to grasp these kinds of complexities to have a comprehensive understanding of where you stand financially, we are happy to explain them to you in depth. Simply [contact](http://reliancecpa.com/contact.html) us today for more information about this and other tax issues, and how they may affect your financial status.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 282
+}

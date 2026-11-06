@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/capital-gains.html",
+ "slug": "capital-gains.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Capital Gains & Losses | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/capital-gains.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Capital Gains and Losses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Capital Gains and Losses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/capital-gains.gif",
+   "alt": "Tampa CPA Capital Gains",
+   "alt_missing": false,
+   "title": "Tampa CPA Capital Gains",
+   "width": "300",
+   "height": "172",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Capital gains are profits accrued from investments, such as property, stocks, or bonds (which are considered “capital assets”). Capital gains from investments held for less than a year are considered short term and, after 2010, will be taxed at the regular income tax rate. Capital gains from investments held for a year or longer are considered long term and generally are taxed at a lower rate. As the name implies, a capital loss is money lost through the sale of a capital asset. Capital losses also are classified as short term and long term.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can explain all of the intricate tax rules involved with capital gains and losses – and help you understand how it applies to your financial situation. Since opening its doors in 1984, Reliance has been a premier accounting firm in the Tampa Bay area, helping thousands of individuals and hundreds of businesses with tax planning and preparation. Because the IRS rules regarding capital gains and losses will change after 2010, it’s important to have a partner you can trust to help you make sure you are financially prepared to adjust to the new regulations. A few general rules remain constant, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "You must report all capital gains.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital losses are not deductible on property held for personal use, such as a home, a car, or household furnishings.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The tax rate for long-term capital gains generally is lower than the tax rate for short-term capital gains.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how capital gains taxes and losses will affect you financially, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today. We’ll conduct a free financial health checkup and help guide you through all the intricacies of the ever-evolving tax code.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 294
+}

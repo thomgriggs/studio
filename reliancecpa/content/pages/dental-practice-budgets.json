@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/dental-practice-budgets",
+ "slug": "dental-practice-budgets",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Creating Dental Practice Budgets | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-practice-budgets",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Provides Guidance for Creating Practice Budgets",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Provides Guidance for Creating Practice Budgets",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Creating-Dental-Practice-Budgets-300x210.jpg",
+   "alt": "Dental Practice Budgets",
+   "alt_missing": false,
+   "title": "Dental Practice Budgets",
+   "width": "300",
+   "height": "210",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Dentists who own their practices almost always would rather spend their time treating and interacting with patients than creating practice budgets. A budget is a plan for expenditures, based on the anticipated revenues of the practice. A well-designed budget can be a reliable road map for the path to profitability, as well as helping you determine whether you are over-spending for certain things.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help when it comes to creating practice budgets that reflect every aspect of your income and expenses, down to the smallest detail. A thorough practice budget should include the following items:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Basic – office supplies, insurance, computer expenses, bank expenses, legal expenses, and more",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marketing – advertisements, entertainment, meals, public relations, social media, travel, and more",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Supplies – large equipment, medicine, cleaning supplies, small equipment, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Staffing – salary, training, etc.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Creating practice budgets will allow you to know how much money you have available at the end of each month and fiscal year, an important consideration if you are thinking about expanding your practice, or if you merely want to build up your retirement savings. If you would like to learn more about creating a working budget for your dental practice, [contact](http://reliancecpa.com/contact.html) Reliance today. We are healthcare experts who have made a priority of helping physicians of all specialties, and dental practitioners, in particular. We want to be your dental CPA.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 242
+}

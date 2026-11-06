@@ -1,0 +1,141 @@
+{
+ "url": "https://www.reliancecpa.com/dental-customized-retirement-strategy",
+ "slug": "dental-customized-retirement-strategy",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental CPA | Retirement Strategy | Dental Practice Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-customized-retirement-strategy",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA from Reliance Helps Develop a Highly Customized Retirement Strategy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA from Reliance Helps Develop a Highly Customized Retirement Strategy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Customized-Retirement-Strategy-199x300.jpg",
+   "alt": "Customized Retirement Strategy",
+   "alt_missing": false,
+   "title": "Customized Retirement Strategy",
+   "width": "199",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many different factors go the development of a highly customized retirement strategy, but one of the overlooked issues is what your expenses will be after you step away from your dental practice for the last time. It’s natural to assume that your expenses will remain basically the same in your retirement years, but in reality, your budget and monetary requirements could look significantly different.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "That’s why your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, will be actively involved in assessing what your expenses will be after you retire, in order to match your post-career requirements with your ability to pay for it all. Long before you retire, you should begin to at least think about several important questions that might not need to be answered at the moment, but will certainly require some sort of response from you once your career winds down. Those questions include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Will you sell your dental practice outright, or maintain a controlling share of the business?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will your mortgage be paid off before or after your retire?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will your credit cards and other debt be paid off?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will you have any expenses relating to your children or grandchildren?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What will be the cost of your homeowners, vehicle, life, and health insurance?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What about transportation costs? Will you have a car payment or commuting expenses?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will you be moving to a smaller home with lower utility costs?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What taxes will you be responsible for paying in retirement?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The first step a dental CPA takes in calculating a highly customized retirement strategy is to perform a line-by-line review of your current budget to find out which expenses will remain the same and which ones will go up, go down, be eliminated, or be added in your retirement years. In doing this, chances are you will find out that your expenses will drop significantly after you retire. Generally speaking, it is estimated that your standard expenses can decrease as much as 30 percent after retirement, but this is an estimate only and will certainly be dictated by the lifestyle you choose to lead in retirement.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how a dental CPA can help with retirement planning, [contact](http://reliancecpa.com/contact.html) the dental practice management experts at Reliance. We want to help your practice thrive today, so you can live in comfort in the future.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 396
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/learn-from-mistakes",
+ "slug": "learn-from-mistakes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Learn from Mistakes in Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/learn-from-mistakes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Helps You Learn From Mistakes in Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Helps You Learn From Mistakes in Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Mistakes-205x300.jpg",
+   "alt": "Business Mistakes",
+   "alt_missing": false,
+   "title": "Business Mistakes",
+   "width": "205",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Business owners who do not learn from their mistakes are doomed to repeat them, and mindless repetition of mistakes is a sure way to send a business spiraling downward. Mistakes are inevitable in any human endeavor, including business. Unless you understand this as a CEO or other type of manager, you are bound to fail. The key is not to avoid mistakes. It is to embrace the lessons that mistakes provide, and use those lessons to improve.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, understands that business can sometimes get messy. Mistakes happen, whether through oversight or an understandable misstep. We also know that a business owner can benefit enormously from having a Reliance consultant on hand to provide guidance and advice when mistakes occur. We take the time to get to know as much about your company as possible, allowing us to help you stay nimble enough to respond to mistakes in a proactive way. In addition, we can help you position your company financially so that if an otherwise catastrophic mistake can be absorbed without devastating effects on the bottom line.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting was founded in 1984, and for almost three decades, we have helped Florida businesses achieve profitability. In addition to consulting services, we also perform tax planning, tax preparation, payroll services, cash flow management, and everything else a business owner needs done to be able to focus on daily operations and long-range planning. [Contact](http://reliancecpa.com/contact.html) Reliance today for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 256
+}

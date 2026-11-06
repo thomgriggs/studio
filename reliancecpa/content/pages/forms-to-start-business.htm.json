@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/forms-to-start-business.htm",
+ "slug": "forms-to-start-business.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/forms-to-start-business.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/forms-to-start-new-business.jpg",
+   "alt": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business",
+   "alt_missing": false,
+   "title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "So, you have a great idea for starting a new business in the Tampa Bay area, but you’re not sure where to begin? That’s understandable, since starting a new business involves a lot more than renting office space and putting a sign on the door. Before you serve your first customer, there is a small mountain of paperwork and forms to be completed – but never fear – your CPA in Tampa should be able to walk you through the process and get you on your way to entrepreneurial success.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While by no means an exhaustive list, the following are some logistics you’ll need to seriously consider when opening your new business:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Deciding on a business name that does not conflict with any existing business names locally, statewide, or nationwide",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Registering your business name with the county (as a fictitious name, if necessary)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Registering your business name with the state",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Getting a state or federal trademark on your business name",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Registering your online domain name",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Preparing organizational paperwork such as partnership agreements, articles of incorporation, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Signing a lease for business space in a properly zoned location",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Getting a federal employment identification number (via IRS Form SS-4)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtaining licenses and permits (depending on what type of business you’re involved in)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtaining business insurance and liability insurance, as well as insurance for company vehicles",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Setting up your accounting and bookkeeping system",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since your new business will involve a significant financial and emotional investment on your part, make sure to set it up properly so that it has the best chance of success. It is recommended that you consult a professional during this process, such as a [CPA in Tampa](http://www.reliancecpa.com/). Your CPA can assist you with making sure all forms and paperwork are in place so that you can hit the ground running and keep your business running smoothly for years into the future.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information on the forms involved in starting a new Tampa Bay area business, please contact Reliance Consulting, LLC, for a free initial consultation and review of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 362
+}

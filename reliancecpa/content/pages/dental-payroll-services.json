@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/dental-payroll-services",
+ "slug": "dental-payroll-services",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Payroll Services | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-payroll-services",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Provide Payroll Services for Dentist-Owners",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Provide Payroll Services for Dentist-Owners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Payroll-Services-300x200.jpg",
+   "alt": "Dental Payroll Services",
+   "alt_missing": false,
+   "title": "Dental Payroll Services",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Payroll services can take away valuable time from dentist-owners who already have full schedules. It also is a complex financial task, and errors can lead to fines or even civil or criminal charges. If you own your own dental practice and are concerned about how to manage your payroll, let an experienced dental CPA from Reliance Consulting, LLC, help. Our complete range of payroll services, tax preparation services, and many other accounting specialties can save you weeks of time per year and keep your businesses in compliance with tax regulations. With our payroll services saving you time and stress, you can concentrate on what you do best, which is running your practice and treating your patients.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The payroll services provided by your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting help you cover all the bases, including:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Timely, accurate paychecks for your employees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The ability to securely enter each employee’s hours and earnings online, and then print checks from your own printer",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Or, if you prefer, direct deposit and pre-printed checks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Comprehensive payroll reports for your practice’s records",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maximum protection of all private, personal information",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fully compliant IRS, unemployment tax, and state payroll reporting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unemployment claims, child support deductions, overtime, vacation time, and other individualized services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "W-2, W-3, 1099, and 1096 processing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our payroll services are among the most useful aids we provide our dental clients. When you need a dental CPA and accountant who can provide you and your workforce with compliant, reliable, and precise payroll processing, we are the firm you can depend on for outstanding, affordable results. For more details about our payroll services [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 278
+}

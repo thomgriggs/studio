@@ -1,0 +1,133 @@
+{
+ "url": "https://www.reliancecpa.com/importance-of-a-will.htm",
+ "slug": "importance-of-a-will.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Discusses the Importance of a Will",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/importance-of-a-will.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Discusses the Importance of a Will",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Discusses the Importance of a Will",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/importance-of-a-will.jpg",
+   "alt": "Your CPA in Tampa Discusses the Importance of a Will",
+   "alt_missing": false,
+   "title": "Your CPA in Tampa Discusses the Importance of a Will",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A will is your legal testimony of how your assets should be distributed and your loved ones cared for after you’re gone. Regardless of your financial circumstance, a will is vital for protecting those you leave behind.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you find the peace of mind that comes with knowing your estate planning issues are resolved through the writing of a will.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s important to understand that wills are not only for the wealthy. Anyone with assets and a family to protect should write a will, because without one, the courts will determine how your assets will be distributed. Bereft and grieving family members will have neither the time nor the inclination to handle these legalities, which makes it all the more vital for you to have your wishes spelled out in a will as soon as possible.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Among other things, a will should stipulate:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "An executor to administer your will",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Guardian or guardians for your under-age children",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A list of assets and how they should be distributed",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How business associations should be resolved",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How life insurance policies apply",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s not always easy to think about what will happen when you’re gone, but the alternative – not thinking about it – is far worse. Preparing for writing your will can be a cathartic and useful exercise, as well. A thorough account of your assets and your potential heirs is necessary, and while the subject matter might be uncomfortable, an occasional evaluation of your financial situation and a full inventory of your belongings could be useful in life, as well.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Let your CPA in Tampa at Reliance Consulting, LLC help you determine the best path to estate planning. We’ll help you define your goals, evaluate your options and recommend a course of action as you construct one of the most important legal documents of your life.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 322
+}

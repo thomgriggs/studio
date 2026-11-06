@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/dental-location-analysis",
+ "slug": "dental-location-analysis",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Practice Location Analysis | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-location-analysis",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Perform a Practice Location Analysis",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Perform a Practice Location Analysis",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Location-Analysis-300x200.jpg",
+   "alt": "Location Analysis",
+   "alt_missing": false,
+   "title": "Location Analysis",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even in this digital age – perhaps especially in this digital age – the location of a dental practice can go a long way toward determining how profitable it will become. Potential patients use the Internet to find a new dentist far more often than they use older means of advertising, such as the yellow pages. Billboard advertising also remains an effective tool for attracting new patients. Either way, online or on the road, one of the most important factors in attracting a new patient is proximity.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/contact.html) from Reliance Consulting, LLC, can help a dentist-owner find an office location that will maximize the patient base by conducting a practice location analysis. In addition to finding a place with reasonable rent, easy access by road, and the right amount of space, your Reliance dental CPA will delve deep into the demographics of an area to determine how well the surrounding populace might be able to support your dental practice. Statistical factors to be researched include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Population size",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Age distribution of the population",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Educational background of the population",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Economic status of the population",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other relevant demographic and economic information",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Location is only one factor in the potential success of a dental practice, but it is a big one. As a dentist-owner, you will need to decide who you hope to attract as patients – cosmetic, general, restorative, or a combination – and position your office within easy driving distance of the target population. To learn more about how a dental CPA from Reliance Consulting can help conduct a practice location analysis, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 274
+}

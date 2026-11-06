@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/college-savings.html",
+ "slug": "college-savings.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | 529 Savings Plan",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/college-savings.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains a 529 Savings Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains a 529 Savings Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/college-savings.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A 529 savings plan is an education account, usually set up by parents when their children are very young. Its name comes from Section 529 of the Internal Revenue Service code, which was amended in 1996 to create plans that encourage parents to save money to pay for their child’s future college expenses.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, will tell you, setting aside money for college as soon as possible for your children is one of the smartest financial moves a parent can make. For one thing, it saves you the headache of wondering how you’ll afford ever-rising tuition when your child reaches college age. For another, federal law provides numerous special tax benefits to 529 plan participants.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every state has some form of a 529 plan available, either as investments similar to a 401k plan or as prepaid plans geared toward specific state university systems or private institutions. A Tampa CPA at Reliance can help you sort through the potential tax benefits of a 529 plan, as well as determining which type of college investment plan best suits your financial situation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your Tampa CPA at Reliance can also help you adjust your budget as you figure out how much money you want to contribute to your 529 plan, and whether it makes more sense for you to make monthly or annual contributions, or set up your plan using a bulk deposit up front. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a complete financial health checkup and for assistance in setting up a 529 plan to secure your children’s future education.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 269
+}

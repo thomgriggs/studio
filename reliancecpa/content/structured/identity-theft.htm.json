@@ -1,0 +1,96 @@
+{
+ "url": "https://www.reliancecpa.com/identity-theft.htm",
+ "slug": "identity-theft.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/identity-theft.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif",
+     "alt": "CPA in Tampa - ID Theft"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "The Federal Trade Commission (FTC) estimates that as many as 9 million Americans will have their identities stolen each year. ID thieves use your personal information, such as a social security number or date of birth, to steal your money, obtain credit in your name, or commit other crimes.",
+     "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you learn how to guard against identity theft in order to maintain your financial health. It’s better to plan now than to spend hundreds of hours later repairing the damage wrought by an identity thief.",
+     "Identity theft can happen anywhere, whether you’re on the Internet or you’re waiting in line at the movie theater. If you’re online, computer hackers from all over the world are always on the lookout for information in unsecure files. Out in public, a pickpocket who steals your wallet not only takes your cash; having your driver’s license and credit cards in hand makes it easy to commit fraud.",
+     "Here are a few methods the FTC suggests to help deter identity theft:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Store your personal information in a secure place."
+     },
+     {
+      "text": "Only share your social security number when absolutely necessary, and only with people you trust."
+     },
+     {
+      "text": "Use a shredder on documents containing your personal information before you throw them away."
+     },
+     {
+      "text": "Maintain an up-to-date spyware program and Internet security software."
+     },
+     {
+      "text": "For websites that require a password, don’t use an obvious phrase such as your mother’s maiden name or the last four digits of your social security number."
+     }
+    ]
+   }
+  },
+  {
+   "module": "callout",
+   "slots": {
+    "text": "Contact your CPA in Tampa at Reliance Consulting to learn more about how to protect yourself from identity theft."
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/identity-theft/",
+  "role": "resource-article",
+  "tag": "tax",
+  "old_path": "/identity-theft.htm"
+ }
+}

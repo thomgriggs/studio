@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/value-added-tax.html",
+ "slug": "value-added-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/value-added-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Value Added Tax (VAT)",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Value Added Tax (VAT)",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/value-added-tax.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "value-added-tax",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One way many European nations have addressed budgetary shortfalls over the years is the value added tax (VAT), which is a consumption tax placed on goods that are subject to increased value at different stages of production and final sale. While the VAT is a fact of life in Great Britain and the European Union, it is a politically charged issue in the United States. Consumers in the U.S. pay sales tax, but only Michigan has ever instituted a form of VAT in the U.S., and that was repealed and replaced with a small business tax by the Michigan legislature in 2008.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help companies that conduct business internationally understand the potential impact of the VAT and all other foreign levies. Or, if you are an American planning a trip to a country that has the VAT, a CPA from Reliance can offer helpful advice about collecting the VAT refund that is due most tourists who make large purchases in places like France, Germany, Italy, and England. These VAT sums can be substantial, as much as 25 percent of the purchase price in some countries.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In order to get a VAT refund, an American tourist should:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Present your passport when making the purchase",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Only buy from retailers who demonstrate a clear understanding of the VAT laws",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Request that the merchant fill out the required documents before you leave the store",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Always get a receipt",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bring all paperwork to the airport or border crossing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have your documents stamped by the appropriate customs agent",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are budgeting for a dream vacation, or if you would like a free financial health checkup, [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today. We’ll help you make sure that trip overseas doesn’t break the bank, and that you know all you need to know regarding VAT refunds.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 315
+}

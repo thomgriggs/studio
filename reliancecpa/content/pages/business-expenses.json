@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/business-expenses",
+ "slug": "business-expenses",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Expenses | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-expenses",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Potential Tax-Deductable Business Expenses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Potential Tax-Deductable Business Expenses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparer1.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you already own your own business, you probably already know the value of listing certain business expenses as tax deductions. Every penny matters in business, and this is especially true if you are a sole proprietor or independent contractor who works from home and is trying to get a fledgling company off the ground. While the IRS is always going to ask for its share, tax rules are fairly flexible when it comes to deducting business expenses. The (very) general rule of thumb is that in order for an expense to be eligible for deduction, it must be two things: ordinary and necessary.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A Tampa CPA from Reliance Consulting, LLC, can help you interpret that admittedly vague definition of a deductable business expense. Despite that fact that an extraordinarily wide range of expenditures can be classified as deductable business expenses, there are relatively narrow rules governing how (and how much) that deduction can be applied. Here is a partial list of business expenditures that might be considered tax deductable:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Space in your home used exclusively for work-related activity",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Equipment and supplies used for work",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Furniture used for work",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Software and subscriptions to industry-related publications",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mileage drive for work-related reasons",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Work-related travel expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Health insurance premiums",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contributions to a retirement fund",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Social Security payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Phone and other telecommunications expenses",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Rather than wonder whether an item you consider deductable is or is not, contact Reliance Consulting for advice. We have been one of Tampa Bay’s most respected accounting firms since 1984.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 258
+}

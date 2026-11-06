@@ -1,0 +1,167 @@
+{
+ "url": "https://www.reliancecpa.com/self-employment-tax.html",
+ "slug": "self-employment-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Self-Employment Taxes Explained | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/self-employment-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Can Explain Self-Employment Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Can Explain Self-Employment Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/self-employment-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "self-employment-tax",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you spent years working for a company before breaking away to start your own business, one of the many new duties you’ll need to become accustomed to handling on your own is scheduling social security and Medicare payments. No longer will you be able to count on the corporate payroll department to withhold these federal taxes from your salary. Regardless of the legal structure of your new company – including a sole proprietorship, a limited liability corporation, or even a freelance consultancy – estimating and paying self-employment taxes on a set schedule is now your responsibility.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, is here to make sure you don’t have to bear the burden of that responsibility on your own. A small business accountant from Reliance can explain all the details associated with self-employment taxes, including:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "How much you should pay",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "When payments should be made",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How to make payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much of your income is subject to self-employment taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How self-employment taxes affect your adjusted gross income",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to providing advice about self-employment taxes, a small business accountant from Reliance can help with every other aspect of your company, such as:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping and QuickBooks accounting support",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bank account reconciliation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establishing best practices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Market research",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our goal at Reliance is to deliver extraordinary value to your company. Our services will pay for themselves in the time you save, as well as the taxes you pay each year. [Contact](http://www.reliancecpa.com//contact.html)Reliance for a free financial health checkup today.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 264
+}

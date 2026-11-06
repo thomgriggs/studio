@@ -1,0 +1,101 @@
+{
+ "url": "https://www.reliancecpa.com/cash-flow-management.htm",
+ "slug": "cash-flow-management.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Cash Flow Management for Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Cash Flow Management for Tampa St Petersburg Clearwater Pasco Manatee Sarasota Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cash-flow-management.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Cash Flow Management for Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Cash Flow Management for Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cash-flow-management.jpg",
+     "alt": "Cash Flow Management in the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Cash flow management is a common issue for businesses of all sizes in the Tampa, Florida area. From Polk County to Pasco, Tampa to Sarasota, and St Petersburg to Clearwater, businesses are constantly striving to balance the money going out with the money coming in. Sometimes, however, cash flow management can become tricky, especially during times of growth when a business must invest money upfront on materials and payroll to keep up with a growing demand.",
+     "Centrally based in Tampa, FL, Reliance Consulting can assist you with cash flow management as well as a wide range of other [business planning](http://www.reliancecpa.com/business-planning-services.htm) and accounting services. To help your business bring in enough money to cover and exceed the cash going out, Reliance Consulting can recommend a variety of solutions, such as:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "An examination of your invoicing, since efficient invoicing often means faster payment from customers"
+     },
+     {
+      "text": "Forecasting your cash flow and developing a financial plan around what your cash flow is expected to be"
+     },
+     {
+      "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm) services and [payroll services](http://www.reliancecpa.com/payroll-services.htm) so that your books are in order and you always know exactly what cash you have available at any given time"
+     },
+     {
+      "text": "New ways to pursue the collection of past due invoices"
+     },
+     {
+      "text": "Better timing of when you pay bills"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Since cash flow gaps can cause serious problems such as payroll shortages and the inability to pay important bills such as rent and utilities, cash flow management is essential for a healthy business and a promising future."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-accounting/cash-flow-management/",
+  "role": "service",
+  "tier": "business-accounting",
+  "old_path": "/cash-flow-management.htm"
+ },
+ "short_title": "Cash Flow Management"
+}

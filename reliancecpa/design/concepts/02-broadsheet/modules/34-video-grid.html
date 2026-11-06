@@ -1,0 +1,8 @@
+{#
+MODULE: video-grid
+PURPOSE: Every video of the firm's channel as poster cards, three across (defined for kit parity, unused by Reliance).
+SLOTS: eyebrow, title, videos[title, href, date, video], more[text, href].
+SQUARESPACE: Section: Heading + a grid of Video blocks (or a Summary block over a video collection) + a Button to the channel.
+#}
+{% from "_macros.html" import eyebrow, poster %}
+<section class="m m-vfeed" data-module="video-grid" data-tone="{{ tone }}">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-section">{{ s.title|md }}</h2><div class="vgrid">{% for v in s.videos %}<article>{{ poster(v.video or v.href, v.title) }}<h3 class="h-item">{{ v.title }}</h3></article>{% endfor %}</div>{% if s.more %}<p class="feed__more"><a class="btn btn-ghost" href="{{ s.more.href }}">{{ s.more.text }} →</a></p>{% endif %}</section>

@@ -1,0 +1,105 @@
+{
+ "url": "https://www.reliancecpa.com/bi-weekly-mortgage.html",
+ "slug": "bi-weekly-mortgage.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/bi-weekly-mortgage.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Budgetary Benefits of a Bi-Weekly Mortgage",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Budgetary Benefits of a Bi-Weekly Mortgage",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/bi-weekly-mortgage.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "190",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most homeowners who have borrowed to buy their home pay a monthly mortgage payment. The structure of the loan will depend on a large number of factors, including the cost of the home, the agreed-upon interest rate, and the length of the repayment term, among others. Yet, what most mortgages have in common is those 12 payments per year, the earliest of which barely make a dent in the principal while the interest is paid up front. There is another way, though: the bi-weekly mortgage payment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can explain all the advantages of structuring your home loan on a bi-weekly basis. In short, a bi-weekly mortgage – in which the homeowner makes payments every two weeks, instead of monthly – does the following:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Dramatically reduces the total amount of money paid out over the life of a loan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Significantly shortens the amount of time it takes to pay off the loan",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If this sounds good to you, keep in mind that you have a number of bi-weekly options at your disposal. You can restructure your loan entirely, perhaps as part of a refinance. Or, you can simply convert your current monthly payments into a bi-weekly schedule. Before you make the move, though, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting for advice. We’ll conduct a complimentary financial health checkup and a full analysis of how a bi-weekly mortgage might benefit you in the long run.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 247
+}

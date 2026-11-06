@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/risk-management.html",
+ "slug": "risk-management.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/risk-management.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Value of Sound Risk Management",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Value of Sound Risk Management",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/risk-management.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "risk-management",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Risk management often involves buying insurance, of course, but planning for the worst can often go far beyond merely paying your insurance premiums on time. There are some things that insurance simply won’t help you recover, like the unintentional release of intellectual property into the public domain. Not only do you need a plan to secure your property and ideas, but a strategy for how to respond when (not if) something goes drastically wrong.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you prepare for the worst. Our firm has been at the forefront of small business consultancies in the Tampa Bay area since 1984. We have the experience it takes to foresee all potential pitfalls in business, and plan accordingly. The risks it pays to plan for include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Natural disaster",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Economic downturn",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Theft",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fraud",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Forgery",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Terrorism",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One way to reduce risk is to maintain secure records. Reliance Consulting guarantees 100 percent security for all documents and computer files pertaining to your business. We also will stay on top of risks as they evolve, conducting regular reviews and audits of your company’s finances to make sure you are always prepared. To get started on developing a sound risk management strategy, [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 217
+}

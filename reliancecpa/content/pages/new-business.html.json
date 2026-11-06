@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/new-business.html",
+ "slug": "new-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your Tampa CPA Talks About Common Problems New Businesses Face",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/new-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Talks About Common Problems New Businesses Face",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Talks About Common Problems New Businesses Face",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/new-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "new-business",
+   "width": "300",
+   "height": "299",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A seafood restaurant in St. Pete Beach, a garden supply store in Valrico and an interior designer in New Tampa would seem to have little in common the day they open their doors for business. And it is true that every new business faces a unique set of challenges. Yet, some problems these and other new businesses could confront are universal.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC can work with new business owners to make sure they’re prepared for any eventuality. The business consultant from Reliance goes beyond preparing a sound business plan, researching the competition and customer base, helping develop best practices, hiring staff, and other vital components of starting a new business. Our success is tied directly to your success, so we have a personal stake in making sure your business can navigate the inevitable stumbling blocks.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To help avoid potential problems early in the life of your business, here are a few steps that Reliance can guide you through:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Develop pricing that’s fair to customers and competitors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Avoid discussing pricing with competitors (price fixing)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Make sure the limits and warranties for your product or service are clear",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Make sure advertising is worded legally and truthfully",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Develop a thorough, far-reaching financial plan",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A Tampa CPA from Reliance Consulting is here to help with payroll, bookkeeping, cash flow analysis, tax planning and tax preparation. We’ll help you write your business plan and help you decide which legal structure – sole proprietorship, corporation, partnership, etc. – is right for you. It starts when you [contact](http://www.reliancecpa.com//contact.html) Reliance for a free financial health checkup. It ends with your new business on a path to profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 284
+}

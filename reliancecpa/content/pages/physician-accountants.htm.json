@@ -1,0 +1,172 @@
+{
+ "url": "https://www.reliancecpa.com/physician-accountants.htm",
+ "slug": "physician-accountants.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-consulting",
+  "first_pass_action": "Refresh",
+  "notes": "industry/service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Physician Accountants & CPAs for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/physician-accountants.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Physician Accountants and CPAs for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Physician Accountants and CPAs for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/physician-accountants.jpg",
+   "alt": "Physician Accountants and CPAs for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "physician-accountants",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Doctors and other health care providers in the Tampa, FL area face many challenges as they try to keep their practices running smoothly. Dealing with serious issues such as reduced reimbursements from Medicare and insurance providers, as well as the constant threat of medical malpractice lawsuits, physicians often find themselves spending too much time worrying about financials. Sadly, this stress takes valuable time away from their primary objective—caring for patients.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, LLC, our biggest niche is serving physicians. From Tampa to Sarasota, Lakeland to Pasco, St Petersburg to Clearwater and throughout Tampa Bay, Reliance Consulting has a team of experienced CPAs and accountants with decades of experience working alongside doctors, dentists, clinics, hospitals, nursing homes, and other health care facilities. As a matter of fact, our CPAs have authored a booklet about the financial, tax, and legal matters that doctors face. You can download this valuable information for free, in Adobe .pdf format, by clicking this link: [Navigating the Business of Medicine](http://www.reliancecpa.com/navigating-the-business-of-medicine.pdf)",
+   "links": [
+    {
+     "text": "Navigating the Business of Medicine",
+     "href": "http://www.reliancecpa.com/navigating-the-business-of-medicine.pdf"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A few of the many accounting services we provide to the health care industry include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax planning and strategies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping and payroll",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Starting a new practice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Financial planning](http://www.reliancecpa.com/financial-planning.htm)",
+     "links": [
+      {
+       "text": "Financial planning",
+       "href": "http://www.reliancecpa.com/financial-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Billing systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Cash flow management](http://www.reliancecpa.com/cash-flow-management.htm)",
+     "links": [
+      {
+       "text": "Cash flow management",
+       "href": "http://www.reliancecpa.com/cash-flow-management.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Managed care contracts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Profit and loss analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our physician accountants understand that medical professionals are continually bombarded with vendors trying to sell them insurance, annuities, mutual funds, and other financial products. Unfortunately, a lot of physicians don’t have time to sort through the complexities of the financial world, which may lead to some of them spending money they could have used in better ways. Reliance Consulting is here to help doctors be aware of what they are buying and help them avoid costly financial mistakes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Each [Tampa CPA](http://www.reliancecpa.com/) and physician accountant at Reliance Consulting believes that doctors deserve nothing less than the same comprehensive, compassionate care they give to their patients, and we’re here to provide that exceptional service. We invite anyone in the medical profession to contact us for a free financial checkup, and to learn more about how we can help them be more financially healthy.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 368
+}

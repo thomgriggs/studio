@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm",
+ "slug": "cpa-firm-tampa-brandon-hillsborough.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "CPA Firm & Accountants Serving Tampa, Brandon, Town n Country, Plant City, Lutz & All Hillsborough County, FL",
+ "seo": {
+  "title_tag": "CPA Firm & Accountants Serving Tampa Brandon Town n Country Plant City Lutz & All Hillsborough County FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Firm & Accountants Serving Tampa, Brandon, Town n Country, Plant City, Lutz & All Hillsborough County, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "CPA Firm & Accountants Serving Tampa, Brandon, Town n Country, Plant City, Lutz & All Hillsborough County, FL",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tampa-brandon-hillsborough.jpg",
+     "alt": "CPA Serving Tampa, Brandon, Plant City, Hillsborough County"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Hugging the waters of beautiful Tampa Bay, FL, Hillsborough County offers the natural beauty of the Sunshine State plus all the modern conveniences of city life. In addition to the signature city of Tampa, Hillsborough County also embraces the excitement of year-round sporting events, unique historical architecture, and daily recreational activities. It’s no surprise that more than 1 million people have flocked to Hillsborough County as a permanent home in which to settle down and build their lives.",
+     "Conveniently based in Tampa, Florida, Reliance Consulting, LLC works with hundreds of individual and commercial clients throughout Hillsborough County, from Brandon to Town n Country, Plant City to Lutz and beyond. Using the latest technology coupled with decades of experience and a commitment to client care, each CPA and accountant at Reliance Consulting is part of a financial services team that provides the following services and much more:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Income tax preparation and [business tax](http://www.reliancecpa.com/business-tax.htm) services"
+     },
+     {
+      "text": "Business finance consulting and cash flow management"
+     },
+     {
+      "text": "Bookkeeping"
+     },
+     {
+      "text": "Payroll"
+     },
+     {
+      "text": "Specialists for clients in a range of fields including doctors, dentists, the hospitality industry, retail, real estate, and more"
+     },
+     {
+      "text": "[Tax planning](http://www.reliancecpa.com/tax-planning.htm) and IRS problem resolution"
+     },
+     {
+      "text": "Retirement plans"
+     },
+     {
+      "text": "Saving for your children’s college tuition"
+     },
+     {
+      "text": "Protecting your assets"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Whether you hail from Carrollwood, Temple Terrace, Ybor City, or Sun City Center, Reliance Consulting wants to be your CPA. We are the accountant you can trust for unparalleled service whenever you need us."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/areas-served/tampa-brandon-hillsborough/",
+  "role": "local-seo",
+  "old_path": "/cpa-firm-tampa-brandon-hillsborough.htm"
+ }
+}

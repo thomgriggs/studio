@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/keogh-plan",
+ "slug": "keogh-plan",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Keogh Plan | Retirement Strategy | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/keogh-plan",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Can Help You Determine Whether a Keogh Plan is Still Worth Having",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Can Help You Determine Whether a Keogh Plan is Still Worth Having",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Keogh-Plan-300x200.jpg",
+   "alt": "Keogh Plan",
+   "alt_missing": false,
+   "title": "Keogh Plan",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A Keogh plan once was considered an attractive component of a retirement investment strategy for self-employed people who drew high incomes and for small businesses and their employees. However, as 401(k) plans and IRAs began to gain prominence, Keogh plans became less common. One reason for that is there is a lot more paperwork involved in setting up and maintaining a Keogh plan. Is a Keogh plan still a viable part of retirement planning for anyone?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine how best to prepare yourself or your employees for retirement. In most cases, a straightforward 401(k) plan, with or without employer contributions or an IRA is the right choice. However, there is a certain type of Keogh plan, the defined-benefit plan, that could allow well-paid self-employed people to save more for retirement than other types of plans. The defined-benefit plan allows you to set the amount of an annual pension in advance, then contribute enough each year to the plan to assure that the pension amount will be achieved. The potential drawback is that you have to fund the plan yourself. The benefit is there are generally no limitations on the amount you can contribute each year, which potentially could allow you to save more for retirement than an IRA or 401(k).",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how to plan for a secure retirement, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 249
+}

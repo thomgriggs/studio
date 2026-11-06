@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/tax-benefits-home-ownership",
+ "slug": "tax-benefits-home-ownership",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Benefits of Home Ownership | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-benefits-home-ownership",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Tax Benefits of Home Ownership",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Tax Benefits of Home Ownership",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Homeowner-Taxes-300x200.jpg",
+   "alt": "Tax Benefits Home Ownership",
+   "alt_missing": false,
+   "title": "Tax Benefits Home Ownership",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even in the wake of the housing bubble of 2007-2009, there remain many tax benefits associated with owning a home. Taking advantage of these tax benefits is not necessarily reason enough to purchase a home (or even a second home), but it should be somewhat comforting that if you do decide that home ownership is right for your family, you can potentially position yourself to enjoy substantial tax-related savings.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC can help you determine what tax benefits you are eligible for if you already own or are about to purchase a new primary residence or vacation home. In general, the following expenses might be eligible for deduction:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Mortgage interest on a primary and/or secondary residence",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest on $100,000 or less borrowed in the form of a home equity loan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Points paid at time of purchase, either by you or the seller",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Home improvements made to accommodate a medical requirement",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While these and other items might be deductible, it could be that the standard deduction you are eligible for will save you more money when it comes to taxes. A Tampa CPA from Reliance can help you determine whether to itemize your deductions, such as home mortgage interest.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance today to work with a certified public accountant who has helped thousands of individuals in the Tampa Bay region and beyond with tax planning, retirement planning, and more since 1984.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 247
+}

@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/rent-vs-buy",
+ "slug": "rent-vs-buy",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Rent or Buy Home | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/rent-vs-buy",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Potential Reasons to Delay Purchasing a Home",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Potential Reasons to Delay Purchasing a Home",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Rent-Vs-Buy-300x300.jpg",
+   "alt": "Rent Vs Buy",
+   "alt_missing": false,
+   "title": "Rent Vs Buy",
+   "width": "300",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The real estate bust that accompanied and contributed to the Great Recession of 2008 and 2009 actually led to favorable buying conditions for those who actually retained the financial wherewithal to purchase a home. For one thing, home prices bottomed out very quickly, dropping by more than 50 percent in many markets across the United States. For another, efforts by the Federal Reserve to encourage economic growth kept interest rates at or near historic lows for several years. These factors combined made it a very good time to buy, if you had the money. That said, there are several potential reasons why it might be wiser to delay purchasing a home – even if you know you can afford it.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can provide financial guidance as you budget for any big purchase, including buying a home. It may be that you are completely confident that you have enough money available for a respectable (20 percent or more) down payment. You may even have found an attractive property on one of the many real estate websites available these days. However, there are several reasons why you might not want to rush into a purchase. If any of these apply to you, think long and hard before signing that mortgage:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Unfamiliarity with the area – If you are new to a city or neighborhood, be absolutely sure that the community you are looking at is where you really want to live. Take the time to research the schools, the insurance costs, the crime rate, and other factors.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Job instability – Relatively few professions have been spared in the economic downturn. Even workers with long-term, steady employment have suddenly found themselves jobless. Do not buy a home unless your income stream is stable.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marital problems – Committing to purchasing a home together won’t save a marriage. If there have been problems that you believe could lead to divorce, now is the absolute worst time to buy a home.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance Consulting today for more help as you determine whether now is the right time for you to buy a new home.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 365
+}

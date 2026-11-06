@@ -1,0 +1,32 @@
+---
+url: https://www.reliancecpa.com/obama-versus-mccain.html
+type: page
+title_tag: "Reliance Consulting, LLC - CPA | Business Consultants"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2011-12-08
+status: 200
+---
+
+[h3] Obama Versus McCain: Who is better for your pocket-book
+[p] We are certainly in the midst of one of the most interesting and fiercely contested presidential elections in many decades. Senators’ Obama and McCain offer two visions for our country. Both promise fundamental change in Washington. Both candidates aim to change the tax code as part of their agenda to bring prosperity and economic justice to all Americans.
+[p] The new president and the Congress will have substantial economic challenges ahead of them. While it is impossible to predict who will occupy the White House, it is certainly worth our while to compare the current tax platforms of the two candidates. It is safe to assume that these proposed changes are not anticipated to become reality in their current form. Creation of tax laws in our country is a complex process of offers and compromises and often times the original proposals get amended substantially to accommodate for political and economic realities of the time.
+[p] Let us examine the key proposals that McCain and Obama have proposed in the area of individual and business taxes:
+[h3] Individual Tax
+[p] **McCain**: Supports keeping top individual tax rate at 35% and maintain the 15% rate on capital gains and qualified dividends.
+[p] **Obama**: Supports reinstating two top individual income tax rates to pre-2001 levels—39.6 and 36 percent and increases capital gains tax rate to 20 percent for taxpayers for top two brackets. He also supports eliminating taxes on senior citizens making less than $50,000 and creating a new credit for individuals earning less than $75,000 a year.
+[p] It is important to note that Obama also supports reinstating personal exemption and itemized deduction phase outs, which would effectively increase the top income tax rate by almost 5%.
+[h3] Estate Tax
+[p] **McCain**: Supports 15% estate tax on estates valued at more than $5 million ($10 million for married filing joint)
+[p] **Obama**: Supports tax rates ranging from 18-45 percent on estates above $3.5 million ($7 million for married filing joint)
+[h3] Alternative Minimum Tax
+[p] **McCain** & **Obama**: Both support temporary measures to fix AMT each year but offer no permanent fix.
+[h3] Social Security Tax
+[p] **McCain**: Maintains the status quo and does not propose any further increases.
+[p] **Obama**: Supports additional payroll taxes (between 2 and 4 percent) on incomes above $250,000. The additional taxes would be equally split between employers and employees.
+[h3] Corporate Income Tax
+[p] **McCain**: Supports reducing the maximum corporate rate from 35% to 25% gradually over the next 7 years.
+[p] **Obama**: Has not proposed a specific agenda, although rate cuts for domestic job creations are contemplated. Closing corporate tax loopholes for certain industries is also on the agenda.
+[p] No matter who is elected into office in 2009, we do not anticipate any major tax legislation to be in effect until late 2010 or early 2011. The political and economic winds in Washington, Wall Street and elsewhere will certainly shape the ultimate laws that will come into existence. CPAs must conduct scenario analyses with clients who might be affected by the various changes and counsel clients accordingly.
+[p] Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC can be reached at (813) 931-7258 or via email at amol@reliancecpa.com

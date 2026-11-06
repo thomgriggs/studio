@@ -1,0 +1,159 @@
+{
+ "url": "https://www.reliancecpa.com/reliance-consulting-backoffice",
+ "slug": "reliance-consulting-backoffice",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "client-resources",
+  "first_pass_action": "Consolidate",
+  "notes": "portal / onboarding → resources hub"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2024-10-16",
+ "seo": {
+  "title_tag": "Reliance Consulting BackOffice Accounting Solution",
+  "meta_description": "Reliance Consulting of Tampa, Florida offers the latest in Cloud-based services that allow you to outsource everyday accounting functions and still save money while reducing internal work hours and gaining control.",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reliance-consulting-backoffice",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Reliance BackOffice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Reliance BackOffice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Reliance Consulting of Tampa, Florida offers the latest in Cloud-based services** that allow you to outsource everyday accounting functions and still save money while reducing internal work hours and gaining control.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**More Time, More Money, More Control**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "hr",
+   "region": "main"
+  },
+  {
+   "type": "embed",
+   "provider": "youtube",
+   "src": "https://www.youtube.com/embed/x2YjxCzXPlc",
+   "title": "",
+   "region": "main"
+  },
+  {
+   "type": "hr",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**At Reliance, we use state of the art tools to add valuable hours to your work week.**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**We achieve these benefits by managing the payment of your bills**, implementing an advanced invoicing structure and employing an advanced cash flow system. We use a cutting edge, cloud-based platform to deliver these benefits to you",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Bill Payment**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Save** **valuable time** in your busy schedule by having Reliance pay your bills while you maintain **full control** over what gets paid and when. Simply fax or email your bills to your own private *Reliance BackOffice* fax number or email address, and we will take care of the rest.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We will:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Store the invoices electronically,",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Code the invoices to the proper financial statement account,",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Schedule the invoice to be paid,",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Send you an email requesting your approval to pay,",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Upon approval the bill will either be mailed or paid electronically,",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reconcile your bank account, and",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Synchronize the data with your accounting software.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Not only will *Reliance BackOffice* greatly reduce the amount of time you spend** reviewing, approving and signing checks, but you also will improve the real time accuracy of your accounting. This service is provided at a fraction of the cost of hiring someone to print, stuff and apply postage to bills, and also keeps your trusted CPA in the loop at all times, reducing your exposure to the financial fraud that sometimes takes place in a business due to inadequate controls over staff activities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "***Call 813-931-7258 today, and put your accounting on the smoothest path.***",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 291
+}

@@ -1,0 +1,112 @@
+{
+ "url": "https://www.reliancecpa.com/articles.html/retirement-income/",
+ "slug": "articles.html__retirement-income",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/articles.html/retirement-income",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "retirement-income - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/articles.html/retirement-income/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "retirement-income",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Articles](https://www.reliancecpa.com/articles.html)",
+   "links": [
+    {
+     "text": "← Articles",
+     "href": "https://www.reliancecpa.com/articles.html"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "h2",
+   "text": "retirement-income",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 15, 2012 | Full size is [350 × 350](https://www.reliancecpa.com/wp-content/uploads/retirement-income.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "350 × 350",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/retirement-income.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/retirement-income.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "350",
+   "height": "350",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/articles.html/medical",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "bigstock_Female_doctor_in_intensive_car_17340602",
+   "href": "https://www.reliancecpa.com/articles.html/bigstock_female_doctor_in_intensive_car_17340602",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "medical",
+   "href": "https://www.reliancecpa.com/articles.html/medical",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/articles.html/retirement-income).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/articles.html/retirement-income"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 18
+}

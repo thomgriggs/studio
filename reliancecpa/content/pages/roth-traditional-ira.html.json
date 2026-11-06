@@ -1,0 +1,123 @@
+{
+ "url": "https://www.reliancecpa.com/roth-traditional-ira.html",
+ "slug": "roth-traditional-ira.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Roth or Traditional IRA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/roth-traditional-ira.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains the Difference Between a Roth IRA and a Traditional IRA",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains the Difference Between a Roth IRA and a Traditional IRA",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/roth-traditional-ira.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "roth-traditional-ira",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are several different types of Individual Retirement Accounts (IRA) available, but the two most prominent are the traditional IRA and the Roth IRA. Which type you choose depends first on eligibility – a traditional IRA is available for anyone; a Roth IRA is available only to individuals who make less than $95,000 annually or married-filing-jointly couples who make less than $150,000 a year combined.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, will be pleased to help you decide whether a traditional IRA or a Roth IRA – or another investment instrument – is right for you. In addition to the difference in eligibility, the two main types of IRA differ substantially in the taxability of annual contributions and investment earnings.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In short, the major difference between a traditional IRA and a Roth IRA is this:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A traditional IRA is tax-deferred",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A Roth IRA is tax-exempt",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When money is paid into a traditional IRA (the annual limit is $5,000 until age 60, when it increases to $6,000), the amount of the contribution is not taxable on that year’s return. This holds true for the life of the account, but there is a catch – when withdrawals are made, taxes are paid on the earnings. In addition, if you make withdrawals before age 59½, the government imposes a 10 percent penalty (although there are several exemptions for the penalty).",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "With a Roth IRA, you receive no tax credit for your annual contribution, but the principal can be withdrawn at any time without penalty. And – the most attractive feature of a Roth IRA – withdrawals of the earnings and principal after retirement age are 100 percent tax-free.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, there are short-term and long-term benefits to both of the major types of IRA. To determine which type better suits your needs, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting for a free financial health checkup.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 325
+}

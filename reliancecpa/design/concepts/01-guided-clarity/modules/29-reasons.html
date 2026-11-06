@@ -1,0 +1,12 @@
+{#
+MODULE: reasons
+PURPOSE: Three to five reasons to choose the firm, set as the original's "approach" flow: ink-green band (cream when it follows another dark band), lime eyebrow, 68px Georgia headline and a lime button left, the reasons right as numbered rows (outlined number circle, 24px Georgia title, small text), the last row highlighted in lime.
+SLOTS: eyebrow, title, image?, items[title, text].
+SQUARESPACE: Section on a dark (ink) background, two columns: Heading + Text + Button left; numbered Text blocks (Heading 4 + small paragraph) with Line blocks between them on the right; the lime last row is a block background.
+#}
+{% from "_macros.html" import eyebrow %}
+{% set gs = page_href('get-started') %}
+<section class="m m-flow" data-module="reasons" data-tone="{{ tone }}">
+  <div class="flow__copy">{{ eyebrow(s.eyebrow) }}<h2 class="h-big" data-orig-level="2">{{ s.title|md }}</h2>{% if gs %}<p><a class="btn btn-light" href="{{ gs }}">Get Started</a></p>{% endif %}</div>
+  <ol class="flow__rows">{% for i in s["items"] %}<li class="flow__row{{ ' is-last' if loop.last }}"><span class="flow__n" aria-hidden="true">{{ loop.index }}</span><p><b>{{ i.title|md }}</b><small>{{ i.text|md }}</small></p><i aria-hidden="true">{{ '✓' if loop.last else '→' }}</i></li>{% endfor %}</ol>
+</section>

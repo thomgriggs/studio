@@ -1,0 +1,147 @@
+{
+ "url": "https://www.reliancecpa.com/titling-dental-assets",
+ "slug": "titling-dental-assets",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Titling of Dental Assets | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/titling-dental-assets",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains Why Titling of Assets is Vital for Protecting Your Property",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains Why Titling of Assets is Vital for Protecting Your Property",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Titling-of-Assets-300x200.jpg",
+   "alt": "Dental Titling of Assets",
+   "alt_missing": false,
+   "title": "Dental Titling of Assets",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Titling of assets is an important aspect of protecting your property in retirement and for making sure there are no unexpected legal hurdles for your heirs after your death. A dental CPA from Reliance Consulting, LLC, can help make sure that your assets are titled correctly, in a way that is suited to your unique situation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Titling of assets can be accomplished in several ways working with your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance. Some of the most common are listed below, but first, here is a look at the kinds of assets we’re talking about:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Real property (home or other piece of property)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A certificate of deposit",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A stock portfolio",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Why is titling of assets important? Because the potential unexpected costs could include unnecessary taxes, or an increase in capital gains taxes for your heirs, especially if the value of the estate exceeds the amount that is exempt from the estate tax. One of the most common avenues for titling of assets is sole ownership in your name. Others include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Trustee of a living trust",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tenancy in common",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payable or transfer on death",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Joint tenants",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While being concerned with titling of assets might seem presumptuous if you are just starting out with your own, brand-new dental practice, keep in mind that planning now will save you and your heirs a lot of headaches far down the road. [Contact](http://reliancecpa.com.contact.html) Reliance today for more information about titling of assets and any other personal or professional accounting needs that must be met by an experienced dental CPA.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com.contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 269
+}

@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/new-business-planning.htm",
+ "slug": "new-business-planning.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "New Business Planning for Tampa, St Petersburg, Clearwater, Pasco, Sarasota, Lakeland, Polk, Manatee & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "New Business Planning for Tampa St Petersburg Clearwater Lakeland Pasco Sarasota Polk Manatee & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/new-business-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "New Business Planning for Tampa, St Petersburg, Clearwater, Pasco, Sarasota, Lakeland, Polk, Manatee & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "New Business Planning for Tampa, St Petersburg, Clearwater, Pasco, Sarasota, Lakeland, Polk, Manatee & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/new-business-planning.jpg",
+     "alt": "New Business Planning in the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Virtually all new businesses in the Tampa, Florida area start with a great idea, but turning that idea into reality is no easy task. Unfortunately, even the most promising new business ideas can be quickly overwhelmed by market conditions, lack of capital, competition, and lack of planning. To avoid these common pitfalls and get your new business on the right footing from the start, contact a new business planning expert from Reliance Consulting, LLC for personalized attention from accounting professionals who truly care about your success.",
+     "The [CPA](http://www.reliancecpa.com/) professionals and staff accountants at Reliance Consulting have guided countless new businesses from Tampa to St Petersburg, Clearwater to Lakeland, and Pasco to Polk County to a rewarding outcome. Our new business planning services include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Helping you decide what type of incorporation or partnership arrangement provides you with the best tax advantages"
+     },
+     {
+      "text": "Writing a business plan"
+     },
+     {
+      "text": "Locating a variety of business financing options and then applying for them"
+     },
+     {
+      "text": "[Tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and planning"
+     },
+     {
+      "text": "Managing your business and your cash flow"
+     },
+     {
+      "text": "Payroll services"
+     },
+     {
+      "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "At Reliance Consulting, we realize that the success of your new business means success for our CPA firm. For this reason, our accounting and tax experts will work tirelessly to give you a new business planning strategy that will provide you with a foundation you can build upon for years."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-tax-consulting/new-business-planning/",
+  "role": "service",
+  "tier": "business-tax-consulting",
+  "old_path": "/new-business-planning.htm"
+ },
+ "short_title": "New Business Planning"
+}

@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/child-care-credit.html",
+ "slug": "child-care-credit.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Child and Dependent Care Tax Credit",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/child-care-credit.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Rules for the Child and Dependent Care Tax Credit",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Rules for the Child and Dependent Care Tax Credit",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/child-care-credit.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Throughout the 1970s and ‘80s, America’s middle class and upper-middle-class evolved from a base of single-income families to dual-income households. By the mid-2000s, more than 60 percent of families with children younger than 18 had both parents employed outside the home, according to the Bureau of Labor Statistics. In 1975, that number was closer to 30 percent. Clearly, American families in the early 21st century have a greater need than ever to educate themselves about the availability of child and dependent care tax credits.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can explain all you need to know in order to take advantage of the tax credits for child and dependent care available from the federal government. Here are the basics:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Eligible dependents are children aged 12 or younger, or a spouse or other specified individual who is physically or mentally incapable of self-care.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You or your spouse must have earned income through wages, salaries, tips or other taxable employee compensation.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payments for care can’t have been made to your spouse or to someone who can be claimed as a dependent.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Filing status must be single, married filing jointly, head of household or qualified widow or widower with a dependent child.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dependent(s) must have lived with you for more than half of the calendar year, with certain exceptions.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has been pleased to help thousands of individuals throughout the Tampa Bay area develop smart, effective plans for short-term and long-term financial health. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for more information on the child and dependent care tax credit, or for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 284
+}

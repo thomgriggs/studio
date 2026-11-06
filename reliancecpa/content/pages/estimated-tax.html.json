@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/estimated-tax.html",
+ "slug": "estimated-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Estimated Tax | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/estimated-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Estimated Tax and How it Applies to Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Estimated Tax and How it Applies to Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/estimated-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service defines estimated tax as a way to pay tax on income that is not subject to withholding. Estimated taxes differ by industry, but in general, they must be paid quarterly and they must include an estimate of what would otherwise be withheld for Social Security, Medicare, and federal income tax. The rules and procedures for individuals paying quarterly estimated taxes are different from the rules and procedures in place for corporations.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine how much you owe each quarter and work with you to establish a payment schedule for estimated taxes. We’re here to help, whether you are a sole proprietor of a business, an S-corporation shareholder, a self-employed individual, or the head of a corporation that expects to owe more than $500 in income taxes during the fiscal year.\n\nIncome that may be subject to payment of quarterly estimated taxes include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Self-employment income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dividends",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Alimony",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rent",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sale of assets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Prizes/awards",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other income not subject to withholding",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting is one of the Tampa Bay area’s premier accounting firms, having worked with thousands of individuals and hundreds of businesses since opening our doors in 1984. [Contact](http://www.reliancecpa.com/contact.html) us today to get started with your quarterly estimated tax plan, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 231
+}

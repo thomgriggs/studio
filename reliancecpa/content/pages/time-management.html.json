@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/time-management.html",
+ "slug": "time-management.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Time Management for Small Business Owner",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/time-management.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a CPA in Tampa Can Help a Small Business Owner With Time Management",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a CPA in Tampa Can Help a Small Business Owner With Time Management",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/time-management.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "time-management",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s all about efficiency when you run your own business. You wear every hat, clinch every deal, do everything – production, customer service, marketing, planning, merchandising, sales. There’s a lot to be said about self-sufficiency, and there’s a certain sense of satisfaction that comes with sinking or swimming on your own. But (as any business professional knows) no one actually can do it all alone, not if long-term success is the goal. And because long-term success obviously is the goal, it only makes sense to let someone else handle the financial minutia that can potentially bog down any small business owner.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "That’s where a [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, comes in. Since opening our doors in 1984, Reliance has helped hundreds of small business owners in the Tampa Bay area carve out time to focus on improving the product or service, rather than spending time worrying about the financial end of things. Imagine how much time you’d save as small business owner if you didn’t have to concern yourself with:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Hiring employees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Handling chief financial officer responsibilities",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Market and competitor research",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Evaluation of best practices and internal controls",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Record keeping and reporting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com//contact.html) Reliance today to find out how a Tampa CPA can help with time management. We’ll conduct a free financial health checkup to make sure your business is on the right track.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 252
+}

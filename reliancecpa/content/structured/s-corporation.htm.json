@@ -1,0 +1,101 @@
+{
+ "url": "https://www.reliancecpa.com/s-corporation.htm",
+ "slug": "s-corporation.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+ "seo": {
+  "title_tag": "Ask your CPA in Tampa FL about the Benefits of Becoming an S Corporation",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/s-corporation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg",
+     "alt": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Many companies have begun to explore the potential tax benefits of becoming an S Corporation. Most corporations are C corporations, which means both the corporate profit and the shareholders’ dividends are taxed. In an S corporation, such “double taxation” is avoided, because the company’s income or losses are divided among the shareholders, who report the income or loss on their personal tax returns.",
+     "If you are considering incorporation for your new or expanding business, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you determine whether you are eligible to file as S Corporation.",
+     "According to the IRS, in order to be qualified to become an S corporation, the following criteria must apply:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "The company must be domestic."
+     },
+     {
+      "text": "The company’s shareholders may not include partnerships, corporations or non-resident aliens."
+     },
+     {
+      "text": "The company may have no more than 100 shareholders."
+     },
+     {
+      "text": "The company must have one class of stock."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "The name is derived from the fact that companies that make a valid election to become “S” corporations will be taxed under Subchapter S, Chapter 1 of the Internal Revenue Code. Owners of an S corporation enjoy many of the same taxation benefits as legal partnerships and also receive limited liability protection from creditors."
+     },
+     {
+      "type": "p",
+      "text": "For a clear explanation of your company’s options as you explore the possibility of incorporation, and to find out whether you might be eligible to file as an S corporation, contact your CPA in Tampa at Reliance Consulting, LLC. With more than a quarter-century of experience helping businesses in the Tampa, FL region reach their full potential, our staff is here for all your corporate strategy needs."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/s-corporation/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/s-corporation.htm"
+ }
+}

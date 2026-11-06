@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/wage-and-hour-laws.html",
+ "slug": "wage-and-hour-laws.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Wage and Hour Laws for Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/wage-and-hour-laws.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Wage & Hour Laws for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Wage & Hour Laws for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/wage-and-hour-laws.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "wage-and-hour-laws",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every small business owner should be aware of the regulations set forth within the Fair Labor Standards Act. It establishes standards for minimum wage, overtime pay, recordkeeping, and child labor in privately owned companies, as well as government jobs. These standards are enforced by the Wage and Hour Division of the U.S. Department of Labor, and violation of these rules may lead to fines and/or imprisonment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help make sure your company remains in compliance with wage and hour laws. Since 1984, the small-business consultants from Reliance have provided accounting and tax services for hundreds of Tampa Bay area companies. We also have helped protect our clients by answering their questions about important issues such as wage and hour laws.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Fair Labor Standards Act is only one of many sets of rules laid out by local, state and federal governments to protect workers. It does not cover or regulate issues that are considered negotiable between the employee and employer, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Vacation, holiday, or sick pay",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Meal or rest periods",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Premium pay for weekends or holidays",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pay raises",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fringe benefits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Termination notices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Work hours for employees older than 15",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about these and other rules that may affect your small business, [contact](http://www.reliancecpa.com//contact.html)Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 226
+}

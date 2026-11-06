@@ -1,0 +1,11 @@
+{#
+MODULE: accordion
+PURPOSE: Questions or topics that open: native details elements, a ruled list in the original's journey-row language, the question in 25px Georgia, a plus in a round outline that turns coral when open, answer below.
+SLOTS: eyebrow, title, items[title, body[]].
+SQUARESPACE: Accordion block (native). The ruled rows and plus are Accordion settings; no code.
+#}
+{% from "_macros.html" import eyebrow, body %}
+<section class="m m-acc" data-module="accordion" data-tone="{{ tone }}">
+  <div class="section-intro">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}</div>
+  <div class="acc">{% for i in s["items"] %}<details><summary>{{ i.title|md }}</summary><div class="prose">{{ body(i.body) }}</div></details>{% endfor %}</div>
+</section>

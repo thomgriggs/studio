@@ -1,0 +1,156 @@
+{
+ "url": "https://www.reliancecpa.com/payroll-services.htm",
+ "slug": "payroll-services.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2024-10-16",
+ "seo": {
+  "title_tag": "Payroll Services for Tampa St Petersburg Clearwater Sarasota Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/payroll-services.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Payroll Services for Tampa, St Petersburg, Clearwater, Sarasota, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Payroll Services for Tampa, St Petersburg, Clearwater, Sarasota, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/payroll-services.jpg",
+   "alt": "Payroll Services for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "payroll-services",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Payroll is a time-consuming chore for small businesses throughout the Tampa, Florida area. Not only does payroll take a lot of time and effort, but it is also easy to bungle, which may lead to costly fines or even civil and criminal charges.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are a business owner in the Tampa, Florida area who wants to escape the many pitfalls of do-it-yourself or in-house payroll preparation, contact Reliance Consulting, LLC. Our complete range of payroll services, [tax preparation](http://www.reliancecpa.com//tax-preparation.htm) services, and many other accounting specialties can save you weeks of time per year and keep your businesses in compliance with tax regulations. With our payroll services saving you time and stress, you can concentrate on what you do best—running your company and increasing your profits.",
+   "links": [
+    {
+     "text": "tax preparation",
+     "href": "http://www.reliancecpa.com//tax-preparation.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you are a doctor in Clearwater, a resort owner in St Petersburg, or real estate broker in Pasco County, the payroll services at Reliance Consulting help you cover all the bases, such as:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Timely, accurate payroll checks for your employees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The ability to securely enter each employee’s hours and earnings online, and then print checks from your own printer",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Or, if you prefer, free direct deposit and pre-printed checks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Comprehensive payroll reports for your own records",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maximum protection of all personal information",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fully compliant IRS, unemployment tax, and state payroll reporting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unemployment claims, child support deductions, overtime, vacation time, and other individualized services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "W-2, W-3, 1099, and 1096 processing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "From Tampa to Lakeland and Sarasota to Hernando County, our payroll services are among our most popular [small business accounting](http://www.reliancecpa.com//small-business-accounting.htm) services. When you need a [CPA](http://www.reliancecpa.com//index.html) and accountant who can provide you and your workforce with compliant, reliable, and precise payroll processing, Reliance Consulting is the firm you can depend on for outstanding, affordable results.",
+   "links": [
+    {
+     "text": "small business accounting",
+     "href": "http://www.reliancecpa.com//small-business-accounting.htm"
+    },
+    {
+     "text": "CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more details about payroll services provided by the CPAs and accountants at Reliance Consulting, please contact us today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 339
+}

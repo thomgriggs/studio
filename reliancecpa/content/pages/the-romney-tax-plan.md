@@ -1,0 +1,33 @@
+---
+url: https://www.reliancecpa.com/the-romney-tax-plan
+type: page
+title_tag: "The Romney Tax Plan: Fairness, Job Creation, Economic Growth"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2012-07-02
+status: 200
+---
+
+[h3] The Romney Tax Plan: Fairness, Job Creation, Economic Growth
+[p] The tax plan proposed by the presumptive Republican nominee for president, former Massachusetts Governor Mitt Romney, emphasizes the ability of federal tax policy to influence job creation and the long-term economic health of the United States. The over-arching goals, according to statements by Governor Romney and literature published by his campaign, are to impose a fair tax burden on all Americans while generating the revenue necessary to balance the federal budget. At the same time, tax policy must be implemented and administered without hampering economic activity.
+[p] Governor Romney is mindful of the balancing act inherent to reducing and stabilizing federal spending while simultaneously “breathing life” into the ongoing economic recovery. The best way forward, according to the Romney campaign, is to fix the nation’s tax code. The current U.S. tax system is a hodgepodge, patched together over decades without any real regard for how tax policy affects job creation and economic growth. Governor Romney believes that the tax code should be repaired in such a way that entrepreneurship and investment can thrive, while enough revenue is raised to sustain a “smaller, smarter, simpler” government.
+[p] A recent initial analysis by the non-partisan Urban-Brookings Tax Policy Center outlined the following key policy points for the Romney tax plan:
+[ul]
+- Permanent extension of the 2001 and 2003 Bush tax cuts
+- A 20 percent across-the-board reduction in marginal tax rates for individuals
+- A reduction of the corporate tax rate to 25 percent from the current 35 percent
+- A broadening of the tax base by reducing unspecified tax preferences (*loopholes*)
+- Elimination of taxes on investment income (interest, dividends, capital gains) for taxpayers with an adjusted gross income of less than $200,000
+- Elimination of the federal estate tax (the “death” tax)
+- Repeal of the individual and corporate alternative minimum tax
+- Repeal of taxes enacted in conjunction with the Affordable Care Act of 2010, including a 0.9 percent tax increase on wages and a 3.8 percent tax increase on investment income of high-income taxpayers (scheduled to take effect in 2013)
+- A strengthening of the research and experimentation tax credit for corporations, which would be made permanent
+- A switch to a territorial tax system, in which corporations would pay federal taxes only on money earned within the U.S. border.
+[p] The two most significant policy points are the 20 percent reduction in marginal rates for individual taxpayers and the reduction in the corporate tax rate to 25 percent. These are the foundational elements of the Romney tax plan, reflecting Governor Romney’s belief that the economy grows at a faster rate when individual taxpayers and corporations keep and invest more of their own money. Both policy points are related to job growth. The Romney campaign cites the statistic that 54 percent of private sector workers are employed outside corporations, which is why lower individual tax rates define the incentives for job-creating, privately owned businesses. At the same time, the lower corporate tax rate, according to Governor Romney, enables corporations to compete in the global economy. Governor Romney also believes that a higher corporate tax rate contributes to lower wages for U.S. workers.
+[p] The Urban-Brookings Tax Policy Center’s analysis pointed out that the Romney campaign has not yet specified how it would close tax loopholes, or which tax preferences would be eliminated. However, the potential broadening of the tax base was not factored in when the Tax Policy Center estimated that the Romney plan would reduce federal tax liability by about $900 billion in 2015 compared with current law, for a 24 percent reduction in total projected revenue. In addition, compared to current law, about 75 percent of taxpayers would receive an average tax cut of about $7,000. The reduction in revenue would be off-set, according to Governor Romney, by a more vibrant, energetic, and growing economy built on individual entrepreneurship and corporate investment.
+[p] According to both candidates, the choice in this November’s election basically hinges on the belief system that voters will eventually buy into. Empirical evidence clearly points out that every European country that has high tax rates, high government spending and greater regulation is suffering much worse than America. Our own European-style stimulus packages, aka auto and insurance bailouts, quantitative easing, and numerous other programs to help homeowners, have miserably failed. Furthermore, regulations like the Dodd-Frank and Volcker Rule are choking businesses with higher compliance costs. Jamie Dimon, in his testimony to Congress last month, indicated that Dodd-Frank costs JP Morgan almost $1 billion annually in additional compliance costs.
+[p] May was the worst month for job growth with the economy adding only 69,000 jobs and the jobless rate climbing to 8.2%. The real economic story is actually much worse. Each month thousands stop looking for a job and get fallen off the unemployment calculation statistic. Lack of credit, excess regulation and the 2013 fiscal cliff is preventing businesses from expanding and hiring.
+[p] Governor Romney’s plan fundamentally believes that productive activity can be stimulated with a lean tax code and an even leaner and smarter government. It’s firmly rooted in Adam Smith’s principles which promulgate that only entrepreneurs create new economic activity, which creates jobs, opportunity and economic growth. The Governor argues that excessive taxation and burdensome regulation will choke America’s entrepreneurial spirit and innovation and eventually lead America into a European-style crisis.
+[p] Whether voters will shed their ideological underpinnings and vote based on hard economic realities is a question that only time can answer. In the meantime, we can all watch the political circus over the next few months and hope that we can make an informed decision, irrespective of which social philosophy we adhere to.
+[p] *Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC ([www.reliancecpa.com](https://www.reliancecpa.com/)). He can be reached at (813) 931-7258 or via email at [amol@reliancecpa.com](mailto:amol@reliancecpa.com)*

@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/personal-record-retention.htm",
+ "slug": "personal-record-retention.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-record-retention.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/personal-record-retention.jpg",
+     "alt": "sk Your CPA in Tampa about what Personal Records You Should Keep"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "It piles up on your desk, on your kitchen counters, and in your closet. As you look around your Tampa, FL area home, you start to notice random piles of receipts, insurance policies, paid bills, and car repair records. In all likelihood, you are left wondering, “How long do I have to keep this stuff?”",
+     "The most responsible answer to that question is to talk to your [CPA in Tampa](http://www.reliancecpa.com/). Your CPA can provide you with valuable advice about the paperwork you need to keep indefinitely, as well as the paperwork you can safely throw out.",
+     "While local, county, state, and federal guidelines often conflict on their record retention guidelines, the following are some general principles about how long you should store documentation:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Audit Reports by your Tampa CPA – indefinitely"
+     },
+     {
+      "text": "Car Records – until vehicle is sold"
+     },
+     {
+      "text": "Credit Card Receipts – until verified on your statement"
+     },
+     {
+      "text": "Credit Card Statements – 3 years"
+     },
+     {
+      "text": "Expired Insurance Policies – 3 years"
+     },
+     {
+      "text": "Income Tax Returns – indefinitely"
+     },
+     {
+      "text": "Income Tax Payment Checks – indefinitely"
+     },
+     {
+      "text": "Insurance Policies – until expired"
+     },
+     {
+      "text": "Legal Records – indefinitely"
+     },
+     {
+      "text": "Other Bills – until you’ve verified payment on the next billing cycle"
+     },
+     {
+      "text": "Pay Stubs – until information is verified on your W-2"
+     },
+     {
+      "text": "Property Records, including receipts on property improvements – until property is sold"
+     },
+     {
+      "text": "Sales Receipts – until warranty expires"
+     },
+     {
+      "text": "Utility Records – 3 years"
+     },
+     {
+      "text": "Warranties and Instructions – for the life of the item"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "If you ever feel nervous about disposing of a document that seems important, it’s a good idea to check with your CPA before throwing the document out. Disposing of important documents can be risky, so getting a second opinion from a professional accountant is usually the safest bet."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/personal-record-retention/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/personal-record-retention.htm"
+ }
+}

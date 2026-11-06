@@ -1,0 +1,133 @@
+{
+ "url": "https://www.reliancecpa.com/cancellation-of-debt-income.htm",
+ "slug": "cancellation-of-debt-income.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Cancellation of Debt Income--Understanding the rules might help save you money!!",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cancellation-of-debt-income.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Cancellation of Debt Income--Understanding the rules might help save you money!!",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "3 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Cancellation of Debt Income–Understanding the rules might help save you money!!",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The current economic downturn is attributed a large part to the real estate asset bubble that finally burst in 2008 and led the country on a downward spiral ever since. The US government has resorted to almost draconian steps to reign in the recession by announcing a slew of trillion dollar spending programs. Such programs have not worked their magic as of yet, but time (or the November elections) will certainly determine their destiny.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The unemployment rate currently at 9.7%, is not a true indicator of current joblessness. Many unemployed who have fallen off the unemployment rolls are not even counted and many economists believe that the true rate is close to 12%. Individuals are not the only ones affected. The recession has caused a sharp decline in the top line of many businesses.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the midst of this crisis, many are losing their homes and many businesses are not able to service their debt. The foreclosure rates are soaring nationwide and the many expect more individuals and businesses to lose their properties in 2010.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many distressed individuals and businesses are trying to avoid foreclosure by structuring deals with banks to either reduce or modify the terms of their debt. Many are engaging in “short-sales”—a term that has gained infamous popularity over the past few years. A short sale, in the context of real estate, is the sale of property below the amount owed on its debt, i.e. the bank receives proceeds that are lesser than the loan amount.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether it is a foreclosure, a modification or a short sale, the resulting tax effect is the lender discharging all or part of the borrower’s debt. The discharged debt is called COD (cancellation of debt) income and the borrower has to report it on his tax return in the year the debt is forgiven. Naturally, this situation makes the borrower’s situation much worse. Not only has he lost his down payment and the property, but there are also adverse tax consequences.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For all those in despair, Section 108 of the Internal Revenue Code does provide much needed help. If you encounter COD income, you may fall within one of the special situations whereby you could exclude the COD income from your tax return. Basically, Section 108 allows for income exclusion from the discharge if any of the following conditions are present:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "The discharge occurs in a title 11 bankruptcy case",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The discharge occurs when the taxpayer is insolvent",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The indebtedness discharged is qualified farm indebtedness",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "In the case of a taxpayer other than a C corporation, the indebtedness discharged is qualified real property business indebtedness, or",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The indebtedness discharged is qualified principal residence indebtedness which is discharged before January 1, 2013.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you fit in any of the above situations, you may be able to avoid the tax on the COD income. The discussion of these exclusions is beyond the scope of this article and you should consult your tax advisor or attorney in determining whether you could take advantage of the § 108 provisions. The exclusions are being litigated in courts across the country and it is important to follow those precedents in understanding the implementation of the law to your specific situation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC, and recently presented a seminar on this topic at the Indo-US Chamber of Commerce. He can be reached at (813) 931-7258 or via email at [amol@reliancecpa.com](mailto:amol@reliancecpa.com)*",
+   "links": [
+    {
+     "text": "amol@reliancecpa.com",
+     "href": "mailto:amol@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 581
+}

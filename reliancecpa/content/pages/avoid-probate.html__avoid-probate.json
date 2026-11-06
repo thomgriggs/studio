@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/avoid-probate.html/avoid-probate/",
+ "slug": "avoid-probate.html__avoid-probate",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/avoid-probate.html/avoid-probate",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "CPA in Tampa - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/avoid-probate.html/avoid-probate/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Explains How to Avoid Probate](https://www.reliancecpa.com/avoid-probate.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Explains How to Avoid Probate",
+     "href": "https://www.reliancecpa.com/avoid-probate.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "CPA in Tampa",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 200](https://www.reliancecpa.com/wp-content/uploads/2011/12/avoid-probate.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 200",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/avoid-probate.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/avoid-probate.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/avoid-probate.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/avoid-probate.html/avoid-probate).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/avoid-probate.html/avoid-probate"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 13
+}

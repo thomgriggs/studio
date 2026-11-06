@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/trade-shows.html",
+ "slug": "trade-shows.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "A CPA in Tampa Discusses Trade Shows",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/trade-shows.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Trade Shows",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Trade Shows",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/trade-shows.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "trade-shows",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you begin to plan your company’s budget for the next fiscal year, one item that will inevitably stand out will be your involvement in industry trade shows. Participation in trade shows can be expensive and requires thorough planning, which might make you wonder: Is a trade show worth the time, effort and expense, especially in a down cycle? Every situation is different, but generally, the answer is yes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) at Reliance Consulting, LLC can help you develop the best strategy to put your business on the path to profitability, including ways to get the most out of your industry’s trade shows. Why are trade shows important? A big, national trade show, especially, provides a one-stop platform to keep up with what’s new in your industry. Potential customers will be there, checking out the latest trends. And you’ll want to take advantage of the kind of face time you might not get with even a hundred routine sales calls.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your CPA in Tampa at Reliance can help you formulate a trade show strategy that will enable your business to:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Develop potential leads",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Improve your company’s image",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sell your service or product on-site",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reach a broad audience of potential clients",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unveil a new product or new marketing campaign",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Create tangible contrasts between your company and the competition",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "With the right approach, a trade show can provide you with a great return on your investment. [Contact](http://www.reliancecpa.com//contact.html) a CPA in Tampa at Reliance Consulting today for a free financial health checkup, or to learn more about how best to incorporate trade shows into your business strategy.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 273
+}

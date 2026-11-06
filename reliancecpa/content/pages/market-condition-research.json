@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/market-condition-research",
+ "slug": "market-condition-research",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Market Research | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/market-condition-research",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Reveals Resources to Explain Market and Economic Conditions",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Reveals Resources to Explain Market and Economic Conditions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-diversification.gif",
+   "alt": "Tampa CPA Diversification",
+   "alt_missing": false,
+   "title": "Tampa CPA Diversification",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s great to have an idea for a business and to pursue it with passion and gusto. However, starting or operating a company without having a firm understanding of your target market and current economic conditions is operating in a dangerous vacuum. One of the main reasons more than 50 percent of startups fail in the first five years is ignorance of the information that can make or break a company’s bottom line. It is therefore vital for business owners to know where to turn for this information.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A CPA in Tampa from Reliance Consulting, LLC, is a great resource for this kind of information. Since 1984, Reliance has helped hundreds of small Florida businesses navigate a wide range of economic conditions. It starts with a plan, of course, but a plan based on no data is merely guesswork.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The federal and state governments provide important data for businesses, and there are a number of organizations that track economic and market data and offer their results either on-line or through print publications. These data bases and publications include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The North American Industry Classification System (NAICS Codes)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "FedStats",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Statistical Abstract of the United States",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Statistics of U.S. Businesses from U.S. Census County Business Patterns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The Small Business Association Office of Advocacy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "STAT-USA",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "American FactFinder",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Monthly Census Bureau reports",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Labor demographics from the Bureau of Labor Statistics",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many other sources of information, any one of which may contain the data that are crucial components for helping form your short- or long-term strategy. To learn more about sources of economic or market information, contact Reliance Consulting. We have helped hundreds of Florida businesses achieve success since opening our doors in 1984.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 292
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/passive-income",
+ "slug": "passive-income",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Passive Income | Tampa CPA | Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/passive-income",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Meaning of Passive Income",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Meaning of Passive Income",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/passive-income-300x200.jpg",
+   "alt": "Passive Income",
+   "alt_missing": false,
+   "title": "Passive Income",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service generally divides income into three main categories: active, portfolio, and passive. Of these, passive income may be the most difficult to discern for people who are not extremely well-versed in tax law. Active income generally is considered money earned through work. Portfolio income generally is considered money that comes in via dividends, capital gains, interest, and other investments. In layman’s terms, passive income has come to mean revenue streams generated through non-active sources – there are many get-rich-quick schemes now based on “passive” income generated through Internet-based business activity. This is not quite in keeping with the IRS definition, which encompasses income sources such as rental property. Income from certain websites might also qualify, but the important thing to note about passive income is that it is taxable.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help a small business owner or entrepreneur sort through the differences among active, portfolio, and passive income. The distinction is important, because different sources of income typically are taxed at different rates. In addition, every business owner knows how vital it is to account for every minute of the working day, which is one of the reasons creating reliable sources of passive income can be such an attractive proposition. That said, anyone should be wary of get-rich-quick claims on the Internet, which is another good reason to rely on an experienced, knowledgeable CPA from Reliance when it comes to handling the finances.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For a more thorough explanation of passive income and how it might impact your financial outlook, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 271
+}

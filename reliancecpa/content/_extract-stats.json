@@ -1,0 +1,60 @@
+{
+ "pages": 916,
+ "failed": [
+  [
+   "https://www.reliancecpa.com/veterinary-bill-pay/attachment/9228526/",
+   "live: too many redirects; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/2008-Economic-Stimulus-Act.html",
+   "live HTTP 404; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/how-to-handle-an-irs-audit.html",
+   "live HTTP 404; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/cloud-based-accounting.html",
+   "live HTTP 404; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/appealing-an-irs-dispute.html",
+   "live HTTP 404; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/the-romney-tax-plan.html",
+   "live HTTP 404; fallback HTTP 404"
+  ],
+  [
+   "https://www.reliancecpa.com/index.html",
+   "live HTTP 404; fallback HTTP 404"
+  ]
+ ],
+ "by_type": {
+  "page": 916
+ },
+ "blocks_by_type": {
+  "h3": 483,
+  "img": 886,
+  "p": 2425,
+  "hr": 8,
+  "embed": 6,
+  "ul": 414,
+  "ol": 10,
+  "text": 895,
+  "table": 2,
+  "h2": 555,
+  "form": 1,
+  "a": 51
+ },
+ "images": 892,
+ "shared_blocks": 8,
+ "with_meta_desc": 22,
+ "with_meta_kw": 0,
+ "header_variants": 1,
+ "footer_variants": 1,
+ "main_images": 886,
+ "main_img_missing_alt": 47,
+ "css_bg": 0,
+ "links": 3617
+}

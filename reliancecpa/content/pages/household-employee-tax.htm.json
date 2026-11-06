@@ -1,0 +1,143 @@
+{
+ "url": "https://www.reliancecpa.com/household-employee-tax.htm",
+ "slug": "household-employee-tax.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Accountants in Tampa FL Weigh In on Handling Household Employee Tax Issues",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/household-employee-tax.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Accountants in Tampa, FL Weigh In on Handling Household Employee Tax Issues",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Accountants in Tampa, FL Weigh In on Handling Household Employee Tax Issues",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/household-employee-tax.jpg",
+   "alt": "Accountants in Tampa FL Help with Household Employee Tax Issues",
+   "alt_missing": false,
+   "title": "Accountants in Tampa FL Help with Household Employee Tax Issues",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Have you ever hired a babysitter or nanny to watch your children? Or do you have a home health aide or private nurse providing you with medical care? Or does a caretaker tend to your property? Many residents like you in the Tampa, FL area hire domestic workers to help around the house, but in doing so, you need to be aware about whether or not you should be paying employee tax for those workers.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Thankfully the [accountants in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can keep you abreast of the complex IRS rules for paying employment tax on domestic workers. When you meet with us, you may be surprised to learn how complicated payroll tax laws are, and how easy it is to mistakenly hire what you think is a casual helper, only to find out later that payroll tax is due. Another unwelcome surprise is the fact that disregarding payroll tax – accidentally or not – can lead to expensive penalties.",
+   "links": [
+    {
+     "text": "accountants in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The trick to avoiding these surprises is knowing whether a household helper is actually an employee. Our experienced and knowledgeable team of CPAs and accountants in Tampa can offer the following tips on this topic:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A household employee is someone you have hired to do household work. The work can be part-time or full-time.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "An employee is someone who works for you and to whom you give specific instructions on what work is to be done and how it is to be done.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "When it comes to classifying household employees, it does not matter how you pay them, be it by the job, hourly, weekly, or monthly.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Household work is defined as being done in and around your home. Examples of household workers are babysitters, cleaning people, drivers, maids, private nurses, and yard workers, to name a few.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "However, household workers are usually not your employees if:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "They are self-employed, which means they have control over how to do the job, use their own tools, and offer their services to other clients.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "They provide babysitting services in their own home.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "They came from an agency that pays their wages.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The IRS publishes a booklet called Household Employer’s Tax Guide which can be a helpful in determining whether your household helpers should be treated as employees. We also invite you to contact the accountants in Tampa from Reliance Consulting for a free initial consultation about your questions on this topic.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 413
+}

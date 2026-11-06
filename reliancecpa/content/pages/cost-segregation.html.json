@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/cost-segregation.html",
+ "slug": "cost-segregation.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Cost Segregation Study",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cost-segregation.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Reasons to Conduct a Cost Segregation Study",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Reasons to Conduct a Cost Segregation Study",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cost-segregation-survey.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Cost segregation is a tax saving strategy that allows companies or individuals to take advantage of depreciation of property that has been constructed, improved, expanded or remodeled since 1987. It’s a way to improve cash flow by deferring federal and state income taxes through the acceleration of deductions taken for yearly depreciation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can explain in detail all the potential benefits of a cost segregation study. In general, rather than waiting the standard 27-39 years for real property depreciation to take full effect, a cost segregation study allows a building owner to depreciate construction-related costs over a far shorter period of time – typically five, seven or 15 years. In addition, a cost segregation study can:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Maximize current tax savings, freeing up cash for immediate investment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Create an audit trail through proper documentation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Allow for immediate recovery of retroactive savings in the year that the cost segregation study is conducted, as opposed to waiting several years for return on depreciation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Uncover other tax liabilities and savings opportunities",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In order to get the most out of a cost segregation study, it should be conducted by a person or entity with thorough knowledge of engineering, construction and tax laws, as well as a working familiarity with court cases and ruling about the definition of personal property. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today to learn more about how a cost segregation study may benefit you or your company.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 250
+}

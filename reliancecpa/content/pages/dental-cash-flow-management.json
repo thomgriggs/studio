@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/dental-cash-flow-management",
+ "slug": "dental-cash-flow-management",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-10-26",
+ "seo": {
+  "title_tag": "Dental CPA | Cash Flow Management | Tampa Dental Practice Consultant",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-cash-flow-management",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a Dental CPA Helps with Cash Flow Management",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a Dental CPA Helps with Cash Flow Management",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Creating-Dental-Practice-Budgets-300x210.jpg",
+   "alt": "Dental Cash Flow",
+   "alt_missing": false,
+   "title": "Dental Cash Flow",
+   "width": "300",
+   "height": "210",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When you work with a dental CPA from Reliance Consulting, LLC, you will leave behind the seemingly relentless daily demands of the business side of your dental practice. We will handle all of that for you, including one of the most important tasks for a practice – cash flow management, which involves establishing a method for monitoring the money coming into and going out of the practice. As straightforward as that might sound, cash flow management can get a bit tricky, especially if your business is growing.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://www.reliancecpa.com/dental-cpa) from Reliance Consulting will evaluate your practice and help you with cash flow management by setting up a system to track your incoming and outgoing payments. The process will include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://www.reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "An examination of the invoice system in place to assess whether the smoothest and fastest payment process is available to your patients",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The development of a system to help forecast cash flow on a monthly, quarterly, or annual basis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The establishment and maintenance of efficient bookkeeping and payroll services to make sure you know how much cash is on hand at any given time",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "An examination of the processes in place for collecting on past-due invoices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establishing a more-efficient timetable for paying vendors",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to helping with cash flow management, a dental CPA from Reliance can help your practice achieve sustained profitability by taking care of your tax planning, budgeting, tax preparation, streamlining productivity in the office, and more. To get started working with an experienced dental CPA who truly understands the unique financial challenges facing dental practices today, [contact](http://reliancecpa.com/contact.html) Reliance.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 271
+}

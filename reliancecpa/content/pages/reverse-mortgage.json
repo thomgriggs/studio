@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/reverse-mortgage",
+ "slug": "reverse-mortgage",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-09-04",
+ "seo": {
+  "title_tag": "Reverse Mortgage | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reverse-mortgage",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Concept of a Reverse Mortgage for Seniors",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Concept of a Reverse Mortgage for Seniors",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Reverse-Mortgage-300x240.jpg",
+   "alt": "Reverse Mortgage",
+   "alt_missing": false,
+   "title": "Reverse Mortgage",
+   "width": "300",
+   "height": "240",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The TV commercials espousing the benefits of a reverse mortgage are almost impossible to avoid these days. Usually, they feature an aging pop singer, or a one-time politician, someone seniors might trust and relate to, talking about how anyone 62 and older is eligible to apply for a home equity conversion loan (AKA a reverse mortgage). It all sounds great, of course, but how can a homeowner really know for sure if it’s the right thing to do?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help. Our staff of certified public accountants and analysts will take the time required to understand every single detail of your financial situation before making a suggestion about whether a reverse mortgage is right for you. The good news is, the commercials are right when they tell you that a reverse mortgage can give seniors who live on a fixed income extra cash. That said, everyone should be aware of the potential drawbacks, too:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Origination costs like title insurance and lender fees typically are much higher than those for standard mortgages.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The money received through a reverse mortgage can negatively affect your eligibility for programs like Medicaid.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The entire cost of the loan becomes due if you choose to move out of the home.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The assets available to your heirs can be severely reduced.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The interest on a reverse mortgage is not tax deductible until after the loan is paid off.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You won’t generally hear all of that from the celebrity in the commercial. But that doesn’t necessarily mean you should avoid a reverse mortgage. The only way to know for sure if it is the right thing for you is to [contact](http://reliancecpa.com/contact.html) Reliance Consulting and let us help you understand how reverse mortgages work. Reliance has been around since 1984, and we’ve helped thousands of individuals in the Tampa Bay area and beyond get their personal finances in order.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 328
+}

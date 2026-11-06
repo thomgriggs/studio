@@ -1,0 +1,99 @@
+{
+ "url": "https://www.reliancecpa.com/ceo.html/ceo/",
+ "slug": "ceo.html__ceo",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/ceo.html/ceo",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Tampa CPA - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/ceo.html/ceo/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Discusses the Responsibilities and Duties of a CEO](https://www.reliancecpa.com/ceo.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Discusses the Responsibilities and Duties of a CEO",
+     "href": "https://www.reliancecpa.com/ceo.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Tampa CPA",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/ceo.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/ceo.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/ceo.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/ceo.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/ceo.html/ceo).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/ceo.html/ceo"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 13
+}

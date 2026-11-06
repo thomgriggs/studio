@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/processes.html",
+ "slug": "processes.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Processes | Business Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/processes.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Tasks and Processes in Business Accounting",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Tasks and Processes in Business Accounting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/processes.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "processes",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most daunting responsibilities of a small business owner is keeping track of the money. Understanding the tasks and processes of business accounting can be a full-time job all by itself. Wouldn’t it be great to leave the paperwork and numbers crunching to an expert, while you are allowed to pursue the actual sales and/or production that form the foundation of your company?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, is exactly what you need to make sure your business finances are in order. Whether it’s providing support with annual budgeting, setting up a payment schedule for sales tax, demonstrating the usefulness of a properly maintained daily journal and ledger, or any of the many tasks and processes required to keep a business running smoothly, Reliance can help.\n\nA CPA from Reliance can assist your company with every aspect of business accounting, including:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Records for purchases",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inventory",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Billing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital assets accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "QuickBooks® accounting",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida business owners find the path to prosperity. [Contact](http://www.reliancecpa.com//contact.html) us today to learn more about how a Reliance CPA can help keep your company’s finances on track through sound business accounting.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 217
+}

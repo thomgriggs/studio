@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/irs-frivolous-arguments",
+ "slug": "irs-frivolous-arguments",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | IRS Frivolous Arguments",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/irs-frivolous-arguments",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How the IRS Defines Frivolous Arguments",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How the IRS Defines Frivolous Arguments",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/IRS-Frivolous-Arguments-300x200.jpg",
+   "alt": "IRS Frivolous Arguments",
+   "alt_missing": false,
+   "title": "IRS Frivolous Arguments",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every year, the Internal Revenue Service issues a comprehensive list of frivolous arguments presented by individuals who contend that they are not required to pay taxes. Some arguments make the list year after year, which means either a lot of people don’t read the list, or they are extraordinarily stubborn. Some items on the list are related to the very philosophy of tax collection, while others deal with specific legalities. What they all have in common is that if someone tries to avoid paying taxes based on these arguments, they will be hearing from the IRS.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help individuals and businesses with year-round tax planning. We understand that philosophical differences are not the only reasons people may have disputes with the IRS, and it is our contention that thorough planning is the best way to handle the responsibility of paying taxes. Working with one of our experienced CPAs can help you avoid having to attempt to make one of the following frivolous arguments, as defined by the IRS:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Filing a tax return is voluntary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Paying federal income tax is voluntary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The IRS is responsible for preparing returns for someone who fails to file",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Wages, tips, and other payment for personal services are not income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If a taxpayer is not a U.S. citizen, no federal income taxes are owed",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The First Amendment provides moral or religious grounds for not paying taxes",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This only a small sample of frivolous arguments specifically published for 2012 by the IRS. There were many more, and new ones are listed every year. To learn more about how a Reliance CPA can help you or your company define your tax position with a smart, forward-thinking plan, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 301
+}

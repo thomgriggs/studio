@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/demand-up-capital-down",
+ "slug": "demand-up-capital-down",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Small Business Capital | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/demand-up-capital-down",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Provides Advice About What to do When Demand is Up, but Capital Access is Down",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Provides Advice About What to do When Demand is Up, but Capital Access is Down",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Small-Business-Capital-300x199.jpg",
+   "alt": "Small Business Capital",
+   "alt_missing": false,
+   "title": "Small Business Capital",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you own a company, you probably already understand that the biggest indicator for potential success is demand for your product or service. More demand typically means more conversions, which obviously is the goal. And usually, when demand goes up, it means you decide to increase production. This decision often means you need to acquire more capital, typically through loans. But what happens when demand goes up, but access to capital from lenders goes down?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help your business solve difficult cash-flow problems like this. Access to capital during an upturn in business often depends on what sort of industry you are involved in. Banks are more likely to lend – especially during a soft economy – if it can be demonstrated that an increase in business is expected to be a long-term thing. Similarly, businesses that depend on a thriving macro-economy (construction, for instance) might find themselves landing lucrative contracts occasionally. But the very nature of the industry might cause banks to balk at making a substantial capital outlay. What is a business owner to do?",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While no CPA can guarantee access to capital, the experts at Reliance can help you position your company to weather rough economic times. It’s all about planning, and those who take a strategic approach to business planning are more likely to thrive in any sort of economic climate. To get started making a sound business plan, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 262
+}

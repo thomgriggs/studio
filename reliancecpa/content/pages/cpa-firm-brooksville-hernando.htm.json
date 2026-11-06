@@ -1,0 +1,167 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm",
+ "slug": "cpa-firm-brooksville-hernando.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA & Accountants Serving Brooksville Spring Hill Weeki Wachee & all of Hernando County FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & all of Hernando County, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & all of Hernando County, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cpa-firm-brooksville-hernando.jpg",
+   "alt": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & Hernando County, FL",
+   "alt_missing": false,
+   "title": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & Hernando County, FL",
+   "width": "241",
+   "height": "242",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Teeming with natural wonders such as the Withlacoochee State Forest and Weeki Wachee Springs, Hernando County provides a wonderful retreat from the city life in the Tampa Bay, FL area. The more than 150,000 residents in Brooksville, Spring Hill, Weeki Wachee, and other parts of Hernando County are lucky to have the best of both worlds—the constant activities of Tampa Bay are nearby, and yet the warm, peaceful evenings of old Florida are waiting for them at home.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC is a Tampa CPA and accountant firm that serves many clients in Brooksville, Spring Hill, Weeki Wachee, and all of Hernando County. Even though this region is a few miles away from the fiscal growth of downtown Tampa, Hernando still has a big share of Florida’s economy on its own, employing thousands of people in manufacturing, aviation, distribution, mining, and more.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we welcome individuals, corporations, partnerships, and others in need of accounting help in Hernando County to contact our firm for assistance. Our CPAs, accountants, and financial professionals provide a full range of services, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax preparation for personal and business income tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS tax problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[QuickBooks accounting](http://www.reliancecpa.com/quickbooks-accountant.htm)",
+     "links": [
+      {
+       "text": "QuickBooks accounting",
+       "href": "http://www.reliancecpa.com/quickbooks-accountant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Payroll",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement plans and educational plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Financial planning](http://www.reliancecpa.com/financial-planning.htm)",
+     "links": [
+      {
+       "text": "Financial planning",
+       "href": "http://www.reliancecpa.com/financial-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you live, work, or own a business in Brooksville, Spring Hill, Weeki Wachee, or anywhere else in Hernando County, you owe it to yourself to make sure you are as financially strong as you can be. The accountants and CPAs at Reliance Consulting can do just that. Because of our extensive knowledge and experience in tax law and other laws that affect your income and expenses, we are uniquely suited to take an objective look at your situation and advise you of the many options available to help you keep more of the money you work so hard for.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information and a free financial check up by the [Tampa accountants](http://www.reliancecpa.com/) at Reliance Consulting, please contact us today.",
+   "links": [
+    {
+     "text": "Tampa accountants",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 346
+}

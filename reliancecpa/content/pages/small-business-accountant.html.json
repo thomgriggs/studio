@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-accountant.html",
+ "slug": "small-business-accountant.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-accountant.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What a Small Business Accountant Can Do For You",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What a Small Business Accountant Can Do For You",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-accountant.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "small-business-accountant",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There never seem to be enough hours in the day for a small business owner. Regardless of the industry, no matter how big or small the workforce, there always seems to be another major task waiting on the horizon. No small business owner can go it alone, and Reliance Consulting, LLC, is here to make sure you don’t have to.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance can be your invisible partner, working the background to handle the mundane tasks that seem to drain so much energy and time from the work day. The best part? Rather than hiring several different companies to handle important responsibilities such as payroll, cash flow analysis, and tax planning, Reliance offers these services and much more – all under one roof. A small business accountant from Reliance can help with:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS audit help",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Account reconciliation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Strategy development",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Document and online security advice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance has been one of the Tampa Bay area’s premier accountancy firms, helping business owners throughout Florida by handling the accounting details so they are free to focus on other priorities. [Contact](http://www.reliancecpa.com//contact.html) us today to get started with a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 219
+}

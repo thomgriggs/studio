@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/demonstrating-trust",
+ "slug": "demonstrating-trust",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Demonstrating Workplace Trust | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/demonstrating-trust",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses the Importance of Demonstrating Trust in the Workplace",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses the Importance of Demonstrating Trust in the Workplace",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Demonstrating-Trust-300x200.jpg",
+   "alt": "Demonstrating Trust",
+   "alt_missing": false,
+   "title": "Demonstrating Trust",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many business owners intuitively know that the best way to get the most out of employees is to demonstrate trust in the workplace on a regular basis. A recent study by a pair of Canadian business academics provides empirical support to the idea that showing employees that they are trusted to do their work well with only minimal supervision is a great way to improve productivity. In short, happy employees are productive employees, and employees are happiest when they know that they are trusted and appreciated by their supervisors.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help small business owners determine the best way to demonstrate trust in the workplace. Why is it important? Because no company, big or small, can operate at peak efficiency if the people doing the work and the people responsible for overseeing the work view each other in an adversarial light. And mistrust often equates to fear, which leads people to categorize others as “enemies,” rather than partners in a business endeavor. It even goes deeper than a manager creating a sense of “we’re all in this together.” It’s about actively listening to what employees have to say, acting on their advice or suggestions, giving employees the benefit of the doubt, or encouraging them to use their own discretion in the absence of a formalized procedure.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To get more tips on how to get the best out of your employees, and how to maximize productivity company-wide, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today. We are a full-service CPA firm and small business consultancy.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 270
+}

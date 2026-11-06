@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/buying-a-business.html",
+ "slug": "buying-a-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Buying A Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/buying-a-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Talks About Buying A Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Talks About Buying A Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/buying-a-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "239",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you’ve made the decision to enter the business world, the next step is to decide whether to start from scratch or purchase an existing company. More often than not, the risks associated with buying an existing business are far less than those associated with building a company from the ground up. Still, there are advantages and disadvantages to both choices, all of which you’ll need to take into account before moving forward.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine which course of action is best for you. A lot will depend on how you want to approach your new business. Will your company produce something unusual or perform a unique service that only you can provide? Chances are, you won’t find an existing company that exactly matches your skill set or your goals. However, if the idea is to merely enter the business world and make a company as profitable as possible – regardless of the type of business – there are many facets of the company that must be researched before you decide to buy. These include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Assets and inventory",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Legal and tax obligations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Liabilities and debt",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marketing strategies, future and past",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reputation in the community",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Current employees’ job descriptions and salaries",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, we’ve helped hundreds of Tampa Bay area businesses find the path to maximum profitability. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 252
+}

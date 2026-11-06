@@ -1,0 +1,106 @@
+{
+ "url": "https://www.reliancecpa.com/records-for-cpa-meeting.htm",
+ "slug": "records-for-cpa-meeting.htm",
+ "template": "client-resources",
+ "family": "S1",
+ "title": "What Records You Should Bring for the First Meeting with Your CPA in Tampa",
+ "seo": {
+  "title_tag": "What Records You Should Bring for the First Meeting with Your CPA in Tampa",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/records-for-cpa-meeting.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Records You Should Bring for the First Meeting with Your CPA in Tampa",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "What Records You Should Bring for the First Meeting with Your CPA in Tampa",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/records-for-cpa-meeting.jpg",
+     "alt": "What Records You Should Bring for the First Meeting with Your CPA in Tampa"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "A Certified Public Accountant from Reliance Consulting, LLC is here to help you with tax preparation, payroll planning, bookkeeping, and so much more. And it all starts during your first meeting with Reliance Consulting, when we will give you a free checkup of your financial health.",
+     "Whether you seek business advice or personal financial guidance, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting will want to learn as much as possible about your circumstance in order to best serve your needs and help you reach your goals.",
+     "The records you’ll need to bring to your first consultation with a CPA at Reliance Consulting will vary, depending on your unique circumstance. Perhaps you seek personal financial advice, in which case you would want to compile a list of expenses as well as a list of assets and income. Perhaps you seek a public audit of your business, in which case you should bring any and all relevant financial documents such as a profit-and-loss statement, a cash flow statement and a balance sheet.",
+     "In general, a CPA would like you to bring the following to a tax preparation:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Your most recent tax return"
+     },
+     {
+      "text": "Forms for wages (W-2), interest earned and dividends (1099), mortgage interest paid (1098)"
+     },
+     {
+      "text": "Brokerage statements"
+     },
+     {
+      "text": "Real estate transaction statements"
+     },
+     {
+      "text": "Receipts, canceled checks and any other document that might be relevant"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Whether your needs include auditing, estate planning, diversifying investments, financial analysis or any of the many services provided by Reliance Consulting, when in doubt about the usefulness of a particular document, bring it along. It’s always better for a CPA to know more than is strictly necessary than to know too little."
+     },
+     {
+      "type": "p",
+      "text": "Your CPA in Tampa at Reliance Consulting, LLC will work hand-in-hand with you to help you reach your financial goals. Contact us today for a free initial consultation and financial health checkup."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/records-for-your-first-meeting/",
+  "role": "client-resource",
+  "tag": "accounting",
+  "old_path": "/records-for-cpa-meeting.htm"
+ },
+ "short_title": "What to Bring to Your First Meeting"
+}

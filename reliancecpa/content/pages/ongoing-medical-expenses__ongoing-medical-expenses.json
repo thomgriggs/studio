@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses/",
+ "slug": "ongoing-medical-expenses__ongoing-medical-expenses",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Ongoing Medical Expenses - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ongoing Medical Expenses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Can Help You Stay Prepared for Large and Ongoing Medical Expenses](https://www.reliancecpa.com/ongoing-medical-expenses)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Can Help You Stay Prepared for Large and Ongoing Medical Expenses",
+     "href": "https://www.reliancecpa.com/ongoing-medical-expenses"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Ongoing Medical Expenses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished March 5, 2013 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Ongoing-Medical-Expenses.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Ongoing-Medical-Expenses.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Ongoing-Medical-Expenses.jpg",
+   "alt": "Ongoing Medical Expenses",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Ongoing-Medical-Expenses.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

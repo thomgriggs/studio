@@ -1,0 +1,18 @@
+{#
+MODULE: cta-band
+PURPOSE: The original's photo CTA card: the Tampa skyline inset in the gutter, a dark scrim, 26px heading, a line of text, a primary button and an outlined one. A thin territory-coloured rule runs across its top edge on tier pages. Closing variant: the same card, used by the shared closing band on every page that has no CTA of its own.
+SLOTS: eyebrow, title, level, text, buttons[text, href], image.
+SQUARESPACE: Section with a background image and a section overlay (dark, flat), Heading 3, Text, two Buttons (the second in the outline style). The gradient scrim is approximated by the flat overlay; the territory rule is custom CSS.
+#}
+<section class="m m-cta" data-module="cta-band" data-tone="{{ tone }}">
+  <div class="cta">
+    <img class="cta__bg" src="{{ (s.image.src|asset) if s.image else root ~ 'assets/tampa.jpg' }}" alt="" loading="lazy">
+    <div class="cta__scrim" aria-hidden="true"></div>
+    <div class="cta__in">
+      {% if s.eyebrow %}<p class="hero__eyebrow">{{ s.eyebrow }}</p>{% endif %}
+      <h2 class="cta__h" data-orig-level="{{ s.level or 2 }}">{{ s.title|md }}</h2>
+      {% if s.text %}<p class="cta__t">{{ s.text|md }}</p>{% endif %}
+      {% if s.buttons %}<div class="actions">{% for b in s.buttons %}<a class="btn {{ 'btn-primary' if loop.first else 'btn-light' }}" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</div>{% endif %}
+    </div>
+  </div>
+</section>

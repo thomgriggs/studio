@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/itemization-tax-return/tax-forms./",
+ "slug": "itemization-tax-return__tax-forms.",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Itemized Tax Return - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/itemization-tax-return/tax-forms./",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Itemized Tax Return",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains the Factors that Determine Whether to Itemize on Your Tax Return](https://www.reliancecpa.com/itemization-tax-return)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains the Factors that Determine Whether to Itemize on Your Tax Return",
+     "href": "https://www.reliancecpa.com/itemization-tax-return"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Itemized Tax Return",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished June 28, 2013 | Full size is [900 × 598](https://www.reliancecpa.com/wp-content/uploads/Itemized-Tax-Return.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 598",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Itemized-Tax-Return.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Itemized-Tax-Return.jpg",
+   "alt": "Itemized Tax Return",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "598",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Itemized-Tax-Return.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tax forms 1040,1120,1065. U.S Income Tax Return.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/itemization-tax-return/tax-forms.).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/itemization-tax-return/tax-forms."
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 41
+}

@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/delegating-tasks.html",
+ "slug": "delegating-tasks.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Importance Of Delegating Tasks",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/delegating-tasks.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses The Importance Of Delegating Tasks In A Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses The Importance Of Delegating Tasks In A Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/delegating-tasks.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most important early lessons any business leader should absorb is that no one can do it alone. Even the owner of a sole proprietorship – which, by definition, would seem to be a solitary enterprise – should be willing to delegate certain tasks in order to reach the company’s goals. This is particularly true for small business owners when it comes to delegating the nuts-and-bolts financial side of running a business, tasks like payroll services, ongoing market research, cash flow management and tax planning.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you develop a plan for delegation, whether it’s building a corporate structure that incorporates automatic delegation of particular duties, or absorbing the time-consuming financial tasks that steal time from even the most organized and diligent business executive. The benefits of delegation include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "It frees you up to handle big-picture issues.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "It frees you up to enjoy much-needed down time.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "It demonstrates to your employees that you trust them to do the job well.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "It gives you a chance to challenge your employees with increased levels of responsibility.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, our business consultants have helped pave the way to profitability for hundreds of Tampa Bay area companies. From bookkeeping to strategic business planning, Reliance is here to help your business run smoothly and reach its maximum potential. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn more, or for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 255
+}

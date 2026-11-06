@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/ready-to-incorporate.html",
+ "slug": "ready-to-incorporate.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA In Tampa | What To Do When You’re Ready To Incorporate",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/ready-to-incorporate.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA In Tampa Tells You What To Do When You’re Ready To Incorporate",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA In Tampa Tells You What To Do When You’re Ready To Incorporate",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/ready-to-incorporate.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "ready-to-incorporate",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you have established a new business – and if it looks as if the business is going to thrive – you might decide that it’s time to structure the company as a corporation. There are many benefits to incorporating, including tax advantages, protection from liability, credibility with the public and within your industry, easier transferability, and more.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you decide whether the time is right to form a corporation. A Reliance business consultant will take pains to learn every facet of your business while helping you reach maximum profitability. This in-depth knowledge will allow your consultant to give you the best advice possible about the timing of incorporating, as well as if it is the best course of action. Should you decide to move forward with incorporation, you’ll need to take the following steps:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Choose your business name",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Find the proper location",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Select the legal structure (limited liability corporation, S corporation, C corporation, partnership etc.)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Decide on the company hierarchy and name the directors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine the type of shares available for stockholders",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtain a certificate of incorporation/organization",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Obtain an employer identification number from the IRS",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Process and file other corporate paperwork",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, we have helped hundreds of Tampa Bay area businesses thrive. Our goal is to provide all the advice and assistance you need to take your company where you want it to go in the short-term and the long-term. [Contact](http://www.reliancecpa.com//contact.html)Reliance today for information about incorporating your business or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 275
+}

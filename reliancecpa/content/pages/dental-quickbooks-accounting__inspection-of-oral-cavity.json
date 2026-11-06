@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity/",
+ "slug": "dental-quickbooks-accounting__inspection-of-oral-cavity",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "QuickBooks - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "QuickBooks",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Quickbooks Accounting from a Dedicated Dental CPA](https://www.reliancecpa.com/dental-quickbooks-accounting)",
+   "links": [
+    {
+     "text": "← Quickbooks Accounting from a Dedicated Dental CPA",
+     "href": "https://www.reliancecpa.com/dental-quickbooks-accounting"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "QuickBooks",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished December 21, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Quickbooks.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Quickbooks.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Quickbooks.jpg",
+   "alt": "QuickBooks",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Quickbooks.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 24
+}

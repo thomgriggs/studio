@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan/",
+ "slug": "veterinary-retirement-planning__retirement-plan",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Retirement-Plan - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Retirement-Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Retirement Planning Can Help Ensure a Secure Future](https://www.reliancecpa.com/veterinary-retirement-planning)",
+   "links": [
+    {
+     "text": "← Retirement Planning Can Help Ensure a Secure Future",
+     "href": "https://www.reliancecpa.com/veterinary-retirement-planning"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Retirement-Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [Kim Nguyen](https://www.reliancecpa.com) |\nPublished May 17, 2016 | Full size is [800 × 535](https://www.reliancecpa.com/wp-content/uploads/Retirement-Plan.jpg) pixels",
+   "links": [
+    {
+     "text": "Kim Nguyen",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "800 × 535",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Retirement-Plan.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Retirement-Plan.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "800",
+   "height": "535",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Retirement-Plan.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 26
+}

@@ -1,0 +1,8 @@
+{#
+MODULE: event-band
+PURPOSE: An upcoming event: heading, dates with times and venue, buttons beside a rounded photo (defined for kit parity, unused by Reliance).
+SLOTS: eyebrow, title, text, image, events[date, time, venue, address], buttons[].
+SQUARESPACE: Two-column Section: Image beside Heading, Text blocks (date, time, venue), Button.
+#}
+{% from "_macros.html" import eyebrow, img, ph, actions %}
+<section class="m m-event" data-module="event-band" data-tone="{{ tone }}"><div class="story"><div class="story__t">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-section">{{ s.title|md }}</h2>{% if s.text %}<p>{{ s.text|md }}</p>{% endif %}<ul class="links" role="list">{% for e in s.events %}<li><strong>{{ e.date }}</strong>{% if e.time %}, {{ e.time }}{% endif %}<small>{{ e.venue }}{% if e.address %}, {{ e.address }}{% endif %}</small></li>{% endfor %}</ul>{{ actions(s.buttons) }}</div><figure class="imgs">{% if s.image %}{{ img(s.image) }}{% else %}{{ ph("event photo") }}{% endif %}</figure></div></section>

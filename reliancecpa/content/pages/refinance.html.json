@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/refinance.html",
+ "slug": "refinance.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Refinancing Your Mortgage | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/refinance.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses the Ramifications of Refinancing Your Home Mortgage",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses the Ramifications of Refinancing Your Home Mortgage",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/refinance.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "refinance",
+   "width": "300",
+   "height": "182",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are fortunate enough to own your own home, and you have always remained current on your mortgage payments, you may have considered whether it makes sense to try to refinance your loan. In fact, if your credit is at a certain level, there’s a very good chance that you have received unsolicited offers through the mail from banks that would love to help you refinance into a loan with a lower interest rate. You’ve held off until now, but perhaps it’s time to think about the potential ramifications of refinancing your home mortgage.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you sort through the benefits and potential drawbacks of refinancing your home mortgage. In general, homeowners with the financial wherewithal find that it makes sense to take advantage of lower interest rates when they’re available. A timely refinance can save a homeowner thousands of dollars over the life of a loan. A few other things to consider:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Do you plan on being in your home long-term?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Is there a prepayment penalty on your current mortgage?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are the ancillary costs associated with a new mortgage prohibitive?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Does the lower interest rate significantly reduce the amount you save in interest tax deductions?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com//contact.html) Reliance today for help answering these and other questions regarding refinancing your home mortgage. We’ll get started with a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 241
+}

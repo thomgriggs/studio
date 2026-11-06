@@ -1,0 +1,109 @@
+{
+  "source": "proposed",
+  "url": "https://www.reliancecpa.com/contact/",
+  "slug": "contact.html",
+  "template": "contact",
+  "family": "proposed",
+  "title": "Contact Us",
+  "own_closing": true,
+  "seo": {
+    "title_tag": "Contact Reliance Consulting | Tampa, Florida",
+    "meta_description": "Call, email or stop by Reliance Consulting, LLC in Tampa, Florida.",
+    "h1_count": 1
+  },
+  "_about": "Proposed page: the live /contact.html text (title, intro, address, phone, fax, email, map link) unchanged, plus a short contact form, as in concept-02's Contact page. Replaces the live page (kept in structured/contact.html.json as source). Design-free module instances.",
+  "verified": [
+    "Title, intro sentence, address, phone, fax, email and the map link: live /contact.html"
+  ],
+  "confirm": [
+    "The contact form: the live contact page has no form (only the details and a map embed); concept-02 shows one. Fields (name, email, phone, what you need, message) and the label 'What do you need help with?' are new. Where the message should be delivered is an open question (see PROJECT_PLAN section 7)"
+  ],
+  "scope": {
+    "new_path": "/contact/",
+    "role": "contact",
+    "old_path": "/contact.html"
+  },
+  "modules": [
+    {
+      "module": "title-banner",
+      "slots": {
+        "title": "Contact Us"
+      }
+    },
+    {
+      "module": "rich-text",
+      "slots": {
+        "body": [
+          {
+            "type": "p",
+            "text": "If you have any unanswered questions, please let us know. There are easy ways to contact us. Simply call, email, or just stop by."
+          },
+          {
+            "type": "p",
+            "text": "**Reliance Consulting LLC**\n\n14499 N Dale Mabry Hwy Suite 179-S\n\nTampa, FL, 33618\n\nPhone: (813)931-7258\n\nFax: (813)931-5555"
+          },
+          {
+            "type": "p",
+            "text": "Email: kim@reliancecpa.com"
+          },
+          {
+            "type": "p",
+            "text": "[View Larger Map](http://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=13940+N+Dale+Mabry+Hwy+Tampa,+FL,+33618&aq=&sll=28.037213,-82.488785&sspn=0.06553,0.132093&vpsrc=0&ie=UTF8&hq=&hnear=13940+N+Dale+Mabry+Hwy,+Tampa,+Florida+33618&t=m&z=14&iwloc=A)"
+          }
+        ]
+      }
+    },
+    {
+      "module": "form",
+      "variant": "contact",
+      "slots": {
+        "title": "Send us a message",
+        "text": "We will reply by phone or email, whichever you prefer.",
+        "form": {
+          "type": "form",
+          "note": "Native Squarespace Form block; not collected in the mockup",
+          "fields": [
+            {
+              "id": "name",
+              "label": "Name",
+              "type": "name",
+              "required": true
+            },
+            {
+              "id": "email",
+              "label": "Email",
+              "type": "email",
+              "required": true
+            },
+            {
+              "id": "phone",
+              "label": "Phone",
+              "type": "phone"
+            },
+            {
+              "id": "need",
+              "label": "What do you need help with?",
+              "type": "select",
+              "options": [
+                "Tax Preparation",
+                "Business Accounting",
+                "Business & Tax Consulting",
+                "Not sure yet"
+              ]
+            },
+            {
+              "id": "message",
+              "label": "Message",
+              "type": "textarea"
+            }
+          ],
+          "submit": {
+            "text": "Send message",
+            "page": "get-started__thanks"
+          },
+          "disclaimer": "Please do not send Social Security numbers or account details through this form."
+        }
+      }
+    }
+  ]
+}

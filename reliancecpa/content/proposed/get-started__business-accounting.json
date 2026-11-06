@@ -1,0 +1,123 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/get-started/business-accounting/",
+ "slug": "get-started__business-accounting",
+ "template": "get-started",
+ "family": "proposed",
+ "title": "I need help keeping my business's books.",
+ "flow": true,
+ "own_closing": true,
+ "tier": "business-accounting",
+ "seo": {
+  "title_tag": "I need help keeping my business's books. | Get Started | Reliance Consulting",
+  "meta_description": "Send Reliance Consulting a short request about this.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`. Step 2 of the intake flow (one Form block).",
+ "verified": [
+  "Tier choice: PROJECT_PLAN section 2"
+ ],
+ "confirm": [
+  "Page copy: 'What do you need help with?', 'Step 1 of 2' / 'Step 2 of 2', 'Change', 'Send my request', the five choice cards and their lines (new copy; the plan's choices are tiers, existing client, not sure)",
+  "Disclaimer under every form: \"Please do not send Social Security numbers or account details through this form.\" (new wording; the live privacy policy is the only related text)",
+  "Contact fields on every form: Name, Email, Phone, 'How should we reach you?' (Call / Email), 'Anything else we should know?'; Name, Email and the contact method are required",
+  "Cynthia: who actually receives a new lead today and by which inbox; each form should email that person (Squarespace forms can route per form, so four forms = four inboxes if wanted)",
+  "Cynthia: which questions the tax team wishes prospects answered up front; the questions below are placeholders",
+  "Cynthia: privacy limits for financial-prospect data, and whether there is a scheduling tool to link",
+  "Squarespace Form blocks cannot show or hide questions, so each choice has its own page and form; the native form's post-submit redirect goes to the thanks page",
+  "Questions on this page: What kind of business is it? [text]; Do you use QuickBooks? [Yes, No, Not sure]; What do you need? [Bookkeeping, QuickBooks help, Payroll, Cash flow, Outsourced accounting (BackOffice), Something else]"
+ ],
+ "modules": [
+  {
+   "module": "form",
+   "slots": {
+    "step": {
+     "label": "Step 2 of 2",
+     "current": 2,
+     "total": 2
+    },
+    "title": "I need help keeping my business's books.",
+    "text": "A few details, then your contact information.",
+    "change": {
+     "text": "Change",
+     "page": "get-started"
+    },
+    "form": {
+     "type": "form",
+     "note": "Native Squarespace Form block; not collected in the mockup",
+     "fields": [
+      {
+       "id": "biz",
+       "label": "What kind of business is it?",
+       "type": "text"
+      },
+      {
+       "id": "qb",
+       "label": "Do you use QuickBooks?",
+       "type": "radio",
+       "options": [
+        "Yes",
+        "No",
+        "Not sure"
+       ]
+      },
+      {
+       "id": "need",
+       "label": "What do you need?",
+       "type": "checkbox",
+       "options": [
+        "Bookkeeping",
+        "QuickBooks help",
+        "Payroll",
+        "Cash flow",
+        "Outsourced accounting (BackOffice)",
+        "Something else"
+       ]
+      },
+      {
+       "id": "name",
+       "label": "Name",
+       "type": "name",
+       "required": true
+      },
+      {
+       "id": "email",
+       "label": "Email",
+       "type": "email",
+       "required": true
+      },
+      {
+       "id": "phone",
+       "label": "Phone",
+       "type": "phone"
+      },
+      {
+       "id": "method",
+       "label": "How should we reach you?",
+       "type": "radio",
+       "options": [
+        "Call",
+        "Email"
+       ],
+       "required": true
+      },
+      {
+       "id": "more",
+       "label": "Anything else we should know?",
+       "type": "textarea"
+      }
+     ],
+     "submit": {
+      "text": "Send my request",
+      "page": "get-started__thanks"
+     },
+     "disclaimer": "Please do not send Social Security numbers or account details through this form."
+    },
+    "call": {
+     "text": "Would you rather call?",
+     "phone": "(813) 931-7258"
+    }
+   }
+  }
+ ]
+}

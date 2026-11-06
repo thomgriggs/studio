@@ -1,0 +1,122 @@
+{
+ "url": "https://www.reliancecpa.com/s-corporation.htm",
+ "slug": "s-corporation.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Ask your CPA in Tampa FL about the Benefits of Becoming an S Corporation",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/s-corporation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg",
+   "alt": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+   "alt_missing": false,
+   "title": "s-corporation",
+   "width": "300",
+   "height": "209",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many companies have begun to explore the potential tax benefits of becoming an S Corporation. Most corporations are C corporations, which means both the corporate profit and the shareholders’ dividends are taxed. In an S corporation, such “double taxation” is avoided, because the company’s income or losses are divided among the shareholders, who report the income or loss on their personal tax returns.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are considering incorporation for your new or expanding business, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you determine whether you are eligible to file as S Corporation.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "According to the IRS, in order to be qualified to become an S corporation, the following criteria must apply:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The company must be domestic.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The company’s shareholders may not include partnerships, corporations or non-resident aliens.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The company may have no more than 100 shareholders.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The company must have one class of stock.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The name is derived from the fact that companies that make a valid election to become “S” corporations will be taxed under Subchapter S, Chapter 1 of the Internal Revenue Code. Owners of an S corporation enjoy many of the same taxation benefits as legal partnerships and also receive limited liability protection from creditors.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For a clear explanation of your company’s options as you explore the possibility of incorporation, and to find out whether you might be eligible to file as an S corporation, contact your CPA in Tampa at Reliance Consulting, LLC. With more than a quarter-century of experience helping businesses in the Tampa, FL region reach their full potential, our staff is here for all your corporate strategy needs.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 282
+}

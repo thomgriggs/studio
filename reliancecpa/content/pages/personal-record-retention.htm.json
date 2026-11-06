@@ -1,0 +1,177 @@
+{
+ "url": "https://www.reliancecpa.com/personal-record-retention.htm",
+ "slug": "personal-record-retention.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-record-retention.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/personal-record-retention.jpg",
+   "alt": "sk Your CPA in Tampa about what Personal Records You Should Keep",
+   "alt_missing": false,
+   "title": "personal-record-retention",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It piles up on your desk, on your kitchen counters, and in your closet. As you look around your Tampa, FL area home, you start to notice random piles of receipts, insurance policies, paid bills, and car repair records. In all likelihood, you are left wondering, “How long do I have to keep this stuff?”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The most responsible answer to that question is to talk to your [CPA in Tampa](http://www.reliancecpa.com/). Your CPA can provide you with valuable advice about the paperwork you need to keep indefinitely, as well as the paperwork you can safely throw out.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While local, county, state, and federal guidelines often conflict on their record retention guidelines, the following are some general principles about how long you should store documentation:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Audit Reports by your Tampa CPA – indefinitely",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Car Records – until vehicle is sold",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit Card Receipts – until verified on your statement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit Card Statements – 3 years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Expired Insurance Policies – 3 years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income Tax Returns – indefinitely",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income Tax Payment Checks – indefinitely",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance Policies – until expired",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Legal Records – indefinitely",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other Bills – until you’ve verified payment on the next billing cycle",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pay Stubs – until information is verified on your W-2",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property Records, including receipts on property improvements – until property is sold",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sales Receipts – until warranty expires",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Utility Records – 3 years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Warranties and Instructions – for the life of the item",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you ever feel nervous about disposing of a document that seems important, it’s a good idea to check with your CPA before throwing the document out. Disposing of important documents can be risky, so getting a second opinion from a professional accountant is usually the safest bet.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information about record retention guidelines, please contact Reliance Consulting, LLC. We’ll be happy to provide you with a free initial consultation and a checkup of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 324
+}

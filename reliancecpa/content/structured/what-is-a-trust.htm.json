@@ -1,0 +1,99 @@
+{
+ "url": "https://www.reliancecpa.com/what-is-a-trust.htm",
+ "slug": "what-is-a-trust.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Your CPA in Tampa Answers the Question, What is a Trust?",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Answers the Question, What is a Trust?",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/what-is-a-trust.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Answers the Question, What is a Trust?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Your CPA in Tampa Answers the Question, What is a Trust?",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/trust.gif",
+     "alt": "CPA in Tampa - Trust"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "A trust is a legal agreement that places your assets in the care of another person, usually for the purpose of managing your property and/or money according to your wishes after you’re gone. One of the main objectives of a trust is to minimize the income tax burden for your heirs, as well as the income tax burden on the trust’s assets – but trusts also serve many other purposes in estate planning and wealth management.",
+     "Your [CPA in Tampa](http://www.reliancecpa.com//index.html) at Reliance Consulting, LLC can help you decide whether to set up a trust and which of the many types of trust agreements might be right for you.",
+     "Should you decide to establish a trust, one of the first steps is to name a trustee, a person or legal entity responsible for administering your assets. This could be someone you know personally, or it could be a bank or other corporation with trust powers.",
+     "You’ll also need to name a beneficiary. This could be your children, spouse or other family members. Or, it could be your favorite charity or any other organization or group that you would like to benefit.",
+     "Another important decision you’ll make if you decide to establish a trust is how it will be structured. Here are the basic classifications of trusts:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Testamentary: The trust is spelled out in the last will and testament of the grantor. Generally, the beneficiary only gains access to the assets following probate of the will."
+     },
+     {
+      "text": "Living: A beneficiary might be granted access to the assets before your death. For example, money might be set aside to distribute to a minor child when he or she reaches a certain age."
+     },
+     {
+      "text": "Revocable: The grantor has the right to change the terms of the trust after it has become effective."
+     },
+     {
+      "text": "Irrevocable: The grantor gives up the right to change the terms after the trust has become effective."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Since opening our doors in 1984, Reliance Consulting, LLC has helped our clients navigate complicated financial decisions such as the establishment of a trust and other estate planning issues. To learn more about the potential tax benefits of trusts, or for any of your financial needs, contact your CPA in Tampa at Reliance Consulting."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/what-is-a-trust/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/what-is-a-trust.htm"
+ }
+}

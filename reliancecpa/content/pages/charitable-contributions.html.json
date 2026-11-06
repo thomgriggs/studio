@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/charitable-contributions.html",
+ "slug": "charitable-contributions.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA in Tampa | Tax Credit Rules for Charitable Contributions",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/charitable-contributions.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Tax Credit Rules for Charitable Contributions",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Tax Credit Rules for Charitable Contributions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/charitable-contributions.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Donating to charity is a wonderful way to feel involved in your community or the world at large. If you have the wherewithal to give, you also should be aware of the tax benefits of donating money or property to a charitable organization.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are thinking about donating money, a car, real estate or other property to a charity, a [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you organize your contributions in order to take full advantage of available tax deductions. In general, you can deduct cash donations in full up to 50 percent of your adjusted gross income, and property deductions in full up to 30 percent of adjusted gross income. Capital gains assets also can be donated and deducted in full up to 20 percent of adjusted gross income. Additional practical considerations include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A donation of actual cash or property must be made; a pledge or a promise is not sufficient.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The receiving organization must be a qualified tax-exempt entity; if donating to something other than a religious organization, ask for proof of 501(c)(3) tax-exempt status.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Donations must be itemized.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Documentation must be presented; this can include canceled checks, acknowledgement letters, receipts and/or appraisals of donated property.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Not all donations are tax deductable, including giving money to political parties, contributions to individuals, fees or dues paid to professional organizations and others. To sort out which of your donations may help your bottom line at tax time, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 257
+}

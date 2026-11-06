@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/second-career",
+ "slug": "second-career",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Second Career | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/second-career",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Can Help You Start a Second Career by Starting a Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Can Help You Start a Second Career by Starting a Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Second-Career-199x300.jpg",
+   "alt": "Second Career",
+   "alt_missing": false,
+   "title": "Second Career",
+   "width": "199",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you have recently retired, or parted ways with your old company because of down-sizing, now might be the time to start your second career by founding your own business. It need not even be the same type of business you participated in at your former company. The beauty of building a second career is that it can (and should) be something that truly interests you. Of course, it also helps if the product or service you intend to sell interests your potential customers.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A T[ampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you get that new business off the ground. If you have the spark of an idea, come to us to find out what to do next. Certainly, at or near the top of the list will be finding a way to raise capital for your startup. But as important as money will be, it really is only the start. In order to position a new business to succeed, a lot of planning is required. Here are only a few items you’ll need on your to-do list:",
+   "links": [
+    {
+     "text": "ampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Identify potential customers. Who will buy what you sell?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Study your potential competition. What do they do well? What weaknesses can you exploit?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish a legal structure. Sole proprietorship? Partnership? Corporation?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine best practices, including the skills required for your employees (if you decide to hire)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine your financial strengths and weaknesses.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set goals for one year, five years, 10 years down the road.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This is only the beginning. Let Reliance Consulting help you navigate the details of starting your own company, including tax planning and writing a comprehensive business plan. To get started, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 290
+}

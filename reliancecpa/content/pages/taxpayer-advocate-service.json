@@ -1,0 +1,122 @@
+{
+ "url": "https://www.reliancecpa.com/taxpayer-advocate-service",
+ "slug": "taxpayer-advocate-service",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Taxpayer Advocate Service | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/taxpayer-advocate-service",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Introduces You to the Taxpayer Advocate Service",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Introduces You to the Taxpayer Advocate Service",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/TAS-IRS-200x300.jpg",
+   "alt": "TAS IRS",
+   "alt_missing": false,
+   "title": "TAS IRS",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While it might seem counter-intuitive to turn to an agency within the IRS to receive meaningful assistance with sticky tax problems, the Taxpayer Advocate Service (TAS) actually is a valuable resource for taxpayers who have been unable to resolve their tax problems through normal IRS channels. The TAS is an independent organization within the IRS. As such, it truly does work on behalf of the taxpayers to resolve issues. Many people find themselves somewhat paralyzed, unsure where to turn or what to do, in the face of daunting tax issues. But as the TAS website says, “The worst thing you can do is nothing at all!”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, is here to help make sure that you or your company is positioned so that you never have to enlist the services of the TAS. Since 1984, we have helped thousands of individuals and hundreds of businesses in Florida with tax planning and preparation, payroll services, bookkeeping, and much more. It is our goal to make sure that you remain on the path to profitability, and we will leave no stone unturned in that regard.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "However, if you do find yourself on the wrong end of a tax-related problem, you might be able to find solace from the TAS. The organization has more than 2,000 employees who can help you work through problems that:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Are causing extreme financial difficulty for you, your family, or your business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Could lead to imminent legal action against you or your business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have not been met with satisfactory responses by the IRS – or have been ignored altogether",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Again, the best way to avoid becoming embroiled in an IRS-related issue is to let an experienced Tampa CPA from Reliance handle your accounting and tax planning.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) us today to learn more, and ask for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 317
+}

@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/taxpayer-rights.html",
+ "slug": "taxpayer-rights.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Taxpayer Rights",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/taxpayer-rights.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Helps You Understand Your Taxpayer Rights",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Helps You Understand Your Taxpayer Rights",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/taxpayer-rights.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "taxpayer-rights",
+   "width": "300",
+   "height": "195",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Regardless of someone’s political leanings, the Internal Revenue Service usually is seen in an adversarial light. This is understandable, considering that very few people actually enjoy paying taxes, and considering that the IRS exists solely to ensure the proper, legal collection of tax money. However, the IRS ultimately is beholden to the America’s taxpayers, which means the organization is, in fact, obligated to respect the rights of anyone who is required to pay taxes. It’s an obligation the IRS takes very seriously, something that is reflected in the official IRS mission statement: “Provide America’s taxpayers top quality service by helping them understand and meet their tax responsibilities and by applying the tax law with integrity and fairness to all.”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you understand your rights as a taxpayer, whether you are filing as an individual or as the head of a company. The IRS has even published a Declaration of Taxpayer Rights, a publication it routinely circulates to taxpayers who have been chosen to have their tax returns audited. These rights include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Protection of your rights",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Privacy and confidentiality",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Professional and courteous service",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Representation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payment of only the correct amount of tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Help with unresolved tax problems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Appeals and judicial review",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Relief from certain penalties and interest",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you seek a reliable, trustworthy, experienced tax preparer, or you are facing an IRS problem of any scope or level of complication, a Reliance CPA can help. [Contact](http://www.reliancecpa.com//contact.html) us today to learn how we can help ensure your rights as a taxpayer are protected, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 277
+}

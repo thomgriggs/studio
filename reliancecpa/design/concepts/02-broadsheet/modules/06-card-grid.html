@@ -1,0 +1,53 @@
+{#
+MODULE: card-grid
+PURPOSE: Cards in the system's own forms. Variant tiers (home): the original's alternating 7/5 service rows, one per tier, with eyebrow in the tier colour, h3, text, a row of tag chips for its services, a "Learn more" link and the tier photograph. Variant service-cards (tier landing): a grid of the system's .card surfaces, a thin territory rule on top, title and one line, whole card linked. Variant industries: the original's icon index, three columns of a duotone icon, name and one line, on the neutral band. Variant resources: plain cards with a small-caps kicker, an external card marked. Default: the same grid as service-cards without a territory.
+SLOTS: eyebrow, title, anchor, tier, cards[title, text[], href, link_text, links[text, href], tier, image, external, planned]. Variants tiers, service-cards, industries, resources.
+SQUARESPACE: tiers: three Sections, Image beside Heading 3 + Text + Buttons/links (alternate image side), tag chips = a row of small outlined Buttons or a Text block of links. service-cards: Summary block (grid, card style) over the tier's service pages, or Image-less Text blocks in a 3-column Section; the territory top rule needs the small custom CSS block. industries: Section on a grey background, six Text blocks in 3 columns with an uploaded SVG icon each (Phosphor icons are not available natively). resources: Summary block or three Text blocks with a Button each.
+#}
+{% from "_macros.html" import eyebrow, img, ph %}
+{% set icons = {'Physicians': 'stethoscope', 'Retail': 'storefront', 'Restaurants': 'fork-knife', 'Real Estate': 'house-line', 'Dental': 'tooth', 'Veterinary': 'paw-print'} %}
+{% if variant == 'tiers' %}
+{% for c in s.cards %}
+<section class="m m-tierrow {{ 'terr-' ~ concept.tier_territory[c.tier] if c.tier }}{{ ' m-tierrow--rev' if loop.index is even }}" data-module="card-grid" data-variant="tiers" {% if loop.first and s.title %}aria-label="{{ s.title }}"{% endif %}>
+  {% if loop.first and s.title %}<div class="tierrow__intro">{{ eyebrow(s.eyebrow) }}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>{% endif %}
+  <div class="split{{ ' split--rev' if loop.index is even }}">
+    <div class="tierrow__text">
+      <p class="eyebrow eyebrow--terr">{{ c.title }}</p>
+      <h3 class="h-row">{{ c.text[0]|md if c.text else c.title }}</h3>
+      {% if c.links %}<ul class="chips" role="list">{% for l in c.links %}<li><a class="chip" href="{{ l.href|href }}">{{ l.text }}</a></li>{% endfor %}</ul>{% endif %}
+      <p class="tierrow__more"><a class="btn btn-ghost" href="{{ c.href|href }}">Learn more about {{ c.link_text or c.title }} →</a></p>
+    </div>
+    <figure class="tierrow__photo">{% if c.image %}{{ img(c.image) }}{% else %}{{ ph("photo for " ~ c.title) }}{% endif %}</figure>
+  </div>
+</section>
+{% endfor %}
+{% elif variant == 'industries' %}
+<section class="m m-index" data-module="card-grid" data-variant="industries" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+  {% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}
+  <div class="index">
+    {% for c in s.cards %}
+    {% set ns = namespace(icon='briefcase') %}{% for k, v in icons.items() %}{% if c.title.startswith(k) %}{% set ns.icon = v %}{% endif %}{% endfor %}
+    <div class="index__item">
+      <i class="ph-duotone ph-{{ ns.icon }}" aria-hidden="true"></i>
+      <div><h3 class="h-item">{% if c.href %}<a href="{{ c.href|href }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>{% for t in c.text %}<p>{{ t|md }}</p>{% endfor %}{% if c.href and c.link_text %}<a class="index__link" href="{{ c.href|href }}">{{ c.link_text }} →</a>{% endif %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% else %}
+<section class="m m-cards{{ ' m-cards--' ~ variant if variant }}" data-module="card-grid" data-variant="{{ variant }}" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <div class="cards__head">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}</div>
+  <div class="cards">
+    {% for c in s.cards %}
+    {% set ct = c.tier or s.tier %}
+    <{{ 'a' if c.href and not c.planned else 'div' }} class="card elev-sm cardx{{ ' ' ~ 'terr-' ~ concept.tier_territory[ct] if ct and variant != 'resources' }}"{% if c.href and not c.planned %} href="{{ c.href|href }}"{% if c.external %} rel="noopener"{% endif %}{% endif %}>
+      {% if variant == 'resources' %}<span class="card-kicker">{{ 'Client login' if c.external else 'For clients' }}</span>{% elif c.eyebrow %}<span class="card-kicker">{{ c.eyebrow }}</span>{% endif %}
+      <span class="card-title">{{ c.title }}</span>
+      {% for t in c.text %}<span class="card-body">{{ t|md }}</span>{% endfor %}
+      {% if c.link_text or c.href %}<span class="card-meta cardx__go">{{ c.link_text or 'Learn more' }} →</span>{% endif %}
+    </{{ 'a' if c.href and not c.planned else 'div' }}>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

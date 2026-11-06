@@ -1,0 +1,142 @@
+{
+ "url": "https://www.reliancecpa.com/why-you-need-life-insurance.htm",
+ "slug": "why-you-need-life-insurance.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa FL Discusses Why You Need Life Insurance",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/why-you-need-life-insurance.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa, FL Discusses Why You Need Life Insurance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "CPA in Tampa, FL Discusses Why You Need Life Insurance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/why-you-need-life-insurance.jpg",
+   "alt": "CPA in Tampa, FL Discusses Why You Need Life Insurance",
+   "alt_missing": false,
+   "title": "why-you-need-life-insurance",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Working as a CPA in the Tampa, FL area since 1984, the staff here at Reliance Consulting, LLC has been asked one question many times by our clients: “Do I really need life insurance?” In almost all cases, the answer has been, “Yes.”",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Regardless of one’s current financial situation, it’s only natural (and smart) to review one’s expenses periodically and eliminate any bills that seem unnecessary. Indeed, life insurance can seem like a non-essential since it does not provide you with any immediate benefit, but that’s because you don’t buy life insurance for yourself – you buy it for your loved ones who depend on you for regular income.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As your [CPA in Tampa](http://www.reliancecpa.com/), we would remind you of the many ways that life insurance could protect your family’s future in the event that something happened to you, such as paying for:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The mortgage so that your family has the security of staying in their current home",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Your children’s college education",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit card debt and other debt that could mean financial ruin for your spouse if it was not paid off",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Medical care for your family",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement income for your spouse",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement income for you through tax free loans from cash value",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A regular income that will help keep your family in the standard of living they are accustomed to",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Your funeral expenses, which is particularly valuable to survivors who are grieving and should not be placed under additional stress",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you have decided that you need life insurance, the next question becomes, “How much life insurance should I buy?” The answer to this question is more complex since it depends on many factors, such as your current wages, savings, debt, and the number of dependents you have. Furthermore, you have to be careful asking this question to insurance agents since they work for commissions and have a financial motivation to sell you too much life insurance.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To receive an unbiased opinion on your life insurance needs, contact a CPA in Tampa, FL from Reliance Consulting. We will be happy to provide you with a free checkup of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 361
+}

@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/intellectual-property.html",
+ "slug": "intellectual-property.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | How to Protect Intellectual Property",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/intellectual-property.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How to Protect Intellectual Property in Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How to Protect Intellectual Property in Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/intellectual-property.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "According to the U.S. Patent and Trademark Office (USPTO), about $250 billion is lost each year due to copyright piracy. The USPTO also warns that intellectual property (IP) theft costs the U.S. economy about 750,000 jobs each year. Small companies, with fewer resources than large corporations, must be even more vigilant about protecting their trade secrets and proprietary ideas.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help a small business owner develop a strategy for protecting intellectual property from potential idea thieves. One thing the USPTO emphasizes in its programs to educate business owners about the dangers of IP theft is that most trademarks, patents and copyrights are not protected outside the U.S. It’s important to research the IP laws in any foreign country where you plan to do business. Within the U.S., the following IP can and should be protected by a trademark, patent or copyright:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Inventions, including a new way to manufacture a particular product",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Names, symbols, sounds and colors that distinguish goods or services as uniquely sourced",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Original literary works, music and art (published and unpublished)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Digital property, including proprietary software",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, our small business consultants have helped hundreds of Tampa Bay area companies reach and sustain maximum profitability and efficiency. Whether you need assistance with payroll services, tax planning, cash flow management or any aspect of your business, Reliance can help. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more about how to protect yourself from IP theft, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 267
+}

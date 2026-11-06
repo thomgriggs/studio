@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/equilibrium-price/equilibrium-price/",
+ "slug": "equilibrium-price__equilibrium-price",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/equilibrium-price/equilibrium-price",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Equilibrium Price - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/equilibrium-price/equilibrium-price/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Equilibrium Price",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains Equilibrium Price](https://www.reliancecpa.com/equilibrium-price)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains Equilibrium Price",
+     "href": "https://www.reliancecpa.com/equilibrium-price"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Equilibrium Price",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished April 30, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/equilibrium-price.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/equilibrium-price.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/equilibrium-price.jpg",
+   "alt": "Equilibrium Price",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/equilibrium-price.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/equilibrium-price/equilibrium-price).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/equilibrium-price/equilibrium-price"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 24
+}

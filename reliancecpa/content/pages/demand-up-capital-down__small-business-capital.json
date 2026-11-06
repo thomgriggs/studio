@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital/",
+ "slug": "demand-up-capital-down__small-business-capital",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Small Business Capital - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Small Business Capital",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Provides Advice About What to do When Demand is Up, but Capital Access is Down](https://www.reliancecpa.com/demand-up-capital-down)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Provides Advice About What to do When Demand is Up, but Capital Access is Down",
+     "href": "https://www.reliancecpa.com/demand-up-capital-down"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Small Business Capital",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished May 31, 2012 | Full size is [900 × 598](https://www.reliancecpa.com/wp-content/uploads/Small-Business-Capital.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 598",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Small-Business-Capital.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Small-Business-Capital.jpg",
+   "alt": "Small Business Capital",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "598",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Small-Business-Capital.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/demand-up-capital-down/small-business-capital).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 37
+}

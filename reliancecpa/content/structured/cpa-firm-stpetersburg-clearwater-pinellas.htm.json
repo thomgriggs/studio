@@ -1,0 +1,102 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm",
+ "slug": "cpa-firm-stpetersburg-clearwater-pinellas.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "CPA Firm & Accountants Serving St Petersburg, Clearwater, Largo, Palm Harbor, Pinellas County, FL & Beyond",
+ "seo": {
+  "title_tag": "CPA Firm & Accountants Serving St Petersburg Clearwater Largo Palm Harbor Pinellas County FL & Beyond",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Firm & Accountants Serving St Petersburg, Clearwater, Largo, Palm Harbor, Pinellas County, FL & Beyond",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "CPA Firm & Accountants Serving St Petersburg, Clearwater, Largo, Palm Harbor, Pinellas County, FL & Beyond",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/stpetersburg-clearwater-pinellas.jpg",
+     "alt": "CPA Serving St Petersburg, Clearwater, Pinellas County"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "From the pristine beaches of Clearwater to the rich culture of St Petersburg, Pinellas County is a crown jewel of the Tampa Bay, Florida area. With its resort style surroundings and ample opportunities for both business and pleasure, Pinellas County encompasses about 1 million residents within the borders of its pristine peninsula.",
+     "Reliance Consulting, LLC is happy to provide the residents and business owners of Pinellas County, FL with all the CPA and other accountant services they need, leaving them more time to enjoy all the fun and sun Pinellas County has to offer. To ensure the best financial health of our clients in Largo, Palm Harbor, Safety Harbor, and the rest of Pinellas County, our top-tier CPA firm provides a comprehensive range of services, including:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Personal and [business tax](http://www.reliancecpa.com/business-tax.htm) services"
+     },
+     {
+      "text": "Tax planning"
+     },
+     {
+      "text": "Bookkeeping, payroll, and other [small business accountant](http://www.reliancecpa.com/small-business-accounting.htm) services"
+     },
+     {
+      "text": "Cash flow management"
+     },
+     {
+      "text": "Business finance consulting and business planning"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Each [Tampa CPA](http://www.reliancecpa.com/) and accountant from Reliance Consulting cares about your ability to make wise financial decisions. For example, Reliance Consulting is here to help you decipher whether a large purchase you make—such as a business equipment purchase in Clearwater or a house purchase in St Petersburg—has tax consequences or not. We also can consult you on protecting your assets from lawsuits, funding your children’s educational plans, and managing retirement plans."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/areas-served/st-petersburg-clearwater-pinellas/",
+  "role": "local-seo",
+  "old_path": "/cpa-firm-stpetersburg-clearwater-pinellas.htm"
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/sales-strategy.html",
+ "slug": "sales-strategy.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Sales Strategy | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/sales-strategy.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Sales Strategy for Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Sales Strategy for Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/sales-strategy.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "sales-strategy",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The sales strategy you choose to employ for your small business should be built around two things: your unique ability to provide a desirable product or service, and your ability to convince as many people as possible that they can’t do without your unique product or service. With those two things as a foundation, the next step will be to identify your target market. Once those consumers have been identified, you’ll need to figure out how to prove to them that they do, in fact, need to have what you are offering.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, will help you develop a sales strategy that simultaneously takes advantage of the unique strengths of your company and identifies your potential market. Research is crucial when developing a sales strategy, as is flexibility. Not every potential customer will be responsive to the same presentation, which is why you’ll need to put a lot of thought into how you formulate your plan. The bottom line, though, is that without a viable product or service, even the best sales strategy is not going to work.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Here are a few points to consider as you develop your short- and long-term sales plans:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Set goals that are specific and measurable, based on the nature of the product or service for sale.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine how you intend to sell, whether through a website, industry conventions, or direct-to-consumer tactics.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If you’re selling to a large organization, find the right buyer by conducting research into a company’s structure",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Take advantage of programs that give local managers of large purchasing organizations (like national chain stores) the option to buy locally produced goods.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses develop sound sales strategies. It’s just one aspect of our small business consultancy, which can also provide assistance with business accounting services such as payroll management, tax planning, and tax preparation. [Contact](http://www.reliancecpa.com//contact.html) us today for information about sales strategies, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 345
+}

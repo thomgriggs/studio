@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/florida-prepaid.html",
+ "slug": "florida-prepaid.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Florida Prepaid College Tuition | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/florida-prepaid.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Discusses When to Enroll a Child in Florida’s Prepaid Tuition Program",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Discusses When to Enroll a Child in Florida’s Prepaid Tuition Program",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/florida-prepaid.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1990, college tuition in the state of Florida’s university system has increased by an average of six percent per year. At that rate, tuition for a child born this year will cost more than twice as much as it does now. Fortunately for parents with college aspirations for their young children, a Florida Prepaid College Plan will lock in today’s tuition prices – even if a child’s freshman year is decades in the future.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, is here to help you plan for your child’s future education. While Florida Prepaid College Plans are a smart way to avoid the headache of wondering whether you can afford college tuition down the road, the sheer number of options offered by the state can create confusion. A financial evaluation by a Tampa CPA at Reliance can help you sort through the options and figure out which method of college savings is best for your family.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One factor that applies to anyone who decides to enroll in a Florida Prepaid College Plan – the earlier in your child’s life that you open your account, the better off you are likely to be. As a Tampa CPA from Reliance will tell you, the state’s long-range estimate for tuition generally goes up each year, so the sooner you lock in a rate, the less you pay over the life of the account. Also, the younger your child is at the start of the account, the less you pay each month.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) a Tampa CPA at Reliance Consulting today for a complete financial health checkup and to learn how best to secure an affordable college education for your child.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 292
+}

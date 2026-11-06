@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist/",
+ "slug": "dental-virtual-client-office__young-dentist",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Virtual Client Office - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Virtual Client Office",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Dental CPA can Help You Establish a Virtual Client Office for Your Dental Practice](https://www.reliancecpa.com/dental-virtual-client-office)",
+   "links": [
+    {
+     "text": "← A Dental CPA can Help You Establish a Virtual Client Office for Your Dental Practice",
+     "href": "https://www.reliancecpa.com/dental-virtual-client-office"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Virtual Client Office",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished December 3, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Dental-Virtual-Client-Office.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Virtual-Client-Office.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Dental-Virtual-Client-Office.jpg",
+   "alt": "Dental Virtual Client Office",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Virtual-Client-Office.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Portrait of pretty assistant looking at camera in dentistry office",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-virtual-client-office/young-dentist).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 45
+}

@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/bookkeeping.htm",
+ "slug": "bookkeeping.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Bookkeeping for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Beyond",
+ "seo": {
+  "title_tag": "Bookkeeping for Tampa St Petersburg Clearwater Sarasota Lakeland Manatee Pasco Polk & Beyond",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/bookkeeping.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Bookkeeping for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Beyond",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Bookkeeping for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Beyond",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/bookkeeping.jpg",
+     "alt": "Bookkeeping for the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Bookkeeping is a fundamental part of doing business. But for small businesses, bookkeeping tasks are sometimes brushed aside during a hectic day. With the phones ringing, orders coming in, and employees asking questions, small business owners may find that bookkeeping responsibilities get lost in the shuffle.",
+     "The good news for small businesses in the Tampa, Florida area is that Reliance Consulting, LLC provides a broad spectrum of bookkeeping, [tax preparation](http://www.reliancecpa.com/tax-preparation.htm), and accounting support. Whether you own a retail outlet in Clearwater, a hotel in Tampa, a restaurant in Sarasota, or a real estate office in St Petersburg, we invite you to contact us about how we can get, and keep, your books in tip-top shape.",
+     "At Reliance Consulting, our CPAs and accountants believe in matching our bookkeeping and accounting services to your distinctive needs. When you work with us, you can choose the specific services you want from a full menu of options, including:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "[Payroll](http://www.reliancecpa.com/payroll-services.htm)"
+     },
+     {
+      "text": "Bank reconciliation"
+     },
+     {
+      "text": "Income statements"
+     },
+     {
+      "text": "Balance sheets"
+     },
+     {
+      "text": "Accounts payable"
+     },
+     {
+      "text": "Accounts receivable"
+     },
+     {
+      "text": "General ledger maintenance"
+     },
+     {
+      "text": "QuickBooks training and support"
+     },
+     {
+      "text": "[Business tax](http://www.reliancecpa.com/business-tax.htm) preparation"
+     },
+     {
+      "text": "Unlimited consultations with your CPA and accountant"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "With each bookkeeping task we complete for your business, Reliance Consulting is committed to your success and prosperity. From the day of your new business formation to decades later, Reliance Consulting is available to answer your questions and offer advice. We pride ourselves in our proven bookkeeping results, which are confirmed by the fact that 99 percent of our clientele comes from referrals."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-accounting/bookkeeping/",
+  "role": "service",
+  "tier": "business-accounting",
+  "old_path": "/bookkeeping.htm"
+ },
+ "short_title": "Bookkeeping"
+}

@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy/",
+ "slug": "rent-vs-buy__rent-vs-buy",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Rent Vs Buy - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Rent Vs Buy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains Potential Reasons to Delay Purchasing a Home](https://www.reliancecpa.com/rent-vs-buy)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains Potential Reasons to Delay Purchasing a Home",
+     "href": "https://www.reliancecpa.com/rent-vs-buy"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Rent Vs Buy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 1, 2012 | Full size is [900 × 900](https://www.reliancecpa.com/wp-content/uploads/Rent-Vs-Buy.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Rent-Vs-Buy.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Rent-Vs-Buy.jpg",
+   "alt": "Rent Vs Buy",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Rent-Vs-Buy.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 30
+}

@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant/",
+ "slug": "tax-preparation.htm__tax-preparation-accountant",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "tax-preparation-accountant - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "tax-preparation-accountant",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Tax Preparation for Tampa, St Petersburg, Clearwater, Lakeland, Pasco, Manatee, Sarasota, Polk County & Greater Tampa Bay](https://www.reliancecpa.com/tax-preparation.htm)",
+   "links": [
+    {
+     "text": "← Tax Preparation for Tampa, St Petersburg, Clearwater, Lakeland, Pasco, Manatee, Sarasota, Polk County & Greater Tampa Bay",
+     "href": "https://www.reliancecpa.com/tax-preparation.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "tax-preparation-accountant",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparation-accountant.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparation-accountant.jpg"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparation-accountant.jpg",
+   "alt": "Tax Preparation for the Tampa, FL area",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparation-accountant.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 19
+}

@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/retirement-readiness",
+ "slug": "retirement-readiness",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Retirement Readiness | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/retirement-readiness",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Can Help You Determine Whether You’re Ready to Retire",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Can Help You Determine Whether You’re Ready to Retire",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Ready-To-Retire-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Ready To Retire",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many factors that go into determining whether you are ready to retire. First, you must make sure you have enough money saved to maintain the lifestyle you desire – and you need to take steps to ensure that you don’t run out of money over the long term. You also need to set yourself up financially to cover any unexpected expenses, such as a major health problem or unanticipated property damage that requires extensive repair. Finally, you’re very likely going to want to make sure you leave behind what you want to your heirs, rather than leave your possessions exposed to legal challenges. Your goals in retirement will be as unique as you are, but the quest for financial security is the common ground.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether you are ready to retire now, or help prepare you for the day when you are able to get off the career carousel. We are here to help with every aspect of retirement planning, including investments, savings, budgeting, estate planning, and more.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most important things you can do is to estimate your daily, monthly, and yearly expenses in retirement. These expenses might include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Housing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Food",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Transportation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Personal care",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Professional expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Out-of-pocket healthcare costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dependent care",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Professional services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Taxes",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are wondering about your ability to meet those expenses, or simply seeking advice on how best to prepare yourself financially for retirement, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 260
+}

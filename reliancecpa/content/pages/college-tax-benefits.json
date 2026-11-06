@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/college-tax-benefits",
+ "slug": "college-tax-benefits",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "College Tax Credits | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/college-tax-benefits",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Reveals College-related Tax Benefits Every Student (and Parent) Should Know",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Reveals College-related Tax Benefits Every Student (and Parent) Should Know",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/College-Tax-Benefits-300x202.jpg",
+   "alt": "College Tax Benefits",
+   "alt_missing": false,
+   "title": "College Tax Benefits",
+   "width": "300",
+   "height": "202",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The United States government, recognizing the importance of an educated citizenry, has established several tax benefits for college students. These benefits come in the form of education tax credits and tax deductions. A credit reduces the amount of income tax a student or the parents of a student must pay. A deduction reduces the amount of income that is subject to income tax. These benefits might apply to tuition, books, housing, student loan payments, and even to some long-term college savings plans.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help families determine what tax benefits they might be eligible for before, during, and after a student’s college career. The potential benefits are available to students across income levels, as well as to traditional students and those who seek education later in life. The potential benefits include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The American Opportunity Tax Credit, which provides a credit of between $1,000 and $2,500 to help cover certain expenses during the first four years of secondary education",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The Lifetime Learning Credit, which provides a credit of up to $2,000 for expenses associated with post-secondary education",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The tuition and fees deduction, which can be taken for up to $4,000 for full-time or part-time post-secondary education students",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The Student Loan Interest Deduction, which can reduce the calculated amount of taxable income by up to $2,500",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how you might be able to take advantage of the various tax credit and deduction opportunities available, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 257
+}

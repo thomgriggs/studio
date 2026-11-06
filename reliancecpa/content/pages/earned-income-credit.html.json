@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/earned-income-credit.html",
+ "slug": "earned-income-credit.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Earned Income Tax Credit",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/earned-income-credit.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Earned Income Tax Credit",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Earned Income Tax Credit",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/earned-income-credit.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The simplest explanation of Earned Income Tax Credit (EITC) is that it is designed to be a way for people with low-to-moderate incomes to keep more of their money. To be eligible for EITC, a taxpayer must either work for someone or own his or her own business. There also are limitations and special rules for people with children, and special rules might apply to members of the military, the clergy, people affected by disasters, and people who receive disability benefits.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine if you or someone in your household qualifies for the EITC. Even if your past income level has disqualified you from receiving the credit, a recent job change may qualify you now. The IRS currently slots the range of household income for those eligible for EITC at $13,460-$48,362, depending on whether the taxpayer files jointly with a spouse, and on how many dependent children are in the household.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Income from a job or from a self-owned business is considered valid for EITC purposes. However, the IRS considers some sources of income to be outside the qualifications for EITC. These forms of income include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dividends",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Social security",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unemployment benefits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Alimony",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Child support",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For help in determining your eligibility for the Earned Income Tax Credit, or for advice on other tax planning issues, [contact](http://www.reliancecpa.com/contact.html) Reliance today. Since opening our doors in 1984, we’ve helped thousands of individuals and hundreds of businesses in the Tampa Bay area develop sound tax plans.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 259
+}

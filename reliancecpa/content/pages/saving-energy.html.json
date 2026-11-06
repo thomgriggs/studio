@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/saving-energy.html",
+ "slug": "saving-energy.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Saving Energy | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/saving-energy.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Gives Tips for Saving Energy (and Money) With Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Gives Tips for Saving Energy (and Money) With Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/saving-energy.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "saving-energy",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how successful your small business may be, the last thing you want to do as an owner is waste money. One relatively simple way to stretch your operating dollar is to focus on using as little electricity and water as possible at the office. Practicing “green” awareness inonn the workplace also is a cost-effective way to enhance a company’s reputation as an environmentally friendly organization.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help a small business owner uncover all sorts of ways to work within the budget. That includes saving money through responsible energy use at the office. To that end, here are a few common-sense cost-saving tips:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Be sure to keep your HVAC (heating, ventilating, and air conditioning) system tuned up with annual maintenance, and change its filters every month.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Install a programmable thermostat and program it to coincide with office hours.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Install shades or blinds to control direct sunlight filtering through windows.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Turn off lights and other equipment when not in use.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use fluorescent lights, rather than incandescent bulbs, where possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use laptop computers, rather than desktop computers, when possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use fuel-efficient vehicles for delivery or transportation.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maintain plumbing or update to modern fixtures to prevent leaks and save water.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses develop best practices on the path to profitability. [Contact](http://www.reliancecpa.com//contact.html) us today to discuss other cost-saving tips, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 258
+}

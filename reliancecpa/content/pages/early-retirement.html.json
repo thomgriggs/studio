@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/early-retirement.html",
+ "slug": "early-retirement.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/early-retirement.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How to Make Early Retirement Possible",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How to Make Early Retirement Possible",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/early-retirement.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s the culmination of the American Dream – early retirement. Of course, part of what makes early retirement such a desirable goal is the promise of leisure and ease once a career has come to a close. But the easy life is only possible later if someone plans carefully and follows through with that plan. And that’s where Reliance Consulting, LLC, comes in.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance will work closely with you to crunch the numbers and develop a current budget that may enable you to step away from the rat race sooner, rather than later. It’s about setting priorities, developing a strategy around those priorities, and then taking action to ensure that strategy remains on track over the long haul. Before you map out your plan for early retirement, you must take into account the following factors:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Household bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Record keeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Banking",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Scheduling medical and household maintenance payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement income requirements",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Investment monitoring",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Issues with Social Security, Medicare, pensions, insurance, and more",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many potential impediments to early retirement, including unforeseen health issues or other life crises. A good plan takes life’s speed bumps into account. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to get started on your early retirement plan, beginning with a thorough, complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 226
+}

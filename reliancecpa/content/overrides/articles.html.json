@@ -1,0 +1,355 @@
+{
+ "mode": "replace",
+ "template": "resource-media",
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Articles"
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "title": "Taxes",
+    "level": 2,
+    "links": [
+     {
+      "text": "Accountants in Tampa, FL Weigh In on Handling Household Employee Tax Issues",
+      "href": "https://www.reliancecpa.com/household-employee-tax.htm",
+      "page": "household-employee-tax.htm",
+      "new_path": "/resources/household-employee-tax/"
+     },
+     {
+      "text": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+      "href": "https://www.reliancecpa.com/audit-help.htm",
+      "page": "audit-help.htm",
+      "new_path": "/resources/audit-help/"
+     },
+     {
+      "text": "Cancellation of Debt Income–Understanding the rules might help save you money!!",
+      "href": "https://www.reliancecpa.com/cancellation-of-debt-income.htm",
+      "page": "cancellation-of-debt-income.htm",
+      "new_path": "/resources/cancellation-of-debt-income/"
+     },
+     {
+      "text": "Filing a Late Income Tax Return? Tampa Accountants Might Be Able to Assist You",
+      "href": "https://www.reliancecpa.com/late-income-tax-return.htm",
+      "page": "late-income-tax-return.htm",
+      "new_path": "/resources/late-income-tax-return/"
+     },
+     {
+      "text": "IRS Problems that may Require the Help of a Tampa CPA",
+      "href": "https://www.reliancecpa.com/irs-problems.htm",
+      "page": "irs-problems.htm",
+      "new_path": "/resources/irs-problems/"
+     },
+     {
+      "text": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+      "href": "https://www.reliancecpa.com/tax-saving-strategies.htm",
+      "page": "tax-saving-strategies.htm",
+      "new_path": "/resources/tax-saving-strategies/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses Navigating the Sales Tax Laws in Florida",
+      "href": "https://www.reliancecpa.com/sales-tax-law.htm",
+      "page": "sales-tax-law.htm",
+      "new_path": "/resources/sales-tax-law/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+      "href": "https://www.reliancecpa.com/identity-theft.htm",
+      "page": "identity-theft.htm",
+      "new_path": "/resources/identity-theft/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "title": "Records, payroll and books",
+    "level": 2,
+    "links": [
+     {
+      "text": "A CPA in Tampa Can Help With Hiring Employees",
+      "href": "https://www.reliancecpa.com/hiring-employees.htm",
+      "page": "hiring-employees.htm",
+      "new_path": "/resources/hiring-employees/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Benefits of Hiring Family",
+      "href": "https://www.reliancecpa.com/hiring-family-members.htm",
+      "page": "hiring-family-members.htm",
+      "new_path": "/resources/hiring-family-members/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+      "href": "https://www.reliancecpa.com/business-record-retention.htm",
+      "page": "business-record-retention.htm",
+      "new_path": "/resources/business-record-retention/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about what Personal Records You Should Keep",
+      "href": "https://www.reliancecpa.com/personal-record-retention.htm",
+      "page": "personal-record-retention.htm",
+      "new_path": "/resources/personal-record-retention/"
+     },
+     {
+      "text": "Hiring an Employee vs. an Independent Contractor: A Tampa Accountant Explains Some Differences",
+      "href": "https://www.reliancecpa.com/employee-vs-independent-contractor.htm",
+      "page": "employee-vs-independent-contractor.htm",
+      "new_path": "/resources/employee-vs-independent-contractor/"
+     },
+     {
+      "text": "How Payroll Processing by a CPA in Tampa Can Help Your Small Business",
+      "href": "https://www.reliancecpa.com/how-payroll-processing-helps.htm",
+      "page": "how-payroll-processing-helps.htm",
+      "new_path": "/resources/how-payroll-processing-helps/"
+     },
+     {
+      "text": "Your Business Might Need an Internal Controls Evaluation by a Tampa Accountant from Reliance Consulting, LLC",
+      "href": "https://www.reliancecpa.com/internal-controls-evaluation.htm",
+      "page": "internal-controls-evaluation.htm",
+      "new_path": "/resources/internal-controls-evaluation/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses Reasons to Keep Financial Records",
+      "href": "https://www.reliancecpa.com/keep-financial-records.htm",
+      "page": "keep-financial-records.htm",
+      "new_path": "/resources/keep-financial-records/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses Tips for Staying on Budget",
+      "href": "https://www.reliancecpa.com/staying-on-budget.htm",
+      "page": "staying-on-budget.htm",
+      "new_path": "/resources/staying-on-budget/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "title": "Business, estate and financial planning",
+    "level": 2,
+    "links": [
+     {
+      "text": "A CPA in Tampa Can Help You Decide if a Blog is Right for Your Business",
+      "href": "https://www.reliancecpa.com/business-blog",
+      "page": "business-blog",
+      "new_path": "/resources/business-blog/"
+     },
+     {
+      "text": "A CPA in Tampa Explains the Effective Uses of Twitter for Small Businesses",
+      "href": "https://www.reliancecpa.com/twitter",
+      "page": "twitter",
+      "new_path": "/resources/twitter/"
+     },
+     {
+      "text": "Ask a CPA in Tampa about a Life Insurance Needs Analysis",
+      "href": "https://www.reliancecpa.com/life-insurance-needs-analysis.htm",
+      "page": "life-insurance-needs-analysis.htm",
+      "new_path": "/resources/life-insurance-needs-analysis/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about How to Get Started with Estate Planning",
+      "href": "https://www.reliancecpa.com/get-started-estate-planning.htm",
+      "page": "get-started-estate-planning.htm",
+      "new_path": "/resources/get-started-estate-planning/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement",
+      "href": "https://www.reliancecpa.com/retirement-expenses.htm",
+      "page": "retirement-expenses.htm",
+      "new_path": "/resources/retirement-expenses/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC",
+      "href": "https://www.reliancecpa.com/limited-liability-corporation.htm",
+      "page": "limited-liability-corporation.htm",
+      "new_path": "/resources/limited-liability-corporation/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Benefits of a Partnership",
+      "href": "https://www.reliancecpa.com/partnership.htm",
+      "page": "partnership.htm",
+      "new_path": "/resources/partnership/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Benefits of a Sole Proprietorship",
+      "href": "https://www.reliancecpa.com/sole-proprietorship.htm",
+      "page": "sole-proprietorship.htm",
+      "new_path": "/resources/sole-proprietorship/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+      "href": "https://www.reliancecpa.com/forms-to-start-business.htm",
+      "page": "forms-to-start-business.htm",
+      "new_path": "/resources/forms-to-start-business/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa about the Importance of a Post-Mortem Letter",
+      "href": "https://www.reliancecpa.com/post-mortem-letter.htm",
+      "page": "post-mortem-letter.htm",
+      "new_path": "/resources/post-mortem-letter/"
+     },
+     {
+      "text": "Ask Your CPA in Tampa if You’re Getting Good Financial Advice",
+      "href": "https://www.reliancecpa.com/getting-good-financial-advice.htm",
+      "page": "getting-good-financial-advice.htm",
+      "new_path": "/resources/getting-good-financial-advice/"
+     },
+     {
+      "text": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+      "href": "https://www.reliancecpa.com/s-corporation.htm",
+      "page": "s-corporation.htm",
+      "new_path": "/resources/s-corporation/"
+     },
+     {
+      "text": "CPA in Tampa Offers a Free Check-Up of Your Financial Health",
+      "href": "https://www.reliancecpa.com/checkup-financial-health.htm",
+      "page": "checkup-financial-health.htm",
+      "new_path": "/resources/checkup-financial-health/"
+     },
+     {
+      "text": "CPA in Tampa, FL Discusses Why You Need Life Insurance",
+      "href": "https://www.reliancecpa.com/why-you-need-life-insurance.htm",
+      "page": "why-you-need-life-insurance.htm",
+      "new_path": "/resources/why-you-need-life-insurance/"
+     },
+     {
+      "text": "CPA in Tampa, FL Discusses Why Your Business Needs an Employer ID Number (EIN)",
+      "href": "https://www.reliancecpa.com/employer-identification-number.htm",
+      "page": "employer-identification-number.htm",
+      "new_path": "/resources/employer-identification-number/"
+     },
+     {
+      "text": "CPA in Tampa, FL Explains Advantages of Corporations",
+      "href": "https://www.reliancecpa.com/corporation.htm",
+      "page": "corporation.htm",
+      "new_path": "/resources/corporation/"
+     },
+     {
+      "text": "Estate Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+      "href": "https://www.reliancecpa.com/estate-planning.htm",
+      "page": "estate-planning.htm",
+      "new_path": "/resources/estate-planning/"
+     },
+     {
+      "text": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+      "href": "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+      "page": "financially-preparing-divorce.htm",
+      "new_path": "/resources/financially-preparing-divorce/"
+     },
+     {
+      "text": "Financially Preparing for Marriage: Meet with Your Accountant in Tampa Beforehand",
+      "href": "https://www.reliancecpa.com/financially-preparing-marriage.htm",
+      "page": "financially-preparing-marriage.htm",
+      "new_path": "/resources/financially-preparing-marriage/"
+     },
+     {
+      "text": "Hiring a CPA in Tampa for Elder Financial Care",
+      "href": "https://www.reliancecpa.com/elder-financial-care.htm",
+      "page": "elder-financial-care.htm",
+      "new_path": "/resources/elder-financial-care/"
+     },
+     {
+      "text": "Making Money in Medicine: Integration of Opportunities & Challenges",
+      "href": "https://www.reliancecpa.com/making-money-in-medicine.htm",
+      "page": "making-money-in-medicine.htm",
+      "new_path": "/resources/making-money-in-medicine/"
+     },
+     {
+      "text": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+      "href": "https://www.reliancecpa.com/business-valuation.htm",
+      "page": "business-valuation.htm",
+      "new_path": "/resources/business-valuation/"
+     },
+     {
+      "text": "Tampa Bay Doctors Face Many Decisions, but a Tampa CPA from Reliance Consulting Can Help",
+      "href": "https://www.reliancecpa.com/doctor-decisions.htm",
+      "page": "doctor-decisions.htm",
+      "new_path": "/resources/doctor-decisions/"
+     },
+     {
+      "text": "What Is Strategic Business Planning and How Can Your Tampa Accountants Assist You?",
+      "href": "https://www.reliancecpa.com/strategic-business-planning.htm",
+      "page": "strategic-business-planning.htm",
+      "new_path": "/resources/strategic-business-planning/"
+     },
+     {
+      "text": "Your CPA in Tampa Answers the Question, Do I Need to Think about Long-term Care?",
+      "href": "https://www.reliancecpa.com/long-term-care.htm",
+      "page": "long-term-care.htm",
+      "new_path": "/resources/long-term-care/"
+     },
+     {
+      "text": "Your CPA in Tampa Answers the Question, is a Reverse Mortgage a Good Idea?",
+      "href": "https://www.reliancecpa.com/reverse-mortgage.htm",
+      "page": "reverse-mortgage.htm",
+      "new_path": "/resources/reverse-mortgage/"
+     },
+     {
+      "text": "Your CPA in Tampa Answers the Question, What is a Living Will?",
+      "href": "https://www.reliancecpa.com/living-will.htm",
+      "page": "living-will.htm",
+      "new_path": "/resources/living-will/"
+     },
+     {
+      "text": "Your CPA in Tampa Answers the Question, What is a Trust?",
+      "href": "https://www.reliancecpa.com/what-is-a-trust.htm",
+      "page": "what-is-a-trust.htm",
+      "new_path": "/resources/what-is-a-trust/"
+     },
+     {
+      "text": "Your CPA in Tampa Answers the Question, What is Power of Attorney?",
+      "href": "https://www.reliancecpa.com/power-of-attorney.htm",
+      "page": "power-of-attorney.htm",
+      "new_path": "/resources/power-of-attorney/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses Green Business in Florida",
+      "href": "https://www.reliancecpa.com/green-business.htm",
+      "page": "green-business.htm",
+      "new_path": "/resources/green-business/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses the Advantages and Challenges of a Home-based Business",
+      "href": "https://www.reliancecpa.com/home-based-business.htm",
+      "page": "home-based-business.htm",
+      "new_path": "/resources/home-based-business/"
+     },
+     {
+      "text": "Your CPA in Tampa Discusses the Importance of a Will",
+      "href": "https://www.reliancecpa.com/importance-of-a-will.htm",
+      "page": "importance-of-a-will.htm",
+      "new_path": "/resources/importance-of-a-will/"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "title": "Choosing a CPA",
+    "level": 2,
+    "links": [
+     {
+      "text": "How to Choose the right CPA in Tampa, FL",
+      "href": "https://www.reliancecpa.com/how-to-choose-cpa.htm",
+      "page": "how-to-choose-cpa.htm",
+      "new_path": "/resources/how-to-choose-cpa/"
+     },
+     {
+      "text": "What a CPA in Tampa Can Do for You",
+      "href": "https://www.reliancecpa.com/what-is-a-cpa.htm",
+      "page": "what-is-a-cpa.htm",
+      "new_path": "/resources/what-is-a-cpa/"
+     }
+    ]
+   }
+  }
+ ],
+ "_about": "Generated by tools/build_structured.py. The live Articles page is two tables of 19 links into the dropped article library; the new index lists only the articles carried to the new site, grouped by tier tag."
+}

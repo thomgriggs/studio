@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/diversification.html",
+ "slug": "diversification.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Diversification | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/diversification.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Talks About Diversification for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Talks About Diversification for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-diversification.gif",
+   "alt": "Tampa CPA Diversification",
+   "alt_missing": false,
+   "title": "Tampa CPA Diversification",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you perform a unique service or make a particular product well – and it sells – why would you want to consider taking your small business in a different direction? The answer is simple – as anyone who has been in business for a significant amount of time can tell you, things can change overnight. Demand can skyrocket one week, and plummet the next. Profitability can seem inevitable one year, and impossible the next. One way to combat the vagaries of the business world is to diversify.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you plan for diversification by developing a new business plan that builds on your already solid foundation and helps your company reach and exceed its full potential. Reliance has been a premier accounting firm in the Tampa Bay area since opening its doors in 1984, and we’ve helped hundreds of businesses maximize their profitability by providing reliable, professional tax planning and preparation, cash flow management, payroll services, and more.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Wondering whether your company can benefit from diversification? Consider the potential goals of companies that explore the possibility:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Reduce the risk of relying on one or only a few sources of income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Combat cyclical downturns or seasonal fluctuations by producing goods or services that have different demand cycles from your core product or service",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Take advantage of greater opportunities for growth in a different industry",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Invade a rival company’s core market or industry in order to increase competitive pressure",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you have further questions about diversifying your small business, [contact](http://www.reliancecpa.com/contact.html) Reliance today. We’ll perform a free financial health checkup, and you’ll experience what it means to have personalized small business accounting and consulting services from a Tampa CPA.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 293
+}

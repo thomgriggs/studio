@@ -1,0 +1,137 @@
+{
+ "url": "https://www.reliancecpa.com/flood-insurance.html",
+ "slug": "flood-insurance.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Budgeting for Flood Insurance | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/flood-insurance.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Budgeting for Flood Insurance on an Inland Florida Home",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Budgeting for Flood Insurance on an Inland Florida Home",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/flood-insurance.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "West Central Florida homeowners who live near the coast are all-too-familiar with the legal obligation to carry flood insurance. But what about land-locked neighborhoods that sprawl inland from the Gulf of Mexico? Should homeowners in these non-coastal suburbs bother with flood insurance? And how would it affect the monthly household budget?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you decide whether carrying a flood insurance policy makes budgetary sense for a home located outside a high-risk flood zone. In a state as vulnerable to hurricanes as Florida, the question might not be whether you can afford flood insurance; it might be whether you can afford not to have it.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "First, it’s important to know that most homeowners insurance policies do not cover flood damage to a structure or its contents. With that in mind, consider: In the period between 1994-2004, the average flood damage claim amounted to more than $33,000. And another statistic to ponder: About 25 percent of flood insurance claims come from moderate-to-low risk areas.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Federal Emergency Management Agency (FEMA) encourages property owners to participate in the National Flood Insurance Program (NFIP). The average annual cost for an NFIP policy is $570, and can be purchased for as little as $119 in areas that qualify for a Preferred Risk Policy. Monthly premiums are calculated based on a number of factors, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Age of the insured building",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Building occupancy and size",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Number of floors and elevation of lowest floor",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Location and amount of contents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Flood zone location",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Deductible amount",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A certified public accountant from Reliance Consulting can help you sort out all of your financial responsibilities, from tax preparation to budgeting for unforeseen circumstances, such as a flood. [Contact](http://www.reliancecpa.com/contact.html) us for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 303
+}

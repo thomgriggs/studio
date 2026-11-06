@@ -1,0 +1,11 @@
+{#
+MODULE: list
+PURPOSE: A list that carries a section. With a title (tier and service pages) it is a 5/7 split like headed-section, the title left, the list right in a two-column flow when it has many short items; without a title it sits in the reading column. Bullets are small squares in the territory colour; ordered lists use the serif's numerals.
+SLOTS: title, ordered, items[lead, text, children].
+SQUARESPACE: Text block with a bulleted or numbered list (Heading 2 above it in the left column). Square territory-coloured bullets are custom CSS; the default round bullets are the native fallback.
+#}
+{% from "_macros.html" import lst %}
+<section class="m m-list{{ ' m-list--titled' if s.title }}" data-module="list" data-tone="{{ tone }}">
+  {% if s.title %}<div class="headed__head"><h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>{% endif %}
+  <div class="listbody prose{{ ' listbody--cols' if s["items"]|length >= 8 }}">{{ lst({"type": "ol" if s.ordered else "ul", "items": s["items"]}) }}</div>
+</section>

@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/losses-tax-deductions",
+ "slug": "losses-tax-deductions",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Theft, Disaster, Casulty Claims | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/losses-tax-deductions",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How to Claim Certain Losses as Tax Deductions",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How to Claim Certain Losses as Tax Deductions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Casualty-Disaster-Theft-300x200.jpg",
+   "alt": "Casualty Taxes",
+   "alt_missing": false,
+   "title": "Casualty Taxes",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any losses you incur during the year because of theft, casualty, or disaster might be tax deductible. Casualty is a loss of property that occurs suddenly, as with an earthquake, a hurricane, a terrorist attack, or vandalism. This, of course, might fall under the category of disaster, as well. Theft is self-explanatory, but can also include blackmail, extortion, embezzlement, or kidnapping for ransom. In short, anything that happens unexpectedly and causes you to suffer a loss of any kind – and is not insured – might qualify for a tax deduction.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are unsure what this could mean for your personal or business tax return, let a [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, provide guidance. Now, keep in mind that the full value of a lost item is not usually tax deductible. For example, if an item worth $10,000 was stolen from your office or home and it wasn’t insured, you could stand to make a significant return of about half of the item’s value if your adjusted gross income (AGI) is low enough. The way it works is, $100 must be subtracted from the value of the stolen or lost item. Then, 10 percent of your adjusted gross income (AGI) must be subtracted from the remaining value. If your AGI is around $50,000, it would mean you’d be eligible to make a tax deduction of $4,900 for that one item.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If this sounds complex, it’s because it certainly can be. For one thing, most business owners and property owners already have their major valuables covered by insurance. Those that don’t might be eligible to deduct a certain portion of the loss, but it often takes an expert to determine what the IRS will allow. That’s why you need a Tampa CPA from Reliance by your side in cases of casualty, theft, or disaster.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) us today to learn more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 323
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/fungibility-liquidity",
+ "slug": "fungibility-liquidity",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Fungibility | Liquidity | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/fungibility-liquidity",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Difference Between Fungibility and Liquidity",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Difference Between Fungibility and Liquidity",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/fungibility-liquidity1-300x225.jpg",
+   "alt": "Fungibility and Liquidity",
+   "alt_missing": false,
+   "title": "Fungibility and Liquidity",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you spend any amount of time in business, you are almost certainly going to come across the terms “liquidity” and “fungibility.” Both describe the exchangeability of an asset, but in two very different ways. Liquidity, as most people understand, is the ability to exchange an asset, such as diamonds, directly for an agreed-upon amount of money. Fungibility, on the other hand, implies an ability to exchange an asset for an equivalent or similar asset. An asset can possess liquidity and be fungible, but a fungible asset might not necessarily possess liquidity.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help small business owners sort out the complexities of the financial world. While anyone who owns or operates a company is expected to have at least some rudimentary knowledge of concepts such as liquidity and fungibility, most small business owners spend their time actually producing goods, providing services, managing employees, interacting with customers, or dealing with the innumerable little problems that seem to pop up during day-to-day operations. That’s where a CPA from Reliance can be so useful. We have the experience and knowledge to handle the financial side of your business, including payroll services, tax planning and preparation, asset allocation, and much more.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has helped hundreds of small businesses in the Tampa Bay area achieve profitability. We’ve also helped countless small business owners find the time to focus on the big picture within their company. [Contact](http://reliancecpa.com/contact.html) us today to learn how we can help you.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 263
+}

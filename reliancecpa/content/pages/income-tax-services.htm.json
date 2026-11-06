@@ -1,0 +1,167 @@
+{
+ "url": "https://www.reliancecpa.com/income-tax-services.htm",
+ "slug": "income-tax-services.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-tax",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Income Tax Services for Tampa St Petersburg Clearwater Lakeland Sarasota Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/income-tax-services.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Income Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Income Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/income-tax-services.jpg",
+   "alt": "Income Tax Services for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Income Tax Services for the Tampa, FL Area",
+   "width": "300",
+   "height": "299",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The annual income tax deadline is an anxious time of year for many individuals. Sifting through stacks of forms, records, and receipts, the majority of Americans feel that income tax preparation is a grueling and confusing task.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Thanks to the income tax services provided by the CPAs and accountants at Reliance Consulting, LLC, residents from Tampa to Clearwater, St Petersburg to Lakeland, Sarasota to Pasco County and beyond can rest assured that their income tax returns are handled with experience, professionalism, and timeliness. When it comes to income [tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and our many other financial services, each CPA and accountant from Reliance Consulting has a passion for our profession and a commitment to our clients. We take extreme pride in the tangible results we have achieved for thousands of Tampa Bay residents.",
+   "links": [
+    {
+     "text": "tax preparation",
+     "href": "http://www.reliancecpa.com/tax-preparation.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A few of the many income tax services and consultations provided by Reliance Consulting include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Income tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Self employment tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estimated quarterly income tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Itemized deductions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Employee benefit plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Tax planning](http://www.reliancecpa.com/tax-planning.htm)",
+     "links": [
+      {
+       "text": "Tax planning",
+       "href": "http://www.reliancecpa.com/tax-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax on bonuses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital gains tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Understanding your IRA, 401k, and other tax deferred retirement accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Tax problems](http://www.reliancecpa.com/tax-problem-irs-audit-help.htm) and IRS problem resolution",
+     "links": [
+      {
+       "text": "Tax problems",
+       "href": "http://www.reliancecpa.com/tax-problem-irs-audit-help.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In these days of income tax software programs, too many individuals try to complete their tax returns themselves, without any assistance from a professional accountant, often missing out on the many deductions and credits available. Backed by decades of experience, Reliance Consulting offers CPA-supported income tax services that will investigate every possible avenue for individuals to save money on their income tax, now and in the future.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about our income tax services for the greater Tampa, FL area, please contact Reliance Consulting today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 305
+}

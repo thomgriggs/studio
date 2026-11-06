@@ -1,0 +1,106 @@
+{
+ "url": "https://www.reliancecpa.com/retirement-expenses.htm",
+ "slug": "retirement-expenses.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/retirement-expenses.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/retirement-expenses.jpg",
+     "alt": "Ask Your CPA in Tampa about How Your Expenses Might Differ After Retirement"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Many different factors go into retirement planning, but one of the overlooked issues is what your expenses will be after you retire. It’s easy to assume that your expenses will remain basically the same in your retirement years, but in reality, your budget could look significantly different.",
+     "That’s why your accountant or [CPA in Tampa](http://www.reliancecpa.com/) should be actively involved in assessing what your expenses will be after you retire, so that your retirement planning matches your needs. Some of the highlights of your retirement planning will be the answers to these questions and more:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Will your mortgage be paid off when you retire?"
+     },
+     {
+      "text": "Will your credit cards and other debts be paid off?"
+     },
+     {
+      "text": "Will you have any expenses relating to your children or grandchildren?"
+     },
+     {
+      "text": "Will you have any other dependents?"
+     },
+     {
+      "text": "What will your homeowners, vehicle, life, and health insurance costs be?"
+     },
+     {
+      "text": "What about transportation costs? Will you have a car payment or commuting expenses?"
+     },
+     {
+      "text": "Will you be moving to a smaller home with lower utility costs?"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "The first step in calculating your retirement expenses is doing a line-by-line review of your current budget to find out which expenses will remain the same and which ones will go up, go down, be eliminated, or be added in your retirement years. In doing this, chances are you will find out that your expenses will drop significantly after you retire. Generally speaking, it is estimated that your standard expenses can decrease as much as 30% after retirement, but this is a ballpark figure that should be confirmed after an exhaustive review by your CPA in Tampa."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/retirement-expenses/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/retirement-expenses.htm"
+ }
+}

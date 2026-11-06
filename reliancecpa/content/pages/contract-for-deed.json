@@ -1,0 +1,148 @@
+{
+ "url": "https://www.reliancecpa.com/contract-for-deed",
+ "slug": "contract-for-deed",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Contract for Deed | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/contract-for-deed",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Defines a Contract for Deed in a Real Estate Transaction",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Defines a Contract for Deed in a Real Estate Transaction",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Contract-for-Deed-300x203.jpg",
+   "alt": "Contract for Deed",
+   "alt_missing": false,
+   "title": "Contract for Deed",
+   "width": "300",
+   "height": "203",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Potential home buyers who fail to qualify for a mortgage might still be able to take possession of a piece of property by making payments to the property owner under the terms of a contract for deed. This legal agreement is also known as a contract for sale. In simplest terms, it is similar to – but not exactly the same as – a “rent to own” agreement many consumers use to make big electronic purchases like televisions or kitchen appliances like dishwashers and refrigerators.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether a contract for deed is the preferred method for you to use either to buy or sell a piece of property. Let’s take a look at it from the perspective of both the seller (property owner) and the buyer (property purchaser).",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "With a contract for deed agreement in place, the seller:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Retains title to the property until the contract is paid in full",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cannot demand payment in full, as with a mortgage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can expedite a property sale by cutting out the lender",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Meanwhile, the buyer:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Has to a way to purchase property without having to qualify for a mortgage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can negotiate flexible interest rates and down payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cannot take out home equity loans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "In most cases, is responsible for insurance, taxes, and upkeep",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are more benefits and potential drawbacks to a contract for deed. For example, a seller doesn’t receive a lump payment for the sale of a piece of property, the way he or she would with a mortgage deal. Still, if buyers are scarce, contract for deed might be the way to go. To learn more, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 293
+}

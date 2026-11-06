@@ -1,0 +1,21 @@
+{#
+MODULE: choice-cards
+PURPOSE: Get Started step 1: a step bar, the question as the h1 in Georgia, one line, then stacked large question cards in the original's insight-card form (white, 16px radius, a first-person line in 27px Georgia, one sentence, a small-caps tier label in its territory colour with a thin territory bar on the left edge, a circled arrow). Each card is a plain link to its step-2 page. A "would you rather call?" line closes the column.
+SLOTS: step[label, current, total], title (h1), text, cards[title, text, href, tier, eyebrow], call[text, phone[text, href]].
+SQUARESPACE: Text ("Step 1 of 2"), Heading 1, Text, then one large Button block per choice with a short Text under it (or a Summary block over the step-2 pages); the territory bar and label colour are the custom CSS block. Text block with a tel: link.
+#}
+{% from "_macros.html" import callline %}
+{% macro stepind(st) %}{% if st %}<p class="stepind"><span class="stepind__label">{{ st.label }}</span><span class="stepind__bar" aria-hidden="true">{% for i in range(1, st.total + 1) %}<i{% if i <= st.current %} class="on"{% endif %}></i>{% endfor %}</span></p>{% endif %}{% endmacro %}
+<section class="m m-choice" data-module="choice-cards" data-tone="{{ tone }}" aria-labelledby="choice-title">
+  <div class="flow">
+    {{ stepind(s.step) }}
+    <h1 id="choice-title" class="h-page" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.text %}<p class="lead">{{ s.text|md }}</p>{% endif %}
+    <ul class="choices" role="list">
+      {% for c in s.cards %}
+      <li class="choice{{ ' terr-' ~ concept.tier_territory[c.tier] if c.tier and concept.tier_territory[c.tier] }}"><a class="choice__link" href="{{ c.href|href }}">{% if c.eyebrow %}<span class="choice__eb">{{ c.eyebrow }}</span>{% endif %}<span class="choice__q">{{ c.title }}</span>{% if c.text %}<span class="choice__text">{{ c.text }}</span>{% endif %}<span class="choice__go" aria-hidden="true">→</span></a></li>
+      {% endfor %}
+    </ul>
+    {{ callline(s.call) }}
+  </div>
+</section>

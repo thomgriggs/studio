@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/real-property",
+ "slug": "real-property",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Real Property | Personal Property | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/real-property",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explores the Difference Between Real Property and Personal Property",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explores the Difference Between Real Property and Personal Property",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/real-property-300x223.jpg",
+   "alt": "Real Property",
+   "alt_missing": false,
+   "title": "Real Property",
+   "width": "300",
+   "height": "223",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Real estate, or real property, is defined as land and anything attached to the land, such as a house. Personal property includes items that are considered “moveable,” or are not physically attached to the land. An example of personal property that might be confused with real property is a manufactured home, or trailer. While a manufactured home might feel permanent, it is generally not considered to be a part of the land on which it rests. In other words, like a car, it can be easily moved. This becomes a consideration if someone owns the land and the manufactured home and wants to sell both in a package deal.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help businesses and individuals with complicated real estate and personal property issues. These and other assets are important components to consider when calculating the net worth of an individual, whether for tax planning or estate planning purposes. In fact, there are times when the difference between real estate and personal property is not so straightforward. Much depends on how a contract is written at the time of sale, and even then, there are some items that might be considered “real” property at the time of sale, but become “personal” property once they are removed from the land. An extreme example of this is when someone buys land that turns out to be rich in mineral deposits or precious metals. If the minerals or metals are removed, they no longer are part of the real estate and become personal property.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we believe every individual and business owner should remain well-informed about the legal status of financial assets. We also understand that not everyone has the time to become experts at finance or tax law. That’s where we come in. Since 1984, we have helped thousands of individuals and small business owners find the path to profitability. [Contact](http://www.reliancecpa.com/contact.html) us today to find out how we can help you.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 338
+}

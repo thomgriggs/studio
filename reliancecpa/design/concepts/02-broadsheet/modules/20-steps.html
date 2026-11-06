@@ -1,0 +1,12 @@
+{#
+MODULE: steps
+PURPOSE: A short numbered process: large serif numerals in the territory colour over each step's text, in columns (3 to 5), on the neutral band. The original had no process module; this is the same type system with a numeral as the only ornament.
+SLOTS: eyebrow, title, level, depth, items[lead, text], actions[]; variant process.
+SQUARESPACE: A row of Text blocks, number as Heading 3 and the step as paragraph (or a numbered list). The territory colour of the numerals is custom CSS.
+#}
+{% from "_macros.html" import eyebrow, actions %}
+<section class="m m-steps" data-module="steps" data-tone="{{ tone }}">
+  {{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}
+  <ol class="steps steps--{{ s["items"]|length }}">{% for i in s["items"] %}<li><span class="steps__n" aria-hidden="true">{{ loop.index }}</span><p>{% if i.lead %}<strong>{{ i.lead|md }}</strong> {% endif %}{{ i.text|md }}</p></li>{% endfor %}</ol>
+  {{ actions(s.actions) }}
+</section>

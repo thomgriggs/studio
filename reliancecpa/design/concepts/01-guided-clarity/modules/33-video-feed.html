@@ -1,0 +1,8 @@
+{#
+MODULE: video-feed
+PURPOSE: The newest videos as rounded thumbnail cards (thumbnail with play pill, date, Georgia title) and an "all videos" button (defined for kit parity, unused by Reliance).
+SLOTS: eyebrow, title, text?, videos[title, href, date, video], more[text, href].
+SQUARESPACE: Summary block (grid, thumbnails + title) or Video blocks, plus a Button.
+#}
+{% from "_macros.html" import eyebrow, poster %}
+<section class="m m-vfeed" data-module="video-feed" data-tone="{{ tone }}"><div class="section-intro">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-section">{{ s.title|md }}</h2></div><div class="vgrid">{% for v in s.videos %}<article>{{ poster(v.video or v.href, v.title) }}<p class="eyebrow">{{ v.date|longdate }}</p><h3 class="post__h">{{ v.title }}</h3></article>{% endfor %}</div>{% if s.more %}<p class="feed__more"><a class="btn btn-secondary" href="{{ s.more.href|href }}">{{ s.more.text }}</a></p>{% endif %}</section>

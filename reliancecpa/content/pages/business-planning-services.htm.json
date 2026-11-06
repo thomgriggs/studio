@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/business-planning-services.htm",
+ "slug": "business-planning-services.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Business Planning Services for Tampa St Petersburg Clearwater Pasco Manatee Sarasota Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-planning-services.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Planning Services for Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Business Planning Services for Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-planning.jpg",
+   "alt": "Business Planning Services for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Business Planning Services for the Tampa, FL Area",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just like you would want an experienced ship captain and crew to help you cross the Pacific Ocean, you also should seriously consider how business planning specialists can help you achieve success with your venture. From capital to licenses and payroll to taxes, starting and running a business in the Tampa, Florida area is a huge undertaking, but a business planning expert from Reliance Consulting can put you on the right course and greatly increase your chances of reaching your financial destination.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Some business owners may be concerned that they can’t afford business planning expertise—especially when they’re just starting out—but in reality, business planning is so essential that you can’t afford **not** to invest in it. As a full service CPA firm serving Tampa, St Petersburg, Lakeland, Clearwater, Pasco, Polk, Sarasota, and all communities in between, Reliance Consulting, LLC is here to assist you from day one by offering affordable solutions for:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Business plan writing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business finance consulting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Quickbooks accountant](http://www.reliancecpa.com/quickbooks-accountant.htm) services",
+     "links": [
+      {
+       "text": "Quickbooks accountant",
+       "href": "http://www.reliancecpa.com/quickbooks-accountant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Payroll services](http://www.reliancecpa.com/payroll-services.htm)",
+     "links": [
+      {
+       "text": "Payroll services",
+       "href": "http://www.reliancecpa.com/payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It is no secret that most businesses fail within the first few years, often because of deficits in the business planning process. At Reliance, we understand that no business owner wants to find themselves in a sinking ship, so we are here to help you navigate rough seas and avoid the storms on the horizon.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free assessment of your new or existing business, and to find out more information about how our business planning services could be the wisest investment you’ve ever made.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 279
+}

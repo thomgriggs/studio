@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/vacation-budgeting.html",
+ "slug": "vacation-budgeting.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Vacation Budgeting | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/vacation-budgeting.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Helps You Budget for Your Dream Vacation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Helps You Budget for Your Dream Vacation",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/vacation-budgeting.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "vacation-budgeting",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Sometimes, you just need to get away. A vacation is not merely a fun time spent building memories. It also is vital for maintaining a healthy emotional balance. Time spent away from work helps you recharge your battery and gives you perspective that’s hard to gain when you’re right on the front lines every day. Another benefit of a big vacation? It gives you something to anticipate, something to really look forward to, as you slug away at your job day after day. But these things cost money, and that means you’ll need to have a plan.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you make that dream vacation become a reality by working with you to devise a plan to pay for it. If you are determined to see the volcanic splendor of Hawaii, or the awesome history of the British Isles, it’s certainly doable. Just sit down with a CPA from Reliance, who can help you make a vacation plan that works within your budget. Some vacation-friendly ideas include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Think far in advance and start saving as early as possible.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determine what destination and/or activities are affordable.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Break down travel expenses by category, and prioritize by affordability. A first-class flight might not be feasible, but perhaps a five-star hotel can be done.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set up a bank account dedicated to vacation savings and have a portion of your paycheck directly deposited into it.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are starting to hear the call of some faraway destination – or if you’ve just always wanted to see the Grand Canyon or Mount Rushmore – [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today to get started on a budget plan for your dream vacation. We’ll gladly provide a complimentary financial health examination to help you figure out just how far (and how soon) you can go.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 313
+}

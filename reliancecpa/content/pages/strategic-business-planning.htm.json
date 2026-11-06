@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/strategic-business-planning.htm",
+ "slug": "strategic-business-planning.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "What Is Strategic Business Planning and How Can Your Tampa Accountants Assist You?",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/strategic-business-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What Is Strategic Business Planning and How Can Your Tampa Accountants Assist You?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "What Is Strategic Business Planning and How Can Your Tampa Accountants Assist You?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/strategic-business-planning.jpg",
+   "alt": "Tampa Accountants Help with Strategic Business Planning",
+   "alt_missing": false,
+   "title": "strategic-business-planning",
+   "width": "200",
+   "height": "251",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "True to its name, strategic business planning is creating a strategy for an area of your business and then following that plan for a certain period of time. Different than a general business plan (which is a detailed outline that you may put together before your business opens), strategic business planning typically focuses on a single area of an already established business. Therefore, if your business is in the Tampa Bay area, a strategic business plan may be your strategy to roll out a new product or service in Hillsborough County. Another example of a strategic business planning might be how to increase your sales force from three salespeople to 10 in the next year.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While strategic business planning is essential to give your company clear direction and goals, you should not spend all of your time—or all of your employees’ time—in the planning process, as this takes valuable hours away from more productive and profitable activities. You may be happy to learn that the[Tampa accountants](http://www.reliancecpa.com/) at Reliance Consulting, LLC can assist you with strategic business planning. Armed with decades of experience, the experts at Reliance Consulting can sit down with you to create the plan, and then as it is implemented, we can monitor its success. This leaves you and your employees free to achieve the stated goals of the plan.",
+   "links": [
+    {
+     "text": "Tampa accountants",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To help you create a strategic blueprint for any part of your business, the Tampa accountants and CPAs at Reliance Consulting can:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Research your plan to make sure it has the highest potential of providing your business with a positive outcome",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Identify the features and benefits of your new product or service, as well as the customer profile of those who would be interested in it",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Help develop the most cost-effective marketing plan for your strategy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provide you with a detailed report on all the financials for your plan such as costs, revenue, profits, and break-even points",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To ensure your strategic business plan is successful, your Tampa accountants and CPAs from Reliance Consulting can chart timelines and milestones and provide you with reports on your progress. While there is no doubt that strategic business planning can be a powerful tool in taking your business to the next level, this type of planning only works when it is put into practice correctly. Contact your Tampa accountants at Reliance Consulting to find out more about how we can assist you with strategic business planning.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 419
+}

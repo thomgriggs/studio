@@ -1,0 +1,183 @@
+{
+ "url": "https://www.reliancecpa.com/tax-records-to-keep",
+ "slug": "tax-records-to-keep",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Records | What to Keep",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-records-to-keep",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Reveals What Records You Should Keep to be Prepared for Tax Time",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Reveals What Records You Should Keep to be Prepared for Tax Time",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/tax-records-to-keep-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tax Records",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tax time can be stressful, but the level of stress can be greatly reduced if you have the right records on hand. The Internal Revenue Service recommends that you retain as much written or digitally stored information as possible about your financial year before beginning the filing process.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can provide a great deal of help when it comes to storing important documents in preparation for filing your individual or business tax returns. In addition to modern digital “cloud-based” archiving techniques, we will securely and safely store your relevant documents for you. Never again will you need to worry about the hassle of finding a secure place in your home or place of business to keep your past tax returns and other important data.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Here are just a few items that the IRS recommends you keep on hand during the year for individual tax filing purposes:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Credit card receipts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Invoices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mileage logs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Canceled checks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Records supporting tax deductions and credits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Home purchase records",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Records of stocks and other investments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Records of retirement account contributions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Rental property records",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to the items listed above (if applicable), business owners should keep the following:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Gross receipts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Proofs of purchase",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Expense documents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asset-verifying documents",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how Reliance Consulting can help you organize and safely store your important financial documents, [contact](http://www.reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 246
+}

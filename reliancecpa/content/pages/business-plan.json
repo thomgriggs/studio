@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/business-plan",
+ "slug": "business-plan",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-09-04",
+ "seo": {
+  "title_tag": "Business Plan | CPA in Tampa",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-plan",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Develop a Sound Business Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Develop a Sound Business Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Plan-300x174.jpg",
+   "alt": "Business Plan",
+   "alt_missing": false,
+   "title": "Business Plan",
+   "width": "300",
+   "height": "174",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Before you can get started with your new company, you must take the time to write and polish a business plan. This is the foundational document that will set the agenda and make the vision of the company’s future concrete. Without a sound, well-thought-out business plan, your new company is likely to end up on the scrap heap of history, which is where so many businesses end up within five years of being launched.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help make sure your business plan successfully lays out the vision you have for your new company, while presenting the public (or private potential investors) as much information as possible in as succinct and clear a manner as possible. The U.S. Small Business Administration provides useful guidelines for anyone who is uncertain about how to put together an impressive, complete business plan. These guidelines state that a business plan should include the following:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Executive summary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Market analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Company description",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Organization and management structure",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marketing and sales management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Service or product line description",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Funding request, if applicable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Financial projections",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Appendix",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has helped hundreds of small business owners in the Tampa Bay area and throughout Florida find the path to prosperity and stay on it. [Contact](http://reliancecpa.com/contact.html) us today for help putting together a business plan that will help set the tone for a successful business for many years to come.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 250
+}

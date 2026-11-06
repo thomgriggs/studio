@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/who-must-file.html",
+ "slug": "who-must-file.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Who Must File a Federal Tax Return",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/who-must-file.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Who Must File a Federal Income Tax Return",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Who Must File a Federal Income Tax Return",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/who-must-file.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "who-must-file",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In general, anyone younger than 65 whose annual income is more than $9,350, or anyone 65 or older whose income is more than $10,750, must file a tax return. The income thresholds vary, depending on filing status and number of dependents in a household, and even dependent children who make $5,700 or more might have to file a return. It can be complicated, which is why it’s important to enlist the assistance of a proven, experienced tax preparer.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you determine whether you need to file a tax return, and which of the many IRS forms is right for you. It may be as simple as using the streamlined Form 1040EZ, which allows taxpayers who make less than $100,000 per year and don’t intend to itemize a simpler solution than the sometimes-intimidating Form 1040. No matter what your filing status, you can count on the accounting firm that has helped thousands of individuals and hundreds of businesses in the Tampa Bay area find peace of mind at tax time.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even if you aren’t required to file a return, the IRS gives seven reasons why you might want to:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Federal income tax was withheld from your pay.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You may qualify for the earned income tax credit.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You may qualify for the Making Work Pay credit.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You may qualify for additional child tax credit.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You may qualify for a first-time homebuyer credit.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "You may qualify for a health coverage tax credit.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For help with all of your tax needs, whether as an individual taxpayer or as the owner of a business, [contact](http://www.reliancecpa.com//contact.html) Reliance today. We’ll conduct a complete and complimentary financial health checkup to make sure you or your company are on the right path to prosperity.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 307
+}

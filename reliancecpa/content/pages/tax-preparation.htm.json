@@ -1,0 +1,156 @@
+{
+ "url": "https://www.reliancecpa.com/tax-preparation.htm",
+ "slug": "tax-preparation.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-tax",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tax Preparation for Tampa St Petersburg Clearwater Lakeland Pasco Manatee Sarasota Polk County & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-preparation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tax Preparation for Tampa, St Petersburg, Clearwater, Lakeland, Pasco, Manatee, Sarasota, Polk County & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tax Preparation for Tampa, St Petersburg, Clearwater, Lakeland, Pasco, Manatee, Sarasota, Polk County & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparation-accountant.jpg",
+   "alt": "Tax Preparation for the Tampa, FL area",
+   "alt_missing": false,
+   "title": "tax-preparation-accountant",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tax preparation is one of the most overlooked, yet essential, areas of financial health. While many individuals and businesses in the Tampa, Florida area may try to prepare their own tax returns, they often miss credits and deductions they are entitled to. For this reason and more, tax preparation by an experienced accountant helps people and companies make the right tax decisions at the right time, which almost always improves financial outcomes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC is a group of tax preparation professionals serving businesses and individuals throughout the greater Tampa, Florida area. Whether you are a physician in Clearwater, a small business in Lakeland, or a hotel owner in Sarasota, we are committed to helping you take advantage of the tax benefits that apply to your unique situation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, our staff of CPAs and accountants has many decades of experience in a full range of tax preparation services, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business tax](http://www.reliancecpa.com//business-tax.htm) accountant",
+     "links": [
+      {
+       "text": "Business tax",
+       "href": "http://www.reliancecpa.com//business-tax.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Individual income tax accountant",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accounting for doctors and dentists",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retail accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Hotel and restaurant accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax problems & IRS problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even though there are several tax preparation software packages on the market, they are no substitute to the one-on-one services of an experienced tax professional. In addition to making sure you take advantage of all deductions and credits, Reliance Consulting also will check and recheck to prevent potential [tax problems](http://www.reliancecpa.com//tax-problem-irs-audit-help.htm), and file your return electronically so you get your refund faster. And don’t worry if you haven’t kept up with your [bookkeeping](http://www.reliancecpa.com//bookkeeping.htm) – the CPAs and accountants at Reliance Consulting will assist you in getting your books back in order and keeping them that way.",
+   "links": [
+    {
+     "text": "tax problems",
+     "href": "http://www.reliancecpa.com//tax-problem-irs-audit-help.htm"
+    },
+    {
+     "text": "bookkeeping",
+     "href": "http://www.reliancecpa.com//bookkeeping.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about our tax preparation services from Tampa to Sarasota, Clearwater to Polk County, and Hernando to Pasco County, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 332
+}

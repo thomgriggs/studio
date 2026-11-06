@@ -1,0 +1,70 @@
+{
+ "url": "https://www.reliancecpa.com/custom2.html",
+ "slug": "custom2.html",
+ "template": "content-page",
+ "family": "S1",
+ "title": "Employment Opportunities",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/custom2.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Employment Opportunities",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Employment Opportunities"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "We are always seeking professional, hard-working, licensed CPAs and business consultants. Our Firm demands independence, integrity, objectivity, competence and due care from all of its personnel in the conduct of its engagements. Our Firm is structured to provide leadership in achieving high quality professional performance while maintaining the concept of individual responsibility. Policies and procedures have been established providing assurance that professional engagements are properly planned and executed. Decisions are based on the substance of issues, not on form."
+     },
+     {
+      "type": "p",
+      "text": "Our policies and procedures designate Partners of the Firm for consultation on significant ethical, technical and industry questions. The policies and procedures are designed to assure that clients receive the best professional services we can provide. We continually keep in mind the public interest. We expect our Partners and Associates to identify and resolve all important engagement issues."
+     },
+     {
+      "type": "p",
+      "text": "The job requires high level tax preparation skills, superior tax research and problem solving abilities, broad software knowledge, and excellent written and oral communication skills. We have a team approach to provide high quality client service for tax compliance, planning, financial statements, and general business consulting."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/about/careers/",
+  "role": "about",
+  "old_path": "/custom2.html"
+ },
+ "short_title": "Employment"
+}

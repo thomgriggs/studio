@@ -1,0 +1,119 @@
+{
+ "url": "https://www.reliancecpa.com/irs-problems.htm",
+ "slug": "irs-problems.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "IRS Problems that may Require the Help of a Tampa CPA",
+ "seo": {
+  "title_tag": "IRS Problems that may Require the Help of a Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/irs-problems.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "IRS Problems that may Require the Help of a Tampa CPA",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "IRS Problems that may Require the Help of a Tampa CPA",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/irs-problems.jpg",
+     "alt": "IRS Problems in the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Problems with the IRS can quickly escalate from threatening letters to penalties, interest, liens, wage garnishments, and seizure of property. If you want to protect your Tampa business and family from the misery the IRS can put you through, you should consult with a local professional who can provide you with alternatives and hopefully save you from losing everything to a tax problem.",
+     "Your [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC has decades of experience in resolving IRS problems for our clients, discretely and efficiently. We often see Tampa Bay area clients after they have received threatening letters from the IRS – letters that are often just the beginning of IRS efforts to collect back-taxes. Once you have received a letter saying you owe taxes, it’s wise to confront the problem as soon as possible. Time is of the essence if you want to give yourself the best chance at avoiding penalties, compounding interest, or worse. Furthermore, the IRS tends to be “friendlier” to those who acknowledge the issue and work to resolve it.",
+     "A Tampa CPA from Reliance Consulting can help you address any IRS problem, including:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "IRS errors"
+     },
+     {
+      "text": "Failing to file returns for one or more years"
+     },
+     {
+      "text": "Owing back-taxes"
+     },
+     {
+      "text": "Payroll tax issues"
+     },
+     {
+      "text": "Liens on property and levies on bank accounts"
+     },
+     {
+      "text": "Garnishment of wages"
+     },
+     {
+      "text": "Seizure of property"
+     },
+     {
+      "text": "IRS audits"
+     },
+     {
+      "text": "Being blamed for a spouse’s tax debt"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Our accountants and CPAs have saved our clients millions of dollars in tax burdens because we are extremely knowledgeable about the options available. When you meet with us, we can discuss alternatives like settling with the IRS for a fraction of what you owe (offers in compromise) or devising an affordable payment plan. If these more conservative options are not possible and if the tax debt is old enough, then bankruptcy might be an option."
+     },
+     {
+      "type": "p",
+      "text": "Please contact your Tampa CPA from Reliance Consulting today to learn more about the many ways we can assist you with IRS problems. We also can provide you with a free assessment of your financial health."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/irs-problems/",
+  "role": "resource-article",
+  "tag": "tax",
+  "old_path": "/irs-problems.htm"
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "url": "https://www.reliancecpa.com/budget-discipline/budget-discipline-3/",
+ "slug": "budget-discipline__budget-discipline-3",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/budget-discipline/budget-discipline-3",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Budgetary Discipline - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/budget-discipline/budget-discipline-3/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Budgetary Discipline",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Gives Tips for Disciplined Budgeting](https://www.reliancecpa.com/budget-discipline)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Gives Tips for Disciplined Budgeting",
+     "href": "https://www.reliancecpa.com/budget-discipline"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Budgetary Discipline",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished February 29, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/budget-discipline1.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/budget-discipline1.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/budget-discipline1.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/budget-discipline/budget-discipline-2",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Budget Discipline",
+   "href": "https://www.reliancecpa.com/budget-discipline/budget-discipline-2",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/budget-discipline/budget-discipline-3).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/budget-discipline/budget-discipline-3"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

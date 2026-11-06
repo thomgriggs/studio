@@ -1,0 +1,19 @@
+{
+  "_about": "Links on the live site to pages that were never crawled or do not exist in the mockup. The mockup shows the text without a link. To-do for the owner: decide whether each page should exist. Rebuilt by tools/build.py --all.",
+  "unresolved": [],
+  "file_downloads": [
+    {
+      "url": "http://www.reliancecpa.com/navigating-the-business-of-medicine.pdf",
+      "used_on": [
+        "physician-accountants.htm"
+      ]
+    },
+    {
+      "url": "http://www.reliancecpa.com/wp-content/uploads/2011/12/navigating-the-business-of-medicine.pdf",
+      "used_on": [
+        "firmprofile.html",
+        "resources"
+      ]
+    }
+  ]
+}

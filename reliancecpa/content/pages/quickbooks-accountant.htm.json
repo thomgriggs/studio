@@ -1,0 +1,127 @@
+{
+ "url": "https://www.reliancecpa.com/quickbooks-accountant.htm",
+ "slug": "quickbooks-accountant.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "QuickBooks Accountant for Tampa St Petersburg Clearwater Sarasota Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/quickbooks-accountant.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "QuickBooks Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "QuickBooks Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/quickbooks-accountant.jpg",
+   "alt": "QuickBooks Accountant for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "quickbooks-accountant",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Affordable, fast, and easy to use, QuickBooks accounting software is perfect for small to medium sized businesses in the Tampa, Florida area. If you are using QuickBooks for your business, however, it is important to work with an accountant who knows QuickBooks even better than you do.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC has decades of experience as a QuickBooks accountant serving the greater Tampa, Florida area. Whether you depend on QuickBooks to keep track of finances at your St Petersburg restaurant or your Clearwater medical office, you can turn to Reliance Consulting to offer you ongoing QuickBooks support and a full range of other medium and [small business accounting](http://www.reliancecpa.com//small-business-accounting.htm) services.",
+   "links": [
+    {
+     "text": "small business accounting",
+     "href": "http://www.reliancecpa.com//small-business-accounting.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As a QuickBooks accountant, Reliance Consulting provides the following services and more from Tampa to Lakeland and Pasco to Sarasota:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Quick Books set up for new businesses and existing businesses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Quick answers to QuickBooks questions—you and your staff are welcome to e-mail us or call us for assistance at all levels of QuickBooks expertise, from beginner to intermediate to advanced",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "QuickBooks tune-ups for businesses that need [tax preparation](http://www.reliancecpa.com//tax-preparation.htm) help, a financial review, or simply want to fix some problems areas",
+     "links": [
+      {
+       "text": "tax preparation",
+       "href": "http://www.reliancecpa.com//tax-preparation.htm"
+      }
+     ],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While QuickBooks is the simplest accounting software on the market, it must be configured properly to produce accurate information for both the business owner and accountant. At Reliance Consulting, our accountants are committed to helping businesses set up their QuickBooks program so that it efficiently serves all [bookkeeping](http://www.reliancecpa.com//bookkeeping.htm), accounting, and tax planning needs now and years into the future.",
+   "links": [
+    {
+     "text": "bookkeeping",
+     "href": "http://www.reliancecpa.com//bookkeeping.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For further information about working with a QuickBooks accountant and CPA from Reliance Consulting, please contact us today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 293
+}

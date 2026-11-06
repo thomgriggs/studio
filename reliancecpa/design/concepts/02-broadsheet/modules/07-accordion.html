@@ -1,0 +1,11 @@
+{#
+MODULE: accordion
+PURPOSE: Questions or topics that open. Native details elements in the page's plain type: the question in the serif at 19px, a thin territory-coloured plus sign, answer below. No boxes.
+SLOTS: eyebrow, title, items[title, body[]].
+SQUARESPACE: Accordion block (native). The plus sign and colour are Accordion settings; no code.
+#}
+{% from "_macros.html" import eyebrow, body %}
+<section class="m m-acc" data-module="accordion" data-tone="{{ tone }}">
+  {{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}
+  <div class="acc">{% for i in s["items"] %}<details><summary>{{ i.title|md }}</summary><div class="prose">{{ body(i.body) }}</div></details>{% endfor %}</div>
+</section>

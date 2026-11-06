@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/refinancing-home-mortgage.html",
+ "slug": "refinancing-home-mortgage.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Refinancing a Home Mortgage",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/refinancing-home-mortgage.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What to Ask a Tampa CPA Before Refinancing a Home Mortgage",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "What to Ask a Tampa CPA Before Refinancing a Home Mortgage",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/refinancing-home-mortgage.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "refinancing-home-mortgage",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When mortgage interest rates fall, a homeowner naturally will begin to wonder whether it makes sense to refinance a current mortgage. After all, a rate reduction of only one percent can save a borrower thousands of dollars over the life of the loan. But it’s not as simple as calling up your mortgage holder and asking for a lower rate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you make sure your financial house is in order before you make the leap of refinancing an existing mortgage. The first question you’ll need to have answered is the most obvious: Should I refinance? Once you’ve made that decision, here are a few other questions you’ll want to ask:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "What is no-cost refinance, and is it right for me?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Am I better off financing for 30 years or 15 years?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What sort of title insurance will I need?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will I need a title search?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Am I better off using my current lender for my refinanced mortgage?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will I be able to take cash out of the transaction, and is it wise to do so?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How will refinancing affect my tax plan?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of businesses and thousands of individuals find the path to prosperity. Our certified public accountants take pride in building personal relationships with our clients to better understand their financial needs. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free financial health checkup and to find out if refinancing your mortgage is the right move.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 263
+}

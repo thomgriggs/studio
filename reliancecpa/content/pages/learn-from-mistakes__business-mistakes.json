@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes/",
+ "slug": "learn-from-mistakes__business-mistakes",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Business Mistakes - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Mistakes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Helps You Learn From Mistakes in Business](https://www.reliancecpa.com/learn-from-mistakes)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Helps You Learn From Mistakes in Business",
+     "href": "https://www.reliancecpa.com/learn-from-mistakes"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Business Mistakes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 2, 2012 | Full size is [615 × 900](https://www.reliancecpa.com/wp-content/uploads/Business-Mistakes.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "615 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Business-Mistakes.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Business-Mistakes.jpg",
+   "alt": "Business Mistakes",
+   "alt_missing": false,
+   "title": "",
+   "width": "615",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Business-Mistakes.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/learn-from-mistakes/business-mistakes).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 28
+}

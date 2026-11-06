@@ -1,0 +1,190 @@
+{
+ "url": "https://www.reliancecpa.com/dental-virtual-client-office",
+ "slug": "dental-virtual-client-office",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Virtual Client Office | Dental CPA | Cloud Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-virtual-client-office",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA can Help You Establish a Virtual Client Office for Your Dental Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA can Help You Establish a Virtual Client Office for Your Dental Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Virtual-Client-Office-300x200.jpg",
+   "alt": "Dental Virtual Client Office",
+   "alt_missing": false,
+   "title": "Dental Virtual Client Office",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Through the use of advanced technology and state-of-the-art business software, Reliance Consulting can help your dental practice establish a virtual client office that will streamline and simplify all of your practice’s business operations. Our net client portal is part of our dental practice management services, but you will also find that it is extraordinarily useful for your personal finances, as well.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A virtual client office provided by your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance can be used for:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Document Presentation – Online access to your financial documents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax Return Presentation – Access to electronic copies of your tax returns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "1040 Individual Client Web Organizer – A convenient way to organize tax information and provide it to Reliance via our website",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "File Exchange – Allows sharing of working files and exchange of information with us safely, securely, and conveniently via the web",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "News & Information – Access to news and other information",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Stock Quotes – An online ticker that displays continually updated information on stock market indexes or selected individual stocks",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "All of the above services are free and provided to every Reliance client. Naturally, they can be customized for the use of your dental practice or for your personal finances. Reliance also has available these premium add-ons for your virtual client office:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Hosted QuickBooks® Powered by Right Networks®",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Microsoft® Office – Full, online versions of Microsoft Office are available, and include Microsoft Word, Excel®, PowerPoint®, and Outlook®",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Account Aggregation – Collects financial information from a variety of sources and allows viewing in a single location on the portal, making it easier to analyze your total financial holdings",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "FileCabinet CS – The ideal choice for secure digital storage, File Cabinet CS allows you to instantly access, view, email, and fax documents. You save the time that you would have spent searching through file cabinets, and significantly reduce storage space needs, improve document security, and increase productivity and profitability",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your virtual client office is easy to use and secure. Your portal data is stored in a Tier 4 Thomson Reuters data center, one of the largest and most secure data centers located in Eagan, Minnesota. The Thomson Reuters data center has many important physical and application security features. Some of these features include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Built-in redundancies to create zero downtime",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Secure password protection (256-bit encryption)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Daily data backup",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our goal at Reliance is to take your dental practice into the 21st century. By utilizing the latest technologies, we are able to create more time for you. Time creates opportunities and ultimately opportunities create success. We truly believe that our success is coupled to yours. Enabling you to build a thriving, successful dental practice makes our job that much more worthwhile.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance Consulting today to learn more about establishing a virtual client office in the cloud.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 476
+}

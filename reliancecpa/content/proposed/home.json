@@ -1,0 +1,413 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/",
+ "slug": "home",
+ "template": "home",
+ "family": "proposed",
+ "title": "Reliance Consulting | CPA and Accounting in Tampa, Florida",
+ "own_closing": true,
+ "seo": {
+  "title_tag": "Reliance Consulting | CPA and Accounting in Tampa, Florida",
+  "meta_description": "Tax preparation, business accounting and consulting for Tampa Bay businesses and individuals since 1984.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`. Replaces the live home page (kept in structured/home.json as source).",
+ "verified": [
+  "'Since 1984' and 'more than 800 businesses and 1,000 individuals' (home: 'Now serving more than 800 businesses and 1,000 individuals in the Tampa, Florida region'; firm profile: 'over 800 businesses and 1000 individuals')",
+  "Free no-obligation check-up: firm profile ('free no-obligation “check-up”') and home ('a free financial checkup')",
+  "'How we work' items are verbatim from the live /reasons-to-choose-reliance.htm bullets",
+  "Home video: YouTube GRQm2WMPdmI, titled 'Tampa CPA | Business Growth Strategies (813) 931-7258' on the Reliance Consulting CPAs channel; embedded on the live home page",
+  "Team names, roles and photos: live /staff-profiles.htm. Kim Nguyen is the owner (confirmed by Thom, 2026-11-06; the live page still says Staff Accountant)",
+  "Quote 'In the success of our clients lies our own': closing line of the live home page and firm profile (they write it with '!!')",
+  "Address, phone, fax, email: live /contact.html text (address inconsistent with the map embed; see footer.json)",
+  "Client portal, mobile app and what-to-bring pages: live pages of those names",
+  "Tier services: the live pages mapped in nav.json"
+ ],
+ "confirm": [
+  "Hero headline 'Numbers you understand. Advice you will actually use.' (from concept-02, which the client chose; not on the live site)",
+  "Hero tagline: reworded from concept-02 ('helped ... make sense of their finances'); 'served' replaces 'helped'",
+  "Concept-02 claims the crawl cannot verify, left out of this page: '42 Years in practice' (arithmetic from 1984, fine if wanted), '2 Founding CPAs', '1,800+ Four decades of growth' (a by-decade chart of clients served), 'Free consultations' as a headline fact (the live site says free check-up), 'Partner at Reliance Consulting LLC: Kim M. Nguyen' (live site: Kim Nguyen is a Staff Accountant in 2008-2011 copy)",
+  "Concept-02 also lists Dental CPA and Veterinary CPA as industries; the firm has confirmed no dental or veterinary sections, so they are removed here",
+  "Trust strip: 'Served across the Tampa region' and 'No-obligation, for prospective clients' (new wording of live facts)",
+  "Tier card summaries and 'Three ways we help' / 'How we work' / 'Client resources' / 'Talk to us' headings and the three reason titles (new copy over live sentences)",
+  "Card text 'Access your tax returns and financial documents from a phone or tablet' (from the live app page: 'access, any document we produce, including tax returns and financials, through your smart phone or tablet')",
+  "'Tell us what you need help with, and we will point you to the right service.' (from concept-02's Services page; a promise about routing)",
+  "Video: title shown to visitors is shortened from the YouTube title (which carries the phone number); confirm the 2010s-era video is still wanted",
+  "Photos: tier card images and the background video are concept-02 stock files; Kim Nguyen's portrait is from concept-02 and not on the live site; confirm it is the one she wants used",
+  "Govindaraju Rudrapatna (shown in concept-02) has no live profile and is left out (Tara Govindaraju's bio mentions her husband Raju); confirm whether he should appear",
+  "SEO title and meta description for home (live title is 'CPA Tampa | Accountant | Business Tax | Income Tax | Bookkeeping | Payroll'; live meta description empty)"
+ ],
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "eyebrow": "Tampa, Florida · Since 1984",
+    "title": "Numbers you understand. Advice you will actually use.",
+    "tagline": "Since 1984, Reliance Consulting has served more than 800 businesses and 1,000 individuals in the Tampa Bay area: tax, bookkeeping, payroll, and the thinking behind the numbers.",
+    "background_video": "concept-02/assets/home-background.mp4",
+    "actions": [
+     {
+      "text": "Get Started",
+      "page": "get-started"
+     },
+     {
+      "text": "Call (813) 931-7258",
+      "href": "tel:+18139317258"
+     }
+    ]
+   }
+  },
+  {
+   "module": "trust-strip",
+   "slots": {
+    "facts": [
+     {
+      "lead": "Since 1984",
+      "text": "Serving the Tampa, Florida area"
+     },
+     {
+      "lead": "More than 800 businesses and 1,000 individuals",
+      "text": "Served across the Tampa region"
+     },
+     {
+      "lead": "A free check-up",
+      "text": "No-obligation, for prospective clients"
+     }
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "tiers",
+   "slots": {
+    "eyebrow": "What we do",
+    "title": "Three ways we help",
+    "cards": [
+     {
+      "title": "Tax Preparation",
+      "tier": "tax-preparation",
+      "text": [
+       "Returns, year-round planning and IRS problem resolution for individuals and businesses."
+      ],
+      "page": "tax-preparation",
+      "href": "https://www.reliancecpa.com/tax-preparation/",
+      "link_text": "Tax Preparation",
+      "links": [
+       {
+        "text": "Tax Planning",
+        "page": "tax-planning.htm"
+       },
+       {
+        "text": "Business Tax",
+        "page": "business-tax.htm"
+       },
+       {
+        "text": "Income Tax Services",
+        "page": "income-tax-services.htm"
+       },
+       {
+        "text": "IRS Problem Resolution",
+        "page": "tax-problem-irs-audit-help.htm"
+       }
+      ],
+      "image": {
+       "src": "concept-02/assets/tax-planning.jpg",
+       "alt": "",
+       "stock": true
+      }
+     },
+     {
+      "title": "Business Accounting",
+      "tier": "business-accounting",
+      "text": [
+       "Bookkeeping, QuickBooks, payroll and cash flow, with Reliance BackOffice for outsourced accounting."
+      ],
+      "page": "business-accounting",
+      "href": "https://www.reliancecpa.com/business-accounting/",
+      "link_text": "Business Accounting",
+      "links": [
+       {
+        "text": "Bookkeeping",
+        "page": "bookkeeping.htm"
+       },
+       {
+        "text": "QuickBooks Accountant",
+        "page": "quickbooks-accountant.htm"
+       },
+       {
+        "text": "Reliance BackOffice",
+        "page": "reliance-consulting-backoffice"
+       },
+       {
+        "text": "Payroll Services",
+        "page": "payroll-services.htm"
+       },
+       {
+        "text": "Cash Flow Management",
+        "page": "cash-flow-management.htm"
+       }
+      ],
+      "image": {
+       "src": "concept-02/assets/bookkeeping.jpg",
+       "alt": "",
+       "stock": true
+      }
+     },
+     {
+      "title": "Business & Tax Consulting",
+      "tier": "business-tax-consulting",
+      "text": [
+       "Business plans, financing, financial planning, part-time CFO and succession planning, with industry examples."
+      ],
+      "page": "business-tax-consulting",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/",
+      "link_text": "Business & Tax Consulting",
+      "links": [
+       {
+        "text": "Business Planning",
+        "page": "business-planning-services.htm"
+       },
+       {
+        "text": "New Business Planning",
+        "page": "new-business-planning.htm"
+       },
+       {
+        "text": "Business Finance Consulting",
+        "page": "business-finance-consultant.htm"
+       },
+       {
+        "text": "Financial Planning",
+        "page": "financial-planning.htm"
+       },
+       {
+        "text": "Part-Time CFO",
+        "page": "part-time-cfo.htm"
+       },
+       {
+        "text": "Succession Planning",
+        "page": "succession-planning.htm"
+       }
+      ],
+      "image": {
+       "src": "concept-02/assets/consulting-office.jpg",
+       "alt": "",
+       "stock": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "module": "reasons",
+   "slots": {
+    "eyebrow": "Why Reliance",
+    "title": "How we work",
+    "items": [
+     {
+      "title": "We do much more than crunch numbers",
+      "text": "Reliance Consulting does much more than “crunch numbers.” We get to the bottom of numbers to help our clients make prudent, appropriate financial decisions."
+     },
+     {
+      "title": "An open door policy",
+      "text": "We have an open door policy with our clients."
+     },
+     {
+      "title": "Someone available to answer",
+      "text": "At the end of the day, clients can call any time and be assured that someone will be available to answer their questions, whether it has to do with saving your taxes or some other financial issue."
+     }
+    ]
+   }
+  },
+  {
+   "module": "video-split",
+   "slots": {
+    "eyebrow": "Watch",
+    "title": "Business growth strategies",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "From the Reliance Consulting channel."
+     }
+    ],
+    "url": "https://www.youtube.com/embed/GRQm2WMPdmI",
+    "video_title": "Tampa CPA | Business Growth Strategies"
+   }
+  },
+  {
+   "module": "people",
+   "slots": {
+    "eyebrow": "People",
+    "title": "Who you will work with",
+    "people": [
+     {
+      "name": "Kim Nguyen",
+      "role": "Owner",
+      "image": {
+       "src": "concept-02/assets/kim-m-nguyen.png",
+       "alt": "Kim Nguyen, Owner",
+       "origin": "concept-02 asset; confirm it is the portrait Kim wants used"
+      }
+     }
+    ],
+    "team": [
+     {
+      "name": "Valerie Stickeler",
+      "role": "Certified Public Accountant"
+     },
+     {
+      "name": "Tara Govindaraju",
+      "role": "Accounting Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
+       "alt": "Tara Govindaraju, Accounting Manager"
+      }
+     },
+     {
+      "name": "Nicole Frenier",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
+       "alt": "Nicole Frenier, Staff Accountant"
+      }
+     },
+     {
+      "name": "Jamie Partin",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
+       "alt": "Jamie Partin, Staff Accountant"
+      }
+     },
+     {
+      "name": "Briana McNulty",
+      "role": "Office Administrator & Billing Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
+       "alt": "Briana McNulty, Office Administrator & Billing Manager"
+      }
+     }
+    ],
+    "quote": {
+     "text": "In the success of our clients lies our own.",
+     "attribution": "Reliance Consulting, LLC"
+    },
+    "link": {
+     "text": "Meet the team",
+     "page": "staff-profiles.htm"
+    }
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "resources",
+   "slots": {
+    "eyebrow": "For clients",
+    "title": "Client resources",
+    "cards": [
+     {
+      "title": "Client portal",
+      "text": [
+       "Our sophisticated client portal represents a convenient and secure way to communicate with Reliance Consulting."
+      ],
+      "page": "reliance-consulting-netclient-portals",
+      "href": "https://www.reliancecpa.com/resources/client-portal/",
+      "link_text": "About the portal"
+     },
+     {
+      "title": "Mobile app",
+      "text": [
+       "Access your tax returns and financial documents from a phone or tablet."
+      ],
+      "page": "app",
+      "href": "https://www.reliancecpa.com/resources/mobile-app/",
+      "link_text": "About the app"
+     },
+     {
+      "title": "What to bring",
+      "text": [
+       "What records to bring to your first meeting."
+      ],
+      "page": "records-for-cpa-meeting.htm",
+      "href": "https://www.reliancecpa.com/resources/records-for-your-first-meeting/",
+      "link_text": "See the list"
+     }
+    ]
+   }
+  },
+  {
+   "module": "post-feed",
+   "variant": "cards",
+   "slots": {
+    "title": "Related articles",
+    "posts": [
+     {
+      "title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+      "page": "tax-saving-strategies.htm",
+      "href": "https://www.reliancecpa.com/resources/tax-saving-strategies/",
+      "excerpt": "A primary benefit of hiring a CPA in Tampa from Reliance Consulting, LLC is the fact that we can help you plan ways to legally reduce your tax liability."
+     },
+     {
+      "title": "Can Your Accountants in Tampa also be Your Part-Time CFO?",
+      "page": "part-time-cfo.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/part-time-cfo/",
+      "excerpt": "Congratulations!"
+     },
+     {
+      "title": "How Payroll Processing by a CPA in Tampa Can Help Your Small Business",
+      "page": "how-payroll-processing-helps.htm",
+      "href": "https://www.reliancecpa.com/resources/how-payroll-processing-helps/",
+      "excerpt": "The reports, the withholding, the laws, the checks … payroll can be a lengthy chore that consumes a large portion of a Tampa Bay small business owner’s time."
+     }
+    ],
+    "more": {
+     "text": "All articles",
+     "page": "articles.html"
+    }
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "title": "Not sure where to start?",
+    "text": "Tell us what you need help with, and we will point you to the right service.",
+    "buttons": [
+     {
+      "text": "Get Started",
+      "page": "get-started"
+     }
+    ]
+   }
+  },
+  {
+   "module": "contact-band",
+   "slots": {
+    "title": "Talk to us",
+    "text": "Call, send a note, or stop by.",
+    "lines": [
+     {
+      "label": "Address",
+      "value": "14499 N Dale Mabry Hwy Suite 179-S, Tampa, FL 33618"
+     },
+     {
+      "label": "Phone",
+      "value": "(813) 931-7258"
+     },
+     {
+      "label": "Fax",
+      "value": "(813) 931-5555"
+     },
+     {
+      "label": "Email",
+      "value": "kim@reliancecpa.com"
+     }
+    ],
+    "button": {
+     "text": "Get Started",
+     "page": "get-started"
+    }
+   }
+  }
+ ]
+}

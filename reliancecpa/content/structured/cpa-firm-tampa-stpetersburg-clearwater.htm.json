@@ -1,0 +1,117 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm",
+ "slug": "cpa-firm-tampa-stpetersburg-clearwater.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "CPA Firm & Accountants Serving Tampa, St Petersburg, Clearwater & Surrounding Communities",
+ "seo": {
+  "title_tag": "CPA Firm & Accountants Serving Tampa St Petersburg Clearwater & Surrounding Communities",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Firm & Accountants Serving Tampa, St Petersburg, Clearwater & Surrounding Communities",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "CPA Firm & Accountants Serving Tampa, St Petersburg, Clearwater & Surrounding Communities",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tampa-stpetersburg-clearwater.jpg",
+     "alt": "CPA Firm Serving Tampa, St Petersburg, Clearwater"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Tampa, St Petersburg, and Clearwater are generally considered to be the premier cities of the Tampa Bay area. Home to more than 700,000 residents—plus millions more in surrounding communities—Tampa, St Petersburg, and Clearwater boast beautiful beaches and parks, exquisite homes, and thriving businesses.",
+     "The CPAs and staff accountants at Reliance Consulting, LLC, feel privileged to serve Tampa, St Petersburg, Clearwater, and beyond with personalized, comprehensive financial solutions that are designed to produce superior results. Whether you are in Brandon, Largo, Palm Harbor, Town ‘n’ Country, or Safety Harbor, Reliance Consulting is here to assist you and your business with:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Personal and business accounting"
+     },
+     {
+      "text": "[Tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and planning"
+     },
+     {
+      "text": "IRS problem resolution"
+     },
+     {
+      "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm), payroll, and QuickBooks accounting"
+     },
+     {
+      "text": "Bank financing and strategic business planning"
+     },
+     {
+      "text": "Accountants and CPAs with vast experience working with medical professionals, retail, real estate, and the hospitality industry to name a few"
+     },
+     {
+      "text": "Retirement plans"
+     },
+     {
+      "text": "Protecting your assets from litigation"
+     },
+     {
+      "text": "Your children’s educational plans"
+     },
+     {
+      "text": "Much more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Perhaps best of all, Reliance Consulting maintains an open-door policy with each and every one of our clients. If you wish to have a [Tampa CPA](http://www.reliancecpa.com/) who is accessible to your questions and concerns, or if you are simply looking for an accountant who will take the time to explain the various financial options available to you, give Reliance Consulting a call today."
+     },
+     {
+      "type": "p",
+      "text": "From healthcare professionals in Lakeland to resort owners in Sarasota to homeowners on Clearwater Beach, we invite all residents of Tampa, Clearwater, St Petersburg, and nearby communities to [contact us](http://www.reliancecpa.com/contact.html) for a free financial review. We look forward to providing you with an effective, tailored approach to your financial objectives."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/areas-served/tampa-st-petersburg-clearwater/",
+  "role": "local-seo",
+  "old_path": "/cpa-firm-tampa-stpetersburg-clearwater.htm"
+ }
+}

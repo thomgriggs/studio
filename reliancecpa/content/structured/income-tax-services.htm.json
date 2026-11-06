@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/income-tax-services.htm",
+ "slug": "income-tax-services.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Income Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Income Tax Services for Tampa St Petersburg Clearwater Lakeland Sarasota Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/income-tax-services.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Income Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Income Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/income-tax-services.jpg",
+     "alt": "Income Tax Services for the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "The annual income tax deadline is an anxious time of year for many individuals. Sifting through stacks of forms, records, and receipts, the majority of Americans feel that income tax preparation is a grueling and confusing task.",
+     "Thanks to the income tax services provided by the CPAs and accountants at Reliance Consulting, LLC, residents from Tampa to Clearwater, St Petersburg to Lakeland, Sarasota to Pasco County and beyond can rest assured that their income tax returns are handled with experience, professionalism, and timeliness. When it comes to income [tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and our many other financial services, each CPA and accountant from Reliance Consulting has a passion for our profession and a commitment to our clients. We take extreme pride in the tangible results we have achieved for thousands of Tampa Bay residents.",
+     "A few of the many income tax services and consultations provided by Reliance Consulting include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Income tax preparation"
+     },
+     {
+      "text": "Self employment tax"
+     },
+     {
+      "text": "Estimated quarterly income tax"
+     },
+     {
+      "text": "Itemized deductions"
+     },
+     {
+      "text": "Employee benefit plans"
+     },
+     {
+      "text": "[Tax planning](http://www.reliancecpa.com/tax-planning.htm)"
+     },
+     {
+      "text": "Tax on bonuses"
+     },
+     {
+      "text": "Capital gains tax"
+     },
+     {
+      "text": "Understanding your IRA, 401k, and other tax deferred retirement accounts"
+     },
+     {
+      "text": "[Tax problems](http://www.reliancecpa.com/tax-problem-irs-audit-help.htm) and IRS problem resolution"
+     },
+     {
+      "text": "Much more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "In these days of income tax software programs, too many individuals try to complete their tax returns themselves, without any assistance from a professional accountant, often missing out on the many deductions and credits available. Backed by decades of experience, Reliance Consulting offers CPA-supported income tax services that will investigate every possible avenue for individuals to save money on their income tax, now and in the future."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/tax-preparation/income-tax-services/",
+  "role": "service",
+  "tier": "tax-preparation",
+  "old_path": "/income-tax-services.htm"
+ },
+ "short_title": "Income Tax Services"
+}

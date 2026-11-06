@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/leveraged-buyout",
+ "slug": "leveraged-buyout",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Leveraged Buyout | Tampa CPA | Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/leveraged-buyout",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses the Benefits of a Leveraged Buyout",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses the Benefits of a Leveraged Buyout",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/leveraged-buyout-300x211.jpg",
+   "alt": "Leveraged Buyout",
+   "alt_missing": false,
+   "title": "Leveraged Buyout",
+   "width": "300",
+   "height": "211",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A leveraged buyout, or highly leveraged transaction, occurs when an investor finances most or all of the purchase price in order to take a controlling interest in the property. This is often used by the super wealthy to purchase big-ticket items, such as major, high-profile sports teams. It also is used by corporations to purchase controlling interest in other corporations, or by members of a management team to buy controlling interest in the company they work for (known as a management buyout). In many cases, the assets of the company or entity being purchased are used as collateral for the bonds or loans being taken out for the purchase.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help small business owners understand and navigate the ins and outs of complex transactions such as a leveraged buyout. Whether you are interested in acquiring a property or one or more of your assets is the target of a potential takeover, we can lay out all your options in clear, easy-to-understand language so you can make informed decisions. Since opening our doors in 1984, we have dealt with all types of large-scale and small-scale transactions, and we are no strangers to the world of big business. We also can help you understand how best to position your company to protect itself against potential hostile takeovers, many of which are accomplished through leveraged buyouts.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about this and other complex financial strategies, [contact](http://www.reliancecpa.com/contact.html) Reliance today. Our goal is to help you and your company maintain profitability. We are here to save you time and money. How you spend it is up to you!",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 283
+}

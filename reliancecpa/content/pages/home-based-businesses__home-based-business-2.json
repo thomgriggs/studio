@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/home-based-businesses/home-based-business-2/",
+ "slug": "home-based-businesses__home-based-business-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/home-based-businesses/home-based-business-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Home Based Business - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/home-based-businesses/home-based-business-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Home Based Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Examines What Industries are Best Suited for Home-Based Businesses](https://www.reliancecpa.com/home-based-businesses)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Examines What Industries are Best Suited for Home-Based Businesses",
+     "href": "https://www.reliancecpa.com/home-based-businesses"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Home Based Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished November 2, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Home-Based-Business.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Home-Based-Business.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Home-Based-Business.jpg",
+   "alt": "Home Based Business",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Home-Based-Business.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/home-based-businesses/home-based-business-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/home-based-businesses/home-based-business-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

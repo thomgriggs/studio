@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/reliable-insurance",
+ "slug": "reliable-insurance",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Finding Reliable Insurance",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reliable-insurance",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How to Tell if Your Insurance Company is Reliable",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How to Tell if Your Insurance Company is Reliable",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/reliable-insurance-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Reliable Insurance",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most of us would like to believe that if something bad happens – a car accident, storm damage to our home, etc. – our insurance company has it covered. In truth, the only way to be sure that is the case is to scrutinize the policy before a catastrophe occurs. Once it’s happened, you are essentially at the mercy of the insurance carrier, and you can only hope that the company is reliable.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you determine a number of insurance-related things, including whether the company is considered reliable and financially sound. One rule of thumb is to shop around before committing to a certain company or type of policy, because the market place presents a wide variety of options for homeowners insurance, life insurance, auto insurance, business insurance, and more. Along those lines, even though it is important not to overspend on your premiums, it might be smarter in the long run to pay slightly more each month to a company you know you can trust if the worst occurs.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Yet, unless you are an insurance expert, how can you tell which companies are reliable, and which are not to be trusted? Fortunately, several reputable financial analysis companies exist to apply ratings to insurance companies. These ratings gauge the financial strength and creditworthiness of the insurance carriers, with in-depth analysis of the companies’ balance sheets, operating performance, and overall business profile. The top insurance ratings providers include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Standard & Poor’s (S&P)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A.M. Best",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fitch Ratings",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Moody’s",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Weiss Research",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about smart ways to get the most out of your insurance policies, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 287
+}

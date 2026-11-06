@@ -1,0 +1,21 @@
+{#
+MODULE: post-feed
+PURPOSE: Article teasers. Variant cards: the original's "question cards", three white 16px cards on a pale green band, small-caps category line, 27px Georgia title, an "Explore" link pinned bottom. Default: a stack of ruled linked titles with excerpts.
+SLOTS: title, posts[title, href, excerpt, date], more[text, href].
+SQUARESPACE: Summary block (grid or list) over the Resources collection, or three Text blocks with Buttons on a pale green background; "All articles" is a Button.
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-feed{{ ' m-feed--cards' if variant == 'cards' }}" data-module="post-feed" data-tone="{{ tone }}">
+  {% if s.title %}<div class="section-intro"><h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>{% endif %}
+  <div class="feed">
+    {% for p in s.posts %}
+    <article class="post">
+      <p class="eyebrow eyebrow--terr">{{ p.date|longdate if p.date else 'Article' }}</p>
+      <h3 class="post__h"><a href="{{ p.href|href }}">{{ p.title }}</a></h3>
+      {% if p.excerpt %}<p class="post__ex">{{ p.excerpt|md }}</p>{% endif %}
+      <a class="post__go" href="{{ p.href|href }}">Read the article &rarr;</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% if s.more %}<p class="feed__more"><a class="btn btn-secondary" href="{{ s.more.href|href }}">{{ s.more.text }}</a></p>{% endif %}
+</section>

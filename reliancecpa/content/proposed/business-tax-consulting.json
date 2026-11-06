@@ -1,0 +1,324 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/business-tax-consulting/",
+ "slug": "business-tax-consulting",
+ "template": "tier-landing",
+ "family": "proposed",
+ "title": "Business & Tax Consulting",
+ "tier": "business-tax-consulting",
+ "accent": "gold",
+ "consolidates": [
+  "business-consultants.htm"
+ ],
+ "seo": {
+  "title_tag": "Business and Tax Consulting in Tampa | Reliance Consulting",
+  "meta_description": "Business planning, financing, financial planning, part-time CFO and succession planning from the CPAs at Reliance Consulting.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`.",
+ "verified": [
+  "Service pages: the live pages mapped to this tier in nav.json (business-planning-services.htm, new-business-planning.htm, business-finance-consultant.htm, financial-planning.htm, part-time-cfo.htm, succession-planning.htm); each card's one-line summary is drawn from that page's own text (see nav.json mega links).",
+  "Intro: first sentences of the live landing business-consultants.htm",
+  "'Who it is for' and the problems list are verbatim from business-consultants.htm and business-consultants.htm",
+  "Team names, roles and photos: live /staff-profiles.htm. Kim Nguyen is the owner (confirmed by Thom, 2026-11-06; the live page still says Staff Accountant)",
+  "Related articles: live pages strategic-business-planning.htm, business-valuation.htm, forms-to-start-business.htm; excerpt = the article's first sentence"
+ ],
+ "confirm": [
+  "Tagline 'Planning, financing and advice for owners, from a first plan to the next step.' and the tier description (new copy)",
+  "Service card summaries (one sentence each, condensed from the page text; check each reads true)",
+  "CTA: 'Not sure where to start? Tell us what you are working on.' and 'Choose what you need help with and send a short request.' (new copy)",
+  "Which team members work in this tier: the crawl does not say, so every tier shows the whole team",
+  "Kim Nguyen's portrait comes from concept-02, not from the live site; confirm it is the one she wants used. Her exact title wording ('Owner') and credentials are to confirm",
+  "SEO title and meta description (new copy, not from the live site, which has none)",
+  "The live 'Who it is for' sentence is used as written, including 'time-tested strategies that have been proven to turn stressed companies into flourishing businesses' (business consultants page); it is the firm's own claim, so confirm it stands",
+  "Which industries Kim wants named as examples (plan section 11): the live site has physicians, retail, restaurant and hotel, and real estate; the firm profile also lists convenience stores, gas stations, franchises, hotels, motels, development, investment, management and mortgage companies"
+ ],
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "eyebrow": "Business & Tax Consulting",
+    "title": "Business & Tax Consulting",
+    "tagline": "Planning, financing and advice for owners, from a first plan to the next step.",
+    "tier": "business-tax-consulting",
+    "actions": [
+     {
+      "text": "Get Started",
+      "page": "get-started__business-tax-consulting"
+     }
+    ]
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Despite offering top-of-the-line products and services—and having a long list of happy customers—many Tampa, FL area businesses still find themselves barely making it."
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "service-cards",
+   "slots": {
+    "eyebrow": "Services",
+    "title": "Business & Tax Consulting services",
+    "tier": "business-tax-consulting",
+    "cards": [
+     {
+      "title": "Business Planning",
+      "text": [
+       "Business plan writing and planning support for starting and running a business."
+      ],
+      "page": "business-planning-services.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/business-planning/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "New Business Planning",
+      "text": [
+       "Choosing a structure, writing a business plan and finding financing for a new business."
+      ],
+      "page": "new-business-planning.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/new-business-planning/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Business Finance Consulting",
+      "text": [
+       "Researching business loans, including SBA options, and preparing the financial statements lenders ask for."
+      ],
+      "page": "business-finance-consultant.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/business-finance-consulting/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Financial Planning",
+      "text": [
+       "Planning to build and preserve your wealth around your goals."
+      ],
+      "page": "financial-planning.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/financial-planning/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Part-Time CFO",
+      "text": [
+       "Part-time CFO support for a growing business, from your accountants."
+      ],
+      "page": "part-time-cfo.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/part-time-cfo/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Succession Planning",
+      "text": [
+       "Planning for who will own and run your business next."
+      ],
+      "page": "succession-planning.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/succession-planning/",
+      "link_text": "Learn more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Who it is for",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Whether you own a manufacturing facility in Tampa, a medical office in Clearwater, or a real estate firm in St Petersburg, the business consultants from Reliance Consulting, LLC can implement time-tested strategies that have been proven to turn stressed companies into flourishing businesses."
+     }
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "title": "What a Reliance business consultant does",
+    "ordered": false,
+    "items": [
+     {
+      "text": "Gains intimate knowledge of the business in both its operations and finances"
+     },
+     {
+      "text": "Provides an objective analysis of the business"
+     },
+     {
+      "text": "Can get you started on the right foot with new business planning"
+     },
+     {
+      "text": "Develops long term and short term business plans"
+     },
+     {
+      "text": "Provides the company with business tax services and strategies"
+     },
+     {
+      "text": "Brainstorms strategies to increase revenues and decrease expenses"
+     },
+     {
+      "text": "Advises clients on marketing and networking strategies that have worked in their industries"
+     },
+     {
+      "text": "Assists with bookkeeping, payroll, cash flow management, business finance consulting, and the other critical, day-to-day financial needs of the business"
+     }
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "industries",
+   "slots": {
+    "eyebrow": "Industry examples",
+    "title": "Where we have worked",
+    "tier": "business-tax-consulting",
+    "cards": [
+     {
+      "title": "Physicians and Healthcare",
+      "text": [
+       "Accounting and tax services for doctors, dentists, clinics and other health care providers."
+      ],
+      "page": "physician-accountants.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/industries/physicians/",
+      "link_text": "See the example"
+     },
+     {
+      "title": "Retail",
+      "text": [
+       "Accounting for retail stores: point-of-sale advice, inventory tracking, sales tax and payroll."
+      ],
+      "page": "retail-accounting.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/industries/retail/",
+      "link_text": "See the example"
+     },
+     {
+      "title": "Restaurants and Hotels",
+      "text": [
+       "Accounting and tax services for restaurants and hotels."
+      ],
+      "page": "restaurant-hotel-accountant.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/industries/hospitality/",
+      "link_text": "See the example"
+     },
+     {
+      "title": "Real Estate",
+      "text": [
+       "Tax and accounting for real estate investors and professionals."
+      ],
+      "page": "real-estate-cpa.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/industries/real-estate/",
+      "link_text": "See the example"
+     }
+    ]
+   }
+  },
+  {
+   "module": "people",
+   "slots": {
+    "eyebrow": "People",
+    "title": "Who you will work with",
+    "people": [
+     {
+      "name": "Kim Nguyen",
+      "role": "Owner",
+      "image": {
+       "src": "concept-02/assets/kim-m-nguyen.png",
+       "alt": "Kim Nguyen, Owner",
+       "origin": "concept-02 asset; confirm it is the portrait Kim wants used"
+      }
+     }
+    ],
+    "team": [
+     {
+      "name": "Valerie Stickeler",
+      "role": "Certified Public Accountant"
+     },
+     {
+      "name": "Tara Govindaraju",
+      "role": "Accounting Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
+       "alt": "Tara Govindaraju, Accounting Manager"
+      }
+     },
+     {
+      "name": "Nicole Frenier",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
+       "alt": "Nicole Frenier, Staff Accountant"
+      }
+     },
+     {
+      "name": "Jamie Partin",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
+       "alt": "Jamie Partin, Staff Accountant"
+      }
+     },
+     {
+      "name": "Briana McNulty",
+      "role": "Office Administrator & Billing Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
+       "alt": "Briana McNulty, Office Administrator & Billing Manager"
+      }
+     }
+    ],
+    "link": {
+     "text": "Meet the team",
+     "page": "staff-profiles.htm"
+    }
+   }
+  },
+  {
+   "module": "post-feed",
+   "variant": "cards",
+   "slots": {
+    "title": "Related articles",
+    "posts": [
+     {
+      "title": "What Is Strategic Business Planning and How Can Your Tampa Accountants Assist You?",
+      "page": "strategic-business-planning.htm",
+      "href": "https://www.reliancecpa.com/resources/strategic-business-planning/",
+      "excerpt": "True to its name, strategic business planning is creating a strategy for an area of your business and then following that plan for a certain period of time."
+     },
+     {
+      "title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+      "page": "business-valuation.htm",
+      "href": "https://www.reliancecpa.com/resources/business-valuation/",
+      "excerpt": "Just about anyone in the Tampa Bay area could make an accurate guess as to what their car is worth and their house is worth."
+     },
+     {
+      "title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+      "page": "forms-to-start-business.htm",
+      "href": "https://www.reliancecpa.com/resources/forms-to-start-business/",
+      "excerpt": "So, you have a great idea for starting a new business in the Tampa Bay area, but you’re not sure where to begin?"
+     }
+    ],
+    "more": {
+     "text": "All articles",
+     "page": "articles.html"
+    }
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "title": "Not sure where to start? Tell us what you are working on.",
+    "text": "Choose what you need help with and send a short request.",
+    "buttons": [
+     {
+      "text": "Get Started",
+      "page": "get-started__business-tax-consulting"
+     }
+    ]
+   }
+  }
+ ]
+}

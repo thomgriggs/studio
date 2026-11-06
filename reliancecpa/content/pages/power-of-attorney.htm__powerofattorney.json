@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney/",
+ "slug": "power-of-attorney.htm__powerofattorney",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "powerofattorney - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "powerofattorney",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Your CPA in Tampa Answers the Question, What is Power of Attorney?](https://www.reliancecpa.com/power-of-attorney.htm)",
+   "links": [
+    {
+     "text": "← Your CPA in Tampa Answers the Question, What is Power of Attorney?",
+     "href": "https://www.reliancecpa.com/power-of-attorney.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "powerofattorney",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [200 × 300](https://www.reliancecpa.com/wp-content/uploads/2011/12/powerofattorney.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "200 × 300",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/powerofattorney.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/powerofattorney.gif",
+   "alt": "CPA in Tampa - Power of Attorney",
+   "alt_missing": false,
+   "title": "",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/powerofattorney.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

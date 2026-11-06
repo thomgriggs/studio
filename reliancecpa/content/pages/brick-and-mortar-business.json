@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/brick-and-mortar-business",
+ "slug": "brick-and-mortar-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Brick and Mortar Business | Small Business Consultant",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/brick-and-mortar-business",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA can Help Determine if Your Business Needs a ‘Brick and Mortar’ Presence",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA can Help Determine if Your Business Needs a ‘Brick and Mortar’ Presence",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Brick-and-Mortar-300x209.jpg",
+   "alt": "Brick and Mortar Business",
+   "alt_missing": false,
+   "title": "Brick and Mortar Business",
+   "width": "300",
+   "height": "209",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you own a business that you operate out of your home, or if you conduct your business using an Internet connection at Starbucks or another local coffee shop or eatery, the thought has no doubt occurred to you that dedicated office space might be the way to go. Yet, if you’re like most owners of home-based self-proprietorships, the cost of a “brick and mortar” presence is considered prohibitive. While cost is a very real factor, especially for new home-based businesses, there could come a time when working from home or a coffee shop begins to inhibit the company’s growth.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you make plans if you intend to move your company out of the home and into an office. Or, if you’re not sure yet that it’s time to make that move, we can help you weigh the pros and cons and moving out of the home. In most cases, it comes down to answering a few important questions:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "What would be gained by moving the business out of the home?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What would be lost by leaving the home?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can you afford the costs associated with renting office space?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are you prepared to negotiate the best possible terms for your lease?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ultimately, deciding whether to move into an office should come down to how it would benefit the company. Many small business owners decide to lease office space because they believe it improves their credibility with clients and potential clients. Still others take advantage of the cost savings associated with working out of the home to invest in innovative marketing techniques or hiring more employees. The best way to determine whether it is time to pursue a brick and mortar presence for your small business is to sit down with a Tampa CPA from Reliance and weigh the pros and cons.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance today to get started.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 330
+}

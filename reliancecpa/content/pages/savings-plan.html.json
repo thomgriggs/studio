@@ -1,0 +1,146 @@
+{
+ "url": "https://www.reliancecpa.com/savings-plan.html",
+ "slug": "savings-plan.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Savings Plan",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/savings-plan.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Develop a Savings Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Develop a Savings Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/savings-amount.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "savings-amount",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Conventional wisdom when it comes to saving money is to set aside ten percent of your monthly gross income – and let it work for you in an interest-bearing account like a mutual fund. Popular personal finance books like David Chilton’s “The Wealthy Barber” and George Samuel Clason’s “The Richest Man in Babylon” offer this advice as the surest way to build a secure financial future. The “ten-percent rule” isn’t for everyone, though, because every person’s monetary situation is unique.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can examine every facet of your financial situation – income, debt, monthly expenses, short-term and long-term goals – to help you develop a savings plan geared toward your unique needs. It starts with a free financial health checkup from one of our financial advisers, and ends with you feeling confident about your ability to meet your goals in the future.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter your financial situation, there’s always a need for ready cash. Here are a few goals that might motivate you to set aside money in a savings account:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Down payment on a home",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Automobile, boat or motorcycle",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "College tuition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Emergency fund for home repairs, car repairs or medical bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Home improvement project",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dream vacation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Holiday gifts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Long-term care",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has been a premier accounting firm in the Tampa Bay region. We serve more than 800 businesses and 1,000 individuals in the area, and we are dedicated to providing our clients the personalized attention they deserve. [Contact](http://www.reliancecpa.com/contact.html)Reliance today to get started on securing your financial future through a sound savings plan.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 274
+}

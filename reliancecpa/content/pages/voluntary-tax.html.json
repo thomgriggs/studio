@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/voluntary-tax.html",
+ "slug": "voluntary-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | What Voluntary Income Tax Really Means",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/voluntary-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What 'Voluntary' Means Regarding Federal Income Tax",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What ‘Voluntary’ Means Regarding Federal Income Tax",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/voluntary-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "voluntary-tax",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The first federal income tax was established in the United States during the Civil War, initiating the forerunner of today’s Internal Revenue Service. In 1913, the 16th Amendment to the U.S. Constitution formalized the tax system by giving Congress the legal authority to tax income. Both of these actions were taken by elected representatives of the citizens of the U.S., and, as such, were explicitly performed with the consent of the governed.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In this sense, the term “voluntary” is used to describe the nature of America’s system of income taxation. It refers to a system of allowing taxpayers to initially determine the amount to be taxed, rather than the government determining the amount from the outset. Not paying taxes, and not filing a tax return, is against federal law.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since you are compelled anyway to pay taxes in America if you make a certain amount of money, why not let a [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, make sure you pay only the precise amount you owe? Since opening our doors in 1984, Reliance has helped thousands of Tampa Bay area taxpayers and hundreds of business owners find peace of mind at tax time. Our comprehensive, reliable services include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Personal income tax preparation and planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Help with determining estimated quarterly tax payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Finding solutions to problems with the IRS",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business tax planning and preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services, bookkeeping, and more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com//contact.html) Reliance today for help with your personal or business taxes. We’ll also conduct a complimentary financial health checkup to make sure you or your business are on the right path to future prosperity.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 276
+}

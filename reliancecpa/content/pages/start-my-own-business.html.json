@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/start-my-own-business.html",
+ "slug": "start-my-own-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Breaking Away To Start a Business | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/start-my-own-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Decide Whether to Start Your Own Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Decide Whether to Start Your Own Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/start-my-own-business.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "start-my-own-business",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Perhaps you’ve been at an agency or firm for quite awhile, now, and you’re beginning to feel that entrepreneurial itch. You’ve worked for someone else your whole career, and you’ve always thought that maybe it would be better to work for yourself. Sure, there’s security as an employee, as long as you do your job well. Still, you have dreams. And those dreams are big. Maybe it’s time to strike out on your own and start a company.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, is here to make sure you don’t have to make a go of it completely on your own. While you concentrate on big-picture issues, your personal accountant from Reliance can handle the day-to-day financial chores that might rob a small business owner of time better spent building the relationships that are so important for a company’s long-term health.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Before you jump into the entrepreneurial deep end, though, the U.S. Small Business Administration suggest that you consider a few important questions:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Why are you starting this business?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are you prepared to spend the money, time, and resources it takes to get the business off the ground?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What sort of company do you want to create?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What products/services will you provide?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Who is your competition?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What is your target market?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much startup money do you need, and where will it come from?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The business consultants from Reliance can help you answer these questions and more.[Contact](http://www.reliancecpa.com//contact.html) us today to get started with a complimentary financial health checkup and to schedule an appointment to talk about your vision for a new company. We just might be able to help make that dream come true.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 291
+}

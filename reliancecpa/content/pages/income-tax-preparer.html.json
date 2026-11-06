@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/income-tax-preparer.html",
+ "slug": "income-tax-preparer.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA Tampa | Choosing a Tax Preparer",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/income-tax-preparer.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Gives Advice on Choosing a Tax Preparer",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Gives Advice on Choosing a Tax Preparer",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-preparer.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Unless you are one of those fortunate enough to be able to use the relatively simple IRS Form 1040EZ when you file, there’s a very real possibility that you’ll need professional help deciphering the sometimes-convoluted language of the Internal Revenue Service. While tax return software has simplified the process for many taxpayers, sometimes even the software itself can be bewildering.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can cut through the IRS jargon to provide efficient, reliable tax preparation and advice on tax planning. Since opening our doors in 1984, we’ve provided peace of mind at tax time for thousands of individuals and hundreds of businesses in the Tampa Bay area. Keep the following points in mind as you make a decision about who will prepare your taxes:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A preparer must sign the return and fill in the areas specifically set aside for the preparer.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Always review the completed return, including name, address, Social Security number, and all other relevant information.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Never sign a blank or incomplete tax return.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Beware of tax preparers who charge based on a percentage of the potential tax return.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Steer clear of preparers who claim they can guarantee a larger return than other preparers.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A trained, experienced Reliance accountant can provide help with business taxes, personal income taxes, bookkeeping, payroll services, tax planning, and more. [Contact](http://www.reliancecpa.com/contact.html) us today to help with your tax return, or for a complete and complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 250
+}

@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business/",
+ "slug": "uncertain-tax-positions__utp-small-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "UTP Small Business - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "UTP Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Helps Interpret Uncertain Tax Positions for Small Business Owners](https://www.reliancecpa.com/uncertain-tax-positions)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Helps Interpret Uncertain Tax Positions for Small Business Owners",
+     "href": "https://www.reliancecpa.com/uncertain-tax-positions"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "UTP Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 2, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/UTP-Small-Business.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/UTP-Small-Business.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/UTP-Small-Business.jpg",
+   "alt": "UTP Small Business",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/UTP-Small-Business.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 32
+}

@@ -1,0 +1,117 @@
+{
+ "url": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm",
+ "slug": "tax-problem-irs-audit-help.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Tax Problem & IRS Audit Help for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Tax Problem & IRS Audit Help for Tampa St Petersburg Clearwater Sarasota Lakeland Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tax Problem & IRS Audit Help for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Tax Problem & IRS Audit Help for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-problem-irs-audit-help.jpg",
+     "alt": "Tax Problem & IRS Audit Help for Greater Tampa Bay, FL"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Tax problems and IRS audits cause their own brand of misery for individuals and business owners alike. When faced with IRS problems, no one wants to, or should have to, go through these serious dilemmas without the assistance of an experienced CPA and accountant.",
+     "Reliance Consulting, LLC is here to help you resolve tax problems and walk you through an IRS audit, lifting these burdens from your shoulders so that you can go back to more productive activities. We have successfully assisted hundreds of clients in the greater Tampa, Florida area with troublesome tax issues and we look forward to providing you with the same efficient, affordable, compassionate, and discrete service.",
+     "From Tampa to St Petersburg, Clearwater to Lakeland, and Sarasota to Pasco, our CPAs and accountants have decades of experience serving area businesses and individuals with the following tax problems and IRS audit help:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "[Business tax](http://www.reliancecpa.com//business-tax.htm) and individual income tax problems"
+     },
+     {
+      "text": "Failure to file tax returns"
+     },
+     {
+      "text": "IRS audit notifications"
+     },
+     {
+      "text": "IRS liens"
+     },
+     {
+      "text": "IRS seizures of bank accounts and personal property"
+     },
+     {
+      "text": "[Payroll](http://www.reliancecpa.com//payroll-services.htm) tax problems"
+     },
+     {
+      "text": "Wage garnishments"
+     },
+     {
+      "text": "Back taxes"
+     },
+     {
+      "text": "Payment plans"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "If you owe money to the IRS or have possible errors in your [tax preparation](http://www.reliancecpa.com//tax-preparation.htm), you have a serious problem that will keep getting worse as the IRS adds penalties and interest to the daily total. Once tax problems have become apparent and an IRS audit has been initiated, this government agency can be relentless in its pursuit of money owed. However, backed by the experienced [Tampa CPA](http://www.reliancecpa.com//index.html)s and tax accountants from Reliance Consulting, you can rest assured that a knowledgeable representative is fighting for your rights."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/tax-preparation/irs-problem-resolution/",
+  "role": "service",
+  "tier": "tax-preparation",
+  "old_path": "/tax-problem-irs-audit-help.htm"
+ },
+ "short_title": "IRS Problem Resolution"
+}

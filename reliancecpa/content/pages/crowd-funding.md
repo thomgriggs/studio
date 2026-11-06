@@ -1,0 +1,17 @@
+---
+url: https://www.reliancecpa.com/crowd-funding
+type: page
+title_tag: "Tampa CPA | Crowd Founding | Small Business Consulting"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2012-02-29
+status: 200
+---
+
+[h3] A Tampa CPA Explains Crowdfunding for Small Business Startups
+[img] alt="Tampa CPA" src=http://www.reliancecpa.com/wp-content/uploads/crowdfunding-300x200.jpg
+[p] Crowdfunding is an increasingly common practice in the business world, especially among recent college graduates. What it means is a group of people pool their resources in order to fund an enterprise, such as a startup company. While this practice is not new, its popularity has expanded in the wake of a down economy and thanks to the ease of communication and networking provided by social networks such as Facebook, LinkedIn, and Twitter.
+[p] A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can explain the implications of crowdfunding if you are considering starting a company. Most states have very specific regulatory limitations regarding who is able to provide capital for a new business. These laws are intended to protect people who may not be able to readily absorb the potential loss of money associated with the high failure rate of new small companies.
+[p] One upshot of the emergence of crowdfunding as a means to fund a new business is that many venture capitalists are becoming involved with organizations that help funnel financing to startups. As of the beginning of 2012, there were more than 30 websites dedicated to helping budding entrepreneurs develop their business ideas, and these efforts have begun to bear fruit. Some venture capitalists have found that applying their resources to several smaller crowdfunding initiatives is a viable alternative to sinking millions of dollars into one project at a time. Spreading out capital investments across a range of new businesses may virtually assure that some money will be lost, but all it takes to make it worthwhile is for one or two businesses to succeed.
+[p] To learn more about how crowdfunding works and whether it is right for you, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting.

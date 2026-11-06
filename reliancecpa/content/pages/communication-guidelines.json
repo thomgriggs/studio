@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/communication-guidelines",
+ "slug": "communication-guidelines",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Communication Guidelines | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/communication-guidelines",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Need for Communication Guidelines in Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Need for Communication Guidelines in Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Communication-Guidelines-300x200.jpg",
+   "alt": "Communication Guidelines",
+   "alt_missing": false,
+   "title": "Communication Guidelines",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every business, no matter how big or small, relies on effective communication. That holds true for public interaction, as well as interaction among employees and vendors. In some ways, it might seem easier simply to let communication habits develop randomly, dependent on how the individuals involved choose to express themselves. Yet, the easier may might not necessarily be the most effective way, because it’s too simple for signals to become crossed and for costly misunderstandings to occur. Business communication works better when everyone is on the same page, figuratively and literally.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help business owners develop a far-reaching strategy that includes laying out communication guidelines for all employees and managers to follow. There are two types of business communication that must be considered – written and oral. These are further broken down based on whether the message is being conveyed internally or externally. Business-to-business communication must be taken into account, as must business-to-consumer. Another factor is whether the message is intended to market or sell, or for planning, organizing, staffing, crisis management, or some other purpose. The exact wording you choose will vary, depending on your industry, but the goal of developing communication guidelines is the same everywhere – to enable clear, effective delivery of messages.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting has helped hundreds of business in Tampa and throughout Florida reach and sustain profitability. For a complimentary financial health checkup, or for more advice about business planning, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 259
+}

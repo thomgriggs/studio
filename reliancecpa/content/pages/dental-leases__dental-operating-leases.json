@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/dental-leases/dental-operating-leases/",
+ "slug": "dental-leases__dental-operating-leases",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-leases/dental-operating-leases",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Operating Leases - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-leases/dental-operating-leases/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Operating Leases",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Dental CPA Explains Capital Versus Operating Leases](https://www.reliancecpa.com/dental-leases)",
+   "links": [
+    {
+     "text": "← A Dental CPA Explains Capital Versus Operating Leases",
+     "href": "https://www.reliancecpa.com/dental-leases"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Operating Leases",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished February 6, 2013 | Full size is [600 × 900](https://www.reliancecpa.com/wp-content/uploads/Dental-Operating-Leases.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "600 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Operating-Leases.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Dental-Operating-Leases.jpg",
+   "alt": "Dental Operating Leases",
+   "alt_missing": false,
+   "title": "",
+   "width": "600",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Operating-Leases.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-leases/dental-operating-leases).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-leases/dental-operating-leases"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 27
+}

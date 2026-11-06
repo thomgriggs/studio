@@ -1,0 +1,145 @@
+{
+ "url": "https://www.reliancecpa.com/new-business-priorities.html",
+ "slug": "new-business-priorities.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Prioritize When You Start a New Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/new-business-priorities.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Prioritize When You Start a New Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Prioritize When You Start a New Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/new-business-priorities.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "new-business-priorities",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When you decide to take the plunge and start a new business, the to-do list quickly becomes more than a little daunting. It all has to be done, but it can’t be done all at once. You have to start somewhere. Where you start will depend on factors such as your industry, your available money, your personality and your geographic location. No two companies are exactly alike, which means no two sets of priorities are alike. Even though there is a fundamental chain of events that must take place as a new business gets off the ground, your plan of action will surely be as unique as you are.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "That’s why you’ll want to have a [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, by your side at the birth of your company. A business consultant from Reliance combines a deep knowledge of business procedure with a commitment to learning the individual nuances of your company. We can help you make a personally tailored plan to ensure a smooth launch and maximize your ability to be successful in the long term. The steps to starting a new business include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Writing a business plan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Acquiring financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Hiring employees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Finding a location",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conducting market research",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determining a legal structure",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Partnering with suppliers and distributors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning for marketing and advertising",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning for taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since it was founded in 1984, Reliance Consulting has been one of the Tampa Bay area’s premier accounting and business consultancy firms. [Contact](http://www.reliancecpa.com//contact.html) us today for a complimentary financial health checkup as you launch your new business.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 272
+}

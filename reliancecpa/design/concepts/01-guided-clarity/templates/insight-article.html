@@ -1,0 +1,11 @@
+{# Page shell: insight article. Brand page (articles belong to a topic, not a tier): breadcrumbs, title, a byline with the topic tag chip (tag colour is the only colour), the narrow reading column, then "More on <topic>". #}
+{% extends "_base.html" %}
+{% block main %}{% include "_crumbs.html" %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "nav": nav}) }}
+{% if loop.first %}{% set tag = page.scope.tag if page.scope else '' %}<p class="byline">{% if tag %}<a class="chip chip--tag terr-{{ concept.tag_territory[tag] }}" href="{{ page_href('articles.html') }}">{{ concept.tag_labels[tag] or tag }}</a>{% endif %}<span>From the Reliance Consulting team</span></p>{% endif %}
+{% endfor %}
+{% if related and related.posts %}
+<section class="m m-related" aria-labelledby="related-h"><h2 class="h-section" id="related-h">More on {{ related.category.title }}</h2>
+  <ul class="links" role="list">{% for p in related.posts %}<li><a href="{{ p.url|href }}">{{ p.title }}<span aria-hidden="true"> →</span></a></li>{% endfor %}</ul>
+  <p class="feed__more"><a class="btn btn-ghost" href="{{ page_href('articles.html') }}">All articles →</a></p>
+</section>{% endif %}
+{% endblock %}

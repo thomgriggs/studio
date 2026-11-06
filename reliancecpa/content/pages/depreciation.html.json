@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/depreciation.html",
+ "slug": "depreciation.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Depreciation as a Tax Deduction",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/depreciation.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Depreciation as a Tax Deduction",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Depreciation as a Tax Deduction",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/depreciation.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service allows businesses to deduct the declining value of certain assets for tax purposes. Property such as real estate, vehicles, equipment and other items used in the course of doing business tend to lose their value over time, and the IRS assigns amounts claimable for each year the property is in use. Depreciation is a mainstay for cost savings and should not be overlooked at tax time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help your company take full advantage of the benefits of property depreciation. Deductions can be as simple as a sole proprietor getting a tax credit for a new laptop computer and as complex as a large corporation buying a new fleet of delivery trucks. To make sure you’re not overlooking any potential depreciation deductions, let a business tax accountant from Reliance explain the details of the many types of depreciation, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Straight-line depreciation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Declining (reducing) balance method",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Activity deprecation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sum of years",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Units of production",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Group depreciation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Composite depreciation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There is no substitute for working closely with an experienced, knowledgeable tax professional from Reliance Consulting. Since opening our doors in 1984, we have helped hundreds of companies in the Tampa Bay region reach maximum profitability and stay there over the long haul. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn more about depreciation or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 238
+}

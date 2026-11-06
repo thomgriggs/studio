@@ -1,0 +1,148 @@
+{
+ "url": "https://www.reliancecpa.com/liabilities.html",
+ "slug": "liabilities.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Current Liabilities | Non-current Liabilities",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/liabilities.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Explains the Difference Between Current and Non-Current Liabilities",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Explains the Difference Between Current and Non-Current Liabilities",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/liabilities.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A balance sheet is a reflection of your company’s financial position at a single moment in time. It includes the items owned by or due to the company (assets) and the items owed by the company (liabilities and net worth). Another way to put it is that assets are how a company spends its money, while liabilities and net worth are sources of funds or investments in the company. There are many different types of assets and liabilities, and one of the most important aspects to understand is the difference between current and non-current liabilities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you maintain an updated balance sheet in order to ensure that you always remain aware of fluctuations in your company’s bottom line. It’s part of our small business consultancy, which has helped hundreds of Tampa Bay area businesses prosper since 1984.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What, then, is the difference between current and non-current liabilities?\n\nCurrent liabilities are those that will mature soon and must be paid within 12 months. Cash flow is vital for staying ahead of your current liabilities, which include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Accounts payable due other entities",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accrued expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Notes payable due other entities",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Current portion of long-term debt (interest payments, etc.)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Non-current liabilities are those that will not become due in the coming year. They include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Non-current portion of a long-term debt",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Notes payable to officers, shareholders, and owners",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Contingencies (lawsuits, warranties, etc.)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about assets and liabilities, or for a free financial health checkup, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 266
+}

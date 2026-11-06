@@ -1,0 +1,116 @@
+{
+ "url": "https://www.reliancecpa.com/dental-c-corporation",
+ "slug": "dental-c-corporation",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental C Corporation | Dental CPA | Dental Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-c-corporation",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains a C Corporation as it Relates to a Dental Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains a C Corporation as it Relates to a Dental Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-C-Corporation-300x200.jpg",
+   "alt": "Dental C Corporation",
+   "alt_missing": false,
+   "title": "Dental C Corporation",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A C corporation is the most common tax structure for certain industries, and it once was prominent among dental practices, as well. However, as tax rules have evolved over the years, most small to mid-sized practices have found that becoming an S corporation, sole proprietorship, or limited liability corporation was more advantageous at tax time. As with most business decisions, determining the tax structure of your dental practice will be based largely on the goals you set for your practice.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help you determine whether it is better for you to incorporate as a C corporation or some other entity. A C corporation is defined as any corporation that is taxed separately from its owners. Now, if the owner or owners happen to be you and/or your partners, that means not only are you taxed for the money you make through the corporation, but the corporation itself is taxed for any profit it made during its fiscal year. This is known colloquially as “double taxation,” and it is one of the main reasons smaller practices decide to incorporate as some other form.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are, however, several potential benefits of a C corporation. These include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The ability to re-invest profits at a lower, corporate tax rate",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The limitation of personal legal and financial responsibilities for the owners",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The ability to reward employees, if desired, with corporate shares",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance today if you are beginning to plan for a new dental practice and are wondering about the best tax structure for your company. We also can help a practice structured as a C corporation to transition into another legal entity, such as an S corporation or LLC. Reliance cares about helping healthcare professionals achieve financial stability, and we want to be your dental CPA.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 313
+}

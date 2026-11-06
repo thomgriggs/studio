@@ -1,0 +1,7 @@
+{#
+MODULE: logo-row
+PURPOSE: A quiet row of badges or partner logos, greyscale until hover, on white rounded plates.
+SLOTS: logos[src, alt, href].
+SQUARESPACE: Image blocks in a row (or a strip Gallery). Greyscale is custom CSS; native fallback is full colour.
+#}
+<section class="m m-logos" data-module="logo-row" data-tone="{{ tone }}"><ul class="logos" role="list">{% for l in s.logos %}<li>{% if l.href %}<a href="{{ l.href|href }}"><img src="{{ l.src|asset }}" alt="{{ l.alt }}" loading="lazy"></a>{% else %}<img src="{{ l.src|asset }}" alt="{{ l.alt }}" loading="lazy">{% endif %}</li>{% endfor %}</ul></section>

@@ -1,0 +1,152 @@
+{
+ "_about": "Stock closing call to action carried by many pages, recorded once. Each page's own wording is kept here under `pages` (nothing lost); the structured page carries closing: 'free-checkup' instead. The extractor already skipped the social-sharing widgets (class 'socialize') in the main region and the Google+ links live only in the global header top bar (_global.json); neither reaches the structured pages.",
+ "blocks": {
+  "free-checkup": {
+   "purpose": "the closing 'contact us for a free (no-obligation) financial check-up' paragraph that ends most service and article pages",
+   "canonical": "Contact Reliance Consulting today for a free, no obligation “check up” of your business or individual financial health.",
+   "canonical_source": "closing paragraph of business-tax.htm, income-tax-services.htm, payroll-services.htm, quickbooks-accountant.htm and tax-preparation.htm (same sentence, different lead-in)",
+   "pages": [
+    {
+     "slug": "audit-help.htm",
+     "original": "If you would like more information about how a CPA or accountant in Tampa from Reliance Consulting can assist you with audits and many other services, please contact us today for a free initial consultation."
+    },
+    {
+     "slug": "bookkeeping.htm",
+     "original": "To learn more about our bookkeeping services from Tampa to Manatee, Dade City to Polk County, and Lakeland to Pasco County, please contact a CPA or accountant from Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "business-finance-consultant.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free financial checkup and more information about the many reasons why you should have a personal business finance consultant in your corner."
+    },
+    {
+     "slug": "business-record-retention.htm",
+     "original": "For more information about record retention, please contact Reliance Consulting, LLC for a free initial consultation and free checkup of your financial health."
+    },
+    {
+     "slug": "business-tax.htm",
+     "original": "To speak to an accountant about our business tax services in the greater Tampa, FL area, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "business-valuation.htm",
+     "original": "Please contact a Tampa accountant from Reliance Consulting today to receive a free financial checkup and to learn more about business valuations in the greater Tampa Bay area."
+    },
+    {
+     "slug": "cash-flow-management.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) the accounting and business professionals at Reliance Consulting, LLC today for a free financial checkup for your business and to learn more about how our many accounting services will benefit you."
+    },
+    {
+     "slug": "cpa-firm-brooksville-hernando.htm",
+     "original": "For more information and a free financial check up by the [Tampa accountants](http://www.reliancecpa.com/) at Reliance Consulting, please contact us today."
+    },
+    {
+     "slug": "cpa-firm-pasco-county.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting, LLC today for more details about our CPA firm and to receive a free checkup of your financial well-being."
+    },
+    {
+     "slug": "cpa-firm-sarasota-bradenton.htm",
+     "original": "To inquire about our services and to receive a free financial check up by the Tampa accountants at Reliance Consulting, please contact us today."
+    },
+    {
+     "slug": "cpa-firm-stpetersburg-clearwater-pinellas.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for more details about the CPA, accounting, and business finance services we offer to residents of Clearwater, St Petersburg, and the rest of Pinellas County. When you call, we will be happy to offer you a free initial checkup of your financial health."
+    },
+    {
+     "slug": "cpa-firm-tampa-brandon-hillsborough.htm",
+     "original": "Regardless of your situation, we hope you will [contact us](http://www.reliancecpa.com/contact.html) for a free initial checkup of your financial health. Through the years, we have produced excellent results for our clients here in Tampa and throughout Hillsborough County, and we hope to get the chance to do the same for you, too."
+    },
+    {
+     "slug": "employee-vs-independent-contractor.htm",
+     "original": "Please contact a Tampa accountant from Reliance Consulting today to learn more about hiring an employee vs. hiring an independent contractor. We would be happy to meet with you and provide you with a free checkup of your financial health."
+    },
+    {
+     "slug": "financial-planning.htm",
+     "original": "Let the Tampa accountants from Reliance Consulting show you the way. Please contact us for more information on financial planning and to receive a free financial checkup and review."
+    },
+    {
+     "slug": "forms-to-start-business.htm",
+     "original": "For more information on the forms involved in starting a new Tampa Bay area business, please contact Reliance Consulting, LLC, for a free initial consultation and review of your financial health."
+    },
+    {
+     "slug": "get-started-estate-planning.htm",
+     "original": "If you would like to talk to a CPA in Tampa about estate planning, please contact Reliance Consulting, LLC. We would be happy to provide you with a free initial consultation and checkup of your financial health."
+    },
+    {
+     "slug": "income-tax-services.htm",
+     "original": "To learn more about our income tax services for the greater Tampa, FL area, please contact Reliance Consulting today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "internal-controls-evaluation.htm",
+     "original": "Please contact a Tampa accountant at Reliance Consulting today to learn more about Internal Controls Evaluations and to receive a free checkup of your financial health."
+    },
+    {
+     "slug": "limited-liability-corporation.htm",
+     "original": "To learn more about limited liability companies, please contact Reliance Consulting, LLC for more information and to receive a free checkup of your financial health."
+    },
+    {
+     "slug": "new-business-planning.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a confidential free first consultation about your new business idea and how new business planning help you achieve your dreams."
+    },
+    {
+     "slug": "payroll-services.htm",
+     "original": "For more details about payroll services provided by the CPAs and accountants at Reliance Consulting, please contact us today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "personal-record-retention.htm",
+     "original": "For more information about record retention guidelines, please contact Reliance Consulting, LLC. We’ll be happy to provide you with a free initial consultation and a checkup of your financial health."
+    },
+    {
+     "slug": "quickbooks-accountant.htm",
+     "original": "For further information about working with a QuickBooks accountant and CPA from Reliance Consulting, please contact us today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "real-estate-cpa.htm",
+     "original": "Please contact Reliance Consulting’s Tampa, Florida headquarters today to speak with a real estate CPA and to receive a free financial checkup. We look forward to speaking with you."
+    },
+    {
+     "slug": "reasons-to-choose-reliance.htm",
+     "original": "Please contact Reliance Consulting today to receive a free first consultation. At this free consultation, we will be happy to give you even more reasons why we believe we should be your CPA in Tampa."
+    },
+    {
+     "slug": "restaurant-hotel-accountant.htm",
+     "original": "Please contact Reliance Consulting today for more information about our hotel accounting, restaurant accounting, and hospitality accounting services. When you contact us, we will be happy to provide you with a free financial checkup and answer your questions."
+    },
+    {
+     "slug": "retail-accounting.htm",
+     "original": "We invite anyone interested in retail accounting information to contact us for a free financial checkup, and to learn more about how we can help you charge ahead to a more profitable future."
+    },
+    {
+     "slug": "retirement-expenses.htm",
+     "original": "To learn more about retirement planning, contact Reliance Consulting, LLC, for a free initial consultation and review of your financial health."
+    },
+    {
+     "slug": "reverse-mortgage.htm",
+     "original": "Contact your CPA in Tampa at Reliance Consulting to learn more about the pros and cons of a reverse mortgage. Our free financial health checkup is a good place to start."
+    },
+    {
+     "slug": "small-business-accounting.htm",
+     "original": "To learn more about our small business accounting services for the greater Tampa, FL area, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "succession-planning.htm",
+     "original": "To speak to an accountant in Tampa about succession planning, please contact Reliance Consulting today for a free initial consultation."
+    },
+    {
+     "slug": "tax-planning.htm",
+     "original": "To learn more about our tax planning services from Tampa to Manatee, St Petersburg to Polk County, and Hernando to Pasco County, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "tax-preparation.htm",
+     "original": "To learn more about our tax preparation services from Tampa to Sarasota, Clearwater to Polk County, and Hernando to Pasco County, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    },
+    {
+     "slug": "tax-preparer.htm",
+     "original": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free financial checkup and for more information about how an experienced tax preparer can improve your financial outlook."
+    },
+    {
+     "slug": "tax-problem-irs-audit-help.htm",
+     "original": "To learn more about our services for tax problems and IRS audit help in the greater Tampa, FL area, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health."
+    }
+   ]
+  }
+ }
+}

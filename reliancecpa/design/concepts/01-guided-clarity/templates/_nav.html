@@ -1,0 +1,35 @@
+{# Header (design from content/nav.json), the original's sticky white bar: logo, Services (the mega flyout: a rounded white panel with one column per tier), Resources and About as simple dropdowns, Contact, then the coral Get Started button on the right (Client login sits in the utility bar above, and again inside the mobile panel). CSS-only open on hover and keyboard focus; nav.js toggles the mobile menu and accordions. On Squarespace the flyout is a mega-menu plugin rendering a normal page of native blocks in rows (see SQUARESPACE.md); `nav.menu` is the folder fallback. At 1000px and below the nav becomes a Menu button and a full-width panel with accordions: the original hid its nav there with no way to open it. #}
+<button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav__bars" aria-hidden="true"></span><span>Menu</span></button>
+<nav class="nav" id="site-nav" aria-label="Main">
+  <ul class="nav__list">
+    {% if nav.mega %}
+    <li class="nav__item nav__item--mega{{ ' is-active' if nav.mega.active }}">
+      <button class="nav__trigger" type="button" aria-expanded="false" aria-controls="mega-panel"><span>{{ nav.mega.label }}</span></button>
+      <div class="mega" id="mega-panel">
+        <div class="mega__cols">
+        {% for col in nav.mega.columns %}
+          <section class="mega__col terr-{{ concept.tier_territory[col.tier] }}" aria-labelledby="mega-{{ col.tier }}">
+            <h3 class="mega__h" id="mega-{{ col.tier }}">{% if col.overview.available %}<a href="{{ col.overview.href }}">{{ col.heading }}</a>{% else %}{{ col.heading }}{% endif %}</h3>
+            <p class="mega__desc">{{ col.description }}</p>
+            <ul class="mega__links">{% for l in col.links %}<li>{% if l.available %}<a href="{{ l.href }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.label }}</a>{% else %}<span>{{ l.label }}</span>{% endif %}</li>{% endfor %}</ul>
+            {% if col.secondary %}<p class="mega__sub">{{ col.secondary.heading }}</p><ul class="mega__links mega__links--sub">{% for l in col.secondary.links %}<li>{% if l.available %}<a href="{{ l.href }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.label }}</a>{% else %}<span>{{ l.label }}</span>{% endif %}</li>{% endfor %}</ul>{% endif %}
+            {% if col.overview.available %}<p class="mega__all"><a class="text-link" href="{{ col.overview.href }}">See all {{ col.heading }} <span aria-hidden="true">&rarr;</span></a></p>{% endif %}
+          </section>
+        {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% endif %}
+    {% for f in nav.menu if not f.group %}
+    <li class="nav__item{{ ' is-active' if f.active }}">
+      <button class="nav__trigger" type="button" aria-expanded="false" aria-controls="nav-sub-{{ loop.index }}"><span>{{ f.label }}</span></button>
+      <ul class="nav__sub" id="nav-sub-{{ loop.index }}">{% for c in f.children if c.available %}<li><a href="{{ c.href }}"{% if c.current %} aria-current="page"{% endif %}>{{ c.label }}</a></li>{% endfor %}</ul>
+    </li>
+    {% endfor %}
+    {% for l in nav.links if l.label == 'Contact' and l.available %}<li class="nav__item nav__item--link{{ ' is-active' if l.current }}"><a class="nav__a" href="{{ l.href }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.label }}</a></li>{% endfor %}
+    {% for l in nav.links if l.label == 'Client Login' %}<li class="nav__item nav__item--link nav__item--m"><a class="nav__a" href="{{ l.href }}">{{ l.label }} <span aria-hidden="true">&nearr;</span></a></li>{% endfor %}
+  </ul>
+  <div class="nav__aside">
+    {% if nav.button.available %}<a class="btn btn-small nav__cta" href="{{ nav.button.href }}"{% if nav.button.current %} aria-current="page"{% endif %}>{{ nav.button.label }}</a>{% endif %}
+  </div>
+</nav>

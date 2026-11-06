@@ -1,0 +1,182 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-pasco-county.htm",
+ "slug": "cpa-firm-pasco-county.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA Firm & Accountants Serving Pasco County Dade City Zephyrhills Land O Lakes New Port Richey FL & Beyond",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-pasco-county.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Firm & Accountants Serving Pasco County, Dade City, Zephyrhills, Land O Lakes, New Port Richey, FL & Beyond",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "CPA Firm & Accountants Serving Pasco County, Dade City, Zephyrhills, Land O Lakes, New Port Richey, FL & Beyond",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/pasco-county.jpg",
+   "alt": "Tampa CPA Serving Pasco County",
+   "alt_missing": false,
+   "title": "Tampa CPA Serving Pasco County",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Pasco County is a place where folks are free to delight in everything wonderful that Florida has to offer. Close to the beaches and attractions of Tampa, Clearwater, and St Petersburg—yet far enough away to unwind in Florida’s pristine natural surroundings—Pasco County is the beloved home of almost 500,000 residents.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you live or own a business in Dade City, Zephyrhills, Land O Lakes, New Port Richey, Hudson, or anywhere else in Pasco County, the CPA firm of Reliance Consulting, LLC offers a range of services to assist you. At Reliance Consulting, our experienced team of CPAs and accountants are committed to providing our Pasco clients with advice that can assist them with virtually every area of their financial lives. While some accountants may only care about tax time, Reliance Consulting has the expertise to advise you all year long. Whether you want our opinion on purchasing a business in Trinity, or you need to know if it’s best to buy or lease a car in Wesley Chapel, as a client you can call Reliance Consulting anytime for financial guidance.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we have an open-door policy with our clients. We also can tailor an accounting plan to be as simple or comprehensive as you need. Some of the many services offered by our CPA firm include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Income tax services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Saving for retirement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning for your children’s college tuition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protecting your assets from lawsuits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Business tax](http://www.reliancecpa.com/business-tax.htm) services",
+     "links": [
+      {
+       "text": "Business tax",
+       "href": "http://www.reliancecpa.com/business-tax.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Small business accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping and [QuickBooks accountant](http://www.reliancecpa.com/quickbooks-accountant.htm) services",
+     "links": [
+      {
+       "text": "QuickBooks accountant",
+       "href": "http://www.reliancecpa.com/quickbooks-accountant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business finance and planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Specialized accounting services for professions such as doctors, dentists, real estate offices, restaurants, hotels, etc.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For residents and business owners in Pasco County who have been searching for a [certified public accountant](http://www.reliancecpa.com/) who is knowledgeable, thorough, affordable, and accessible, Reliance Consulting is the clear choice for superior service and dependable results.",
+   "links": [
+    {
+     "text": "certified public accountant",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting, LLC today for more details about our CPA firm and to receive a free checkup of your financial well-being.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 353
+}

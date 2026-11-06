@@ -1,0 +1,18 @@
+{#
+MODULE: profile
+PURPOSE: One person on the team page as the original's alternating story: a 22px-radius portrait beside the name (Georgia), role in small caps, the bio and an email link; the side of the portrait alternates down the page. With no photo a labelled "Photo needed" block stands in.
+SLOTS: image, name, role, links[text, href], body[].
+SQUARESPACE: Two-column Section: Image block + Heading 3 + Text blocks, repeated per person with the image side flipped (or a Summary block over a team collection).
+#}
+{% from "_macros.html" import body, img, ph %}
+<section class="m m-profile" data-module="profile" data-tone="{{ tone }}">
+  <div class="profile">
+    <figure class="profile__pic">{% if s.image %}{{ img(s.image) }}{% else %}{{ ph("portrait of " ~ s.name) }}{% endif %}</figure>
+    <div class="profile__text">
+      <p class="eyebrow">{{ s.role }}</p>
+      <h2 class="h-section" data-orig-level="2">{{ s.name }}</h2>
+      <div class="prose">{{ body(s.body, 4) }}</div>
+      {% for l in s.links %}<p class="profile__mail"><a class="text-link" href="{{ l.href|href }}">{{ l.text }}</a></p>{% endfor %}
+    </div>
+  </div>
+</section>

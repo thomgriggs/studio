@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/ad-laws",
+ "slug": "ad-laws",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Advertising Laws | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/ad-laws",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Helps You Understand the Advertising and Labeling Laws Within Your Industry",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Helps You Understand the Advertising and Labeling Laws Within Your Industry",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Ad-Laws-300x200.jpg",
+   "alt": "Ad Laws",
+   "alt_missing": false,
+   "title": "Ad Laws",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how good and useful your product might be, you will still need to market it to achieve success in business. Decisions have to be made about how best to market your products or services, and those decisions should not be made without first developing a thorough understanding of the advertising and labeling laws that govern your industry.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you develop a marketing budget and give you guidance about what is legal and ethical – as well as what is cost-effective – when it comes time to build exposure for your products and services. Why is labeling lumped in with advertising? Because the labels and packaging you use for your products actually are forms of advertising. Otherwise, every can of soup or box of crackers would look exactly the same. Here are a few things to know as you begin to learn more about advertising and labeling laws as they relate to your industry:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Advertising must be truthful and non-deceptive",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Advertisers must have proof to back up their claims",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Advertisements can’t be unfair",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This just scratches the surface of what you need to know as you begin to develop a marketing plan. [Contact](http://reliancecpa.com/contact.html) Reliance today to partner with a business consultant who can provide all the guidance you need on the path to profitability.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 237
+}

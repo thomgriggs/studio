@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/trade-shows.html/trade-shows/",
+ "slug": "trade-shows.html__trade-shows",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/trade-shows.html/trade-shows",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "trade-shows - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/trade-shows.html/trade-shows/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "trade-shows",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Discusses Trade Shows](https://www.reliancecpa.com/trade-shows.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Discusses Trade Shows",
+     "href": "https://www.reliancecpa.com/trade-shows.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "trade-shows",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/trade-shows.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/trade-shows.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/trade-shows.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/trade-shows.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/trade-shows.html/trade-shows).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/trade-shows.html/trade-shows"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 9
+}

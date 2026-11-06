@@ -1,0 +1,163 @@
+{
+ "url": "https://www.reliancecpa.com/business-idea.html",
+ "slug": "business-idea.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Your Tampa CPA Explains How to Get Started with a New Business Idea",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-idea.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains How to Get Started with a New Business Idea",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains How to Get Started with a New Business Idea",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-ideas.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The idea for your new business may have been born of a unique skill you possess. Or, it may have sprung from your ability to make or produce something people want or need. Whatever its origin, your new business idea must be nurtured if you want it to grow into a profitable enterprise.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC is here to help you put your new business on a path to profitability. Naturally, your focus as you start a new business will be on perfecting your skill or product, building a distribution network, developing a client base and many other aspects related to your particular industry. This is the very basis of your business, and it will no doubt consume the bulk of your time as you prepare to launch.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To save you time and energy as you formulate your business plan, let a Tampa CPA from Reliance help you:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Identify your customers. Who will buy what you want to sell?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Study your competition. Who is selling what you want to sell, and how are they doing it?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish an appropriate legal structure. [Sole proprietorship](http://www.reliancecpa.com/sole-proprietorship.htm)? [Partnership](http://www.reliancecpa.com/partnership.htm)? [Corporation](http://www.reliancecpa.com/corporation.htm)?",
+     "links": [
+      {
+       "text": "Sole proprietorship",
+       "href": "http://www.reliancecpa.com/sole-proprietorship.htm"
+      },
+      {
+       "text": "Partnership",
+       "href": "http://www.reliancecpa.com/partnership.htm"
+      },
+      {
+       "text": "Corporation",
+       "href": "http://www.reliancecpa.com/corporation.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Determine best practices. What skills will your employees need, and how will they implement them?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Outline financial strengths and weaknesses. What should you charge and how will you spend your capital?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set goals for the future. Where do you see yourself in a year? Five years? Ten years?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your Tampa CPA at Reliance Consulting can help you navigate all of these important details as you get your new business idea off the ground. But it doesn’t end there. With Reliance at your side, you can rest assured your day-to-day financial needs will be met, including [payroll services](http://www.reliancecpa.com/payroll-services.htm), [bookkeeping](http://www.reliancecpa.com/bookkeeping.htm), [cash-flow management](http://www.reliancecpa.com/cash-flow-management.htm) and more. We’ll help you develop strategies for marketing and for improving revenue, catered specifically to your unique goals and needs.",
+   "links": [
+    {
+     "text": "payroll services",
+     "href": "http://www.reliancecpa.com/payroll-services.htm"
+    },
+    {
+     "text": "bookkeeping",
+     "href": "http://www.reliancecpa.com/bookkeeping.htm"
+    },
+    {
+     "text": "cash-flow management",
+     "href": "http://www.reliancecpa.com/cash-flow-management.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) a Tampa CPA at Reliance for a free financial checkup, the first step toward turning your vision for a new business into a profitable reality.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 349
+}

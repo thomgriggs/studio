@@ -1,0 +1,13 @@
+{#
+MODULE: video-split
+PURPOSE: A video poster beside a heading and short text in the 7/5 split (video on the left, 7 columns); stacks on a phone.
+SLOTS: eyebrow, title, level, depth, body[], url, video_title.
+SQUARESPACE: Two-column Section: Video block beside Heading + Text.
+#}
+{% from "_macros.html" import eyebrow, body, poster %}
+<section class="m m-vsplit" data-module="video-split" data-tone="{{ tone }}">
+  <div class="split">
+    <figure class="vsplit__v">{{ poster(s.url, s.video_title or s.title) }}</figure>
+    <div>{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-row" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2><div class="prose">{{ body(s.body, 4) }}</div></div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+url: https://www.reliancecpa.com/audit.html
+type: page
+title_tag: "Tampa CPA | Tax Audit Likelihood"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2011-12-07
+status: 200
+---
+
+[h3] Your Tampa CPA Explains the Likelihood of an Income Tax Audit
+[img] alt="Tampa CPA" src=http://www.reliancecpa.com/wp-content/uploads/2011/12/audit.gif
+[p] An income tax audit can be unnerving, to say the least, but it’s not particularly uncommon. In fact, more than a million individuals or companies are audited by the Internal Revenue Service each year. There are many factors that determine who gets audited, not all of which have to do with suspected fraud. Tax returns are a complicated matter, and the IRS understands that mistakes will be made occasionally. In general, though, statistics say that you are far more likely in the state of Florida to be involved in a fender bender during your commute to work than you are to be audited by the IRS.
+[p] One way to reduce the odds of an audit even further is to work with a [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC. Our tax preparers will carefully and thoroughly apply our tax expertise to your annual return, whether you are a filing as an individual or a corporation.
+[p] In general, you are much more likely to have your return audited if you represent a large corporation or earn enough income to be included in the highest tax brackets. Here’s the breakdown of the percentage of audits by income from the year 2009, when 1.03 percent of the more than 138 million returns were audited:
+[ul]
+- $1-24,999 adjusted gross income – 0.90 percent
+- $25,000-49,999 – 0.72 percent
+- $50,000-74,999 – 0.69 percent
+- $75,000-99,999 – 0.69 percent
+- $100,000-199,999 – 0.98 percent
+- $200,000-499,999 – 1.92 percent
+- $500,000-$999,999 – 2.98 percent
+- $1 million-4.999 million – 4.02 percent
+- $5 million-9.999 million – 6.47 percent
+- $10 million-more – 9.77 percent
+[p] [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free financial health checkup or to learn more about our conscientious, professional tax planning and preparation service. Or call us for help if you receive an audit notice from the IRS.

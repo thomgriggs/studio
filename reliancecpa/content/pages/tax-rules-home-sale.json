@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/tax-rules-home-sale",
+ "slug": "tax-rules-home-sale",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Tax Rules for Home Sale | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-rules-home-sale",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Tax Rules for Selling a Home",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Tax Rules for Selling a Home",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Rules-Home-Sale-300x199.jpg",
+   "alt": "Tax Rules Home Sale",
+   "alt_missing": false,
+   "title": "Tax Rules Home Sale",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In most cases, selling your home does not expose you to additional taxes. The key is whether the house is your primary residence. To be specific, the IRS requires that taxpayers, single or married filing jointly, must have lived in the house for two of the previous five years. For those who do so and are single, the tax is zero on a sale that brings $250,000 or less in profit. Married couples who file jointly have a profit limit of $500,000 before the gain is taxable. Even the fortunate few who have made more money than that on home sales in recent years might not have to pay taxes, if other conditions are present.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can give you all the information you need regarding the tax implications of selling a home, buying a home, or refinancing a home. The important thing is to know the rules before you sell, buy, or refinance, so you aren’t caught off guard. At Reliance, we can answer any tax-related questions you may have about any type of real estate transaction. There will be no guesswork involved when you work with us as you sell, buy, or refinance.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped thousands of individuals and hundreds of businesses in the Tampa Bay area and elsewhere in Florida reach the path to prosperity. Our goal is to help you realize your long-term financial goals through sound accounting practices, coupled with smart tax planning and thorough tax preparation. [Contact](http://reliancecpa.com/contact.html) us today to learn about the tax rules for selling or buying a home, or for any other accounting, bookkeeping, or tax-related questions you may have.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 295
+}

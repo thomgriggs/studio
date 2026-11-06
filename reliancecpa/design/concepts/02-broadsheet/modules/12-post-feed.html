@@ -1,0 +1,21 @@
+{#
+MODULE: post-feed
+PURPOSE: Article teasers. Variant cards: three columns of open teasers (small-caps kicker, serif title, excerpt, "Read" link), no boxes, whitespace between. Default: a stack of linked titles with excerpts.
+SLOTS: title, posts[title, href, excerpt, date], more[text, href].
+SQUARESPACE: Summary block (grid or list, no images) over the Resources collection, or three Text blocks with Buttons; "All articles" is a Button.
+#}
+{% from "_macros.html" import heading %}
+<section class="m m-feed{{ ' m-feed--cards' if variant == 'cards' }}" data-module="post-feed" data-tone="{{ tone }}">
+  {% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}
+  <div class="feed">
+    {% for p in s.posts %}
+    <article class="post">
+      <p class="eyebrow">{{ p.date|longdate if p.date else 'Article' }}</p>
+      <h3 class="h-item"><a href="{{ p.href|href }}">{{ p.title }}</a></h3>
+      {% if p.excerpt %}<p class="post__ex">{{ p.excerpt|md }}</p>{% endif %}
+      <a class="index__link" href="{{ p.href|href }}">Read →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% if s.more %}<p class="feed__more"><a class="btn btn-ghost" href="{{ s.more.href|href }}">{{ s.more.text }} →</a></p>{% endif %}
+</section>

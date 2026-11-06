@@ -1,0 +1,20 @@
+---
+url: https://www.reliancecpa.com/tax-form.html
+type: page
+title_tag: "Reliance Consulting, LLC - CPA | Business Consultants"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2011-12-08
+status: 200
+---
+
+[h3] Your Tampa CPA Explains Differences Among Federal Income Tax Forms
+[img] alt="Tampa CPA" src=http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-form.gif
+[p] When it comes to choosing the federal income tax form to use when you file your taxes, the rule of thumb is to use the simplest form available to meet your requirements. In most cases, the simpler the form, the shorter the wait for your tax refund. In actuality, there generally is little thought required in the selection process. The IRS stipulates certain rules for eligibility for each of the three primary forms – 1040, 1040A, 1040EZ – having mostly to do with the amount of money you made in the preceding year.
+[p] No matter which form is right for you, your [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, will best position you to minimize your income tax burden by working closely with you on tax planning throughout the year – not just in the hectic few days before the April 15 filing deadline. That includes developing a clear idea of which form you will use well in advance of the day when we sit down to calculate your return. The criteria for each of the three primary forms include:
+[ul]
+- 1040EZ – your total income is less than $100,000; interest income is less than $1,500; income is derived from wages, interest, unemployment insurance; you are younger than 65; your status is single or married filing jointly; you claim no income adjustment beyond the standard deduction; you are claiming only the earned income tax credit, if eligible
+- 1040A – your total income is less than $100,000; you are any age or filing status; you have no itemized deductions; you have several eligible income adjustments and tax credits available
+- 1040 – your deductions will be itemized; your income includes rental properties, business, trusts, sale of stock, mutual funds, bonds, property; your income includes taxable foreign wages; your adjustments include education expenses, moving expenses, health savings accounts
+[p] Since Reliance Consulting was founded in 1984, our certified public accountants and business advisers have helped thousands of individuals and hundreds of companies in the Tampa Bay area develop strategies to minimize their income tax burden. [Contact](http://www.reliancecpa.com//index.html) us today to set up a tax consultation, or for a complimentary financial health checkup.

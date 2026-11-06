@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/market-indicators",
+ "slug": "market-indicators",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Financial Market Indicators | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/market-indicators",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Points Out Important Financial Market Indicators for Small Business Owners to Follow",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Points Out Important Financial Market Indicators for Small Business Owners to Follow",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Market-Indicators-300x197.jpg",
+   "alt": "Market Indicators",
+   "alt_missing": false,
+   "title": "Market Indicators",
+   "width": "300",
+   "height": "197",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As a small business owner, you have more than enough responsibility to keep you busy virtually every waking hour. You might find it difficult, then, to pay as much attention as you should to the international and national economic indicators that might shape your ability to do business. You ignore these indicators at your peril, because every smart business owner understands that the company does not exist in a vacuum. Yet, there is so much information available these days – on TV, on the Internet, in industry and market publications – where do you start?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help sharpen your focus on the overall economy by narrowing down the particular indicators that could have a direct bearing on your company. For example, unless you conduct a lot of international business, there is probably no need to stay up nights monitoring the Asian stock exchanges. Certainly, people who are involved in specific industries, such as agriculture production, will want to pay attention to commodity prices, fuel prices, and other variables that could affect the bottom line. In general, though, most small business owners will find that they can get by just fine by following these major economic indicators:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Stock markets – the Dow Jones Industrial Average, the NASDAQ, the S&P 500 Index",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest rates – U.S. Treasury bills, 30-year U.S. Treasury bonds",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inflation indicators – the Consumer Price Index",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more advice on how a small business owner can stay informed about the broader economic picture, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 270
+}

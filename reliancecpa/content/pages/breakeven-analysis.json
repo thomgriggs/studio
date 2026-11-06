@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/breakeven-analysis",
+ "slug": "breakeven-analysis",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Breakeven Analysis | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/breakeven-analysis",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Importance of a Breakeven Analysis for a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Importance of a Breakeven Analysis for a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Breakeven-Analysis-300x182.jpg",
+   "alt": "Breakeven Analysis",
+   "alt_missing": false,
+   "title": "Breakeven Analysis",
+   "width": "300",
+   "height": "182",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The object of every business is to achieve a profit, of course. But before your company can actually make any money, it has to break even. One of the first things the owner of a startup must do is calculate how much money he or she will need to make in order to reach the breakeven point. A breakeven analysis is not a luxury. It is a necessity.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help owners of new businesses determine exactly how much money will be required for the company to reach the breakeven point. The formula for determining the breakeven point is relatively simple – if revenue equals all business expenses, your company is at the breakeven point. Where it can get complicated is trying to predict the two variables. In order to do that, the first thing to do is determine your fixed costs. These are expenses that will be paid regularly and don’t fluctuate much in amount, such as rent and payroll. Once the fixed costs are established, you move on to variable costs, such as inventory, shipping, and manufacturing. Of course, determining sales revenue beforehand is a guessing game, at best, but it helps to have an expert from Reliance working with you. Even though exact revenue might not be able to be predicted, an experienced business consultant from Reliance can help you derive the best estimate possible.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about the importance of developing a breakeven analysis for your company, or for help in conducting one, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 271
+}

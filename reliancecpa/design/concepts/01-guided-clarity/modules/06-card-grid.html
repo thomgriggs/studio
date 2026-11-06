@@ -1,0 +1,56 @@
+{#
+MODULE: card-grid
+PURPOSE: Cards in the original's forms. Variant tiers (home): the "Who we serve" audience section, a dark ink-green band over the looping photo video with a shade, a frosted tab group (here three anchor links, no script) and one cream panel per tier (all three shown, stacked): territory eyebrow, 42px Georgia statement, text link on the left, the tier's services as a numbered ruled list on the right. Variant service-cards (tier landings): the rounded white 4-card grid on sand, each card a coloured icon tile, 25px Georgia title, one line and a "Learn more" link pinned to the bottom (icon tiles take the territory on a tier page). Variant industries: the ruled "journey" rows on cream (index, 25px Georgia name, descriptor, arrow). Variant resources: white cards on sand with a small-caps kicker, an external card marked. Default: the same grid as service-cards.
+SLOTS: eyebrow, title, anchor, tier, cards[title, text[], href, link_text, links[text, href], tier, image, external, planned]. Variants tiers, service-cards, industries, resources.
+SQUARESPACE: tiers: Section with a background video (or image) and a dark overlay, Heading + Text, a row of three Buttons (anchor links to the three panels' section IDs) and three Sections of two columns (Heading 3 + Text + Button | numbered list as Text); the frosted blur is custom CSS, the native fallback is a solid cream panel. service-cards: Summary block (grid, card style) or four Text blocks with an uploaded icon each, on a sand background. industries: Text blocks or a Summary block (list) with a Line block between rows. resources: Summary block or Text blocks with a Button each.
+#}
+{% from "_macros.html" import eyebrow, img, ph, glyph %}
+{% if variant == 'tiers' %}
+<section class="m m-audience" data-module="card-grid" data-variant="tiers" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <video class="audience__video" autoplay muted loop playsinline preload="metadata"><source src="{{ root }}assets/who-we-serve.mp4" type="video/mp4"></video>
+  <div class="audience__shade" aria-hidden="true"></div>
+  <div class="audience__in">
+    <div class="section-intro">{{ eyebrow(s.eyebrow) }}{% if s.title %}<h2 class="h-big" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}</div>
+    <nav class="tabs" aria-label="{{ s.title }}">{% for c in s.cards %}<a href="#aud-{{ c.tier or loop.index }}"{% if loop.first %} class="is-first"{% endif %}>{{ c.title }}</a>{% endfor %}</nav>
+    {% for c in s.cards %}
+    <article class="aud-panel {{ 'terr-' ~ concept.tier_territory[c.tier] if c.tier and concept.tier_territory[c.tier] }}" id="aud-{{ c.tier or loop.index }}">
+      <div class="aud-panel__text">
+        <p class="eyebrow eyebrow--terr">{{ c.title }}</p>
+        <h3 class="h-panel">{{ c.text[0]|md if c.text else c.title }}</h3>
+        <a class="text-link" href="{{ c.href|href }}">Learn more about {{ c.link_text or c.title }} <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      {% if c.links %}<ol class="aud-steps">{% for l in c.links %}<li><b>{{ '%02d' % loop.index }}</b><a href="{{ l.href|href }}">{{ l.text }}</a></li>{% endfor %}</ol>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% elif variant == 'industries' %}
+<section class="m m-journey" data-module="card-grid" data-variant="industries" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <div class="section-intro">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}</div>
+  <div class="journey">
+    {% for c in s.cards %}
+    <div class="journey__row">
+      <span class="journey__i">{{ '%02d' % loop.index }}</span>
+      <h3 class="journey__h">{% if c.href %}<a href="{{ c.href|href }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</h3>
+      <p class="journey__p">{% for t in c.text %}{{ t|md }} {% endfor %}</p>
+      {% if c.href %}<a class="journey__go" href="{{ c.href|href }}" aria-label="{{ c.link_text or c.title }}">&rarr;</a>{% else %}<span></span>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% else %}
+<section class="m m-cards{{ ' m-cards--' ~ variant if variant }}" data-module="card-grid" data-variant="{{ variant }}" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  <div class="section-intro">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}</div>
+  <div class="cards cards--n{{ s.cards|length }}">
+    {% for c in s.cards %}
+    {% set ct = c.tier or s.tier %}
+    <{{ 'a' if c.href and not c.planned else 'div' }} class="card{{ ' card--planned' if c.planned }}{{ ' ' ~ 'terr-' ~ concept.tier_territory[ct] if ct and variant != 'resources' and concept.tier_territory[ct] }}"{% if c.href and not c.planned %} href="{{ c.href|href }}"{% if c.external %} rel="noopener"{% endif %}{% endif %}>
+      {% if variant == 'resources' %}<span class="card-kicker">{{ 'Client login' if c.external else 'For clients' }}</span>{% else %}<span class="icon-tile c{{ loop.index0 % 4 }}" aria-hidden="true">{{ glyph(loop.index0) }}</span>{% if c.eyebrow %}<span class="card-kicker">{{ c.eyebrow }}</span>{% endif %}{% endif %}
+      <span class="card-title">{{ c.title }}</span>
+      {% for t in c.text %}<span class="card-body">{{ t|md }}</span>{% endfor %}
+      {% if c.planned %}<span class="card-go">Page planned</span>{% elif c.link_text or c.href %}<span class="card-go">{{ c.link_text or 'Learn more' }} &rarr;</span>{% endif %}
+    </{{ 'a' if c.href and not c.planned else 'div' }}>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

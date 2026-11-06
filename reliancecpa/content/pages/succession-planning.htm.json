@@ -1,0 +1,117 @@
+{
+ "url": "https://www.reliancecpa.com/succession-planning.htm",
+ "slug": "succession-planning.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "An Accountant in Tampa Discusses Why You Need to Think about Succession Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/succession-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "An Accountant in Tampa Discusses Why You Need to Think about Succession Planning",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "An Accountant in Tampa Discusses Why You Need to Think about Succession Planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/succession-planning.jpg",
+   "alt": "Accountant in Tampa Helps with Succession Planning",
+   "alt_missing": false,
+   "title": "succession-planning",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "People who own their own business in the Tampa Bay area sometimes wish they could live and work indefinitely. After all, what is more rewarding than owning a successful business in a beautiful location like Tampa, Florida? The sad reality, of course, is that all of us will quit working one day, whether by choice or when circumstances force us to step down. When that day comes for the business owner, it is up to him or her to have a plan in place regarding what should happen. This plan is called a succession plan and it is something your accountant in Tampa will probably encourage you to create.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A good succession plan saves business owners, their families, and their employees a lot of heartache and stress. While it is not a topic anyone likes to think about, ask yourself: if something happens to you, who will own your business? Who will run your business? Will the future of your business be decided in probate court? These are all questions you should discuss with your attorney and your accountant.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you need an [accountant in Tampa](http://www.reliancecpa.com/) who can walk you through the succession planning process, the professionals at Reliance Consulting, LLC would be happy to discuss it with you. A few items we would bring up about succession planning include:",
+   "links": [
+    {
+     "text": "accountant in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Who will own your business after you’re gone—Whether you want to leave your business to a family member or you want to sell it as part of your estate, your wishes must be made clear in your succession plan.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Who will manage your business—You also should spell out if you want, for example, your spouse to take over ownership of the business, and one of your children to assume day-to-day management of the business. In other words, the owner does not have to be the manager.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What happens with taxes—your accountant in Tampa can help ensure that the tax burden of transferring ownership of your business is minimized as much as possible.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Finally, another way Reliance Consulting can assist you with succession planning is by meeting with those family members and employees who will be involved in the plan. By discussing the plan with the people who are impacted by it—especially loved ones—it can help reduce the chance of hard feelings or arguments.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To speak to an accountant in Tampa about succession planning, please contact Reliance Consulting today for a free initial consultation.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 416
+}

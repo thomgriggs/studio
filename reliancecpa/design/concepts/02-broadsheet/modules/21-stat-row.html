@@ -1,0 +1,12 @@
+{#
+MODULE: stat-row
+PURPOSE: Facts side by side. Variant dateline is the original's front-page furniture: a thick-thin double rule, a small-caps dateline row, the figures (serif, the first in the accent), and a closing hairline. Without the variant: the same figures without the dateline and rules.
+SLOTS: eyebrow, title, level, dateline[], items[value, label].
+SQUARESPACE: Text blocks in a row: Heading 2 value + small paragraph label; Line blocks for the rules (one at a time, so the thick-thin pair is two Line blocks or custom CSS, see SQUARESPACE.md).
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-stats{{ ' m-stats--dateline' if variant == 'dateline' }}" data-module="stat-row" data-tone="{{ tone }}" aria-label="Reliance Consulting, by the numbers">
+  {% if variant == 'dateline' %}<hr class="rule rule--double">{% if s.dateline %}<p class="dateline">{% for d in s.dateline %}<span>{{ d }}</span>{% endfor %}</p>{% endif %}<hr class="rule rule--thin">{% else %}{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}{% endif %}
+  <div class="stats stats--{{ s["items"]|length }}">{% for i in s["items"] %}<p class="stat"><span class="stat__v">{{ i.value or i.label }}</span>{% if i.value %}<span class="stat__l">{{ i.label }}</span>{% endif %}</p>{% endfor %}</div>
+  {% if variant == 'dateline' %}<hr class="rule rule--thin">{% endif %}
+</section>

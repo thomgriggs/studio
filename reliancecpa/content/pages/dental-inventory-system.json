@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/dental-inventory-system",
+ "slug": "dental-inventory-system",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Inventory System | Dental CPA | Dental Practice Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-inventory-system",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Help Establish an Inventory System for Your Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Help Establish an Inventory System for Your Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Inventory-System-300x199.jpg",
+   "alt": "Inventory System",
+   "alt_missing": false,
+   "title": "Inventory System",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most important elements of running an efficient dental practice is maintaining a well-planned inventory system. A dental CPA from Reliance Consulting, LLC, can help you establish inventory management practices that help keep things running smoothly and make sure that all equipment and supplies are accounted for and recorded.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting is proud to serve dentists throughout the state of Florida and beyond. Our comprehensive [dental CPA](http://reliancecpa.com/dental-cpa) services cover every aspect of the financial end of a dental practice, as well as the business side of a practice. We know that most dentist-owners would rather spend time attending to their patients than focusing on the time-consuming business end of the practice. One way we can help facilitate that is to create an inventory system that is streamlined and customized to suit the practice’s needs. In general, a sound inventory management system will:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Reduce monetary waste",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Eliminate the stress related to disorganization",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Allow for near-instant mitigation of potential supply crises, or prevent a crisis from occurring at all",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting has helped hundreds of small businesses find the path to profitability since opening our doors in 1984. In addition to inventory management, we can help with tax planning and preparation, location analysis, market research, and much more. [Contact](http://reliancecpa.com/contact.html) Reliance today to learn more about our comprehensive dental CPA services.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 232
+}

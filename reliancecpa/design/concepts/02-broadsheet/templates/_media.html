@@ -1,0 +1,8 @@
+{# MOCKUP ONLY (the "Media slots" review switches, style.css end). Placeholder media for service-detail and insight-article pages, hidden unless its switch class is on <html>. `mkind` = top | side | band. Photos are the concept's own stock files, marked "Placeholder photo". #}
+{% set tp = (concept.tier_photos[page.tier] if page.tier and concept.tier_photos[page.tier] else 'assets/consulting-office.jpg') %}
+{% set sidep = {'assets/tax-planning.jpg': 'assets/consulting-office.jpg', 'assets/bookkeeping.jpg': 'assets/tax-planning.jpg', 'assets/consulting-office.jpg': 'assets/bookkeeping.jpg'}[tp] %}
+{% set bandp = 'assets/hero-building.jpg' if page.tier == 'business-tax-consulting' else 'assets/team-meeting.jpg' %}
+{% if mkind == 'top' %}<figure class="mslot-top"><img src="{{ root }}{{ tp }}" alt="" width="1200" height="800"><span class="mph-tag">Placeholder photo</span></figure>
+{% elif mkind == 'side' %}<div class="mslot-w"><figure class="mslot-side"><span class="mslot-side__pic"><img src="{{ root }}{{ sidep }}" alt="" width="1200" height="800" loading="eager"><span class="mplay" aria-hidden="true"></span><span class="mph-tag">Placeholder photo</span></span><figcaption>Video: a short introduction, 2:10</figcaption></figure></div>
+{% elif mkind == 'band' %}<section class="mband" aria-label="Media band (placeholder)"><div class="mband__bg" aria-hidden="true"><img src="{{ root }}{{ bandp }}" alt="" loading="eager"></div><div class="mband__in"><p class="mband__q">In the success of our clients lies our own.</p><p class="mband__by">Reliance Consulting, LLC</p></div><span class="mband__play mplay" aria-hidden="true"></span><span class="mph-tag">Placeholder photo</span></section>
+{% endif %}

@@ -1,0 +1,73 @@
+{
+ "url": "https://www.reliancecpa.com/disclaimer.htm",
+ "slug": "disclaimer.htm",
+ "template": "content-page",
+ "family": "S1",
+ "title": "No Rendering of Advice",
+ "seo": {
+  "title_tag": "No Rendering of Advice - Reliance Consulting, LLC - Tampa Accountants CPA Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/disclaimer.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "No Rendering of Advice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "No Rendering of Advice"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "The information contained within this website is for informational purposes only and is not intended to substitute advice from a professional accountant.",
+     "As required by U.S. Treasury Regulations and Circular 230, you are hereby advised that any written tax advice contained herein is not written or intended to be used (and cannot be used) by any taxpayer for the purpose of avoiding penalties that may be imposed under the Internal Revenue Code or under any Federal or State Law."
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Information Accuracy",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "While we use reasonable efforts to provide accurate and up-to-date information, we do not warrant that any information contained in this website is accurate, complete, reliable, current or error-free. We assume no liability or responsibility for any errors or omissions in the content of this website. In addition, Reliance Consulting, LLC does not offer specific investment advice."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/disclaimer/",
+  "role": "legal",
+  "old_path": "/disclaimer.htm"
+ }
+}

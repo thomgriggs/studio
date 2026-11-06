@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/business-travel",
+ "slug": "business-travel",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Travel | Save Money",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-travel",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Gives Tips on How to Save Money on Business Travel",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Gives Tips on How to Save Money on Business Travel",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Travel-209x300.jpg",
+   "alt": "Business Travel",
+   "alt_missing": false,
+   "title": "Business Travel",
+   "width": "209",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In many ways, business travel is becoming a relic of the recent past. Advances in technology have enabled instant communication with associates around the world. Holding a meeting with business reps in London is almost as simple as stepping into the office next door. However, some things in business simply must be handled face to face. Business travel is a relatively big expense, but there are ways to save money when you absolutely have to travel.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you develop a financial plan that is smart and as lean as you need it to be. That includes cutting costs on business travel, which is actually easier than it might sound. You may think you’re already watching your pennies in the travel budget by staying at less-expensive hotels or flying business class. But there are always more pennies to find, and here are a few ways to find them:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Don’t take a Town Car or taxi from the airport to the hotel – use public transportation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Book your trip well in advance for lower fares and hotel rates",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "During extended trips, stay at a hotel with a kitchen and refrigerator",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "For short trips, carry on your bags to avoid the luggage fees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Stay at hotels that don’t charge for parking or valet service",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Indulge in the free breakfast if your hotel serves one",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many other creative ways to save money on business travel, including signing up your employees for airline and hotel rewards programs and using the miles or points for future business travel. Reliance is here to help you take a common-sense approach to budgeting, so [contact](http://reliancecpa.com/contact.html) us to set up an initial consultation at no charge to you.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 303
+}

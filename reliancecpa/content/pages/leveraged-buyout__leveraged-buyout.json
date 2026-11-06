@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout/",
+ "slug": "leveraged-buyout__leveraged-buyout",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Leveraged Buyout - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Leveraged Buyout",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Discusses the Benefits of a Leveraged Buyout](https://www.reliancecpa.com/leveraged-buyout)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Discusses the Benefits of a Leveraged Buyout",
+     "href": "https://www.reliancecpa.com/leveraged-buyout"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Leveraged Buyout",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished April 30, 2012 | Full size is [900 × 633](https://www.reliancecpa.com/wp-content/uploads/leveraged-buyout.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 633",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/leveraged-buyout.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/leveraged-buyout.jpg",
+   "alt": "Leveraged Buyout",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "633",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/leveraged-buyout.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services/",
+ "slug": "dental-accounting-tax-services__dental-accounting-and-tax-services",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Accounting and Tax Services - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Accounting and Tax Services",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Accounting and Tax Services for Dental Practices](https://www.reliancecpa.com/dental-accounting-tax-services)",
+   "links": [
+    {
+     "text": "← Accounting and Tax Services for Dental Practices",
+     "href": "https://www.reliancecpa.com/dental-accounting-tax-services"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Accounting and Tax Services",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished December 3, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Dental-Accounting-and-Tax-Services.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Accounting-and-Tax-Services.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Dental-Accounting-and-Tax-Services.jpg",
+   "alt": "Dental Accounting and Tax Services",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Accounting-and-Tax-Services.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 28
+}

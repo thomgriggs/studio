@@ -1,0 +1,24 @@
+---
+url: https://www.reliancecpa.com/basic-valuation-analysis
+type: page
+title_tag: "Dental CPA | Basic Valuation Analysis | Dental Practice Accounting"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2013-02-11
+status: 200
+---
+
+[h3] Reasons for a Dental CPA to Conduct a Basic Valuation Analysis of Your Practice
+[img] alt="Basic Valuation Analysis" src=http://www.reliancecpa.com/wp-content/uploads/Basic-Valuation-Analysis-300x199.jpg
+[p] A basic valuation analysis of a dental practice is, as the name implies, a snapshot of what the practice is actually worth at a particular moment in time. There are a number of reasons why you might need a dental CPA to conduct a valuation analysis, including the most obvious: an impending sale of the practice. One might also require a valuation analysis if the practice is about to hire a new associate whose compensation might include owning a percentage of the practice. But there are other reasons to perform such an analysis, and there are many reasons why Reliance Consulting, LLC, is the place to turn in the Tampa Bay area when the need for a valuation analysis arises.
+[p] Here is a list of reasons why you might want to have an experienced [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance conduct a basic valuation analysis of your practice:
+[ul]
+- Financial planning
+- Insurance purposes
+- Tax planning
+- Consideration for borrowing capital
+- Personal protection planning
+- Retirement and/or estate planning
+[p] No matter why you need a basic valuation analysis conducted, a dental CPA from Reliance will go deep into your practice’s financial statements, assets, liabilities, and other factors that determine the worth of a dental practice. Every detail matters, and nothing will be overlooked or under-scrutinized. Your practice’s long-term financial health could very well depend on the information unearthed during a valuation analysis, which is why you need a proven professional to conduct it.
+[p] Since 1984, Reliance Consulting has helped small businesses throughout the Tampa Bay area achieve and maintain profitability through common-sense business advice, tax planning, and more. We are particularly adept at helping those in the healthcare industry, and our emphasis on dental practice management sets us apart from many firms in Florida and the Tampa Bay area. [Contact](http://reliancecpa.com/contact.html) Reliance today to schedule a basic valuation analysis of your dental practice. We want to help your practice thrive today and in the long term.

@@ -1,0 +1,8 @@
+{#
+MODULE: table
+PURPOSE: The system's .table: themed header row, hairline row rules only (the one place rules appear inside content), hover tint.
+SLOTS: eyebrow, title, level, header, rows.
+SQUARESPACE: No native table: a Markdown block or a small Code block (see SQUARESPACE.md).
+#}
+{% from "_macros.html" import eyebrow, table %}
+<section class="m m-table" data-module="table" data-tone="{{ tone }}">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}{{ table(s.rows, s.header) }}</section>

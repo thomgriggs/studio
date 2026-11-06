@@ -1,0 +1,276 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/business-accounting/",
+ "slug": "business-accounting",
+ "template": "tier-landing",
+ "family": "proposed",
+ "title": "Business Accounting",
+ "tier": "business-accounting",
+ "accent": "sage",
+ "consolidates": [
+  "small-business-accounting.htm"
+ ],
+ "seo": {
+  "title_tag": "Small Business Accounting in Tampa | Reliance Consulting",
+  "meta_description": "Bookkeeping, QuickBooks, payroll and cash flow management for Tampa Bay small businesses from Reliance Consulting.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`.",
+ "verified": [
+  "Service pages: the live pages mapped to this tier in nav.json (bookkeeping.htm, quickbooks-accountant.htm, reliance-consulting-backoffice, payroll-services.htm, cash-flow-management.htm); each card's one-line summary is drawn from that page's own text (see nav.json mega links).",
+  "Intro: first sentences of the live landing small-business-accounting.htm",
+  "'Who it is for' and the problems list are verbatim from small-business-accounting.htm and small-business-accounting.htm",
+  "Team names, roles and photos: live /staff-profiles.htm. Kim Nguyen is the owner (confirmed by Thom, 2026-11-06; the live page still says Staff Accountant)",
+  "Related articles: live pages how-payroll-processing-helps.htm, business-record-retention.htm, keep-financial-records.htm; excerpt = the article's first sentence"
+ ],
+ "confirm": [
+  "Tagline 'Books, payroll and cash flow, kept current for small businesses.' and the tier description (new copy)",
+  "Service card summaries (one sentence each, condensed from the page text; check each reads true)",
+  "CTA: 'Not sure what your business needs? Tell us how you keep your books today.' and 'Choose what you need help with and send a short request.' (new copy)",
+  "Which team members work in this tier: the crawl does not say, so every tier shows the whole team",
+  "Kim Nguyen's portrait comes from concept-02, not from the live site; confirm it is the one she wants used. Her exact title wording ('Owner') and credentials are to confirm",
+  "SEO title and meta description (new copy, not from the live site, which has none)",
+  "The live Business Accounting copy lists 'Unlimited consultations' among its services; it is left out of the problems list because it is a promise about the firm's time (confirm if it is true and wanted)"
+ ],
+ "modules": [
+  {
+   "module": "hero",
+   "slots": {
+    "eyebrow": "Business Accounting",
+    "title": "Business Accounting",
+    "tagline": "Books, payroll and cash flow, kept current for small businesses.",
+    "tier": "business-accounting",
+    "actions": [
+     {
+      "text": "Get Started",
+      "page": "get-started__business-accounting"
+     }
+    ]
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Small business accounting can consume days and weeks of a business owner’s valuable time."
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "service-cards",
+   "slots": {
+    "eyebrow": "Services",
+    "title": "Business Accounting services",
+    "tier": "business-accounting",
+    "cards": [
+     {
+      "title": "Bookkeeping",
+      "text": [
+       "Bookkeeping and accounting support, with the services you choose from a menu of options."
+      ],
+      "page": "bookkeeping.htm",
+      "href": "https://www.reliancecpa.com/business-accounting/bookkeeping/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "QuickBooks Accountant",
+      "text": [
+       "Ongoing QuickBooks support from accountants who know the software."
+      ],
+      "page": "quickbooks-accountant.htm",
+      "href": "https://www.reliancecpa.com/business-accounting/quickbooks/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Reliance BackOffice",
+      "text": [
+       "Cloud-based services that let you outsource everyday accounting functions."
+      ],
+      "page": "reliance-consulting-backoffice",
+      "href": "https://www.reliancecpa.com/business-accounting/backoffice/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Payroll Services",
+      "text": [
+       "Payroll processing and payroll tax compliance, so payroll is not a do-it-yourself chore."
+      ],
+      "page": "payroll-services.htm",
+      "href": "https://www.reliancecpa.com/business-accounting/payroll/",
+      "link_text": "Learn more"
+     },
+     {
+      "title": "Cash Flow Management",
+      "text": [
+       "Invoicing review, cash flow forecasting and a plan around the money coming in and going out."
+      ],
+      "page": "cash-flow-management.htm",
+      "href": "https://www.reliancecpa.com/business-accounting/cash-flow-management/",
+      "link_text": "Learn more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Who it is for",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "Since you, as a business owner, want to be focused on your products, services, and profits, let your CPA and accountant at Reliance Consulting put together a customized small business accounting package that will keep your payroll, tax returns, and bank accounts running smoothly."
+     }
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "title": "What small businesses ask us to take on",
+    "ordered": false,
+    "items": [
+     {
+      "text": "Business tax, self employment tax, and income tax preparation"
+     },
+     {
+      "text": "Tax planning accountant"
+     },
+     {
+      "text": "Tax problem and IRS audit help"
+     },
+     {
+      "text": "Bookkeeping and QuickBooks accounting support"
+     },
+     {
+      "text": "Payroll services"
+     },
+     {
+      "text": "Bank account reconciliation"
+     },
+     {
+      "text": "Prevention of embezzlement from within your company"
+     },
+     {
+      "text": "Income statements"
+     },
+     {
+      "text": "Balance sheets"
+     },
+     {
+      "text": "Cash flow analysis"
+     },
+     {
+      "text": "New business planning"
+     }
+    ]
+   }
+  },
+  {
+   "module": "people",
+   "slots": {
+    "eyebrow": "People",
+    "title": "Who you will work with",
+    "people": [
+     {
+      "name": "Kim Nguyen",
+      "role": "Owner",
+      "image": {
+       "src": "concept-02/assets/kim-m-nguyen.png",
+       "alt": "Kim Nguyen, Owner",
+       "origin": "concept-02 asset; confirm it is the portrait Kim wants used"
+      }
+     }
+    ],
+    "team": [
+     {
+      "name": "Valerie Stickeler",
+      "role": "Certified Public Accountant"
+     },
+     {
+      "name": "Tara Govindaraju",
+      "role": "Accounting Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
+       "alt": "Tara Govindaraju, Accounting Manager"
+      }
+     },
+     {
+      "name": "Nicole Frenier",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
+       "alt": "Nicole Frenier, Staff Accountant"
+      }
+     },
+     {
+      "name": "Jamie Partin",
+      "role": "Staff Accountant",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
+       "alt": "Jamie Partin, Staff Accountant"
+      }
+     },
+     {
+      "name": "Briana McNulty",
+      "role": "Office Administrator & Billing Manager",
+      "image": {
+       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
+       "alt": "Briana McNulty, Office Administrator & Billing Manager"
+      }
+     }
+    ],
+    "link": {
+     "text": "Meet the team",
+     "page": "staff-profiles.htm"
+    }
+   }
+  },
+  {
+   "module": "post-feed",
+   "variant": "cards",
+   "slots": {
+    "title": "Related articles",
+    "posts": [
+     {
+      "title": "How Payroll Processing by a CPA in Tampa Can Help Your Small Business",
+      "page": "how-payroll-processing-helps.htm",
+      "href": "https://www.reliancecpa.com/resources/how-payroll-processing-helps/",
+      "excerpt": "The reports, the withholding, the laws, the checks … payroll can be a lengthy chore that consumes a large portion of a Tampa Bay small business owner’s time."
+     },
+     {
+      "title": "Ask Your CPA in Tampa about what Business Records You Should Keep",
+      "page": "business-record-retention.htm",
+      "href": "https://www.reliancecpa.com/resources/business-record-retention/",
+      "excerpt": "Over the years, you may notice that your Tampa, FL area business is running out of room to store records."
+     },
+     {
+      "title": "Your CPA in Tampa Discusses Reasons to Keep Financial Records",
+      "page": "keep-financial-records.htm",
+      "href": "https://www.reliancecpa.com/resources/keep-financial-records/",
+      "excerpt": "Whether at home or in the work place, it’s not always easy to determine which financial records are ready for the shredder and which ones need to be organized, filed, and held secure in case they’re needed later."
+     }
+    ],
+    "more": {
+     "text": "All articles",
+     "page": "articles.html"
+    }
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "title": "Not sure what your business needs? Tell us how you keep your books today.",
+    "text": "Choose what you need help with and send a short request.",
+    "buttons": [
+     {
+      "text": "Get Started",
+      "page": "get-started__business-accounting"
+     }
+    ]
+   }
+  }
+ ]
+}

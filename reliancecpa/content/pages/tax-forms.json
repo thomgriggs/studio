@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/tax-forms",
+ "slug": "tax-forms",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Forms | Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-forms",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Different Types of Tax Return Forms",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Different Types of Tax Return Forms",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/tax-form-types-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tax Forms",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are more than 800 different types of tax return forms and schedules used by the Internal Revenue Service to calculate the amount of taxes you or your company owes the government. The vast majority of individual taxpayers will only ever become familiar with a handful of these forms, while even the most complicated business enterprises will almost certainly never be required to use more than a fraction of the total forms available. Still, no matter how simple or complex your tax preparation may be, the sheer preponderance of forms can seem overwhelming.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, is here to help you sort through the complexity of tax preparation. The most commonly used and most familiar form to individuals, of course, is the 1040. But even this familiar form comes in several variants, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Form 1040EZ – intended for single and joint filers without dependents and with taxable income less than $100,000",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Form 1040A – the “short” form, intended for taxpayers with less than $100,000 taxable income who expect to take the standard deduction",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Form 1040NR – intended for non-U.S. resident tax filers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Form 1040X – the “amended” Form 1040, intended to make corrections to the originally filed Form 1040",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Form 1040ES – intended primarily for self-employed individuals who expect to pay estimated taxes each quarter",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This, of course, is only the beginning. In addition to Form 1040, there are more than a dozen “schedules,” or attachments, that are used to calculate deductions, credits, and other factors that go into determining how much tax an individual owes. Also, every taxpayer receives a wage and tax statement (Form W-2), which lists income and tax withheld for the previous year.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, the complex nature of the tax system is only exacerbated by the inclusion of so many forms and documents. In order to make sense of it all, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting for help with tax planning and preparation.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 335
+}

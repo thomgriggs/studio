@@ -1,0 +1,161 @@
+{
+ "url": "https://www.reliancecpa.com/estate-planning.htm",
+ "slug": "estate-planning.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Estate Planning for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/estate-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Estate Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Estate Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/estate-planning.jpg",
+   "alt": "Estate Planning for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Estate Planning for the Tampa, FL Area",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you try to do it alone, estate planning can be extremely complex, leaving you with many more questions than answers. Unfortunately, this confusion and anxiety has left many people in the Tampa, Florida area without an estate plan at all, which is tragic for family members who may be left with financial and legal disarray after a loved one dies.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To prevent this added misfortune from impacting your family while they are already dealing with personal grief, contact an estate planning specialist from Reliance Consulting, LLC right away. Our Tampa estate planning CPAs and accountants provide compassionate, comprehensive, and easy-to-understand estate planning services for the entire area including Clearwater, St Petersburg, Sarasota, Pasco, Lakeland, and greater Tampa Bay. We can help you sort through the bureaucracy, legalities, appraisals, [real estate](http://www.reliancecpa.com/real-estate-cpa.htm) holdings, retirement accounts, funeral costs, and all the other details that go into the estate planning process. Your Reliance CPAs and accountants will assist you with:",
+   "links": [
+    {
+     "text": "real estate",
+     "href": "http://www.reliancecpa.com/real-estate-cpa.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Defining your goals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Organizing a team of experts to address your legal, investment, and accounting questions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Evaluating the options and recommend a course of action",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reviewing your documents such as current wills, trusts, power of attorney, living wills, and health care wishes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Creating new documentation where needed",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Arranging for the administration of your estate should you become incapacitated",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lessening the expenses related to probate",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reducing tax burden at the time of death",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Organizing adequate and fair liquidation of your assets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Managing charitable contributions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Addressing business relationships, ownership, partnerships, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Amending your estate plan as needed in the future",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you can see, our estate planning services leave nothing to chance so you can be assured that everything will be taken care of. Our Tampa area clients often tell us that, once they have arranged their estate wishes with our accounting firm, they feel a great sense of relief and freedom.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Don’t make the mistake of leaving your assets to chance. Make sure your estate is handled according to your wishes by contacting a [Tampa CPA](http://www.reliancecpa.com/contact.html) at Reliance Consulting, LLC for a free financial checkup and review.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 358
+}

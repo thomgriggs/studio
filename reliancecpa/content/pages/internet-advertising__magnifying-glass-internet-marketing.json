@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing/",
+ "slug": "internet-advertising__magnifying-glass-internet-marketing",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Internet Advertising - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Internet Advertising",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Examines Whether a Small Business Can Thrive on Internet Advertising Alone](https://www.reliancecpa.com/internet-advertising)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Examines Whether a Small Business Can Thrive on Internet Advertising Alone",
+     "href": "https://www.reliancecpa.com/internet-advertising"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Internet Advertising",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 1, 2012 | Full size is [900 × 675](https://www.reliancecpa.com/wp-content/uploads/Internet-Advertising.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 675",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Internet-Advertising.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Internet-Advertising.jpg",
+   "alt": "Internet Advertising",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "675",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Internet-Advertising.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

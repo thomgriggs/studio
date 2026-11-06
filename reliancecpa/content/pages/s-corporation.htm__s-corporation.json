@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/s-corporation.htm/s-corporation/",
+ "slug": "s-corporation.htm__s-corporation",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/s-corporation.htm/s-corporation",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "s-corporation - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/s-corporation.htm/s-corporation/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "s-corporation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation](https://www.reliancecpa.com/s-corporation.htm)",
+   "links": [
+    {
+     "text": "← Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+     "href": "https://www.reliancecpa.com/s-corporation.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "s-corporation",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 209](https://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 209",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg",
+   "alt": "Ask your CPA in Tampa, FL about the Benefits of Becoming an S Corporation",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "209",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/s-corporation.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/s-corporation.htm/s-corporation).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/s-corporation.htm/s-corporation"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

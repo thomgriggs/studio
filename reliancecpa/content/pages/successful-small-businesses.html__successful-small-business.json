@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business/",
+ "slug": "successful-small-businesses.html__successful-small-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "successful-small-business - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "successful-small-business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Examines Characteristics of Successful Small Businesses](https://www.reliancecpa.com/successful-small-businesses.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Examines Characteristics of Successful Small Businesses",
+     "href": "https://www.reliancecpa.com/successful-small-businesses.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "successful-small-business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 315](https://www.reliancecpa.com/wp-content/uploads/2011/12/successful-small-business.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 315",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/successful-small-business.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/successful-small-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "315",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/successful-small-business.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 27
+}

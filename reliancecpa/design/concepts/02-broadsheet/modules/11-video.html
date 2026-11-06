@@ -1,0 +1,8 @@
+{#
+MODULE: video
+PURPOSE: A YouTube video as a poster (its own thumbnail with a square play button) that opens YouTube; no player script.
+SLOTS: url, title.
+SQUARESPACE: Video block (YouTube URL). The poster-and-link treatment is the native Video block's thumbnail.
+#}
+{% from "_macros.html" import poster %}
+<section class="m m-video" data-module="video" data-tone="{{ tone }}"><figure class="single single--video">{{ poster(s.url, s.title) }}</figure></section>

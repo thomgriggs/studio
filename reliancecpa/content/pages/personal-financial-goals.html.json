@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/personal-financial-goals.html",
+ "slug": "personal-financial-goals.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Personal Financial Goals",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-financial-goals.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Talks About Defining and Reaching Your Personal Financial Goals",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Talks About Defining and Reaching Your Personal Financial Goals",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/personal-financial-goals.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "personal-financial-goals",
+   "width": "300",
+   "height": "365",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You never stop defining and refining your financial goals, whether you are a recent medical school graduate, a well-established associate at a law firm or you are about to retire from a long and rewarding career in business. From the moment you enter the work force until well into your golden years, it pays to work hand-in-hand with a financial partner you respect and trust.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, will work with you to make sure your financial goals are met. And, as your career evolves, you can count on Reliance to evolve with you. We pride ourselves on making a personal commitment to our clients, whether it’s an individual hoping to make the most of an annual income or a business trying to reach its full potential. Here are just a few of the characteristics that set Reliance apart from the crowd:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "We do much more than merely crunch the numbers. We let the numbers serve as a guide to help our clients make prudent financial decisions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "We pride ourselves on our availability to our clients – the door is always open.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Our clients aren’t burdened by the hourly billing you can expect from other CPA firms.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "We are technologically savvy; our clients always have the latest resources and research at their disposal.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Our success is directly tied to yours. Not until you achieve your goals, do we consider the job done.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether it’s tax planning and preparation, financial planning, developing a strategy to pay off college loans, or any other personal or business accounting service, Reliance Consulting wants to be your financial guide and partner. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free, no-obligation financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 294
+}

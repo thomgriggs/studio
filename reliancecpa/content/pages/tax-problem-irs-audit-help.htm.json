@@ -1,0 +1,166 @@
+{
+ "url": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm",
+ "slug": "tax-problem-irs-audit-help.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-tax",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tax Problem & IRS Audit Help for Tampa St Petersburg Clearwater Sarasota Lakeland Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tax Problem & IRS Audit Help for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tax Problem & IRS Audit Help for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-problem-irs-audit-help.jpg",
+   "alt": "Tax Problem & IRS Audit Help for Greater Tampa Bay, FL",
+   "alt_missing": false,
+   "title": "tax-problem-irs-audit-help",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tax problems and IRS audits cause their own brand of misery for individuals and business owners alike. When faced with IRS problems, no one wants to, or should have to, go through these serious dilemmas without the assistance of an experienced CPA and accountant.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC is here to help you resolve tax problems and walk you through an IRS audit, lifting these burdens from your shoulders so that you can go back to more productive activities. We have successfully assisted hundreds of clients in the greater Tampa, Florida area with troublesome tax issues and we look forward to providing you with the same efficient, affordable, compassionate, and discrete service.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "From Tampa to St Petersburg, Clearwater to Lakeland, and Sarasota to Pasco, our CPAs and accountants have decades of experience serving area businesses and individuals with the following tax problems and IRS audit help:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Business tax](http://www.reliancecpa.com//business-tax.htm) and individual income tax problems",
+     "links": [
+      {
+       "text": "Business tax",
+       "href": "http://www.reliancecpa.com//business-tax.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Failure to file tax returns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS audit notifications",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS liens",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS seizures of bank accounts and personal property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Payroll](http://www.reliancecpa.com//payroll-services.htm) tax problems",
+     "links": [
+      {
+       "text": "Payroll",
+       "href": "http://www.reliancecpa.com//payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Wage garnishments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Back taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payment plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you owe money to the IRS or have possible errors in your [tax preparation](http://www.reliancecpa.com//tax-preparation.htm), you have a serious problem that will keep getting worse as the IRS adds penalties and interest to the daily total. Once tax problems have become apparent and an IRS audit has been initiated, this government agency can be relentless in its pursuit of money owed. However, backed by the experienced [Tampa CPA](http://www.reliancecpa.com//index.html)s and tax accountants from Reliance Consulting, you can rest assured that a knowledgeable representative is fighting for your rights.",
+   "links": [
+    {
+     "text": "tax preparation",
+     "href": "http://www.reliancecpa.com//tax-preparation.htm"
+    },
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about our services for tax problems and IRS audit help in the greater Tampa, FL area, please contact Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 326
+}

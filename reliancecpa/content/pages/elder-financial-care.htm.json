@@ -1,0 +1,156 @@
+{
+ "url": "https://www.reliancecpa.com/elder-financial-care.htm",
+ "slug": "elder-financial-care.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Hiring a CPA in Tampa for Elder Financial Care",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/elder-financial-care.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Hiring a CPA in Tampa for Elder Financial Care",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Hiring a CPA in Tampa for Elder Financial Care",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/elder-financial-care.jpg",
+   "alt": "CPA in Tampa Helps with Elder Financial Care",
+   "alt_missing": false,
+   "title": "CPA in Tampa Helps with Elder Financial Care",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As your parents and other beloved family members enter their senior years, there’s a good chance they will need assistance in many areas of their day-to-day lives. In addition to requiring assistance with driving to the doctor and going grocery shopping, your elder relatives also may need help with financial issues such as paying bills, managing investments, and so on.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Of course, managing your own personal finances takes up a lot of time, let alone managing someone else’s, and you may worry that you might not have what it takes to do a good job with your loved one’s money. If your elderly loved one lives in the Tampa Bay area, please consider hiring a [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC. We work with many families in the area and we would be happy to talk to you about our options for elder financial care.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether your elderly loved one wants a little extra help with bookkeeping or needs a full range of financial services, a CPA in Tampa from Reliance Consulting can assist with:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Paying household bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Budgeting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Keeping records",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Writing checks, balancing checkbooks, and keeping track of deposits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Handling common transactions like medical and home maintenance expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Assessing and planning retirement income needs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Handling issues with Social Security, Medicare, pensions, and insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Monitoring investments and assets alongside their investment advisor",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reviewing personal, financial, and legal documents to make sure the estate is in order and will be handled properly",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Financial care for seniors and the elderly is crucial to ensuring that they can remain independent for as long as possible, which also contributes to their happiness and ability to participate in the activities they enjoy. Reliance Consulting has been working with businesses and individuals in our Tampa Bay community for more than 25 years and during that time we have established a flawless reputation as a trustworthy CPA in the Tampa area. Please contact us today for more information about how our firm can assist you with elder financial care.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 348
+}

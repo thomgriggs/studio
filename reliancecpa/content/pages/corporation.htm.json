@@ -1,0 +1,123 @@
+{
+ "url": "https://www.reliancecpa.com/corporation.htm",
+ "slug": "corporation.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa FL Explains Advantages of Corporations",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/corporation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa, FL Explains Advantages of Corporations",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "CPA in Tampa, FL Explains Advantages of Corporations",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/corporation.jpg",
+   "alt": "CPA in Tampa, FL Explains Advantages of Corporations",
+   "alt_missing": false,
+   "title": "CPA in Tampa, FL Explains Advantages of Corporations",
+   "width": "300",
+   "height": "181",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether your Tampa Bay area business is brand new or you are about to expand, among the many decisions you’ll need to make is if your business should become a corporation. Like many entrepreneurs, you may be baffled by this decision because you don’t understand exactly what a corporation is or why it might be a good idea to incorporate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "By incorporating, your business becomes its own entity and is given certain legal rights that are similar legal rights that a person has. In many ways, a corporation is an artificial person that can borrow money, raise money with stock sales, and reduce liability for the people that own it. Thankfully, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC is here to advise you on what it means to incorporate your business and tell you about the types of corporations your business can become.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One advantage of a corporation is that it can help protect a business owner from personal liability. While an owner of a sole proprietorship or a member of partnership might be personally liable for debt or legal judgments against the company, a company that has incorporated protects its shareholders from these liabilities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Incorporation also can help a growing company in the following ways:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Employees can be rewarded by receiving shares in the business.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Further debt can be avoided by inviting equity investors.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The tax burden can be shifted from an individual owner to the separate legal entity that is the corporation.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The type of corporation that best suits your business depends on the service you provide or the products you produce. Knowing your goals is another important step toward deciding which form of incorporation might be right for you. Also, will you sell stock to raise capital? Will the stock be publicly traded or closely held? Will your corporation operate as a non-profit?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your CPA in Tampa at Reliance Consulting, LLC, can help you answer these questions and others about corporations. Let our more than a quarter-century of experience in business consulting be your guide as your company grows.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 351
+}

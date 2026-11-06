@@ -1,0 +1,13 @@
+{#
+MODULE: reasons
+PURPOSE: Three to five short reasons to choose the firm, on the neutral band: the heading in the left 5 columns, the reasons right in the 7, each led by a serif numeral in the accent and a 19px title. No boxes.
+SLOTS: eyebrow, title, image, items[title, text].
+SQUARESPACE: Two-column Section on a grey background: Heading + Text on the left; numbered Text blocks (Heading 4 + paragraph) on the right.
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-reasons" data-module="reasons" data-tone="{{ tone }}">
+  <div class="split">
+    <div>{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2></div>
+    <ol class="reasons">{% for i in s["items"] %}<li><span class="reasons__n" aria-hidden="true">{{ loop.index }}</span><div><h3 class="h-item">{{ i.title|md }}</h3><p>{{ i.text|md }}</p></div></li>{% endfor %}</ol>
+  </div>
+</section>

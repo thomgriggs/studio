@@ -1,0 +1,11 @@
+{#
+MODULE: door-pair
+PURPOSE: Two ways in, each a photo, heading, text and a short link list, side by side in the 7/5 rhythm (defined for kit parity, unused by Reliance).
+SLOTS: anchor, title, items[title, text, image, links[text, href, link_text, planned], button].
+SQUARESPACE: Two-column Section: Image, Heading 3, Text, link Text, Button; section ID for the anchor.
+#}
+{% from "_macros.html" import img, ph %}
+<section class="m m-doors" data-module="door-pair" data-tone="{{ tone }}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+  {% if s.title %}<h2 class="h-section" data-orig-level="2">{{ s.title|md }}</h2>{% endif %}
+  <div class="doors">{% for d in s["items"] %}<article><figure>{% if d.image %}{{ img(d.image) }}{% else %}{{ ph("photo for " ~ d.title) }}{% endif %}</figure><h3 class="h-row">{{ d.title }}</h3>{% if d.text %}<p>{{ d.text|md }}</p>{% endif %}<ul class="links" role="list">{% for l in d.links %}<li><a href="{{ l.href|href }}">{{ l.text }}<span aria-hidden="true"> →</span></a></li>{% endfor %}</ul>{% if d.button %}<p><a class="btn btn-primary" href="{{ d.button.href|href }}">{{ d.button.text }}</a></p>{% endif %}</article>{% endfor %}</div>
+</section>

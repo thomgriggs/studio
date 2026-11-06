@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-networking.html",
+ "slug": "small-business-networking.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Networking | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-networking.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Networking Helps a Small Business Owner",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Networking Helps a Small Business Owner",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-networking.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "small-business-networking",
+   "width": "300",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There really is no defined “work day” for a small business owner. In order for a smaller company to survive, the person in charge has to be “on” almost all the time. That means taking care of actual business during normal working hours, and following that up with networking and other social activities that will help grow the company. You never know where the next big deal might originate, which is why it pays to understand the importance of business networking.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help a small business owner have much more time to focus on networking and other out-of-office responsibilities. How do we do it? By handling all the routine financial responsibilities that can threaten to bog down even the most organized executive, such as tax planning and preparation, payroll, bookkeeping, cash flow analysis, and much more.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "With the time saved, a business owner is free to focus on building relationships. Here are a few suggestions for finding and taking advantage of networking opportunities:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Join local and national professional organizations related to your industry.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish yourself as the expert in your field by writing for industry publications.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Attend meet and greet events for local business people.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Attend conferences, conventions, and seminars related to your industry.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Follow up with new acquaintances to build familiarity and trust.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today to get started with a complimentary financial health checkup. We’ll do all we can to make sure you have the time necessary to build the relationships that may help your company flourish.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 268
+}

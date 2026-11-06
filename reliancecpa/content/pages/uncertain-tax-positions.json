@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/uncertain-tax-positions",
+ "slug": "uncertain-tax-positions",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Uncertain Tax Position | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/uncertain-tax-positions",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Helps Interpret Uncertain Tax Positions for Small Business Owners",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Helps Interpret Uncertain Tax Positions for Small Business Owners",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/UTP-Small-Business-300x200.jpg",
+   "alt": "UTP Small Business",
+   "alt_missing": false,
+   "title": "UTP Small Business",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are a small business owner, there is no shame in admitting that the complexity of tax rules is more than a little overwhelming sometimes. There are so many rules, in fact, that it is virtually impossible to keep up with them all. Further complicating the matter is the concept of uncertain tax positions. By the time 2014 tax returns are filed, businesses with more than $10 million in assets will be required to describe and rank uncertain tax positions with the new Schedule UTP. So much for a simpler tax code.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Not to worry, though, because a [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you sort through the complexities of tax rules, including uncertain tax positions. In short, uncertain tax positions are those that are open to interpretation. This also takes into account tax balances on a company’s financial statements that are not included on a tax return, typically because they were recorded as loss contingency reserves. This is where certain tax positions are open to interpretation. For example, a monetary loss accrued through research and development might not be accepted by the IRS – even if the expenses were judged by the company to have been eligible for deduction. A simpler example might be a disagreement in the allowable deduction for business meals (50 percent? 75 percent? 100 percent?). It’s uncertain.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Confused yet? Well, that’s where Reliance comes in. Since 1984, we have helped small business owners in the Tampa Bay area and throughout Florida interpret tax rules and plan accordingly. To set up a consultation, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 277
+}

@@ -1,0 +1,16 @@
+{#
+MODULE: cta-band
+PURPOSE: The original's coral CTA band: full bleed, ink eyebrow, 68px Georgia headline, one line of text left, the buttons stacked right (ink primary, outlined second). Closing variant: the same band, used by the shared closing band on every page that has no CTA of its own.
+SLOTS: eyebrow, title, level, text, buttons[text, href], image (not used).
+SQUARESPACE: Section with a coral background colour, two columns: Heading + Text, and two Button blocks (the second in the outline style). Ink text on coral is the section's colour theme. No code.
+#}
+<section class="m m-cta" data-module="cta-band" data-tone="{{ tone }}">
+  <div class="cta">
+    <div class="cta__t">
+      {% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}
+      <h2 class="cta__h" data-orig-level="{{ s.level or 2 }}">{{ s.title|md }}</h2>
+      {% if s.text %}<p class="cta__p">{{ s.text|md }}</p>{% endif %}
+    </div>
+    {% if s.buttons %}<div class="cta__actions">{% for b in s.buttons %}<a class="btn {{ 'btn-primary' if loop.first else 'btn-outline' }}" href="{{ b.href|href }}">{{ b.text }}</a>{% endfor %}</div>{% endif %}
+  </div>
+</section>

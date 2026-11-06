@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/home-based-businesses",
+ "slug": "home-based-businesses",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Home Based Businesses | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/home-based-businesses",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Examines What Industries are Best Suited for Home-Based Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Examines What Industries are Best Suited for Home-Based Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Home-Based-Business-300x200.jpg",
+   "alt": "Home Based Business",
+   "alt_missing": false,
+   "title": "Home Based Business",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even if you already are gainfully employed, with a 9-to-5 (or longer) workday and a steady paycheck, there are all sorts of reasons to set your inner entrepreneur loose. To begin with, no matter how much you’re making now, couldn’t you always use just a little more money? If nothing else, you can dump extra funds into your retirement account so that it’ll be there when you really do need it. Or, maybe a money shortage is the only thing standing between your family and that dream vacation or other big purchase you’ve always talked about. So, why not brainstorm ideas that will help you earn money at home, very likely performing tasks that you either already do or are adept at performing?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine what sort of home business would be best for you, while also making you aware of the many tax advantages that could be available if you start a home business. Not sure what you might be able to do to make a little extra cash? Think about what you’re good at, and start to research how people are making money doing that very thing. Some ideas include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Consulting/blogging/writing online reviews",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Personal assistant services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Personal shopping (groceries, etc.)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Online tutorials/lessons",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "eLearning programs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Online store",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Don’t sell yourself short when it comes to starting a home business. Who knows? It might very well turn out to be so successful, you can afford to drop the 9-to-5 drudgery and focus on building your very own company. [Contact](http://reliancecpa.com/contact.html) Reliance Consulting to take the first step toward a lifetime of profitability.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 284
+}

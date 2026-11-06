@@ -1,0 +1,10 @@
+{# Page shell: insight article. Brand page (articles belong to a topic, not a tier): breadcrumbs, title, a byline with the topic tag chip (tag colour is the only colour), the narrow reading column, then "More on <topic>". #}
+{% extends "_base.html" %}
+{% block main %}{% set head_n = 1 if (page.modules and page.modules[0].module == 'title-banner') else 0 %}{% set with_crumbs = 1 %}{% set media_ok = 1 %}{% set with_byline = 1 %}{% include "_pagehead.html" %}{% set mkind = 'side' %}{% include "_media.html" %}{% set rest = page.modules[head_n:] %}{% set nc = rest|length - (1 if (rest and rest[-1].module in ['cta-band', 'contact-band']) else 0) %}{% set bpos = ((nc + 1) // 2) if nc >= 2 else 0 %}{% for m in rest %}{{ render_module(m, page, {"root": root}) }}
+{% if bpos and loop.index == bpos %}{% set mkind = 'band' %}{% include "_media.html" %}{% endif %}{% endfor %}
+{% if related and related.posts %}
+<section class="m m-related" aria-labelledby="related-h"><h2 class="h-section" id="related-h">More on {{ related.category.title }}</h2>
+  <ul class="links" role="list">{% for p in related.posts %}<li><a href="{{ p.url|href }}">{{ p.title }}<span aria-hidden="true"> →</span></a></li>{% endfor %}</ul>
+  <p class="feed__more"><a class="btn btn-ghost" href="{{ page_href('articles.html') }}">All articles →</a></p>
+</section>{% endif %}
+{% endblock %}

@@ -1,0 +1,4 @@
+{# Page shell: content-page. Renders the page's modules in order; the look of this template is in style.css (body.t-content-page). #}
+{% extends "_base.html" %}
+{% block main %}{% set head_n = 1 if (page.modules and page.modules[0].module == 'title-banner') else 0 %}{% set with_crumbs = 0 %}{% include "_pagehead.html" %}{% for m in page.modules[head_n:] %}{{ render_module(m, page, {"root": root}) }}
+{% endfor %}{% endblock %}

@@ -1,0 +1,48 @@
+{#
+MODULE: title-banner
+PURPOSE: Inner-page header, the original's page hero: cream ground, eyebrow (naming where you are: the tier in its territory colour, Insights, About, Resources, Contact), Georgia h1 and, right, a decorative card chosen by page kind. Service pages: the tier's own services as a numbered path with the current page in lime. Articles: a topic card with the tag chip. Team page: the first three people as left-bordered rows. Contact: the original's rounded Tampa photo with an address pill. Everything else (resources, legal, get-started thanks): three overlapping pastel rings, no text. The live banner photos (2011 stock) are never used.
+SLOTS: title, image (not shown in this concept), date.
+SQUARESPACE: Section with a cream background and two columns: Text (eyebrow) + Heading 1 on the left, an Image block on the right. The cards are decorative pictures (or one Code block each, see SQUARESPACE.md); the contact photo is a plain Image block with a caption.
+#}
+{% from "_macros.html" import eyebrow %}
+{% set role = page.scope.role if page.scope else '' %}
+{% set tier_label = concept.territories[concept.tier_territory[page.tier]].label if page.tier and concept.tier_territory[page.tier] else '' %}
+{% if tier_label %}{% set eb = tier_label ~ (' · Industry example' if role == 'industry-example' else '') %}
+{% elif role == 'resource-article' %}{% set eb = 'Insights' %}
+{% elif page.template in ('about-team',) %}{% set eb = 'About' %}
+{% elif page.template in ('client-resources', 'resource-media') %}{% set eb = 'Resources' %}
+{% elif role == 'legal' %}{% set eb = 'Legal' %}
+{% elif role == 'local-seo' %}{% set eb = 'Areas we serve' %}
+{% elif page.template == 'contact' %}{% set eb = 'Contact' %}
+{% else %}{% set eb = '' %}{% endif %}
+{% set cols = nav.mega.columns if nav is defined and nav and nav.mega else [] %}
+{% set tag = page.scope.tag if page.scope else '' %}
+{% set kind = 'path' if (page.tier and page.template == 'service-detail') else ('insight' if page.template == 'insight-article' else ('team' if page.template == 'about-team' else ('contact' if page.template == 'contact' else ('none' if page.template == 'content-page' else 'rings')))) %}
+<section class="m m-title m-title--{{ kind }}" data-module="title-banner" data-tone="{{ tone }}">
+  <div class="title__copy">
+    {{ eyebrow(eb, "eyebrow--terr") }}
+    <h1 class="h-page{{ ' h-page--long' if s.title|length > 60 }}" data-orig-level="1">{{ s.title|md }}</h1>
+  </div>
+  {% if kind == 'path' %}
+  {% set ns = namespace(items=[], head='') %}{% for col in cols if col.tier == page.tier %}{% set ns.head = col.heading %}{% for l in col.links + (col.secondary.links if col.secondary else []) if l.available %}{% set ns.items = ns.items + [l] %}{% endfor %}{% endfor %}
+  <div class="path-card" aria-label="In {{ ns.head }}">
+    <p class="path-card__t"><span>In {{ ns.head or tier_label }}</span><small>{{ ns.items|length }} pages</small></p>
+    <ol>{% for l in ns.items[:5] %}<li{% if l.current %} class="is-current"{% endif %}><b>{{ '%02d' % loop.index }}</b><a href="{{ l.href }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.label }}</a></li>{% endfor %}</ol>
+  </div>
+  {% elif kind == 'insight' %}
+  <div class="topic-card" aria-hidden="true">
+    <p class="topic-card__t"><span>Insights</span><small>From the Reliance team</small></p>
+    <p class="topic-card__tag {{ 'terr-' ~ concept.tag_territory[tag] if tag and concept.tag_territory[tag] }}"><span class="chip chip--tag">{{ concept.tag_labels[tag] or tag if tag else 'Article' }}</span></p>
+    <div class="bars bars--sm"><i style="height:36%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:70%"></i><i style="height:92%"></i></div>
+  </div>
+  {% elif kind == 'team' %}
+  <div class="firm-card">
+    <p class="firm-card__t">The people at Reliance</p>
+    {% for m in page.modules if m.module == 'profile' %}{% if loop.index <= 3 %}<span class="firm-card__r r{{ loop.index }}"><b>{{ m.slots.name }}</b><small>{{ m.slots.role }}</small></span>{% endif %}{% endfor %}
+  </div>
+  {% elif kind == 'contact' %}
+  <figure class="contact-image"><img src="{{ root }}assets/tampa-contact.jpg" alt="Tampa, Florida"><figcaption>{{ footer.contact.address }}</figcaption></figure>
+  {% elif kind == 'rings' %}
+  <div class="rings-deco" aria-hidden="true"><span class="r1"></span><span class="r2"></span><span class="r3"></span></div>
+  {% endif %}
+</section>

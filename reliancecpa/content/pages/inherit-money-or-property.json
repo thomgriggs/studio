@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/inherit-money-or-property",
+ "slug": "inherit-money-or-property",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Inheritance | Estate Planning | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/inherit-money-or-property",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What to Do if You Inherit Money or Property",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What to Do if You Inherit Money or Property",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/substantial-inheritance-300x200.jpg",
+   "alt": "Inheritance",
+   "alt_missing": false,
+   "title": "Inheritance",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Inheriting a substantial amount of money or valuable property can be an emotionally conflicting experience. On one hand, becoming the benefactor of an inherited windfall typically means you have lost someone close to you, often a family member. On the other hand, if the windfall was unexpected, the feelings can run the gamut from exultation to relief if you were in financial distress before. Further complicating the matter is the new set of tax rules you’ll have to learn, and quickly.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you navigate the complications related to inheriting money or property. The first thing to do is to keep a level head. This is especially important if you have never been fortunate enough to have a large amount of money at your disposal. As tempting as it may be to change your lifestyle, it can take as long as a year for an inheritance to clear probate. Use this time wisely by discussing the best course of action with an experienced, knowledgeable CPA from Reliance.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, we have helped thousands of individuals in the Tampa Bay area and throughout Florida achieve their financial goals through smart management of their assets. [Contact](http://www.reliancecpa.com/contact.html) us today for important advice and assistance that might make all the difference down the road.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 236
+}

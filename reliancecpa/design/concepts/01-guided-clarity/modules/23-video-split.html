@@ -1,0 +1,13 @@
+{#
+MODULE: video-split
+PURPOSE: The original's image-and-copy band on mint: the video's thumbnail as a 22px-radius photo with the white play pill, beside eyebrow, 52px Georgia headline, text. Stacks on a phone.
+SLOTS: eyebrow, title, level, depth, body[], url, video_title.
+SQUARESPACE: Two-column Section on a mint background: Video block beside Heading + Text. The play pill is custom CSS (native thumbnail play button is the fallback).
+#}
+{% from "_macros.html" import eyebrow, body, poster %}
+<section class="m m-vsplit" data-module="video-split" data-tone="{{ tone }}">
+  <div class="story">
+    <figure class="vsplit__v">{{ poster(s.url, s.video_title or s.title) }}</figure>
+    <div class="story__t">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2><div class="prose">{{ body(s.body, 4) }}</div></div>
+  </div>
+</section>

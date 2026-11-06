@@ -1,0 +1,57 @@
+{
+ "url": "https://www.reliancecpa.com/client-portal-login",
+ "slug": "client-portal-login",
+ "template": "client-resources",
+ "family": "S1-form",
+ "title": "Client Portal Login",
+ "seo": {
+  "title_tag": "Client Portal Login",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/client-portal-login",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Client Portal Login",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Client Portal Login"
+   }
+  },
+  {
+   "module": "form-placeholder",
+   "slots": {
+    "note": "form"
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/client-portal/",
+  "role": "merged",
+  "merge_into": "reliance-consulting-netclient-portals",
+  "old_path": "/client-portal-login"
+ }
+}

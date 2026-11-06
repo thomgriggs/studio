@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/new-business-financing.html",
+ "slug": "new-business-financing.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | New Business Financing",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/new-business-financing.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses New Business Financing",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses New Business Financing",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/new-business-financing.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "new-business-financing",
+   "width": "200",
+   "height": "281",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "During down cycles, one of the hardest-hit areas in the economy is the ability of startup entrepreneurs to get approved for a new business loan. Whereas banks are more apt to lend during good economic times, lenders become much more circumspect when uncertainty permeates the economy. That’s not to say it’s impossible to find capital for a new business; it’s just that the process is not as simple as filling out a few forms and waiting for an affirmative response.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you weigh your options as you seek financing for your new business. The first step is to estimate your startup costs. Once you know how much money you need, you can begin to research the best way to fund your business. With a Reliance business consultant at your side, you can consider the merits of these and other sources of capital:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Equity financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Venture capital",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Short-term debt financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Long-term debt financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Local, state or federal grants",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting was founded in 1984, and quickly became one of the premier accounting and business consultancy firms in the Tampa Bay area. We have helped hundreds of businesses reach and sustain maximum profitability. One way we do that is to conduct thorough research into financing options based on your unique requirements.[Contact](http://www.reliancecpa.com//contact.html) us today for more information, or for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 238
+}

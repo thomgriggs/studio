@@ -1,0 +1,10 @@
+{#
+MODULE: rich-text
+PURPOSE: Plain running text, lists and buttons at the original's body size (17px on a 1.7 line) and a 780px measure.
+SLOTS: body[] (p, ul, ol, subhead, quote, button, embed-link, table).
+SQUARESPACE: Text block (+ Button blocks).
+#}
+{% from "_macros.html" import body %}
+<section class="m m-text" data-module="rich-text" data-tone="{{ tone }}">
+  <div class="prose">{{ body(s.body) }}</div>
+</section>

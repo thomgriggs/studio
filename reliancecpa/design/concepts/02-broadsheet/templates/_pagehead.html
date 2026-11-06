@@ -1,0 +1,7 @@
+{# The page head as one unit: breadcrumbs and section nav (when `with_crumbs`), the title-banner and the byline (articles). One wrapper div, no style of its own: the "darkhead" mockup switch (style.css, end) makes it a dark band. Falls back to the plain module order when the first module is not a title-banner. The including template sets `head_n` (how many modules the head takes: 1 title-banner, or 0). #}
+{% set pm = page.modules %}
+{% if pm and pm[0].module == 'title-banner' %}
+<div class="pagehead">{% if with_crumbs %}{% include "_crumbs.html" %}{% endif %}{{ render_module(pm[0], page, {"root": root}) }}{% if media_ok %}{% set mkind = 'top' %}{% include "_media.html" %}{% endif %}
+{% if with_byline %}{% set tag = page.scope.tag if page.scope else '' %}<p class="byline">{% if tag %}<a class="chip chip--tag terr-{{ concept.tag_territory[tag] }}" href="{{ page_href('articles.html') }}">{{ concept.tag_labels[tag] or tag }}</a>{% endif %}<span>From the Reliance Consulting team</span></p>{% endif %}
+</div>
+{% else %}{% if with_crumbs %}{% include "_crumbs.html" %}{% endif %}{% endif %}

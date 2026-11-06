@@ -1,0 +1,167 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm",
+ "slug": "cpa-firm-lakeland-polk.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA & Accountants Serving Lakeland Winter Haven & all of Polk County FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA & Accountants Serving Lakeland, Winter Haven & all of Polk County, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Tampa CPA & Accountants Serving Lakeland, Winter Haven & all of Polk County, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/lakelandfl.jpg",
+   "alt": "Tampa CPA & Accountants Serving Lakeland, Winter Haven & Polk County, FL",
+   "alt_missing": false,
+   "title": "Tampa CPA & Accountants Serving Lakeland, Winter Haven & Polk County, FL",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Located in the heart of Florida, Polk County boasts a population of more than 500,000 residents. From Lakeland to Winter Haven and all surrounding towns, Polk County has just about anything a Floridian could ask for. Whether you’re interested in the Frank Lloyd Wright architecture and stellar academics at Florida Southern College in Lakeland, or you would like to enjoy some relaxing downtime at Cypress Gardens or Bok Tower Gardens, Polk County is filled with culture and commerce.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC, serves as a CPA and accountant for many clients in Lakeland, Winter Haven, and throughout Polk County. Our clients in this part of central Florida work in a diverse range of professions such as medicine, agriculture, mining, and tourism. Since the accountants and CPAs at Reliance Consulting have a broad range of accounting experience in many fields, we welcome the opportunity to work with all types of clients including individuals, business owners, and partnerships.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you live or work in Lakeland, Winter Haven, or elsewhere in Polk County, your CPA and accountant from Reliance Consulting can assist you with:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tax preparation](http://www.reliancecpa.com/tax-preparation.htm)",
+     "links": [
+      {
+       "text": "Tax preparation",
+       "href": "http://www.reliancecpa.com/tax-preparation.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax problems and IRS problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)",
+     "links": [
+      {
+       "text": "Bookkeeping",
+       "href": "http://www.reliancecpa.com/bookkeeping.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Payroll",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "QuickBooks accounting",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement plans and educational plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Estate planning](http://www.reliancecpa.com/estate-planning.htm)",
+     "links": [
+      {
+       "text": "Estate planning",
+       "href": "http://www.reliancecpa.com/estate-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Financial planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s your money and your future, so you should make sure that your accountant is dedicated to keeping you informed about the best strategies and policies for your unique financial situation. Reliance Consulting is that type of accountant—the kind that focuses on helping you achieve your financial goals, one day at a time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about hiring Reliance Consulting as your CPA and accountant in Lakeland, Winter Haven, or anywhere else in Polk County, please contact us today.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 300
+}

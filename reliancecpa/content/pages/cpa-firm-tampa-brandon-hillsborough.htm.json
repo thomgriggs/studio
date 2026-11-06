@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm",
+ "slug": "cpa-firm-tampa-brandon-hillsborough.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "local-seo",
+  "first_pass_action": "Refresh",
+  "notes": "keep if traffic; under tier, not nav"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA Firm & Accountants Serving Tampa Brandon Town n Country Plant City Lutz & All Hillsborough County FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Firm & Accountants Serving Tampa, Brandon, Town n Country, Plant City, Lutz & All Hillsborough County, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "CPA Firm & Accountants Serving Tampa, Brandon, Town n Country, Plant City, Lutz & All Hillsborough County, FL",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tampa-brandon-hillsborough.jpg",
+   "alt": "CPA Serving Tampa, Brandon, Plant City, Hillsborough County",
+   "alt_missing": false,
+   "title": "CPA Serving Tampa, Brandon, Plant City, Hillsborough County",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Hugging the waters of beautiful Tampa Bay, FL, Hillsborough County offers the natural beauty of the Sunshine State plus all the modern conveniences of city life. In addition to the signature city of Tampa, Hillsborough County also embraces the excitement of year-round sporting events, unique historical architecture, and daily recreational activities. It’s no surprise that more than 1 million people have flocked to Hillsborough County as a permanent home in which to settle down and build their lives.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Conveniently based in Tampa, Florida, Reliance Consulting, LLC works with hundreds of individual and commercial clients throughout Hillsborough County, from Brandon to Town n Country, Plant City to Lutz and beyond. Using the latest technology coupled with decades of experience and a commitment to client care, each CPA and accountant at Reliance Consulting is part of a financial services team that provides the following services and much more:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Income tax preparation and [business tax](http://www.reliancecpa.com/business-tax.htm) services",
+     "links": [
+      {
+       "text": "business tax",
+       "href": "http://www.reliancecpa.com/business-tax.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Business finance consulting and cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Specialists for clients in a range of fields including doctors, dentists, the hospitality industry, retail, real estate, and more",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Tax planning](http://www.reliancecpa.com/tax-planning.htm) and IRS problem resolution",
+     "links": [
+      {
+       "text": "Tax planning",
+       "href": "http://www.reliancecpa.com/tax-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Saving for your children’s college tuition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protecting your assets",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you hail from Carrollwood, Temple Terrace, Ybor City, or Sun City Center, Reliance Consulting wants to be your CPA. We are the accountant you can trust for unparalleled service whenever you need us.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Regardless of your situation, we hope you will [contact us](http://www.reliancecpa.com/contact.html) for a free initial checkup of your financial health. Through the years, we have produced excellent results for our clients here in Tampa and throughout Hillsborough County, and we hope to get the chance to do the same for you, too.",
+   "links": [
+    {
+     "text": "contact us",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 301
+}

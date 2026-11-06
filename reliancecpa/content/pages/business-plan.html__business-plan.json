@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/business-plan.html/business-plan/",
+ "slug": "business-plan.html__business-plan",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/business-plan.html/business-plan",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Tampa CPA Business Plan - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-plan.html/business-plan/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA Business Plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Discusses Writing a Business Plan](https://www.reliancecpa.com/business-plan.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Discusses Writing a Business Plan",
+     "href": "https://www.reliancecpa.com/business-plan.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Tampa CPA Business Plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [200 × 300](https://www.reliancecpa.com/wp-content/uploads/2011/12/business-plan.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "200 × 300",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-plan.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-plan.gif",
+   "alt": "Tampa CPA Business Plan",
+   "alt_missing": false,
+   "title": "",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-plan.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/business-plan.html/business-plan).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/business-plan.html/business-plan"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

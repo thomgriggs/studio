@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/dental-email",
+ "slug": "dental-email",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental CPA | Email Administration | Email Marketing",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-email",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Explains the Importance of Maintaining an Accurate Dental Practice Email Database",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Explains the Importance of Maintaining an Accurate Dental Practice Email Database",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Email-Administration-300x200.jpg",
+   "alt": "Dental Email",
+   "alt_missing": false,
+   "title": "Dental Email",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the vital tools for marketing a dental practice in the 21st century is a well-maintained, up-to-date list of patient email addresses. An email marketing strategy is only one of many facets of practice management a dental CPA from Reliance Consulting, LLC, can help with. Our suite of dental practice accounting and tax preparation services is unparalleled, and we will do everything possible to help you identify and reach all of your professional and personal goals.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Why is an updated [email list](http://www.reliancecpa.com/dental-internet-marketing) so important for a dental practice? There are many reasons, including:",
+   "links": [
+    {
+     "text": "email list",
+     "href": "http://www.reliancecpa.com/dental-internet-marketing"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Reminding a patient about an upcoming appointment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sending a patient or large group of patients a specific marketing message geared toward shared interests",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Making special discount offers to loyal patients",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asking for patient feedback on services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reminding a patient about payments due",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inviting a patient to follow, join, or like your dental practice’s social media pages (Twitter, Facebook, etc.)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every dental software management system has many of these tools integrated within their platforms. Configuring the tools and effectively using them is however the key. Hiring the trainers from the software company is a great strategy that most dentists don’t employ because of higher costs of training. However, this investment is necessary to ensure a robust customer relationship management system. There are many outside tools like Demand Force and Constant Contact that have been successfully implemented within many dental practices.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s important to have a plan for using the email addresses you gather from your patients. But your patient data gathering also needs to go beyond just an email address. An appropriate customer relationship management system must be implemented to ensure optimal patient engagement. That’s where a dental CPA from Reliance can help – we will serve as a sounding board for all of your marketing efforts, making sure they are coordinated and working together to help you achieve particular goals in sales, patient retention, and other purposes. To learn more about the many uses of email marketing and Internet marketing for a dental practice, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 355
+}

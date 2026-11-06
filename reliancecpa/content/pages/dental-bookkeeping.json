@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/dental-bookkeeping",
+ "slug": "dental-bookkeeping",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-10-26",
+ "seo": {
+  "title_tag": "Dental CPA | Bookkeeping | Tampa Dental Practice Consultant",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-bookkeeping",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a Dental CPA Helps with Bookkeeping Services",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a Dental CPA Helps with Bookkeeping Services",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning-210x300.jpg",
+   "alt": "Dental Bookkeeping",
+   "alt_missing": false,
+   "title": "Dental Bookkeeping",
+   "width": "210",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The critical financial tasks that help keep a dental practice solvent require an expert’s touch, which is why every dentist-owner owes it to him- or herself to work with a dental CPA who is experienced with the unique demands of the dental industry. At Reliance Consulting, LLC, we have made helping healthcare professionals and dentists, in particular, a priority. While our accounting, tax preparation, tax planning and other financial services are comprehensive, one of the most important ways we help dental practices is with expert bookkeeping services.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When you hire a [dental CPA](http://www.reliancecpa.com/dental-cpa) from Reliance to provide bookkeeping services, you’ll have a partner who will:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://www.reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Set up and manage payments to vendors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set up and monitor a system for tracking deposits and accounts receivable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reconcile monthly bank records and other accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Record all payroll activity",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provide reports on a monthly, quarterly, and/or annual basis",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There is more to bookkeeping than that, of course. A dental CPA from Reliance is not just a numbers cruncher. When you work with Reliance, we will make sure that every facet of the business side of your practice receives the attention it deserves. We understand that most dentists would prefer to focus on the most important aspect of their practices – their patients. Leave the business side of the practice to Reliance, and you will be free of the day-to-day drudgery of bookkeeping and other financial services. To experience what it’s like to work with a first-class dental CPA, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 255
+}

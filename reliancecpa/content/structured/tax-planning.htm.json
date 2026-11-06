@@ -1,0 +1,108 @@
+{
+ "url": "https://www.reliancecpa.com/tax-planning.htm",
+ "slug": "tax-planning.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Tax Planning for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Tax Planning for Tampa St Petersburg Clearwater Lakeland Sarasota Manatee Pasco Polk & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tax Planning for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Tax Planning for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-planning.jpg",
+     "alt": "Tax Planning for the Tampa, FL area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Tax planning is the key to legally and successfully reducing the amount of business tax and individual income tax you pay. Just like you need a map to plan a trip across the country, you also must have a strategy in place so that you are able to benefit from the tax incentives, deductions, and credits available during any given year.",
+     "Considering the complex and constantly changing tax code, tax planning is best handled by an accountant who has experience and knowledge in minimizing your tax burden all year long, not just on April 15. Reliance Consulting, LLC has developed great expertise in tax planning for a wide range of clients throughout the Tampa, Florida area, from doctors and dentists in Clearwater to resorts in Sarasota to residents in Lakeland.",
+     "At Reliance Consulting, our CPAs and tax accountants are able to recommend numerous tax planning strategies to save you money, such as:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Reducing taxes on investments so you can build wealth faster"
+     },
+     {
+      "text": "[Income tax services](http://www.reliancecpa.com//income-tax-services.htm) to reduce your burden so you can keep more of the money you’ve made"
+     },
+     {
+      "text": "Reducing estate taxes so that your family can inherit more of your wealth"
+     },
+     {
+      "text": "Retirement planning"
+     },
+     {
+      "text": "Asset protection"
+     },
+     {
+      "text": "[Business tax](http://www.reliancecpa.com//business-tax.htm) preparation"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "While many CPAs and accountants in the Tampa, Florida area provide [tax preparation](http://www.reliancecpa.com//tax-preparation.htm) services, this is just one step to an overall tax strategy. Tax planning involves making time-sensitive decisions to maximize your tax savings and minimize your tax rate over a long period of time."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/tax-preparation/tax-planning/",
+  "role": "service",
+  "tier": "tax-preparation",
+  "old_path": "/tax-planning.htm"
+ },
+ "short_title": "Tax Planning"
+}

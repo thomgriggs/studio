@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/retirement-taxes.html",
+ "slug": "retirement-taxes.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Paying Taxes in Retirement",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/retirement-taxes.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Paying Taxes in Retirement",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Paying Taxes in Retirement",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/retirement-taxes.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "retirement-taxes",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Living on a “fixed income” in retirement doesn’t mean you’ll be exempt from paying taxes. That’s why it’s important to take income taxes into account as you plan for retirement. Steps taken now can help you minimize your income tax burden later in life.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can provide sound advice for retirement savings – and how to best position yourself to minimize taxes when the time comes to enjoy your post-professional life. Since opening our doors in 1984, Reliance has helped thousands of individuals determine the best way to create financial security in retirement. That includes preparing to answer questions about retirement income taxes, such as: Will you pay quarterly taxes? And, how much will your former company withhold from a pension payout? Sources of income that affect the amount of income tax you’ll pay in retirement include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Some retirement account distributions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Social Security distributions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Pension payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other income, including inheritance or other monetary windfalls",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The experienced staff at Reliance Consulting takes pride in being reachable and responsive. We’ll anticipate your needs and reply with accurate and authoritative answers to all your questions. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a complimentary financial health checkup and rest assured we’ll work tirelessly to meet your accounting and tax preparation needs today and in the future.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 224
+}

@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/savings-plan.html/savings-amount/",
+ "slug": "savings-plan.html__savings-amount",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/savings-plan.html/savings-amount",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "savings-amount - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/savings-plan.html/savings-amount/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "savings-amount",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Can Help You Develop a Savings Plan](https://www.reliancecpa.com/savings-plan.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Can Help You Develop a Savings Plan",
+     "href": "https://www.reliancecpa.com/savings-plan.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "savings-amount",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/savings-amount.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/savings-amount.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/savings-amount.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/savings-amount.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/savings-plan.html/savings-amount).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/savings-plan.html/savings-amount"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 13
+}

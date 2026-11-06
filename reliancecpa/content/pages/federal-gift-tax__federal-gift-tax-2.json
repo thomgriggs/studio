@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2/",
+ "slug": "federal-gift-tax__federal-gift-tax-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Back Taxes - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Back Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Explains the Federal Gift Tax](https://www.reliancecpa.com/federal-gift-tax)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Explains the Federal Gift Tax",
+     "href": "https://www.reliancecpa.com/federal-gift-tax"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Back Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 31, 2012 | Full size is [900 × 675](https://www.reliancecpa.com/wp-content/uploads/Federal-Gift-Tax.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 675",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Federal-Gift-Tax.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Federal-Gift-Tax.jpg",
+   "alt": "Back Taxes",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "675",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Federal-Gift-Tax.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 27
+}

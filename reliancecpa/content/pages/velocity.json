@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/velocity",
+ "slug": "velocity",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Velocity | Money Supply | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/velocity",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What Velocity Means in the Financial World",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What Velocity Means in the Financial World",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/velocity-300x210.jpg",
+   "alt": "Velocity",
+   "alt_missing": false,
+   "title": "Velocity",
+   "width": "300",
+   "height": "210",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Everyone knows that velocity is speed in a given direction, and many people are familiar with the term from high school physics class. Yet, there is another very important use of the term velocity, and it has to do with money. Specifically, it is how often a particular dollar changes hands over a specific amount of time. Financial velocity is a useful measurement of how strong the economy is, and often is used as a comparison for the gross domestic product or the money supply.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help small business owners and private individuals understand how macroeconomic concepts such as velocity rate affect them on a microeconomic level. Because not many of us exist in a financial vacuum, it is important to stay abreast of things that go on around us, monetarily speaking. Certainly, most business owners and private individuals pay at least some attention to the business news, particularly the information that may have a direct bearing on their industry or investment portfolio. Yet, when it comes to deep analysis – the kind of information that could make or break a fiscal year – it is far preferable to seek the advice of the professionals from Reliance.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, we have helped hundreds of small businesses in the Tampa Bay area and throughout Florida make sense of the financial big picture. That means staying on top of the overall health of the economy, and understanding the signs of potential risk and profit. [Contact](http://www.reliancecpa.com/contact.html) us today if you would like one of our experienced, knowledgeable CPAs to conduct a thorough financial health checkup. We are here to save you time and money.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 295
+}

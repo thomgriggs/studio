@@ -1,0 +1,11 @@
+{#
+MODULE: steps
+PURPOSE: A short numbered process as the original's "approach" flow: an ink-green band (cream when it follows another dark band), eyebrow in lime, headline and optional button left, stacked numbered rows right (outlined number circle, Georgia 24px lead, text, arrow), the last row highlighted in lime. With no title the rows span the band.
+SLOTS: eyebrow, title, level, depth, items[lead, text], actions[]; variant process.
+SQUARESPACE: Section on a dark (ink) background: Heading + Text + Button left; a row of Text blocks (Heading 4 lead + small paragraph) with Line blocks between them on the right; the highlighted last row is a lime Section or a block background. The numbered circles are typed numerals or small circle images.
+#}
+{% from "_macros.html" import eyebrow, actions %}
+<section class="m m-flow{{ ' m-flow--solo' if not s.title }}" data-module="steps" data-tone="{{ tone }}">
+  {% if s.title or s.eyebrow %}<div class="flow__copy">{{ eyebrow(s.eyebrow) }}{% if s.title %}<h2 class="h-big" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}{{ actions(s.actions, "light") }}</div>{% endif %}
+  <ol class="flow__rows">{% for i in s["items"] %}<li class="flow__row{{ ' is-last' if loop.last }}"><span class="flow__n" aria-hidden="true">{{ loop.index }}</span><p>{% if i.lead %}<b>{{ i.lead|md }}</b><small>{{ i.text|md }}</small>{% else %}<b>{{ i.text|md }}</b>{% endif %}</p><i aria-hidden="true">{{ '✓' if loop.last else '→' }}</i></li>{% endfor %}</ol>
+</section>

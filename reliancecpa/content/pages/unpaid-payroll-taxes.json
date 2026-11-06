@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/unpaid-payroll-taxes",
+ "slug": "unpaid-payroll-taxes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-10-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Unpaid Payroll Taxes | Delinquent Payroll Taxes",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/unpaid-payroll-taxes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Consequences of Delinquent or Unpaid Payroll Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Consequences of Delinquent or Unpaid Payroll Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/temporary-employees.gif",
+   "alt": "Payroll Taxes",
+   "alt_missing": false,
+   "title": "Payroll Taxes",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There might have been a day when a small business could fly under the radar when it came to past-due employment taxes or payroll taxes that were consistently paid after the deadline. That day is gone. No matter the reason behind delinquent or unpaid payroll taxes, no matter how big or small the business, the IRS has begun to hasten and sharpen its response in recent years. Now, it is particularly incumbent on anyone who is responsible for the financial well-being of a business to be sure that everything is in order regarding payroll or employment taxes; the very existence of the company could be at stake.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help a business owner or financial officer make a plan to pay employment taxes on time and avoid the potential commitment of a federal crime. Make no mistake – failing to pay payroll taxes and employment taxes can lead to dire legal consequences for an individual or a company. The penalties and setbacks can include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Fines of 33 percent, plus interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Prison time",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Shutting down the business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Seizure of equipment and other holdings",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interception of payments owed the business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A long-term loss of credibility in the industry",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If this sounds dramatic or over-the-top, consider this: Congress actually passed a law designed to encourage the prompt payment of withheld income or employment taxes. The Trust Fund Recovery Penalty (TFRP) may be assessed against anyone who is responsible for paying withheld income and employment taxes and willfully fails to collect or pay them. Those deemed responsible for delinquent payroll taxes have 60 days to respond to the IRS notice, after which the amount assessed can be seized from personal as well as business assets.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The best way to avoid this problem is to seek the sound advice of a Tampa CPA from Reliance. [Contact](http://reliancecpa.com/contact.html) us today to set up an appointment to review how best to meet your payroll tax obligations.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 336
+}

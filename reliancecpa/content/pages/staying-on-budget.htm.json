@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/staying-on-budget.htm",
+ "slug": "staying-on-budget.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Discusses Tips for Staying on Budget",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/staying-on-budget.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Discusses Tips for Staying on Budget",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Discusses Tips for Staying on Budget",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/budget.gif",
+   "alt": "CPA in Tampa - Budget",
+   "alt_missing": false,
+   "title": "budget",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In business or at home, your financial well-being relies on your ability to stick to a sound budget. Establishing a budget will help you keep track of your money, enable you to plan for the future and help make sure you’re prepared in case of financial emergencies.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com//index.html) at Reliance Consulting, LLC can help you develop a budget for your home or business. Our free financial health checkup is a good place to start.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you develop your budget, it’s important to understand why you choose to spend your money the way you do. That way, you’ll be able to make spending decisions based on established priorities. One way to do that is to break down your expenditures into three main categories:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Needs. These are the expenditures that you cannot live without. In business, your needs probably will be based on paying your employees and the rent, providing promised goods and services to your clients, and your business goals. At home, your needs are simpler: food and water, shelter, clothing, transportation. Making sure these needs are paid for in your budget is the top priority.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Wants. These are the expenditures that you might think you cannot live without, but most of us could, in fact, make it through the day without them, such as cable TV, high-speed Internet or a fancy cell phone. Vacations, dining out and new home furnishings also are included on this list, which must be pared down if you find that your income is insufficient to meet your actual needs. In business, wants might be upgrading the company’s computer equipment or investing in more advertising.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Luxuries. These are high-end “wants,” such as a month-long European tour or a diamond tennis bracelet. For businesses, luxuries could include an extravagant holiday party or taking clients out for expensive meals. If you find you can’t afford your needs or more realistic “wants,” this is the first list to trim.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your list of needs, wants and luxuries will vary, of course, depending on your level of income and on the way you prioritize your expenditures. Contact your CPA in Tampa at Reliance Consulting to learn more about ways to develop priorities and strategies to help you stick to your budget.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 383
+}

@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/due-diligence.html",
+ "slug": "due-diligence.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Due Diligence When Starting A Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/due-diligence.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Due Diligence When Starting A Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Due Diligence When Starting A Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/due-diligence.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The term “due diligence” can have a legal connotation, specifically when it applies to research and investigations performed prior to signing a contract. However, the term more commonly applies to voluntary investigations, such as when an entrepreneur investigates a business in the course of acquiring its assets. It can also apply to someone researching all the legal and practical details of starting a new business from scratch.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, is an ideal source of information and guidance when you decide to perform due diligence associated with starting or purchasing a business. Since Reliance was founded in 1984, our business consultants have helped hundreds of Tampa Bay area companies reach maximum profitability by providing sound advice about tax planning, cash flow management, employee services and much more. The due diligence-related questions Reliance can help you answer include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "What or who is my target market?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Who is my competition?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How soon will my products/services be available for distribution?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much money do I need to start?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "At what point can I expect to make a profit?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How will I set up the legal structure of my business (sole proprietorship, partnership, limited liability corporation, etc.)?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance today for expert business consultation, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 224
+}

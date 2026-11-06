@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/personal-assets.html/personal-assets/",
+ "slug": "personal-assets.html__personal-assets",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/personal-assets.html/personal-assets",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "personal-assets - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-assets.html/personal-assets/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "personal-assets",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Discusses Protecting Personal Assets](https://www.reliancecpa.com/personal-assets.html)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Discusses Protecting Personal Assets",
+     "href": "https://www.reliancecpa.com/personal-assets.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "personal-assets",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 6, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-assets.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-assets.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-assets.gif",
+   "alt": "Tampa CPA Personal Assets",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-assets.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/personal-assets.html/personal-assets).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/personal-assets.html/personal-assets"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 24
+}

@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/upside-down-mortgage.html",
+ "slug": "upside-down-mortgage.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Upside-down Mortgage",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/upside-down-mortgage.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Discusses Upside-Down Mortgages",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Discusses Upside-Down Mortgages",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/upside-down-mortgage.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "upside-down-mortgage",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When the value of your property is less than the remaining balance of your home loan, the mortgage is referred to as underwater, or upside-down. The technical term for this is negative equity, and it is a major precursor to foreclosure. When the housing bubble burst in 2007, negative equity began to skyrocket in many regions of the United States, particularly Nevada, Arizona and Florida. By the first quarter of 2010, according to the financial research firm CoreLogic, more than 11.2 million U.S. residences carried upside-down mortgages.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you find yourself holding an upside-mortgage on your home, let your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, sort it out. Because of the world-wide financial crisis, a home worth $350,000 on paper at the peak of the boom in mid-2006 might have lost half its value less than four years later. A Tampa CPA at Reliance understands the helpless feeling a homeowner might have experienced as property values fell at such an alarming rate, and we’re here to help.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every underwater mortgage is different, but your Tampa CPA at Reliance Consulting can help you decide which of the following options might be best for you:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Keep making payments – This is generally the best course of action if you can afford it, because it protects your credit and positions you to take advantage when property values rebound",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Renegotiation or loan modification – Many lenders will negotiate the terms of the loan, and the U.S. government has instituted several modification programs since the crisis began",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Short sale – If you must sell because you’re moving, or you can no longer afford house payments, you can seek permission from your lender to sell the home for less than the remaining mortgage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Deed-in-lieu-of-foreclosure – The lender takes possession of the property and the borrower is released from debt",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bankruptcy – Eliminates debt liability",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) your Tampa CPA at Reliance Consulting today for more detail on how to handle an upside-down mortgage.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 332
+}

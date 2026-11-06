@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/corporate-divestiture.html",
+ "slug": "corporate-divestiture.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Corporate Divestiture",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/corporate-divestiture.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses Reasons for and Benefits of Corporate Divestiture",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses Reasons for and Benefits of Corporate Divestiture",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/corporate-divestiture.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A corporation seeking to make the most of its assets might consider divestiture, which is essentially selling or trading a division to another corporation or an individual. For example, a particular division within a Florida shipping company – a fleet of trucks in the Pacific Northwest, for instance – is potentially more useful or valuable to a shipping company in Seattle. The Florida company might choose to sell its interest in the Pacific Northwest fleet to the Seattle company, because it would be more profitable than keeping the trucks. Savvy corporations are always on the lookout for these kinds of deals. But how would you determine whether the deal is a good one?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can do a complete, ongoing analysis of your business, always on the lookout for the best ways to employ your corporate assets. Since opening our doors in 1984, Reliance has helped hundreds of companies in the Tampa Bay area reach their full potential. Bring us on board if you want to take advantage of the many forms of divestiture available, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Sell-off – one or more divisions of a company are sold as individual enterprises.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Spin-off – dividing two or more divisions into different classes of shares, thereby creating new, independent operations.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Management buyout – essentially, employees of the company purchase the division and make it a new entity.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asset trades – companies barter with one another to make a mutually beneficial swap of assets.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Total liquidation – all of a company’s divisions are sold, or the business winds down and its assets are sold.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For all of your business consultancy needs – including payroll services, cash flow management, tax preparation and more – [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today. We’ll conduct a complete financial health checkup, free of charge, and let you know right up front how we can help your company perform at the highest level possible.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 330
+}

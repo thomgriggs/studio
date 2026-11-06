@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/late-retirement-planning.html",
+ "slug": "late-retirement-planning.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA in Tampa | Ever Too Late For Retirement Planning? | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/late-retirement-planning.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Discusses the Time Table for Retirement Planning",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Discusses the Time Table for Retirement Planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/late-retirement-planning.gif",
+   "alt": "CPA in Tampa",
+   "alt_missing": false,
+   "title": "CPA in Tampa",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you have been forced by some unfortunate circumstance to start over relatively late in your career, or you’ve simply procrastinated, it’s never too late to start saving for your retirement. Of course, the earlier you begin to build your nest egg, the better. But sometimes even the best-laid plans go awry. Perhaps that pension you had counted on became insolvent for some reason. Or maybe the stocks that made up the bulk of your retirement plan went South. What do you do then?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, is here to help. The important thing is not to panic, or fall into despair. Yes, putting together a nest egg large enough to support you and your family in retirement may be more of a challenge later in life, but it can be done. All it takes is a good plan and a willingness to see it through. Some of the tough decisions you may need to make include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Will you retire later than the typical retirement age of 65?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much more are you willing and able to set aside from each paycheck?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much money will you need to support your lifestyle once you retire?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will you need to adjust your post-professional expectations?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will you need to find part-time work once you’ve stepped away from your full-time career?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These and other questions need not be a source of anxiety. And you don’t have to figure it all out on your own. That’s why we’re here, to make sure that you have all the information you need to be prepared for a comfortable, rewarding retirement. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today to get started with a free financial health checkup and a complete analysis of your retirement plan.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 301
+}

@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/debt.html",
+ "slug": "debt.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Good Debt | Bad Debt",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/debt.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains the Difference Between ‘Good’ Debt and ‘Bad’ Debt",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains the Difference Between ‘Good’ Debt and ‘Bad’ Debt",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/debt.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "227",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When it comes to defining whether debt is “bad” or “good,” the bottom line is this: Can you afford to repay it? It goes without saying that to go into debt without the means to pay off your obligation will not create a healthy financial situation in the long-term. Yet, the way our financial system works, certain types of debt can actually be considered “good,” as long as you know it won’t become a burden later on.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine whether it makes sense for you to take on new debt. Since 1984, Reliance has provided accounting services and financial guidance to thousands of individuals and hundreds of small businesses throughout the Tampa Bay area.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the key components of a sound household budget or business plan is knowing when to go into debt. Clearly, unless you know you can afford it, it’s not necessarily wise to go into debt to buy nonessential goods or services, such as an expensive vacation or a high-end luxury car. However, “good” debt might include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A home mortgage with a fixed rate",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Home improvements, such as weatherization, that might save money over the long run",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A practical, affordable automobile to provide reliable transportation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "An unexpected emergency, such as a medical treatment or home repair",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A investment in self-improvement, such as a college degree or career training",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a complimentary financial health checkup and to learn more about the differences between “good” debt and “bad” debt.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 266
+}

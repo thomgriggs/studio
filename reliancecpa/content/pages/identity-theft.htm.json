@@ -1,0 +1,127 @@
+{
+ "url": "https://www.reliancecpa.com/identity-theft.htm",
+ "slug": "identity-theft.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/identity-theft.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif",
+   "alt": "CPA in Tampa - ID Theft",
+   "alt_missing": false,
+   "title": "CPA in Tampa - ID Theft",
+   "width": "300",
+   "height": "174",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Federal Trade Commission (FTC) estimates that as many as 9 million Americans will have their identities stolen each year. ID thieves use your personal information, such as a social security number or date of birth, to steal your money, obtain credit in your name, or commit other crimes.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you learn how to guard against identity theft in order to maintain your financial health. It’s better to plan now than to spend hundreds of hours later repairing the damage wrought by an identity thief.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Identity theft can happen anywhere, whether you’re on the Internet or you’re waiting in line at the movie theater. If you’re online, computer hackers from all over the world are always on the lookout for information in unsecure files. Out in public, a pickpocket who steals your wallet not only takes your cash; having your driver’s license and credit cards in hand makes it easy to commit fraud.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Here are a few methods the FTC suggests to help deter identity theft:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Store your personal information in a secure place.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Only share your social security number when absolutely necessary, and only with people you trust.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use a shredder on documents containing your personal information before you throw them away.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maintain an up-to-date spyware program and Internet security software.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "For websites that require a password, don’t use an obvious phrase such as your mother’s maiden name or the last four digits of your social security number.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Contact your CPA in Tampa at Reliance Consulting to learn more about how to protect yourself from identity theft.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 279
+}

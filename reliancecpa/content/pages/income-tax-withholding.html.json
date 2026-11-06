@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/income-tax-withholding.html",
+ "slug": "income-tax-withholding.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Determining Tax Withholding | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/income-tax-withholding.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains What Determines Income Tax Withholding",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains What Determines Income Tax Withholding",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/income-tax-withholding.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many employees fill out their W4 forms when they start a new job and only think about the information included on the form until it’s time to file a federal or state income tax return. Ignoring the amount of money withheld from paychecks for tax purposes is not a good idea, though. This is especially true for people who experience life’s milestones, such as getting married or having children.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine whether you are having too much – or too little – money withheld for income taxes. In most cases, if there is a difference between what is being withheld and what should be withheld, the amount is negligible. However, if you’ve changed your marital status or increased the number of dependents you plan to claim, reviewing the information on your W4 may reveal that you are eligible to have significantly less money withheld from your paycheck.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The major factors that determine how much money should be withheld for taxes include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The amount of gross salary earned",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marital status",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Allowances (children, etc.)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Any additional amount the taxpayer wishes to be withheld",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Although the Internal Revenue Service provides a withholding calculator on its website, you may find that you’re more comfortable talking to a trained accountant from Reliance. In addition to helping you determine how much of your paycheck should be withheld for tax purposes, we will provide a thorough, free financial health checkup. [Contact](http://www.reliancecpa.com/contact.html) us today to get started.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 257
+}

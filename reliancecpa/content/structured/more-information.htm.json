@@ -1,0 +1,1622 @@
+{
+ "url": "https://www.reliancecpa.com/more-information.htm",
+ "slug": "more-information.htm",
+ "template": "resource-media",
+ "family": "S1-link-hub",
+ "title": "More Information from Your Tampa CPA & Accountant at Reliance Consulting, LLC",
+ "seo": {
+  "title_tag": "More Information from Your Tampa CPA & Accountant at Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/more-information.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "More Information from Your Tampa CPA & Accountant at Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "10 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "More Information from Your Tampa CPA & Accountant at Reliance Consulting, LLC"
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Taxes",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "**Tax Planning/Preparation**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "What is the IRS Taxpayer Advocate Service?",
+      "href": "http://www.reliancecpa.com/taxpayer-advocate-service"
+     },
+     {
+      "text": "Should you itemize on your tax return?",
+      "href": "http://www.reliancecpa.com/itemization-tax-return"
+     },
+     {
+      "text": "What returning college students need to know",
+      "href": "http://www.reliancecpa.com/college-tax-concerns"
+     },
+     {
+      "text": "Know the tax benefits for college",
+      "href": "http://www.reliancecpa.com/college-tax-benefits"
+     },
+     {
+      "text": "Year-round tax planning is vital",
+      "href": "http://www.reliancecpa.com/tax-planning-year-round"
+     },
+     {
+      "text": "Beware of these tax scams",
+      "href": "http://www.reliancecpa.com/tax-scams.html"
+     },
+     {
+      "text": "Raising emergency cash to pay taxes",
+      "href": "http://www.reliancecpa.com/emergency-cash.html"
+     },
+     {
+      "text": "Choosing an income tax preparer",
+      "href": "http://www.reliancecpa.com/income-tax-preparer.html"
+     },
+     {
+      "text": "Know your rights as a taxpayer",
+      "href": "http://www.reliancecpa.com/taxpayer-rights.html"
+     },
+     {
+      "text": "Who is required to file a return?",
+      "href": "http://www.reliancecpa.com/who-must-file.html"
+     },
+     {
+      "text": "Tax credit rules for charitable contributions",
+      "href": "http://www.reliancecpa.com/charitable-contributions.html"
+     },
+     {
+      "text": "Understanding depreciation as a tax deduction",
+      "href": "http://www.reliancecpa.com/depreciation.html"
+     },
+     {
+      "text": "IRS problems that may require the help of a Tampa CPA",
+      "href": "http://www.reliancecpa.com/irs-problems.htm"
+     },
+     {
+      "text": "Filing a late income tax return?",
+      "href": "http://www.reliancecpa.com/late-income-tax-return.htm"
+     },
+     {
+      "text": "Tax saving strategies",
+      "href": "http://www.reliancecpa.com/tax-saving-strategies.htm"
+     },
+     {
+      "text": "Why is April 15 Tax Day?",
+      "href": "http://www.reliancecpa.com/april-15-tax-day.html"
+     },
+     {
+      "text": "Beware of tax-related email scams",
+      "href": "http://www.reliancecpa.com/irs-email-scams.html"
+     },
+     {
+      "text": "Who should file quarterly taxes?",
+      "href": "http://www.reliancecpa.com/filing-quarterly-taxes"
+     },
+     {
+      "text": "Help with back taxes",
+      "href": "http://www.reliancecpa.com/tampa-cpa-back-taxes"
+     },
+     {
+      "text": "Audit reconsideration",
+      "href": "http://www.reliancecpa.com/audit-reconsideration"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Personal Taxes**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "When to take the standard deduction",
+      "href": "http://www.reliancecpa.com/standard-deduction-tax-return"
+     },
+     {
+      "text": "Charitable donations",
+      "href": "http://www.reliancecpa.com/charitable-donations-personal-taxes"
+     },
+     {
+      "text": "How owning a home affects your taxes",
+      "href": "http://www.reliancecpa.com/tax-benefits-home-ownership"
+     },
+     {
+      "text": "If you find a tax return error",
+      "href": "http://www.reliancecpa.com/tax-return-error"
+     },
+     {
+      "text": "Passive income explained",
+      "href": "http://www.reliancecpa.com/passive-income"
+     },
+     {
+      "text": "Related party transactions",
+      "href": "http://www.reliancecpa.com/related-party-transactions"
+     },
+     {
+      "text": "Tax return forms",
+      "href": "http://www.reliancecpa.com/tax-forms"
+     },
+     {
+      "text": "Tax records to keep",
+      "href": "http://www.reliancecpa.com/tax-records-to-keep"
+     },
+     {
+      "text": "Effective tax rate",
+      "href": "http://www.reliancecpa.com/effective-tax-rate"
+     },
+     {
+      "text": "Benefits of filing jointly when married",
+      "href": "http://www.reliancecpa.com/married-filing-jointly.html"
+     },
+     {
+      "text": "How much income tax withholding should I designate?",
+      "href": "http://www.reliancecpa.com/income-tax-withholding.html"
+     },
+     {
+      "text": "How likely am I to be audited?",
+      "href": "http://www.reliancecpa.com/audit.html"
+     },
+     {
+      "text": "How important life events affect tax status",
+      "href": "http://www.reliancecpa.com/life-events.html"
+     },
+     {
+      "text": "Office of Taxpayer Burden Reduction",
+      "href": "http://www.reliancecpa.com/taxpayer-burden.html"
+     },
+     {
+      "text": "Filing for a personal tax extension",
+      "href": "http://www.reliancecpa.com/personal-tax-extension.html"
+     },
+     {
+      "text": "What is earned income tax credit?",
+      "href": "http://www.reliancecpa.com/earned-income-credit.html"
+     },
+     {
+      "text": "Limitations for child dependent credit",
+      "href": "http://www.reliancecpa.com/child-dependents.html"
+     },
+     {
+      "text": "What does “voluntary” income tax really mean?",
+      "href": "http://www.reliancecpa.com/voluntary-tax.html"
+     },
+     {
+      "text": "Rules for child and dependent care tax credit",
+      "href": "http://www.reliancecpa.com/child-care-credit.html"
+     },
+     {
+      "text": "What is adjusted gross income?",
+      "href": "http://www.reliancecpa.com/adjusted-gross-income.html"
+     },
+     {
+      "text": "What is taxable income?",
+      "href": "http://www.reliancecpa.com/taxable-income.html"
+     },
+     {
+      "text": "What tax form should I file?",
+      "href": "http://www.reliancecpa.com/tax-form.html"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Business Taxes**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Going green to save on taxes",
+      "href": "http://www.reliancecpa.com/green-companies-taxes"
+     },
+     {
+      "text": "What business expenses are deductible?",
+      "href": "http://www.reliancecpa.com/business-expenses-tax-deductible"
+     },
+     {
+      "text": "Tax breaks for loss, disaster, casualty",
+      "href": "http://www.reliancecpa.com/losses-tax-deductions"
+     },
+     {
+      "text": "Home office tax deductions",
+      "href": "http://www.reliancecpa.com/tax-benefits-home-office"
+     },
+     {
+      "text": "Charitable donations and corporate taxes",
+      "href": "http://www.reliancecpa.com/charitable-donations-business-taxes"
+     },
+     {
+      "text": "Self-employment tax explained",
+      "href": "http://www.reliancecpa.com/self-employment-tax-questions"
+     },
+     {
+      "text": "What makes an organization tax exempt?",
+      "href": "http://www.reliancecpa.com/tax-exempt-status"
+     },
+     {
+      "text": "Indirect Taxes",
+      "href": "http://www.reliancecpa.com/indirect-taxes"
+     },
+     {
+      "text": "Uncertain tax positions",
+      "href": "http://www.reliancecpa.com/uncertain-tax-positions"
+     },
+     {
+      "text": "Transaction taxes",
+      "href": "http://www.reliancecpa.com/transaction-taxes"
+     },
+     {
+      "text": "Deferred valuation tax allowance",
+      "href": "http://www.reliancecpa.com/tax-valuation-allowance"
+     },
+     {
+      "text": "Tax compliance",
+      "href": "http://www.reliancecpa.com/tax-compliance"
+     },
+     {
+      "text": "Health care tax credit",
+      "href": "http://www.reliancecpa.com/health-care-tax-credit"
+     },
+     {
+      "text": "Tax-exempt organizations",
+      "href": "http://www.reliancecpa.com/tax-exempt-organizations"
+     },
+     {
+      "text": "Deducting business expenses",
+      "href": "http://www.reliancecpa.com/business-expenses"
+     },
+     {
+      "text": "Federal taxes",
+      "href": "http://www.reliancecpa.com/federal-taxes"
+     },
+     {
+      "text": "Tax advantages for hiring",
+      "href": "http://www.reliancecpa.com/tax-advantages"
+     },
+     {
+      "text": "How changing business structure affects taxes",
+      "href": "http://www.reliancecpa.com/changing-business-structure.html"
+     },
+     {
+      "text": "Estimated tax for small business",
+      "href": "http://www.reliancecpa.com/estimated-tax.html"
+     },
+     {
+      "text": "Filing for a business tax extension",
+      "href": "http://www.reliancecpa.com/business-tax-extension.html"
+     },
+     {
+      "text": "What are the tax rules for barter exchanges?",
+      "href": "http://www.reliancecpa.com/barter-exchanges.html"
+     },
+     {
+      "text": "Reasons for and benefits of divestiture",
+      "href": "http://www.reliancecpa.com/corporate-divestiture.html"
+     },
+     {
+      "text": "Capital gains and losses explained",
+      "href": "http://www.reliancecpa.com/capital-gains.html"
+     },
+     {
+      "text": "Deducting property depreciation",
+      "href": "http://www.reliancecpa.com/property-depreciation.html"
+     },
+     {
+      "text": "How often should I file self-employment taxes and how much should I pay?",
+      "href": "http://www.reliancecpa.com/self-employment-tax.html"
+     },
+     {
+      "text": "Must my small business in Florida pay unemployment tax?",
+      "href": "http://www.reliancecpa.com/unemployment-tax.html"
+     },
+     {
+      "text": "How to navigate Florida’s sales tax laws",
+      "href": "http://www.reliancecpa.com//sales-tax-law.htm"
+     },
+     {
+      "text": "Unpaid or delinquent payroll taxes",
+      "href": "http://www.reliancecpa.com/unpaid-payroll-taxes"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Personal Finance",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "**Budgeting**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "What a 529 savings plan covers",
+      "href": "http://www.reliancecpa.com/529-savings-plan-covers"
+     },
+     {
+      "text": "How a CPA can help you define goals",
+      "href": "http://www.reliancecpa.com/personal-financial-goals"
+     },
+     {
+      "text": "Understanding the federal gift tax",
+      "href": "http://www.reliancecpa.com/federal-gift-tax"
+     },
+     {
+      "text": "Discipline required",
+      "href": "http://www.reliancecpa.com/personal-budget"
+     },
+     {
+      "text": "Finding the discipline",
+      "href": "http://www.reliancecpa.com/budget-discipline"
+     },
+     {
+      "text": "Hidden costs of college",
+      "href": "http://www.reliancecpa.com/hidden-college-costs"
+     },
+     {
+      "text": "Budgeting for that dream vacation",
+      "href": "http://www.reliancecpa.com/vacation-budgeting.html"
+     },
+     {
+      "text": "Can I pay off my student loan sooner?",
+      "href": "http://www.reliancecpa.com/early-payoff-student-loans.html"
+     },
+     {
+      "text": "Cutting costs at home",
+      "href": "http://www.reliancecpa.com/cutting-costs-home.html"
+     },
+     {
+      "text": "Is that ‘great’ credit card offer worth it?",
+      "href": "http://www.reliancecpa.com/credit-card-offer.html"
+     },
+     {
+      "text": "Calculating net worth",
+      "href": "http://www.reliancecpa.com/net-worth.html"
+     },
+     {
+      "text": "Items to include on your personal monthly budget",
+      "href": "http://www.reliancecpa.com/personal-budget.html"
+     },
+     {
+      "text": "Making a plan for paying student loans",
+      "href": "http://www.reliancecpa.com/student-loans.html"
+     },
+     {
+      "text": "What factors should I consider before making a big purchase?",
+      "href": "http://www.reliancecpa.com/big-purchase.html"
+     },
+     {
+      "text": "How much money should I save each month?",
+      "href": "http://www.reliancecpa.com/savings-plan.html"
+     },
+     {
+      "text": "The advantages and disadvantages of leasing a car",
+      "href": "http://www.reliancecpa.com/leasing-car.html"
+     },
+     {
+      "text": "The advantages and disadvantages of buying a car",
+      "href": "http://www.reliancecpa.com/buying-car.html"
+     },
+     {
+      "text": "What is a 529 savings plan?",
+      "href": "http://www.reliancecpa.com/college-savings.html"
+     },
+     {
+      "text": "When should I enroll my child in Florida’s prepaid college tuition program?",
+      "href": "http://www.reliancecpa.com/florida-prepaid.html"
+     },
+     {
+      "text": "How to stay on budget",
+      "href": "http://www.reliancecpa.com//staying-on-budget.htm"
+     },
+     {
+      "text": "What a CPA in Tampa can do for you",
+      "href": "http://www.reliancecpa.com/what-is-a-cpa.htm"
+     },
+     {
+      "text": "Free checkup of your financial health",
+      "href": "http://www.reliancecpa.com/checkup-financial-health.htm"
+     },
+     {
+      "text": "Reasons to choose Reliance Consulting as your CPA in Tampa",
+      "href": "http://www.reliancecpa.com/reasons-to-choose-reliance.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Financial Planning**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Are credit card rewards programs worth it?",
+      "href": "http://www.reliancecpa.com/credit-card-rewards"
+     },
+     {
+      "text": "Hidden costs of bankruptcy",
+      "href": "http://www.reliancecpa.com/costs-of-consumer-bankruptcy"
+     },
+     {
+      "text": "Good debt versus bad debt",
+      "href": "http://www.reliancecpa.com/debt.html"
+     },
+     {
+      "text": "The Five C’s of credit",
+      "href": "http://www.reliancecpa.com/five-cs-of-credit.html"
+     },
+     {
+      "text": "Defining and reaching your personal financial goals",
+      "href": "http://www.reliancecpa.com/personal-financial-goals.html"
+     },
+     {
+      "text": "Protecting personal assets from lawsuits",
+      "href": "http://www.reliancecpa.com/personal-assets.html"
+     },
+     {
+      "text": "What is a mutual fund?",
+      "href": "http://www.reliancecpa.com/mutual-fund.html"
+     },
+     {
+      "text": "How does a money market account work?",
+      "href": "http://www.reliancecpa.com/money-market.html"
+     },
+     {
+      "text": "How do I know my current investment plan is right for me?",
+      "href": "http://www.reliancecpa.com/investment-plan.html"
+     },
+     {
+      "text": "What to do when your financial situation changes for the better",
+      "href": "http://www.reliancecpa.com/improved-financial-situation.html"
+     },
+     {
+      "text": "What to do when your financial situation changes for the worse",
+      "href": "http://www.reliancecpa.com/financial-advice.html"
+     },
+     {
+      "text": "How credit scores work and why they’re important",
+      "href": "http://www.reliancecpa.com//credit-scores.html"
+     },
+     {
+      "text": "What are credit unions and how do they work?",
+      "href": "http://www.reliancecpa.com/credit-unions.html"
+     },
+     {
+      "text": "Why do we need bank accounts?",
+      "href": "http://www.reliancecpa.com//bank-accounts.html"
+     },
+     {
+      "text": "How to avoid identity theft",
+      "href": "http://www.reliancecpa.com//identity-theft.htm"
+     },
+     {
+      "text": "What records to bring for the first meeting with your CPA in Tampa",
+      "href": "http://www.reliancecpa.com/records-for-cpa-meeting.htm"
+     },
+     {
+      "text": "How to choose the right CPA in Tampa, FL",
+      "href": "http://www.reliancecpa.com/how-to-choose-cpa.htm"
+     },
+     {
+      "text": "Are you getting good financial advice?",
+      "href": "http://www.reliancecpa.com/getting-good-financial-advice.htm"
+     },
+     {
+      "text": "What personal records you should keep",
+      "href": "http://www.reliancecpa.com/personal-record-retention.htm"
+     },
+     {
+      "text": "Financially preparing for marriage",
+      "href": "http://www.reliancecpa.com/financially-preparing-marriage.htm"
+     },
+     {
+      "text": "Financially preparing for a divorce",
+      "href": "http://www.reliancecpa.com/financially-preparing-divorce.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Retirement/Estate Planning**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "How will early withdrawal from IRA affect taxes?",
+      "href": "http://www.reliancecpa.com/withdrawal-from-ira"
+     },
+     {
+      "text": "Planning for ongoing medical expenses",
+      "href": "http://www.reliancecpa.com/ongoing-medical-expenses"
+     },
+     {
+      "text": "Why you should think about long-term care now",
+      "href": "http://www.reliancecpa.com/long-term-care"
+     },
+     {
+      "text": "Reverse mortgages for seniors",
+      "href": "http://www.reliancecpa.com/reverse-mortgage"
+     },
+     {
+      "text": "Revocable trust defined",
+      "href": "http://www.reliancecpa.com/revocable-trust"
+     },
+     {
+      "text": "Self-directed IRA",
+      "href": "http://www.reliancecpa.com/self-directed-ira"
+     },
+     {
+      "text": "Start a business, start a second career",
+      "href": "http://www.reliancecpa.com/second-career"
+     },
+     {
+      "text": "Is a Keogh plan still viable?",
+      "href": "http://www.reliancecpa.com/keogh-plan"
+     },
+     {
+      "text": "Choosing an executor",
+      "href": "http://www.reliancecpa.com/estate-executor"
+     },
+     {
+      "text": "Receiving a substantial inheritance",
+      "href": "http://www.reliancecpa.com/inherit-money-or-property"
+     },
+     {
+      "text": "Are you ready to retire?",
+      "href": "http://www.reliancecpa.com/retirement-readiness"
+     },
+     {
+      "text": "How to avoid probate",
+      "href": "http://www.reliancecpa.com/avoid-probate.html"
+     },
+     {
+      "text": "Never too late for retirement planning",
+      "href": "http://www.reliancecpa.com/late-retirement-planning.html"
+     },
+     {
+      "text": "Achieving early retirement",
+      "href": "http://www.reliancecpa.com/early-retirement.html"
+     },
+     {
+      "text": "Understanding estate tax",
+      "href": "http://www.reliancecpa.com/understanding-estate-tax.html"
+     },
+     {
+      "text": "Definition of a charitable trust",
+      "href": "http://www.reliancecpa.com/charitable-trust.html"
+     },
+     {
+      "text": "How much will you need in retirement?",
+      "href": "http://www.reliancecpa.com/retirement-planning-money.html"
+     },
+     {
+      "text": "Paying taxes in retirement",
+      "href": "http://www.reliancecpa.com/retirement-taxes.html"
+     },
+     {
+      "text": "Revocable vs. irrevocable trusts",
+      "href": "http://www.reliancecpa.com/revocable-trusts.html"
+     },
+     {
+      "text": "What’s the difference between a Roth IRA and a Traditional IRA?",
+      "href": "http://www.reliancecpa.com/roth-traditional-ira.html"
+     },
+     {
+      "text": "What is a 401 (k) plan and how does it work?",
+      "href": "http://www.reliancecpa.com//401k-plans.html"
+     },
+     {
+      "text": "Do you need to think about long-term care?",
+      "href": "http://www.reliancecpa.com//long-term-care.htm"
+     },
+     {
+      "text": "What is power of attorney?",
+      "href": "http://www.reliancecpa.com//power-of-attorney.htm"
+     },
+     {
+      "text": "What is a living will?",
+      "href": "http://www.reliancecpa.com//living-will.htm"
+     },
+     {
+      "text": "What is a trust?",
+      "href": "http://www.reliancecpa.com//what-is-a-trust.htm"
+     },
+     {
+      "text": "The importance of a will",
+      "href": "http://www.reliancecpa.com/importance-of-a-will.htm"
+     },
+     {
+      "text": "Why you need life insurance",
+      "href": "http://www.reliancecpa.com/why-you-need-life-insurance.htm"
+     },
+     {
+      "text": "How to get started with estate planning",
+      "href": "http://www.reliancecpa.com/get-started-estate-planning.htm"
+     },
+     {
+      "text": "The importance of a post-mortem letter",
+      "href": "http://www.reliancecpa.com/post-mortem-letter.htm"
+     },
+     {
+      "text": "How your expenses might differ in retirement",
+      "href": "http://www.reliancecpa.com/retirement-expenses.htm"
+     },
+     {
+      "text": "Elder financial care",
+      "href": "http://www.reliancecpa.com/elder-financial-care.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Real Estate**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Know the tax rules for selling your home",
+      "href": "http://www.reliancecpa.com/tax-rules-home-sale"
+     },
+     {
+      "text": "Can I sell with an underwater mortgage?",
+      "href": "http://www.reliancecpa.com/underwater-mortgage"
+     },
+     {
+      "text": "What is a contract for deed?",
+      "href": "http://www.reliancecpa.com/contract-for-deed"
+     },
+     {
+      "text": "What not to do before a big purchase",
+      "href": "http://www.reliancecpa.com/before-big-purchase"
+     },
+     {
+      "text": "Reasons to delay purchasing a home",
+      "href": "http://www.reliancecpa.com/rent-vs-buy"
+     },
+     {
+      "text": "How a CPA can help with a mortgage refinance",
+      "href": "http://www.reliancecpa.com/mortgage-refinance"
+     },
+     {
+      "text": "REIT as retirement plan?",
+      "href": "http://www.reliancecpa.com/reit-retirement"
+     },
+     {
+      "text": "Real property vs. personal property",
+      "href": "http://www.reliancecpa.com/real-property"
+     },
+     {
+      "text": "Do home improvements make financial sense?",
+      "href": "http://www.reliancecpa.com/home-improvements"
+     },
+     {
+      "text": "The ramifications of refinancing a mortgage",
+      "href": "http://www.reliancecpa.com/refinance.html"
+     },
+     {
+      "text": "Benefits of a bi-weekly mortgage",
+      "href": "http://www.reliancecpa.com/bi-weekly-mortgage.html"
+     },
+     {
+      "text": "What to ask before refinancing a mortgage",
+      "href": "http://www.reliancecpa.com/refinancing-home-mortgage.html"
+     },
+     {
+      "text": "What to ask before buying a home",
+      "href": "http://www.reliancecpa.com/buying-home.html"
+     },
+     {
+      "text": "What is an upside-down mortgage?",
+      "href": "http://www.reliancecpa.com/upside-down-mortgage.html"
+     },
+     {
+      "text": "Is it better to rent my home or buy it?",
+      "href": "http://www.reliancecpa.com/rent-or-buy-home.html"
+     },
+     {
+      "text": "What is a reverse mortgage?",
+      "href": "http://www.reliancecpa.com//reverse-mortgage.htm"
+     },
+     {
+      "text": "Understanding Florida’s homestead exemption",
+      "href": "http://www.reliancecpa.com/homestead-exemption.html"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Insurance**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Getting a fair insurance settlement",
+      "href": "http://www.reliancecpa.com/insurance-settlement"
+     },
+     {
+      "text": "Saving money on insurance",
+      "href": "http://www.reliancecpa.com/insurance-costs"
+     },
+     {
+      "text": "Finding a reliable insurance company",
+      "href": "http://www.reliancecpa.com/reliable-insurance"
+     },
+     {
+      "text": "Factors for buying life insurance",
+      "href": "http://www.reliancecpa.com/buying-life-insurance.html"
+     },
+     {
+      "text": "The value of risk management",
+      "href": "http://www.reliancecpa.com/risk-management.html"
+     },
+     {
+      "text": "What type of insurance do I need for my small business?",
+      "href": "http://www.reliancecpa.com/small-business-insurance.html"
+     },
+     {
+      "text": "Do I need flood insurance for my inland Florida home?",
+      "href": "http://www.reliancecpa.com/flood-insurance.html"
+     },
+     {
+      "text": "Why is title insurance important?",
+      "href": "http://www.reliancecpa.com/title-insurance.html"
+     },
+     {
+      "text": "Life insurance needs analysis",
+      "href": "http://www.reliancecpa.com/life-insurance-needs-analysis.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "headed-section",
+   "slots": {
+    "title": "Business Consulting",
+    "level": 3,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "**Business Accounting**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "How are bookkeeping and accounting different?",
+      "href": "http://www.reliancecpa.com/bookkeeping-accounting"
+     },
+     {
+      "text": "Cash-basis accounting versus accrual accounting",
+      "href": "http://www.reliancecpa.com/accrual-accounting"
+     },
+     {
+      "text": "Save money on business travel",
+      "href": "http://www.reliancecpa.com/business-travel"
+     },
+     {
+      "text": "Demand up, capital down",
+      "href": "http://www.reliancecpa.com/demand-up-capital-down"
+     },
+     {
+      "text": "Importance of petty cash",
+      "href": "http://www.reliancecpa.com/petty-cash"
+     },
+     {
+      "text": "Fungibility vs. liquidity",
+      "href": "http://www.reliancecpa.com/fungibility-liquidity"
+     },
+     {
+      "text": "What is equilibrium price?",
+      "href": "http://www.reliancecpa.com/equilibrium-price"
+     },
+     {
+      "text": "The bottom line defined",
+      "href": "http://www.reliancecpa.com/bottom-line"
+     },
+     {
+      "text": "Cutting costs at the office",
+      "href": "http://www.reliancecpa.com/cutting-costs-office.html"
+     },
+     {
+      "text": "The importance of a small business accountant",
+      "href": "http://www.reliancecpa.com/small-business-accountant.html"
+     },
+     {
+      "text": "Definition of a small business",
+      "href": "http://www.reliancecpa.com/small-business-defined.html"
+     },
+     {
+      "text": "Definition of current assets",
+      "href": "http://www.reliancecpa.com/current-assets.html"
+     },
+     {
+      "text": "Definition of intangible assets",
+      "href": "http://www.reliancecpa.com/intangible-assets.html"
+     },
+     {
+      "text": "Definition of liabilities",
+      "href": "http://www.reliancecpa.com/liabilities.html"
+     },
+     {
+      "text": "Managing non-cash transactions",
+      "href": "http://www.reliancecpa.com/non-cash-transactions.html"
+     },
+     {
+      "text": "Saving energy (and money) at your small business",
+      "href": "http://www.reliancecpa.com/saving-energy.html"
+     },
+     {
+      "text": "Liquidating small business assets",
+      "href": "http://www.reliancecpa.com/liquidating-assets.html"
+     },
+     {
+      "text": "Accounting tasks and processes",
+      "href": "http://www.reliancecpa.com/processes.html"
+     },
+     {
+      "text": "Recording business transactions",
+      "href": "http://www.reliancecpa.com/recording-transactions.html"
+     },
+     {
+      "text": "Reasons for a cost segregation study",
+      "href": "http://www.reliancecpa.com/cost-segregation.html"
+     },
+     {
+      "text": "Why is a general ledger important?",
+      "href": "http://www.reliancecpa.com/general-ledger.html"
+     },
+     {
+      "text": "Electronic discovery for small business",
+      "href": "http://www.reliancecpa.com/electronic-discovery.html"
+     },
+     {
+      "text": "What is a source document and why is it important in business?",
+      "href": "http://www.reliancecpa.com/source-document.html"
+     },
+     {
+      "text": "How can my small business benefit from an internal audit?",
+      "href": "http://www.reliancecpa.com/internal-audit.html"
+     },
+     {
+      "text": "How can I manage cash flow in my small business?",
+      "href": "http://www.reliancecpa.com/cash-flow.html"
+     },
+     {
+      "text": "How can I ensure my small business information is secure?",
+      "href": "http://www.reliancecpa.com/information-security.html"
+     },
+     {
+      "text": "What determines fair value?",
+      "href": "http://www.reliancecpa.com/fair-value.html"
+     },
+     {
+      "text": "Reasons to keep financial records",
+      "href": "http://www.reliancecpa.com/keep-financial-records.htm"
+     },
+     {
+      "text": "What business records you should keep",
+      "href": "http://www.reliancecpa.com/business-record-retention.htm"
+     },
+     {
+      "text": "Does your business need an internal controls assessment?",
+      "href": "http://www.reliancecpa.com/internal-controls-evaluation.htm"
+     },
+     {
+      "text": "How payroll processing by a CPA in Tampa can help your small business",
+      "href": "http://www.reliancecpa.com/how-payroll-processing-helps.htm"
+     },
+     {
+      "text": "Hiring an accountant as your part-time CFO",
+      "href": "http://www.reliancecpa.com/part-time-cfo.htm"
+     },
+     {
+      "text": "Asking your accountant in Tampa to do an audit",
+      "href": "http://www.reliancecpa.com/audit-help.htm"
+     },
+     {
+      "text": "Business valuation by a Tampa accountant",
+      "href": "http://www.reliancecpa.com/business-valuation.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Laws/Regulations**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Landing a government contract",
+      "href": "http://www.reliancecpa.com/government-contracts"
+     },
+     {
+      "text": "Mergers and acquisitions",
+      "href": "http://www.reliancecpa.com/mergers"
+     },
+     {
+      "text": "Know your ad and labeling laws",
+      "href": "http://www.reliancecpa.com/ad-laws"
+     },
+     {
+      "text": "How the IRS defines frivolous arguments",
+      "href": "http://www.reliancecpa.com/irs-frivolous-arguments"
+     },
+     {
+      "text": "The role of the Federal Reserve",
+      "href": "http://www.reliancecpa.com/federal-reserve"
+     },
+     {
+      "text": "Government definition of small business",
+      "href": "http://www.reliancecpa.com/small-business-defined"
+     },
+     {
+      "text": "The role of the SEC",
+      "href": "http://www.reliancecpa.com/sec-role"
+     },
+     {
+      "text": "Costs of an IPO",
+      "href": "http://www.reliancecpa.com/ipo-costs"
+     },
+     {
+      "text": "Value added tax explained",
+      "href": "http://www.reliancecpa.com/value-added-tax.html"
+     },
+     {
+      "text": "How a GSA schedule helps your business",
+      "href": "http://www.reliancecpa.com/gsa-schedules.html"
+     },
+     {
+      "text": "Business insurance tips",
+      "href": "http://www.reliancecpa.com/business-insurance-tips.html"
+     },
+     {
+      "text": "How antitrust law applies to small businesses",
+      "href": "http://www.reliancecpa.com/antitrust-law.html"
+     },
+     {
+      "text": "How can I make sure no one copies my ideas for small business?",
+      "href": "http://www.reliancecpa.com/intellectual-property.html"
+     },
+     {
+      "text": "When you’re ready to incorporate",
+      "href": "http://www.reliancecpa.com/ready-to-incorporate.html"
+     },
+     {
+      "text": "Benefits of running a green business",
+      "href": "http://www.reliancecpa.com/running-green-business.html"
+     },
+     {
+      "text": "Taxes Florida businesses must pay",
+      "href": "http://www.reliancecpa.com/florida-taxes.html"
+     },
+     {
+      "text": "Does my small business need a formal organizational structure?",
+      "href": "http://www.reliancecpa.com/organizational-structure.html"
+     },
+     {
+      "text": "Green businesses in Florida",
+      "href": "http://www.reliancecpa.com//green-business.htm"
+     },
+     {
+      "text": "Why your business needs an Employer ID Number (EIN)",
+      "href": "http://www.reliancecpa.com/employer-identification-number.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Employees**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Workplace monotony in small business",
+      "href": "http://www.reliancecpa.com/workplace-monotony"
+     },
+     {
+      "text": "Finding the right employees",
+      "href": "http://www.reliancecpa.com/finding-employees"
+     },
+     {
+      "text": "Employee benefits affect retention",
+      "href": "http://www.reliancecpa.com/employee-benefits"
+     },
+     {
+      "text": "Key performance indicators",
+      "href": "http://www.reliancecpa.com/key-performance-indicators"
+     },
+     {
+      "text": "Flexible hours in small business",
+      "href": "http://www.reliancecpa.com/flexible-hours"
+     },
+     {
+      "text": "Delegating human resources",
+      "href": "http://www.reliancecpa.com/human-resources-delegation"
+     },
+     {
+      "text": "Boost morale on a budget",
+      "href": "http://www.reliancecpa.com/boost-employee-morale"
+     },
+     {
+      "text": "Demonstrate trust in the workplace",
+      "href": "http://www.reliancecpa.com/demonstrating-trust"
+     },
+     {
+      "text": "Do tax cuts incentivize hiring?",
+      "href": "http://www.reliancecpa.com/hiring-incentives"
+     },
+     {
+      "text": "Legalities of downsizing",
+      "href": "http://www.reliancecpa.com/downsizing.html"
+     },
+     {
+      "text": "Understanding wage & hour laws",
+      "href": "http://www.reliancecpa.com/wage-and-hour-laws.html"
+     },
+     {
+      "text": "Benefits of delegating tasks",
+      "href": "http://www.reliancecpa.com/delegating-tasks.html"
+     },
+     {
+      "text": "Employer responsibilities for new hires",
+      "href": "http://www.reliancecpa.com/employer-responsibilities.html"
+     },
+     {
+      "text": "How long should I keep employee tax records?",
+      "href": "http://www.reliancecpa.com/employee-tax-records.html"
+     },
+     {
+      "text": "Screening and interviewing potential employees",
+      "href": "http://www.reliancecpa.com/potential-employees.html"
+     },
+     {
+      "text": "Performance management for small business",
+      "href": "http://www.reliancecpa.com/performance-management.html"
+     },
+     {
+      "text": "The pros and cons of hiring temporary employees",
+      "href": "http://www.reliancecpa.com/temporary-employees.html"
+     },
+     {
+      "text": "Why motivating employees is important and how to do it",
+      "href": "http://www.reliancecpa.com//motivating-employees.html"
+     },
+     {
+      "text": "Help with hiring employees",
+      "href": "http://www.reliancecpa.com/hiring-employees.htm"
+     },
+     {
+      "text": "The benefits of hiring family",
+      "href": "http://www.reliancecpa.com/hiring-family-members.htm"
+     },
+     {
+      "text": "Hiring an employee vs. an independent contractor",
+      "href": "http://www.reliancecpa.com/employee-vs-independent-contractor.htm"
+     },
+     {
+      "text": "Possible tax issues when hiring household employees",
+      "href": "http://www.reliancecpa.com/household-employee-tax.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**Strategic Planning**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Do you need a brick-and-mortar presence?",
+      "href": "http://www.reliancecpa.com/brick-and-mortar-business"
+     },
+     {
+      "text": "What to watch out for in a business lease",
+      "href": "http://www.reliancecpa.com/business-lease"
+     },
+     {
+      "text": "Managing your time wisely",
+      "href": "http://www.reliancecpa.com/time-management-business-owner"
+     },
+     {
+      "text": "Shaping a small business brand",
+      "href": "http://www.reliancecpa.com/small-business-brand"
+     },
+     {
+      "text": "Is Internet advertising enough for success?",
+      "href": "http://www.reliancecpa.com/internet-advertising"
+     },
+     {
+      "text": "Buying into a franchise or building a brand?",
+      "href": "http://www.reliancecpa.com/franchise-or-brand"
+     },
+     {
+      "text": "Why network security is vital for small companies",
+      "href": "http://www.reliancecpa.com/network-security"
+     },
+     {
+      "text": "Pay per click for small business",
+      "href": "http://www.reliancecpa.com/pay-per-click"
+     },
+     {
+      "text": "Remarketing campaigns for small business",
+      "href": "http://www.reliancecpa.com/remarketing"
+     },
+     {
+      "text": "Does a small business need social media?",
+      "href": "http://www.reliancecpa.com/social-media-strategy"
+     },
+     {
+      "text": "Establish communication guidelines",
+      "href": "http://www.reliancecpa.com/communication-guidelines"
+     },
+     {
+      "text": "Are you eligible for SBA assistance?",
+      "href": "http://www.reliancecpa.com/sba-assistance"
+     },
+     {
+      "text": "What market indicators to watch",
+      "href": "http://www.reliancecpa.com/market-indicators"
+     },
+     {
+      "text": "Doing international business",
+      "href": "http://www.reliancecpa.com/international-business"
+     },
+     {
+      "text": "Learn from business mistakes",
+      "href": "http://www.reliancecpa.com/learn-from-mistakes"
+     },
+     {
+      "text": "Social media for small business",
+      "href": "http://www.reliancecpa.com/social-media-small-business"
+     },
+     {
+      "text": "Does your business need a blog?",
+      "href": "http://www.reliancecpa.com/business-blog"
+     },
+     {
+      "text": "Leveraged buyout",
+      "href": "http://www.reliancecpa.com/leveraged-buyout"
+     },
+     {
+      "text": "Monetary velocity",
+      "href": "http://www.reliancecpa.com/velocity"
+     },
+     {
+      "text": "Risk management internal controls",
+      "href": "http://www.reliancecpa.com/risk-management-controls"
+     },
+     {
+      "text": "Email marketing",
+      "href": "http://www.reliancecpa.com/email-marketing"
+     },
+     {
+      "text": "Online reputation management",
+      "href": "http://www.reliancecpa.com/online-reputation-management"
+     },
+     {
+      "text": "Small business networking",
+      "href": "http://www.reliancecpa.com/small-business-networking.html"
+     },
+     {
+      "text": "Traits shared by successful businesses",
+      "href": "http://www.reliancecpa.com/small-business-success.html"
+     },
+     {
+      "text": "Setting a marketing budget",
+      "href": "http://www.reliancecpa.com/marketing-budget.html"
+     },
+     {
+      "text": "Setting a sales strategy",
+      "href": "http://www.reliancecpa.com/sales-strategy.html"
+     },
+     {
+      "text": "Going global with a small business",
+      "href": "http://www.reliancecpa.com/global-business.html"
+     },
+     {
+      "text": "Where can I find advice about starting or running my small business?",
+      "href": "http://www.reliancecpa.com/business-advice.html"
+     },
+     {
+      "text": "Purchasing a business franchise",
+      "href": "http://www.reliancecpa.com/purchase-business-franchise.html"
+     },
+     {
+      "text": "What Is strategic business planning?",
+      "href": "http://www.reliancecpa.com/strategic-business-planning.htm"
+     },
+     {
+      "text": "Transferring business ownership",
+      "href": "http://www.reliancecpa.com/transfer-ownership.html"
+     },
+     {
+      "text": "Buying a business",
+      "href": "http://www.reliancecpa.com/buying-a-business.html"
+     },
+     {
+      "text": "Financing growth for a small business",
+      "href": "http://www.reliancecpa.com/financing-growth.html"
+     },
+     {
+      "text": "Debt restructuring for small business",
+      "href": "http://www.reliancecpa.com/debt-restructuring.html"
+     },
+     {
+      "text": "Characteristics of successful small businesses",
+      "href": "http://www.reliancecpa.com/successful-small-businesses.html"
+     },
+     {
+      "text": "Organic SEO vs. pay-per-click marketing",
+      "href": "http://www.reliancecpa.com/search-engine-marketing.html"
+     },
+     {
+      "text": "What causes a small business to fail?",
+      "href": "http://www.reliancecpa.com/small-business-failure.html"
+     },
+     {
+      "text": "Why is location important to a small business?",
+      "href": "http://www.reliancecpa.com/small-business-location.html"
+     },
+     {
+      "text": "Using e-commerce to grow a small business",
+      "href": "http://www.reliancecpa.com/small-business-ecommerce.html"
+     },
+     {
+      "text": "How a Tampa CPA can help a small business owner with time management",
+      "href": "http://www.reliancecpa.com/time-management.html"
+     },
+     {
+      "text": "Diversification for small business",
+      "href": "http://www.reliancecpa.com/diversification.html"
+     },
+     {
+      "text": "How can my small business become more efficient?",
+      "href": "http://www.reliancecpa.com/small-business-efficiency.html"
+     },
+     {
+      "text": "How do I know my small business is on track?",
+      "href": "http://www.reliancecpa.com/small-business-planning.html"
+     },
+     {
+      "text": "Why do I need an exit strategy for my new small business?",
+      "href": "http://www.reliancecpa.com/exit-strategy.html"
+     },
+     {
+      "text": "Can trade shows help your business?",
+      "href": "http://www.reliancecpa.com//trade-shows.html"
+     },
+     {
+      "text": "The importance of good customer service",
+      "href": "http://www.reliancecpa.com//customer-service.html"
+     },
+     {
+      "text": "The need for succession planning",
+      "href": "http://www.reliancecpa.com/succession-planning.htm"
+     },
+     {
+      "text": "Tampa Bay doctors face many financial decisions",
+      "href": "http://www.reliancecpa.com/doctor-decisions.htm"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "**New Business Planning**"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "links": [
+     {
+      "text": "Elements of a great business plan",
+      "href": "http://www.reliancecpa.com/great-business-plan"
+     },
+     {
+      "text": "Twitter for small business",
+      "href": "http://www.reliancecpa.com/twitter"
+     },
+     {
+      "text": "Social media mistakes",
+      "href": "http://www.reliancecpa.com/social-media-mistakes"
+     },
+     {
+      "text": "Best industries for home businesses",
+      "href": "http://www.reliancecpa.com/home-based-businesses"
+     },
+     {
+      "text": "Setting the ad budget",
+      "href": "http://www.reliancecpa.com/advertising-budget"
+     },
+     {
+      "text": "What makes a sound business plan?",
+      "href": "http://www.reliancecpa.com/business-plan"
+     },
+     {
+      "text": "How small business succeeds in Florida",
+      "href": "http://www.reliancecpa.com/florida-small-business"
+     },
+     {
+      "text": "Know the taxes a small business pays",
+      "href": "http://www.reliancecpa.com/small-business-tax"
+     },
+     {
+      "text": "Why a new business needs a breakeven analysis",
+      "href": "http://www.reliancecpa.com/breakeven-analysis"
+     },
+     {
+      "text": "Do I need a ‘brick and mortar’ presence?",
+      "href": "http://www.reliancecpa.com/brick-and-mortar"
+     },
+     {
+      "text": "Make your business idea profitable",
+      "href": "http://www.reliancecpa.com/profitable-business-idea"
+     },
+     {
+      "text": "Crowdfunding to raise capital",
+      "href": "http://www.reliancecpa.com/crowd-fundin"
+     },
+     {
+      "text": "Resources for market research",
+      "href": "http://www.reliancecpa.com/market-condition-research"
+     },
+     {
+      "text": "Should I break away to start my own business?",
+      "href": "http://www.reliancecpa.com/start-my-own-business.html"
+     },
+     {
+      "text": "The No. 1 impediment to business",
+      "href": "http://www.reliancecpa.com/business-impediment.html"
+     },
+     {
+      "text": "Where can I find the money to start my new business?",
+      "href": "http://www.reliancecpa.com/new-business-financing.html"
+     },
+     {
+      "text": "Determining your priorities when you start a new business",
+      "href": "http://www.reliancecpa.com/new-business-priorities.html"
+     },
+     {
+      "text": "Conducting due diligence when starting a business",
+      "href": "http://www.reliancecpa.com/due-diligence.html"
+     },
+     {
+      "text": "Deciding on a name for your business",
+      "href": "http://www.reliancecpa.com/naming-business.html"
+     },
+     {
+      "text": "The first step to starting a business",
+      "href": "http://www.reliancecpa.com/starting-a-business.html"
+     },
+     {
+      "text": "Finding the best commercial lease",
+      "href": "http://www.reliancecpa.com/commercial-lease.html"
+     },
+     {
+      "text": "Starting a home-based business",
+      "href": "http://www.reliancecpa.com/home-business.html"
+     },
+     {
+      "text": "Starting an on-line business",
+      "href": "http://www.reliancecpa.com/on-line-business.html"
+     },
+     {
+      "text": "Buying an existing business vs. starting a new business",
+      "href": "http://www.reliancecpa.com/existing-business.html"
+     },
+     {
+      "text": "Writing a business plan",
+      "href": "http://www.reliancecpa.com/business-plan.html"
+     },
+     {
+      "text": "How can I analyze the potential customer base for my new business?",
+      "href": "http://www.reliancecpa.com/customer-base.html"
+     },
+     {
+      "text": "How can I develop best practices in my small business?",
+      "href": "http://www.reliancecpa.com/best-practices.html"
+     },
+     {
+      "text": "How do I estimate startup costs for my small business?",
+      "href": "http://www.reliancecpa.com/startup-costs.html"
+     },
+     {
+      "text": "What to do with your business idea",
+      "href": "http://www.reliancecpa.com//business-idea.html"
+     },
+     {
+      "text": "Common problems new businesses face",
+      "href": "http://www.reliancecpa.com//new-business.html"
+     },
+     {
+      "text": "What is a CEO?",
+      "href": "http://www.reliancecpa.com//ceo.html"
+     },
+     {
+      "text": "What are the advantages and disadvantages of a home-based business?",
+      "href": "http://www.reliancecpa.com//home-based-business.htm"
+     },
+     {
+      "text": "Advantages of corporations",
+      "href": "http://www.reliancecpa.com/corporation.htm"
+     },
+     {
+      "text": "Benefits of a partnership",
+      "href": "http://www.reliancecpa.com/partnership.htm"
+     },
+     {
+      "text": "Benefits of becoming an S corporation",
+      "href": "http://www.reliancecpa.com/s-corporation.htm"
+     },
+     {
+      "text": "Benefits of a sole proprietorship",
+      "href": "http://www.reliancecpa.com/sole-proprietorship.htm"
+     },
+     {
+      "text": "The forms needed to start a new business in the Tampa Bay area",
+      "href": "http://www.reliancecpa.com/forms-to-start-business.htm"
+     },
+     {
+      "text": "The benefits of a limited liability company, or LLC",
+      "href": "http://www.reliancecpa.com/limited-liability-corporation.htm"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/",
+  "role": "merged",
+  "merge_into": "resources-hub",
+  "old_path": "/more-information.htm"
+ }
+}

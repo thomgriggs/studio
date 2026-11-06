@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/antitrust-law.html",
+ "slug": "antitrust-law.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Antitrust Laws | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/antitrust-law.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Antitrust Laws Might Apply in Local Markets or Niche Industries",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Antitrust Laws Might Apply in Local Markets or Niche Industries",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/antitrust-law.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "196",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "U.S. antitrust laws were established late in the 19th century in order to illegalize the practice of conspiring to restrain trade or commerce in a particular marketplace. While this historically applies to big, nationwide monopolies (think Standard Oil, U.S. Steel, AT&T, or Microsoft) , the same principles designed to protect consumers and smaller companies nationally apply directly to fair practice on a local level as well.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help put your small business on the proper path of fair practice, while simultaneously strengthening your position against competitors who might stray into a monopolistic (and hence, illegal) mindset. Naturally, you as a business owner will want to do almost anything you can to build your client base, but you will want to do so legally. Among the practices that could get you in trouble for violating antitrust laws are:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Discussing prices with competitors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Using dominant industry power to unreasonably restrain competition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conspiring with other businesses to boycott a competitor or supplier",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Agreeing with competitors to divide customers, territories, or markets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Buying out or otherwise excluding local competitors",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses establish best practices on the path to profitability. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more about how antitrust laws apply to small business, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 240
+}

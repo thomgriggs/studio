@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/boost-employee-morale",
+ "slug": "boost-employee-morale",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Boost Employee Morale | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/boost-employee-morale",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Tells How to Boost Employee Morale on a Tight Budget",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Tells How to Boost Employee Morale on a Tight Budget",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Boost-Employee-Morale-300x198.jpg",
+   "alt": "Boost Employee Morale",
+   "alt_missing": false,
+   "title": "Boost Employee Morale",
+   "width": "300",
+   "height": "198",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While giving employees a meaningful raise at their annual performance review remains one of the most effective ways to boost morale, truly significant pay raises are not always possible. Small businesses, especially, must find cost-effective methods to improve employee morale, or risk falling into a destructive cycle of employee turnover that is anything but helpful for company growth.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help owners of small businesses find creative and cost-effective ways to build and maintain employee morale – which, it should go without saying, is vital for maintaining a high level of productivity. Some suggestions include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Give your employees a great deal of latitude when it comes to how they do their jobs.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Encourage your employees to work together in groups to devise ways to improve productivity, then take meaningful action on their suggestions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Grant your employees personal time – and don’t make them feel guilty for taking it.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Invite them for lunch occasionally, especially if an employee has had a particularly good month.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Surprise your employees with an afternoon excursion outside of the office, like at a matinee baseball game or theme park.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Get creative. Don’t simply repeat the same type of “employee perk” over and over each month or year and expect them to continue to cherish it.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition, it truly makes a difference to employees if a manager – a “higher up,” not just an immediate supervisor – takes an active and sincere interest in their personal lives. Don’t get too nosey, but do more than ask how they’re doing in passing every now and then. It’s a short investment of time, and it makes you look good in their eyes, which makes them glad they work for you. If employee morale is important to you and your business (and it should be), [contact](http://reliancecpa.com/contact.html) Reliance today for more ideas on workplace culture and its importance for peak productivity.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 332
+}

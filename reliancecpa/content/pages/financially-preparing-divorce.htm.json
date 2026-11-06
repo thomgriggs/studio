@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+ "slug": "financially-preparing-divorce.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financially-preparing-divorce.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Financially Preparing for a Divorce: Talk to Your Tampa CPA from Reliance Consulting, LLC",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financially-preparing-divorce.jpg",
+   "alt": "Financially Preparing for a Divorce & How Your Tampa CPA Can Help",
+   "alt_missing": false,
+   "title": "Financially Preparing for a Divorce & How Your Tampa CPA Can Help",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ending a marriage is not only a personal decision, it’s a financial decision, too. And, while a divorce can be an emotional time, it is vital to take stock of your monetary situation so that you are able to make the best decisions possible for yourself and your family.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC is here to be a calm, experienced voice as you go through the big changes that divorce brings your way. We can help you with the huge financial impact that divorce could have on your life and prepare you to be fiscally strong for your fresh start. One of the many subjects we can discuss with you about your impending divorce includes making a full inventory of your:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Budget",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Possessions and when you acquired them",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Debts, including personal debts and joint debts such as mortgages, credit cards, car loans, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Assets including bank accounts, savings, investments, property, vehicles, jewelry, furniture, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax returns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "College savings for children",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement savings and pensions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Child care needs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Need for child support and spousal support",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Personal salary as well as your spouse’s salary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance policies",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Once you have gathered all the information relating to your marital finances, then it’s time to calculate what you think your living expenses will be after your divorce. Most of our clients in this situation find that living on their own income – instead of the two-income situation they had while married – can be quite challenging, especially if they plan on staying in the marital home. Other financial considerations during a divorce include closing joint accounts as well as what to do if your spouse has a poor credit rating that could affect your future purchasing power.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please contact a Tampa CPA from Reliance Consulting, LLC to learn more about financially preparing for a divorce. We look forward to providing you with compassionate, competent, and confidential service.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 329
+}

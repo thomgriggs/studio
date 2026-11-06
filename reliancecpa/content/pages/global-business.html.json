@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/global-business.html",
+ "slug": "global-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Global Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/global-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Take Your Small Business Global",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Take Your Small Business Global",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/global-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "According to the U.S. Small Business Administration, almost 96 percent of consumers and more than two-thirds of the purchasing power originates outside of the United States. Global expansion might not be for everyone, but considering the math, what small business wouldn’t at least think about trying to take advantage of all that international buying power? Exporting goods or services can help a company reduce its dependence on the domestic or local market. It can also diversify its customer base, while taking advantage of seasonal markets elsewhere in the world.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help if you are considering taking your small business global. In addition to researching the international rules and regulations related to your particular industry, a small business consultant from Reliance can work closely with you every step of the way as you develop your expansion plan. Questions to consider include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Is your business really on firm enough footing to expand?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What additional training and counseling might you require?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you have an export business plan?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have you conducted international market research?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have you identified potential buyers for your service or product?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How will you finance this expansion?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how small your business may be, it doesn’t hurt to think big. Taking your company to a global level might sound like a bold and risky move, but it may be just the thing to take your business to the next level and beyond. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today to learn more about how to explore the global market, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 271
+}

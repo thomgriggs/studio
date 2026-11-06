@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/green-business.htm/greenbusiness/",
+ "slug": "green-business.htm__greenbusiness",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/green-business.htm/greenbusiness",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "CPA in Tampa - Green Business - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/green-business.htm/greenbusiness/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa - Green Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Your CPA in Tampa Discusses Green Business in Florida](https://www.reliancecpa.com/green-business.htm)",
+   "links": [
+    {
+     "text": "← Your CPA in Tampa Discusses Green Business in Florida",
+     "href": "https://www.reliancecpa.com/green-business.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "CPA in Tampa – Green Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 8, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/greenbusiness.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 199",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/greenbusiness.gif"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/greenbusiness.gif",
+   "alt": "CPA in Tampa - Green Business",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/greenbusiness.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/green-business.htm/greenbusiness).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/green-business.htm/greenbusiness"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 16
+}

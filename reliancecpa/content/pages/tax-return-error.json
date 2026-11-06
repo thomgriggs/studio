@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/tax-return-error",
+ "slug": "tax-return-error",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Tax Return Error | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-return-error",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What to do if You Discover an Error on Your Tax Return",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What to do if You Discover an Error on Your Tax Return",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Return-Error-300x200.jpg",
+   "alt": "Tax Return Error",
+   "alt_missing": false,
+   "title": "Tax Return Error",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Chances are, even if you prepare your own taxes each year, you’ll never have the opportunity to find an after-the-fact error within one of your tax returns. If you are like most taxpayers, once you’ve filed your annual return, the only reason you would ever look again at the paperwork is if you receive an audit notice from the IRS. Still, it’s not outside the realm of possibility that you might happen to glance at your return somewhere down the line and notice a discrepancy. It could be a minor math error, or perhaps you noticed that you forgot to attach a particular required schedule as instructed. The most important thing to do in the off chance that you notice an error in your return is to keep your cool and don’t panic.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can answer all your questions about what to do if you encounter any sort of issue with the IRS after filing your taxes. But if you have discovered an error, keep the following in mind:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Most math errors are caught and corrected by the IRS as returns are processed.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The IRS will typically contact you if you have forgotten to attach a required form or schedule.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If you have failed to report your income properly, or did not claim a credit or figure in a deduction, you can file an amended or corrected return using Form 1040X.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ideally, of course, you’ll allow one of our experienced and knowledgeable CPAs to prepare your return for you – there’s no better way to ensure accuracy. Since opening our doors in 1984, Reliance Consulting has helped thousands of individuals avoid paying more than they should in taxes. We are here to help individuals and businesses with tax planning, tax preparation, estate planning, and more. [Contact](http://reliancecpa.com/contact.html) us today for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 328
+}

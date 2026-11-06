@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/related-party-transactions",
+ "slug": "related-party-transactions",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Related Party Transaction | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/related-party-transactions",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Related-Party Transactions",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Related-Party Transactions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Related-Party-Transaction-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Related Party Transaction",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Related-party transactions are deals or arrangements between parties that are connected by a pre-existing relationship. This can include transactions between a corporation and one or more of its major shareholders, or business-related services provided to a company officer in a position of authority by an associate, business partner, or family member. According to the Internal Revenue Service, special rules apply to the sale or trade of property or goods between parties that are related in some way.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you understand the ramifications of related-party transactions, as well as the special rules laid out by the IRS. Since opening our doors in 1984, we have helped hundreds of Tampa Bay area businesses find the path to profitability. In addition to providing services such as payroll, cash flow analysis, bookkeeping, and other day-to-day or week-to-week financial functions, we offer comprehensive business consulting that include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Loan research",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Strategic planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Document preparation and storage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our goal is to provide services to your business that deliver extraordinary value. A big part of that is explaining how complex issues like related-party transactions might affect your company’s bottom line. To inquire further, or to set up a complimentary financial health checkup, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 218
+}

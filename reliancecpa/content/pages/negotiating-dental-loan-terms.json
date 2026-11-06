@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/negotiating-dental-loan-terms",
+ "slug": "negotiating-dental-loan-terms",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Loan Terms | Dental CPA Services",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/negotiating-dental-loan-terms",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Help Form a Strategy for Negotiating Loan Terms",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Help Form a Strategy for Negotiating Loan Terms",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Negotiatiing-Loan-Terms-300x200.jpg",
+   "alt": "Dental Negotiatiing Loan Terms",
+   "alt_missing": false,
+   "title": "Dental Negotiatiing Loan Terms",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Negotiating loan terms with a bank as you either open a new dental practice or plan for expansion can be one of the most complex business-related tasks you’ll encounter. That’s because no two practices are exactly alike, which means there are no set rules on precisely how to arrange the most advantageous loan terms possible. Remember that it is the job of the loan officer to make a profit for the bank, and open your mind about what that means in the immediate future and over the long haul.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help when it comes to negotiating loan terms. It begins, of course, with determining how much money your purchase or expansion will require, then weighing that against the capital or other loans you already have available. The preparation necessary before any actual negotiation takes place is vital, and we suggest having the assistance of an experienced dental CPA to make sure all of the details have been taken into account. You’ll need to go into any negotiation with a full understanding of your strengths and what you have to offer a bank in addition to investing in a promising business. Many loan officers are willing to provide better terms for the loan if the borrower can provide other potential revenue streams for the bank, such as overseeing a company’s retirement fund, or handling wealth management planning for the company’s officers. What you are willing to give up during a negotiation could very well determine how advantageous the loan terms are.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance, we do more for our dentist clients than negotiating loan terms. Our expertise encompasses all facets of practice management, and we take pride in the services we provide to healthcare professionals. If you are a dentist who owns his or her own practice, [contact](http://reliancecpa.com/contact.html) Reliance today and ask about our comprehensive dental consulting services.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 325
+}

@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist/",
+ "slug": "dental-retirement-planning__doctor-dentist",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Dental Bookkeeping - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Bookkeeping",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Retirement Planning Help from a Tampa Dental CPA](https://www.reliancecpa.com/dental-retirement-planning)",
+   "links": [
+    {
+     "text": "← Retirement Planning Help from a Tampa Dental CPA",
+     "href": "https://www.reliancecpa.com/dental-retirement-planning"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Dental Bookkeeping",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished December 3, 2012 | Full size is [631 × 900](https://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "631 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning.jpg",
+   "alt": "Dental Bookkeeping",
+   "alt_missing": false,
+   "title": "",
+   "width": "631",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Smiling mature dentist doctor in the office",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

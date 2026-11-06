@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/itemization-tax-return",
+ "slug": "itemization-tax-return",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Itemized Tax Return | Tax Planning | Tax Preparation",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/itemization-tax-return",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Factors that Determine Whether to Itemize on Your Tax Return",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Factors that Determine Whether to Itemize on Your Tax Return",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Itemized-Tax-Return-300x199.jpg",
+   "alt": "Itemized Tax Return",
+   "alt_missing": false,
+   "title": "Itemized Tax Return",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At some point during the tax preparation process, a taxpayer will need to decide whether to claim the standard deduction or to itemize expenses in order to claim more detailed deductions. The decision is typically based simply on whether the standard deduction will provide greater savings than itemizing. Recent standard deductions were $5,950 for single taxpayers, $11,900 for married taxpayers filing jointly, and $8,700 for head of household taxpayers. Standard deductions vary for some groups, such as the blind and people 65 and older.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether it will pay off for you to itemize your deductions. About one in four taxpayers find that the standard deduction will not provide as much tax savings as itemizing. The simplest way to determine whether to itemize is to add up the total spent on expenses such as:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Home mortgage interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property taxes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "State income tax",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Medical expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Charitable donations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Miscellaneous",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Homeowners, in particular, generally benefit from itemizing deductions. However, that does not always hold true. If the figure you get from adding those expenses is more than the standard deduction you are eligible for, it might make sense to itemize. This will require a more-detailed tax return, of course, and there are usually additional filing costs associated with using more forms than the 1040.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many other factors that will help determine whether you should itemize on your tax return. [Contact](http://reliancecpa.com/contact.html) your Tampa CPA from Reliance Consulting for expert tax planning and preparation help.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 267
+}

@@ -1,0 +1,164 @@
+{
+ "threshold": "> 10 pages (main region, same type + normalized text)",
+ "blocks": [
+  {
+   "count": 447,
+   "key": [
+    "text",
+    "bookmark the permalink."
+   ],
+   "block": {
+    "type": "text",
+    "text": "Bookmark the [permalink](https://www.reliancecpa.com/401k-plans.html/401k-plans).",
+    "links": [
+     {
+      "text": "permalink",
+      "href": "https://www.reliancecpa.com/401k-plans.html/401k-plans"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/401k-plans.html/401k-plans/"
+  },
+  {
+   "count": 63,
+   "key": [
+    "h2",
+    "tampa cpa"
+   ],
+   "block": {
+    "type": "h2",
+    "text": "Tampa CPA",
+    "links": []
+   },
+   "example_page": "https://www.reliancecpa.com/401k-plans.html/401k-plans/"
+  },
+  {
+   "count": 38,
+   "key": [
+    "text",
+    "by admin | published december 8, 2011 | full size is 300 × 199 pixels"
+   ],
+   "block": {
+    "type": "text",
+    "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 8, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/cost-segregation-survey.gif) pixels",
+    "links": [
+     {
+      "text": "admin",
+      "href": "https://www.reliancecpa.com"
+     },
+     {
+      "text": "300 × 199",
+      "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/cost-segregation-survey.gif"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/cost-segregation.html/cost-segregation-survey/"
+  },
+  {
+   "count": 22,
+   "key": [
+    "text",
+    "by admin | published december 5, 2011 | full size is 300 × 199 pixels"
+   ],
+   "block": {
+    "type": "text",
+    "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-record-retention.jpg) pixels",
+    "links": [
+     {
+      "text": "admin",
+      "href": "https://www.reliancecpa.com"
+     },
+     {
+      "text": "300 × 199",
+      "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/personal-record-retention.jpg"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/personal-record-retention.htm/personal-record-retention/"
+  },
+  {
+   "count": 15,
+   "key": [
+    "p",
+    "← articles"
+   ],
+   "block": {
+    "type": "p",
+    "text": "[← Articles](https://www.reliancecpa.com/articles.html)",
+    "links": [
+     {
+      "text": "← Articles",
+      "href": "https://www.reliancecpa.com/articles.html"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/articles.html/bigstock_female_doctor_in_intensive_car_17340602/"
+  },
+  {
+   "count": 15,
+   "key": [
+    "text",
+    "by admin | published december 7, 2011 | full size is 300 × 199 pixels"
+   ],
+   "block": {
+    "type": "text",
+    "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 199](https://www.reliancecpa.com/wp-content/uploads/2011/12/audit-help.jpg) pixels",
+    "links": [
+     {
+      "text": "admin",
+      "href": "https://www.reliancecpa.com"
+     },
+     {
+      "text": "300 × 199",
+      "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/audit-help.jpg"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/audit-help.htm/audit-help/"
+  },
+  {
+   "count": 12,
+   "key": [
+    "text",
+    "by admin | published december 5, 2011 | full size is 300 × 200 pixels"
+   ],
+   "block": {
+    "type": "text",
+    "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [300 × 200](https://www.reliancecpa.com/wp-content/uploads/2011/12/post-mortem-letter.jpg) pixels",
+    "links": [
+     {
+      "text": "admin",
+      "href": "https://www.reliancecpa.com"
+     },
+     {
+      "text": "300 × 200",
+      "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/post-mortem-letter.jpg"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/post-mortem-letter.htm/post-mortem-letter/"
+  },
+  {
+   "count": 11,
+   "key": [
+    "text",
+    "by admin | published december 7, 2011 | full size is 300 × 200 pixels"
+   ],
+   "block": {
+    "type": "text",
+    "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 200](https://www.reliancecpa.com/wp-content/uploads/2011/12/adjusted-gross-income.gif) pixels",
+    "links": [
+     {
+      "text": "admin",
+      "href": "https://www.reliancecpa.com"
+     },
+     {
+      "text": "300 × 200",
+      "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/adjusted-gross-income.gif"
+     }
+    ]
+   },
+   "example_page": "https://www.reliancecpa.com/adjusted-gross-income.html/adjusted-gross-income/"
+  }
+ ]
+}

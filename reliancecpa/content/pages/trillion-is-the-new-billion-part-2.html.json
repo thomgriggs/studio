@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html",
+ "slug": "trillion-is-the-new-billion-part-2.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Trillion is the New Billion: Economic Stimulus in the Age of Obama - Part 2",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Trillion is the New Billion: Economic Stimulus in the Age of Obama – Part 2",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h3",
+   "text": "Part 2 of 2: Business Tax Relief",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The American Recovery and Reinvestment Act of 2009 has provisions affecting individuals as well as businesses. Part 1 of this article focused on individual incentives. In this forum, we will discuss the business incentives that were enacted to help stimulate growth and employment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As is always the case, businesses are treated more favorably than individuals when it comes to tax incentives. Most deductions that are allowed for businesses are “untouchable” for individuals. Additionally, for most type of business entities, business deductions have a far greater impact on taxes paid than individual deductions. Therefore, it is important for business owners to fully comprehend the nature of this new legislation. Appropriate use of these tax breaks can lead to substantial tax savings in 2009 and even possible tax refunds of taxes paid in prior years.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The new legislation helps businesses in the following ways:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Bonus Deprecation—Extends the 50% bonus depreciation provision to 2009 for qualifying property placed into service in 2009.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Section 179 Deprecation—Extends the 2008 Section 179 limits to 2009 for qualifying assets placed into service in 2009. The 179 limit for 2009 is $250,000 with a phase-out threshold of $800,000.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Net Operating Loss Carryback—Expands the carryback period for small businesses (gross receipts < $15 million) from two years to five. (Note: This provision has the potential to significantly benefit companies that had substantial profits in any of the past 5 years and substantial losses in 2009)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Unemployed Veterans & Disconnected Youth Credit—Gives credit to businesses worth 40% of the first $6,000 in wages paid to unemployed veterans and disconnected youth. Individuals qualify as disconnected youth if they are between ages 16 and 25 and have not been regularly employed or attended school in the past six months.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Delayed Recognition of Cancellation of Debt Income(CODI)—Benefits businesses that negotiate their debt at a discount resulting in CODI. Under the Act, the income can be recognized over a period of ten years.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Qualified Small Business Stock—Increases exclusion for gain from sale of certain small business stock held for more than 5 years from 50% to 75%.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "S Corporation Holding Period—Shortens the holding period of assets subject to built-in-gains tax from ten years to seven years.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In general, businesses can greatly benefit from consulting their CPAs on a routine basis and taking appropriate steps before and after the close of any financial transaction. The tax stimulus act has made 2009 a very crucial year for business owners to carefully evaluate their tax past, present and future tax strategy, and make timely decisions before it is too late.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "*Amol Nirgudkar, CPA is the managing partner of Reliance Consulting LLC can be reached at (813) 931-7258 or via email at [amol@reliancecpa.com](mailto: amol@reliancecpa.com)*",
+   "links": [
+    {
+     "text": "amol@reliancecpa.com",
+     "href": "mailto: amol@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 467
+}

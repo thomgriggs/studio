@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/international-business",
+ "slug": "international-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | International Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/international-business",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How to Stay Nimble and Tax Efficient When Conducting International Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How to Stay Nimble and Tax Efficient When Conducting International Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/International-Business-300x225.jpg",
+   "alt": "International Business",
+   "alt_missing": false,
+   "title": "International Business",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No business, big or small, exists in a vacuum. Success for a company often depends on how nimble its financial officers can stay when it comes to tax efficiency. This is particularly true for companies that conduct a great deal of international business. It starts with a tax structure that is designed to be aligned with the company’s international goals and services.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help your company streamline its tax planning to take all international and domestic business activity into account. Unless these two items are integrated efficiently, there’s a chance your company is losing more in tax payouts than it should. Further complicating the matter are potentially contradictory tax laws from country to country, as well as the always fluid tax situation in the United States. It is virtually impossible for a small business owner to stay abreast of all of this shifting information, which is why it is imperative to seek expert help from Reliance.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has helped hundreds of Florida businesses and thousands of individuals achieve professional and personal profitability. We combine a small business consultancy with tax planning/preparation services, freeing a business owner to focus on daily operations and long-term planning. To learn more about how Reliance can help your business position itself as well as possible when conducting international business, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 245
+}

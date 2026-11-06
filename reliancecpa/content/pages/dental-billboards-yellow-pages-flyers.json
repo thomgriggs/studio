@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers",
+ "slug": "dental-billboards-yellow-pages-flyers",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental CPA | Dental Marketing | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Dental Marketing with Billboards, Yellow Pages, Flyers & More",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Dental Marketing with Billboards, Yellow Pages, Flyers & More",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Billboards-Yellow-Pages-Flyers-300x200.jpg",
+   "alt": "Billboards, Yellow Pages, Flyers",
+   "alt_missing": false,
+   "title": "Billboards, Yellow Pages, Flyers",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Billboards, Yellow Pages, flyers, and other forms of printed advertising and marketing materials still play an important role in helping you build a thriving dental practice. While Internet marketing with organic search engine optimization to drive search results and produce patient conversions is a much more targeted marketing technique, outdoor advertising and other printed media can expose your marketing message to a large segment of potential patients. This is particularly true if a large segment of your business is taken up by seniors who might still be more comfortable with traditional forms of advertising and marketing.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help you determine whether billboards, Yellow Pages, flyers and other printed media can effectively help your practice grow. Putting our dental practice management expertise to work, we can also can help you determine whether your advertising and marketing budget would be more effective with an Internet campaign, broadcast (radio or TV), or some combination of it all.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting has helped many healthcare professionals who own their practices find the path to profitability and stay on it for the long term. Our dental CPA services encompass everything having to do with running the business of dentistry, from QuickBooks accounting and filing and processing monthly financial statements to tax planning and preparation and estate planning. [Contact](http://reliancecpa.com/contact.html) Reliance today to learn how a dental CPA can help you set up a marketing budget and map out a business strategy that is sure to bring success today and in the future.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 261
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/mortgage-refinance",
+ "slug": "mortgage-refinance",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-09-04",
+ "seo": {
+  "title_tag": "Mortgage Refinance | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/mortgage-refinance",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a Tampa CPA Can Help with a Mortgage Refinance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a Tampa CPA Can Help with a Mortgage Refinance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Mortgage-Refinance-300x200.jpg",
+   "alt": "Mortgage Refinance",
+   "alt_missing": false,
+   "title": "Mortgage Refinance",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Refinancing your home’s mortgage makes sense when the interest rates are at historical lows. Yet, even with interest rates as attractive as they have been for the past few years, it has become increasingly difficult for some homeowners to refinance. Whereas even as recently as 2007, refinancing a mortgage could be as simple as picking up the phone and calling your mortgage holder, the requirements became much more stringent in the teeth of the recession of 2008-2009.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you navigate the difficulties of refinancing your home’s mortgage. A certified public accountant from Reliance can also help you determine whether it is actually worth going through the hassle just to shave a point or two off your interest rate. There is every chance that it might be, especially if you still have more than 25 years left on a 30-year fixed mortgage. Even dropping the interest rate one point can save you tens of thousands – even hundreds of thousands – over the life of the loan. Yet, keep in mind that these days, it often takes a significant down payment to refinance a mortgage into a significantly lower rate. Another potential complication might be the existence of a second mortgage, something that became commonplace for many homeowners who wanted to take advantage of the rising value of their homes during the real estate boom years.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Before you call your mortgage company to ask about refinancing into a lower rate mortgage, [contact](http://reliancecpa.com/contact.html) Reliance to seek our advice about how best to go about refinancing your home’s mortgage. Since 1984, we have been the accounting firm individuals and businesses in the Tampa Bay area have turned to for sound financial advice.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 297
+}

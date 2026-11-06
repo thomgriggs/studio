@@ -1,0 +1,333 @@
+{
+ "url": "https://www.reliancecpa.com/staff-profiles.htm",
+ "slug": "staff-profiles.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "about",
+  "first_pass_action": "Refresh",
+  "notes": "about/team"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA & Accounting Team at Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/staff-profiles.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA & Accounting Team at Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "3 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA & Accounting Team at Reliance Consulting, LLC",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
+   "alt": "Jamie Partin, Staff Accountant",
+   "alt_missing": false,
+   "title": "jamie-partin",
+   "width": "200",
+   "height": "267",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Jamie Partin",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Staff Accountant\n\n[Jamie@reliancecpa.com](mailto:Jamie@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Jamie@reliancecpa.com",
+     "href": "mailto:Jamie@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience** Jamie joined the firm in May of 2005 in the administrative department and within a year of joining she was promoted to an Accountant. She is very dedicated and hard working to exceed the standards of her position. Over the years she has excelled in all aspects of the accounting field. Prior to working with the firm she managed a multi-million dollar Accounts Receivable department for a printing company. She also has five years experience in office management.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Education** Attending HCC to finish up her AA in Business Administration, Jamie plans to attend University to receive her bachelor’s degree in Accounting. Once she receives her bachelor’s degree and completes her necessary credits, she will sit for the CPA exam.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal** Jamie grew up in South Tampa and currently resides in Tampa.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "____________________**______________________**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
+   "alt": "Briana McNulty, Office Administrator & Billing Manager",
+   "alt_missing": false,
+   "title": "briana-mcnulty",
+   "width": "200",
+   "height": "267",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Briana McNulty",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Office Administrator & Billing Manager\n\n[Briana@reliancecpa.com](mailto:Briana@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Briana@reliancecpa.com",
+     "href": "mailto:Briana@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience**\n\nBriana joined the administrative staff of Reliance Consulting, LLC in 2006. She has worked in administration for over eight years.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Education**\n\nBriana continues to work towards her degree in Psychology.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal**\n\nBriana currently resides in Tampa. She moved to the Tampa Bay area three years ago from North Carolina.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "____________________**______________________**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/kim-nguyen.jpg",
+   "alt": "Kim Nguyen, Staff Accountant",
+   "alt_missing": false,
+   "title": "kim-nguyen",
+   "width": "200",
+   "height": "267",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Kim Nguyen",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Staff Accountant\n\n[Kim@reliancecpa.com](linkto:Kim@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Kim@reliancecpa.com",
+     "href": "linkto:Kim@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience**\n\nKim joined Reliance Consulting in June 2008 as an Accountant. She is dedicated to working hard, constantly seeking to learn new things, and maintaining a strong work ethic. Prior to joining Reliance Consulting, she supervised the accounts receivable department for a division of a large nationwide distributing company for over 6 years, while also attending school part-time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Education**\n\nKim graduated from the University of South Florida with a Bachelor of Science Degree in Accounting in December 2007. She is currently enrolled at the University of South Florida to complete the 5th year CPA requirement.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal**\n\nKim grew up in Milwaukee, Wisconsin until she moved to Tampa in 2001, looking for new endeavors. She currently resides in Tampa with her husband and children.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "____________________**______________________**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
+   "alt": "Nicole Frenier, Staff Accountant",
+   "alt_missing": false,
+   "title": "nicole-frenier",
+   "width": "200",
+   "height": "267",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Nicole Frenier",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Staff Accountant\n\n[Nicole@reliancecpa.com](mailto:Nicole@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Nicole@reliancecpa.com",
+     "href": "mailto:Nicole@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience**\n\nNicole joined Reliance Consulting in July 2007. She is committed to performing her job duties with accuracy and efficiency, and always strives to do well at everything she does. Prior to joining Reliance Consulting, she was a bookkeeper for a local CPA firm and attended school full-time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Education**\n\nNicole obtained a Bachelor of Science Degree in Accounting from the University of South Florida in August 2007. She is presently pursuing the 5th year CPA requirement at the University of Phoenix.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal**\n\nNicole resides in Tampa and became a new mom in 2009.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "____________________**______________________**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
+   "alt": "Tara Govindaraju, Accounting Manager",
+   "alt_missing": false,
+   "title": "tara-govindaraju",
+   "width": "200",
+   "height": "267",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Tara Govindaraju",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Accounting Manager\n\n[Tara@reliancecpa.com](mailto:Tara@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Tara@reliancecpa.com",
+     "href": "mailto:Tara@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience**\n\nTara joined the firm along with her husband Raju and has dedicated the last two decades to providing clients with superior service. She works very hard and dedicates herself to getting the job done and keeps track of all important deadlines for all monthly and quarterly write-up clients. She coordinates work with all staff accountants and manages monthly sales and use tax compliance for all clients.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal**\n\nTara resides in Tampa and enjoys spending time with her family.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "____________________**______________________**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Valerie Stickeler**\n\nCertified Public Accountant\n\n[Valerie@reliancecpa.com](mailto:Valerie@reliancecpa.com)",
+   "links": [
+    {
+     "text": "Valerie@reliancecpa.com",
+     "href": "mailto:Valerie@reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Professional Experience**\n\nValerie joined Reliance Consulting as a Certified Public Accountant in June 2008 upon successfully completing the CPA Exam. She is dedicated to upholding her strong work ethic and ability to be a great team player. Her willingness to help others and share her knowledge has made her a major asset to the firm. Prior to joining Reliance Consulting, she has had professional experience as an accountant for a local CPA firm and for a large nationwide restaurant chain headquartered in Tampa.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Education**\n\nValerie’s educational background includes attaining a Bachelor of Arts Degree in Sociology with a minor in Criminal Justice from the University of Florida in 1998. She attended law school for a couple of years, until she realized that she had more of an attraction to the accounting profession. Valerie earned a Bachelor of Arts Degree in Accounting from the University of South Florida in 2005.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Personal**\n\nValerie currently resides in Tampa with her 2 cats. She is an avid football fanatic, enjoys fine wine, and has a passion for traveling.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 705
+}

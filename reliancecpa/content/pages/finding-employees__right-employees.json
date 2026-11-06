@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/finding-employees/right-employees/",
+ "slug": "finding-employees__right-employees",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/finding-employees/right-employees",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Right Employees - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/finding-employees/right-employees/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Right Employees",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Provides Guidance on Finding the Right Employees for Your Company](https://www.reliancecpa.com/finding-employees)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Provides Guidance on Finding the Right Employees for Your Company",
+     "href": "https://www.reliancecpa.com/finding-employees"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Right Employees",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 2, 2012 | Full size is [679 × 900](https://www.reliancecpa.com/wp-content/uploads/Right-Employees.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "679 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Right-Employees.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Right-Employees.jpg",
+   "alt": "Right Employees",
+   "alt_missing": false,
+   "title": "",
+   "width": "679",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Right-Employees.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/finding-employees/right-employees).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/finding-employees/right-employees"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

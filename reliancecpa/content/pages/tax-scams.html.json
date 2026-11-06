@@ -1,0 +1,155 @@
+{
+ "url": "https://www.reliancecpa.com/tax-scams.html",
+ "slug": "tax-scams.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Biggest Tax Scams",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-scams.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Talks About What the IRS Considers the Biggest Tax Scams",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Talks About What the IRS Considers the Biggest Tax Scams",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-scams.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "tax-scams",
+   "width": "200",
+   "height": "284",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Every year, the Internal Revenue Service takes great pains to identify and publicize the most prominent tax scams it uncovers in the course of the millions of tax return audits it performs. When an investigation reveals fraud – whether committed willingly or unwittingly – perpetrators are subject to heavy fines and, possibly, imprisonment.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One way to avoid tax fraud is to work with a [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC. Our tax experts will make certain that your annual return is thorough, accurate, and timely. Meanwhile, we’ll provide guidance for taxpayers who would rather not become embroiled in one or more of the following acts:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Hiding income",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Identity theft",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Return preparer fraud",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "False or misleading tax forms",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Frivolous arguments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Exaggerated withholding credit for nontaxable Social Security benefits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Abuse of charitable deductions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Abuse of retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Disguised corporate ownership",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Phony wage or income-related informational forms",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Misuse of trusts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fuel tax credit scams",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to guarding against tax fraud, a certified public accountant from Reliance has the knowledge it takes to make sure you don’t miss out on any tax credits or deductions you may deserve. [Contact](http://www.reliancecpa.com//contact.html) Reliance today to get started on your tax planning for the upcoming year, or for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 221
+}

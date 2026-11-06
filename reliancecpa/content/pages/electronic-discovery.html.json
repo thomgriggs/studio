@@ -1,0 +1,141 @@
+{
+ "url": "https://www.reliancecpa.com/electronic-discovery.html",
+ "slug": "electronic-discovery.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Electronic Discovery | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/electronic-discovery.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Electronic Discovery for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Electronic Discovery for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Large corporations are not the only entities that should be prepared to produce electronically stored information (ESI) in response to a lawsuit or a regulatory investigation. If anything, it’s even more important for small businesses to stay on top of potential electronic discovery (e-discovery) issues, because one seemingly minor records omission could have devastating repercussions. Big businesses might be able to weather a major setback, but a small business might find itself struggling for its very existence if e-discovery goes awry during a legal confrontation.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/electronic-discovery.gif",
+   "alt": "Tampa CPA Electronic Discovery",
+   "alt_missing": false,
+   "title": "Tampa CPA Electronic Discovery",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can give you all the advice you need to make sure your small business is prepared for any eventuality. Since opening its doors in 1984, Reliance has established itself as a premier accounting firm in the Tampa Bay area. We’ve served hundreds of small businesses, providing tax preparation services, bookkeeping, payroll services, long-range planning, and other guidance to make sure they achieved and exceeded their goals.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This includes educating our clients about how best to keep orderly, easily accessed financial records – because few businesses avoid legal or regulatory entanglements of some sort. The types of records that might be relevant to e-discovery include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "E-mail",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Instant messages or chats",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accounting databases",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Computer-aided design (CAD) and computer-aided manufacturing (CAM) files",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Websites",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Metadata",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Data from “smart” phones or personal digital assistants (PDAs)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Any electronically stored information that could become relevant in a law suit",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For all of your small business needs, [contact](http://www.reliancecpa.com/contact.html) Reliance today. We will perform a free financial health checkup and structure our services to provide all the accounting and consulting support you need to make the most of your company.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 282
+}

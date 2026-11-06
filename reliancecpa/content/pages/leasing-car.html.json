@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/leasing-car.html",
+ "slug": "leasing-car.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Leasing a Car",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/leasing-car.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Discusses the Advantages & Disadvantages of Leasing a Car",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Discusses the Advantages & Disadvantages of Leasing a Car",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/leasing-car.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You’ve finally found the car of your dreams. It has all the bells and whistles you need to make your morning and afternoon commute bearable, and you just know it’ll look great in your driveway. Now all you have to figure out is how to pay for it. Will you buy it? Will you sign a lease? It’s not necessarily an easy decision.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, can help you weigh the advantages and disadvantages of leasing a car and provide all the information you need to decide whether it’s the right move for you. The first step will be to have a Tampa CPA at Reliance examine your financial situation to help you determine how the transaction will fit into your budget. The next step is to consider how you intend to use your new car – just driving around town, long road trips with the family, etc. – and how long you anticipate keeping it.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The pros and cons a Tampa CPA at Reliance might point out as you decide whether to lease a car include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Leasing generally requires only a small down payment, if any",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Monthly payments usually are lower when you lease",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Most leased cars are covered by a manufacturer’s warranty for the life of the contract",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mileage limits – usually 12,000-15,000 miles per year – constrict your freedom and are penalized at the end of the lease",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Termination fees can cost you thousands of dollars if you must cancel the contract early",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It’s always a good idea to consult with your Tampa CPA at Reliance before you commit to a major financial transaction like buying or leasing a car. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a complete financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

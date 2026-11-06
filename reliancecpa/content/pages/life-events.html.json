@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/life-events.html",
+ "slug": "life-events.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Life Events That Affect Tax Status",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/life-events.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Prepares You for Life Events That May Affect Your Tax Status",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Prepares You for Life Events That May Affect Your Tax Status",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/life-events.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "226",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Life throws a lot of changes at us, many of which will have a direct bearing on what we owe the federal government in taxes. Obviously, winning the lottery is one way to advance to a higher tax bracket. But changes won’t always be that dramatic, that instantaneous, or that fortunate.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you prepare financially for life-changing events. Since 1984, Reliance Consulting has been one of the Tampa Bay area’s premier accounting firms, helping thousands of individuals and hundreds of Florida businesses with tax preparation, retirement planning, estate planning, and more.\n\nLife changes that may affect your tax status include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Marriage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Birth of a child",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Divorce or legal separation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Job loss",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Career change",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Disasters or serious injury",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Buying a home",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance today to find out how you can stay prepared financially for the inevitable changes in life. We’ll be pleased to provide a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 173
+}

@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/running-green-business.html",
+ "slug": "running-green-business.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Running a Green Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/running-green-business.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Benefits of Running a Green Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Benefits of Running a Green Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/running-green-business.gif",
+   "alt": "",
+   "alt_missing": true,
+   "title": "running-green-business",
+   "width": "300",
+   "height": "224",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What does it mean to operate a “green” business? For some companies, operating with an eye toward energy efficiency and environmental consciousness can mean real savings. It’s about more than the bottom line, though. Operating with sustainability as one of your business tenets is a good way to demonstrate to your current and potential customers that you care about the long-term future of the environment – which can also engender customer loyalty.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can explain all of the potential benefits of maintaining “green” practices in your business. Of course, the bottom line – specifically, your ability to minimize taxes as a “green” business – is our top priority. After all, it’s our job to help you find and stay on the path to profitability. Going “green” is one way to do that, with potential savings available from:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax incentives",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Loans for energy efficient upgrades",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Grants for “green” product innovation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lower energy costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Utility rebates, if available",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has earned the trust of thousands of individuals and hundreds of businesses in the Tampa Bay area by maintaining open channels of communication and working hard to make sure our clients always remain informed and aware of their financial strengths and potential weaknesses. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 232
+}

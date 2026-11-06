@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/liquidating-assets.html",
+ "slug": "liquidating-assets.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA In Tampa | Business Asset Liquidation",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/liquidating-assets.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA In Tampa Discusses Business Asset Liquidation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA In Tampa Discusses Business Asset Liquidation",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/liquidating-assets.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "240",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are looking for an exit strategy for your business, liquidating your assets might be the best course of action if you are unable to conduct a merger, pass the company on to someone else, or sell it outright as a going concern. Should you decide to liquidate, you will need a well-thought-out plan to ensure you receive the best possible return.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine if liquidation is the right choice for you. If it is, a business consultant from Reliance will work closely with you to formulate a plan. The U.S. Small Business Administration (SBA) recommends that before you begin the liquidation process, you discuss your options at length with your attorney and your accountant. The SBA also cautions that you will need the cooperation of your creditors before liquidating, and provides the following guidelines for the process:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Inventory, assess and prepare your assets for sale.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Physically secure your merchandise.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish the liquidation value of your assets (usually 20 percent less than retail value).",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estimate your net sale proceeds to determine if the sale is worthwhile.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Choose the proper type of sale for your merchandise.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Select the best time and location for the sale.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Hire an expert to conduct the sale (auctioneer, dealer, broker, etc.).",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use a non-recourse bill of sale (purchases are “as is”).",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, we have helped hundreds of Tampa Bay area businesses reach maximum profitability and stay there. [Contact](http://www.reliancecpa.com/contact.html) Reliance for more information about the process of liquidating your assets, or for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 275
+}

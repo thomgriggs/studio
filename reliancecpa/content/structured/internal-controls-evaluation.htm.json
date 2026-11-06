@@ -1,0 +1,110 @@
+{
+ "url": "https://www.reliancecpa.com/internal-controls-evaluation.htm",
+ "slug": "internal-controls-evaluation.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Your Business Might Need an Internal Controls Evaluation by a Tampa Accountant from Reliance Consulting, LLC",
+ "seo": {
+  "title_tag": "Your Business Might Need an Internal Controls Evaluation by a Tampa Accountant from Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/internal-controls-evaluation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Business Might Need an Internal Controls Evaluation by a Tampa Accountant from Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Your Business Might Need an Internal Controls Evaluation by a Tampa Accountant from Reliance Consulting, LLC",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/internal-controls-evaluation.jpg",
+     "alt": "Internal Controls Evaluation by a Tampa Accountant"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Internal controls are the way your company manages, protects, and monitors resources. Your resources include everything from property and equipment to employee time, as well as intangible things like intellectual property, reputation, and client relationships.",
+     "Whether you own a Tampa publishing firm or construction business, your internal controls are essential to making sure your company is efficient in the way it handles resources. Controls are also vital to protecting yourself against employee theft. Without proper internal controls, you could be losing a small fortune in wasted time, unnecessary inventory, stolen merchandise, or even stolen ideas.",
+     "Your [Tampa accountant](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can complete an Internal Controls Evaluation and make suggestions about ways to make more money and also keep more of the money you make. Our Internal Controls Evaluation can include suggestions to:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Confirm that authorized personnel are assigned the duty of approving transactions, and that their approval is consistent with your company’s policies and goals."
+     },
+     {
+      "text": "Divide duties among employees so that no one employee has sole control over financial decisions. Proper division of duties also can reduce errors and put checks and balances on improper conduct."
+     },
+     {
+      "text": "Properly secure your inventory, property, equipment, and cash to protect it from theft or tampering."
+     },
+     {
+      "text": "Complete regular inventory counting of your products, supplies, equipment, etc."
+     },
+     {
+      "text": "Train your employees so that they are efficient and effective at their jobs."
+     },
+     {
+      "text": "Make sure your managers are providing employees with proper direction and supervision."
+     },
+     {
+      "text": "Make everyone in your company aware of how to report issues they see with misuse of company time or property."
+     },
+     {
+      "text": "Create documentation regarding your company’s rules and procedures, and making that documentation available to all employees."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "During an Internal Controls Evaluation, your Tampa accountant from Reliance Consulting can ask questions that make you think about your company in new, creative ways. For example, are you sure that your operations will help you meet your company’s goals and objectives? Does each of your employees have a specific job description that can be carried out by a replacement in the event of long absences or turnover? Do you have sufficient records in-house that will help you quickly discover when assets are missing or abused?"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/internal-controls-evaluation/",
+  "role": "resource-article",
+  "tag": "accounting",
+  "old_path": "/internal-controls-evaluation.htm"
+ }
+}

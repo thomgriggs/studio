@@ -1,0 +1,8 @@
+{#
+MODULE: gallery
+PURPOSE: Three or more photos in a grid, 4px radius, whitespace between.
+SLOTS: images[src, alt].
+SQUARESPACE: Gallery block (grid).
+#}
+{% from "_macros.html" import img %}
+<section class="m m-gallery" data-module="gallery" data-tone="{{ tone }}"><div class="gallery">{% for i in s.images %}<figure>{{ img(i) }}</figure>{% endfor %}</div></section>

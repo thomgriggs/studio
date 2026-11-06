@@ -1,0 +1,11 @@
+{#
+MODULE: stat-row
+PURPOSE: Facts side by side as the original's metric pills: rounded 14px tiles in mint, sky, pink and lime, the figure in 40px Georgia and its label under it. Variant dateline adds the original's dot-marked trust row above (coral, sky, lime, mint dots) from the dateline items.
+SLOTS: eyebrow, title, level, dateline[], items[value, label].
+SQUARESPACE: Four Text blocks in a row, each in a coloured block/section background (or a Summary block); Heading 2 value + small paragraph label. The dot row is a Text block with a line of items. No code.
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-stats{{ ' m-stats--dateline' if variant == 'dateline' }}" data-module="stat-row" data-tone="{{ tone }}" aria-label="Reliance Consulting, by the numbers">
+  {% if variant == 'dateline' %}{% if s.dateline %}<ul class="dots">{% for d in s.dateline %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}{% else %}{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}{% endif %}
+  <div class="stats stats--{{ s["items"]|length }}">{% for i in s["items"] %}<p class="stat c{{ loop.index0 % 4 }}"><span class="stat__v">{{ i.value or i.label }}</span>{% if i.value %}<span class="stat__l">{{ i.label }}</span>{% endif %}</p>{% endfor %}</div>
+</section>

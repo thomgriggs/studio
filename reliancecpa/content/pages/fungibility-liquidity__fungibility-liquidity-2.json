@@ -1,0 +1,104 @@
+{
+ "url": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2/",
+ "slug": "fungibility-liquidity__fungibility-liquidity-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Fungibility and Liquidity - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Fungibility and Liquidity",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains the Difference Between Fungibility and Liquidity](https://www.reliancecpa.com/fungibility-liquidity)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains the Difference Between Fungibility and Liquidity",
+     "href": "https://www.reliancecpa.com/fungibility-liquidity"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Fungibility and Liquidity",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished April 30, 2012 | Full size is [900 × 675](https://www.reliancecpa.com/wp-content/uploads/fungibility-liquidity1.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 675",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/fungibility-liquidity1.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/fungibility-liquidity1.jpg",
+   "alt": "Fungibility and Liquidity",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "675",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity",
+   "region": "main"
+  },
+  {
+   "type": "a",
+   "text": "Fungibility and Liquidity",
+   "href": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity",
+   "is_button": false,
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 32
+}

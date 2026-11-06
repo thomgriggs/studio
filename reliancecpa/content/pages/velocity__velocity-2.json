@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/velocity/velocity-2/",
+ "slug": "velocity__velocity-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/velocity/velocity-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Velocity - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/velocity/velocity-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Velocity",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Explains What Velocity Means in the Financial World](https://www.reliancecpa.com/velocity)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Explains What Velocity Means in the Financial World",
+     "href": "https://www.reliancecpa.com/velocity"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Velocity",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished April 30, 2012 | Full size is [900 × 631](https://www.reliancecpa.com/wp-content/uploads/velocity.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 631",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/velocity.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/velocity.jpg",
+   "alt": "Velocity",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "631",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/velocity.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/velocity/velocity-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/velocity/velocity-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

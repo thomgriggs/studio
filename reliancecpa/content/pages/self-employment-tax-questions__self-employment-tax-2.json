@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2/",
+ "slug": "self-employment-tax-questions__self-employment-tax-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Self-Employment Tax - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Self-Employment Tax",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Answers Questions about Self-Employment Tax](https://www.reliancecpa.com/self-employment-tax-questions)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Answers Questions about Self-Employment Tax",
+     "href": "https://www.reliancecpa.com/self-employment-tax-questions"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Self-Employment Tax",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished June 28, 2013 | Full size is [900 × 598](https://www.reliancecpa.com/wp-content/uploads/Self-Employment-Tax.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 598",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Self-Employment-Tax.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Self-Employment-Tax.jpg",
+   "alt": "Self-Employment Tax",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "598",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Self-Employment-Tax.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 26
+}

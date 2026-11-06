@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/underwater-mortgage",
+ "slug": "underwater-mortgage",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-10-01",
+ "seo": {
+  "title_tag": "Underwater Mortgage | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/underwater-mortgage",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Talks About Selling Your Home if the Mortgage is ‘Underwater’",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Talks About Selling Your Home if the Mortgage is ‘Underwater’",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Underwater-Mortgage-300x199.jpg",
+   "alt": "Underwater Mortgage",
+   "alt_missing": false,
+   "title": "Underwater Mortgage",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "You’re not alone if your home’s on-paper value took a huge hut during the economic downturn. And, if you must move because of a job change or some other reason, you might have discovered to your chagrin how difficult it is to fetch a sales price even close to what you still owe on your mortgage. A mortgage with more money owed on it than the house is worth on paper is known as an underwater mortgage. It is an extremely difficult position for a homeowner who is compelled to sell.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) at Reliance Consulting, LLC, can help you figure out your options if you are sitting on an underwater mortgage, but you absolutely must move. Unfortunately, many homeowners in this situation have found their options limited to:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Retaining the property and renting it out",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A short sale",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A deed-in-lieu of foreclosure",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Paying cash to cover the shortfall in a regular home sale",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Foreclosure",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While none of these options might sound all that attractive, your particular circumstance will determine the best course of action. No matter what you decide, it pays to have a CPA from Reliance by your side to provide sound budgetary advice. Whatever you do, you don’t want a misguided decision on a forced home sale to affect you adversely years into the future. The key is understanding the potential ramifications of each of your different options, and how those ramifications best line up with your long-term financial goals. [Contact](http://reliancecpa.com/contact.html) Reliance today to learn more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 263
+}

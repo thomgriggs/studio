@@ -1,0 +1,100 @@
+{
+ "url": "https://www.reliancecpa.com/limited-liability-corporation.htm",
+ "slug": "limited-liability-corporation.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/limited-liability-corporation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/limited-liability-corporation.jpg",
+     "alt": "Ask Your CPA in Tampa about the Benefits of a Limited Liability Company, or LLC"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Starting a new business in the Tampa, FL area leaves you with a seemingly endless list of decisions to make. One of the first decisions is how you will set up the legal structure and ownership of your business. More specifically, you must decide who will be the owners of your business, whether it will be a partnership or corporation, and how your business will be taxed.",
+     "Your [CPA in Tampa](http://www.reliancecpa.com/) is qualified to give you input on these decisions, particularly on how you should structure the legal ownership of your business. During this discussion, your CPA will probably tell you about the advantages of a limited liability company, or LLC:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "An LLC is not a partnership or a corporation, but it does have features of both of these entities."
+     },
+     {
+      "text": "An LLC has the limited liability features of a corporation, and also enjoys some of the tax benefits of a partnership."
+     },
+     {
+      "text": "For federal tax purposes, an LLC is typically treated like a partnership."
+     },
+     {
+      "text": "The owners of an LLC are called members (not shareholders or partners), and members can be passive investors or they can be actively involved in the management of the business."
+     },
+     {
+      "text": "In most states, an LLC is allowed to have just one member."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Due to the above benefits and others, LLC has become the most popular business form for new companies. Many existing businesses have converted to LLCs, as well. Before you make a final decision on any type of business entity, it is highly recommended that you speak to your Tampa CPA and attorney to make sure that the type of legal ownership you select will provide you with the greatest benefits and the lowest risk."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/limited-liability-corporation/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/limited-liability-corporation.htm"
+ }
+}

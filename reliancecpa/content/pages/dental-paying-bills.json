@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/dental-paying-bills",
+ "slug": "dental-paying-bills",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Bill Payment | Dental Accounting | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-paying-bills",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Help you Develop Plan for Paying Your Bills and Those of Your Dental Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Help you Develop Plan for Paying Your Bills and Those of Your Dental Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Paying-Bills-200x300.jpg",
+   "alt": "Dental Paying Bills",
+   "alt_missing": false,
+   "title": "Dental Paying Bills",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Paying your bills is, of course, an integral part of maintaining a thriving dental practice. Naturally, the same holds true for your household. Yet, finding the time to crunch the numbers and keep up with what needs to be paid – and when – can almost seem like a full-time job on top of running your practice and treating patients. Rather than try to tackle the stressful, yet important, job of bill paying yourself, let a dental CPA from Reliance Consulting, LLC, handle it all for you.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance can help you with paying your bills by establishing a budget and a payment schedule for you. We will take the time necessary to truly get to know your practice inside and out, including the short- and long-term goals you have set for yourself and your business. Many payments can be scheduled and made with automatic withdrawals, which removes a lot of the day-to-day burden from you but still must be monitored to make sure no mistakes are being made from month to month. Some recurring expenses dentist offices can expect to incur include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Lease payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Staff salary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dental equipment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Debt service (if any)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Power and water bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dental supplies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Paying your bills at home is also time-consuming, and a dental CPA from Reliance can help you with that, as well. There is no need for you to let the chore of bill paying bog you down, not when you have Reliance to handle it for you. [Contact](http://reliancecpa.com/contact.html) us today if you are interested in learning more about our dental practice consulting services.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 287
+}

@@ -1,0 +1,24 @@
+---
+url: https://www.reliancecpa.com/late-income-tax-return.htm
+type: page
+title_tag: "Filing a Late Income Tax Return? Tampa Accountants Might Be Able to Assist You"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2011-12-08
+status: 200
+---
+
+[h3] Filing a Late Income Tax Return? Tampa Accountants Might Be Able to Assist You
+[img] alt="Advice from Tampa Accountants Might Help with a Late Income Tax Return" src=http://www.reliancecpa.com/wp-content/uploads/2011/12/late-income-tax-return.jpg
+[p] The income tax deadline on April 15 is enough to make anyone nervous, but filing an income tax return after this deadline is not necessarily the end of the world, especially if you have an experienced accountant to advise you on the best course of action.
+[p] For a variety of reasons, lots of folks in the greater Tampa, FL area are not able to file their income tax returns by the deadline, and the [Tampa accountants](http://www.reliancecpa.com/) at Reliance Consulting LLC are here to help them make it right. The steps we might take to assist you with late returns include:
+[ul]
+- Filing an extension if possible
+- Gathering all the information needed to file the returns
+- Obtaining the forms needed
+- Filing all tax returns that are late, even if you are not able to pay the tax due
+- Arranging a payment plan with the IRS if you qualify
+- Maintaining compliance with future filing deadlines
+[p] Regarding the subject of income tax returns, the old adage “better late than never” almost always applies. Failing to file income tax returns at all will result in several negative consequences such as penalties, interest, substitute returns filed on your behalf by the IRS, levies on your bank accounts, liens against your property, and wage garnishment.
+[p] Even if the IRS has filed a substitute return because you were late filing your income taxes, it’s still smart to contact the Tampa accountants at Reliance Consulting so that we can help you file your own returns and make sure you are given the deductions, credits, and exemptions you are entitled to. Please contact us today to learn more about how we can assist you with filing income tax returns and many other accounting and CPA services.

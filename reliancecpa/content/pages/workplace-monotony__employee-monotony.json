@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/workplace-monotony/employee-monotony/",
+ "slug": "workplace-monotony__employee-monotony",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/workplace-monotony/employee-monotony",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Employee Monotony - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/workplace-monotony/employee-monotony/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Employee Monotony",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Gives Tips on How to Combat Workplace Monotony](https://www.reliancecpa.com/workplace-monotony)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Gives Tips on How to Combat Workplace Monotony",
+     "href": "https://www.reliancecpa.com/workplace-monotony"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Employee Monotony",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 2, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Employee-Monotony.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Employee-Monotony.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Employee-Monotony.jpg",
+   "alt": "Employee Monotony",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Employee-Monotony.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/workplace-monotony/employee-monotony).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/workplace-monotony/employee-monotony"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

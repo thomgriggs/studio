@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/tax-saving-strategies.htm",
+ "slug": "tax-saving-strategies.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+ "seo": {
+  "title_tag": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-saving-strategies.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-saving-strategies.jpg",
+     "alt": "CPA in Tampa Has Tax Saving Strategies"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "A primary benefit of hiring a CPA in Tampa from Reliance Consulting, LLC is the fact that we can help you plan ways to legally reduce your tax liability. Our CPAs and accountants are experts in the most current tax code and laws and we are committed to showing our clients year-round about ways to reap the benefits of tax laws before it’s too late.",
+     "While just about any [CPA in Tampa](http://www.reliancecpa.com/) can crunch numbers, Reliance Consulting goes way beyond number crunching for our clients on April 15th. Saving money on taxes is not a once-a-year transaction involving forms and calculators. On the contrary, saving money on taxes requires good planning 365 days a year. And, even though many Tampa area residents might try to keep abreast of the latest tax laws affecting them, truly understanding tax code and watching for changes in tax law is a full-time job—the job of your CPA.",
+     "The simple truth is, the government is at least a one-third partner in your life. Tax law is often designed to help the government achieve current social objectives such as encouraging people to save for retirement, fund an education, and own a home. Since social objectives shift over time, it is up to your CPA in Tampa to be knowledgeable about the shifts taking place in tax law, and inform you about them so that you can plan your finances accordingly.",
+     "Tax saving strategies that might be recommended by your CPA in Tampa from Reliance Consulting, LLC include:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Dividing income among family members or entities so that a portion of income can be taxed in a lower bracket"
+     },
+     {
+      "text": "Investing in tax-deferred retirement accounts"
+     },
+     {
+      "text": "Deferring bonuses and other income to the next year when it may be taxed at a lower rate"
+     },
+     {
+      "text": "Using tax deductions and credits to purchase items you will enjoy, such as a vehicle or home"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Many people in the Tampa Bay area fail to take advantage of the tax incentives available simply because they are ignorant of changes in tax code. The job of your [CPA in Tampa](http://www.reliancecpa.com/)from Reliance Consulting, LLC would be to contact you about changes that affect you. Thanks to our proactive tax research, we have been known to call clients and say, “If you buy this item by a certain date, you can get a tax write-off at the end of the year.” We also are here if you ever need to call us before you make a major financial decision so that we can tell you about the tax benefits or consequences of that decision. Please contact a CPA in Tampa from Reliance Consulting today to receive a free financial checkup and to learn more about tax saving strategies we can assist you with."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/tax-saving-strategies/",
+  "role": "resource-article",
+  "tag": "tax",
+  "old_path": "/tax-saving-strategies.htm"
+ }
+}

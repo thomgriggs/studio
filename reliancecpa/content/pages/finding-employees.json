@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/finding-employees",
+ "slug": "finding-employees",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Finding Employees | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/finding-employees",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Provides Guidance on Finding the Right Employees for Your Company",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Provides Guidance on Finding the Right Employees for Your Company",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Right-Employees-226x300.jpg",
+   "alt": "Right Employees",
+   "alt_missing": false,
+   "title": "Right Employees",
+   "width": "226",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any small business owner who hopes to expand in a significant way will need to develop and refine a recruitment strategy in order to find employees who can take the company to the next level. Besides becoming an expert in the many legalities of hiring employees, a business owner needs to define roles, goals, and payrolls before ever placing the first job posting.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help a small business owner develop a recruitment plan, as well as give advice on every legal step required to make a new hire. Perhaps you have an idea of what sort of work needs to be done in order to expand your business, but you are not quite sure how to define the role of a new employee. We can help you sort through that issue, while also helping determine a fair payroll structure and the short- and long-term goals for each employee. In addition, a small business consultant from Reliance can take on many financial responsibilities of the company, freeing the owner to focus on daily operations and long-range planning. Our services include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how best to find the right employees for your company, or for any of our other small business consultancy services, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 237
+}

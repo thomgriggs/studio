@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/tax-compliance",
+ "slug": "tax-compliance",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Compliance | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-compliance",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help with Tax Compliance for a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help with Tax Compliance for a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Compliance-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tax Compliance",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the costs of doing business for any company is making sure it complies with its tax obligations. A recent study estimated that the U.S. federal tax system imposes 3.5 billion hours of compliance burden time and $140 billion in out-of-pocket costs nationwide. Some large and mid-sized companies address this cost of time and money by employing in-house accountants. Smaller companies typically rely on outside firms to perform functions like tax planning, documentation, and tax preparation. No matter which path you take, the cost of tax compliance must be considered when formulating an annual budget.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine how best to meet your company’s tax compliance responsibilities. It may be that our experienced, knowledgeable staff is all you need for cost-effective tax compliance. Or, depending on the size and scope of your company, it may make financial sense to keep a full-time accountant or staff of accountants on your payroll. However, in general, most companies find that the money and time saved by using an outside accounting firm can be substantial.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to shouldering the significant time burden related to record-keeping, a CPA from Reliance can:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Help your company take advantage of all available credits and deductions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Represent your company during an IRS audit, if necessary",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conduct cash flow analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Handle payroll services and bank account reconciliation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Work closely with you on tax planning",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how your company can best address the time and cost burden of tax compliance, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 270
+}

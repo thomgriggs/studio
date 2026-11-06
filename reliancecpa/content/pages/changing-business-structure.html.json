@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/changing-business-structure.html",
+ "slug": "changing-business-structure.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Changing Business Structure",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/changing-business-structure.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How Changing Your Business Structure Affects Your Tax Status",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How Changing Your Business Structure Affects Your Tax Status",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/changing-business-structure.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the first decisions a new business owner must make is the legal structure of the company. One factor to keep in mind when making that decision is the possibility that you may decide to change that structure in the future. This could happen for a number of reasons, including growth, moving the business, or as a response to a changing economic climate. Something to keep in mind if and when you decide to change your company’s legal structure is how it will affect your tax status.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can provide all the guidance you need as you decide on a legal structure for your company. This holds true whether you’re just starting out, or if you are thinking about changing the structure of an existing business. The basic business structures include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Sole proprietorship – a single business owned by one person",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Partnership – a single business in which two or more people share ownership",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Corporation – an independent legal entity owned by shareholders",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Limited liability company – a hybrid legal structure that combines the limited liability features of a corporation and the tax efficiencies of a partnership",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "S corporation – a U.S. domestic corporation that limits the tax liability for shareholders",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cooperative – a business owned by and operated for the benefit of people using its services",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting has been a premier accounting and small-business consulting firm in the Tampa Bay area since 1984. [Contact](http://www.reliancecpa.com/contact.html) us today for help deciding what type of legal structure provides you the best tax advantages, or for any of your small business accounting needs.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 283
+}

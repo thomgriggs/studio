@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/information-security.html",
+ "slug": "information-security.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Information Security",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/information-security.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains How to Keep Information Secure at Your Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains How to Keep Information Secure at Your Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-security.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A recent study conducted for the U.S. Department of Commerce by the National Institute of Standards and Technology (NIST) found that as large corporations have implemented more stringent digital security measures, hackers and cyber criminals have begun to prey more often on less-secure small businesses.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting can help you develop a strategy to safeguard your small business’ private information. This is not merely a matter of protecting company secrets from competitors, or keeping employee or client information – such as social security numbers – away from prying eyes. Information security, of the lack of it, can have a real impact on your company’s financial well-being. Many states have passed laws that require businesses to inform clients whose private information might have been compromised by a security breach, and the cost of complying with these notification laws can be hundreds of thousands of dollars.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The NIST study concluded that there are several measures that are “absolutely necessary” for a small business to ensure company information is secure. These include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Install protection from damage by viruses or spyware",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Install security for Internet connection",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Install software firewalls for business systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Create backup copies of important data",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Control physical access to network",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Secure office wireless signals",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to the potential monetary damage it would inflict on your business, a security breach might do irreparable harm to your company’s reputation. Clients will not do business with a company that allows private information to fall into the wrong hands. [Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free financial health checkup and to learn how to begin safeguarding your company’s important information.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 283
+}

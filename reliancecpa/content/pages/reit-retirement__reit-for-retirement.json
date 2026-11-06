@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/reit-retirement/reit-for-retirement/",
+ "slug": "reit-retirement__reit-for-retirement",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/reit-retirement/reit-for-retirement",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "REIT for Retirement - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/reit-retirement/reit-for-retirement/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "REIT for Retirement",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Examines the REIT as a Retirement Strategy](https://www.reliancecpa.com/reit-retirement)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Examines the REIT as a Retirement Strategy",
+     "href": "https://www.reliancecpa.com/reit-retirement"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "REIT for Retirement",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished May 31, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/REIT-for-Retirement.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/REIT-for-Retirement.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/REIT-for-Retirement.jpg",
+   "alt": "REIT for Retirement",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/REIT-for-Retirement.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/reit-retirement/reit-for-retirement).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/reit-retirement/reit-for-retirement"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 29
+}

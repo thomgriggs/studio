@@ -1,0 +1,103 @@
+{
+ "_about": "Reference config reproducing the Vaughn Law pipeline (WordPress + Divi). The live project in dvaughnlaw/ predates liftkit.json and keeps its own copy of the scripts in dvaughnlaw/tools/; copy this file to a project folder to run the shared tools against it.",
+ "name": "Vaughn Law",
+ "readme_title": "dvaughnlaw.com",
+ "domain": "dvaughnlaw.com",
+ "source": {
+  "primary": "https://dvaughnlaw.com"
+ },
+ "urls": {
+  "seed_csv": "content/dvaughnlaw-current-seo.csv",
+  "seed_url_column": "URL",
+  "seed_type_column": "Type",
+  "seed_name_column": "Page name",
+  "seed_modified_column": "Last modified"
+ },
+ "sitemaps": [
+  "sitemap_index.xml",
+  "sitemap.xml",
+  "wp-sitemap.xml"
+ ],
+ "crawl": {
+  "user_agent": "content-inventory-bot/1.0",
+  "delay": 1.0,
+  "discover_links": false
+ },
+ "selectors": {
+  "main": [
+   "#main-content",
+   "#et-main-area"
+  ],
+  "header": [
+   "#tt-header-wrap",
+   "header"
+  ],
+  "footer": [
+   "#main-footer",
+   "footer"
+  ],
+  "nav": [
+   "ul#top-menu"
+  ],
+  "nav_root": "header",
+  "logo": [
+   "img#logo"
+  ],
+  "top_bar": [
+   "#top-header"
+  ],
+  "sidebar": [
+   "#sidebar"
+  ],
+  "nav_button_class": "tt-top-btn"
+ },
+ "shared_min": 10,
+ "form_markers": [
+  {
+   "match": "lawmatics",
+   "note": "Lawmatics intake"
+  }
+ ],
+ "link_notes": [
+  {
+   "match": "localwebdesigncompany.com/vaughnlaw",
+   "note": "legacy-multisite-host"
+  }
+ ],
+ "path_types": {
+  "category": "category",
+  "tag": "tag",
+  "author": "author",
+  "etn-schedule": "event-schedule",
+  "etn_category": "event-category",
+  "etn": "event"
+ },
+ "global_extras": false,
+ "yoast": false,
+ "modulize": {
+  "title_suffix_regex": "\\s+-\\s+St\\. Petersburg, Tampa FL.*$",
+  "consultation_url": "https://dvaughnlaw.com/consultation/",
+  "contact_href_regex": "^https?://(?:www\\.)?dvaughnlaw\\.com/(?:vaughnlaw/)?contact/?$",
+  "excluded_pages_file": "content/excluded-stock-posts.json",
+  "templates_file": "design/kit/templates.json"
+ },
+ "build": {
+  "test_pages": [
+   "home",
+   "estate-planning",
+   "real-estate-law__homestead",
+   "10-types-of-trusts-a-quick-look"
+  ],
+  "path_prefix_strip": [
+   "vaughnlaw/"
+  ],
+  "default_concepts": [
+   "04-coastal-evolution-v2",
+   "05-people-first-v2"
+  ],
+  "path_aliases": {
+   "resources/video-library": "resources/videos",
+   "tag/video": "resources/videos"
+  }
+ }
+}

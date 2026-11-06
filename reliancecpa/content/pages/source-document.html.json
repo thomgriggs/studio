@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/source-document.html",
+ "slug": "source-document.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Source Document Explained | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/source-document.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Definition of a Source Document",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Definition of a Source Document",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/source-document.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "source-document",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Success in business relies on sound accountancy, and sound business accountancy relies on documentation. One major reason for that is, without proper records, a company is vulnerable in the face of an Internal Revenue Service audit. Just as important as legal protection is, simply, being able to use records to gauge a company’s profitability by comparing past performance to current performance – and using that information to decide how to do things going forward. The primary tool for proper record keeping is the source document.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can handle all of your business accountancy needs, including tax preparation and planning, bookkeeping, payroll services, bank account reconciliation and more. Much of what we do is dependent on source documents, which are defined as the original records of transactions, such as:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Credit and cash receipts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash register tapes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cancelled checks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Customer and supplier invoices",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Purchase orders",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Time cards",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Deposit slips",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Loan notes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest payment stubs",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has helped small businesses throughout the Tampa Bay area grow and prosper. [Contact](http://www.reliancecpa.com//contact.html) us today to learn more about our small business accounting services or for a free, no obligation financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 205
+}

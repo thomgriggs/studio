@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/business-insurance-tips.html",
+ "slug": "business-insurance-tips.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Insurance Tips | Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-insurance-tips.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Provides Tips for Buying Business Insurance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Provides Tips for Buying Business Insurance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-insurance-tips.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Buying business insurance can be one of the most frustrating aspects of owning a small business. First of all, it is entirely the owner’s responsibility to know what type of small business insurance is necessary, whether it’s general liability, workers’ compensation, business interruption insurance, key person insurance, malpractice insurance, or more. Once it has been determined what types of insurance are needed, how will you know where to find policies that won’t wreck your budget?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine all of your insurance needs, including regulatory requirements. Since opening our doors in 1984, Reliance has assisted hundreds of Florida businesses with a wide range of accounting services, including payroll management, tax planning and preparation, and deciding which types of insurance to carry. In general, according to the U.S. Small Business Association, there are five key things to remember about buying insurance for a small business:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Assess your risks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Shop for the best available deals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Find a reputable, licensed agent",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Consider a business owner’s policy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Perform an annual review of your insurance needs",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Premiums vary widely among different insurance companies, so shopping around is a must. In addition, always remember that your decision about which insurance to carry will be based on two main – providing adequate protection and minimizing risk for your business and assets. To learn more about the complicated world of business insurance, or for a complimentary financial health checkup, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 254
+}

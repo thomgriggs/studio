@@ -1,0 +1,105 @@
+{
+ "url": "https://www.reliancecpa.com/charitable-trust.html",
+ "slug": "charitable-trust.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/charitable-trust.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Benefits of a Charitable Trust",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Benefits of a Charitable Trust",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/charitable-trust.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "302",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to the feelings of satisfaction associated with giving to charitable organizations, current tax laws provide benefits rooted in the financial side of your life. Most people are aware of the basic deductions that are available for taxpayers who give to churches, educational foundations, medical research facilities, and other charities. However, beyond the usual donations, those with the means might be able to receive even more tax benefits – in addition to longer-term philanthropic satisfaction – by establishing a charitable trust.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you determine if you are in a financial position to set up a charitable trust, and if so, how much money you can afford to give. In addition, the accounting experts from Reliance can make sure you are in position to take full advantage of giving through a trust. There are two main types of charitable trusts:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Remainder trust – charitable recipients receive annual payments until the trust expires, at which point the organization or association receives the remaining assets in full.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lead trust – payments are distributed on a regular schedule, as with a remainder trust, but upon expiration the remaining funds are distributed to the grantor or the grantor’s estate.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has been one of the premier accounting firms and business consultancies in the Tampa Bay area. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more about the benefits of a charitable trust, and for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 253
+}

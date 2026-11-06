@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/mergers",
+ "slug": "mergers",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Mergers | Acquisitions | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/mergers",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a Tampa CPA Can Help Navigate Tax Implications for Mergers and Acquisitions",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a Tampa CPA Can Help Navigate Tax Implications for Mergers and Acquisitions",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Mergers-300x225.jpg",
+   "alt": "Mergers",
+   "alt_missing": false,
+   "title": "Mergers",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When two companies merge, or when one company takes over controlling interest in another, there are always tax implications to consider. An important task of an agency or firm handling a merger and/or acquisition deal is to make absolutely certain that the values of the target company and the acquiring company have been accurately calculated. Without knowing the accurate values of the companies involved, there is virtually no way to set a fair price for the acquisition.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you navigate all of the valuation and tax implications of a merger or an acquisition. This holds true whether you own the company being sold or absorbed, or you represent the company doing the acquiring. It is almost never a simple transaction that takes place in linear fashion. Most mergers and acquisitions have their own, unique challenges. That’s why it is so important to find a CPA who can serve as your company’s advocate while putting into practice a depth of knowledge and experience, the way we can at Reliance.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting, LLC, has helped hundreds of Tampa Bay area and Florida businesses with strategic planning, tax preparation, bookkeeping services, and more. We are the business consultant with a CPA sensibility, and our expertise will help you find the path to profitability. [Contact](http://reliancecpa.com/contact.html) us today if there is a merger or acquisition on the horizon, and let us help you make the most of the deal.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 261
+}

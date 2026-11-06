@@ -1,0 +1,147 @@
+{
+ "url": "https://www.reliancecpa.com/financial-planning.htm",
+ "slug": "financial-planning.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-consulting",
+  "first_pass_action": "Refresh",
+  "notes": "industry/service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Financial Planning for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financial-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financial Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Financial Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financial-planning.jpg",
+   "alt": "Financial Planning for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Financial Planning for the Tampa, FL Area",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Financial planning has one basic premise: to build and preserve your wealth so that you can bring your monetary goals to fruition. Not surprisingly, finances will never fall into place on their own, but many Tampa, FL area residents become so overwhelmed with the day-to-day struggles of life that they neglect to organize or follow a financial plan that will help them achieve their dreams.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The [Tampa CPA](http://www.reliancecpa.com/) firm of Reliance Consulting, LLC has become the financial planning authority of choice for residents and businesses throughout the area, from Tampa to Lakeland, Pasco to Sarasota, and Clearwater to St Petersburg. With our guidance, our clients have been empowered to create a comprehensive financial plan that minimizes risk and ensures the longevity and growth of their wealth.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The financial planning objectives of our clients are diverse, but the following are some common threads that run through most financial plans:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Tax Planning](http://www.reliancecpa.com/tax-planning.htm)",
+     "links": [
+      {
+       "text": "Tax Planning",
+       "href": "http://www.reliancecpa.com/tax-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax Diversification",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Funding children’s and grandchildren’s college education",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Saving enough money for retirement",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retiring with ample funds to pursue lifelong aspirations such as travel, hobbies, volunteer work, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protecting family members in case a breadwinner becomes disabled or passes away",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Minimizing risk and increasing the rewards of investments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Leaving an inheritance for heirs",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Wouldn’t you like to live with more financial freedom as the years go by? The only way to do so is with all-inclusive financial planning – your detailed map that can get you from where you are now to where you would like to be 5, 10, 20, or 40 years from now.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Let the Tampa accountants from Reliance Consulting show you the way. Please contact us for more information on financial planning and to receive a free financial checkup and review.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 300
+}

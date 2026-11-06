@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/big-purchase.html",
+ "slug": "big-purchase.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Factors to Consider Before Big Purchase | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/big-purchase.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Discusses Factors to Consider Before a Big Purchase",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Discusses Factors to Consider Before a Big Purchase",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/big-purchase.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "How does one quantify the thrill and sense of accomplishment that accompanies the purchase of a dream home? A coveted car? A rare collector’s item? A once-in-a-lifetime vacation? When wishes and wherewithal converge, prudence and practicalities understandably fade into the background. You want something, you know you can afford it, so why not just buy it?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Before you take the plunge, though, consider a conversation with your [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC. As healthy as your financial situation may be, and as exciting as it may be to buy something you’ve always wanted, it’s wise to seek advice from someone without a visceral attachment to the object of your desire. You need someone who can help you take a deep breath and ask yourself questions like these before you buy:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Do I *really* need this?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do I really need it *now*?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can I afford to pay in cash?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What tax implications might there be?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Are there other brands that might cost less?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will the price go down soon, as at an annual sale?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Will the item appreciate or lose its value after purchase?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How will buying this affect my long-term financial situation?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your financial health is the top priority for your accountant at Reliance Consulting, but we also understand there is more to life than money. By all means, set goals for how you wish to spend your money – we can help with that by developing a budget for big-ticket items that meshes with your long-term and short-term financial responsibilities. [Contact](http://www.reliancecpa.com/contact.html) Reliance for a complete financial health checkup before you make a big monetary commitment. You’ll be glad you did.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 283
+}

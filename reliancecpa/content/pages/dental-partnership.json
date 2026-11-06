@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/dental-partnership",
+ "slug": "dental-partnership",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Partnership | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-partnership",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Explain the Advantages of Structuring a Practice as a Partnership",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Explain the Advantages of Structuring a Practice as a Partnership",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Partnership-300x300.jpg",
+   "alt": "Dental Partnership",
+   "alt_missing": false,
+   "title": "Dental Partnership",
+   "width": "300",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One way to improve your odds of building a successful dental practice is to form a partnership. This might be with one or more other dentist-owners, or it might be with a person or entity that wants to contribute financially to the practice in order to share in the profits. While sharing the risk and the rewards of a dental practice can help protect you as an individual, it is vital to set up the partnership formally, in writing, with the help of a dental CPA.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A dental CPA from Reliance Consulting, LLC, can help make sure that no important details are overlooked when the partnership agreement is drawn up. The details of this form of business [tax structure](http://reliancecpa.com/dental-optimal-tax-structure) can include:",
+   "links": [
+    {
+     "text": "tax structure",
+     "href": "http://reliancecpa.com/dental-optimal-tax-structure"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The date the partnership becomes effective",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Signatures of all partners and interested parties",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "The term (length) of the partnership, if any",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Distribution of profits among partners and the practice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Salary for partners",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital requirements per partner",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax allocations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provisions for adding partners",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has helped businesses in Florida and beyond reach and maintain profitability. Our laser-like focus on the healthcare industry has given us a leg up on the competition when it comes helping dental professionals build successful practices. If you are interested in learning more about the most advantageous business structure for your dental practice, or you would like to learn more about our comprehensive dental CPA services, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 253
+}

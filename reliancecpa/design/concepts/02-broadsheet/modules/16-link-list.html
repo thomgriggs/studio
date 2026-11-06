@@ -1,0 +1,13 @@
+{#
+MODULE: link-list
+PURPOSE: Titled links in two columns of plain serif links with an arrow, the title left in a 5/7 split; an optional note in small muted type, and an "opens elsewhere" mark for external links. Used for the article index, downloads and client resources.
+SLOTS: eyebrow, title, level, links[text, href, note, external].
+SQUARESPACE: Heading + Text block of links, or a Summary block (list, titles only); downloads are Button or file links. No code.
+#}
+{% from "_macros.html" import eyebrow %}
+<section class="m m-links" data-module="link-list" data-tone="{{ tone }}">
+  <div class="headed__head">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}</div>
+  <ul class="links{{ ' links--cols' if s.links|length >= 8 }}" role="list">
+    {% for l in s.links %}<li>{% if l.href %}<a href="{{ l.href|href }}"{% if l.external %} target="_blank" rel="noopener"{% endif %}>{{ l.text|md }}<span aria-hidden="true"> →</span></a>{% else %}<span>{{ l.text|md }}</span>{% endif %}{% if l.note %}<small>{{ l.note }}</small>{% endif %}</li>{% endfor %}
+  </ul>
+</section>

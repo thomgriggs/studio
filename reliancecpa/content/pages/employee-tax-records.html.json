@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/employee-tax-records.html",
+ "slug": "employee-tax-records.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Keeping Employment Tax Records",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/employee-tax-records.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Answers the Question, How Long Should I Keep Employment Tax Records?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Answers the Question, How Long Should I Keep Employment Tax Records?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tax-records.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Internal Revenue Service suggests that businesses keep records of employment taxes for at least four years. In addition, the documents and records should be maintained in such a way that they are readily available for IRS review. Why should employment tax records be kept for so long? The most obvious answer is to maintain preparedness for a potential IRS audit.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help your business maintain and store all of your business records, including employment tax information. It’s one of the many services we offer that are designed to allow you to focus on the big picture and on production, rather than worry about the day-to-day headaches inherent to handling the financial minutia that can weigh down any small business owner. Among the employment tax documents you should keep safe for at least four years are:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Employer ID number",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Amounts, dates of payments – including wages, annuities, and pensions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Amounts of tips reported",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fair market value of in-kind wages paid",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Employee information – name, address, social security number, occupation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dates of employment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Copies of relevant forms – W4, etc.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Dates and amounts of tax deposits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other tax-related documentation",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped hundreds of Florida businesses find and stay on the path to profitability. Our business consultants are always there when you need them, and we take pride in our ability to quickly and efficiently respond to your business needs. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn how to minimize your business or personal tax burden or to receive a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 281
+}

@@ -1,0 +1,13 @@
+{#
+MODULE: image-text
+PURPOSE: The original's "industry story": a heading and text on one side and a 22px-radius photo on the other, 80px between; stacked on a phone.
+SLOTS: images[], eyebrow, title, level, body[].
+SQUARESPACE: Two-column Section: Heading + Text beside an Image block (rounded corners are an Image block setting).
+#}
+{% from "_macros.html" import eyebrow, body, img %}
+<section class="m m-imgtext" data-module="image-text" data-tone="{{ tone }}">
+  <div class="story">
+    <div class="story__t">{{ eyebrow(s.eyebrow, "eyebrow--terr") }}{% if s.title %}<h2 class="h-section" data-orig-level="{{ s.level }}">{{ s.title|md }}</h2>{% endif %}<div class="prose">{{ body(s.body, 4) }}</div></div>
+    <div class="imgs">{% for i in s.images %}<figure>{{ img(i) }}</figure>{% endfor %}</div>
+  </div>
+</section>

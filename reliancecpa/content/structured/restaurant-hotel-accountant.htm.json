@@ -1,0 +1,114 @@
+{
+ "url": "https://www.reliancecpa.com/restaurant-hotel-accountant.htm",
+ "slug": "restaurant-hotel-accountant.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Restaurant Accounting & Hotel Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Restaurant Accounting & Hotel Accountant for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/restaurant-hotel-accountant.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Restaurant Accounting & Hotel Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Restaurant Accounting & Hotel Accountant for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/restaurant-hotel-accountant.jpg",
+     "alt": "Restaurant Accounting & Hotel Accountant for the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "The Tampa, Florida area is a hub of tourism and leisure, so it comes as no surprise that Tampa, Clearwater, St Petersburg, Sarasota, Pasco, Lakeland, and other local communities are lined with restaurants and hotels. From the historic luxury of the famed Don Cesar on St Pete Beach to world renowned restaurants like Berns Steakhouse in Tampa, there is virtually no end to the options available for tourists and residents alike.",
+     "With all of these marvelous choices also comes a very competitive marketplace for the Tampa Bay hospitality industry. For hotels and restaurants to not only endure, but also conquer, these competitive challenges, they need a hotel and restaurant accounting firm with the experience and insight required to make the right decisions at the right time.",
+     "Reliance Consulting, LLC is a firm of [Tampa accountants](http://www.reliancecpa.com/) and CPAs with decades of experience in the Tampa Bay area hospitality industry. Our vast array of hotel and restaurant accounting services include the following:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "[Business tax](http://www.reliancecpa.com/business-tax.htm) preparation and planning"
+     },
+     {
+      "text": "Cost segregation"
+     },
+     {
+      "text": "Development analysis"
+     },
+     {
+      "text": "Cash flow management"
+     },
+     {
+      "text": "[Payroll](http://www.reliancecpa.com/payroll-services.htm)"
+     },
+     {
+      "text": "Bookkeeping"
+     },
+     {
+      "text": "Business financing"
+     },
+     {
+      "text": "[New business planning](http://www.reliancecpa.com/new-business-planning.htm)"
+     },
+     {
+      "text": "Much more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Our hotel and restaurant accountants are proud to serve establishments of all sizes and genres because we know that our success—as well as the success of businesses throughout the Tampa Bay area—is grounded in Florida’s thriving hotel and restaurant industry."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-tax-consulting/industries/hospitality/",
+  "role": "industry-example",
+  "tier": "business-tax-consulting",
+  "old_path": "/restaurant-hotel-accountant.htm"
+ },
+ "short_title": "Restaurants and Hotels"
+}

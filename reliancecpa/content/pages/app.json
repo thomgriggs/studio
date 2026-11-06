@@ -1,0 +1,143 @@
+{
+ "url": "https://www.reliancecpa.com/app",
+ "slug": "app",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "client-resources",
+  "first_pass_action": "Consolidate",
+  "notes": "portal / onboarding → resources hub"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-29",
+ "seo": {
+  "title_tag": "Reliance Consulting iPhone | iPad | Android | Mobile Financial App",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/app",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Introducing the Reliance Consulting Client Portal for Your Smart Phone or Tablet",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/app-logo3.png",
+   "alt": "Reliance Consulting App",
+   "alt_missing": false,
+   "title": "Reliance Consulting App",
+   "width": "133",
+   "height": "127",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We are delighted to launch the Reliance mobile app! Our mobile app has been under development for over one year and we are proud to announce its availability to all our clients. Using the mobile app, you should be able to access, any document we produce, including tax returns and financials, through your smart phone or tablet.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The iPhone, iPad and Android app is available to download in the iTunes® store and the Android® market. Simply follow these easy steps to log into your private portal on your smart phone.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Downloading the Reliance Consulting App:**",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "Connect to iTunes or the Android market on your smart phone.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Search for NetClient CS",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Download the free app",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Login with the same user name and password that you use for client login on our website.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Voila—All your tax and financial documents are now available to you on your mobile device. You have the ability to print and forward the documents via email.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "**Helpful Tips**:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "text": "If you are not setup on our net client portals, you can call our office to quickly sign up. Once your user name and password is established, you can access your portal from any computer or an Apple or Android device.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "If you do not see a particular document in your portal, please contact us and we will be more than happy to upload it for your convenience.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance, we are continuously committed improve our client experience. The mobile app is our latest effort to offer 24/7 access to important financial documents literally at your fingertips. [Contact us](http://www.reliancecpa.com/contact.html) to learn more about the services offered from Reliance Consulting, LLC, or to schedule your free, no obligation consultation regarding your financial needs.",
+   "links": [
+    {
+     "text": "Contact us",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 294
+}

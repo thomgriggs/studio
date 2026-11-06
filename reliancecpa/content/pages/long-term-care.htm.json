@@ -1,0 +1,133 @@
+{
+ "url": "https://www.reliancecpa.com/long-term-care.htm",
+ "slug": "long-term-care.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Answers the Question, Do I Need to Think about Long-term Care?",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/long-term-care.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Answers the Question, Do I Need to Think about Long-term Care?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Answers the Question, Do I Need to Think about Long-term Care?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/longtermcare.gif",
+   "alt": "CPA in Tampa - Long-term Care",
+   "alt_missing": false,
+   "title": "CPA in Tampa - Long-term Care",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "According to the U.S. Department of Health and Human Services, by 2020 about 12 million Americans will need long-term care. If you think you might become one of them, it’s important to plan now for how you’ll pay for the management of your healthcare and personal needs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can provide a free financial health checkup and help you make plans to protect your assets in the event that you become incapacitated or just need a little extra help with everyday activities later in life.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even if you expect to be among the approximately 70 percent of elderly Americans who receive care at home from family and friends, it’s important to think about all of your potential long-term care needs before you decide how to proceed financially. You might find that you need assistance with daily routines such as dressing, eating, exercising, bathing and using the restroom. Or you might need specialized medical care in the event of a chronic illness or debilitating injury.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When thinking about the cost of long-term care, it’s important to remember that Medicare only covers certain nursing facilities and home care, and then only under particular circumstances. Medicaid can help with nursing home costs, but usually is only available to low-income patients. The professional staff at Reliance Consulting can help you look ahead and be prepared if Medicare and Medicaid aren’t enough.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are a number of ways to help offset the future cost of long-term care:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Personal savings account.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Long-term care insurance.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reverse mortgage on property.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Veterans benefits.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accelerated benefits from life insurance.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Contact your CPA in Tampa at Reliance Consulting, LLC to learn more about how to plan for your potential long-term care needs.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 302
+}

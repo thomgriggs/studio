@@ -1,0 +1,167 @@
+{
+ "url": "https://www.reliancecpa.com/bookkeeping.htm",
+ "slug": "bookkeeping.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Bookkeeping for Tampa St Petersburg Clearwater Sarasota Lakeland Manatee Pasco Polk & Beyond",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/bookkeeping.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Bookkeeping for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Beyond",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Bookkeeping for Tampa, St Petersburg, Clearwater, Sarasota, Lakeland, Manatee, Pasco, Polk & Beyond",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/bookkeeping.jpg",
+   "alt": "Bookkeeping for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Bookkeeping for the Tampa, FL Area",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Bookkeeping is a fundamental part of doing business. But for small businesses, bookkeeping tasks are sometimes brushed aside during a hectic day. With the phones ringing, orders coming in, and employees asking questions, small business owners may find that bookkeeping responsibilities get lost in the shuffle.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The good news for small businesses in the Tampa, Florida area is that Reliance Consulting, LLC provides a broad spectrum of bookkeeping, [tax preparation](http://www.reliancecpa.com/tax-preparation.htm), and accounting support. Whether you own a retail outlet in Clearwater, a hotel in Tampa, a restaurant in Sarasota, or a real estate office in St Petersburg, we invite you to contact us about how we can get, and keep, your books in tip-top shape.",
+   "links": [
+    {
+     "text": "tax preparation",
+     "href": "http://www.reliancecpa.com/tax-preparation.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, our CPAs and accountants believe in matching our bookkeeping and accounting services to your distinctive needs. When you work with us, you can choose the specific services you want from a full menu of options, including:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "[Payroll](http://www.reliancecpa.com/payroll-services.htm)",
+     "links": [
+      {
+       "text": "Payroll",
+       "href": "http://www.reliancecpa.com/payroll-services.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Bank reconciliation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income statements",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Balance sheets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accounts payable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accounts receivable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "General ledger maintenance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "QuickBooks training and support",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Business tax](http://www.reliancecpa.com/business-tax.htm) preparation",
+     "links": [
+      {
+       "text": "Business tax",
+       "href": "http://www.reliancecpa.com/business-tax.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Unlimited consultations with your CPA and accountant",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "With each bookkeeping task we complete for your business, Reliance Consulting is committed to your success and prosperity. From the day of your new business formation to decades later, Reliance Consulting is available to answer your questions and offer advice. We pride ourselves in our proven bookkeeping results, which are confirmed by the fact that 99 percent of our clientele comes from referrals.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about our bookkeeping services from Tampa to Manatee, Dade City to Polk County, and Lakeland to Pasco County, please contact a CPA or accountant from Reliance Consulting, LLC today for a free, no obligation “check up” of your business or individual financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 305
+}

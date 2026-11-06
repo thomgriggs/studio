@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/social-media-strategy/social-media-strategy/",
+ "slug": "social-media-strategy__social-media-strategy",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/social-media-strategy/social-media-strategy",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Social Media Strategy - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/social-media-strategy/social-media-strategy/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Social Media Strategy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Talks About the Importance of a Social Media Strategy for Small Businesses](https://www.reliancecpa.com/social-media-strategy)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Talks About the Importance of a Social Media Strategy for Small Businesses",
+     "href": "https://www.reliancecpa.com/social-media-strategy"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Social Media Strategy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 31, 2012 | Full size is [874 × 900](https://www.reliancecpa.com/wp-content/uploads/Social-Media-Strategy.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "874 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Social-Media-Strategy.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Social-Media-Strategy.jpg",
+   "alt": "Social Media Strategy",
+   "alt_missing": false,
+   "title": "",
+   "width": "874",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Social-Media-Strategy.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/social-media-strategy/social-media-strategy).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/social-media-strategy/social-media-strategy"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 35
+}

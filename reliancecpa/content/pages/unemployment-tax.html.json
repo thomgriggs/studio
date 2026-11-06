@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/unemployment-tax.html",
+ "slug": "unemployment-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Unemployment Tax | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/unemployment-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains the Unemployment Tax Law for Small Businesses in Florida",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains the Unemployment Tax Law for Small Businesses in Florida",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/unemployment-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "unemployment-tax",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Does your small Florida business need to pay unemployment tax? The answer is almost certainly yes, because the state of Florida requires nearly every business, big or small, to contribute to the fund that exists to provide short-term compensation for employees who lose their jobs through no fault of their own and remain available for work.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) at Reliance Consulting, LLC, can help you navigate the complex unemployment tax laws that pertain to your small business. Although there are many factors that determine whether a business is liable for state unemployment tax, it generally boils down to this: If your business has a quarterly payroll of $1,500 or more, you must contribute to the state’s unemployment fund. A Tampa CPA at Reliance can answer all your questions about Florida’s unemployment tax law, including:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "How much money should you pay?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How and when are payments made?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do part-time employees create unemployment tax liability?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do you also need to pay federal unemployment tax?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Which agency determines the tax rate, and how is the formula calculated?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to providing answers for these and other complex questions about unemployment tax, your Tampa CPA at Reliance Consulting can cover all the time-consuming details that can make or break your small business – payroll services, income tax preparation, annual reports, internal audits and more. [Contact](http://www.reliancecpa.com/contact.html) a Tampa CPA at Reliance today to learn more about our small business services or for a complete financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 256
+}

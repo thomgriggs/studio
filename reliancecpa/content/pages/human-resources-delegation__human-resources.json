@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/human-resources-delegation/human-resources/",
+ "slug": "human-resources-delegation__human-resources",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/human-resources-delegation/human-resources",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Human Resources - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/human-resources-delegation/human-resources/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Human Resources",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains the Benefits of Outsourcing Your Company’s Human Resources](https://www.reliancecpa.com/human-resources-delegation)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains the Benefits of Outsourcing Your Company’s Human Resources",
+     "href": "https://www.reliancecpa.com/human-resources-delegation"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Human Resources",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished March 26, 2012 | Full size is [900 × 521](https://www.reliancecpa.com/wp-content/uploads/Human-Resources.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 521",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Human-Resources.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Human-Resources.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "521",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Human-Resources.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/human-resources-delegation/human-resources).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/human-resources-delegation/human-resources"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 30
+}

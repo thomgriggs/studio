@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/equilibrium-price",
+ "slug": "equilibrium-price",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Equilibrium Price | Tampa CPA | Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/equilibrium-price",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Equilibrium Price",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Equilibrium Price",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/equilibrium-price-300x200.jpg",
+   "alt": "Equilibrium Price",
+   "alt_missing": false,
+   "title": "Equilibrium Price",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Equilibrium price is the point where the quantity of products or services provided by a company or industry meets demand for those products or services. When economists illustrate this graphically, it generally is depicted by the intersection of the curves representing supply and demand, with price and quantity as the measurable factors. On the microeconomic side, this is an extremely important piece of data for small business owners to be familiar with in regards to their own market.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help small business owners understand this and other economic concepts. If you already are in business for yourself, you more than likely already grasp the importance of ideas such as equilibrium price. Yet, if you are like most business owners, you are so busy selling, developing, and otherwise coordinating your company’s activities that attending to the ephemera of business might fall through the cracks occasionally. That’s where a CPA from Reliance can be of particular use. In our capacity as your small business consultant, we can help you navigate demand and price fluctuations – which are key factors in determining equilibrium price.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A CPA from Reliance can also help with day-to-day bookkeeping, tax planning and preparation, payroll services, and all the financial activity that so often drains hours and days of production away from a small business owner. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more about the small business consulting side of our accounting firm.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 246
+}

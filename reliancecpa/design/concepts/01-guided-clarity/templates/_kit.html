@@ -1,0 +1,63 @@
+{# Browsable style guide: tokens and the three territories, type, then every module rendered once with real site content (brand), with "show in the three territories" under each, labelled with its slots and Squarespace equivalent. #}
+{% extends "_base.html" %}
+{% block main %}
+<section class="m kit-intro">
+  <p class="eyebrow">{{ concept.name }}</p>
+  <h1 class="h-page">Kit</h1>
+  <p class="lead">Every module rendered once with real content from the shared content files. Labels show the slots each module takes and how to build it in Squarespace 7.1. Under each sample, "Show in the territories" repeats it in Tax Preparation teal, Business Accounting sage and Business &amp; Tax Consulting gold: only thin rules, eyebrows, tags, active nav and section tints change.</p>
+  <h2 class="kit-h">Colour</h2>
+  <ul class="swatches">{% for k, v in concept.colors.items() %}<li><span class="swatch" style="background:{{ v }}"></span><strong>{{ k }}</strong><code>{{ v }}</code></li>{% endfor %}</ul>
+  <h2 class="kit-h">Territories</h2>
+  <div class="terrs">
+  {% for k, t in concept.territories.items() %}
+    <div class="terr-{{ k }} terrcard"><p class="eyebrow eyebrow--terr">{{ t.label }}</p><div class="terrcard__sw"><span class="swatch" style="background:{{ t.accent }}"></span><span class="swatch" style="background:{{ t.ink }}"></span><span class="swatch" style="background:{{ t.tint }}"></span></div><p class="kit-src">accent {{ t.accent }} (thin rules) · ink {{ t.ink }} (small text) · tint {{ t.tint }} (section ground)</p><p><span class="chip">Tag chip</span> <span class="chip chip--tag">Territory tag</span></p></div>
+  {% endfor %}
+  </div>
+  <h2 class="kit-h">Type</h2>
+  <div class="specimen">
+    <p class="eyebrow">Eyebrow, Arial 800 caps</p>
+    <p class="spec-h1">Heading one, Georgia 500, tight tracking</p>
+    <p class="spec-h2">Heading two, section title</p><p class="spec-h2" style="font-size:25px">Heading three, card title</p>
+    <p class="spec-h3">Heading three, row title</p>
+    <p>Body text in Arial. <a href="#">A link</a> and <strong>bold text</strong> sit inside running copy.</p>
+    <p><a class="btn btn-primary" href="#">Primary button</a> <a class="btn btn-secondary" href="#">Outline</a> <a class="btn btn-coral" href="#">Coral</a> <span class="on-dark"><a class="btn btn-light" href="#">Lime on dark</a></span> <a class="text-link" href="#">Text link <span aria-hidden="true">&rarr;</span></a></p>
+  </div>
+  <h2 class="kit-h">Modules</h2>
+  <ul class="kit-toc">{% for k in kit %}<li><a href="#mod-{{ k.name }}">{{ k.name }}</a></li>{% endfor %}<li><a href="#mod-site-header">site-header</a></li><li><a href="#mod-site-footer">site-footer</a></li></ul>
+</section>
+{% for k in kit %}
+<section class="kit-mod" id="mod-{{ k.name }}">
+  <div class="kit-label">
+    <h2 class="kit-name">{{ k.name }} <small>{{ k.file }}</small></h2>
+    <dl>
+      <dt>Purpose</dt><dd>{{ k.doc.purpose }}</dd>
+      <dt>Slots</dt><dd>{{ k.doc.slots }}</dd>
+      <dt>Squarespace 7.1</dt><dd>{{ k.doc.squarespace }}</dd>
+    </dl>
+  </div>
+  {% for i in k.instances %}
+  <div class="kit-sample">
+    <p class="kit-src">{% if i.variant %}Variant <strong>{{ i.variant }}</strong>, {% endif %}sample from <a href="{{ i.url }}">{{ i.url }}</a>. Filled slots: {{ i.slots.keys()|join(", ") }}.</p>
+    <div class="kit-render">{{ i.html }}</div>
+    <details class="kit-terr"><summary>Show in the territories</summary>
+      {% for t in ['teal', 'sage', 'gold'] %}<div class="kit-render terr-{{ t }}"><p class="kit-src">Territory: {{ concept.territories[t].label }}</p>{{ i.html }}</div>{% endfor %}
+    </details>
+  </div>
+  {% else %}
+  <p class="kit-src">No instance of this module in the current content (defined for kit parity).</p>
+  {% endfor %}
+</section>
+{% endfor %}
+<section class="kit-mod" id="mod-site-header">
+  <div class="kit-label"><h2 class="kit-name">site-header <small>templates/_nav.html</small></h2><dl>
+    <dt>Purpose</dt><dd>The 34px ink utility bar (tagline, Client login in lime) over the sticky 86px white header: logo, Services (the mega flyout: a rounded white panel, one column per tier with heading, one-line description, links and "See all"; the Consulting column adds the industry examples), Resources and About as simple dropdowns, Contact and the coral Get Started button. CSS-only hover and keyboard focus on desktop; at 1000px and below a Menu button opens a full-width panel with accordions (the original had no mobile menu). The active tier shows in its territory colour as a thin underline. Hover the header of this page to see it.</dd>
+    <dt>Slots</dt><dd>content/nav.json: menu (folders, fallback), mega.columns[tier, heading, description, accent, overview, links[label, url, summary], secondary], links (Contact, Client Login), button.</dd>
+    <dt>Squarespace 7.1</dt><dd>The flyout is a mega-menu plugin (Will Myers, Launch Hub Studio or SQSP Themes) rendering a normal page of three Section columns: Heading 3 (link), Text, a Text block of links, a "See all" link. Folders (Resources, About) are native dropdowns. The same three tiers as top-level folders are the mobile and no-plugin fallback (nav.json `menu`). Header: logo left, one Button (Get Started, coral), Client Login in the announcement bar (the native Announcement Bar holds the tagline and a link). Territory underline = custom CSS. Sticky header is a native setting.</dd></dl></div>
+</section>
+<section class="kit-mod" id="mod-site-footer">
+  <div class="kit-label"><h2 class="kit-name">site-footer <small>templates/_footer.html</small></h2><dl>
+    <dt>Purpose</dt><dd>The original's dark footer: white-plate logo with the Get Started button, then the link grid (three tiers with a thin territory rule, contact, then Resources, About, Legal and Follow, headings in lime) and the hairline copyright row. This page's own footer is the live sample below.</dd>
+    <dt>Slots</dt><dd>content/footer.json: columns, contact (address, phone, email, directions), social, legal links, extras, client_login, copyright.</dd>
+    <dt>Squarespace 7.1</dt><dd>Footer sections: Text blocks of links (or Navigation-style lists), a Text block for address and phone, a Social Links block if wanted. The territory rule above the tier columns is custom CSS.</dd></dl></div>
+</section>
+{% endblock %}

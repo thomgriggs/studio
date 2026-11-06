@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/dental-microsoft-office",
+ "slug": "dental-microsoft-office",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental CPA | Microsoft Office | Productivity | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-microsoft-office",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Help Your Practice Use Microsoft Office to Streamline Productivity",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Help Your Practice Use Microsoft Office to Streamline Productivity",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Microsoft-Office-300x200.jpg",
+   "alt": "Microsoft Office",
+   "alt_missing": false,
+   "title": "Microsoft Office",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Almost anyone who works in an office in the United States has at least a passing familiarity with the suite of products included with Microsoft Office. Most office workers have at least used Microsoft Word to create or edit documents. This is the most fundamental and common use for Office products, but there is much more to the software suite than writing letters or creating charts. A dental CPA from Reliance Consulting, LLC, can help your office manager and staff members develop the skill set needed to take full advantage of the many conveniences provided by Microsoft Office.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any [dental CPA](http://www.reliancecpa.com/dental-cpa) can help you with accounting services and tax planning and preparation, but Reliance takes the level of service to an entirely different level. We consider it part of our job to help dentist-owners with every aspect of practice management, and that includes finding ways to run a more efficient office. Here are just a few ways the Office suite can be useful as you try to maximize productivity within your practice:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://www.reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Customizing documents within Word",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Data graphing and charting on Excel",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Assembling mass mailings or emailing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Creating attractive letterhead or art for patient correspondence",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Reviewing and tracking changes within documents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Writing and editing copy to be used as updates for your practice’s website",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Many more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A dental CPA from Reliance can help you develop a plan for measuring and recording the cost of labor, and use that plan as a baseline for determining how your office staff members can best use their time during the work day. One way to streamline their workload is to provide training in how to use the many tools Microsoft Office provides within its suite of products. To learn more, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 303
+}

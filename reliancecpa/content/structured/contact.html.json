@@ -1,0 +1,74 @@
+{
+ "url": "https://www.reliancecpa.com/contact.html",
+ "slug": "contact.html",
+ "template": "content-page",
+ "family": "S1-embed",
+ "title": "Contact Us",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/contact.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Contact Us",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Contact Us"
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "If you have any unanswered questions, please let us know. There are easy ways to contact us. Simply call, email, or just stop by."
+     },
+     {
+      "type": "p",
+      "text": "**Reliance Consulting LLC**\n\n14499 N Dale Mabry Hwy Suite 179-S\n\nTampa, FL, 33618\n\nPhone: (813)931-7258\n\nFax: (813)931-5555"
+     },
+     {
+      "type": "p",
+      "text": "Email: kim@reliancecpa.com"
+     },
+     {
+      "type": "p",
+      "text": "[View Larger Map](http://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=13940+N+Dale+Mabry+Hwy+Tampa,+FL,+33618&aq=&sll=28.037213,-82.488785&sspn=0.06553,0.132093&vpsrc=0&ie=UTF8&hq=&hnear=13940+N+Dale+Mabry+Hwy,+Tampa,+Florida+33618&t=m&z=14&iwloc=A)"
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0,
+  "map_embed": 1
+ },
+ "scope": {
+  "new_path": "/contact/",
+  "role": "contact",
+  "old_path": "/contact.html"
+ }
+}

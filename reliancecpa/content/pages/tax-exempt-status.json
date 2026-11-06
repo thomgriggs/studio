@@ -1,0 +1,173 @@
+{
+ "url": "https://www.reliancecpa.com/tax-exempt-status",
+ "slug": "tax-exempt-status",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Exempt Status | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-exempt-status",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Who is Eligible to Apply for Federal Tax-Exempt Status",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Who is Eligible to Apply for Federal Tax-Exempt Status",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Exempt-Status-300x200.jpg",
+   "alt": "Tax Exempt",
+   "alt_missing": false,
+   "title": "Tax Exempt",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While it would be nice if every company could claim tax-exempt status with the federal government, the fact of the matter is only a select number of organizations qualify as tax-exempt.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you believe that your company or organization might qualify, you might wish to enlist the aid of a [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, to make sure.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In general, the IRS only allows a company to be recognized as tax-exempt if it is organized with the appropriate legal form. Those forms are:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A trust",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A corporation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "An association",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Although non-profit charities and churches are the best-known tax-exempt bodies, an organization does not necessarily have to be an organized charity or religious association in order to qualify as tax-exempt. There are different levels of tax-exemption, and there are many different types of organizations that can qualify. They include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Social welfare organizations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain agricultural or horticultural organizations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain labor organizations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain trade associations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain social clubs and fraternal societies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Employee benefit associations or funds",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Veterans organizations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certain political organizations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And others",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how and why particular organizations can be considered tax-exempt by the IRS, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 204
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/business-blog",
+ "slug": "business-blog",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "insights-index",
+  "first_pass_action": "Consolidate",
+  "notes": "→ /insights/"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Business Blog | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-blog",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Can Help You Decide if a Blog is Right for Your Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Can Help You Decide if a Blog is Right for Your Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Blog-300x199.jpg",
+   "alt": "Business Blog",
+   "alt_missing": false,
+   "title": "Business Blog",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In the early 2000s, businesses large and small began to turn to the Internet in earnest as a way to increase their customer base and generate more sales. By the mid-point of the decade, many business owners had begun to buy in to the notion that the best way to attract potential customers to a website is to populate the site with engaging content. The business Web log, or blog, began to come into fashion. At the time, conventional wisdom was that every business should add a blog to its website as soon as possible. But is that still true today?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether a blog is the right kind of marketing tool for your company. The main purpose of a business blog is to attract readers who could, in theory, become customers. A well-written blog positions the writer (and, by extension, the business) as an authority on the subject being written about. It shows that the company is engaged in the industry, and that the people who work there are industry thought leaders. If a company’s brand depends on the expertise of its people, a blog is a great way to demonstrate that knowledge. If Twitter or other content sharing networks are part of your company’s marketing strategy, a blog gives your company a voice and helps define your brand.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how a blog might be able to help generate more sales for your company and other small business planning strategies, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 275
+}

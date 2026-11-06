@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/social-media-mistakes",
+ "slug": "social-media-mistakes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Social Media Mistakes | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/social-media-mistakes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Warns of Social Media Mistakes that Could Hurt Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Warns of Social Media Mistakes that Could Hurt Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Social-Media-Mistakes-300x200.jpg",
+   "alt": "Social Media Mistakes",
+   "alt_missing": false,
+   "title": "Social Media Mistakes",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Social media platforms like Twitter, Facebook, Pinterest, Tumblr, and others have evolved from novelties for small businesses to necessities. Consumers these days expect the companies they do business with to have some form of social presence. Social could soon replace face-to-face interaction and telephone service as the chief form of customer relations in businesses, big or small. Yet, many marketing consultants continue to preach against blogging, tweeting, and other forms of social interaction, simply because they believe that the potential mistakes outweigh the potential benefit. This approach is, by far, the biggest mistake small businesses make when it comes to social media.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help a small business owner develop an effective strategy for using social media. The first step is to identify the goals. What do you want to achieve with Twitter or Facebook? It can be as simple as building an online following of potential customers, or as complex as creating a platform for customer interaction (a platform that the company maintains far greater control over than online consumer complaint boards!). Once the goals are established, it is vital for small businesses to avoid these potential pitfalls:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Don’t use social media only as a platform for self-promotion; inject some personality into the conversation.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Don’t ignore your fans or followers.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Don’t delete complaints.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Don’t make irate or unprofessional responses to people who comment.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Don’t give up too soon; building a following takes time and effort.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For more information about why social media is so important for small businesses (and what to avoid when you incorporate it into your marketing and customer service strategy), [contact](http://reliancecpa.com/contact) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 288
+}

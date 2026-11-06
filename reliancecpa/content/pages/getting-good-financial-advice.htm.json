@@ -1,0 +1,131 @@
+{
+ "url": "https://www.reliancecpa.com/getting-good-financial-advice.htm",
+ "slug": "getting-good-financial-advice.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa if You're Getting Good Financial Advice",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/getting-good-financial-advice.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa if You’re Getting Good Financial Advice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Ask Your CPA in Tampa if You’re Getting Good Financial Advice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/getting-good-financial-advice.jpg",
+   "alt": "Ask Your CPA in Tampa if You’re Getting Good Financial Advice",
+   "alt_missing": false,
+   "title": "Ask Your CPA in Tampa if You’re Getting Good Financial Advice",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Financial advice is everywhere these days – on TV shows and the Internet, as well as in books, magazines, and newspapers. There are plenty of financial advisors in the Tampa, FL area, as well, who will gladly meet with you personally and invest your money in ways they think are profitable. So apparently, finding financial advice is easy – but how do you know if the advice is any good?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "This is where your [CPA in Tampa](http://www.reliancecpa.com/) can likely save you time, money, and heartache – by providing you with an unbiased second opinion about the investment advice you’re receiving. For example, your CPA can:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Evaluate your investment portfolio",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tell you about the risks you might be taking",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Ask you if you are comfortable with those risks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Check to see if your investments are diversified so that you are not “putting all your eggs in one basket”",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Review the reports and numbers you are receiving from your financial advisor and alert you to any inconsistencies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Check to see if your investments are performing the way you had hoped",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Compare your investments to your overall financial goals",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just like you should get a second opinion on medical matters, you also should discuss all of your financial matters with your CPA, including your investments. Thankfully, your CPA is trained and experienced in providing you with the valuable investment expertise you need to protect your wealth.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you would like to speak to a CPA in Tampa from Reliance Consulting, LLC about your investments, please contact us today. We will not offer financial advice, but we will certainly help you make sure that the advice you are getting is sound and no one is taking you for a ride. We will be glad to provide you with a free consultation and checkup of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 314
+}

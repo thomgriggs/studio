@@ -1,0 +1,145 @@
+{
+ "url": "https://www.reliancecpa.com/property-depreciation.html",
+ "slug": "property-depreciation.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Property Depreciation | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/property-depreciation.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Talks About Deducting Property Depreciation",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Talks About Deducting Property Depreciation",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/property-depreciation.gif",
+   "alt": "Tampa CPA Property Depreciation",
+   "alt_missing": false,
+   "title": "property-depreciation",
+   "width": "300",
+   "height": "184",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The IRS allows for tax deductions based on depreciation of business-related property. Depreciation is defined as a loss of value over time because of wear and tear, deterioration, or obsolescence of the property. Three important rules apply to this kind of deduction: The taxpayer must own the property; it must be used to make money; and it must have a “determinable useful life” lasting more than one year. These kinds of deductions are particularly useful to understand for small businesses or independent contractors trying to stretch their equipment budgets.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can explain all of your potential tax deduction options and help you make the most of the money you spend on the items you need to do your job the right way. Since opening its doors in 1984, Reliance has been one of the premier accounting firms in the Tampa Bay area, helping hundreds of businesses reach and exceed their goals with reliable, professional cash flow management, payroll services, strategic planning, and more. Let us be your guide for tax planning and preparation, and we’ll make sure you’re properly credited for depreciation of:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Buildings",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Machinery",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Vehicles",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Furniture",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Equipment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Patents",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Copyrights",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Computer software",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital improvements on leased property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Our goal is to help your small business reach maximum profitability and long-term success, and our services will more than pay for themselves in time saved by you and your employees, as well as in possible tax savings. [Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 260
+}

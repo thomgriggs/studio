@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-failure.html",
+ "slug": "small-business-failure.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | What Causes Small Businesses to Fail",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-failure.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses What Causes Small Businesses to Fail",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses What Causes Small Businesses to Fail",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-failure.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "small-business-failure",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Perhaps the two most egregious errors committed by small business owners are a lack of a long-term company vision and a failure to establish clear goals and objectives. Going into a business endeavor blindly is naïve at best, reckless at worst, and a sure way to cause the business to fail.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help businesses, old and new, establish a long-term vision. And, using that vision as a guide, a small business advisor from Reliance can work hand-in-hand with company executives to establish clear goals and determine the best course of action to reach those objectives. A CPA from Reliance can also help a small business avoid the following potential pitfalls:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Misunderstanding of customer needs and desires",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Failure to give the competition enough credit",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inadequate financial planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lack of strong leadership",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Ineffective procedures and systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Absence of critical business skills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Inflexibility",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Failure to communicate the plan",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening its doors in 1984, Reliance has been a premier accounting firm in the Tampa Bay area. We’ve helped hundreds of businesses reach maximum profitability.[Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free financial health checkup and to let us help you get the most out of your small business.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 210
+}

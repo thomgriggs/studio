@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/power-of-attorney.htm",
+ "slug": "power-of-attorney.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Your CPA in Tampa Answers the Question, What is Power of Attorney?",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Answers, What is Power of Attorney?",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/power-of-attorney.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Answers the Question, What is Power of Attorney?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Your CPA in Tampa Answers the Question, What is Power of Attorney?",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/powerofattorney.gif",
+     "alt": "CPA in Tampa - Power of Attorney"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Power of attorney is granted in order to allow someone else to conduct your legal, financial, and/or healthcare affairs for you. Despite the name, the person granted power of attorney does not necessarily have to be a lawyer.",
+     "The laws governing power of attorney vary widely from state to state, so contact your [CPA in Tampa](http://www.reliancecpa.com//index.html) at Reliance Consulting, LLC for answers to your questions or to review documents pertaining to a power of attorney.",
+     "Among the questions a CPA can help you answer is whether to specify durable or non-durable power of attorney. Durable power of attorney remains in effect even after the granter of power of attorney, or the principal, becomes incapacitated. This can allow someone else to share in decisions related to health care or other legal issues. Non-durable power of attorney generally is used to allow someone to conduct a specific transaction on your behalf, such as a real estate purchase or sale of personal property.",
+     "Reliance Consulting can provide guidance for power of attorney documents related to:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Health care. You might need to acquire power of attorney in order to administer the long-term care of an incapacitated family member."
+     },
+     {
+      "text": "Real estate. A property management firm might need power of attorney to manage your real estate holdings."
+     },
+     {
+      "text": "Financial transactions. A tax preparer needs power of attorney in order to receive notices and return checks from the Internal Revenue Service on your behalf."
+     },
+     {
+      "text": "Many other legal issues. For instance, if you plan to be away or are incapacitated for an extended period of time, you can assign power of attorney to an agent to act on your behalf."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Contact your CPA in Tampa at Reliance Consulting, LLC for a review of your power of attorney documents or for help with other estate planning and wealth management needs."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/power-of-attorney/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/power-of-attorney.htm"
+ }
+}

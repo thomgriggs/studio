@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/withdrawal-from-ira",
+ "slug": "withdrawal-from-ira",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Early IRA Withdrawal | Retirement Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/withdrawal-from-ira",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How Early Withdrawal from an IRA affects Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How Early Withdrawal from an IRA affects Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/IRA-Withrawal-300x219.jpg",
+   "alt": "IRA Withdrawal",
+   "alt_missing": false,
+   "title": "IRA Withdrawal",
+   "width": "300",
+   "height": "219",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Anyone who has spent several years building up a respectable IRA (either traditional or Roth) knows that there are times when it would be nice to be able to access those funds either for unexpected expenses or to pay for a luxury item or vacation that you would otherwise not be able to afford. Yet, as you know, withdrawing from an IRA is not like withdrawing money from the bank. In general, people younger than 59½ are subject to a 10 percent penalty and the full tax due on what the IRS considers pretax income.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even though it usually is preferable to leave money in a retirement account alone to grow over time, a [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether you could be eligible to avoid the penalty and at least a portion of the tax burden if you absolutely must access that money. In general, hardships such as losing your job or medical issues can make you eligible to withdraw money from your IRA before age 59½. There are differences between distribution rules for traditional IRAs and Roth IRAs, and these differences boil down to the major distinction between the two:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A Roth IRA is tax exempt",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A traditional IRA is tax-deferred",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Another big difference is that only those who annually make $95,000 or less in taxable income ($150,000 married filing jointly) are eligible for a Roth IRA. Also, the principal paid into a Roth IRA can be withdrawn without a penalty. To learn whether your circumstance makes you eligible to withdraw money from a traditional or Roth IRA before you turn 59½, ask a Tampa CPA from Reliance.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) us today for help with tax planning, retirement planning, and more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

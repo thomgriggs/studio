@@ -1,0 +1,121 @@
+{
+ "url": "https://www.reliancecpa.com/living-will.htm",
+ "slug": "living-will.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Answers, What is a living will?",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/living-will.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Answers the Question, What is a Living Will?",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA in Tampa Answers the Question, What is a Living Will?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/livingwill.gif",
+   "alt": "CPA in Tampa - Living Will",
+   "alt_missing": false,
+   "title": "CPA in Tampa - Living Will",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A living will is a legal document that explicitly states your wishes should you become incapacitated in the event of terminal illness or serious injury. A living will is different from a legal will, which is a legal testament of how your estate should be administered after your death.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you formulate or review a living will, a document which is recognized by the Florida legislature as a fundamental right of every competent adult. In the state of Florida, the signing of a living will must be witnessed by two people, at least one of whom may not be a spouse or blood relative.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In a living will you can:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Designate a healthcare surrogate to make sure your wishes are carried out.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Direct the use or discontinuation of life-prolonging treatment.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Establish power of attorney.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Remove the burden and potential guilt about end-of-life decisions from loved ones.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provide yourself peace of mind, knowing that your wishes will be followed.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To receive help in formulating or reviewing a living will, or to receive assistance with any of your other estate planning needs, contact your CPA in Tampa at Reliance Consulting. Our professional staff brings a personal touch to help you achieve your goals.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 222
+}

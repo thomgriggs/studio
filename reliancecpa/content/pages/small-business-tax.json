@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-tax",
+ "slug": "small-business-tax",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-31",
+ "seo": {
+  "title_tag": "Small Business Tax | Tampa CPA | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-tax",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Advises You on Tax Considerations When You Start a New Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Advises You on Tax Considerations When You Start a New Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Small-Business-Tax-200x300.jpg",
+   "alt": "Small Business Tax",
+   "alt_missing": false,
+   "title": "Small Business Tax",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many, many things to think about when you start a new business. To begin with, you’ll want to conduct thorough research into your market to determine who might buy your product or service. In fact, until you have performed your market research, you shouldn’t try to get your business going. But once you have determined that there is a viable market out there, one of the very next things to address is the long list of tax considerations you have to take into account as a new business owner. The good news is, you don’t have to do that alone.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you navigate all of the tax considerations you’ll face as you start your business. We know that you have a lot of other things to think about before you launch your new company, such as hiring new employees, securing a facility, setting up manufacturing and shipping processes, and much more. Even if you are extremely familiar with the steps necessary to make sure your company is ready to be tax compliant, the process takes time and meticulous attention to detail. That’s why it makes sense to let Reliance take care of it for you, because your time is better spent making sure the company is actually ready to do business. The steps to tax compliance include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Applying for an employee identification number",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Selecting a business structure",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Choosing a tax year",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Filling out a Form I-9 and Form W-4 if you have employees",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A business consultant from Reliance can serve as your company’s off-site COO, taking care of the routine financial concerns such as payroll, bookkeeping, tax planning, and more. For a free financial health checkup, or to learn more about how we can help your business achieve profitability, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 318
+}

@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/commercial-lease.html",
+ "slug": "commercial-lease.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Finding the Best Commercial Lease",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/commercial-lease.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Finding the Best Commercial Lease for Your Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Finding the Best Commercial Lease for Your Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/commercial-lease.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the most important considerations for keeping your business on the path to profitability is finding the right commercial lease for your company. Not only must it be affordable; a commercial lease must never become an impediment to sound business. But how best to know beforehand whether your commercial lease is the right one for you?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can provide all the research and analysis necessary to determine exactly what should be included in your commercial lease – and what should be negotiated. For example, would you accept a longer term (more years) for a lower payment? Or would a shorter term be more beneficial? Among the many items to consider within a commercial lease are:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Rent – including built-in escalations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Length of the lease",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lease renewal conditions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tenant responsibility for utilities, including phone, electricity, and water",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tenant responsibility for maintenance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Required security deposit, if any",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Zoning assurances",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Sublease stipulations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Termination stipulations for the landlord and the tenant",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has earned the trust of thousands of individuals and hundreds of businesses by always being accessible, by always anticipating and efficiently meeting our clients’ financial needs, and by providing accurate, authoritative information to our clients in a timely manner. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 232
+}

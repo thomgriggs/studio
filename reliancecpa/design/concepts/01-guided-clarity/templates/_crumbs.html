@@ -1,0 +1,16 @@
+{# Breadcrumbs and (inside a tier) the contextual section nav, the original's tab group: a rounded outlined strip of the tier's services, the current one filled ink, a thin territory rule under the strip. #}
+{% set role = page.scope.role if page.scope else '' %}
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="{{ root }}index.html">Home</a>
+  {% if page.tier %}{% for col in nav.mega.columns if col.tier == page.tier %}<span aria-hidden="true">/</span>{% if page.template == 'tier-landing' %}<span>{{ col.heading }}</span>{% else %}<a href="{{ col.overview.href }}">{{ col.heading }}</a><span aria-hidden="true">/</span><span>{{ page.short_title or page.title }}</span>{% endif %}{% endfor %}
+  {% elif page.template == 'insight-article' %}<span aria-hidden="true">/</span><a href="{{ page_href('resources') }}">Resources</a><span aria-hidden="true">/</span><a href="{{ page_href('articles.html') }}">Articles</a>
+  {% else %}<span aria-hidden="true">/</span><span>{{ page.short_title or page.title }}</span>{% endif %}
+</nav>
+{% if page.tier and page.template in ('tier-landing', 'service-detail') %}
+{% for col in nav.mega.columns if col.tier == page.tier %}
+<nav class="sectionnav" aria-label="{{ col.heading }}">
+  <span class="sectionnav__l">In {{ col.heading }}</span>
+  <ul>{% for l in col.links + (col.secondary.links if col.secondary else []) if l.available %}<li><a href="{{ l.href }}"{% if l.current %} aria-current="page"{% endif %}>{{ l.label }}</a></li>{% endfor %}</ul>
+</nav>
+{% endfor %}
+{% endif %}

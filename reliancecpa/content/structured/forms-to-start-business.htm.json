@@ -1,0 +1,118 @@
+{
+ "url": "https://www.reliancecpa.com/forms-to-start-business.htm",
+ "slug": "forms-to-start-business.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+ "seo": {
+  "title_tag": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/forms-to-start-business.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business in the Tampa Bay Area",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/forms-to-start-new-business.jpg",
+     "alt": "Ask Your CPA in Tampa about the Forms Needed to Start a New Business"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "So, you have a great idea for starting a new business in the Tampa Bay area, but you’re not sure where to begin? That’s understandable, since starting a new business involves a lot more than renting office space and putting a sign on the door. Before you serve your first customer, there is a small mountain of paperwork and forms to be completed – but never fear – your CPA in Tampa should be able to walk you through the process and get you on your way to entrepreneurial success.",
+     "While by no means an exhaustive list, the following are some logistics you’ll need to seriously consider when opening your new business:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Deciding on a business name that does not conflict with any existing business names locally, statewide, or nationwide"
+     },
+     {
+      "text": "Registering your business name with the county (as a fictitious name, if necessary)"
+     },
+     {
+      "text": "Registering your business name with the state"
+     },
+     {
+      "text": "Getting a state or federal trademark on your business name"
+     },
+     {
+      "text": "Registering your online domain name"
+     },
+     {
+      "text": "Preparing organizational paperwork such as partnership agreements, articles of incorporation, etc."
+     },
+     {
+      "text": "Signing a lease for business space in a properly zoned location"
+     },
+     {
+      "text": "Getting a federal employment identification number (via IRS Form SS-4)"
+     },
+     {
+      "text": "Obtaining licenses and permits (depending on what type of business you’re involved in)"
+     },
+     {
+      "text": "Obtaining business insurance and liability insurance, as well as insurance for company vehicles"
+     },
+     {
+      "text": "Setting up your accounting and bookkeeping system"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Since your new business will involve a significant financial and emotional investment on your part, make sure to set it up properly so that it has the best chance of success. It is recommended that you consult a professional during this process, such as a [CPA in Tampa](http://www.reliancecpa.com/). Your CPA can assist you with making sure all forms and paperwork are in place so that you can hit the ground running and keep your business running smoothly for years into the future."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/forms-to-start-business/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/forms-to-start-business.htm"
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "url": "https://www.reliancecpa.com/business-valuation.htm",
+ "slug": "business-valuation.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-service-adjacent",
+  "first_pass_action": "Review",
+  "notes": "older .htm article; check traffic — some are real service pages (succession, estate, s-corp, part-time CFO)"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-valuation.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-valuation.jpg",
+   "alt": "Business Valuation by Tampa Accountant",
+   "alt_missing": false,
+   "title": "Business Valuation by Tampa Accountant",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Just about anyone in the Tampa Bay area could make an accurate guess as to what their car is worth and their house is worth. But if you own a business in Tampa, what you really want to know is, what is your business worth? This is not an easy question to answer, but by working with the right people, you should be able to come up with a reliable figure.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Analyzing the value of a business, or business valuation, is a complex task that requires years of hands-on experience. Far from an exact science, business valuation is almost an art form and is best handled by a [Tampa accountant](http://www.reliancecpa.com/) or CPA from an established firm. Reliance Consulting, LLC has been performing business valuations in the Tampa Bay area for more than 25 years. Our area-specific experience, combined with our dedication to meticulous work and the highest standards, has made us the natural choice as the Tampa accountant for hundreds of local businesses needing business valuation services.",
+   "links": [
+    {
+     "text": "Tampa accountant",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Your Tampa accountant and CPA from Reliance Consulting can provide you with a business valuation for the following purposes and more:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Sale or purchase of a business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bank financing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Divorce",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bankruptcy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Restructuring of the business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Starting an employee stock ownership plan (ESOP)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Partnership or management buyouts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Assessing business damage after a misfortune",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS problems and disputes",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As a business owner, your company obviously means the world to you personally, but it’s important to know what your business is worth in financial terms. Thankfully, a Tampa accountant from Reliance Consulting can evaluate every facet of your business and give you the numbers you need.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please contact a Tampa accountant from Reliance Consulting today to receive a free financial checkup and to learn more about business valuations in the greater Tampa Bay area.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 312
+}

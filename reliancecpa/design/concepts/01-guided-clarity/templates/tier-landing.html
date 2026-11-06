@@ -1,0 +1,5 @@
+{# Page shell: tier landing. Hero, then breadcrumbs and the section nav (the tier's services in its accent), then the rest of the modules. #}
+{% extends "_base.html" %}
+{% block main %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "nav": nav}) }}
+{% if loop.first %}{% include "_crumbs.html" %}{% endif %}
+{% endfor %}{% endblock %}

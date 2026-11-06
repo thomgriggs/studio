@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/five-cs-of-credit.html",
+ "slug": "five-cs-of-credit.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA In Tampa | The Five C’s Of Credit",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/five-cs-of-credit.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA In Tampa Reveals The Five C’s Of Credit",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA In Tampa Reveals The Five C’s Of Credit",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/five-cs-of-credit.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When the need for a business or personal loan arises, it’s important to understand the criteria used by lending institutions to determine whether you are worth the risk. Knowing these will enable you to put your best foot forward during the application process and will reduce the chance that you will be denied access to capital that might give your business or personal finances an important boost.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can provide detailed information about each of the “Five C’s” of credit – as well as analyze your standing with each. A Reliance business consultant will work closely with you to conduct thorough research into your credit-worthiness before you expose yourself or your business to rejection by a bank or other institution. Prior to filling out the copious amount of paperwork involved with a personal or business loan, consider where you stand in terms of the five main factors examined by lenders:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Character – reputation and reliability",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capacity – ability to repay the borrowed amount",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Capital – amount of money invested into the business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conditions – health of the company and the associated industry, as well as the terms of the loan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Collateral – inventory, equipment, real estate, stocks, accounts receivable, etc.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, we have helped hundreds of Tampa Bay area businesses find the path to profitability. The financial health of your company is our top priority, and we’ll work closely with you to ensure everything is order and running smoothly. We’ll even help with time management by taking on the day-to-day tasks associated with running a business, such as payroll services, cash flow management, tax planning and more. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 299
+}

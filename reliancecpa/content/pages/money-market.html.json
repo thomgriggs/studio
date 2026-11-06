@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/money-market.html",
+ "slug": "money-market.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Your Tampa CPA Explains how a Money Market Account Works",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/money-market.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains how a Money Market Account Works",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains how a Money Market Account Works",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/money-market.gif",
+   "alt": "",
+   "alt_missing": true,
+   "title": "money-market",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In a volatile financial world, many investors turn from the stock market to a money market account as a more secure method of safeguarding investments. While several varieties of money market accounts are available, in general they can be defined as liquid assets based on debt securities that mature in less than a year. Because of the relatively rapid maturation rate, the return on money market investments usually is lower than other securities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you seek a safer, less-volatile way to invest your money, a [Tampa CPA](file:///S:/websites/index.html) at Reliance Consulting, LLC, will help you explore your money market options. The debt securities associated with the money market are, in essence, short-term IOUs issued by governments, large corporations or financial institutions. The purpose of these IOUs is to help these well-established institutions raise large amounts of cash quickly.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "file:///S:/websites/index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "An accountant from Reliance will analyze your financial circumstance in order to help you determine if any of the following money market instruments are right for you:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Money market mutual funds or bank accounts",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Treasury bills",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Certificates of Deposit (CD)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Commercial paper",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Banker’s acceptance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Eurodollars",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Repurchase agreements (repos)",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting is a full-service accountancy firm, offering tax advice, estate planning, bookkeeping, tax preparation and business planning. To learn how a money market account fits into your long-term or short-term financial well-being, [contact](file:///S:/websites/contact.html) Reliance for a free financial health checkup.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "file:///S:/websites/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 236
+}

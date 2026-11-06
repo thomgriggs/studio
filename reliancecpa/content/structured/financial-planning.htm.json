@@ -1,0 +1,111 @@
+{
+ "url": "https://www.reliancecpa.com/financial-planning.htm",
+ "slug": "financial-planning.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Financial Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+ "seo": {
+  "title_tag": "Financial Planning for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financial-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Financial Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Financial Planning for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financial-planning.jpg",
+     "alt": "Financial Planning for the Tampa, FL Area"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Financial planning has one basic premise: to build and preserve your wealth so that you can bring your monetary goals to fruition. Not surprisingly, finances will never fall into place on their own, but many Tampa, FL area residents become so overwhelmed with the day-to-day struggles of life that they neglect to organize or follow a financial plan that will help them achieve their dreams.",
+     "The [Tampa CPA](http://www.reliancecpa.com/) firm of Reliance Consulting, LLC has become the financial planning authority of choice for residents and businesses throughout the area, from Tampa to Lakeland, Pasco to Sarasota, and Clearwater to St Petersburg. With our guidance, our clients have been empowered to create a comprehensive financial plan that minimizes risk and ensures the longevity and growth of their wealth.",
+     "The financial planning objectives of our clients are diverse, but the following are some common threads that run through most financial plans:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "[Tax Planning](http://www.reliancecpa.com/tax-planning.htm)"
+     },
+     {
+      "text": "Tax Diversification"
+     },
+     {
+      "text": "Funding children’s and grandchildren’s college education"
+     },
+     {
+      "text": "Saving enough money for retirement"
+     },
+     {
+      "text": "Retiring with ample funds to pursue lifelong aspirations such as travel, hobbies, volunteer work, etc."
+     },
+     {
+      "text": "Protecting family members in case a breadwinner becomes disabled or passes away"
+     },
+     {
+      "text": "Minimizing risk and increasing the rewards of investments"
+     },
+     {
+      "text": "Leaving an inheritance for heirs"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Wouldn’t you like to live with more financial freedom as the years go by? The only way to do so is with all-inclusive financial planning – your detailed map that can get you from where you are now to where you would like to be 5, 10, 20, or 40 years from now."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/business-tax-consulting/financial-planning/",
+  "role": "service",
+  "tier": "business-tax-consulting",
+  "old_path": "/financial-planning.htm"
+ },
+ "short_title": "Financial Planning"
+}

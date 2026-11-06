@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/sec-role",
+ "slug": "sec-role",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-04-30",
+ "seo": {
+  "title_tag": "Role of SEC | Tampa CPA | Reliance Consulting LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/sec-role",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Role of the Securities and Exchange Commission",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Role of the Securities and Exchange Commission",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/sec-300x200.jpg",
+   "alt": "SEC Role",
+   "alt_missing": false,
+   "title": "SEC Role",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The U.S. Securities and Exchange Commission (SEC) is tasked with creating and enforcing federal regulations related to the securities market, the stock market, and other financial markets in the U.S. It was created in 1934 by President Franklin D. Roosevelt during the Great Depression as a way to regulate the stock market and prevent corporate abuse related to the sale of shares and reporting on earnings.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you understand all of the laws the SEC is responsible for enforcing. It is particularly important for owners of companies who intend to offer public shares to understand the role of the SEC, because failure to comply with the regulations the agency enforces can be ruinous. For example, public companies must file quarterly and bi-annual reports to provide investors the information they need to make informed decisions. Certain aspects of the business must be disclosed publicly, which is one method the SEC uses to combat fraud and insider trading.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance, we have the experience and knowledge it takes to provide the guidance you need to make informed decisions regarding SEC compliance. We also can give you advice about whether your company is ready to “go public,” or whether it would be more prudent to wait – or to abandon the notion altogether. Every company is unique, which is why we devote the time and energy necessary to learn everything about your company. [Contact](http://www.reliancecpa.com/contact.html) us today to receive a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 262
+}

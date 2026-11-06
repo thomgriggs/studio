@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/market-indicators/market-indicators/",
+ "slug": "market-indicators__market-indicators",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/market-indicators/market-indicators",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Market Indicators - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/market-indicators/market-indicators/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Market Indicators",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Points Out Important Financial Market Indicators for Small Business Owners to Follow](https://www.reliancecpa.com/market-indicators)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Points Out Important Financial Market Indicators for Small Business Owners to Follow",
+     "href": "https://www.reliancecpa.com/market-indicators"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Market Indicators",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 2, 2012 | Full size is [900 × 592](https://www.reliancecpa.com/wp-content/uploads/Market-Indicators.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 592",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Market-Indicators.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Market-Indicators.jpg",
+   "alt": "Market Indicators",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "592",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Market-Indicators.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/market-indicators/market-indicators).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/market-indicators/market-indicators"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

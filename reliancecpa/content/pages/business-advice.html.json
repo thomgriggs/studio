@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/business-advice.html",
+ "slug": "business-advice.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "CPA in Tampa | Advice About Starting and Running a Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-advice.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Provides Advice About Starting and Running a Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Provides Advice About Starting and Running a Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-advice.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Ultimately, the responsibility for the success or failure of a small business rests with the owner. But smart business people know that it’s important to have a sounding board, and they will seek other informed opinions before making crucial decisions. One strategy employed by small business owners is to develop a mentor-protégé relationship with a trusted confidant, someone who knows the chosen industry and understands how the business owner thinks.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, is more than qualified to serve in that capacity. In addition to having a deep knowledge of what works in small business, a consultant from Reliance will take the time to get to know your unique, individual requirements. That way, whenever you need guidance, you’ll know where to turn. In addition to the sound advice you’ll receive from a Reliance business consultant, you can tap into other sources of information available from:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Local, state and federal small business development centers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Trade associations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Women’s business centers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Minority business development centers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Your personal network of family and friends",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business associates, including former supervisors or coworkers",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting opened in 1984, and very quickly became one of the Tampa Bay area’s top accounting and business consultancy firms. We have helped hundreds of small business owners with payroll services, cash flow management, tax planning, strategic planning and countless other day-to-day business responsibilities. [Contact](http://www.reliancecpa.com/contact.html) us today to find out how we can help your business reach maximum profitability.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 254
+}

@@ -1,0 +1,4916 @@
+{
+ "_about": "Pages the redesign drops (decision out in scope.json). Read by liftkit/tools/modulize.py (no structured output) and build.py. Nothing is deleted from content/pages or site/raw. `redirect` is the draft new-site path. Groups: other = everything dropped (this project has no stock-post/video groups; the generic format keeps the Vaughn group names).",
+ "stock_posts": [],
+ "video_posts": [],
+ "listings": [],
+ "other": [
+  {
+   "slug": "2008-Economic-Stimulus-Act.html",
+   "url": "https://www.reliancecpa.com/2008-Economic-Stimulus-Act.html",
+   "category": "dead-link",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "401k-plans.html",
+   "url": "https://www.reliancecpa.com/401k-plans.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "401k-plans.html__401k-plans",
+   "url": "https://www.reliancecpa.com/401k-plans.html/401k-plans/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "529-savings-plan-covers",
+   "url": "https://www.reliancecpa.com/529-savings-plan-covers",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "529-savings-plan-covers__young-african-american-college-student",
+   "url": "https://www.reliancecpa.com/529-savings-plan-covers/young-african-american-college-student/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "accountable-care-organizations",
+   "url": "https://www.reliancecpa.com/accountable-care-organizations",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "accrual-accounting",
+   "url": "https://www.reliancecpa.com/accrual-accounting",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "accrual-accounting__sales-report-2",
+   "url": "https://www.reliancecpa.com/accrual-accounting/sales-report-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "ad-laws",
+   "url": "https://www.reliancecpa.com/ad-laws",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "ad-laws__ad-laws",
+   "url": "https://www.reliancecpa.com/ad-laws/ad-laws/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "adjusted-gross-income.html",
+   "url": "https://www.reliancecpa.com/adjusted-gross-income.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "adjusted-gross-income.html__adjusted-gross-income",
+   "url": "https://www.reliancecpa.com/adjusted-gross-income.html/adjusted-gross-income/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "advertising-budget",
+   "url": "https://www.reliancecpa.com/advertising-budget",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "advertising-budget__advertising-budget-2",
+   "url": "https://www.reliancecpa.com/advertising-budget/advertising-budget-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "antitrust-law.html",
+   "url": "https://www.reliancecpa.com/antitrust-law.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "antitrust-law.html__antitrust-law",
+   "url": "https://www.reliancecpa.com/antitrust-law.html/antitrust-law/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "app__app-logo-2",
+   "url": "https://www.reliancecpa.com/app/app-logo-2/",
+   "category": "attachment",
+   "redirect": "/resources/mobile-app/"
+  },
+  {
+   "slug": "app__app-logo-3",
+   "url": "https://www.reliancecpa.com/app/app-logo-3/",
+   "category": "attachment",
+   "redirect": "/resources/mobile-app/"
+  },
+  {
+   "slug": "app__app-logo-4",
+   "url": "https://www.reliancecpa.com/app/app-logo-4/",
+   "category": "attachment",
+   "redirect": "/resources/mobile-app/"
+  },
+  {
+   "slug": "app__app-logo",
+   "url": "https://www.reliancecpa.com/app/app-logo/",
+   "category": "attachment",
+   "redirect": "/resources/mobile-app/"
+  },
+  {
+   "slug": "appealing-a-tax-dispute",
+   "url": "https://www.reliancecpa.com/appealing-a-tax-dispute",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "appealing-an-irs-dispute.html",
+   "url": "https://www.reliancecpa.com/appealing-an-irs-dispute.html",
+   "category": "dead-link",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "april-15-tax-day.html",
+   "url": "https://www.reliancecpa.com/april-15-tax-day.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "april-15-tax-day.html__april-15-tax-day",
+   "url": "https://www.reliancecpa.com/april-15-tax-day.html/april-15-tax-day/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "articles.html__bigstock_female_doctor_in_intensive_car_17340602",
+   "url": "https://www.reliancecpa.com/articles.html/bigstock_female_doctor_in_intensive_car_17340602/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__cloud",
+   "url": "https://www.reliancecpa.com/articles.html/cloud/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__couple01_isp",
+   "url": "https://www.reliancecpa.com/articles.html/couple01_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__irs-1",
+   "url": "https://www.reliancecpa.com/articles.html/irs-1/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__irs",
+   "url": "https://www.reliancecpa.com/articles.html/irs/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__medical",
+   "url": "https://www.reliancecpa.com/articles.html/medical/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__money",
+   "url": "https://www.reliancecpa.com/articles.html/money/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__money03_isp",
+   "url": "https://www.reliancecpa.com/articles.html/money03_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__money06_isp",
+   "url": "https://www.reliancecpa.com/articles.html/money06_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__money10_isp",
+   "url": "https://www.reliancecpa.com/articles.html/money10_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__obama",
+   "url": "https://www.reliancecpa.com/articles.html/obama/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__pen_and_money01_isp",
+   "url": "https://www.reliancecpa.com/articles.html/pen_and_money01_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__retirement-income",
+   "url": "https://www.reliancecpa.com/articles.html/retirement-income/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__romney",
+   "url": "https://www.reliancecpa.com/articles.html/romney/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "articles.html__secure01_isp",
+   "url": "https://www.reliancecpa.com/articles.html/secure01_isp/",
+   "category": "attachment",
+   "redirect": "/resources/articles/"
+  },
+  {
+   "slug": "audit-help.htm__audit-help",
+   "url": "https://www.reliancecpa.com/audit-help.htm/audit-help/",
+   "category": "attachment",
+   "redirect": "/resources/audit-help/"
+  },
+  {
+   "slug": "audit-reconsideration",
+   "url": "https://www.reliancecpa.com/audit-reconsideration",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "audit.html",
+   "url": "https://www.reliancecpa.com/audit.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "audit.html__audit",
+   "url": "https://www.reliancecpa.com/audit.html/audit/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "avoid-probate.html",
+   "url": "https://www.reliancecpa.com/avoid-probate.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "avoid-probate.html__avoid-probate",
+   "url": "https://www.reliancecpa.com/avoid-probate.html/avoid-probate/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "bank-accounts.html",
+   "url": "https://www.reliancecpa.com/bank-accounts.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "bank-accounts.html__bank-accounts",
+   "url": "https://www.reliancecpa.com/bank-accounts.html/bank-accounts/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "barter-exchanges.html",
+   "url": "https://www.reliancecpa.com/barter-exchanges.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "barter-exchanges.html__barter-exchanges",
+   "url": "https://www.reliancecpa.com/barter-exchanges.html/barter-exchanges/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "basic-valuation-analysis",
+   "url": "https://www.reliancecpa.com/basic-valuation-analysis",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "basic-valuation-analysis__dentist-chair-and-equipment",
+   "url": "https://www.reliancecpa.com/basic-valuation-analysis/dentist-chair-and-equipment/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "before-big-purchase",
+   "url": "https://www.reliancecpa.com/before-big-purchase",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "before-big-purchase__before-big-purchase-2",
+   "url": "https://www.reliancecpa.com/before-big-purchase/before-big-purchase-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "best-practices.html",
+   "url": "https://www.reliancecpa.com/best-practices.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "best-practices.html__best-practices",
+   "url": "https://www.reliancecpa.com/best-practices.html/best-practices/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "bi-weekly-mortgage.html",
+   "url": "https://www.reliancecpa.com/bi-weekly-mortgage.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "bi-weekly-mortgage.html__bi-weekly-mortgage",
+   "url": "https://www.reliancecpa.com/bi-weekly-mortgage.html/bi-weekly-mortgage/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "big-purchase.html",
+   "url": "https://www.reliancecpa.com/big-purchase.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "big-purchase.html__big-purchase",
+   "url": "https://www.reliancecpa.com/big-purchase.html/big-purchase/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "bookkeeping-accounting",
+   "url": "https://www.reliancecpa.com/bookkeeping-accounting",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "bookkeeping-accounting__bookkeeping-acounting",
+   "url": "https://www.reliancecpa.com/bookkeeping-accounting/bookkeeping-acounting/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "bookkeeping.htm__bookkeeping",
+   "url": "https://www.reliancecpa.com/bookkeeping.htm/bookkeeping/",
+   "category": "attachment",
+   "redirect": "/business-accounting/bookkeeping/"
+  },
+  {
+   "slug": "boost-employee-morale",
+   "url": "https://www.reliancecpa.com/boost-employee-morale",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "boost-employee-morale__boost-employee-morale",
+   "url": "https://www.reliancecpa.com/boost-employee-morale/boost-employee-morale/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "bottom-line",
+   "url": "https://www.reliancecpa.com/bottom-line",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "bottom-line__bottom-line-2",
+   "url": "https://www.reliancecpa.com/bottom-line/bottom-line-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "breakeven-analysis",
+   "url": "https://www.reliancecpa.com/breakeven-analysis",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "breakeven-analysis__breakeven-analysis-2",
+   "url": "https://www.reliancecpa.com/breakeven-analysis/breakeven-analysis-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "brick-and-mortar-business",
+   "url": "https://www.reliancecpa.com/brick-and-mortar-business",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "brick-and-mortar-business__newly-finished-small-business-buidling",
+   "url": "https://www.reliancecpa.com/brick-and-mortar-business/newly-finished-small-business-buidling/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "brick-and-mortar",
+   "url": "https://www.reliancecpa.com/brick-and-mortar",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "brick-and-mortar__brick-and-mortar-2",
+   "url": "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "budget-discipline",
+   "url": "https://www.reliancecpa.com/budget-discipline",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "budget-discipline__budget-discipline-2",
+   "url": "https://www.reliancecpa.com/budget-discipline/budget-discipline-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "budget-discipline__budget-discipline-3",
+   "url": "https://www.reliancecpa.com/budget-discipline/budget-discipline-3/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "business-advice.html",
+   "url": "https://www.reliancecpa.com/business-advice.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-advice.html__business-advice",
+   "url": "https://www.reliancecpa.com/business-advice.html/business-advice/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-blog__business-blog-2",
+   "url": "https://www.reliancecpa.com/business-blog/business-blog-2/",
+   "category": "attachment",
+   "redirect": "/resources/business-blog/"
+  },
+  {
+   "slug": "business-consultants.htm__business-consultant",
+   "url": "https://www.reliancecpa.com/business-consultants.htm/business-consultant/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-expenses-tax-deductible",
+   "url": "https://www.reliancecpa.com/business-expenses-tax-deductible",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "business-expenses-tax-deductible__business-expenses-deductible",
+   "url": "https://www.reliancecpa.com/business-expenses-tax-deductible/business-expenses-deductible/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "business-expenses",
+   "url": "https://www.reliancecpa.com/business-expenses",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "business-expenses__tax-preparer-3",
+   "url": "https://www.reliancecpa.com/business-expenses/tax-preparer-3/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "business-finance-consultant.htm__business-finance-consultant",
+   "url": "https://www.reliancecpa.com/business-finance-consultant.htm/business-finance-consultant/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/business-finance-consulting/"
+  },
+  {
+   "slug": "business-idea.html",
+   "url": "https://www.reliancecpa.com/business-idea.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-idea.html__business-ideas",
+   "url": "https://www.reliancecpa.com/business-idea.html/business-ideas/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-impediment.html",
+   "url": "https://www.reliancecpa.com/business-impediment.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-impediment.html__business-impediment",
+   "url": "https://www.reliancecpa.com/business-impediment.html/business-impediment/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-insurance-tips.html",
+   "url": "https://www.reliancecpa.com/business-insurance-tips.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-insurance-tips.html__business-insurance-tips",
+   "url": "https://www.reliancecpa.com/business-insurance-tips.html/business-insurance-tips/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-lease",
+   "url": "https://www.reliancecpa.com/business-lease",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-lease__c",
+   "url": "https://www.reliancecpa.com/business-lease/c/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-plan.html",
+   "url": "https://www.reliancecpa.com/business-plan.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-plan.html__business-plan",
+   "url": "https://www.reliancecpa.com/business-plan.html/business-plan/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-plan",
+   "url": "https://www.reliancecpa.com/business-plan",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-plan__business-marketing-and-planning",
+   "url": "https://www.reliancecpa.com/business-plan/business-marketing-and-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-planning-services.htm__business-planning",
+   "url": "https://www.reliancecpa.com/business-planning-services.htm/business-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/business-planning/"
+  },
+  {
+   "slug": "business-record-retention.htm__business-record-retention",
+   "url": "https://www.reliancecpa.com/business-record-retention.htm/business-record-retention/",
+   "category": "attachment",
+   "redirect": "/resources/business-record-retention/"
+  },
+  {
+   "slug": "business-tax-extension.html",
+   "url": "https://www.reliancecpa.com/business-tax-extension.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "business-tax-extension.html__business-tax-extension",
+   "url": "https://www.reliancecpa.com/business-tax-extension.html/business-tax-extension/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "business-tax.htm__business-tax",
+   "url": "https://www.reliancecpa.com/business-tax.htm/business-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/business-tax/"
+  },
+  {
+   "slug": "business-travel",
+   "url": "https://www.reliancecpa.com/business-travel",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-travel__business-travel-2",
+   "url": "https://www.reliancecpa.com/business-travel/business-travel-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "business-valuation.htm__business-valuation",
+   "url": "https://www.reliancecpa.com/business-valuation.htm/business-valuation/",
+   "category": "attachment",
+   "redirect": "/resources/business-valuation/"
+  },
+  {
+   "slug": "buying-a-business.html",
+   "url": "https://www.reliancecpa.com/buying-a-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-a-business.html__buying-a-business",
+   "url": "https://www.reliancecpa.com/buying-a-business.html/buying-a-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-car.html",
+   "url": "https://www.reliancecpa.com/buying-car.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-car.html__buying-car",
+   "url": "https://www.reliancecpa.com/buying-car.html/buying-car/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-home.html",
+   "url": "https://www.reliancecpa.com/buying-home.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-home.html__buying-home",
+   "url": "https://www.reliancecpa.com/buying-home.html/buying-home/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-life-insurance.html",
+   "url": "https://www.reliancecpa.com/buying-life-insurance.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "buying-life-insurance.html__buying-life-insurance",
+   "url": "https://www.reliancecpa.com/buying-life-insurance.html/buying-life-insurance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "capital-gains.html",
+   "url": "https://www.reliancecpa.com/capital-gains.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "capital-gains.html__capital-gains",
+   "url": "https://www.reliancecpa.com/capital-gains.html/capital-gains/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "capital-items",
+   "url": "https://www.reliancecpa.com/capital-items",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "capital-items__capital-items-2",
+   "url": "https://www.reliancecpa.com/capital-items/capital-items-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "cash-flow-management.htm__cash-flow-management",
+   "url": "https://www.reliancecpa.com/cash-flow-management.htm/cash-flow-management/",
+   "category": "attachment",
+   "redirect": "/business-accounting/cash-flow-management/"
+  },
+  {
+   "slug": "cash-flow.html",
+   "url": "https://www.reliancecpa.com/cash-flow.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "cash-flow.html__cash-flow",
+   "url": "https://www.reliancecpa.com/cash-flow.html/cash-flow/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "ceo.html",
+   "url": "https://www.reliancecpa.com/ceo.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "ceo.html__ceo",
+   "url": "https://www.reliancecpa.com/ceo.html/ceo/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "changing-business-structure.html",
+   "url": "https://www.reliancecpa.com/changing-business-structure.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "changing-business-structure.html__changing-business-structure",
+   "url": "https://www.reliancecpa.com/changing-business-structure.html/changing-business-structure/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "charitable-contributions.html",
+   "url": "https://www.reliancecpa.com/charitable-contributions.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-contributions.html__charitable-contributions",
+   "url": "https://www.reliancecpa.com/charitable-contributions.html/charitable-contributions/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-donations-business-taxes",
+   "url": "https://www.reliancecpa.com/charitable-donations-business-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-donations-business-taxes__tax-forms-3",
+   "url": "https://www.reliancecpa.com/charitable-donations-business-taxes/tax-forms-3/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-donations-personal-taxes",
+   "url": "https://www.reliancecpa.com/charitable-donations-personal-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-donations-personal-taxes__tax-forms-2",
+   "url": "https://www.reliancecpa.com/charitable-donations-personal-taxes/tax-forms-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "charitable-trust.html",
+   "url": "https://www.reliancecpa.com/charitable-trust.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "charitable-trust.html__charitable-trust",
+   "url": "https://www.reliancecpa.com/charitable-trust.html/charitable-trust/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "checkup-financial-health.htm__checkup-financial-health",
+   "url": "https://www.reliancecpa.com/checkup-financial-health.htm/checkup-financial-health/",
+   "category": "attachment",
+   "redirect": "/resources/checkup-financial-health/"
+  },
+  {
+   "slug": "child-care-credit.html",
+   "url": "https://www.reliancecpa.com/child-care-credit.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "child-care-credit.html__child-care-credit",
+   "url": "https://www.reliancecpa.com/child-care-credit.html/child-care-credit/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "child-dependents.html",
+   "url": "https://www.reliancecpa.com/child-dependents.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "child-dependents.html__child-dependent",
+   "url": "https://www.reliancecpa.com/child-dependents.html/child-dependent/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cloud-based-accounting.html",
+   "url": "https://www.reliancecpa.com/cloud-based-accounting.html",
+   "category": "dead-link",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cloud-based-accounting",
+   "url": "https://www.reliancecpa.com/cloud-based-accounting",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "college-savings.html",
+   "url": "https://www.reliancecpa.com/college-savings.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "college-savings.html__college-savings",
+   "url": "https://www.reliancecpa.com/college-savings.html/college-savings/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "college-tax-benefits",
+   "url": "https://www.reliancecpa.com/college-tax-benefits",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "college-tax-benefits__college-tax-benefits-2",
+   "url": "https://www.reliancecpa.com/college-tax-benefits/college-tax-benefits-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "college-tax-concerns",
+   "url": "https://www.reliancecpa.com/college-tax-concerns",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "college-tax-concerns__college-tax-concerns-2",
+   "url": "https://www.reliancecpa.com/college-tax-concerns/college-tax-concerns-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "commercial-lease.html",
+   "url": "https://www.reliancecpa.com/commercial-lease.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "commercial-lease.html__commercial-lease",
+   "url": "https://www.reliancecpa.com/commercial-lease.html/commercial-lease/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "communication-guidelines",
+   "url": "https://www.reliancecpa.com/communication-guidelines",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "communication-guidelines__communication-guidelines-2",
+   "url": "https://www.reliancecpa.com/communication-guidelines/communication-guidelines-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "contact",
+   "url": "https://www.reliancecpa.com/contact",
+   "category": "alias",
+   "redirect": "/contact/"
+  },
+  {
+   "slug": "contract-for-deed",
+   "url": "https://www.reliancecpa.com/contract-for-deed",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "contract-for-deed__senior-home-buyers",
+   "url": "https://www.reliancecpa.com/contract-for-deed/senior-home-buyers/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "corporate-divestiture.html",
+   "url": "https://www.reliancecpa.com/corporate-divestiture.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "corporate-divestiture.html__corporate-divestiture",
+   "url": "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "corporation.htm__corporation",
+   "url": "https://www.reliancecpa.com/corporation.htm/corporation/",
+   "category": "attachment",
+   "redirect": "/resources/corporation/"
+  },
+  {
+   "slug": "cost-segregation.html",
+   "url": "https://www.reliancecpa.com/cost-segregation.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cost-segregation.html__cost-segregation-survey",
+   "url": "https://www.reliancecpa.com/cost-segregation.html/cost-segregation-survey/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "costs-of-consumer-bankruptcy",
+   "url": "https://www.reliancecpa.com/costs-of-consumer-bankruptcy",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "costs-of-consumer-bankruptcy__costs-of-bankruptcy",
+   "url": "https://www.reliancecpa.com/costs-of-consumer-bankruptcy/costs-of-bankruptcy/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cpa-firm-brooksville-hernando.htm__cpa-firm-brooksville-hernando",
+   "url": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm/cpa-firm-brooksville-hernando/",
+   "category": "attachment",
+   "redirect": "/areas-served/brooksville-hernando/"
+  },
+  {
+   "slug": "cpa-firm-lakeland-polk.htm__lakelandfl",
+   "url": "https://www.reliancecpa.com/cpa-firm-lakeland-polk.htm/lakelandfl/",
+   "category": "attachment",
+   "redirect": "/areas-served/lakeland-polk/"
+  },
+  {
+   "slug": "cpa-firm-pasco-county.htm__pasco-county",
+   "url": "https://www.reliancecpa.com/cpa-firm-pasco-county.htm/pasco-county/",
+   "category": "attachment",
+   "redirect": "/areas-served/pasco-county/"
+  },
+  {
+   "slug": "cpa-firm-sarasota-bradenton.htm__sarasota",
+   "url": "https://www.reliancecpa.com/cpa-firm-sarasota-bradenton.htm/sarasota/",
+   "category": "attachment",
+   "redirect": "/areas-served/sarasota-bradenton/"
+  },
+  {
+   "slug": "cpa-firm-stpetersburg-clearwater-pinellas.htm__stpetersburg-clearwater-pinellas",
+   "url": "https://www.reliancecpa.com/cpa-firm-stpetersburg-clearwater-pinellas.htm/stpetersburg-clearwater-pinellas/",
+   "category": "attachment",
+   "redirect": "/areas-served/st-petersburg-clearwater-pinellas/"
+  },
+  {
+   "slug": "cpa-firm-tampa-brandon-hillsborough.htm__tampa-brandon-hillsborough",
+   "url": "https://www.reliancecpa.com/cpa-firm-tampa-brandon-hillsborough.htm/tampa-brandon-hillsborough/",
+   "category": "attachment",
+   "redirect": "/areas-served/tampa-brandon-hillsborough/"
+  },
+  {
+   "slug": "cpa-firm-tampa-stpetersburg-clearwater.htm__tampa-stpetersburg-clearwater",
+   "url": "https://www.reliancecpa.com/cpa-firm-tampa-stpetersburg-clearwater.htm/tampa-stpetersburg-clearwater/",
+   "category": "attachment",
+   "redirect": "/areas-served/tampa-st-petersburg-clearwater/"
+  },
+  {
+   "slug": "credit-card-offer.html",
+   "url": "https://www.reliancecpa.com/credit-card-offer.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "credit-card-offer.html__credit-card-offer",
+   "url": "https://www.reliancecpa.com/credit-card-offer.html/credit-card-offer/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "credit-card-rewards",
+   "url": "https://www.reliancecpa.com/credit-card-rewards",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "credit-card-rewards__credit",
+   "url": "https://www.reliancecpa.com/credit-card-rewards/credit/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "credit-scores.html",
+   "url": "https://www.reliancecpa.com/credit-scores.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "credit-scores.html__credit-scores",
+   "url": "https://www.reliancecpa.com/credit-scores.html/credit-scores/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "credit-unions.html",
+   "url": "https://www.reliancecpa.com/credit-unions.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "credit-unions.html__credit-unions",
+   "url": "https://www.reliancecpa.com/credit-unions.html/credit-unions/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "crowd-fundin",
+   "url": "https://www.reliancecpa.com/crowd-fundin",
+   "category": "alias",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "crowd-funding",
+   "url": "https://www.reliancecpa.com/crowd-funding",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "crowd-funding__crowdfunding",
+   "url": "https://www.reliancecpa.com/crowd-funding/crowdfunding/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "current-assets.html",
+   "url": "https://www.reliancecpa.com/current-assets.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "current-assets.html__current-assets",
+   "url": "https://www.reliancecpa.com/current-assets.html/current-assets/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "customer-base.html",
+   "url": "https://www.reliancecpa.com/customer-base.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "customer-base.html__customer-base",
+   "url": "https://www.reliancecpa.com/customer-base.html/customer-base/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "customer-service.html",
+   "url": "https://www.reliancecpa.com/customer-service.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "customer-service.html__customer-service",
+   "url": "https://www.reliancecpa.com/customer-service.html/customer-service/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "cutting-costs-home.html",
+   "url": "https://www.reliancecpa.com/cutting-costs-home.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cutting-costs-home.html__cutting-costs-home",
+   "url": "https://www.reliancecpa.com/cutting-costs-home.html/cutting-costs-home/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cutting-costs-office.html",
+   "url": "https://www.reliancecpa.com/cutting-costs-office.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "cutting-costs-office.html__cutting-costs-office",
+   "url": "https://www.reliancecpa.com/cutting-costs-office.html/cutting-costs-office/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "debt-restructuring.html",
+   "url": "https://www.reliancecpa.com/debt-restructuring.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "debt-restructuring.html__debt-restructuring",
+   "url": "https://www.reliancecpa.com/debt-restructuring.html/debt-restructuring/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "debt.html",
+   "url": "https://www.reliancecpa.com/debt.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "debt.html__debt",
+   "url": "https://www.reliancecpa.com/debt.html/debt/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "delegating-tasks.html",
+   "url": "https://www.reliancecpa.com/delegating-tasks.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "delegating-tasks.html__delegating-tasks",
+   "url": "https://www.reliancecpa.com/delegating-tasks.html/delegating-tasks/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "demand-up-capital-down",
+   "url": "https://www.reliancecpa.com/demand-up-capital-down",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "demand-up-capital-down__small-business-capital",
+   "url": "https://www.reliancecpa.com/demand-up-capital-down/small-business-capital/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "demonstrating-trust",
+   "url": "https://www.reliancecpa.com/demonstrating-trust",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "demonstrating-trust__demonstrating-trust",
+   "url": "https://www.reliancecpa.com/demonstrating-trust/demonstrating-trust/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-accounting-tax-services",
+   "url": "https://www.reliancecpa.com/dental-accounting-tax-services",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-accounting-tax-services__dental-accounting-and-tax-services",
+   "url": "https://www.reliancecpa.com/dental-accounting-tax-services/dental-accounting-and-tax-services/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-asset-protection-planning",
+   "url": "https://www.reliancecpa.com/dental-asset-protection-planning",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-asset-protection-planning__dental-asset-protection-planning",
+   "url": "https://www.reliancecpa.com/dental-asset-protection-planning/dental-asset-protection-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-billboards-yellow-pages-flyers",
+   "url": "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-billboards-yellow-pages-flyers__billboards-yellow-pages-flyers",
+   "url": "https://www.reliancecpa.com/dental-billboards-yellow-pages-flyers/billboards-yellow-pages-flyers/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-bookkeeping",
+   "url": "https://www.reliancecpa.com/dental-bookkeeping",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-breaking-down-a-lease",
+   "url": "https://www.reliancecpa.com/dental-breaking-down-a-lease",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-breaking-down-a-lease__dentist",
+   "url": "https://www.reliancecpa.com/dental-breaking-down-a-lease/dentist/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-buy-lease-analysis",
+   "url": "https://www.reliancecpa.com/dental-buy-lease-analysis",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-buy-lease-analysis__dental-buy-lease-analysis-2",
+   "url": "https://www.reliancecpa.com/dental-buy-lease-analysis/dental-buy-lease-analysis-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-c-corporation",
+   "url": "https://www.reliancecpa.com/dental-c-corporation",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-c-corporation__dental-c-corporation",
+   "url": "https://www.reliancecpa.com/dental-c-corporation/dental-c-corporation/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-cash-flow-management",
+   "url": "https://www.reliancecpa.com/dental-cash-flow-management",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-choosing-a-bank",
+   "url": "https://www.reliancecpa.com/dental-choosing-a-bank",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-choosing-a-bank__choosing-a-bank",
+   "url": "https://www.reliancecpa.com/dental-choosing-a-bank/choosing-a-bank/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-corporate-tax",
+   "url": "https://www.reliancecpa.com/dental-corporate-tax",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-corporate-tax__corporate-tax-returns",
+   "url": "https://www.reliancecpa.com/dental-corporate-tax/corporate-tax-returns/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-cpa",
+   "url": "https://www.reliancecpa.com/dental-cpa",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/industries/physicians/"
+  },
+  {
+   "slug": "dental-customized-retirement-strategy",
+   "url": "https://www.reliancecpa.com/dental-customized-retirement-strategy",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-customized-retirement-strategy__customized-retirement-strategy",
+   "url": "https://www.reliancecpa.com/dental-customized-retirement-strategy/customized-retirement-strategy/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-depreciation",
+   "url": "https://www.reliancecpa.com/dental-depreciation",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-depreciation__depreciation-considerations",
+   "url": "https://www.reliancecpa.com/dental-depreciation/depreciation-considerations/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-disregarded-entity",
+   "url": "https://www.reliancecpa.com/dental-disregarded-entity",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-disregarded-entity__disregarded-entity",
+   "url": "https://www.reliancecpa.com/dental-disregarded-entity/disregarded-entity/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-email",
+   "url": "https://www.reliancecpa.com/dental-email",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-email__female-hands-reviewing-documents.",
+   "url": "https://www.reliancecpa.com/dental-email/female-hands-reviewing-documents./",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-financial-roadmap",
+   "url": "https://www.reliancecpa.com/dental-financial-roadmap",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-financial-roadmap__accounting-2",
+   "url": "https://www.reliancecpa.com/dental-financial-roadmap/accounting-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-financing-assistance",
+   "url": "https://www.reliancecpa.com/dental-financing-assistance",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-financing-assistance__dental-financing-assistance",
+   "url": "https://www.reliancecpa.com/dental-financing-assistance/dental-financing-assistance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-insurance-planning",
+   "url": "https://www.reliancecpa.com/dental-insurance-planning",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-insurance-planning__dental-insurance-planning",
+   "url": "https://www.reliancecpa.com/dental-insurance-planning/dental-insurance-planning/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-internet-marketing",
+   "url": "https://www.reliancecpa.com/dental-internet-marketing",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-internet-marketing__dental-check-up",
+   "url": "https://www.reliancecpa.com/dental-internet-marketing/dental-check-up/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-inventory-system",
+   "url": "https://www.reliancecpa.com/dental-inventory-system",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-inventory-system__inventory-system",
+   "url": "https://www.reliancecpa.com/dental-inventory-system/inventory-system/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-leases",
+   "url": "https://www.reliancecpa.com/dental-leases",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-leases__dental-operating-leases",
+   "url": "https://www.reliancecpa.com/dental-leases/dental-operating-leases/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-llp",
+   "url": "https://www.reliancecpa.com/dental-llp",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-llp__tax-calculator-pen-and-glasses",
+   "url": "https://www.reliancecpa.com/dental-llp/tax-calculator-pen-and-glasses/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-location-analysis",
+   "url": "https://www.reliancecpa.com/dental-location-analysis",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-location-analysis__dental-equipment",
+   "url": "https://www.reliancecpa.com/dental-location-analysis/dental-equipment/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-marketing-advertising-agency",
+   "url": "https://www.reliancecpa.com/dental-marketing-advertising-agency",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-marketing-advertising-agency__business-marketing-and-planning-2",
+   "url": "https://www.reliancecpa.com/dental-marketing-advertising-agency/business-marketing-and-planning-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-microsoft-office",
+   "url": "https://www.reliancecpa.com/dental-microsoft-office",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-microsoft-office__microsoft-office",
+   "url": "https://www.reliancecpa.com/dental-microsoft-office/microsoft-office/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-mobile-marketing",
+   "url": "https://www.reliancecpa.com/dental-mobile-marketing",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-mobile-marketing__mobile-marketing",
+   "url": "https://www.reliancecpa.com/dental-mobile-marketing/mobile-marketing/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-monthly-financial-statements",
+   "url": "https://www.reliancecpa.com/dental-monthly-financial-statements",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-monthly-financial-statements__monthly-financial-statements",
+   "url": "https://www.reliancecpa.com/dental-monthly-financial-statements/monthly-financial-statements/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-optimal-tax-structure",
+   "url": "https://www.reliancecpa.com/dental-optimal-tax-structure",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-optimal-tax-structure__optimal-tax-structure",
+   "url": "https://www.reliancecpa.com/dental-optimal-tax-structure/optimal-tax-structure/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-partnership",
+   "url": "https://www.reliancecpa.com/dental-partnership",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-partnership__dental-partnership-2",
+   "url": "https://www.reliancecpa.com/dental-partnership/dental-partnership-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-paying-bills",
+   "url": "https://www.reliancecpa.com/dental-paying-bills",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-paying-bills__dental-paying-bills",
+   "url": "https://www.reliancecpa.com/dental-paying-bills/dental-paying-bills/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-payroll-services",
+   "url": "https://www.reliancecpa.com/dental-payroll-services",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-payroll-services__dental-payroll-services",
+   "url": "https://www.reliancecpa.com/dental-payroll-services/dental-payroll-services/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-practice-acquisition-analysis",
+   "url": "https://www.reliancecpa.com/dental-practice-acquisition-analysis",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-practice-acquisition-analysis__dental-practice-acquisition-analysis-2",
+   "url": "https://www.reliancecpa.com/dental-practice-acquisition-analysis/dental-practice-acquisition-analysis-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-practice-budgets",
+   "url": "https://www.reliancecpa.com/dental-practice-budgets",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-practice-budgets__close-up-of-patienta%c2%80%c2%99s-open-mouth-during-oral-inspection-with-mirror-and-hook",
+   "url": "https://www.reliancecpa.com/dental-practice-budgets/close-up-of-patienta%c2%80%c2%99s-open-mouth-during-oral-inspection-with-mirror-and-hook/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-quickbooks-accounting",
+   "url": "https://www.reliancecpa.com/dental-quickbooks-accounting",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-quickbooks-accounting__inspection-of-oral-cavity",
+   "url": "https://www.reliancecpa.com/dental-quickbooks-accounting/inspection-of-oral-cavity/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-retirement-planning",
+   "url": "https://www.reliancecpa.com/dental-retirement-planning",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-retirement-planning__doctor-dentist",
+   "url": "https://www.reliancecpa.com/dental-retirement-planning/doctor-dentist/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-s-corporation",
+   "url": "https://www.reliancecpa.com/dental-s-corporation",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-s-corporation__s-corporation-2",
+   "url": "https://www.reliancecpa.com/dental-s-corporation/s-corporation-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-selection-business-entity",
+   "url": "https://www.reliancecpa.com/dental-selection-business-entity",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-selection-business-entity__dental-selection-of-business-entity",
+   "url": "https://www.reliancecpa.com/dental-selection-business-entity/dental-selection-of-business-entity/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "dental-tax-diversification",
+   "url": "https://www.reliancecpa.com/dental-tax-diversification",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-tax-diversification__dental-tax-diversification",
+   "url": "https://www.reliancecpa.com/dental-tax-diversification/dental-tax-diversification/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-tax-returns",
+   "url": "https://www.reliancecpa.com/dental-tax-returns",
+   "category": "dental",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-tax-returns__operating-room-dental-surgery",
+   "url": "https://www.reliancecpa.com/dental-tax-returns/operating-room-dental-surgery/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "dental-virtual-client-office",
+   "url": "https://www.reliancecpa.com/dental-virtual-client-office",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-virtual-client-office__young-dentist",
+   "url": "https://www.reliancecpa.com/dental-virtual-client-office/young-dentist/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-wage-accounts",
+   "url": "https://www.reliancecpa.com/dental-wage-accounts",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "dental-wage-accounts__dentist-and-assistant-checking-x-ray-at-dental-clinic",
+   "url": "https://www.reliancecpa.com/dental-wage-accounts/dentist-and-assistant-checking-x-ray-at-dental-clinic/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "depreciation.html",
+   "url": "https://www.reliancecpa.com/depreciation.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "depreciation.html__depreciation",
+   "url": "https://www.reliancecpa.com/depreciation.html/depreciation/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "diversification.html",
+   "url": "https://www.reliancecpa.com/diversification.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "diversification.html__tax-diversification",
+   "url": "https://www.reliancecpa.com/diversification.html/tax-diversification/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "doctor-decisions.htm__doctor-decisions",
+   "url": "https://www.reliancecpa.com/doctor-decisions.htm/doctor-decisions/",
+   "category": "attachment",
+   "redirect": "/resources/doctor-decisions/"
+  },
+  {
+   "slug": "downsizing.html",
+   "url": "https://www.reliancecpa.com/downsizing.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "downsizing.html__downsizing",
+   "url": "https://www.reliancecpa.com/downsizing.html/downsizing/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "due-diligence.html",
+   "url": "https://www.reliancecpa.com/due-diligence.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "due-diligence.html__due-diligence",
+   "url": "https://www.reliancecpa.com/due-diligence.html/due-diligence/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "early-payoff-student-loans.html",
+   "url": "https://www.reliancecpa.com/early-payoff-student-loans.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "early-payoff-student-loans.html__early-payoff-student-loans",
+   "url": "https://www.reliancecpa.com/early-payoff-student-loans.html/early-payoff-student-loans/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "early-retirement.html",
+   "url": "https://www.reliancecpa.com/early-retirement.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "early-retirement.html__early-retirement",
+   "url": "https://www.reliancecpa.com/early-retirement.html/early-retirement/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "earned-income-credit.html",
+   "url": "https://www.reliancecpa.com/earned-income-credit.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "earned-income-credit.html__earned-income-credit",
+   "url": "https://www.reliancecpa.com/earned-income-credit.html/earned-income-credit/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "effective-tax-rate",
+   "url": "https://www.reliancecpa.com/effective-tax-rate",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "elder-financial-care.htm__holding-the-dollar",
+   "url": "https://www.reliancecpa.com/elder-financial-care.htm/holding-the-dollar/",
+   "category": "attachment",
+   "redirect": "/resources/elder-financial-care/"
+  },
+  {
+   "slug": "electronic-discovery.html",
+   "url": "https://www.reliancecpa.com/electronic-discovery.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "electronic-discovery.html__electronic-discovery",
+   "url": "https://www.reliancecpa.com/electronic-discovery.html/electronic-discovery/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "email-marketing",
+   "url": "https://www.reliancecpa.com/email-marketing",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "emergency-cash.html",
+   "url": "https://www.reliancecpa.com/emergency-cash.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "emergency-cash.html__emergency-cash",
+   "url": "https://www.reliancecpa.com/emergency-cash.html/emergency-cash/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "employee-benefits",
+   "url": "https://www.reliancecpa.com/employee-benefits",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "employee-benefits__employee-benefits-2",
+   "url": "https://www.reliancecpa.com/employee-benefits/employee-benefits-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "employee-tax-records.html",
+   "url": "https://www.reliancecpa.com/employee-tax-records.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "employee-tax-records.html__tax-records",
+   "url": "https://www.reliancecpa.com/employee-tax-records.html/tax-records/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "employee-vs-independent-contractor.htm__employee-vs-independent-contractor",
+   "url": "https://www.reliancecpa.com/employee-vs-independent-contractor.htm/employee-vs-independent-contractor/",
+   "category": "attachment",
+   "redirect": "/resources/employee-vs-independent-contractor/"
+  },
+  {
+   "slug": "employer-identification-number.htm__employer-identification-number",
+   "url": "https://www.reliancecpa.com/employer-identification-number.htm/employer-identification-number/",
+   "category": "attachment",
+   "redirect": "/resources/employer-identification-number/"
+  },
+  {
+   "slug": "employer-responsibilities.html",
+   "url": "https://www.reliancecpa.com/employer-responsibilities.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "employer-responsibilities.html__employer-responsibilities",
+   "url": "https://www.reliancecpa.com/employer-responsibilities.html/employer-responsibilities/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "equilibrium-price",
+   "url": "https://www.reliancecpa.com/equilibrium-price",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "equilibrium-price__equilibrium-price",
+   "url": "https://www.reliancecpa.com/equilibrium-price/equilibrium-price/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "estate-executor",
+   "url": "https://www.reliancecpa.com/estate-executor",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "estate-executor__estate-executor",
+   "url": "https://www.reliancecpa.com/estate-executor/estate-executor/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "estate-planning.htm__senior-couple-meeting-with-agent",
+   "url": "https://www.reliancecpa.com/estate-planning.htm/senior-couple-meeting-with-agent/",
+   "category": "attachment",
+   "redirect": "/resources/estate-planning/"
+  },
+  {
+   "slug": "estimated-tax.html",
+   "url": "https://www.reliancecpa.com/estimated-tax.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "estimated-tax.html__estimated-tax",
+   "url": "https://www.reliancecpa.com/estimated-tax.html/estimated-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "existing-business.html",
+   "url": "https://www.reliancecpa.com/existing-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "existing-business.html__existing-business",
+   "url": "https://www.reliancecpa.com/existing-business.html/existing-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "exit-strategy.html",
+   "url": "https://www.reliancecpa.com/exit-strategy.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "exit-strategy.html__exit-strategy",
+   "url": "https://www.reliancecpa.com/exit-strategy.html/exit-strategy/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "fair-value.html",
+   "url": "https://www.reliancecpa.com/fair-value.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "fair-value.html__fair-value",
+   "url": "https://www.reliancecpa.com/fair-value.html/fair-value/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "federal-gift-tax",
+   "url": "https://www.reliancecpa.com/federal-gift-tax",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "federal-gift-tax__federal-gift-tax-2",
+   "url": "https://www.reliancecpa.com/federal-gift-tax/federal-gift-tax-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "federal-reserve",
+   "url": "https://www.reliancecpa.com/federal-reserve",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "federal-reserve__federal-reserve-2",
+   "url": "https://www.reliancecpa.com/federal-reserve/federal-reserve-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "federal-taxes",
+   "url": "https://www.reliancecpa.com/federal-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "filing-quarterly-taxes",
+   "url": "https://www.reliancecpa.com/filing-quarterly-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "filing-quarterly-taxes__quarterly-taxes",
+   "url": "https://www.reliancecpa.com/filing-quarterly-taxes/quarterly-taxes/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "financial-advice.html",
+   "url": "https://www.reliancecpa.com/financial-advice.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "financial-advice.html__worse-finances",
+   "url": "https://www.reliancecpa.com/financial-advice.html/worse-finances/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "financial-planning.htm__financial-planning",
+   "url": "https://www.reliancecpa.com/financial-planning.htm/financial-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/financial-planning/"
+  },
+  {
+   "slug": "financially-preparing-divorce.htm__financially-preparing-divorce",
+   "url": "https://www.reliancecpa.com/financially-preparing-divorce.htm/financially-preparing-divorce/",
+   "category": "attachment",
+   "redirect": "/resources/financially-preparing-divorce/"
+  },
+  {
+   "slug": "financially-preparing-marriage.htm__financially-preparing-marriage",
+   "url": "https://www.reliancecpa.com/financially-preparing-marriage.htm/financially-preparing-marriage/",
+   "category": "attachment",
+   "redirect": "/resources/financially-preparing-marriage/"
+  },
+  {
+   "slug": "financing-growth.html",
+   "url": "https://www.reliancecpa.com/financing-growth.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "financing-growth.html__financing-growth",
+   "url": "https://www.reliancecpa.com/financing-growth.html/financing-growth/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "finding-employees",
+   "url": "https://www.reliancecpa.com/finding-employees",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "finding-employees__right-employees",
+   "url": "https://www.reliancecpa.com/finding-employees/right-employees/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "firmprofile.html__navigating-the-business-of-medicine",
+   "url": "https://www.reliancecpa.com/firmprofile.html/navigating-the-business-of-medicine/",
+   "category": "attachment",
+   "redirect": "/about/"
+  },
+  {
+   "slug": "five-cs-of-credit.html",
+   "url": "https://www.reliancecpa.com/five-cs-of-credit.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "five-cs-of-credit.html__five-cs-of-credit",
+   "url": "https://www.reliancecpa.com/five-cs-of-credit.html/five-cs-of-credit/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "flexible-hours",
+   "url": "https://www.reliancecpa.com/flexible-hours",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "flexible-hours__flexible-hours-2",
+   "url": "https://www.reliancecpa.com/flexible-hours/flexible-hours-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "flood-insurance.html",
+   "url": "https://www.reliancecpa.com/flood-insurance.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "flood-insurance.html__flood-insurance",
+   "url": "https://www.reliancecpa.com/flood-insurance.html/flood-insurance/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "florida-prepaid.html",
+   "url": "https://www.reliancecpa.com/florida-prepaid.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "florida-prepaid.html__florida-prepaid",
+   "url": "https://www.reliancecpa.com/florida-prepaid.html/florida-prepaid/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "florida-small-business",
+   "url": "https://www.reliancecpa.com/florida-small-business",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "florida-small-business__florida-small-business-2",
+   "url": "https://www.reliancecpa.com/florida-small-business/florida-small-business-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "florida-taxes.html",
+   "url": "https://www.reliancecpa.com/florida-taxes.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "florida-taxes.html__florida-taxes",
+   "url": "https://www.reliancecpa.com/florida-taxes.html/florida-taxes/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "forms-to-start-business.htm__forms-to-start-new-business",
+   "url": "https://www.reliancecpa.com/forms-to-start-business.htm/forms-to-start-new-business/",
+   "category": "attachment",
+   "redirect": "/resources/forms-to-start-business/"
+  },
+  {
+   "slug": "franchise-or-brand",
+   "url": "https://www.reliancecpa.com/franchise-or-brand",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "franchise-or-brand__franchise",
+   "url": "https://www.reliancecpa.com/franchise-or-brand/franchise/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "fungibility-liquidity",
+   "url": "https://www.reliancecpa.com/fungibility-liquidity",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "fungibility-liquidity__fungibility-liquidity-2",
+   "url": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "fungibility-liquidity__fungibility-liquidity",
+   "url": "https://www.reliancecpa.com/fungibility-liquidity/fungibility-liquidity/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "general-ledger.html",
+   "url": "https://www.reliancecpa.com/general-ledger.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "general-ledger.html__general-ledger",
+   "url": "https://www.reliancecpa.com/general-ledger.html/general-ledger/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "get-started-estate-planning.htm__get-started-estate-planning",
+   "url": "https://www.reliancecpa.com/get-started-estate-planning.htm/get-started-estate-planning/",
+   "category": "attachment",
+   "redirect": "/resources/get-started-estate-planning/"
+  },
+  {
+   "slug": "getting-good-financial-advice.htm__getting-good-financial-advice",
+   "url": "https://www.reliancecpa.com/getting-good-financial-advice.htm/getting-good-financial-advice/",
+   "category": "attachment",
+   "redirect": "/resources/getting-good-financial-advice/"
+  },
+  {
+   "slug": "global-business.html",
+   "url": "https://www.reliancecpa.com/global-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "global-business.html__global-business",
+   "url": "https://www.reliancecpa.com/global-business.html/global-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "government-contracts",
+   "url": "https://www.reliancecpa.com/government-contracts",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "government-contracts__sba-government-contract",
+   "url": "https://www.reliancecpa.com/government-contracts/sba-government-contract/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "great-business-plan",
+   "url": "https://www.reliancecpa.com/great-business-plan",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "great-business-plan__business-plan-2",
+   "url": "https://www.reliancecpa.com/great-business-plan/business-plan-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "green-business.htm__greenbusiness",
+   "url": "https://www.reliancecpa.com/green-business.htm/greenbusiness/",
+   "category": "attachment",
+   "redirect": "/resources/green-business/"
+  },
+  {
+   "slug": "green-companies-taxes",
+   "url": "https://www.reliancecpa.com/green-companies-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "green-companies-taxes__solar-panel.",
+   "url": "https://www.reliancecpa.com/green-companies-taxes/solar-panel./",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "gsa-schedules.html",
+   "url": "https://www.reliancecpa.com/gsa-schedules.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "gsa-schedules.html__gsa-schedules",
+   "url": "https://www.reliancecpa.com/gsa-schedules.html/gsa-schedules/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "health-care-tax-credit",
+   "url": "https://www.reliancecpa.com/health-care-tax-credit",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "health-care-tax-credit__health-care-tax-credit-2",
+   "url": "https://www.reliancecpa.com/health-care-tax-credit/health-care-tax-credit-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "health-reform-and-hire-act.html",
+   "url": "https://www.reliancecpa.com/health-reform-and-hire-act.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "health-reform-and-hire-act.html__health-reform",
+   "url": "https://www.reliancecpa.com/health-reform-and-hire-act.html/health-reform/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "hidden-college-costs",
+   "url": "https://www.reliancecpa.com/hidden-college-costs",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "hiring-employees.htm__hiring-employees",
+   "url": "https://www.reliancecpa.com/hiring-employees.htm/hiring-employees/",
+   "category": "attachment",
+   "redirect": "/resources/hiring-employees/"
+  },
+  {
+   "slug": "hiring-family-members.htm__hiring-family-members",
+   "url": "https://www.reliancecpa.com/hiring-family-members.htm/hiring-family-members/",
+   "category": "attachment",
+   "redirect": "/resources/hiring-family-members/"
+  },
+  {
+   "slug": "hiring-incentives",
+   "url": "https://www.reliancecpa.com/hiring-incentives",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "hiring-incentives__hiring-incentives-2",
+   "url": "https://www.reliancecpa.com/hiring-incentives/hiring-incentives-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "home-based-business.htm__workingathome",
+   "url": "https://www.reliancecpa.com/home-based-business.htm/workingathome/",
+   "category": "attachment",
+   "redirect": "/resources/home-based-business/"
+  },
+  {
+   "slug": "home-based-businesses",
+   "url": "https://www.reliancecpa.com/home-based-businesses",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "home-based-businesses__home-based-business-2",
+   "url": "https://www.reliancecpa.com/home-based-businesses/home-based-business-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "home-business.html",
+   "url": "https://www.reliancecpa.com/home-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "home-business.html__home-based-business",
+   "url": "https://www.reliancecpa.com/home-business.html/home-based-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "home-improvements",
+   "url": "https://www.reliancecpa.com/home-improvements",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "home-improvements__insurance-costs-2",
+   "url": "https://www.reliancecpa.com/home-improvements/insurance-costs-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "homestead-exemption.html",
+   "url": "https://www.reliancecpa.com/homestead-exemption.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "homestead-exemption.html__homestead-exemption",
+   "url": "https://www.reliancecpa.com/homestead-exemption.html/homestead-exemption/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "household-employee-tax.htm__household-employee-tax",
+   "url": "https://www.reliancecpa.com/household-employee-tax.htm/household-employee-tax/",
+   "category": "attachment",
+   "redirect": "/resources/household-employee-tax/"
+  },
+  {
+   "slug": "how-payroll-processing-helps.htm__payroll-processing-helps",
+   "url": "https://www.reliancecpa.com/how-payroll-processing-helps.htm/payroll-processing-helps/",
+   "category": "attachment",
+   "redirect": "/resources/how-payroll-processing-helps/"
+  },
+  {
+   "slug": "how-to-choose-cpa.htm__how-to-choose-cpa",
+   "url": "https://www.reliancecpa.com/how-to-choose-cpa.htm/how-to-choose-cpa/",
+   "category": "attachment",
+   "redirect": "/resources/how-to-choose-cpa/"
+  },
+  {
+   "slug": "how-to-handle-an-irs-audit.html",
+   "url": "https://www.reliancecpa.com/how-to-handle-an-irs-audit.html",
+   "category": "dead-link",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "how-to-handle-an-irs-audit",
+   "url": "https://www.reliancecpa.com/how-to-handle-an-irs-audit",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "human-resources-delegation",
+   "url": "https://www.reliancecpa.com/human-resources-delegation",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "human-resources-delegation__human-resources",
+   "url": "https://www.reliancecpa.com/human-resources-delegation/human-resources/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "identity-theft.htm__idtheft",
+   "url": "https://www.reliancecpa.com/identity-theft.htm/idtheft/",
+   "category": "attachment",
+   "redirect": "/resources/identity-theft/"
+  },
+  {
+   "slug": "importance-of-a-will.htm__importance-of-a-will",
+   "url": "https://www.reliancecpa.com/importance-of-a-will.htm/importance-of-a-will/",
+   "category": "attachment",
+   "redirect": "/resources/importance-of-a-will/"
+  },
+  {
+   "slug": "improved-financial-situation.html",
+   "url": "https://www.reliancecpa.com/improved-financial-situation.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "improved-financial-situation.html__financial-improvement",
+   "url": "https://www.reliancecpa.com/improved-financial-situation.html/financial-improvement/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "income-tax-preparer.html",
+   "url": "https://www.reliancecpa.com/income-tax-preparer.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "income-tax-preparer.html__tax-preparer-2",
+   "url": "https://www.reliancecpa.com/income-tax-preparer.html/tax-preparer-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "income-tax-services.htm__income-tax-services",
+   "url": "https://www.reliancecpa.com/income-tax-services.htm/income-tax-services/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/income-tax-services/"
+  },
+  {
+   "slug": "income-tax-withholding.html",
+   "url": "https://www.reliancecpa.com/income-tax-withholding.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "income-tax-withholding.html__income-tax-withholding",
+   "url": "https://www.reliancecpa.com/income-tax-withholding.html/income-tax-withholding/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "increase-tax-return.html",
+   "url": "https://www.reliancecpa.com/increase-tax-return.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "index.html",
+   "url": "https://www.reliancecpa.com/index.html",
+   "category": "dead-link",
+   "redirect": "/"
+  },
+  {
+   "slug": "indirect-taxes",
+   "url": "https://www.reliancecpa.com/indirect-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "indirect-taxes__indirect-taxes",
+   "url": "https://www.reliancecpa.com/indirect-taxes/indirect-taxes/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "information-security.html",
+   "url": "https://www.reliancecpa.com/information-security.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "information-security.html__small-business-security",
+   "url": "https://www.reliancecpa.com/information-security.html/small-business-security/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "inherit-money-or-property",
+   "url": "https://www.reliancecpa.com/inherit-money-or-property",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "inherit-money-or-property__substantial-inheritance",
+   "url": "https://www.reliancecpa.com/inherit-money-or-property/substantial-inheritance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "insurance-costs",
+   "url": "https://www.reliancecpa.com/insurance-costs",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "insurance-costs__insurance-costs-1",
+   "url": "https://www.reliancecpa.com/insurance-costs/insurance-costs-1/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "insurance-settlement",
+   "url": "https://www.reliancecpa.com/insurance-settlement",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "insurance-settlement__file-marked-with-insurance",
+   "url": "https://www.reliancecpa.com/insurance-settlement/file-marked-with-insurance/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "intangible-assets.html",
+   "url": "https://www.reliancecpa.com/intangible-assets.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "intangible-assets.html__intangible-assets",
+   "url": "https://www.reliancecpa.com/intangible-assets.html/intangible-assets/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "intellectual-property.html",
+   "url": "https://www.reliancecpa.com/intellectual-property.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "intellectual-property.html__intellectual-property",
+   "url": "https://www.reliancecpa.com/intellectual-property.html/intellectual-property/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "internal-audit.html",
+   "url": "https://www.reliancecpa.com/internal-audit.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "internal-audit.html__internal-audit",
+   "url": "https://www.reliancecpa.com/internal-audit.html/internal-audit/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "internal-controls-evaluation.htm__internal-controls-evaluation",
+   "url": "https://www.reliancecpa.com/internal-controls-evaluation.htm/internal-controls-evaluation/",
+   "category": "attachment",
+   "redirect": "/resources/internal-controls-evaluation/"
+  },
+  {
+   "slug": "international-business",
+   "url": "https://www.reliancecpa.com/international-business",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "international-business__international-business-2",
+   "url": "https://www.reliancecpa.com/international-business/international-business-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "internet-advertising",
+   "url": "https://www.reliancecpa.com/internet-advertising",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "internet-advertising__magnifying-glass-internet-marketing",
+   "url": "https://www.reliancecpa.com/internet-advertising/magnifying-glass-internet-marketing/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "investment-plan.html",
+   "url": "https://www.reliancecpa.com/investment-plan.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "investment-plan.html__investment-plan",
+   "url": "https://www.reliancecpa.com/investment-plan.html/investment-plan/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "ipo-costs",
+   "url": "https://www.reliancecpa.com/ipo-costs",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "ipo-costs__ipo-costs-2",
+   "url": "https://www.reliancecpa.com/ipo-costs/ipo-costs-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "irs-email-scams.html",
+   "url": "https://www.reliancecpa.com/irs-email-scams.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "irs-email-scams.html__irs-email-scams",
+   "url": "https://www.reliancecpa.com/irs-email-scams.html/irs-email-scams/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "irs-frivolous-arguments",
+   "url": "https://www.reliancecpa.com/irs-frivolous-arguments",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "irs-frivolous-arguments__irs-frivolous-arguments",
+   "url": "https://www.reliancecpa.com/irs-frivolous-arguments/irs-frivolous-arguments/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "irs-problems.htm__irs-problems",
+   "url": "https://www.reliancecpa.com/irs-problems.htm/irs-problems/",
+   "category": "attachment",
+   "redirect": "/resources/irs-problems/"
+  },
+  {
+   "slug": "itemization-tax-return",
+   "url": "https://www.reliancecpa.com/itemization-tax-return",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "itemization-tax-return__tax-forms.",
+   "url": "https://www.reliancecpa.com/itemization-tax-return/tax-forms./",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "keep-financial-records.htm__keep-financial-records",
+   "url": "https://www.reliancecpa.com/keep-financial-records.htm/keep-financial-records/",
+   "category": "attachment",
+   "redirect": "/resources/keep-financial-records/"
+  },
+  {
+   "slug": "keogh-plan",
+   "url": "https://www.reliancecpa.com/keogh-plan",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "keogh-plan__keogh-plan-2",
+   "url": "https://www.reliancecpa.com/keogh-plan/keogh-plan-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "key-performance-indicators",
+   "url": "https://www.reliancecpa.com/key-performance-indicators",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "key-performance-indicators__key-performance-indicators-2",
+   "url": "https://www.reliancecpa.com/key-performance-indicators/key-performance-indicators-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "late-income-tax-return.htm__late-income-tax-return",
+   "url": "https://www.reliancecpa.com/late-income-tax-return.htm/late-income-tax-return/",
+   "category": "attachment",
+   "redirect": "/resources/late-income-tax-return/"
+  },
+  {
+   "slug": "late-retirement-planning.html",
+   "url": "https://www.reliancecpa.com/late-retirement-planning.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "late-retirement-planning.html__late-retirement-planning",
+   "url": "https://www.reliancecpa.com/late-retirement-planning.html/late-retirement-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "learn-from-mistakes",
+   "url": "https://www.reliancecpa.com/learn-from-mistakes",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "learn-from-mistakes__business-mistakes",
+   "url": "https://www.reliancecpa.com/learn-from-mistakes/business-mistakes/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "leasing-car.html",
+   "url": "https://www.reliancecpa.com/leasing-car.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "leasing-car.html__leasing-car",
+   "url": "https://www.reliancecpa.com/leasing-car.html/leasing-car/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "leveraged-buyout",
+   "url": "https://www.reliancecpa.com/leveraged-buyout",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "leveraged-buyout__leveraged-buyout",
+   "url": "https://www.reliancecpa.com/leveraged-buyout/leveraged-buyout/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "liabilities.html",
+   "url": "https://www.reliancecpa.com/liabilities.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "liabilities.html__liabilities",
+   "url": "https://www.reliancecpa.com/liabilities.html/liabilities/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "life-events.html",
+   "url": "https://www.reliancecpa.com/life-events.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "life-events.html__life-events",
+   "url": "https://www.reliancecpa.com/life-events.html/life-events/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "life-insurance-needs-analysis.htm__life-insurance-needs-analysis",
+   "url": "https://www.reliancecpa.com/life-insurance-needs-analysis.htm/life-insurance-needs-analysis/",
+   "category": "attachment",
+   "redirect": "/resources/life-insurance-needs-analysis/"
+  },
+  {
+   "slug": "limited-liability-corporation.htm__limited-liability-corporation",
+   "url": "https://www.reliancecpa.com/limited-liability-corporation.htm/limited-liability-corporation/",
+   "category": "attachment",
+   "redirect": "/resources/limited-liability-corporation/"
+  },
+  {
+   "slug": "liquidating-assets.html",
+   "url": "https://www.reliancecpa.com/liquidating-assets.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "liquidating-assets.html__liquidating-assets",
+   "url": "https://www.reliancecpa.com/liquidating-assets.html/liquidating-assets/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "living-will.htm__livingwill",
+   "url": "https://www.reliancecpa.com/living-will.htm/livingwill/",
+   "category": "attachment",
+   "redirect": "/resources/living-will/"
+  },
+  {
+   "slug": "long-term-care.htm__longtermcare",
+   "url": "https://www.reliancecpa.com/long-term-care.htm/longtermcare/",
+   "category": "attachment",
+   "redirect": "/resources/long-term-care/"
+  },
+  {
+   "slug": "long-term-care",
+   "url": "https://www.reliancecpa.com/long-term-care",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "long-term-care__long-term-planning",
+   "url": "https://www.reliancecpa.com/long-term-care/long-term-planning/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "losses-tax-deductions",
+   "url": "https://www.reliancecpa.com/losses-tax-deductions",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "losses-tax-deductions__trashed-room",
+   "url": "https://www.reliancecpa.com/losses-tax-deductions/trashed-room/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "making-money-in-medicine.htm__making-money-in-medicine",
+   "url": "https://www.reliancecpa.com/making-money-in-medicine.htm/making-money-in-medicine/",
+   "category": "attachment",
+   "redirect": "/resources/making-money-in-medicine/"
+  },
+  {
+   "slug": "market-condition-research",
+   "url": "https://www.reliancecpa.com/market-condition-research",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "market-indicators",
+   "url": "https://www.reliancecpa.com/market-indicators",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "market-indicators__market-indicators",
+   "url": "https://www.reliancecpa.com/market-indicators/market-indicators/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "marketing-budget.html",
+   "url": "https://www.reliancecpa.com/marketing-budget.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "marketing-budget.html__marketing-budget",
+   "url": "https://www.reliancecpa.com/marketing-budget.html/marketing-budget/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "married-filing-jointly.html",
+   "url": "https://www.reliancecpa.com/married-filing-jointly.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "married-filing-jointly.html__married-filing-jointly",
+   "url": "https://www.reliancecpa.com/married-filing-jointly.html/married-filing-jointly/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "medicare-cuts.html",
+   "url": "https://www.reliancecpa.com/medicare-cuts.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "mergers",
+   "url": "https://www.reliancecpa.com/mergers",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "mergers__business-deal-businessmen-shaking-hands",
+   "url": "https://www.reliancecpa.com/mergers/business-deal-businessmen-shaking-hands/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "money-market.html",
+   "url": "https://www.reliancecpa.com/money-market.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "money-market.html__money-market",
+   "url": "https://www.reliancecpa.com/money-market.html/money-market/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "mortgage-refinance",
+   "url": "https://www.reliancecpa.com/mortgage-refinance",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "mortgage-refinance__mortgage-refinance-2",
+   "url": "https://www.reliancecpa.com/mortgage-refinance/mortgage-refinance-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "motivating-employees.html",
+   "url": "https://www.reliancecpa.com/motivating-employees.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "motivating-employees.html__motivating-employees",
+   "url": "https://www.reliancecpa.com/motivating-employees.html/motivating-employees/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "mutual-fund.html",
+   "url": "https://www.reliancecpa.com/mutual-fund.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "mutual-fund.html__mutual-fund",
+   "url": "https://www.reliancecpa.com/mutual-fund.html/mutual-fund/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "naming-business.html",
+   "url": "https://www.reliancecpa.com/naming-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "naming-business.html__naming-business",
+   "url": "https://www.reliancecpa.com/naming-business.html/naming-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "negotiating-dental-loan-terms",
+   "url": "https://www.reliancecpa.com/negotiating-dental-loan-terms",
+   "category": "dental",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "negotiating-dental-loan-terms__dental-negotiatiing-loan-terms",
+   "url": "https://www.reliancecpa.com/negotiating-dental-loan-terms/dental-negotiatiing-loan-terms/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "net-worth.html",
+   "url": "https://www.reliancecpa.com/net-worth.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "net-worth.html__net-worth",
+   "url": "https://www.reliancecpa.com/net-worth.html/net-worth/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "network-security",
+   "url": "https://www.reliancecpa.com/network-security",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "network-security__network-server-room",
+   "url": "https://www.reliancecpa.com/network-security/network-server-room/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "new-business-financing.html",
+   "url": "https://www.reliancecpa.com/new-business-financing.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "new-business-financing.html__new-business-financing",
+   "url": "https://www.reliancecpa.com/new-business-financing.html/new-business-financing/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "new-business-planning.htm__new-business-planning",
+   "url": "https://www.reliancecpa.com/new-business-planning.htm/new-business-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/new-business-planning/"
+  },
+  {
+   "slug": "new-business-priorities.html",
+   "url": "https://www.reliancecpa.com/new-business-priorities.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "new-business-priorities.html__new-business-priorities",
+   "url": "https://www.reliancecpa.com/new-business-priorities.html/new-business-priorities/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "new-business.html",
+   "url": "https://www.reliancecpa.com/new-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "new-business.html__new-business",
+   "url": "https://www.reliancecpa.com/new-business.html/new-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "non-cash-transactions.html",
+   "url": "https://www.reliancecpa.com/non-cash-transactions.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "non-cash-transactions.html__non-cash-transactions",
+   "url": "https://www.reliancecpa.com/non-cash-transactions.html/non-cash-transactions/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "obama-pragmatist-or-ideologue",
+   "url": "https://www.reliancecpa.com/obama-pragmatist-or-ideologue",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "obama-versus-mccain.html",
+   "url": "https://www.reliancecpa.com/obama-versus-mccain.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "on-line-business.html",
+   "url": "https://www.reliancecpa.com/on-line-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "on-line-business.html__on-line-business",
+   "url": "https://www.reliancecpa.com/on-line-business.html/on-line-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "ongoing-medical-expenses",
+   "url": "https://www.reliancecpa.com/ongoing-medical-expenses",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "ongoing-medical-expenses__ongoing-medical-expenses",
+   "url": "https://www.reliancecpa.com/ongoing-medical-expenses/ongoing-medical-expenses/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "online-reputation-management",
+   "url": "https://www.reliancecpa.com/online-reputation-management",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "organizational-structure.html",
+   "url": "https://www.reliancecpa.com/organizational-structure.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "organizational-structure.html__organizational-structure",
+   "url": "https://www.reliancecpa.com/organizational-structure.html/organizational-structure/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "part-time-cfo.htm__part-time-cfo",
+   "url": "https://www.reliancecpa.com/part-time-cfo.htm/part-time-cfo/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/part-time-cfo/"
+  },
+  {
+   "slug": "partnership.htm__partnership",
+   "url": "https://www.reliancecpa.com/partnership.htm/partnership/",
+   "category": "attachment",
+   "redirect": "/resources/partnership/"
+  },
+  {
+   "slug": "passive-income",
+   "url": "https://www.reliancecpa.com/passive-income",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "passive-income__passive-income",
+   "url": "https://www.reliancecpa.com/passive-income/passive-income/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "patient-accounts",
+   "url": "https://www.reliancecpa.com/patient-accounts",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "patient-accounts__accounting.",
+   "url": "https://www.reliancecpa.com/patient-accounts/accounting./",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "pay-per-click",
+   "url": "https://www.reliancecpa.com/pay-per-click",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "pay-per-click__pay-per-click",
+   "url": "https://www.reliancecpa.com/pay-per-click/pay-per-click/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "payroll-services.htm__payroll-services",
+   "url": "https://www.reliancecpa.com/payroll-services.htm/payroll-services/",
+   "category": "attachment",
+   "redirect": "/business-accounting/payroll/"
+  },
+  {
+   "slug": "performance-management.html",
+   "url": "https://www.reliancecpa.com/performance-management.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "performance-management.html__performance-management",
+   "url": "https://www.reliancecpa.com/performance-management.html/performance-management/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-assets.html",
+   "url": "https://www.reliancecpa.com/personal-assets.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-assets.html__personal-assets",
+   "url": "https://www.reliancecpa.com/personal-assets.html/personal-assets/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-budget.html",
+   "url": "https://www.reliancecpa.com/personal-budget.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "personal-budget.html__personal-budget",
+   "url": "https://www.reliancecpa.com/personal-budget.html/personal-budget/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "personal-budget",
+   "url": "https://www.reliancecpa.com/personal-budget",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "personal-budget__personal-budget-2",
+   "url": "https://www.reliancecpa.com/personal-budget/personal-budget-2/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "personal-financial-goals.html",
+   "url": "https://www.reliancecpa.com/personal-financial-goals.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-financial-goals.html__personal-financial-goals",
+   "url": "https://www.reliancecpa.com/personal-financial-goals.html/personal-financial-goals/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-financial-goals",
+   "url": "https://www.reliancecpa.com/personal-financial-goals",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-financial-goals__in-home-sales",
+   "url": "https://www.reliancecpa.com/personal-financial-goals/in-home-sales/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "personal-record-retention.htm__personal-record-retention",
+   "url": "https://www.reliancecpa.com/personal-record-retention.htm/personal-record-retention/",
+   "category": "attachment",
+   "redirect": "/resources/personal-record-retention/"
+  },
+  {
+   "slug": "personal-tax-extension.html",
+   "url": "https://www.reliancecpa.com/personal-tax-extension.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "personal-tax-extension.html__personal-tax-extension",
+   "url": "https://www.reliancecpa.com/personal-tax-extension.html/personal-tax-extension/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "petty-cash",
+   "url": "https://www.reliancecpa.com/petty-cash",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "petty-cash__petty-cash",
+   "url": "https://www.reliancecpa.com/petty-cash/petty-cash/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "physician-accountants.htm__physician-accountants",
+   "url": "https://www.reliancecpa.com/physician-accountants.htm/physician-accountants/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/industries/physicians/"
+  },
+  {
+   "slug": "post-mortem-letter.htm__post-mortem-letter",
+   "url": "https://www.reliancecpa.com/post-mortem-letter.htm/post-mortem-letter/",
+   "category": "attachment",
+   "redirect": "/resources/post-mortem-letter/"
+  },
+  {
+   "slug": "potential-employees.html",
+   "url": "https://www.reliancecpa.com/potential-employees.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "potential-employees.html__potential-employees",
+   "url": "https://www.reliancecpa.com/potential-employees.html/potential-employees/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "power-of-attorney.htm__powerofattorney",
+   "url": "https://www.reliancecpa.com/power-of-attorney.htm/powerofattorney/",
+   "category": "attachment",
+   "redirect": "/resources/power-of-attorney/"
+  },
+  {
+   "slug": "processes.html",
+   "url": "https://www.reliancecpa.com/processes.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "processes.html__processes",
+   "url": "https://www.reliancecpa.com/processes.html/processes/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "profitable-business-idea",
+   "url": "https://www.reliancecpa.com/profitable-business-idea",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "profitable-business-idea__business-idea",
+   "url": "https://www.reliancecpa.com/profitable-business-idea/business-idea/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "property-depreciation.html",
+   "url": "https://www.reliancecpa.com/property-depreciation.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "property-depreciation.html__property-depreciation",
+   "url": "https://www.reliancecpa.com/property-depreciation.html/property-depreciation/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "purchase-business-franchise.html",
+   "url": "https://www.reliancecpa.com/purchase-business-franchise.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "purchase-business-franchise.html__purchase-business-franchise",
+   "url": "https://www.reliancecpa.com/purchase-business-franchise.html/purchase-business-franchise/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "quickbooks-accountant.htm__quickbooks-accountant",
+   "url": "https://www.reliancecpa.com/quickbooks-accountant.htm/quickbooks-accountant/",
+   "category": "attachment",
+   "redirect": "/business-accounting/quickbooks/"
+  },
+  {
+   "slug": "ready-to-incorporate.html",
+   "url": "https://www.reliancecpa.com/ready-to-incorporate.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "ready-to-incorporate.html__ready-to-incorporate",
+   "url": "https://www.reliancecpa.com/ready-to-incorporate.html/ready-to-incorporate/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "real-estate-cpa.htm__digital-image-by-sean-lockedigital-planet-designwww.digitalplanetdesign.com",
+   "url": "https://www.reliancecpa.com/real-estate-cpa.htm/digital-image-by-sean-lockedigital-planet-designwww.digitalplanetdesign.com",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/industries/real-estate/"
+  },
+  {
+   "slug": "real-estate-losses.html",
+   "url": "https://www.reliancecpa.com/real-estate-losses.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "real-property",
+   "url": "https://www.reliancecpa.com/real-property",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "real-property__real-property",
+   "url": "https://www.reliancecpa.com/real-property/real-property/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "reasons-to-choose-reliance.htm__reasons-choose-reliance",
+   "url": "https://www.reliancecpa.com/reasons-to-choose-reliance.htm/reasons-choose-reliance/",
+   "category": "attachment",
+   "redirect": "/about/why-reliance/"
+  },
+  {
+   "slug": "recording-transactions.html",
+   "url": "https://www.reliancecpa.com/recording-transactions.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "recording-transactions.html__business-ledger",
+   "url": "https://www.reliancecpa.com/recording-transactions.html/business-ledger/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "records-for-cpa-meeting.htm__records-for-cpa-meeting",
+   "url": "https://www.reliancecpa.com/records-for-cpa-meeting.htm/records-for-cpa-meeting/",
+   "category": "attachment",
+   "redirect": "/resources/records-for-your-first-meeting/"
+  },
+  {
+   "slug": "refinance.html",
+   "url": "https://www.reliancecpa.com/refinance.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "refinance.html__refinance",
+   "url": "https://www.reliancecpa.com/refinance.html/refinance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "refinancing-home-mortgage.html",
+   "url": "https://www.reliancecpa.com/refinancing-home-mortgage.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "refinancing-home-mortgage.html__refinancing-home-mortgage",
+   "url": "https://www.reliancecpa.com/refinancing-home-mortgage.html/refinancing-home-mortgage/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "reit-retirement",
+   "url": "https://www.reliancecpa.com/reit-retirement",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "reit-retirement__reit-for-retirement",
+   "url": "https://www.reliancecpa.com/reit-retirement/reit-for-retirement/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "related-party-transactions",
+   "url": "https://www.reliancecpa.com/related-party-transactions",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "related-party-transactions__related-party-transaction",
+   "url": "https://www.reliancecpa.com/related-party-transactions/related-party-transaction/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "reliable-insurance",
+   "url": "https://www.reliancecpa.com/reliable-insurance",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "reliable-insurance__reliable-insurance-2",
+   "url": "https://www.reliancecpa.com/reliable-insurance/reliable-insurance-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "reliance-consulting-netclient-portals__client-login",
+   "url": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/client-login/",
+   "category": "attachment",
+   "redirect": "/resources/client-portal/"
+  },
+  {
+   "slug": "reliance-consulting-netclient-portals__netclient-2",
+   "url": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient-2/",
+   "category": "attachment",
+   "redirect": "/resources/client-portal/"
+  },
+  {
+   "slug": "reliance-consulting-netclient-portals__netclient",
+   "url": "https://www.reliancecpa.com/reliance-consulting-netclient-portals/netclient/",
+   "category": "attachment",
+   "redirect": "/resources/client-portal/"
+  },
+  {
+   "slug": "remarketing",
+   "url": "https://www.reliancecpa.com/remarketing",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "remarketing__remarketing-2",
+   "url": "https://www.reliancecpa.com/remarketing/remarketing-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "rent-or-buy-home.html",
+   "url": "https://www.reliancecpa.com/rent-or-buy-home.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "rent-or-buy-home.html__rent-or-buy-home",
+   "url": "https://www.reliancecpa.com/rent-or-buy-home.html/rent-or-buy-home/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "rent-vs-buy",
+   "url": "https://www.reliancecpa.com/rent-vs-buy",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "rent-vs-buy__rent-vs-buy",
+   "url": "https://www.reliancecpa.com/rent-vs-buy/rent-vs-buy/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "restaurant-hotel-accountant.htm__restaurant-hotel-accountant",
+   "url": "https://www.reliancecpa.com/restaurant-hotel-accountant.htm/restaurant-hotel-accountant/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/industries/hospitality/"
+  },
+  {
+   "slug": "retail-accounting.htm__retail-accounting",
+   "url": "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/industries/retail/"
+  },
+  {
+   "slug": "retirement-expenses.htm__retirement-expenses",
+   "url": "https://www.reliancecpa.com/retirement-expenses.htm/retirement-expenses/",
+   "category": "attachment",
+   "redirect": "/resources/retirement-expenses/"
+  },
+  {
+   "slug": "retirement-planning-money.html",
+   "url": "https://www.reliancecpa.com/retirement-planning-money.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "retirement-planning-money.html__retirement-planning-money",
+   "url": "https://www.reliancecpa.com/retirement-planning-money.html/retirement-planning-money/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "retirement-readiness",
+   "url": "https://www.reliancecpa.com/retirement-readiness",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "retirement-readiness__ready-to-retire",
+   "url": "https://www.reliancecpa.com/retirement-readiness/ready-to-retire/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "retirement-taxes.html",
+   "url": "https://www.reliancecpa.com/retirement-taxes.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "retirement-taxes.html__retirement-taxes",
+   "url": "https://www.reliancecpa.com/retirement-taxes.html/retirement-taxes/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "reverse-mortgage.htm__reversemortgage",
+   "url": "https://www.reliancecpa.com/reverse-mortgage.htm/reversemortgage/",
+   "category": "attachment",
+   "redirect": "/resources/reverse-mortgage/"
+  },
+  {
+   "slug": "reverse-mortgage",
+   "url": "https://www.reliancecpa.com/reverse-mortgage",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "reverse-mortgage__reverse-mortgage-2",
+   "url": "https://www.reliancecpa.com/reverse-mortgage/reverse-mortgage-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "revocable-trust",
+   "url": "https://www.reliancecpa.com/revocable-trust",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "revocable-trust__revocable-trust",
+   "url": "https://www.reliancecpa.com/revocable-trust/revocable-trust/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "revocable-trusts.html",
+   "url": "https://www.reliancecpa.com/revocable-trusts.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "revocable-trusts.html__revocable-trusts",
+   "url": "https://www.reliancecpa.com/revocable-trusts.html/revocable-trusts/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "risk-management-controls",
+   "url": "https://www.reliancecpa.com/risk-management-controls",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "risk-management-controls__risk-management-2",
+   "url": "https://www.reliancecpa.com/risk-management-controls/risk-management-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "risk-management.html",
+   "url": "https://www.reliancecpa.com/risk-management.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "risk-management.html__risk-management",
+   "url": "https://www.reliancecpa.com/risk-management.html/risk-management/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "roth-traditional-ira.html",
+   "url": "https://www.reliancecpa.com/roth-traditional-ira.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "roth-traditional-ira.html__roth-traditional-ira",
+   "url": "https://www.reliancecpa.com/roth-traditional-ira.html/roth-traditional-ira/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "running-green-business.html",
+   "url": "https://www.reliancecpa.com/running-green-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "running-green-business.html__running-green-business",
+   "url": "https://www.reliancecpa.com/running-green-business.html/running-green-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "s-corporation.htm__s-corporation",
+   "url": "https://www.reliancecpa.com/s-corporation.htm/s-corporation/",
+   "category": "attachment",
+   "redirect": "/resources/s-corporation/"
+  },
+  {
+   "slug": "sales-strategy.html",
+   "url": "https://www.reliancecpa.com/sales-strategy.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "sales-strategy.html__sales-strategy",
+   "url": "https://www.reliancecpa.com/sales-strategy.html/sales-strategy/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "sales-tax-law.htm__floridasalestax",
+   "url": "https://www.reliancecpa.com/sales-tax-law.htm/floridasalestax/",
+   "category": "attachment",
+   "redirect": "/resources/sales-tax-law/"
+  },
+  {
+   "slug": "saving-energy.html",
+   "url": "https://www.reliancecpa.com/saving-energy.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "saving-energy.html__saving-energy",
+   "url": "https://www.reliancecpa.com/saving-energy.html/saving-energy/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "savings-plan.html",
+   "url": "https://www.reliancecpa.com/savings-plan.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "savings-plan.html__savings-amount",
+   "url": "https://www.reliancecpa.com/savings-plan.html/savings-amount/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "sba-assistance",
+   "url": "https://www.reliancecpa.com/sba-assistance",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "sba-assistance__sba-assistance-2",
+   "url": "https://www.reliancecpa.com/sba-assistance/sba-assistance-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "search-engine-marketing.html",
+   "url": "https://www.reliancecpa.com/search-engine-marketing.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "search-engine-marketing.html__internet-marketing",
+   "url": "https://www.reliancecpa.com/search-engine-marketing.html/internet-marketing/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "sec-role",
+   "url": "https://www.reliancecpa.com/sec-role",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "sec-role__sec",
+   "url": "https://www.reliancecpa.com/sec-role/sec/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "second-career",
+   "url": "https://www.reliancecpa.com/second-career",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "second-career__second-career",
+   "url": "https://www.reliancecpa.com/second-career/second-career/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "self-directed-ira",
+   "url": "https://www.reliancecpa.com/self-directed-ira",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "self-directed-ira__self-directed-ira-2",
+   "url": "https://www.reliancecpa.com/self-directed-ira/self-directed-ira-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "self-employment-tax-questions",
+   "url": "https://www.reliancecpa.com/self-employment-tax-questions",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "self-employment-tax-questions__self-employment-tax-2",
+   "url": "https://www.reliancecpa.com/self-employment-tax-questions/self-employment-tax-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "self-employment-tax.html",
+   "url": "https://www.reliancecpa.com/self-employment-tax.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "self-employment-tax.html__self-employment-tax",
+   "url": "https://www.reliancecpa.com/self-employment-tax.html/self-employment-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "small-business-accountant.html",
+   "url": "https://www.reliancecpa.com/small-business-accountant.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-accountant.html__small-business-accountant-2",
+   "url": "https://www.reliancecpa.com/small-business-accountant.html/small-business-accountant-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-accounting.htm__small-business-accountant",
+   "url": "https://www.reliancecpa.com/small-business-accounting.htm/small-business-accountant/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "small-business-brand",
+   "url": "https://www.reliancecpa.com/small-business-brand",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-brand__woman-working-at-flower-shop-smiling",
+   "url": "https://www.reliancecpa.com/small-business-brand/woman-working-at-flower-shop-smiling/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-defined.html",
+   "url": "https://www.reliancecpa.com/small-business-defined.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-defined.html__small-business-defined",
+   "url": "https://www.reliancecpa.com/small-business-defined.html/small-business-defined/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-defined",
+   "url": "https://www.reliancecpa.com/small-business-defined",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-defined__small-business-defined-2",
+   "url": "https://www.reliancecpa.com/small-business-defined/small-business-defined-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-ecommerce.html",
+   "url": "https://www.reliancecpa.com/small-business-ecommerce.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-ecommerce.html__small-business-ecommerce",
+   "url": "https://www.reliancecpa.com/small-business-ecommerce.html/small-business-ecommerce/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-efficiency.html",
+   "url": "https://www.reliancecpa.com/small-business-efficiency.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-efficiency.html__small-business-efficiency",
+   "url": "https://www.reliancecpa.com/small-business-efficiency.html/small-business-efficiency/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-failure.html",
+   "url": "https://www.reliancecpa.com/small-business-failure.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-failure.html__small-business-failure",
+   "url": "https://www.reliancecpa.com/small-business-failure.html/small-business-failure/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-insurance.html",
+   "url": "https://www.reliancecpa.com/small-business-insurance.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-insurance.html__small-business-insurance",
+   "url": "https://www.reliancecpa.com/small-business-insurance.html/small-business-insurance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-location.html",
+   "url": "https://www.reliancecpa.com/small-business-location.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-location.html__small-business-location",
+   "url": "https://www.reliancecpa.com/small-business-location.html/small-business-location/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-networking.html",
+   "url": "https://www.reliancecpa.com/small-business-networking.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-networking.html__small-business-networking",
+   "url": "https://www.reliancecpa.com/small-business-networking.html/small-business-networking/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-planning.html",
+   "url": "https://www.reliancecpa.com/small-business-planning.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-planning.html__small-business-planning",
+   "url": "https://www.reliancecpa.com/small-business-planning.html/small-business-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-success.html",
+   "url": "https://www.reliancecpa.com/small-business-success.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-success.html__small-business-success",
+   "url": "https://www.reliancecpa.com/small-business-success.html/small-business-success/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "small-business-tax",
+   "url": "https://www.reliancecpa.com/small-business-tax",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "small-business-tax__small-business-tax-2",
+   "url": "https://www.reliancecpa.com/small-business-tax/small-business-tax-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "social-media-mistakes",
+   "url": "https://www.reliancecpa.com/social-media-mistakes",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "social-media-mistakes__social-media-diagram",
+   "url": "https://www.reliancecpa.com/social-media-mistakes/social-media-diagram/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "social-media-small-business",
+   "url": "https://www.reliancecpa.com/social-media-small-business",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "social-media-small-business__social-media-small-business-2",
+   "url": "https://www.reliancecpa.com/social-media-small-business/social-media-small-business-2/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "social-media-strategy",
+   "url": "https://www.reliancecpa.com/social-media-strategy",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "social-media-strategy__social-media-strategy",
+   "url": "https://www.reliancecpa.com/social-media-strategy/social-media-strategy/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "sole-proprietorship.htm__sole-proprietorship",
+   "url": "https://www.reliancecpa.com/sole-proprietorship.htm/sole-proprietorship/",
+   "category": "attachment",
+   "redirect": "/resources/sole-proprietorship/"
+  },
+  {
+   "slug": "source-document.html",
+   "url": "https://www.reliancecpa.com/source-document.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "source-document.html__source-document",
+   "url": "https://www.reliancecpa.com/source-document.html/source-document/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "staff-profiles.htm__briana-mcnulty",
+   "url": "https://www.reliancecpa.com/staff-profiles.htm/briana-mcnulty/",
+   "category": "attachment",
+   "redirect": "/about/team/"
+  },
+  {
+   "slug": "staff-profiles.htm__jamie-partin",
+   "url": "https://www.reliancecpa.com/staff-profiles.htm/jamie-partin/",
+   "category": "attachment",
+   "redirect": "/about/team/"
+  },
+  {
+   "slug": "staff-profiles.htm__kim-nguyen",
+   "url": "https://www.reliancecpa.com/staff-profiles.htm/kim-nguyen/",
+   "category": "attachment",
+   "redirect": "/about/team/"
+  },
+  {
+   "slug": "staff-profiles.htm__nicole-frenier",
+   "url": "https://www.reliancecpa.com/staff-profiles.htm/nicole-frenier/",
+   "category": "attachment",
+   "redirect": "/about/team/"
+  },
+  {
+   "slug": "staff-profiles.htm__tara-govindaraju",
+   "url": "https://www.reliancecpa.com/staff-profiles.htm/tara-govindaraju/",
+   "category": "attachment",
+   "redirect": "/about/team/"
+  },
+  {
+   "slug": "standard-deduction-tax-return",
+   "url": "https://www.reliancecpa.com/standard-deduction-tax-return",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "standard-deduction-tax-return__preparing-taxes",
+   "url": "https://www.reliancecpa.com/standard-deduction-tax-return/preparing-taxes/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "start-my-own-business.html",
+   "url": "https://www.reliancecpa.com/start-my-own-business.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "start-my-own-business.html__start-my-own-business",
+   "url": "https://www.reliancecpa.com/start-my-own-business.html/start-my-own-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "starting-a-business.html",
+   "url": "https://www.reliancecpa.com/starting-a-business.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "starting-a-business.html__starting-new-business",
+   "url": "https://www.reliancecpa.com/starting-a-business.html/starting-new-business/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "startup-costs.html",
+   "url": "https://www.reliancecpa.com/startup-costs.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "startup-costs.html__startup-costs",
+   "url": "https://www.reliancecpa.com/startup-costs.html/startup-costs/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "staying-on-budget.htm__budget",
+   "url": "https://www.reliancecpa.com/staying-on-budget.htm/budget/",
+   "category": "attachment",
+   "redirect": "/resources/staying-on-budget/"
+  },
+  {
+   "slug": "strategic-business-planning.htm__strategic-business-planning",
+   "url": "https://www.reliancecpa.com/strategic-business-planning.htm/strategic-business-planning/",
+   "category": "attachment",
+   "redirect": "/resources/strategic-business-planning/"
+  },
+  {
+   "slug": "student-loans.html",
+   "url": "https://www.reliancecpa.com/student-loans.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "student-loans.html__student-loan",
+   "url": "https://www.reliancecpa.com/student-loans.html/student-loan/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "successful-small-businesses.html",
+   "url": "https://www.reliancecpa.com/successful-small-businesses.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "successful-small-businesses.html__successful-small-business",
+   "url": "https://www.reliancecpa.com/successful-small-businesses.html/successful-small-business/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "succession-planning.htm__succession-planning",
+   "url": "https://www.reliancecpa.com/succession-planning.htm/succession-planning/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/succession-planning/"
+  },
+  {
+   "slug": "tampa-cpa-areas-served.htm__greater-tampa-bay",
+   "url": "https://www.reliancecpa.com/tampa-cpa-areas-served.htm/greater-tampa-bay/",
+   "category": "attachment",
+   "redirect": "/areas-served/"
+  },
+  {
+   "slug": "tampa-cpa-firm-tampa-accountants-serve-all-business-tax-income-tax-bookkeeping-payroll-accounting-needs__cpa-certified-public-accountant",
+   "url": "https://www.reliancecpa.com/tampa-cpa-firm-tampa-accountants-serve-all-business-tax-income-tax-bookkeeping-payroll-accounting-needs/cpa-certified-public-accountant/",
+   "category": "attachment",
+   "redirect": "/"
+  },
+  {
+   "slug": "tax-advantages",
+   "url": "https://www.reliancecpa.com/tax-advantages",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-benefits-home-office",
+   "url": "https://www.reliancecpa.com/tax-benefits-home-office",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-benefits-home-office__home-office",
+   "url": "https://www.reliancecpa.com/tax-benefits-home-office/home-office/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-benefits-home-ownership",
+   "url": "https://www.reliancecpa.com/tax-benefits-home-ownership",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-benefits-home-ownership__couple-standing-outside-new-house",
+   "url": "https://www.reliancecpa.com/tax-benefits-home-ownership/couple-standing-outside-new-house/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-compliance",
+   "url": "https://www.reliancecpa.com/tax-compliance",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-compliance__tax-compliance-2",
+   "url": "https://www.reliancecpa.com/tax-compliance/tax-compliance-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-exempt-organizations",
+   "url": "https://www.reliancecpa.com/tax-exempt-organizations",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-exempt-organizations__tax-exempt-organizations-2",
+   "url": "https://www.reliancecpa.com/tax-exempt-organizations/tax-exempt-organizations-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-exempt-status",
+   "url": "https://www.reliancecpa.com/tax-exempt-status",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-exempt-status__tax-form-2",
+   "url": "https://www.reliancecpa.com/tax-exempt-status/tax-form-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-form.html",
+   "url": "https://www.reliancecpa.com/tax-form.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-form.html__tax-form",
+   "url": "https://www.reliancecpa.com/tax-form.html/tax-form/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-forms",
+   "url": "https://www.reliancecpa.com/tax-forms",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-forms__tax-form-types",
+   "url": "https://www.reliancecpa.com/tax-forms/tax-form-types/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-planning-year-round",
+   "url": "https://www.reliancecpa.com/tax-planning-year-round",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-planning-year-round__tax-planning-year-round",
+   "url": "https://www.reliancecpa.com/tax-planning-year-round/tax-planning-year-round/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-planning.htm__tax-planning",
+   "url": "https://www.reliancecpa.com/tax-planning.htm/tax-planning/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/tax-planning/"
+  },
+  {
+   "slug": "tax-preparation.htm__tax-preparation-accountant",
+   "url": "https://www.reliancecpa.com/tax-preparation.htm/tax-preparation-accountant/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-preparer.htm__tax-preparer",
+   "url": "https://www.reliancecpa.com/tax-preparer.htm/tax-preparer/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/income-tax-services/"
+  },
+  {
+   "slug": "tax-problem-irs-audit-help.htm__tax-problem-irs-audit-help",
+   "url": "https://www.reliancecpa.com/tax-problem-irs-audit-help.htm/tax-problem-irs-audit-help/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/irs-problem-resolution/"
+  },
+  {
+   "slug": "tax-records-to-keep",
+   "url": "https://www.reliancecpa.com/tax-records-to-keep",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-records-to-keep__tax-records-to-keep-2",
+   "url": "https://www.reliancecpa.com/tax-records-to-keep/tax-records-to-keep-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-return-error",
+   "url": "https://www.reliancecpa.com/tax-return-error",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-return-error__tax-return-error-2",
+   "url": "https://www.reliancecpa.com/tax-return-error/tax-return-error-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-rules-home-sale",
+   "url": "https://www.reliancecpa.com/tax-rules-home-sale",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-rules-home-sale__accounting",
+   "url": "https://www.reliancecpa.com/tax-rules-home-sale/accounting/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-saving-strategies.htm__tax-saving-strategies",
+   "url": "https://www.reliancecpa.com/tax-saving-strategies.htm/tax-saving-strategies/",
+   "category": "attachment",
+   "redirect": "/resources/tax-saving-strategies/"
+  },
+  {
+   "slug": "tax-scams.html",
+   "url": "https://www.reliancecpa.com/tax-scams.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-scams.html__tax-scams",
+   "url": "https://www.reliancecpa.com/tax-scams.html/tax-scams/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-valuation-allowance",
+   "url": "https://www.reliancecpa.com/tax-valuation-allowance",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "tax-valuation-allowance__tax-valuation-allowance-2",
+   "url": "https://www.reliancecpa.com/tax-valuation-allowance/tax-valuation-allowance-2/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxable-income.html",
+   "url": "https://www.reliancecpa.com/taxable-income.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxable-income.html__taxable-income",
+   "url": "https://www.reliancecpa.com/taxable-income.html/taxable-income/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-advocate-service",
+   "url": "https://www.reliancecpa.com/taxpayer-advocate-service",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-advocate-service__tas-irs",
+   "url": "https://www.reliancecpa.com/taxpayer-advocate-service/tas-irs/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-burden.html",
+   "url": "https://www.reliancecpa.com/taxpayer-burden.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-burden.html__taxpayer-burden",
+   "url": "https://www.reliancecpa.com/taxpayer-burden.html/taxpayer-burden/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-rights.html",
+   "url": "https://www.reliancecpa.com/taxpayer-rights.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "taxpayer-rights.html__taxpayer-rights",
+   "url": "https://www.reliancecpa.com/taxpayer-rights.html/taxpayer-rights/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "temporary-employees.html",
+   "url": "https://www.reliancecpa.com/temporary-employees.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "temporary-employees.html__temporary-employees",
+   "url": "https://www.reliancecpa.com/temporary-employees.html/temporary-employees/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "the-romney-tax-plan.html",
+   "url": "https://www.reliancecpa.com/the-romney-tax-plan.html",
+   "category": "dead-link",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "the-romney-tax-plan",
+   "url": "https://www.reliancecpa.com/the-romney-tax-plan",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "the-time-for-asset-protection-s-now.html",
+   "url": "https://www.reliancecpa.com/the-time-for-asset-protection-s-now.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "time-management-business-owner",
+   "url": "https://www.reliancecpa.com/time-management-business-owner",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "time-management-business-owner__time-management-business-owner",
+   "url": "https://www.reliancecpa.com/time-management-business-owner/time-management-business-owner/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "time-management.html",
+   "url": "https://www.reliancecpa.com/time-management.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "time-management.html__time-management",
+   "url": "https://www.reliancecpa.com/time-management.html/time-management/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "title-insurance.html",
+   "url": "https://www.reliancecpa.com/title-insurance.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "title-insurance.html__title-insurance",
+   "url": "https://www.reliancecpa.com/title-insurance.html/title-insurance/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "titling-dental-assets",
+   "url": "https://www.reliancecpa.com/titling-dental-assets",
+   "category": "dental",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "titling-dental-assets__dental-titling-of-assets",
+   "url": "https://www.reliancecpa.com/titling-dental-assets/dental-titling-of-assets/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "trade-shows.html",
+   "url": "https://www.reliancecpa.com/trade-shows.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "trade-shows.html__trade-shows",
+   "url": "https://www.reliancecpa.com/trade-shows.html/trade-shows/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "transaction-taxes",
+   "url": "https://www.reliancecpa.com/transaction-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "transaction-taxes__transaction-tax",
+   "url": "https://www.reliancecpa.com/transaction-taxes/transaction-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "transfer-ownership.html",
+   "url": "https://www.reliancecpa.com/transfer-ownership.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "transfer-ownership.html__transfer-ownership",
+   "url": "https://www.reliancecpa.com/transfer-ownership.html/transfer-ownership/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "trillion-is-the-new-billion-part-2.html",
+   "url": "https://www.reliancecpa.com/trillion-is-the-new-billion-part-2.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "trillion-is-the-new-billion.html",
+   "url": "https://www.reliancecpa.com/trillion-is-the-new-billion.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "twitter__woman-in-home-office-with-computer-smiling",
+   "url": "https://www.reliancecpa.com/twitter/woman-in-home-office-with-computer-smiling/",
+   "category": "attachment",
+   "redirect": "/resources/twitter/"
+  },
+  {
+   "slug": "uncertain-tax-positions",
+   "url": "https://www.reliancecpa.com/uncertain-tax-positions",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "uncertain-tax-positions__utp-small-business",
+   "url": "https://www.reliancecpa.com/uncertain-tax-positions/utp-small-business/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "understanding-estate-tax.html",
+   "url": "https://www.reliancecpa.com/understanding-estate-tax.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "understanding-estate-tax.html__understanding-estate-tax",
+   "url": "https://www.reliancecpa.com/understanding-estate-tax.html/understanding-estate-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "underwater-mortgage",
+   "url": "https://www.reliancecpa.com/underwater-mortgage",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "underwater-mortgage__underwater-mortgage-2",
+   "url": "https://www.reliancecpa.com/underwater-mortgage/underwater-mortgage-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "unemployment-tax.html",
+   "url": "https://www.reliancecpa.com/unemployment-tax.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "unemployment-tax.html__unemployment-tax",
+   "url": "https://www.reliancecpa.com/unemployment-tax.html/unemployment-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "unpaid-payroll-taxes",
+   "url": "https://www.reliancecpa.com/unpaid-payroll-taxes",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "upside-down-mortgage.html",
+   "url": "https://www.reliancecpa.com/upside-down-mortgage.html",
+   "category": "article-library",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "upside-down-mortgage.html__upside-down-mortgage",
+   "url": "https://www.reliancecpa.com/upside-down-mortgage.html/upside-down-mortgage/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "vacation-budgeting.html",
+   "url": "https://www.reliancecpa.com/vacation-budgeting.html",
+   "category": "article-library",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "vacation-budgeting.html__vacation-budgeting",
+   "url": "https://www.reliancecpa.com/vacation-budgeting.html/vacation-budgeting/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "value-added-tax.html",
+   "url": "https://www.reliancecpa.com/value-added-tax.html",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "value-added-tax.html__value-added-tax",
+   "url": "https://www.reliancecpa.com/value-added-tax.html/value-added-tax/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "variable_universal_life.html",
+   "url": "https://www.reliancecpa.com/variable_universal_life.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "velocity",
+   "url": "https://www.reliancecpa.com/velocity",
+   "category": "article-dated",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "velocity__velocity-2",
+   "url": "https://www.reliancecpa.com/velocity/velocity-2/",
+   "category": "attachment",
+   "redirect": "/resources/"
+  },
+  {
+   "slug": "veterinarian-quickbooks-set-up-and-support",
+   "url": "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinarian-quickbooks-set-up-and-support__quickbooks-logo",
+   "url": "https://www.reliancecpa.com/veterinarian-quickbooks-set-up-and-support/quickbooks-logo/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-benchmarking",
+   "url": "https://www.reliancecpa.com/veterinary-benchmarking",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-benchmarking__benchmarking-benefits",
+   "url": "https://www.reliancecpa.com/veterinary-benchmarking/benchmarking-benefits/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-bill-pay",
+   "url": "https://www.reliancecpa.com/veterinary-bill-pay",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-bill-pay__attachment__9228526",
+   "url": "https://www.reliancecpa.com/veterinary-bill-pay/attachment/9228526/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-bookkeeping",
+   "url": "https://www.reliancecpa.com/veterinary-bookkeeping",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-bookkeeping__bookkeeping-1",
+   "url": "https://www.reliancecpa.com/veterinary-bookkeeping/bookkeeping-1/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-budgets-and-financial-projections",
+   "url": "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-budgets-and-financial-projections__budget-istock_000041295790_large",
+   "url": "https://www.reliancecpa.com/veterinary-budgets-and-financial-projections/budget-istock_000041295790_large/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-business-entity-structuring",
+   "url": "https://www.reliancecpa.com/veterinary-business-entity-structuring",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-business-entity-structuring__business_structures",
+   "url": "https://www.reliancecpa.com/veterinary-business-entity-structuring/business_structures/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-business-loan-assistance",
+   "url": "https://www.reliancecpa.com/veterinary-business-loan-assistance",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-business-loan-assistance__contentimagehandler",
+   "url": "https://www.reliancecpa.com/veterinary-business-loan-assistance/contentimagehandler/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-business-plan-development",
+   "url": "https://www.reliancecpa.com/veterinary-business-plan-development",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-business-plan-development__business-plan-images",
+   "url": "https://www.reliancecpa.com/veterinary-business-plan-development/business-plan-images/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-buying-vs-leasing-analysis",
+   "url": "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-buying-vs-leasing-analysis__market-analysis",
+   "url": "https://www.reliancecpa.com/veterinary-buying-vs-leasing-analysis/market-analysis/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-cash-flow-planning",
+   "url": "https://www.reliancecpa.com/veterinary-cash-flow-planning",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-cash-flow-planning__freecashflowtocommonequity",
+   "url": "https://www.reliancecpa.com/veterinary-cash-flow-planning/freecashflowtocommonequity/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-cpa",
+   "url": "https://www.reliancecpa.com/veterinary-cpa",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-cpa__veterinarian-assessing-a-puppy",
+   "url": "https://www.reliancecpa.com/veterinary-cpa/veterinarian-assessing-a-puppy/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-financial-and-consulting-services",
+   "url": "https://www.reliancecpa.com/veterinary-financial-and-consulting-services",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-financial-and-consulting-services__veterinarian-job-description",
+   "url": "https://www.reliancecpa.com/veterinary-financial-and-consulting-services/veterinarian-job-description/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-financial-statement-preparation",
+   "url": "https://www.reliancecpa.com/veterinary-financial-statement-preparation",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-financial-statement-preparation__financial-reports",
+   "url": "https://www.reliancecpa.com/veterinary-financial-statement-preparation/financial-reports/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-hiring-assistance",
+   "url": "https://www.reliancecpa.com/veterinary-hiring-assistance",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-hiring-assistance__staff-b4412c66",
+   "url": "https://www.reliancecpa.com/veterinary-hiring-assistance/staff-b4412c66/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-irs-problem-resolution",
+   "url": "https://www.reliancecpa.com/veterinary-irs-problem-resolution",
+   "category": "veterinary",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "veterinary-irs-problem-resolution__tax-problems",
+   "url": "https://www.reliancecpa.com/veterinary-irs-problem-resolution/tax-problems/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "veterinary-outsourced-controller",
+   "url": "https://www.reliancecpa.com/veterinary-outsourced-controller",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-outsourced-controller__time-is-money",
+   "url": "https://www.reliancecpa.com/veterinary-outsourced-controller/time-is-money/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-purchasing-a-practice",
+   "url": "https://www.reliancecpa.com/veterinary-purchasing-a-practice",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-purchasing-a-practice__istock_000009819502small",
+   "url": "https://www.reliancecpa.com/veterinary-purchasing-a-practice/istock_000009819502small/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-retirement-planning",
+   "url": "https://www.reliancecpa.com/veterinary-retirement-planning",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-retirement-planning__retirement-plan",
+   "url": "https://www.reliancecpa.com/veterinary-retirement-planning/retirement-plan/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-succession-planning",
+   "url": "https://www.reliancecpa.com/veterinary-succession-planning",
+   "category": "veterinary",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-succession-planning__vets-examining-an-australian-shepherds-radiography-in-front-of-white-background",
+   "url": "https://www.reliancecpa.com/veterinary-succession-planning/vets-examining-an-australian-shepherds-radiography-in-front-of-white-background/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "veterinary-tax-planning",
+   "url": "https://www.reliancecpa.com/veterinary-tax-planning",
+   "category": "veterinary",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "veterinary-tax-planning__year-end-tax-planning-morell-open-forum-432",
+   "url": "https://www.reliancecpa.com/veterinary-tax-planning/year-end-tax-planning-morell-open-forum-432/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "veterinary-virtual-accounting",
+   "url": "https://www.reliancecpa.com/veterinary-virtual-accounting",
+   "category": "veterinary",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "veterinary-virtual-accounting__virtualbookkeeping",
+   "url": "https://www.reliancecpa.com/veterinary-virtual-accounting/virtualbookkeeping/",
+   "category": "attachment",
+   "redirect": "/business-accounting/"
+  },
+  {
+   "slug": "voluntary-tax.html",
+   "url": "https://www.reliancecpa.com/voluntary-tax.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "voluntary-tax.html__voluntary-tax",
+   "url": "https://www.reliancecpa.com/voluntary-tax.html/voluntary-tax/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "wage-and-hour-laws.html",
+   "url": "https://www.reliancecpa.com/wage-and-hour-laws.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "wage-and-hour-laws.html__wage-and-hour-laws",
+   "url": "https://www.reliancecpa.com/wage-and-hour-laws.html/wage-and-hour-laws/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "what-is-a-cpa.htm__what-is-a-cpa",
+   "url": "https://www.reliancecpa.com/what-is-a-cpa.htm/what-is-a-cpa/",
+   "category": "attachment",
+   "redirect": "/resources/what-is-a-cpa/"
+  },
+  {
+   "slug": "what-is-a-trust.htm__trust",
+   "url": "https://www.reliancecpa.com/what-is-a-trust.htm/trust/",
+   "category": "attachment",
+   "redirect": "/resources/what-is-a-trust/"
+  },
+  {
+   "slug": "who-must-file.html",
+   "url": "https://www.reliancecpa.com/who-must-file.html",
+   "category": "article-library",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "who-must-file.html__who-must-file",
+   "url": "https://www.reliancecpa.com/who-must-file.html/who-must-file/",
+   "category": "attachment",
+   "redirect": "/tax-preparation/"
+  },
+  {
+   "slug": "whole_life_insurance.html",
+   "url": "https://www.reliancecpa.com/whole_life_insurance.html",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "why-you-need-life-insurance.htm__why-you-need-life-insurance",
+   "url": "https://www.reliancecpa.com/why-you-need-life-insurance.htm/why-you-need-life-insurance/",
+   "category": "attachment",
+   "redirect": "/resources/why-you-need-life-insurance/"
+  },
+  {
+   "slug": "withdrawal-from-ira",
+   "url": "https://www.reliancecpa.com/withdrawal-from-ira",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "withdrawal-from-ira__nest-egg",
+   "url": "https://www.reliancecpa.com/withdrawal-from-ira/nest-egg/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "workplace-monotony",
+   "url": "https://www.reliancecpa.com/workplace-monotony",
+   "category": "article-library",
+   "redirect": "/business-tax-consulting/"
+  },
+  {
+   "slug": "workplace-monotony__employee-monotony",
+   "url": "https://www.reliancecpa.com/workplace-monotony/employee-monotony/",
+   "category": "attachment",
+   "redirect": "/business-tax-consulting/"
+  }
+ ]
+}

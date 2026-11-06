@@ -1,0 +1,7 @@
+{#
+MODULE: quote-tile
+PURPOSE: A real quotation with attribution as the original's big centred pull quote: Georgia 500, clamp 45 to 78px, tight tracking, curly quotes, the attribution in muted Arial below.
+SLOTS: text, attribution.
+SQUARESPACE: Quote block (native), centred, with the heading font.
+#}
+<section class="m m-quote" data-module="quote-tile" data-tone="{{ tone }}"><figure><blockquote class="pull">&ldquo;{{ s.text|md }}&rdquo;</blockquote>{% if s.attribution %}<figcaption class="pull__by">{{ s.attribution|md }}</figcaption>{% endif %}</figure></section>

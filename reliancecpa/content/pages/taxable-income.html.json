@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/taxable-income.html",
+ "slug": "taxable-income.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Taxable Income",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/taxable-income.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your Tampa CPA Explains Taxable Income",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your Tampa CPA Explains Taxable Income",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/taxable-income.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "taxable-income",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most Americans who work and pay taxes realize that not every penny they earn will be subject to income tax. There is gross income – the total amount of money you made before taxes – and there is taxable income. Anyone who has tried to calculate their own taxes, or watched an accountant systematically sift through the many IRS forms, understands the importance (and usefulness) of deductions, exemptions and other adjustments. Yet, knowing it and putting it into practice are two different things.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "That’s why it’s vital to have a[Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, by your side as you plan out your fiscal year. Whether it’s business tax or personal income tax, planning is essential to get the most out of the adjustments that produce the bottom-line taxable income. Since Reliance was founded in 1984, our certified public accountants and business advisers have helped thousands of individuals and hundreds of companies find the best ways to minimize their tax burden. When it comes to determining taxable income, keep in mind that it typically is derived after subtracting the following:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Income after deductions, exemptions and other adjustments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income from the sale of appreciable assets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income from dividends",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income from interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Other forms of income, depending on your filing status",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about the importance of tax planning, [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today. We’ll be glad to examine your finances in a financial health checkup, free of charge.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 243
+}

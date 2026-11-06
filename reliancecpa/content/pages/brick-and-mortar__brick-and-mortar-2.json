@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2/",
+ "slug": "brick-and-mortar__brick-and-mortar-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Brick And Mortar - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Brick And Mortar",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains the Importance of a ‘Brick-and-Mortar’ Presence for a Small Business](https://www.reliancecpa.com/brick-and-mortar)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains the Importance of a ‘Brick-and-Mortar’ Presence for a Small Business",
+     "href": "https://www.reliancecpa.com/brick-and-mortar"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Brick And Mortar",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished July 31, 2012 | Full size is [602 × 900](https://www.reliancecpa.com/wp-content/uploads/Brick-And-Mortar.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "602 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Brick-And-Mortar.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Brick-And-Mortar.jpg",
+   "alt": "Brick And Mortar",
+   "alt_missing": false,
+   "title": "",
+   "width": "602",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Brick-And-Mortar.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/brick-and-mortar/brick-and-mortar-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 33
+}

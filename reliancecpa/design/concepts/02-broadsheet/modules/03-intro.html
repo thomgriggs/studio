@@ -1,0 +1,9 @@
+{#
+MODULE: intro
+PURPOSE: The opening paragraph(s) after the title: the original's lead style, 18px with a 58 to 62 character measure, a touch darker than body.
+SLOTS: paragraphs[].
+SQUARESPACE: Text block in the large paragraph style (Paragraph 1) in the section under the title.
+#}
+<section class="m m-intro" data-module="intro" data-tone="{{ tone }}">
+  <div class="intro">{% for p in s.paragraphs %}<p>{{ p|md }}</p>{% endfor %}</div>
+</section>

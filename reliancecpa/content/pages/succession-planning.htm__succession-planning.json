@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/succession-planning.htm/succession-planning/",
+ "slug": "succession-planning.htm__succession-planning",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/succession-planning.htm/succession-planning",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "succession-planning - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/succession-planning.htm/succession-planning/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "succession-planning",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← An Accountant in Tampa Discusses Why You Need to Think about Succession Planning](https://www.reliancecpa.com/succession-planning.htm)",
+   "links": [
+    {
+     "text": "← An Accountant in Tampa Discusses Why You Need to Think about Succession Planning",
+     "href": "https://www.reliancecpa.com/succession-planning.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "succession-planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [200 × 300](https://www.reliancecpa.com/wp-content/uploads/2011/12/succession-planning.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "200 × 300",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/succession-planning.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/succession-planning.jpg",
+   "alt": "Accountant in Tampa Helps with Succession Planning",
+   "alt_missing": false,
+   "title": "",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/succession-planning.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/succession-planning.htm/succession-planning).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/succession-planning.htm/succession-planning"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 30
+}

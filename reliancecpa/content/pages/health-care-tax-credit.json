@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/health-care-tax-credit",
+ "slug": "health-care-tax-credit",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Health Care Tax Credit | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/health-care-tax-credit",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Small Business Health Care Tax Credit",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Small Business Health Care Tax Credit",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Health-Care-Tax-Credit-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Health Care Tax Credit",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Affordable Care Act signed into law in 2010 created a small business health care tax credit designed to help small businesses and small tax-exempt organizations better afford health care for employees. The law, which is active in its current form for the tax years 2010-2013, was aimed specifically at companies and organizations employing low- and moderate-income workers, and was intended to encourage first-time health coverage or an extension of existing employee coverage.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can explain the potential financial ramifications of the small business health care tax credit for your company. Provisions within the law limit the credit to companies with fewer than 25 full-time equivalent (FTE) workers whose average wages are less than $50,000 per year. Businesses that fall into those ranges can be credited 35 percent, while small tax-exempt organizations can claim a credit of 25 percent. After 2013, the rates are scheduled to increase to 50 percent and 35 percent, respectively.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition, eligible small businesses that pay more than 50 percent of their employees’ single coverage premiums can also claim a tax deduction for the amount paid in premiums exceeding the value of the tax credit. That gives eligible businesses the opportunity to claim both a credit and a deduction related to employee health care premiums.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how the small business health care tax credit relates specifically to your company, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 250
+}

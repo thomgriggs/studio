@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/tax-valuation-allowance",
+ "slug": "tax-valuation-allowance",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Valuation Allowance | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-valuation-allowance",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Deferred Tax Valuation Allowance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Deferred Tax Valuation Allowance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Valuation-Allowance-300x225.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tax Valuation Allowance",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are times when a company might not expect to be able to take advantage of the benefits of its deferred tax assets within the seven-year time frame allowed by law. A deferred tax asset is a representation of a tax advantage the company expects to be able to enjoy in the future. These might be anticipated operating losses, or they might be differences in interpretation of the timing of revenue recognition between tax and accounting calculations. An example of this is estimating when and how often a company might have to make good on a warranty for a product sold. A valuation allowance must be reported if a company determines that there is more than a 50 percent chance that it will not be able to realize some of its deferred tax assets.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you sort through this and other complex business tax issues. Valuation allowance can be especially complicated, because its determination relies so much on the assumptions of a company’s managers. In truth, predicting a company’s future profits is nothing more than a guessing game, no matter how in-depth the analysis. Another complication might be fluctuations in predicted income from year to year. Economic conditions shift, after all, and variables such as gasoline prices, housing prices, changing demand, material shortages, and the effects of natural disasters all can influence profitability.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To formulate the best tax strategy for your company, it pays to work closely with an experienced, knowledgeable CPA from Reliance Consulting. [Contact](http://reliancecpa.com/contact.html) us today for more information about our tax planning services for small businesses.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 278
+}

@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-brand",
+ "slug": "small-business-brand",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-11-02",
+ "seo": {
+  "title_tag": "Small Business Branding | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-brand",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "How a Tampa CPA Can Help a Small Business Shape its Brand",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "How a Tampa CPA Can Help a Small Business Shape its Brand",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Small-Business-Brand-300x200.jpg",
+   "alt": "Small Business Brand",
+   "alt_missing": false,
+   "title": "Small Business Brand",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter how much planning and financing you have put into your small business, it would be foolhardy to expect overnight success. For the most part, the big brands – the chain stores, restaurants, and online marketplaces that are recognized across the country – took many years building their reputations. Almost all of them started small and work their way into the hearts, minds, and wallets of Americans. In general, unless you find a way to make your brands go “viral,” slow and steady is the way to build a brand that lasts.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you plan for every contingency as you build a business from the ground up. One of the most important ways to ensure success is to envision what you hope to accomplish with your brand, then take the steps required to make it a reality. It starts with the first business plan you develop, an outline of your overall strategy that will answer a number of brand-building questions, such as:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Will you hire an agency or an in-house marketing consultant?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Is print, broadcast, or outdoor advertising the best route",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What role will Internet marketing play?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much money are you willing and able to spend on marketing?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance has helped hundreds of small businesses in the Tampa Bay area and throughout Florida find the path to profitability. If you seek sound advice about brand-building and every other aspect of business strategy, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 265
+}

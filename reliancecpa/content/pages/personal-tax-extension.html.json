@@ -1,0 +1,116 @@
+{
+ "url": "https://www.reliancecpa.com/personal-tax-extension.html",
+ "slug": "personal-tax-extension.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Filing for an Individual Tax Extension",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-tax-extension.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Process of Filing for an Individual Tax Extension",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Process of Filing for an Individual Tax Extension",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/personal-tax-extension.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "personal-tax-extension",
+   "width": "250",
+   "height": "313",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you find that you need time beyond the usual mid-April deadline to file your federal income tax return, the Internal Revenue Service allows you to apply for a six-month extension. It’s important to understand, however, that this applies only to the paperwork. If you owe money, the deadline remains mid-April, and an estimated amount must be paid by then to avoid owing interest and/or paying a penalty.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help you interpret the ins and outs of your responsibilities when it comes to paying federal income tax. Tax planning is an integral part of any certified public accounting firm, and most individuals will discover that the best way handle the scope and intricacy of the tax code in the United States is to rely on expert advice from an experienced CPA. Among the questions you may have about tax preparation is how to request the six-month extension offered by the IRS for filing your return. The process itself is not complicated:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Fill in a rough draft of your tax return to determine an estimate of what you’ll owe (if anything).",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Acquire the Automatic Extension Form 4868, available in .pdf form on the IRS website.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Mail the extension form with your payment by the mid-April deadline.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Note that you also can file an extension online, as long as it is filed before midnight of the deadline day. In addition, payments can be made using a credit card, as long as IRS-approved credit card services are used.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since Reliance Consulting was founded in 1984, our expert accountants have helped thousands of individuals and hundreds of Tampa Bay area businesses with tax planning and preparation. [Contact](http://www.reliancecpa.com//contact.html) us today for expert advice and guidance from a Tampa CPA.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 304
+}

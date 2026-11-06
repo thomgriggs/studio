@@ -1,0 +1,107 @@
+{
+ "url": "https://www.reliancecpa.com/audit-help.htm",
+ "slug": "audit-help.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+ "seo": {
+  "title_tag": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/audit-help.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "An Audit by Your Accountant in Tampa Provides the Highest Level of Assurance",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/audit-help.jpg",
+     "alt": "Audit by Accountant in Tampa, FL"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Almost any organization in the Tampa Bay area, from small businesses to churches to branches of government, might need an audit. An audit is the highest level of financial fact-checking that your accountant in Tampa can perform for your organization. In addition to giving you the peace of mind that your books are in order, an audit also may be required by your investors, creditors, shareholders, and others who need assurance of your organization’s monetary situation.",
+     "If you need a CPA or [accountant in Tampa](http://www.reliancecpa.com/) to perform an audit, we hope you will consider Reliance Consulting, LLC for the job. With more than 25 years of experience serving Tampa Bay area businesses and organizations, Reliance Consulting has performed audits, reviews, and compilations of all kinds.",
+     "An audit by Reliance Consulting can include verification of:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Outstanding receivables that your clients owe to you"
+     },
+     {
+      "text": "Outstanding payables that you owe to your vendors"
+     },
+     {
+      "text": "Pending lawsuits that your attorneys might be litigating"
+     },
+     {
+      "text": "Cash and debt balances with your banks"
+     },
+     {
+      "text": "Your inventory"
+     },
+     {
+      "text": "Your payroll"
+     },
+     {
+      "text": "More"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "To ensure that your audit provides the most methodical and thorough review of your business, your Reliance Consulting accountant in Tampa will have direct communication with your customers, vendors, attorneys, banks, and others. Our audits have proven invaluable to a diverse range of organizations, from not-for-profits to companies seeking grants to absentee owners who want to verify the claims of their management teams."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/resources/audit-help/",
+  "role": "resource-article",
+  "tag": "tax",
+  "old_path": "/audit-help.htm"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/great-business-plan/business-plan-2/",
+ "slug": "great-business-plan__business-plan-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/great-business-plan/business-plan-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "business plan - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/great-business-plan/business-plan-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "business plan",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Details the Elements of a Great Business Plan](https://www.reliancecpa.com/great-business-plan)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Details the Elements of a Great Business Plan",
+     "href": "https://www.reliancecpa.com/great-business-plan"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "business plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished June 28, 2013 | Full size is [900 × 597](https://www.reliancecpa.com/wp-content/uploads/Business-Plan1.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 597",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Business-Plan1.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Business-Plan1.jpg",
+   "alt": "Business Plan",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "597",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Business-Plan1.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "businessman ready to check the business plan",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/great-business-plan/business-plan-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/great-business-plan/business-plan-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 36
+}

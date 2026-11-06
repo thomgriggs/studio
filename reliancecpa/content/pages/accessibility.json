@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/accessibility",
+ "slug": "accessibility",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "legal",
+  "first_pass_action": "Keep",
+  "notes": ""
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2018-02-11",
+ "seo": {
+  "title_tag": "Accessibility",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/accessibility",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Accessibility",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Accessibility",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Updated: February 2018.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "General",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliancecpa.com strives to ensure that its services are accessible to people with disabilities. Reliancecpa.com has invested a significant amount of resources to help ensure that its website is made easier to use and more accessible for people with disabilities, with the strong belief that every person has the right to live with dignity, equality, comfort and independence.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Accessibility on Reliancecpa.com",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliancecpa.com makes available the [UserWay Website Accessibility Widget](https://UserWay.org) that is powered by a dedicated accessibility server. The software allows Reliancecpa.com to improve its compliance with the Web Content Accessibility Guidelines (WCAG 2.0).",
+   "links": [
+    {
+     "text": "UserWay Website Accessibility Widget",
+     "href": "https://UserWay.org"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Enabling the Accessibility Menu",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The Reliancecpa.com accessibility menu can be enabled by clicking the accessibility menu icon that appears on the corner of the page. After triggering the accessibility menu, please wait a moment for the accessibility menu to load in its entirety.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Disclaimer",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliancecpa.com continues its efforts to constantly improve the accessibility of its site and services in the belief that it is our collective moral obligation to allow seamless, accessible and unhindered use also for those of us with disabilities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Despite our efforts to make all pages and content on Reliancecpa.com fully accessible, some content may not have yet been fully adapted to the strictest accessibility standards. This may be a result of not having found or identified the most appropriate technological solution.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Here For You",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are experiencing difficulty with any content on Reliancecpa.com or require assistance with any part of our site, please contact us during normal business hours as detailed below and we will be happy to assist.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 261
+}

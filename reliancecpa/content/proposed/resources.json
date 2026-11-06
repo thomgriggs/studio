@@ -1,0 +1,181 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/resources/",
+ "slug": "resources",
+ "template": "client-resources",
+ "family": "proposed",
+ "title": "Resources",
+ "seo": {
+  "title_tag": "Resources | Reliance Consulting",
+  "meta_description": "Articles and client resources from Reliance Consulting in Tampa, Florida.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`. The Resources hub: client resources and articles (replaces live /articles.html and /more-information.htm as the entry point).",
+ "verified": [
+  "Client portal, app and what-to-bring pages and the login link: live pages",
+  "'Navigating the Business of Medicine' PDF: linked from live /firmprofile.html; fetched, responds 200 application/pdf",
+  "BackOffice video: YouTube x2YjxCzXPlc embedded on live /reliance-consulting-backoffice",
+  "No other forms, checklists, secure upload page or FAQ exist in the crawl. The portal page mentions a secure file exchange inside NetClient, not a separate page"
+ ],
+ "confirm": [
+  "Intro sentence, 'Client resources' / 'Downloads' / 'New to Reliance?' headings (new copy)",
+  "Cynthia: which client resources the team hands out today (checklists, organizers, engagement forms, secure upload) so the hub can list them; only the first-meeting records list and the medicine manual exist on the live site",
+  "Client Login destination (see nav.json: the live login form's firmID is a template placeholder)",
+  "Whether the 2011-era PDF is still accurate and wanted"
+ ],
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Resources"
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Articles from the Reliance team, and what you need as a client."
+    ]
+   }
+  },
+  {
+   "module": "card-grid",
+   "variant": "resources",
+   "slots": {
+    "eyebrow": "For clients",
+    "title": "Client resources",
+    "cards": [
+     {
+      "title": "Client Login",
+      "text": [
+       "Log in to your private portal."
+      ],
+      "href": "https://www.reliancecpa.com/client-portal-login",
+      "link_text": "Log in",
+      "external": true
+     },
+     {
+      "title": "Client portal",
+      "text": [
+       "Our sophisticated client portal represents a convenient and secure way to communicate with Reliance Consulting."
+      ],
+      "page": "reliance-consulting-netclient-portals",
+      "href": "https://www.reliancecpa.com/resources/client-portal/",
+      "link_text": "About the portal"
+     },
+     {
+      "title": "Mobile app",
+      "text": [
+       "Access your tax returns and financial documents from a phone or tablet."
+      ],
+      "page": "app",
+      "href": "https://www.reliancecpa.com/resources/mobile-app/",
+      "link_text": "About the app"
+     },
+     {
+      "title": "What to bring",
+      "text": [
+       "What records to bring to your first meeting."
+      ],
+      "page": "records-for-cpa-meeting.htm",
+      "href": "https://www.reliancecpa.com/resources/records-for-your-first-meeting/",
+      "link_text": "See the list"
+     }
+    ]
+   }
+  },
+  {
+   "module": "link-list",
+   "slots": {
+    "title": "Downloads",
+    "level": 2,
+    "links": [
+     {
+      "text": "Navigating the Business of Medicine (PDF)",
+      "href": "http://www.reliancecpa.com/wp-content/uploads/2011/12/navigating-the-business-of-medicine.pdf",
+      "note": "manual linked from the live firm profile; PDF responds (918 KB)"
+     }
+    ]
+   }
+  },
+  {
+   "module": "video-split",
+   "slots": {
+    "eyebrow": "Watch",
+    "title": "Reliance BackOffice",
+    "level": 2,
+    "depth": 2,
+    "body": [
+     {
+      "type": "p",
+      "text": "The video from the live BackOffice page."
+     }
+    ],
+    "url": "https://www.youtube.com/embed/x2YjxCzXPlc",
+    "video_title": "Tampa CPA, Tampa Accountant -- Enhance Your Profits"
+   }
+  },
+  {
+   "module": "post-feed",
+   "variant": "cards",
+   "slots": {
+    "title": "Articles",
+    "posts": [
+     {
+      "title": "Tax Saving Strategies Used by Your CPA in Tampa from Reliance Consulting, LLC",
+      "page": "tax-saving-strategies.htm",
+      "href": "https://www.reliancecpa.com/resources/tax-saving-strategies/",
+      "excerpt": "A primary benefit of hiring a CPA in Tampa from Reliance Consulting, LLC is the fact that we can help you plan ways to legally reduce your tax liability."
+     },
+     {
+      "title": "How Payroll Processing by a CPA in Tampa Can Help Your Small Business",
+      "page": "how-payroll-processing-helps.htm",
+      "href": "https://www.reliancecpa.com/resources/how-payroll-processing-helps/",
+      "excerpt": "The reports, the withholding, the laws, the checks … payroll can be a lengthy chore that consumes a large portion of a Tampa Bay small business owner’s time."
+     },
+     {
+      "title": "Can Your Accountants in Tampa also be Your Part-Time CFO?",
+      "page": "part-time-cfo.htm",
+      "href": "https://www.reliancecpa.com/business-tax-consulting/part-time-cfo/",
+      "excerpt": "Congratulations!"
+     },
+     {
+      "title": "What a CPA in Tampa Can Do for You",
+      "page": "what-is-a-cpa.htm",
+      "href": "https://www.reliancecpa.com/resources/what-is-a-cpa/",
+      "excerpt": "A Certified Public Accountant, or CPA, is an accountant who has earned this title by successfully completing specified coursework and passing a rigorous exam."
+     },
+     {
+      "title": "How to Choose the right CPA in Tampa, FL",
+      "page": "how-to-choose-cpa.htm",
+      "href": "https://www.reliancecpa.com/resources/how-to-choose-cpa/",
+      "excerpt": "Whether you’re looking for a new doctor, mechanic, or plumber in the Tampa Bay area, selecting the right person and/or company can make all the difference between a job done right, and a failure that costs you a lot more money in the long run."
+     },
+     {
+      "title": "Reasons that You May Need a Business Valuation by a Tampa Accountant",
+      "page": "business-valuation.htm",
+      "href": "https://www.reliancecpa.com/resources/business-valuation/",
+      "excerpt": "Just about anyone in the Tampa Bay area could make an accurate guess as to what their car is worth and their house is worth."
+     }
+    ],
+    "more": {
+     "text": "All articles",
+     "page": "articles.html"
+    }
+   }
+  },
+  {
+   "module": "cta-band",
+   "slots": {
+    "title": "New to Reliance?",
+    "text": "Tell us what you need help with.",
+    "buttons": [
+     {
+      "text": "Get Started",
+      "page": "get-started"
+     }
+    ]
+   }
+  }
+ ]
+}

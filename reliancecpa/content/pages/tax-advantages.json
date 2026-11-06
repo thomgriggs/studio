@@ -1,0 +1,100 @@
+{
+ "url": "https://www.reliancecpa.com/tax-advantages",
+ "slug": "tax-advantages",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Tax Advantages | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-advantages",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Identifies Potential Tax Advantages for Adding More Employees",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Identifies Potential Tax Advantages for Adding More Employees",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/internal-controls-evaluation.jpg",
+   "alt": "Internal Controls Evaluation by a Tampa Accountant",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The federal government has attempted in recent years to curb unemployment and stimulate the economy by offering employers tax credits for hiring certain groups of workers. In 2010, the Work Opportunity Tax Credit was designed to provide incentives for companies to hire the long-term unemployed. More recently, the VOW to Hire Heroes Act of 2011 was passed to incentivize the hiring of unemployed veterans who were returning to civilian life after serving in the military.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "These are only two examples of potential hiring-related tax savings that a Tampa CPA from Reliance Consulting, LLC, can explain in greater detail. It is also known as the Returning Heroes tax credit, and it saves money by reducing the share of an employee’s payroll tax that an employer is responsible for. The value of the credit increases under certain circumstances:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A $2,400 tax credit for hiring an able-bodied veteran who was been unemployed between one and six months",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A $5,600 tax credit for hiring an able-bodied veteran who has been unemployed longer than six months",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "A $9,600 tax credit for hiring a disabled veteran who has been looking for work longer than six months",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There also are additional incentives awarded to companies that provide job training for recently hired veterans. To learn more about how the VOW to Hire Heroes Act and other tax incentive laws may impact your company, contact Reliance today. We have been a premier accounting firm in the Tampa Bay area since 1984.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 254
+}

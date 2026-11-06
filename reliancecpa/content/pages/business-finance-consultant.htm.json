@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/business-finance-consultant.htm",
+ "slug": "business-finance-consultant.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Business Finance Consultant Serving Tampa St Petersburg Clearwater Pasco Manatee Sarasota Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-finance-consultant.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Finance Consultant Serving Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Business Finance Consultant Serving Tampa, St Petersburg, Clearwater, Pasco, Manatee, Sarasota, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-finance-consultant.jpg",
+   "alt": "Business Finance Consultant for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Business Finance Consultant for the Tampa, FL Area",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As businesses grow and branch out into other markets, they often need capital in the form of business loans to bridge the gap. Finding and qualifying for business loans, however, can be a challenge. With an array of lenders located across the greater Tampa, Florida area—and a long list of requirements to apply for each loan—business owners can spend weeks or even months trying to secure the right loan for their needs. If you own a business in Tampa, St Petersburg, Clearwater, Lakeland, Pasco, or anywhere else in west central Florida, a business finance consultant from Reliance Consulting, LLC can help you find a lender and cut through the red tape, saving you time and enabling you to take your company to the next level.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One of the main benefits of working with a business finance consultant from Reliance Consulting is personalized service. While large financial institutions may make you feel like you’re a number and not a valued client, the [CPAs](http://www.reliancecpa.com/) and accountants at Reliance Consulting will give you the time and one-on-one attention you deserve. We are here to answer your questions, show you all the business loan options available, and help handle the paperwork. Some of the many ways a Reliance business finance consultant can assist you include:",
+   "links": [
+    {
+     "text": "CPAs",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Researching the business loans available, including the possibility of loans and government funds targeted toward your geographic area and/or industry",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Investigating the possibility of Small Business Administration (SBA) government loans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Providing you with information about competitive loans with lower rates and better terms",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Helping you produce balance sheets, profit and loss statements, [cash flow management](http://www.reliancecpa.com/cash-flow-management.htm) projections, business plans, and the other requirements of applying for business loans",
+     "links": [
+      {
+       "text": "cash flow management",
+       "href": "http://www.reliancecpa.com/cash-flow-management.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Reading the fine print on loan documents to prevent surprises down the road",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[New business planning](http://www.reliancecpa.com/new-business-planning.htm) for those applying for start-up loans and venture capital",
+     "links": [
+      {
+       "text": "New business planning",
+       "href": "http://www.reliancecpa.com/new-business-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition to being your trusted business finance consultant, Reliance Consulting also offers virtually every financial service a Tampa, FL area business owner needs, from tax preparation to [bookkeeping](http://www.reliancecpa.com/bookkeeping.htm) and payroll to IRS problem resolution. Whether you own a dental office in Sarasota or a chain of hotels from Pasco to Polk County, Reliance Consulting is the CPA you can rely on.",
+   "links": [
+    {
+     "text": "bookkeeping",
+     "href": "http://www.reliancecpa.com/bookkeeping.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a free financial checkup and more information about the many reasons why you should have a personal business finance consultant in your corner.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 411
+}

@@ -1,0 +1,89 @@
+{
+ "url": "https://www.reliancecpa.com/insurance-settlement",
+ "slug": "insurance-settlement",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Tampa CPA | Insurance Settlement | Accounting Services",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/insurance-settlement",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains How to Know if an Insurance Settlement is Fair",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains How to Know if an Insurance Settlement is Fair",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Fair-Insurance-Settlement-300x199.jpg",
+   "alt": "Insurance Settlement",
+   "alt_missing": false,
+   "title": "Insurance Settlement",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you have had the misfortune of having to go through an insurance claims process, chances are it has crossed your mind that the settlement you received from your insurance company might not have been as large as it should have been. Most of us are not insurance experts, and in the face of a destructive event such as a storm, a car accident, or other perilous happening, we might be emotionally vulnerable. We want to believe that the adjuster who works for the insurance company treated us fairly, and it certainly is in the company’s interest not to short-change its clients. Still, how do you know if the settlement you got was fair?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you find a way to rebuild after a catastrophe. You’ll certainly need to budget wisely, because even after the most generous insurance payment, chances are your financial situation will suffer in the aftermath of a destructive event. It is during this immediate, uncertain aftermath that a Reliance CPA can be of the most help. You will need to reassess your budget, certainly, and you might need to make some very difficult financial decisions if you are the owner of a business adversely affected by a weather event, fire, earthquake, or other peril. You might also wish to consult a public adjuster, whose job it is to act as your advocate – preparing a detailed report based on the value of damaged property and making absolutely certain that the payment received from the insurance company is fair.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how to navigate the aftermath of a destructive event that requires an insurance settlement, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today. Since 1984, we have helped individuals throughout Florida and beyond get on the path to profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 310
+}

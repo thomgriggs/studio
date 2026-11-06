@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/advertising-budget/advertising-budget-2/",
+ "slug": "advertising-budget__advertising-budget-2",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/advertising-budget/advertising-budget-2",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Advertising Budget - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/advertising-budget/advertising-budget-2/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Advertising Budget",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Gives Advice on Setting an Advertising Budget for a New Business](https://www.reliancecpa.com/advertising-budget)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Gives Advice on Setting an Advertising Budget for a New Business",
+     "href": "https://www.reliancecpa.com/advertising-budget"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Advertising Budget",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished November 2, 2012 | Full size is [900 × 854](https://www.reliancecpa.com/wp-content/uploads/Advertising-Budget.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 854",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Advertising-Budget.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Advertising-Budget.jpg",
+   "alt": "Advertising Budget",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "854",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Advertising-Budget.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/advertising-budget/advertising-budget-2).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/advertising-budget/advertising-budget-2"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 32
+}

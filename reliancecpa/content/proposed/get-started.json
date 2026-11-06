@@ -1,0 +1,82 @@
+{
+ "source": "proposed",
+ "url": "https://www.reliancecpa.com/get-started/",
+ "slug": "get-started",
+ "template": "get-started",
+ "family": "proposed",
+ "title": "Get Started",
+ "flow": true,
+ "own_closing": true,
+ "seo": {
+  "title_tag": "Get Started | Reliance Consulting",
+  "meta_description": "Tell us what you need help with, then send a short request to Reliance Consulting in Tampa.",
+  "h1_count": 1
+ },
+ "_about": "Proposed page: written for the redesign, not crawled. Design-free module instances in the same format as content/structured. `page` keys name a live crawl slug or another proposed page; `href` is the new-site URL. Facts that came from the crawl are in `verified`; new wording and anything the crawl cannot show is in `confirm`. Intake flow, native Squarespace: step 1 is a page of choice cards, step 2 is one page per choice with its own Form block, step 3 is the form's post-submit page.",
+ "verified": [
+  "Tier names and the three tier pages: PROJECT_PLAN section 2 (confirmed with Thom 2026-11-03)",
+  "Client portal and mobile app pages: live /reliance-consulting-netclient-portals and /app"
+ ],
+ "confirm": [
+  "Page copy: 'What do you need help with?', 'Step 1 of 2' / 'Step 2 of 2', 'Change', 'Send my request', the five choice cards and their lines (new copy; the plan's choices are tiers, existing client, not sure)",
+  "Disclaimer under every form: \"Please do not send Social Security numbers or account details through this form.\" (new wording; the live privacy policy is the only related text)",
+  "Contact fields on every form: Name, Email, Phone, 'How should we reach you?' (Call / Email), 'Anything else we should know?'; Name, Email and the contact method are required",
+  "Cynthia: who actually receives a new lead today and by which inbox; each form should email that person (Squarespace forms can route per form, so four forms = four inboxes if wanted)",
+  "Cynthia: which questions the tax team wishes prospects answered up front; the questions below are placeholders",
+  "Cynthia: privacy limits for financial-prospect data, and whether there is a scheduling tool to link",
+  "Squarespace Form blocks cannot show or hide questions, so each choice has its own page and form; the native form's post-submit redirect goes to the thanks page"
+ ],
+ "modules": [
+  {
+   "module": "choice-cards",
+   "slots": {
+    "step": {
+     "label": "Step 1 of 2",
+     "current": 1,
+     "total": 2
+    },
+    "title": "What do you need help with?",
+    "text": "Choose the one that fits best. We will ask only what matters for it.",
+    "cards": [
+     {
+      "title": "I need my taxes done or a tax problem solved.",
+      "text": "Returns, tax planning, or help with the IRS.",
+      "page": "get-started__tax-preparation",
+      "tier": "tax-preparation",
+      "eyebrow": "Tax Preparation"
+     },
+     {
+      "title": "I need help keeping my business's books.",
+      "text": "Bookkeeping, QuickBooks, payroll and cash flow.",
+      "page": "get-started__business-accounting",
+      "tier": "business-accounting",
+      "eyebrow": "Business Accounting"
+     },
+     {
+      "title": "I am starting, running or planning for a business.",
+      "text": "Business plans, financing, financial planning and advice.",
+      "page": "get-started__business-tax-consulting",
+      "tier": "business-tax-consulting",
+      "eyebrow": "Business & Tax Consulting"
+     },
+     {
+      "title": "I am already a client.",
+      "text": "Log in to the client portal or get the mobile app.",
+      "page": "resources",
+      "eyebrow": "Existing client"
+     },
+     {
+      "title": "I am not sure.",
+      "text": "Tell us a little and we will point you in the right direction.",
+      "page": "get-started__not-sure",
+      "eyebrow": "Not sure"
+     }
+    ],
+    "call": {
+     "text": "Would you rather call?",
+     "phone": "(813) 931-7258"
+    }
+   }
+  }
+ ]
+}

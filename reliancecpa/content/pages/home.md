@@ -1,0 +1,22 @@
+---
+url: https://www.reliancecpa.com/
+type: page
+title_tag: "CPA Tampa | Accountant | Business Tax | Income Tax | Bookkeeping | Payroll"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2016-06-02
+status: 200
+---
+
+[h3] Tampa CPA Firm & Tampa Accountants Serve all Business Tax, Income Tax, Bookkeeping, Payroll & Accounting Needs
+[img] alt="Tampa CPA | Tampa Accountant | Business Tax | Income Tax | Bookkeeping | Payroll | Accounting Needs" src=http://www.reliancecpa.com/wp-content/uploads/2011/12/cpa-certified-public-accountant.jpg
+[p] Since 1984, Reliance Consulting, LLC has established itself as a premier accounting firm in the Tampa, FL area. Our CPA firm has grown tremendously over the years because each CPA and accountant from Reliance Consulting is completely dedicated to providing our clients with the personalized attention and excellent results they deserve.
+[p] Now serving more than 800 businesses and 1,000 individuals in the Tampa, Florida region, Reliance Consulting offers a broad range of CPA, [bookkeeping](http://www.reliancecpa.com/bookkeeping.htm), tax preparation, payroll, and many other financial solutions. We go above and beyond to deliver extraordinary value, and we take extreme pride in the success of our clients.
+[p] In addition to traditional accountant services such as [tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and processing [payroll](http://www.reliancecpa.com/payroll-services.htm), we believe a CPA should have meaningful insight into each client’s unique needs. These insights allow a CPA to offer solutions for the complex, day-to-day financial issues that are bound to arise. From Tampa to Clearwater, St Petersburg to Lakeland, Brandon to Pasco and beyond, Reliance Consulting focuses on maximizing revenue and minimizing expenses for individuals and businesses throughout the year.
+[hr]
+[embed youtube] https://www.youtube.com/embed/GRQm2WMPdmI
+[hr]
+[h3] Tampa CPA – Certified Public Accountants Offering a Tailored Approach to Dental CPA Service, Tax Planning, Business Planning & Estate Planning Goals
+[p] In our view, your Tampa CPA firm should do more than crunch numbers—your certified public accountant should explain what is behind the numbers so that you are able to make informed decisions. Not only will Reliance Consulting help you make sense of the numbers, but we also will keep you up-to-date with [tax planning](http://www.reliancecpa.com/tax-planning.htm) possibilities and other financial incentives, enabling you to achieve and exceed your goals. Reliance also is sharply focused on helping dentists in the Tampa Bay area and beyond by handling tax planning and preparation, formulating business strategy, and performing many other functions of a [dental CPA](http://www.reliancecpa.com/dental-cpa).
+[p] Whether you are a resident of Tampa, a hotel owner on Clearwater Beach, or a doctor in Hernando County, Reliance Consulting welcomes you to [contact](http://reliancecpa.com/contact.html) our CPAs and accountants for a free financial checkup. We will show you how our superior approach can lead to a meaningful change in your financial health. In the success of our clients lies our own!

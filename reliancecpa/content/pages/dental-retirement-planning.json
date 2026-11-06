@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/dental-retirement-planning",
+ "slug": "dental-retirement-planning",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Retirement Planning | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-retirement-planning",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Retirement Planning Help from a Tampa Dental CPA",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Retirement Planning Help from a Tampa Dental CPA",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Retirement-Planning-210x300.jpg",
+   "alt": "Dental Retirement Planning",
+   "alt_missing": false,
+   "title": "Dental Retirement Planning",
+   "width": "210",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you’ve only just opened your dental practice or have been in business for ages, it is never too early to start retirement planning. Any long-term business strategy should include a way out. Visualizing how you want to spend your Golden Years is important, and everything you do as you grow the practice should be done with the end of your career in mind.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A dental CPA from Reliance Consulting, LLC, is a valuable dental practice management partner as you develop or refine your business strategy with retirement planning in mind. Whether estimating startup costs, handling payroll services, conducting internal audits or, yes, planning for the day you no longer own the practice, a [dental CPA](http://reliancecpa.com/dental-cpa) at Reliance is here to assist you every step of the way.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "One important service a dental business consultant can perform is to help you coordinate the long-term business goals of your practice with your personal financial goals. After all, even though you became a dentist to help people, you’re in business to provide financial security for you and your family. Eventually, you’ll almost certainly want to retire and take time to enjoy the finer things in life. To be prepared for when that day comes, here are a few potential exit strategies to consider now:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Selling the practice in its entirety",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Piecemeal liquidation of the practice assets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Merging with another dental practice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Accepting a buyout from another dental care provider",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) a dental CPA from Reliance Consulting today for advice about a [customized retirement strategy](http://www.reliancecpa.com/dental-customized-retirement-strategy) and to learn more about our dental practice management services.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    },
+    {
+     "text": "customized retirement strategy",
+     "href": "http://www.reliancecpa.com/dental-customized-retirement-strategy"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 270
+}

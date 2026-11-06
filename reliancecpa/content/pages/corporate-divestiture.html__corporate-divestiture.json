@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture/",
+ "slug": "corporate-divestiture.html__corporate-divestiture",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "CPA Tampa - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA Tampa",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Discusses Reasons for and Benefits of Corporate Divestiture](https://www.reliancecpa.com/corporate-divestiture.html)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Discusses Reasons for and Benefits of Corporate Divestiture",
+     "href": "https://www.reliancecpa.com/corporate-divestiture.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "CPA Tampa",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 8, 2011 | Full size is [300 × 225](https://www.reliancecpa.com/wp-content/uploads/2011/12/corporate-divestiture.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 225",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/corporate-divestiture.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/corporate-divestiture.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/corporate-divestiture.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/corporate-divestiture.html/corporate-divestiture"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 30
+}

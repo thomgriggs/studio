@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/dental-llp",
+ "slug": "dental-llp",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental CPA | LLP | LP | LLC | LLLP | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-llp",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Defines LLC, LLP, LLLP & LP as They Relate to a Dental Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Defines LLC, LLP, LLLP & LP as They Relate to a Dental Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/LLP-LLLP-LLC-LP-300x199.jpg",
+   "alt": "Dental LLP",
+   "alt_missing": false,
+   "title": "Dental LLP",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As you begin to plan how you want your dental practice to grow, one of the earliest decisions you’ll need to make as a business owner is how the entity will be legally structured. Will it be a corporation, a partnership, or something in between? It’s not the easiest decision to make, which is why it makes sense to enlist the help of a dental CPA from Reliance Consulting, LLC, before moving forward.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Partnerships are common among dental practices, because they allow individuals to share in the risk of operating a business. There are many different forms of partnership, and a [dental CPA](http://www.reliancecpa.com/dental-selection-business-entity) can help you figure out which one is best for your company. Some options include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://www.reliancecpa.com/dental-selection-business-entity"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "LLC – A limited liability company is a hybrid legal structure that combines the liability limits of a corporation with the tax efficiencies and other benefits of a partnership.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "LP – In a limited partnership, there typically is one or more general partners bearing the bulk of the financial responsibility and decision-making responsibilities and a number of limited partners who carry less of a financial responsibility, as defined by the company’s charter.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "LLP – The limited liability partnership spreads responsibility for the company’s debts and other financial burdens among the general partners in a way defined by the company’s charter.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "LLLP – The limited liability limited partnership is a relatively new form of limited partnership that has a different set of rules governing how liable general partners will be for the company’s debt and other financial burdens.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The way you structure your dental practice will determine how your taxes are paid and how profits are shared. As complex as it seems, you can rest easy knowing that a dental CPA from Reliance will work with you to determine how best to structure your business. [Contact](http://reliancecpa.com/contact.html) us to learn more about the options for structuring your dental practice as a partnership.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 334
+}

@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/what-is-a-cpa.htm",
+ "slug": "what-is-a-cpa.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "about",
+  "first_pass_action": "Refresh",
+  "notes": "about/team"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "What a CPA in Tampa Can Do for You",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/what-is-a-cpa.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "What a CPA in Tampa Can Do for You",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "What a CPA in Tampa Can Do for You",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/what-is-a-cpa.jpg",
+   "alt": "What a CPA in Tampa Can Do for You",
+   "alt_missing": false,
+   "title": "what-is-a-cpa",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A Certified Public Accountant, or CPA, is an accountant who has earned this title by successfully completing specified coursework and passing a rigorous exam. The exam, called the Uniform CPA Examination, is developed, administered, and graded by The American Institute of Certified Public Accountants (AICPA). Anyone who passes this exam will earn a CPA certificate, but this certificate does not make anyone a CPA. CPAs also must become licensed in any state they plan to practice, and each state has its own requirements for licensing. Furthermore, after a CPA has earned his or her state license(s), continuing professional education is required to keep the license active.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Any [CPA in Tampa](http://www.reliancecpa.com/) you speak to, therefore, has gone through several demanding steps to earn the sought-after title of Certified Public Accountant. Like all accountants, a CPA is highly skilled in taxes, payroll, and bookkeeping – but in addition, a CPA is a trained business advisor and financial advisor. Examples of the many areas in which a CPA can assist Tampa area businesses, individuals, and organizations include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Auditing",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax planning and advising",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Advising businesses of all sizes, from Fortune 500 companies to small family restaurants",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Helping individuals plan and reach their financial goals",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Determining whether a new product line will be profitable",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Diversifying investments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Providing investment advice",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Planning company purchases, sales, and mergers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Financial planning and analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To be successful, a CPA also will need excellent interpersonal and communication skills. That way, he or she will be able to explain what “the numbers” mean and how they affect your goals. Another big part of being a CPA is listening – your Tampa CPA should always listen to your needs, concerns, and goals, and handle them with the utmost concern. Ethics is a significant part of being a CPA as well; clients rely on their CPAs to be honest, trustworthy, and discreet. Finally, your CPA in Tampa should be dedicated to keeping up with the latest technologies, whether it’s accounting software for your CPA’s internal use or state-of-the-art equipment advice to make your business more efficient and profitable.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting, LLC would like to be your Tampa CPA. For more information about our firm, please contact us and we’ll be happy to provide you with a free initial consultation and a checkup of your financial health.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 395
+}

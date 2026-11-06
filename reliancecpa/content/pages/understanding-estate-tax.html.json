@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/understanding-estate-tax.html",
+ "slug": "understanding-estate-tax.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/understanding-estate-tax.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Provides Greater Understanding of the Estate Tax",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Provides Greater Understanding of the Estate Tax",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/understanding-estate-tax.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "understanding-estate-tax",
+   "width": "300",
+   "height": "225",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The United States has had an estate tax in some form on and off since 1797, when it was conceived as part of the Stamp Act designed to pay for the development of the U.S. Navy. Its current form came into being in 1917 with the Revenue Act, although the tax rate and the amount of money eligible for taxation has changed over the years. In essence, an estate tax is paid on the value of all your assets at the time of your death. An essential element in estate planning is making sure that as much of your estate as possible is protected upon your death.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help with all of your estate planning needs, in addition to retirement planning, tax planning, budgetary planning, and more. Since opening our doors in 1984, Reliance has been a premier accounting firm in the Tampa Bay area, having served thousands of individuals and hundreds of companies in the state of Florida.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What is subject to an estate tax?",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Your home",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Stocks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bonds",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Life insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Anything of value",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A notable exception is the unlimited marital deduction, which allows for tax-free transference of wealth from one spouse to another when one dies – as long as the surviving spouse is a U.S. citizen. Of course, when the surviving spouse dies, the remaining assets are still subject to estate taxes. This politically charged taxation issue is somewhat complex, which is why it’s advisable to receive estate tax advice from your Tampa CPA at Reliance Consulting. [Contact](http://www.reliancecpa.com//contact.html) us today for a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 276
+}

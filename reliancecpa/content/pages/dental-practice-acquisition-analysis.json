@@ -1,0 +1,149 @@
+{
+ "url": "https://www.reliancecpa.com/dental-practice-acquisition-analysis",
+ "slug": "dental-practice-acquisition-analysis",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-02-11",
+ "seo": {
+  "title_tag": "Dental Practice Acquisition Analysis | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-practice-acquisition-analysis",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa Dental CPA Provides Practice Acquisition Analysis",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa Dental CPA Provides Practice Acquisition Analysis",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Practice-Acquisition-Analysis-300x200.jpg",
+   "alt": "Dental Practice Acquisition Analysis",
+   "alt_missing": false,
+   "title": "Dental Practice Acquisition Analysis",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Buying a dental practice is one of the most momentous career decisions a dentist can make. Before the purchase can be made, though, it requires thorough, professional practice acquisition analysis by an experienced dental CPA. The certified professional accountants at Reliance Consulting, LLC, can help you with everything required to make an informed decision when you want to buy a dental practice.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The first piece of information you’ll want to find out as you and your [dental CPA](http://reliancecpa.com/dental-cpa) conduct a dental practice acquisition analysis is why the practice is being sold. The answer to this question might go a long way toward convincing you that this is the kind of practice you want to buy into – or warn you off the purchase early enough to avoid a lot of wasted time. If you are satisfied with the reason the practice is being sold, there are many other details to find out. These include:",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "The number of active patients the practice has maintained during the past year",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Number of patients with insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Demographics of the patient pool",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "New patients over the past month",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Revenue generated each month by hygiene",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Hygiene schedule in recent weeks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fee schedule",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Average insurance adjustment fees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Average office hours worked by doctors and staff",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Reliance Consulting is the premier dental CPA in the Tampa Bay area. Helping healthcare professionals maintain their own financial health is one of our top priorities. If you are a dentist who is interested in purchasing a practice, [contact](http://reliancecpa.com/contact.html) Reliance today for a thorough, professional practice acquisition analysis. We gladly provide in-depth advice on all aspects of dental practice management, including the [optimal tax structure](http://www.reliancecpa.com/dental-optimal-tax-structure) for your practice.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    },
+    {
+     "text": "optimal tax structure",
+     "href": "http://www.reliancecpa.com/dental-optimal-tax-structure"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 286
+}

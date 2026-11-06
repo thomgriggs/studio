@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/credit-card-rewards/credit/",
+ "slug": "credit-card-rewards__credit",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/credit-card-rewards/credit",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Credit Card Rewards - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/credit-card-rewards/credit/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Credit Card Rewards",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Talks About the Potential Benefits (and Drawbacks) of a Credit Card Rewards Program](https://www.reliancecpa.com/credit-card-rewards)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Talks About the Potential Benefits (and Drawbacks) of a Credit Card Rewards Program",
+     "href": "https://www.reliancecpa.com/credit-card-rewards"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Credit Card Rewards",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished October 1, 2012 | Full size is [602 × 900](https://www.reliancecpa.com/wp-content/uploads/Credit-Card-Rewards.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "602 × 900",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Credit-Card-Rewards.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Credit-Card-Rewards.jpg",
+   "alt": "Credit Card Rewards",
+   "alt_missing": false,
+   "title": "",
+   "width": "602",
+   "height": "900",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Credit-Card-Rewards.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "using a credit card on the net",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/credit-card-rewards/credit).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/credit-card-rewards/credit"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 43
+}

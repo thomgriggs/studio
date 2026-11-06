@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/home-based-business.htm",
+ "slug": "home-based-business.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "Your CPA in Tampa Discusses the Advantages and Challenges of a Home-based Business",
+ "seo": {
+  "title_tag": "Your CPA in Tampa Discusses Advantages and Challenges of Home-based Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/home-based-business.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA in Tampa Discusses the Advantages and Challenges of a Home-based Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Your CPA in Tampa Discusses the Advantages and Challenges of a Home-based Business",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/workingathome.gif",
+     "alt": "CPA in Tampa - Working at Home"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "According to the United States Census Bureau, nearly half of all businesses in this country are operated out of someone’s home. Enterprising entrepreneurs in fields like food service, manufacturing, wholesale trade and many others have found that working from home makes sense for them.",
+     "If you are thinking about starting a home-based business, your [CPA in Tampa](http://www.reliancecpa.com/) at Reliance Consulting, LLC can help you weigh the advantages and challenges you’ll face. A good place to start would be our free financial health checkup, which will give you a foundation of knowledge from which to launch your home-based business plan.",
+     "For many prospective business owners, the advantages of working from home are many:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "You are your own boss."
+     },
+     {
+      "text": "You keep the money earned by the business."
+     },
+     {
+      "text": "Using part of your home or your entire home as an office may create tax benefits."
+     },
+     {
+      "text": "You don’t have to rent or buy commercial office space."
+     },
+     {
+      "text": "No commute saves time and gas money."
+     },
+     {
+      "text": "When your shift ends, you’re home, so you can spend more time with the family."
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "All of these advantages and more make a home-based business an attractive alternative to leasing or purchasing office space. However, the responsibilities of a home-based business owner can be just as challenging as those faced by the owner of a sole proprietorship based in an office or store."
+     },
+     {
+      "type": "p",
+      "text": "Perhaps the most daunting challenge for a home-based business owner is creating a balance between “work” life and “home” life. A commitment must be made to the work, even though it can be tempting to allow the daily distractions of home to dictate the schedule."
+     },
+     {
+      "type": "p",
+      "text": "The owner of a home-based business also often faces the challenge of raising his or her own capital for startup or expansion costs. In addition, any business owner – at home or in an office building – must become fluent in the legalities of the business world, such as zoning laws and sales tax laws."
+     },
+     {
+      "type": "p",
+      "text": "Contact your CPA in Tampa at Reliance Consulting to learn more about the advantages and challenges of starting a home-based business."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/home-based-business/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/home-based-business.htm"
+ }
+}

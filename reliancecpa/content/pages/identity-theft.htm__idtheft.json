@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/identity-theft.htm/idtheft/",
+ "slug": "identity-theft.htm__idtheft",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/identity-theft.htm/idtheft",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "CPA in Tampa - ID Theft - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/identity-theft.htm/idtheft/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa - ID Theft",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft](https://www.reliancecpa.com/identity-theft.htm)",
+   "links": [
+    {
+     "text": "← Your CPA in Tampa Discusses Ways to Protect Yourself from Identity Theft",
+     "href": "https://www.reliancecpa.com/identity-theft.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "CPA in Tampa – ID Theft",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 8, 2011 | Full size is [300 × 174](https://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 174",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif",
+   "alt": "CPA in Tampa - ID Theft",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "174",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/idtheft.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/identity-theft.htm/idtheft).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/identity-theft.htm/idtheft"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 34
+}

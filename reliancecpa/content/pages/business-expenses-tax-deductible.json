@@ -1,0 +1,145 @@
+{
+ "url": "https://www.reliancecpa.com/business-expenses-tax-deductible",
+ "slug": "business-expenses-tax-deductible",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-06-28",
+ "seo": {
+  "title_tag": "Tampa CPA | Business Expenses | Tax Deductions",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-expenses-tax-deductible",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Helps You Determine What Business Expenses are Deductible",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Helps You Determine What Business Expenses are Deductible",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Business-Expenses-Deductible-200x300.jpg",
+   "alt": "Business Expenses Deductible",
+   "alt_missing": false,
+   "title": "Business Expenses Deductible",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many small business owners count on the ability to deduct business expenses as the only way they can break even or make a small profit at the end of the fiscal year. That’s because overhead in a small business can often be crippling, a fact that is recognized by the government as a potentially huge impediment for small companies to thrive.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help a small business owner determine what can and cannot be deducted when it comes to expenses. The IRS says that to be deducted, an expense must be “ordinary and necessary.” One important point here: An expense does not have to be “indispensable” to be considered necessary. It does, however, have to be common and accepted in the industry. Here are a few examples of commonly deducted business expenses:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Cost of products or raw materials",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Storage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Direct labor costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Equipment",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Factory overhead",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Travel costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business use of your home or car",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Interest",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Insurance",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "There are many considerations when it comes to deducting business expenses, including whether to amortize the value of a piece of equipment, such as a computer or a smart phone. To be sure that you are getting the most out of your business expense deductions, [contact](http://reliancecpa.com/contact.html) a Tampa CPA from Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 228
+}

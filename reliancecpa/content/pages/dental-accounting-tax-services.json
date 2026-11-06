@@ -1,0 +1,206 @@
+{
+ "url": "https://www.reliancecpa.com/dental-accounting-tax-services",
+ "slug": "dental-accounting-tax-services",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Dental Accounting | Tax Preparation | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-accounting-tax-services",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Accounting and Tax Services for Dental Practices",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Accounting and Tax Services for Dental Practices",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Accounting-and-Tax-Services-300x200.jpg",
+   "alt": "Dental Accounting and Tax Services",
+   "alt_missing": false,
+   "title": "Dental Accounting and Tax Services",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Accounting and tax services can consume countless hours of a dental practice owner-operator’s time. If you own and operate a dental practice of any size in the Tampa Bay area or beyond, Reliance Consulting, LLC, is committed to providing dental practice management help that will save you time and money by giving you a comprehensive assortment of accounting services so that you can spend your time on more fruitful activities.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As someone who owns or operates a dental practice, you might find that accounting and tax services are overwhelming drains on day-to-day responsibilities. Naturally, you would rather be focused on your patients and finding ways to provide better care. To that end, let your [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting put together a customized small business accounting package that will keep your payroll, tax returns, and bank accounts running smoothly.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "We invite you to inquire about our range of dental practice management services, such as:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Business tax, self-employment tax, and income tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Corporate tax returns](http://www.reliancecpa.com/dental-corporate-tax)",
+     "links": [
+      {
+       "text": "Corporate tax returns",
+       "href": "http://www.reliancecpa.com/dental-corporate-tax"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "[Individual tax returns](http://www.reliancecpa.com/dental-tax-returns)",
+     "links": [
+      {
+       "text": "Individual tax returns",
+       "href": "http://www.reliancecpa.com/dental-tax-returns"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax planning accountant",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Tax diversification](http://www.reliancecpa.com/dental-tax-diversification) advice",
+     "links": [
+      {
+       "text": "Tax diversification",
+       "href": "http://www.reliancecpa.com/dental-tax-diversification"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Tax problem and IRS audit help",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping and [QuickBooks accounting](http://www.reliancecpa.com/dental-quickbooks-accounting) support",
+     "links": [
+      {
+       "text": "QuickBooks accounting",
+       "href": "http://www.reliancecpa.com/dental-quickbooks-accounting"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bank account reconciliation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Defining expendable and non-expendable capital items](http://www.reliancecpa.com/capital-items)",
+     "links": [
+      {
+       "text": "Defining expendable and non-expendable capital items",
+       "href": "http://www.reliancecpa.com/capital-items"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Prevention of embezzlement from within your company",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Monthly financial statements](http://www.reliancecpa.com/dental-monthly-financial-statements)",
+     "links": [
+      {
+       "text": "Monthly financial statements",
+       "href": "http://www.reliancecpa.com/dental-monthly-financial-statements"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Balance sheets",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "New business planning",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The primary goal at Reliance Consulting is to offer dental business consultant services that deliver extraordinary value to your practice. This goal means that our services will more than pay for themselves in the time they save you and your office staff, as well as possible savings in taxes owed. To learn more about the accounting and tax services we offer in the Tampa Bay area and throughout Florida, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 293
+}

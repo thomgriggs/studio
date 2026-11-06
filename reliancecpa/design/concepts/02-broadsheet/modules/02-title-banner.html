@@ -1,0 +1,21 @@
+{#
+MODULE: title-banner
+PURPOSE: Inner-page header, as the original Services/About/Contact pages open: a small-caps eyebrow, then the h1 flush left on the paper ground, no image and no rule. The eyebrow names where you are (the tier in its territory colour, "Insights" for articles, "About", "Resources"), taken from the page, not from a slot.
+SLOTS: title, image (not shown in this concept: the live banner photos are 2011 stock), date.
+SQUARESPACE: Section with a Text block (eyebrow, small caps style) and Heading 1 on the plain background. The territory colour of the eyebrow is a CSS class on the page (custom CSS block). No code block.
+#}
+{% from "_macros.html" import eyebrow %}
+{% set role = page.scope.role if page.scope else '' %}
+{% set tier_label = concept.territories[concept.tier_territory[page.tier]].label if page.tier and concept.tier_territory[page.tier] else '' %}
+{% if tier_label %}{% set eb = tier_label ~ (' · Industry example' if role == 'industry-example' else '') %}
+{% elif role == 'resource-article' %}{% set eb = 'Insights' %}
+{% elif page.template in ('about-team',) %}{% set eb = 'About' %}
+{% elif page.template in ('client-resources', 'resource-media') %}{% set eb = 'Resources' %}
+{% elif role == 'legal' %}{% set eb = 'Legal' %}
+{% elif role == 'local-seo' %}{% set eb = 'Areas we serve' %}
+{% elif page.template == 'contact' %}{% set eb = 'Contact' %}
+{% else %}{% set eb = '' %}{% endif %}
+<section class="m m-title" data-module="title-banner" data-tone="{{ tone }}">
+  {{ eyebrow(eb, "eyebrow--terr") }}
+  <h1 class="h-page{{ ' h-page--long' if s.title|length > 60 }}" data-orig-level="1">{{ s.title|md }}</h1>
+</section>

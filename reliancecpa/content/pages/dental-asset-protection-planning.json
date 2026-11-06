@@ -1,0 +1,191 @@
+{
+ "url": "https://www.reliancecpa.com/dental-asset-protection-planning",
+ "slug": "dental-asset-protection-planning",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Asset Protection Planning | Dental CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-asset-protection-planning",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA from Reliance Consulting Helps with Asset Protection Planning",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA from Reliance Consulting Helps with Asset Protection Planning",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Dental-Asset-Protection-Planning-300x200.jpg",
+   "alt": "Dental Asset Protection Planning",
+   "alt_missing": false,
+   "title": "Dental Asset Protection Planning",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Anyone who has practiced dentistry – or any form of healthcare – long enough understands how important it is to make asset protection planning a priority. We live in an increasingly litigious society, and no dental practice, no matter how competent, is ever entirely immune from being sued. It is therefore vital for owner-operators of dental practices to shield themselves from losing personal and professional assets.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [dental CPA](http://reliancecpa.com/dental-cpa) from Reliance Consulting, LLC, can help you set up your practice using a business model that will provide as much asset protection as possible, while also preserving the efficiency and top-notch dental care your patients demand.",
+   "links": [
+    {
+     "text": "dental CPA",
+     "href": "http://reliancecpa.com/dental-cpa"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Asset protection planning usually starts with carrying the right kind and amount of insurance. Forms of insurance a dental practice should consider carrying include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Professional liability",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "General liability",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Vicarious liability",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Disciplinary coverage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Licensure coverage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Property coverage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Before determining what insurance coverage to purchase and how else to protect your practice and yourself, asset protection planning includes [titling your assets](http://www.reliancecpa.com/titling-dental-assets), taking [depreciation](http://www.reliancecpa.com/dental-depreciation) into account, and establishing a shield against a wide variety of risks, including:",
+   "links": [
+    {
+     "text": "titling your assets",
+     "href": "http://www.reliancecpa.com/titling-dental-assets"
+    },
+    {
+     "text": "depreciation",
+     "href": "http://www.reliancecpa.com/dental-depreciation"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Malpractice lawsuits",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Divorce",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Partner disputes",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Poor investments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Business cycle downturns",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A dental CPA from Reliance Consulting can help you position yourself in the best way possible to dissuade anyone from making claims against your assets. Ultimately, that’s what asset protection planning is about for a dental practice, or any healthcare entity. [Contact](http://reliancecpa.com/contact.html) Reliance today to get started. Ask about how a [wage account](http://www.reliancecpa.com/dental-wage-accounts) might be a good place to start.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    },
+    {
+     "text": "wage account",
+     "href": "http://www.reliancecpa.com/dental-wage-accounts"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 264
+}

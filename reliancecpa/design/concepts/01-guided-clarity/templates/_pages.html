@@ -1,0 +1,16 @@
+{# All pages by template, with each page's territory. #}
+{% extends "_base.html" %}
+{% block main %}
+<section class="m kit-intro">
+  <p class="eyebrow">{{ concept.name }}</p>
+  <h1 class="h-page">Pages</h1>
+  <p class="lead">{{ built }} pages built from the shared content (live pages carried into the redesign plus the proposed ones), grouped by template. Pages belonging to a tier show its territory; everything else is brand.</p>
+  {% for t, items in groups.items() %}
+  <h2 class="kit-h">{{ t }} <small>{{ items|length }} pages</small></h2>
+  <p class="text-muted">{{ templates[t] }}</p>
+  <ul class="pagelist">{% for p in items if p.built %}
+    <li><a href="{{ root }}{{ p.path ~ '/' if p.path }}">{{ p.title }}</a> <code>/{{ p.path }}</code>{% if p.tier %} <span class="chip chip--tag terr-{{ concept.tier_territory[p.tier] }}">{{ concept.territories[concept.tier_territory[p.tier]].label }}</span>{% endif %}<small>{{ p.modules|join(" · ") }}</small></li>
+  {% endfor %}</ul>
+  {% endfor %}
+</section>
+{% endblock %}

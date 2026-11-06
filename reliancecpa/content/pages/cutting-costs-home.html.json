@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/cutting-costs-home.html",
+ "slug": "cutting-costs-home.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Cutting Costs at Home | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cutting-costs-home.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Household Frugality: Cutting Costs at Home",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Household Frugality: Cutting Costs at Home",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cutting-costs-home.gif",
+   "alt": "Cutting Costs at Home",
+   "alt_missing": false,
+   "title": "Cutting Costs at Home",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Even during the best of economic times, it’s wise to do everything in your power to make sure you don’t spend more money on household expenditures than is absolutely necessary. It’s rule No. 1 for being a responsible homeowner: Set a budget and stick to it.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you establish a household budget and figure out ways to make sure you are getting the most out of your income. That means crunching the numbers to determine whether it makes sense to take significant action, such as refinancing your home or trading in that gas guzzler for a fuel-efficient car. It also means going over the budget with a fine-toothed comb to eliminate needless or trivial costs.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In addition, there are other simple actions that could add up to significant cost savings over the long haul:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Use coupons for groceries, dining out, sundries, and more.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Use old towels or t-shirts as cleaning rags.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Make sure to use the most energy-efficient appliances available.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Turn off lamps, fans, and other appliances when not in use.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Perform your own lawn maintenance, deep cleaning, and other big household chores.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today to speak with a certified public accountant about ways to manage your household costs. We’ll perform a complimentary checkup of your financial health to get you started.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 232
+}

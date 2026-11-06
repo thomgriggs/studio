@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/tax-planning-year-round",
+ "slug": "tax-planning-year-round",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Year-Round Tax Planning",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/tax-planning-year-round",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains Why Tax Planning is a Year-Round Endeavor",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains Why Tax Planning is a Year-Round Endeavor",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Tax-Planning-Year-Round-300x200.jpg",
+   "alt": "Tax Planning Year-Round",
+   "alt_missing": false,
+   "title": "Tax Planning Year-Round",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you found yourself in a panic this year as the tax deadline approached, perhaps now is a good time to start planning for next April. In fact, there’s no “perhaps” about it – tax planning is a year-round endeavor. Year-round planning certainly helps you avoid the frantic scramble of pulling together all of your tax information at the last minute. More importantly, a smart tax plan implemented well in advance of the deadline might just save you a lot of money.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you develop a tax plan now that will work for you all year long. Ignoring your potential deductions and credits until the very last minute is a huge mistake, because something might be overlooked if tax preparation is rushed. On the other hand, a little forethought will save you a headache in April. For instance, it only takes a moment to file records on expenses, but that moment could pay off big at tax time. Whether you use online financial software or banking, or you file paper receipts in a secure, safe place at home or your office, here are a few expenses that could have an impact on your taxes:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Medical expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tuition fees",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Child care costs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Charitable donations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Political contributions",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Child support payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Alimony payments",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It makes absolutely no sense to procrastinate when it comes to tax planning. The more you pay attention throughout the year, the less stress you will experience at tax time. And the more money you’re likely to receive in a tax return, if there is one. For year-round tax planning help, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 286
+}

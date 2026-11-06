@@ -1,0 +1,34 @@
+{# Shared macros, not a module. #}
+{% macro eyebrow(text, cls="") %}{% if text %}<p class="eyebrow{{ ' ' ~ cls if cls }}">{{ text }}</p>{% endif %}{% endmacro %}
+
+{% macro heading(level, text, orig, cls="") %}<h{{ level }}{% if cls %} class="{{ cls }}"{% endif %} data-orig-level="{{ orig }}">{{ text|md }}</h{{ level }}>{% endmacro %}
+
+{% macro lst(b) %}<{{ b.type }} class="list">{% for i in b["items"] %}<li>{% if i.lead %}<strong>{{ i.lead|md }}</strong> {% endif %}{{ i.text|md }}{% for c in i.children %}{{ lst(c) }}{% endfor %}</li>{% endfor %}</{{ b.type }}>{% endmacro %}
+
+{% macro table(rows, header) %}<div class="table-wrap"><table class="table">{% for r in rows %}{% if loop.first and header %}<thead><tr>{% for c in r %}<th scope="col">{{ c|md }}</th>{% endfor %}</tr></thead><tbody>{% else %}{% if loop.first %}<tbody>{% endif %}<tr>{% for c in r %}<td>{{ c|md }}</td>{% endfor %}</tr>{% endif %}{% if loop.last %}</tbody>{% endif %}{% endfor %}</table></div>{% endmacro %}
+
+{# Renders a list of body blocks. sub = heading level for bold sub-headings. #}
+{% macro body(blocks, sub=3) %}{% for b in blocks %}{% if b.type == "p" %}<p>{{ b.text|replace("\n\n", "\n")|md }}</p>
+{% elif b.type in ("ul", "ol") %}{{ lst(b) }}
+{% elif b.type == "subhead" %}<h{{ sub }} class="subhead" data-orig-level="bold">{{ b.text|md }}</h{{ sub }}>
+{% elif b.type == "table" %}{{ table(b.rows, b.header) }}
+{% elif b.type == "quote" %}<blockquote class="bq">{{ b.text|md }}</blockquote>
+{% elif b.type == "button" %}<p><a class="btn btn-primary" href="{{ b.href|href }}">{{ b.text }}</a></p>
+{% elif b.type == "embed-link" %}<p><a class="btn btn-secondary" href="{{ b.href }}" target="_blank" rel="noopener">{{ b.text }}</a></p>
+{% endif %}{% endfor %}{% endmacro %}
+
+{% macro img(i, cls="") %}<img{% if cls %} class="{{ cls }}"{% endif %} src="{{ i.src|asset }}" alt="{{ i.alt }}" loading="lazy">{% endmacro %}
+
+{# Neutral placeholder where a module wants a photo the firm does not have yet. #}
+{% macro ph(label, cls="") %}<div class="ph{{ ' ' ~ cls if cls }}" role="img" aria-label="Photo needed: {{ label }}"><span>Photo needed: {{ label }}</span></div>{% endmacro %}
+
+{# YouTube poster: the video's own thumbnail with a square play button, linking to the video. #}
+{% macro poster(url, title) %}{% set id = url|ytid %}<a class="video" href="https://www.youtube.com/watch?v={{ id }}" target="_blank" rel="noopener" aria-label="Play video: {{ title or 'YouTube video' }} (opens YouTube)"><img src="https://i.ytimg.com/vi/{{ id }}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></a>{% endmacro %}
+
+{# Button row: first is primary, the rest secondary (light = on a photo or video). #}
+{% macro actions(list, light=false) %}{% if list %}<div class="actions">{% for a in list %}<a class="btn {{ 'btn-primary' if loop.first else ('btn-light' if light else 'btn-secondary') }}" href="{{ a.href|href }}">{{ a.text }}</a>{% endfor %}</div>{% endif %}{% endmacro %}
+
+{% macro terr(tier) %}{% if tier and concept.tier_territory[tier] %}terr-{{ concept.tier_territory[tier] }}{% endif %}{% endmacro %}
+
+{# "Would you rather call?" line: phone is a string or {text, href}. #}
+{% macro callline(c) %}{% if c and c.phone %}{% set p = c.phone %}{% set txt = p.text if p is mapping else p %}{% set hr = p.href if p is mapping else 'tel:+1' ~ (p|replace('(', '')|replace(')', '')|replace(' ', '')|replace('-', '')) %}<p class="callline">{{ c.text }} <a href="{{ hr }}">{{ txt }}</a></p>{% endif %}{% endmacro %}

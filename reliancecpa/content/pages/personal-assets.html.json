@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/personal-assets.html",
+ "slug": "personal-assets.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Protecting Personal Assets | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/personal-assets.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses Protecting Personal Assets",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses Protecting Personal Assets",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/personal-assets.gif",
+   "alt": "Tampa CPA Personal Assets",
+   "alt_missing": false,
+   "title": "personal-assets",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Relatively few businesses, big or small, are able to entirely avoid legal problems of some kind – it has become an acknowledged part of doing business. Preparing the company to weather a lawsuit is just sound practice, and just as important for small business owners is to protect their personal assets from the debts and liabilities of the company.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can provide guidance for protecting personal assets as you formulate your long-range business plan. Since 1984, Reliance has been one of the premier accounting firms in the Tampa Bay area, helping hundreds of businesses reach and exceed their goals with reliable, professional accounting services, payroll services, bookkeeping, cash flow management, tax planning, and more. A big part our business consulting service is helping you determine the most beneficial legal structure for your company, which is an important factor when it comes to protecting personal assets.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Many businesses are formed as corporations, which in theory separates the rights and liabilities of the company from its shareholders. However, “piercing the corporate veil” has become a much-used legal strategy in actions taken against corporate board members, which is why following proper procedures is vital. These steps include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Issuing stock after the formation of the corporation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Electing corporate directors",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Filing annual reports properly",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Keeping good records",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Avoiding co-mingling personal assets with those of the corporation",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com//contact.html) Reliance today for a free financial health checkup and to learn more about how to shield your personal assets from legal action taken against your small business.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 262
+}

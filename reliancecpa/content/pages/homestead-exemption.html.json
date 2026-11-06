@@ -1,0 +1,120 @@
+{
+ "url": "https://www.reliancecpa.com/homestead-exemption.html",
+ "slug": "homestead-exemption.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA in Tampa | Florida’s Property Tax Homestead Exemption",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/homestead-exemption.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains Florida’s Property Tax Homestead Exemption",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains Florida’s Property Tax Homestead Exemption",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/homestead-exemption.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Florida’s homestead exemption allows homeowners to deduct $25,000 off of the assessed value of the home for property tax purposes. An additional $25,000 can be deducted for homes worth at least $75,000, although the additional deduction does not apply to school taxes. Another major benefit of filing for a homestead exemption is that the assessed value of your home can’t increase more than three percent in a calendar year, and your homestead exemption typically can be transferred if you move into a new Florida home.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can explain in detail all the benefits of Florida homeowners enjoy through the homestead exemption. It’s important to remember that the deduction is not automatically granted; the deadline for new homeowners to file by is March 1 of the calendar year in which they wish to receive the deduction. If you’re paying property taxes for the first time on your new home, be prepared to answer the following questions in order to confirm you are qualified for the homestead exemption deduction:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Whose name was on the title as of Jan. 1?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What is the street address?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How long have you been a legal resident of Florida?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Does your car have a Florida license plate, or do you have a Florida driver’s license?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Were you living in the dwelling on Jan. 1?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has helped thousands of individuals and hundreds of companies in the Tampa Bay area navigate the complexities of the state and federal tax laws. Our goal is to put you on the path to financial security, and we take pride in providing personalized service catered to your precise financial needs. [Contact](http://www.reliancecpa.com/contact.html) Reliance today to learn more about the tax benefits of Florida’s homestead exemption law.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 307
+}

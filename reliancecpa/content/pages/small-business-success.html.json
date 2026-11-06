@@ -1,0 +1,135 @@
+{
+ "url": "https://www.reliancecpa.com/small-business-success.html",
+ "slug": "small-business-success.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Reliance Consulting, LLC - CPA | Business Consultants",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/small-business-success.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains What Traits are Shared by Successful Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains What Traits are Shared by Successful Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/small-business-success.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "small-business-success",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Thousands of small businesses are started every year, but a majority of them are nowhere to be found within five years or less. Why is that? There are a number of reasons, but a major force behind startup failure is – to put it bluntly – ignorance. It’s astonishing how often the same mistakes that forced one business to shut its doors can be repeated by new business owners. Learning from the mistakes and successes of others won’t guarantee your business will thrive, but it is an easy way to avoid certain pitfalls.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help your new business find the path to prosperity and stay on it. Since 1984, we have helped hundreds of small businesses with tax planning, payroll services, strategy development, and much more. We have the experience it takes to know what not to do as you try to build a business, and we know what traits are shared by successful small companies. These include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "A sound long-term vision",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Clear goals and objectives",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Full understanding of the competition",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Adequate financial planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Strong leadership",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Effective procedures and systems",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Flexibility",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Good internal and external communication skills",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Very few small business owners can go it alone, and with Reliance by your side, you won’t have to. [Contact](http://www.reliancecpa.com//contact.html) us today for a free financial health checkup and to start getting business advice that will strengthen your company over the long haul.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 251
+}

@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting/",
+ "slug": "retail-accounting.htm__retail-accounting",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "retail-accounting - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "retail-accounting",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Retail Accounting for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay](https://www.reliancecpa.com/retail-accounting.htm)",
+   "links": [
+    {
+     "text": "← Retail Accounting for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+     "href": "https://www.reliancecpa.com/retail-accounting.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "retail-accounting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 5, 2011 | Full size is [200 × 298](https://www.reliancecpa.com/wp-content/uploads/2011/12/retail-accounting.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "200 × 298",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/retail-accounting.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/retail-accounting.jpg",
+   "alt": "",
+   "alt_missing": true,
+   "title": "",
+   "width": "200",
+   "height": "298",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/retail-accounting.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/retail-accounting.htm/retail-accounting).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/retail-accounting.htm/retail-accounting"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 32
+}

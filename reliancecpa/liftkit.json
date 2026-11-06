@@ -1,0 +1,149 @@
+{
+  "name": "Reliance CPA",
+  "readme_title": "reliancecpa.com",
+  "domain": "reliancecpa.com",
+  "source": {
+    "primary": "https://www.reliancecpa.com",
+    "fallback": "https://reliancecpa-current.thomgriggs.workers.dev"
+  },
+  "urls": {
+    "seed_csv": "inventory/reliancecpa-url-inventory.csv",
+    "seed_url_column": "url",
+    "seed_type_column": "",
+    "seed_name_column": "",
+    "seed_modified_column": "",
+    "exclude_regex": [
+      "[?&]replytocom=",
+      "/wp-login",
+      "/wp-admin",
+      "/feed/?$"
+    ]
+  },
+  "sitemaps": [
+    "sitemap_index.xml",
+    "sitemap.xml"
+  ],
+  "crawl": {
+    "user_agent": "Liftkit/1.0 (site redesign content audit)",
+    "delay": 1.0,
+    "discover_links": true,
+    "discover_max": 200
+  },
+  "selectors": {
+    "main": [
+      "#content",
+      "#container"
+    ],
+    "header": [
+      "#header"
+    ],
+    "footer": [
+      "#footer"
+    ],
+    "nav": [
+      "#primary .menu-sidebarnav-container > ul",
+      "#primary ul.menu"
+    ],
+    "nav_root": "page",
+    "logo": [
+      "#site-title img"
+    ],
+    "top_bar": [
+      "#right_side"
+    ],
+    "sidebar": [],
+    "nav_button_class": ""
+  },
+  "skip_id_regex": "(^comments$|^respond$|cookie|cmplz|gdpr)",
+  "skip_class_regex": "(^|\\s)(screen-reader-text|sr-only|nocomments|socialize|cookie|cmplz|gdpr|skip-link)",
+  "shared_min": 10,
+  "yoast": true,
+  "global_extras": true,
+  "inventory": {
+    "csv": "inventory/reliancecpa-url-inventory.csv",
+    "key_column": "url",
+    "fields": [
+      "category",
+      "first_pass_action",
+      "notes"
+    ]
+  },
+  "layout": {
+    "cohorts": [
+      {
+        "name": "article-library",
+        "where": {
+          "inventory.category": "article-library"
+        }
+      },
+      {
+        "name": "dental",
+        "where": {
+          "inventory.category": "dental"
+        }
+      },
+      {
+        "name": "veterinary",
+        "where": {
+          "inventory.category": "veterinary"
+        }
+      },
+      {
+        "name": "article-service-adjacent",
+        "where": {
+          "inventory.category": "article-service-adjacent"
+        }
+      },
+      {
+        "name": "article-dated",
+        "where": {
+          "inventory.category": "article-dated"
+        }
+      }
+    ]
+  },
+  "modulize": {
+    "logo_alt_regex": "(?!x)x",
+    "title_suffix_regex": "",
+    "consultation_url": "",
+    "contact_href_regex": "",
+    "excluded_pages_file": "content/excluded-pages.json",
+    "templates_file": "design/kit/templates.json",
+    "title_from_first_heading": true,
+    "lead_image_to_banner": true
+  },
+  "build": {
+    "test_pages": [
+      "home",
+      "tax-planning.htm",
+      "tax-saving-strategies.htm",
+      "staff-profiles.htm",
+      "contact.html"
+    ],
+    "default_concepts": [
+      "02-broadsheet",
+      "01-guided-clarity"
+    ],
+    "use_scope_paths": true,
+    "skip_roles": [
+      "merged"
+    ],
+    "related_by_tag": true,
+    "tag_titles": {
+      "tax": "Tax",
+      "accounting": "Accounting",
+      "consulting": "Business and consulting",
+      "general": "General"
+    },
+    "asset_map": {
+      "concept-02/assets/": "assets/",
+      "http://www.reliancecpa.com/wp-content/uploads/2011/12/": "assets/people/",
+      "https://www.reliancecpa.com/wp-content/uploads/2011/12/": "assets/people/"
+    },
+    "path_aliases": {
+      "index.html": "",
+      "index.php": "",
+      "home.html": ""
+    }
+  }
+}

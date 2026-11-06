@@ -1,0 +1,107 @@
+{
+ "url": "https://www.reliancecpa.com/employer-identification-number.htm",
+ "slug": "employer-identification-number.htm",
+ "template": "insight-article",
+ "family": "S1",
+ "title": "CPA in Tampa, FL Discusses Why Your Business Needs an Employer ID Number (EIN)",
+ "seo": {
+  "title_tag": "CPA in Tampa FL | Why Your Business Needs an Employer ID Number (EIN)",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/employer-identification-number.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "CPA in Tampa, FL Discusses Why Your Business Needs an Employer ID Number (EIN)",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "CPA in Tampa, FL Discusses Why Your Business Needs an Employer ID Number (EIN)",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/employer-identification-number.jpg",
+     "alt": "CPA in Tampa, FL Discusses Why Your Business Needs an Employer ID Number (EIN)"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "A federal employer identification number (EIN), also known as a tax ID number or simply a tax number, is a nine-digit code used by a business to identify itself when filing taxes, banking or conducting other financial transactions like payroll.",
+     "Near the top of your to-do list when starting a new business in the Tampa Bay area, or making changes to an existing business, is applying for an employer identification number. Your [CPA in Tampa](http://www.reliancecpa.com/), Reliance Consulting, LLC, can guide you through the sometimes-confounding red tape that comes with starting or operating a business – such as determining whether you need a new EIN, based on Internal Revenue Service guidelines.",
+     "In general, the IRS says you need a federal EIN if you answer “yes” to any of the following questions:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Do you have employees?"
+     },
+     {
+      "text": "Do you operate your business as a corporation or a partnership?"
+     },
+     {
+      "text": "Do you file employment, excise, or alcohol, tobacco and firearms tax returns?"
+     },
+     {
+      "text": "Are taxes withheld from non-resident alien employees, other than on income?"
+     },
+     {
+      "text": "Are you a sole proprietor with a Keogh pension plan?"
+     },
+     {
+      "text": "Are you involved with trusts, IRAs, estates, non-profit organizations, farmers’ co-operatives or plan administrators?"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "Owners of sole proprietorships often choose to use their social security numbers as their EIN. Even if your business already has an assigned EIN, you’ll probably need a new one if you incorporate, take on partners, purchase or inherit a business, or if you are subjected to a bankruptcy proceeding.\n\nTo acquire an EIN, you must apply to the IRS using Form SS-4. Forms are available at IRS and social security offices, or you can apply on-line through the IRS website. Some states also require a state EIN."
+     },
+     {
+      "type": "p",
+      "text": "For help with this or any other big or small business question, contact a CPA in Tampa from Reliance Consulting."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "scope": {
+  "new_path": "/resources/employer-identification-number/",
+  "role": "resource-article",
+  "tag": "consulting",
+  "old_path": "/employer-identification-number.htm"
+ }
+}

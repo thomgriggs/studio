@@ -1,0 +1,140 @@
+{
+ "url": "https://www.reliancecpa.com/bottom-line",
+ "slug": "bottom-line",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Bottom Line | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/bottom-line",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the ‘Bottom Line’ in Accounting",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the ‘Bottom Line’ in Accounting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Bottom-Line-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Bottom Line",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most people in business are all-too-familiar with the term “bottom line.” It is often used to describe a company’s profit, although it may also be used in general conversation to describe the ultimate result or outcome of an event, or as the deciding or critical factor in an argument. In accounting, the term came into common usage because the final, or bottom, line of a financial statement usually is reserved to display net income or net loss.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) at Reliance Consulting, LLC, is always here to help you do everything possible to ensure that the bottom line for your company or in your personal life best illustrates the profitability of your financial enterprises. Since opening our doors in 1984, we have helped thousands of individuals and hundreds of businesses achieve their financial goals. We are a full-service accountancy firm, providing small business consulting and personal financial planning with our staff of knowledgeable, experienced CPAs. Our services include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Tax planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Tax preparation",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Bookkeeping",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cash flow management",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "New business planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "IRS problem resolution",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Estate planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The CPAs at Reliance Consulting strive to stay on the cutting edge of the accounting industry, and one way we do that is to provide our clients with 24-hour access to their financial statements and other account documents through our complimentary client portal system. This allows all account information to be stored securely “in the cloud,” while also providing a round-the-clock means of client-CPA communication. To learn more about how our services can help your bottom line, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 269
+}

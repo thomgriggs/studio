@@ -1,0 +1,98 @@
+{
+ "url": "https://www.reliancecpa.com/buying-a-business.html/buying-a-business/",
+ "slug": "buying-a-business.html__buying-a-business",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/buying-a-business.html/buying-a-business",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Tampa CPA - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/buying-a-business.html/buying-a-business/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Talks About Buying A Business](https://www.reliancecpa.com/buying-a-business.html)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Talks About Buying A Business",
+     "href": "https://www.reliancecpa.com/buying-a-business.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Tampa CPA",
+   "links": [],
+   "region": "main",
+   "shared": true
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 239](https://www.reliancecpa.com/wp-content/uploads/2011/12/buying-a-business.gif) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 239",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/buying-a-business.gif"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/buying-a-business.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "239",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/buying-a-business.gif",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/buying-a-business.html/buying-a-business).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/buying-a-business.html/buying-a-business"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 24
+}

@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/network-security",
+ "slug": "network-security",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-09-04",
+ "seo": {
+  "title_tag": "Network Security | CPA in Tampa",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/network-security",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Importance of Network Security for Small Businesses",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Importance of Network Security for Small Businesses",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Network-Security-300x251.jpg",
+   "alt": "Network Security",
+   "alt_missing": false,
+   "title": "Network Security",
+   "width": "300",
+   "height": "251",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While it may seem counter-intuitive that small businesses are at greater risk for network security breaches than large corporations, this is precisely the problem confronting small business owners today. The reason for that is, large corporations have instituted vast and hard-to-crack security measures that require extraordinarily specialized “hacker” skills to circumvent. Many white collar criminals have therefore turned their attentions to the ostensibly more-vulnerable small companies, which may or may not have the wherewithal and savvy to protect themselves from cyber invasion.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you make sure that your small business is protected from hackers. There are a number of steps small companies can take that won’t break the bank and should keep them as secure as any big-time corporation. These steps include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Create and password protect a firewall",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lock down internal IP addresses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Conduct internal scans regularly",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set the firewall to ignore or block outside ping requests",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Double up on security with a firewall plus an intrusion prevention system",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Have external works use a virtual private network (VPN)",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While this might seem like overkill, or paranoia, remember that your clients are relying on your discretion. A network breach can compromise sensitive information, costing a lot of money up front to fix and a virtually immeasurable amount of credibility in the long run. If your clients can’t trust your security, you won’t be in business long. To learn more about the importance of network security for small businesses, and how to attain it, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 270
+}

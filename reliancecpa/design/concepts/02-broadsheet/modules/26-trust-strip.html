@@ -1,0 +1,10 @@
+{#
+MODULE: trust-strip
+PURPOSE: Proof directly under the hero: up to three facts in a row, the lead in the serif and its line under it. On the home page this concept shows the dateline stat rail instead (the same facts, in the original's form), so CSS hides the strip when a dateline stat-row follows it.
+SLOTS: facts[lead, text] (0 to 3), logos[src, alt, href].
+SQUARESPACE: Row of Text blocks (Heading 4 + small paragraph).
+#}
+<section class="m m-trust" data-module="trust-strip" data-tone="{{ tone }}">
+  <div class="trust">{% for f in s.facts %}<p><strong>{{ f.lead }}</strong><span>{{ f.text }}</span></p>{% endfor %}</div>
+  {% if s.logos %}<ul class="logos" role="list">{% for l in s.logos %}<li><img src="{{ l.src|asset }}" alt="{{ l.alt }}" loading="lazy"></li>{% endfor %}</ul>{% endif %}
+</section>

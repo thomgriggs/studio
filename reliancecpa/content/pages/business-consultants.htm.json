@@ -1,0 +1,154 @@
+{
+ "url": "https://www.reliancecpa.com/business-consultants.htm",
+ "slug": "business-consultants.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-consulting",
+  "first_pass_action": "Refresh",
+  "notes": "industry/service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Business Consultants for Tampa St Petersburg Clearwater Sarasota Manatee Pasco Lakeland & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-consultants.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Consultants for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Business Consultants for Tampa, St Petersburg, Clearwater, Sarasota, Manatee, Pasco, Lakeland & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/business-consultant.jpg",
+   "alt": "Business Consultants for the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "Business Consultants for the Tampa, FL Area",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Despite offering top-of-the-line products and services—and having a long list of happy customers—many Tampa, FL area businesses still find themselves barely making it. Owners of these businesses ask themselves, “What are we doing wrong? Why can’t we earn more of profit? Why are we hardly keeping our heads above water?” The business consultants at our Tampa CPA firm can help answer these questions and offer solutions to get businesses on the right track toward a bright, successful future.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Whether you own a manufacturing facility in Tampa, a medical office in Clearwater, or a real estate firm in St Petersburg, the business consultants from Reliance Consulting, LLC can implement time-tested strategies that have been proven to turn stressed companies into flourishing businesses. To do this, the team at Reliance Consulting:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Gains intimate knowledge of the business in both its operations and finances",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provides an objective analysis of the business",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Can get you started on the right foot with [new business planning](http://www.reliancecpa.com/new-business-planning.htm)",
+     "links": [
+      {
+       "text": "new business planning",
+       "href": "http://www.reliancecpa.com/new-business-planning.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Develops long term and short term business plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Provides the company with business tax services and strategies",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Brainstorms strategies to increase revenues and decrease expenses",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Advises clients on marketing and networking strategies that have worked in their industries",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Assists with [bookkeeping](http://www.reliancecpa.com/bookkeeping.htm), payroll, [cash flow management](http://www.reliancecpa.com/cash-flow-management.htm), [business finance consulting](http://www.reliancecpa.com/business-finance-consultant.htm), and the other critical, day-to-day financial needs of the business",
+     "links": [
+      {
+       "text": "bookkeeping",
+       "href": "http://www.reliancecpa.com/bookkeeping.htm"
+      },
+      {
+       "text": "cash flow management",
+       "href": "http://www.reliancecpa.com/cash-flow-management.htm"
+      },
+      {
+       "text": "business finance consulting",
+       "href": "http://www.reliancecpa.com/business-finance-consultant.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Most importantly, Reliance Consulting business consultants take a unique approach to each business, because every business is one-of-a-kind and is at a different place in its life cycle. All businesses do share one thing in common, however: success is a by-product of superior decision making and the careful consideration of each dollar spent and earned.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The business consultants at Reliance Consulting have turned businesses around throughout the Tampa Bay area, from Tampa to Lakeland, Pasco to Sarasota, and St Petersburg to Clearwater. Call us for a free financial check-up today, and to learn more about how we can help you transform your business into the smashing success you always knew it could be.",
+   "links": [],
+   "region": "main"
+  }
+ ],
+ "word_count": 348
+}

@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/federal-reserve",
+ "slug": "federal-reserve",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | The Role of the Federal Reserve",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/federal-reserve",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains the Role of the Federal Reserve",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains the Role of the Federal Reserve",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Federal-Reserve-300x200.jpg",
+   "alt": "Federal Reserve",
+   "alt_missing": false,
+   "title": "Federal Reserve",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "When the U.S. economy entered a deep recession in 2008, the role of the Federal Reserve (the Fed) began to come under more public scrutiny. Certain politicians, usually those with a libertarian slant, recently began to speak out against the very existence of the Fed. Yet, the Fed – established by act of congress in 1913 – remains one of the prime movers in the economic health of the U.S. (and hence, the world).",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help individuals and businesses understand how monetary policy, as shaped by the Fed, can impact their personal finances. Most people pay attention to the Fed only when the Fed chairman speaks before a congressional committee. The actual role of the Fed might not be well understood by the average citizen. Originally, it was intended to manage monetary policy with three goals in mind: maximum employment, stable prices, and moderate long-term interest rates. The role of the Fed has evolved over the years to include:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Conducting national monetary policy",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Supervising and regulating banks",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Maintaining the stability of the financial system",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Providing financial services for the government and other institutions",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The actions taken by the Fed have a very real effect on your personal economy, either as an individual or a business. The Fed can increase or lower interest rates, which makes it easier or more difficult to receive loans. It also can dictate monetary supply that could have an impact on the stock markets, affecting your retirement investments and household net worth. To schedule a consultation with one our experienced CPAs, [contact](http://reliancecpa.com/contact.html) Reliance today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 277
+}

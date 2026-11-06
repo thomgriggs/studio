@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/potential-employees.html",
+ "slug": "potential-employees.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Potential Employees",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/potential-employees.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Talks About Screening and Interviewing Potential Employees",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Talks About Screening and Interviewing Potential Employees",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/potential-employees.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "potential-employees",
+   "width": "300",
+   "height": "209",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "As the workload increases in a growing business, the owner or CEO will almost certainly begin to consider adding to the workforce. Before hiring new employees, though, the wise business owner will consider a wide range of factors. Are the skills of current employees being properly utilized? What are the functions of the new job or jobs? How much will it pay? What skill sets should be listed as “required” or “preferred” in the job description? The list is extensive, and it should not be rushed into haphazardly.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com//index.html) from Reliance Consulting, LLC, can help a small business owner identify the need for new employees, as well as develop the job description and help with all the details of the new hire. Since opening our doors in 1984, Reliance has helped hundreds of business in the Tampa Bay area reach their full potential. Included in our small business consultancy is advice on how to conduct a professional, efficient job interview:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com//index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Conduct the interview in a quiet, private area free of workplace distractions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Begin on time.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Go straight through from start to finish, without interruptions.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Set aside plenty of time for the interview.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do not be patronizing toward the interviewee.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Do not allow the interview to disintegrate into an argument.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Make sure to thank the candidate for his or her time and interest in the job.",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "For all of your small business needs – including tax planning and preparation, payroll services, cash flow management and more – [contact](http://www.reliancecpa.com//contact.html) Reliance Consulting today. We’ll conduct a complete financial health checkup, free of charge, to start you on the path to profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com//contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 282
+}

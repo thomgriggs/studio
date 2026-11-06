@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/filing-quarterly-taxes",
+ "slug": "filing-quarterly-taxes",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-05-01",
+ "seo": {
+  "title_tag": "Tampa CPA | Filing Quarterly Taxes | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/filing-quarterly-taxes",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Can Explain Who Must File Quarterly Taxes and Why",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Can Explain Who Must File Quarterly Taxes and Why",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Quarterly-Taxes-300x199.jpg",
+   "alt": "Quarterly Taxes",
+   "alt_missing": false,
+   "title": "Quarterly Taxes",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Certain companies and individuals must file and pay taxes on a quarterly basis, rather than once a year. Failure to do so, if you are so required, can result in interest charged or penalties levied by the IRS.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, can help you determine whether you are required to file and pay personal or business taxes quarterly. And if so, we also can help you figure out the estimated tax owed and establish a means of payment and a scheduled for every three months. But why would an individual or business need to file quarterly taxes, rather than file by the usual April 15 deadline?",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "It comes down to how money is paid. Most people who are employees have a certain amount of federal income and payroll tax withheld from each paycheck. Individuals who work on contract or a freelance basis are considered self employed, and receive the full, untaxed sum in payment. The government still needs its cut, even if it is not withheld automatically. Business taxes might also need to be paid quarterly, depending on the legal structure of your company.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about who must pay quarterly taxes, when they are due, how much is owed, and why these taxes must be paid, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today. We can help with all of your tax planning and tax preparation needs. Since opening our doors in 1984, we have helped thousands of individuals and hundreds of Tampa Bay area businesses find the path to profitability.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 265
+}

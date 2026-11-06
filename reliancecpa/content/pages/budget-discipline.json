@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/budget-discipline",
+ "slug": "budget-discipline",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | Finding Budgetary Discipline",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/budget-discipline",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Gives Tips for Disciplined Budgeting",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Gives Tips for Disciplined Budgeting",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/budget-discipline1-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Budgetary Discipline",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Although the most difficult thing about household budgeting is actually sticking to it from month to month, there are ways to find the discipline required to make sure you are financially responsible. Some people simply have a knack for staying on budget. Others must either learn how to do it, or find someone to help them.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com) from Reliance Consulting, LLC, is here to offer budgeting advice and help you learn how to summon the discipline you’ll need. It starts with analyzing your wants and needs and matching those with your resources. This is a particularly important step, because the decisions you make regarding what actually constitute “needs” versus “wants” form the foundation for your budget goals. This also is, perhaps, the greatest initial challenge to your ability to summon the inner discipline required. What is a “need?” What is a “want?” Only you can make the final call on that, but once you have, you should make a commitment to honoring your initial decisions as relentlessly as possible.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "That can the tough part, though. Life is not static. Priorities shift. What may be classified as a “want” today may become a “need” tomorrow – or be forgotten altogether. This is another challenge to having the discipline to stick to a budget, recognizing when it is financially responsible to be flexible enough to change. That’s where the help of a trained, experienced CPA can be invaluable. Reliance Consulting can help you set your priorities while making sure that you understand exactly the ramifications of spending outside your budget if that’s what you decide to do.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about finding the discipline it takes to stick to a well-planned personal budget, [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 296
+}

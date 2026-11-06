@@ -1,0 +1,34 @@
+---
+url: https://www.reliancecpa.com/veterinary-outsourced-controller
+type: page
+title_tag: "Outsourced Controller for Veterinarians – Tampa, FL"
+meta_description: "An outsourced controller or CFO can provide full-time accounting or financial planning at a part-time price."
+meta_keywords: ""
+h1: ""
+last_modified: 2016-05-17
+status: 200
+---
+
+[h3] Save Time and Money with an Outsourced Controller
+[img] alt="time-is-money" src=http://www.reliancecpa.com/wp-content/uploads/time-is-money-300x204.jpg
+[p] If you are looking to save money, but you still want to provide a stable financial foundation for your veterinary practice, consider our outsourced controller and CFO services. Outsourcing your financial work may be an ideal solution if you own a small practice that does not require a fulltime employee. At the same time, it will free you up to focus on health care and the other aspects of running your business. Reliance Consulting, LLC offers unique **outsourced controller** and CFO services **for** **veterinarians**. We have years of experience helping small business owners, and we understand the unique needs of animal health care providers. [Contact our office](http://www.reliancecpa.com/contact.html) to learn more about outsourced controllers and CFOs. We will provide a consultation to help you determine if these services are right for your business.
+[h2] The Basic Duties of a Controller
+[p] Business controllers and Chief Financial Officers (CFOs) have very different functions. However, in many small businesses, a single person performs both roles. A controller is responsible for accounting and the day-to-day financial operations of a practice. These responsibilities include:
+[ul]
+- Ongoing financial records
+- [Financial statement preparation](http://www.reliancecpa.com/veterinary-financial-statement-preparation)
+- Budgeting
+- Payroll
+- Billing
+- Tax compliance
+- Audits
+[p] If applicable, a controller also supervises the in-office accountant or bookkeeper.
+[h2] Do You Need a Chief Financial Officer?
+[p] A CFO is responsible for the financial future of a company. He or she will create strategic plans for expansion, [mergers](http://www.reliancecpa.com/mergers), and equity. In general, a small or start-up veterinary practice will not require the services of a CFO. A controller, on the other hand, may be essential to your practice success. However, if you are looking to expand or downsize your practice, you may want to hire a Chief Financial Officer. At Reliance Consulting, we can provide temporary services as you go through this time of transition. You may also benefit from long-term CFO services if your practice is experiencing significant growth and financial success.
+[h2] The Benefits of Using an Outsourced Controller or CFO
+[p] When determining the best way to handle their financial affairs, most vets hire a full-time employee. Others choose to do all accounting and financial planning themselves. Outsourced services may be a much better choice. An outsourced controller or CFO provides the same skill and expertise that an in-office employee would provide. However, an off-site worker will cost significantly less than a full-time employee. At the same time, his services will reduce the risk of financial error and tax discrepancies. In turn, you will enjoy greater peace of mind, and you will be able to focus on the aspects of your job that you truly love.
+[h2] Why Choose Reliance Consulting for Your Outsourcing Needs?
+[p] We know you have several choices when it comes to your financial services. That is why we provide personalized assistance that sets us apart from others in the field. We take a team approach, working closely with you to ensure the future success of your practice. Not simply “number crunchers,” we will examine the overall financial status of your practice. Your CPA will also get to know you on a more personal level. In this way, he or she can guide you as you plan for practice growth and your personal financial future.
+[p] At Reliance Consulting, we have years of experience helping small business owners. We are also very familiar with the special concerns of veterinarians. Our accountants will create documents in keeping with industry standards. They also keep informed about changes in veterinary medicine. Through these services, they can help you [create a business plan](http://www.reliancecpa.com/veterinary-business-plan-development) and exceed your goals for the future.
+[h2] Learn More about How We Can Benefit Your Veterinary Practice
+[p] [Contact Reliance Consulting](http://www.reliancecpa.com/contact.html) to find out if outsourced financial services are right for you. Our accountants work with clients from Tampa, St. Petersburg, Clearwater, Sarasota, Pasco, Lakeland, Manatee, and the greater Tampa Bay area.

@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/employee-benefits",
+ "slug": "employee-benefits",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-07-02",
+ "seo": {
+  "title_tag": "Tampa CPA | Employee Benefits | Employee Retention",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/employee-benefits",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Explains How Benefits Affect Employee Retention",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Explains How Benefits Affect Employee Retention",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Employee-Benefits-300x230.jpg",
+   "alt": "Employee Benefits",
+   "alt_missing": false,
+   "title": "Employee Benefits",
+   "width": "300",
+   "height": "230",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are a small business owner and are concerned with long-term employee retention, you will certainly want to offer a set of benefits geared toward allowing your talent to flourish and remain happily under your employ for years to come. This usually goes far beyond the benefits you are required to pay by law, such as social security taxes and unemployment insurance. An attractive set of employee benefits is a valuable recruitment tool, as well as an incentive for current employees to stay loyal to your company over a long period of time.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help you establish a base line of employee benefits. You first must weigh your desire for employee retention with what you believe the company can afford in terms of paying for employee benefits. This can be a tricky balancing act, and you don’t want to over-reach for the sake of employee retention. Then again, you don’t want to create a corporate environment that tells employees they are not valued. As you weigh your decision, here are a few benefit options to consider:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Health care coverage",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Retirement plans",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Flexible hours",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Extended vacation time",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Employee incentive programs",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Paid personal leave days",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Work-from-home programs",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The expert accountants from Reliance can help you find the right balance between employee benefits and profitability. To set up a consultation at no charge, [contact](http://reliancecpa.com/contact.html) us today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 242
+}

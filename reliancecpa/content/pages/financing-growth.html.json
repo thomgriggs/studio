@@ -1,0 +1,125 @@
+{
+ "url": "https://www.reliancecpa.com/financing-growth.html",
+ "slug": "financing-growth.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "CPA In Tampa | Financing Growth In A Small Business",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/financing-growth.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Your CPA In Tampa Explains Financing Growth In A Small Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "Your CPA In Tampa Explains Financing Growth In A Small Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/financing-growth.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "200",
+   "height": "300",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If all goes well with your business, sooner or later you are very likely going to need additional capital to fund growth. Even if you are fortunate enough to have cash on hand to spend on growth, you would be remiss in ignoring the potential advantages of financing at least a portion of your future development.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, will help you determine the best path for you to take as you contemplate your options for financing growth. Tax implications, the potential impact of taking on debt, and the risk-reward of financing are all factors that must be taken into account. Should you decide to take out a loan to finance growth, you must ask yourself several pertinent questions, including:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Is there a way to find additional capital through improved cash flow management?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How comprehensive is your business plan?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How stable is your industry?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Exactly what will the capital be used to do?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "What and how great are your risks?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How urgent is your need for capital?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter what financial institution you choose to handle your financing, you will need to be ready to answer these questions and many more. A business consultant from Reliance will help you ensure you can furnish the information you need to get the best terms. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for help with all of your day-to-day business practicalities, such as cash flow management, strategic planning, payroll services, tax planning and more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 253
+}

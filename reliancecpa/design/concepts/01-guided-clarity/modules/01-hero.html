@@ -1,0 +1,52 @@
+{#
+MODULE: hero
+PURPOSE: Opener. Home variant (a background_video slot; the video itself is not used by this concept): the original's cream split, eyebrow, Georgia 500 headline with tight tracking, lead, an ink button and a text link, beside the layered chart card (bar chart card with two floating mini cards). Tier variant (a tier slot): the original's page hero, text left and the "service chart" card right: three overlapping pastel rings carrying the tier's first three services (from the nav) and a lime result bar. Without either: text only.
+SLOTS: eyebrow, title, tagline, tier, background_video, image, actions[text, href].
+SQUARESPACE: Section with a cream background, two columns: Heading 1 + Text + Button + a text link on the left, an Image block on the right. The chart card is a decorative picture exported once from this mockup (native build) or the markup in one Code block (live-text build); it is not content. The headline is Heading 1 in Georgia (a Site Styles font choice) with the tight tracking from a Site Styles letter-spacing setting.
+#}
+{% from "_macros.html" import eyebrow, actions, img, ph %}
+{% if s.background_video %}
+<section class="m m-hero m-hero--home" data-module="hero" data-tone="{{ tone }}">
+  <div class="hero__copy">
+    {% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}
+    <h1 class="h-hero" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
+    {{ actions(s.actions, "link") }}
+  </div>
+  <div class="hv" aria-hidden="true">
+    <div class="chart-card">
+      <div class="chart-card__head"><span>Year-round planning</span><span class="pill">Tampa, FL</span></div>
+      <p class="big-stat">A clearer view</p>
+      <div class="bars"><i style="height:28%"></i><i style="height:46%"></i><i style="height:38%"></i><i style="height:60%"></i><i style="height:74%"></i><i style="height:96%"></i></div>
+      <div class="axis"><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span></div>
+    </div>
+    <div class="mini-card one"><span>Business accounting</span><b>Plan ahead</b><i class="spark">~~~</i></div>
+    <div class="mini-card two"><span>Tax strategy</span><b>Year-round</b><em>&nearr;</em></div>
+  </div>
+</section>
+{% elif s.tier %}
+{% set cols = nav.mega.columns if nav is defined and nav and nav.mega else [] %}
+<section class="m m-hero m-hero--tier {{ 'terr-' ~ concept.tier_territory[s.tier] }}" data-module="hero" data-tone="{{ tone }}">
+  <div class="hero__copy">
+    {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+    <h1 class="h-page" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
+    {{ actions(s.actions) }}
+  </div>
+  <div class="svc-chart" aria-hidden="true">
+    {% set ns = namespace(items=[]) %}{% for col in cols if col.tier == s.tier %}{% for l in col.links if l.available and not (col.overview and l.label == col.overview.label) %}{% set ns.items = ns.items + [l.label] %}{% endfor %}{% endfor %}
+    <p class="svc-chart__t">{{ s.title }}</p>
+    <div class="svc-chart__rings">{% for n in (ns.items[:3] if ns.items else ['Plan', 'Prepare', 'Advise']) %}<span class="r{{ loop.index }}">{{ n }}</span>{% if not loop.last %}<i>&rarr;</i>{% endif %}{% endfor %}</div>
+    <b class="svc-chart__bar">{{ s.tagline.split('. ')[0] if s.tagline else s.title }}</b>
+  </div>
+</section>
+{% else %}
+<section class="m m-hero m-hero--plain" data-module="hero" data-tone="{{ tone }}">
+  <div class="hero__copy">
+    {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+    <h1 class="h-page" data-orig-level="1">{{ s.title|md }}</h1>
+    {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
+    {{ actions(s.actions) }}
+  </div>
+</section>
+{% endif %}

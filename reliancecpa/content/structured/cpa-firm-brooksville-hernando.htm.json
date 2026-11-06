@@ -1,0 +1,118 @@
+{
+ "url": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm",
+ "slug": "cpa-firm-brooksville-hernando.htm",
+ "template": "service-detail",
+ "family": "S1",
+ "title": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & all of Hernando County, FL",
+ "seo": {
+  "title_tag": "Tampa CPA & Accountants Serving Brooksville Spring Hill Weeki Wachee & all of Hernando County FL",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/cpa-firm-brooksville-hernando.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & all of Hernando County, FL",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "modules": [
+  {
+   "module": "title-banner",
+   "slots": {
+    "title": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & all of Hernando County, FL",
+    "image": {
+     "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/cpa-firm-brooksville-hernando.jpg",
+     "alt": "Tampa CPA & Accountants Serving Brooksville, Spring Hill, Weeki Wachee & Hernando County, FL"
+    }
+   }
+  },
+  {
+   "module": "intro",
+   "slots": {
+    "paragraphs": [
+     "Teeming with natural wonders such as the Withlacoochee State Forest and Weeki Wachee Springs, Hernando County provides a wonderful retreat from the city life in the Tampa Bay, FL area. The more than 150,000 residents in Brooksville, Spring Hill, Weeki Wachee, and other parts of Hernando County are lucky to have the best of both worlds—the constant activities of Tampa Bay are nearby, and yet the warm, peaceful evenings of old Florida are waiting for them at home.",
+     "Reliance Consulting, LLC is a Tampa CPA and accountant firm that serves many clients in Brooksville, Spring Hill, Weeki Wachee, and all of Hernando County. Even though this region is a few miles away from the fiscal growth of downtown Tampa, Hernando still has a big share of Florida’s economy on its own, employing thousands of people in manufacturing, aviation, distribution, mining, and more.",
+     "At Reliance Consulting, we welcome individuals, corporations, partnerships, and others in need of accounting help in Hernando County to contact our firm for assistance. Our CPAs, accountants, and financial professionals provide a full range of services, including:"
+    ]
+   }
+  },
+  {
+   "module": "list",
+   "slots": {
+    "ordered": false,
+    "items": [
+     {
+      "text": "Tax preparation for personal and business income tax"
+     },
+     {
+      "text": "Tax planning"
+     },
+     {
+      "text": "IRS tax problem resolution"
+     },
+     {
+      "text": "Bookkeeping"
+     },
+     {
+      "text": "[QuickBooks accounting](http://www.reliancecpa.com/quickbooks-accountant.htm)"
+     },
+     {
+      "text": "Payroll"
+     },
+     {
+      "text": "Retirement plans and educational plans"
+     },
+     {
+      "text": "[Financial planning](http://www.reliancecpa.com/financial-planning.htm)"
+     },
+     {
+      "text": "Estate planning"
+     },
+     {
+      "text": "Business financing"
+     },
+     {
+      "text": "Much more"
+     }
+    ]
+   }
+  },
+  {
+   "module": "rich-text",
+   "slots": {
+    "body": [
+     {
+      "type": "p",
+      "text": "If you live, work, or own a business in Brooksville, Spring Hill, Weeki Wachee, or anywhere else in Hernando County, you owe it to yourself to make sure you are as financially strong as you can be. The accountants and CPAs at Reliance Consulting can do just that. Because of our extensive knowledge and experience in tax law and other laws that affect your income and expenses, we are uniquely suited to take an objective look at your situation and advise you of the many options available to help you keep more of the money you work so hard for."
+     }
+    ]
+   }
+  }
+ ],
+ "dropped": {
+  "shared_blocks": 0,
+  "non_youtube_video": 0
+ },
+ "closing": "free-checkup",
+ "scope": {
+  "new_path": "/areas-served/brooksville-hernando/",
+  "role": "local-seo",
+  "old_path": "/cpa-firm-brooksville-hernando.htm"
+ }
+}

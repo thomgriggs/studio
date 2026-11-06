@@ -1,0 +1,103 @@
+{
+ "url": "https://www.reliancecpa.com/losses-tax-deductions/trashed-room/",
+ "slug": "losses-tax-deductions__trashed-room",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/losses-tax-deductions/trashed-room",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Casualty Taxes - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/losses-tax-deductions/trashed-room/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Casualty Taxes",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains How to Claim Certain Losses as Tax Deductions](https://www.reliancecpa.com/losses-tax-deductions)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains How to Claim Certain Losses as Tax Deductions",
+     "href": "https://www.reliancecpa.com/losses-tax-deductions"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Casualty Taxes",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished June 28, 2013 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Casualty-Disaster-Theft.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Casualty-Disaster-Theft.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Casualty-Disaster-Theft.jpg",
+   "alt": "Casualty Taxes",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Casualty-Disaster-Theft.jpg",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Trashed room with old furtinure and papers scattered about.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/losses-tax-deductions/trashed-room).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/losses-tax-deductions/trashed-room"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 39
+}

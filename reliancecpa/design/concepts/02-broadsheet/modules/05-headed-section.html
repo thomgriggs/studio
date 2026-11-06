@@ -1,0 +1,18 @@
+{#
+MODULE: headed-section
+PURPOSE: A heading with its text. On service and tier pages a 5/7 split (heading left, text right) like the original's "What we do"; in articles the heading sits above the text in the reading column. Variant lead-in: a bold line that acts as a sub-heading (h3). The eyebrow takes the territory colour.
+SLOTS: eyebrow, title, level, depth, image, body[]; variants lead-in, on-image.
+SQUARESPACE: Two-column Section: Heading (H2) in one column, Text block in the other (stacked in an article page). No code.
+#}
+{% from "_macros.html" import eyebrow, body, img %}
+{% set d = s.depth if s.depth else 3 %}
+<section class="m m-headed{{ ' m-headed--sub' if variant == 'lead-in' }}" data-module="headed-section" data-tone="{{ tone }}">
+  <div class="headed__head">
+    {{ eyebrow(s.eyebrow, "eyebrow--terr") }}
+    {% if s.title %}<h{{ d }} class="{{ 'h-sub' if variant == 'lead-in' else 'h-section' }}" data-orig-level="{{ s.level }}">{{ s.title|md }}</h{{ d }}>{% endif %}
+  </div>
+  <div class="headed__body prose">
+    {% if s.image %}{{ img(s.image, "headed__img") }}{% endif %}
+    {{ body(s.body, 4) }}
+  </div>
+</section>

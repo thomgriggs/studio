@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/married-filing-jointly.html",
+ "slug": "married-filing-jointly.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "A Tampa CPA Discusses the Benefits of Married Couples Filing Joint Tax Returns",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/married-filing-jointly.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Benefits of Married Couples Filing Joint Tax Returns",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Benefits of Married Couples Filing Joint Tax Returns",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/married-filing-jointly.gif",
+   "alt": "",
+   "alt_missing": true,
+   "title": "married-filing-jointly",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "In general, married couples who file joint income tax returns enjoy many benefits not available to unmarried taxpayers or married couples who file separate returns. Married couples who file jointly must include all of their combined income, exemptions, deductions, and credits on the single return. Conversely, couples who file separately include only their own information on their individual returns and if one chooses to itemize deductions, the other is not allowed to claim the standard deduction.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](file:///S:/websites/Reliance/index.html) from Reliance Consulting, LLC, can help married couples determine which filing status – joint or individual – makes the most sense for them. In addition, a certified public accountant can provide guidance on how the married couple should divide allowances for withholding purposes and other tax-related issues. We also can spell out how the benefits of filing jointly apply to your unique circumstances. These benefits may include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "file:///S:/websites/Reliance/index.html"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Simplification – If you itemize deductions, there will be no debate about who should itemize what.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Cost savings – One price paid to a tax preparer, rather than paying double the preparation fees.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Lower tax payouts – In most cases, couples who file jointly can take advantage of the “marriage bonus,” which could mean a lower overall tax bill.",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has been an elite accounting firm serving the Tampa Bay area. [Contact](file:///S:/websites/Reliance/contact.html) us today to get started with a complimentary financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "file:///S:/websites/Reliance/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 251
+}

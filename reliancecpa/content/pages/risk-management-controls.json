@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/risk-management-controls",
+ "slug": "risk-management-controls",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-03-26",
+ "seo": {
+  "title_tag": "Tampa CPA | Risk Management Controls | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/risk-management-controls",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa Tells How a Business can Reduce Risk Through Improved Controls",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa Tells How a Business can Reduce Risk Through Improved Controls",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Risk-Management-300x200.jpg",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Risk Management",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "While many business owners might prefer to focus primarily on services and production, they ignore the company’s internal controls at their peril. Without well-thought-out and executed controls, a business will almost certainly be exposed to unnecessary risk. And business is risky enough without having to deal with self-imposed limitations.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help a business owner determine whether the company is operating under the proper set of internal controls, thereby reducing the company’s risk. Internal controls are the methods used by the business to manage, protect, and monitor resources. This includes property, equipment, employee time, intellectual property, reputation, and client relationships. All of these assets, tangible, or intangible, have a very real impact on a company’s potential profitability. They therefore should be managed conscientiously, which takes forethought and planning.",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "If you are uncertain whether your internal controls are adequate, Reliance Consulting can conduct an internal controls evaluation for you. The evaluation will reveal whether you have:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Protected your company against wasted time",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protected your company against stolen merchandise or intellectual property",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Protected your company’s reputation in the community and online",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Properly trained your employees to do their jobs in the most efficient manner",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Properly trained your managers to provide employees direction and supervision",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Streamlined your operations",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Simplified your record keeping, tax planning, and tax preparation strategies",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "To learn more about how improper internal controls may expose your company to unnecessary risk – and if so, how to fix it – [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 264
+}

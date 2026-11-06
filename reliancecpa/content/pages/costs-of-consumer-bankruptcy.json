@@ -1,0 +1,115 @@
+{
+ "url": "https://www.reliancecpa.com/costs-of-consumer-bankruptcy",
+ "slug": "costs-of-consumer-bankruptcy",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-05-31",
+ "seo": {
+  "title_tag": "Bankruptcy Costs | Tampa CPA",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/costs-of-consumer-bankruptcy",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Short-Term Costs of Consumer Bankruptcy",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Short-Term Costs of Consumer Bankruptcy",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Costs-of-Bankruptcy-300x200.jpg",
+   "alt": "Costs of Bankruptcy",
+   "alt_missing": false,
+   "title": "Costs of Bankruptcy",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Filing for Chapter 7 bankruptcy protection is usually the last resort for consumers who find themselves too deeply in debt to pay their living expenses. Although certainly not the ideal solution, it can be a great relief for someone drowning in an upside-down financial situation to receive debt forgiveness. Yet, before diving into bankruptcy court, anyone considering the option should become aware of the sometimes daunting charges associated with filing for bankruptcy.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://reliancecpa.com) from Reliance Consulting, LLC, is here to help make sure you never have to make the difficult decision to file for bankruptcy. While no one is immune to financial problems, expert planning and preparation aided by a Reliance CPA can help ensure that your finances are as sound as possible. However, if you do find yourself contemplating bankruptcy at some point, keep in mind that there are up-front costs that could fall into the range of $1,500. These include:",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Payment for filing paperwork with bankruptcy court",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payment to lawyers",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fee for pre-bankruptcy credit counseling",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Fee for pre-discharge debtor education course",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Hopefully, you’ll never need to concern yourself with paying for Chapter 7 bankruptcy. Ideally, your financial situation will remain on firm footing, even during times of economic distress. One way to be sure that you are in good financial shape is to request a financial health checkup from Reliance Consulting. [Contact](http://www.reliancecpa.com/contact.html) us today to learn more.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 241
+}

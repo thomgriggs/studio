@@ -1,0 +1,136 @@
+{
+ "url": "https://www.reliancecpa.com/dental-corporate-tax",
+ "slug": "dental-corporate-tax",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "dental",
+  "first_pass_action": "Retire",
+  "notes": "section dropped (confirmed 2026-11-03); redirect to nearest tier page if it has traffic, else 410"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2013-03-05",
+ "seo": {
+  "title_tag": "Dental Corporate Tax | Dental CPA | Dental Accounting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/dental-corporate-tax",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Dental CPA Can Prepare Corporate or Partnership Tax Returns for Your Practice",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Dental CPA Can Prepare Corporate or Partnership Tax Returns for Your Practice",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/Corporate-Tax-Returns-300x240.jpg",
+   "alt": "Corporate Tax Returns",
+   "alt_missing": false,
+   "title": "Corporate Tax Returns",
+   "width": "300",
+   "height": "240",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "No matter what type of business structure you chose for your dental practice, a dental CPA from Reliance Consulting can help minimize your tax burden and provide advice for helping protect your personal and business assets. There are many considerations when it comes to choosing a dental CPA, but one of the top factors is availability. At Reliance, not only is your dedicated dental CPA always available to answer any of your questions; your financial information can also be instantly and securely stored in the cloud for your simple access, 24 hours a day.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "What this means for [tax planning](http://reliancecpa.com/dental-accounting-tax-services) purposes is that there will never be any surprises or unpleasant setbacks when it comes time to prepare the returns. Your dental CPA will have it all under control, so you are free to focus on what is, after all, the foundation of a successful practice – patient care. In addition to tax preparation and planning, a dental CPA from Reliance can take care of:",
+   "links": [
+    {
+     "text": "tax planning",
+     "href": "http://reliancecpa.com/dental-accounting-tax-services"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Depreciation analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Practice location analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Evaluating financing options",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Practice acquisition analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Practice expansion analysis",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Asset protection planning",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "And much more",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since 1984, Reliance Consulting has helped small businesses in Florida and beyond flourish and grow. One of our main priorities as a CPA practice is helping those in the healthcare industry thrive, and our dental CPA services are sure to help your practice reach another level financially.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://reliancecpa.com/contact.html) Reliance today if you would like to learn more about how a dental CPA can help your practice reach profitability.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 266
+}

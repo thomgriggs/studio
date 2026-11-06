@@ -1,0 +1,9 @@
+{# Page shell: contact. Title, then a 7/5 split: the form left, the office details (live text) right. Own closing: none added. #}
+{% extends "_base.html" %}
+{% block main %}
+{% for m in page.modules if m.module == 'title-banner' %}{{ render_module(m, page, {"root": root}) }}{% endfor %}
+<div class="contact-split">
+  <div class="contact-split__form">{% for m in page.modules if m.module == 'form' %}{{ render_module(m, page, {"root": root}) }}{% endfor %}</div>
+  <aside class="contact-split__info" aria-label="Office details">{% for m in page.modules if m.module in ('intro', 'rich-text') %}{{ render_module(m, page, {"root": root}) }}{% endfor %}</aside>
+</div>
+{% endblock %}

@@ -1,0 +1,126 @@
+{
+ "url": "https://www.reliancecpa.com/buying-life-insurance.html",
+ "slug": "buying-life-insurance.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-07",
+ "seo": {
+  "title_tag": "Tampa CPA | Buying Life Insurance | Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/buying-life-insurance.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Discusses the Factors to Consider When Buying Life Insurance",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Discusses the Factors to Consider When Buying Life Insurance",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/buying-life-insurance.gif",
+   "alt": "Tampa CPA",
+   "alt_missing": false,
+   "title": "Tampa CPA",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Life insurance is not something people like to contemplate, because who enjoys thinking about their own demise? However, ignoring the financial well-being of your dependent family members, or that of your co-owners if you run a business, is frankly irresponsible. If you have children, or if you operate a business that depends heavily on your presence to succeed, life insurance is an absolute must.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com/) from Reliance Consulting, LLC, will always suggest that you discuss your life insurance needs with at least three advisers before making a decision. In addition to two or more insurance providers, one of these advisers should be your financial planner, who can provide guidance on the affordability of insurance premiums and an honest analysis of how much money your dependents will need once you’re gone.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The factors to consider when shopping for life insurance include:",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Am I eligible for a group plan through my employer?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Does my health permit me to qualify for individual life insurance?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "How much do I need to make sure my dependents have enough money?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Should I purchase term or permanent? Whole or universal? Variable or level? And what do those terms mean, anyway?",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Should I use life insurance as an investment instrument?",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "[Contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a complete life insurance needs analysis to help you make sure you don’t purchase too much – or too little – coverage.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 243
+}

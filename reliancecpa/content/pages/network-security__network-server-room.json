@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/network-security/network-server-room/",
+ "slug": "network-security__network-server-room",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/network-security/network-server-room",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Network Security - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/network-security/network-server-room/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Network Security",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A CPA in Tampa Explains the Importance of Network Security for Small Businesses](https://www.reliancecpa.com/network-security)",
+   "links": [
+    {
+     "text": "← A CPA in Tampa Explains the Importance of Network Security for Small Businesses",
+     "href": "https://www.reliancecpa.com/network-security"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Network Security",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished September 4, 2012 | Full size is [900 × 755](https://www.reliancecpa.com/wp-content/uploads/Network-Security.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 755",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Network-Security.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Network-Security.jpg",
+   "alt": "Network Security",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "755",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Network-Security.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/network-security/network-server-room).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/network-security/network-server-room"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

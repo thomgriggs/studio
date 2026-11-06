@@ -1,0 +1,16 @@
+---
+url: https://www.reliancecpa.com/self-directed-ira
+type: page
+title_tag: "Self-Directed IRA | Tampa CPA | Reliance Consulting"
+meta_description: ""
+meta_keywords: ""
+h1: ""
+last_modified: 2012-07-31
+status: 200
+---
+
+[h3] A CPA in Tampa Explains the Advantages and Disadvantages of a Self-Directed IRA
+[img] alt="Self Directed IRA" src=http://www.reliancecpa.com/wp-content/uploads/Self-Directed-IRA-300x200.jpg
+[p] Most investors who maintain an Individual Retirement Arrangement (IRA) do so through an investment firm or financial adviser. Investment specialists who manage an IRA for someone else are known as trustees, or custodians. It is their job to make sure that the money in the IRA is placed in investments that are likely to produce a return in keeping with the goals of the account owner. However, some investors would prefer to make their own decisions about where the money goes, and for them there is the self-directed IRA.
+[p] A [CPA in Tampa](http://reliancecpa.com) from Reliance Consulting, LLC, can help individuals who are saving for retirement determine how best to position themselves for the future. Part of that is figuring out how aggressive or conservative they want to be in their investment plan. Many investment firms provide ready-made funds that are designed to bring a higher return over a shorter period (with greater risk), or a steady return over a longer period (with less risk). These funds might serve for most people, but they are not for everyone. If you would like to have greater control over where your IRA money is invested, a self-directed IRA might be for you. Keep I mind, however, that there are many restrictions regarding what sorts of industries or commodities can be included in an IRA. For instance, life insurance investments are prohibited, as are investments in certain collectibles, alcoholic beverages, and other personal tangible property.
+[p] To learn more about a self-directed IRA, or for further information regarding your options for retirement or estate planning, [contact](http://reliancecpa.com/contact.html) Reliance Consulting today.

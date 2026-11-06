@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/business-tax.htm/business-tax/",
+ "slug": "business-tax.htm__business-tax",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/business-tax.htm/business-tax",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Business Tax Services in the Tampa, FL Area - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/business-tax.htm/business-tax/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Business Tax Services in the Tampa, FL Area",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← Business Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay](https://www.reliancecpa.com/business-tax.htm)",
+   "links": [
+    {
+     "text": "← Business Tax Services for Tampa, St Petersburg, Clearwater, Lakeland, Sarasota, Manatee, Pasco, Polk & Greater Tampa Bay",
+     "href": "https://www.reliancecpa.com/business-tax.htm"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Business Tax Services in the Tampa, FL Area",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [admin](https://www.reliancecpa.com) |\nPublished December 7, 2011 | Full size is [300 × 197](https://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax.jpg) pixels",
+   "links": [
+    {
+     "text": "admin",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "300 × 197",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax.jpg",
+   "alt": "Business Tax Services in the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "",
+   "width": "300",
+   "height": "197",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/2011/12/business-tax.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/business-tax.htm/business-tax).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/business-tax.htm/business-tax"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 41
+}

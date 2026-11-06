@@ -1,0 +1,151 @@
+{
+ "url": "https://www.reliancecpa.com/new-business-planning.htm",
+ "slug": "new-business-planning.htm",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "tier-accounting",
+  "first_pass_action": "Refresh",
+  "notes": "service page"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "New Business Planning for Tampa St Petersburg Clearwater Lakeland Pasco Sarasota Polk Manatee & Greater Tampa Bay",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/new-business-planning.htm",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "New Business Planning for Tampa, St Petersburg, Clearwater, Pasco, Sarasota, Lakeland, Polk, Manatee & Greater Tampa Bay",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "New Business Planning for Tampa, St Petersburg, Clearwater, Pasco, Sarasota, Lakeland, Polk, Manatee & Greater Tampa Bay",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/new-business-planning.jpg",
+   "alt": "New Business Planning in the Tampa, FL Area",
+   "alt_missing": false,
+   "title": "new-business-planning",
+   "width": "300",
+   "height": "201",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Virtually all new businesses in the Tampa, Florida area start with a great idea, but turning that idea into reality is no easy task. Unfortunately, even the most promising new business ideas can be quickly overwhelmed by market conditions, lack of capital, competition, and lack of planning. To avoid these common pitfalls and get your new business on the right footing from the start, contact a new business planning expert from Reliance Consulting, LLC for personalized attention from accounting professionals who truly care about your success.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "The [CPA](http://www.reliancecpa.com/) professionals and staff accountants at Reliance Consulting have guided countless new businesses from Tampa to St Petersburg, Clearwater to Lakeland, and Pasco to Polk County to a rewarding outcome. Our new business planning services include:",
+   "links": [
+    {
+     "text": "CPA",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Helping you decide what type of incorporation or partnership arrangement provides you with the best tax advantages",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Writing a business plan",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Locating a variety of business financing options and then applying for them",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Tax preparation](http://www.reliancecpa.com/tax-preparation.htm) and planning",
+     "links": [
+      {
+       "text": "Tax preparation",
+       "href": "http://www.reliancecpa.com/tax-preparation.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "Managing your business and your cash flow",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Payroll services",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "[Bookkeeping](http://www.reliancecpa.com/bookkeeping.htm)",
+     "links": [
+      {
+       "text": "Bookkeeping",
+       "href": "http://www.reliancecpa.com/bookkeeping.htm"
+      }
+     ],
+     "children": []
+    },
+    {
+     "text": "More",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "At Reliance Consulting, we realize that the success of your new business means success for our CPA firm. For this reason, our accounting and tax experts will work tirelessly to give you a new business planning strategy that will provide you with a foundation you can build upon for years.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Please [contact](http://www.reliancecpa.com/contact.html) Reliance Consulting today for a confidential free first consultation about your new business idea and how new business planning help you achieve your dreams.",
+   "links": [
+    {
+     "text": "contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 264
+}

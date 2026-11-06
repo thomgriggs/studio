@@ -1,0 +1,97 @@
+{
+ "url": "https://www.reliancecpa.com/revocable-trust/revocable-trust/",
+ "slug": "revocable-trust__revocable-trust",
+ "type": "page",
+ "source": "live",
+ "inventory": {},
+ "status": 301,
+ "redirected_to": "https://www.reliancecpa.com/revocable-trust/revocable-trust",
+ "last_modified": "",
+ "seo": {
+  "title_tag": "Revocable Trust - Reliance Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/revocable-trust/revocable-trust/",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "Revocable Trust",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "BreadcrumbList",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": ""
+  }
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": "[← A Tampa CPA Explains How a Revocable Trust is Used in Estate Planning](https://www.reliancecpa.com/revocable-trust)",
+   "links": [
+    {
+     "text": "← A Tampa CPA Explains How a Revocable Trust is Used in Estate Planning",
+     "href": "https://www.reliancecpa.com/revocable-trust"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "h2",
+   "text": "Revocable Trust",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "By [socius](https://www.reliancecpa.com) |\nPublished September 4, 2012 | Full size is [900 × 600](https://www.reliancecpa.com/wp-content/uploads/Revocable-Trust.jpg) pixels",
+   "links": [
+    {
+     "text": "socius",
+     "href": "https://www.reliancecpa.com"
+    },
+    {
+     "text": "900 × 600",
+     "href": "https://www.reliancecpa.com/wp-content/uploads/Revocable-Trust.jpg"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "https://www.reliancecpa.com/wp-content/uploads/Revocable-Trust.jpg",
+   "alt": "Revocable Trust",
+   "alt_missing": false,
+   "title": "",
+   "width": "900",
+   "height": "600",
+   "source": "img",
+   "link_href": "https://www.reliancecpa.com/wp-content/uploads/Revocable-Trust.jpg",
+   "region": "main"
+  },
+  {
+   "type": "text",
+   "text": "Bookmark the [permalink](https://www.reliancecpa.com/revocable-trust/revocable-trust).",
+   "links": [
+    {
+     "text": "permalink",
+     "href": "https://www.reliancecpa.com/revocable-trust/revocable-trust"
+    }
+   ],
+   "region": "main",
+   "shared": true
+  }
+ ],
+ "word_count": 31
+}

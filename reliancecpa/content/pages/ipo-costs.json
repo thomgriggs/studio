@@ -1,0 +1,95 @@
+{
+ "url": "https://www.reliancecpa.com/ipo-costs",
+ "slug": "ipo-costs",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-dated",
+  "first_pass_action": "Retire",
+  "notes": "political / dated"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2012-02-29",
+ "seo": {
+  "title_tag": "Tampa CPA | IPO Costs | Business Consulting",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/ipo-costs",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A Tampa CPA Explains the Costs of an Initial Public Offering (IPO)",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "2 minutes"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A Tampa CPA Explains the Costs of an Initial Public Offering (IPO)",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/ipo-costs-300x200.jpg",
+   "alt": "IPO Costs",
+   "alt_missing": false,
+   "title": "IPO Costs",
+   "width": "300",
+   "height": "200",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "An initial public offering (IPO) is a way for established private companies to raise capital by putting shares of the company on the open market. While an IPO can be lucrative, it is not for every business. There are many costs associated with an IPO that can be prohibitive if a company does not already have access to a great deal of money.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [Tampa CPA](http://www.reliancecpa.com) from Reliance Consulting, LLC, can help you understand the benefits and potential drawbacks of an initial public offering. The benefits are obvious: Many companies increase in value from the moment news spreads that they have filed or are about to file for an IPO. The potential normally stems from inherent weaknesses in the company. Businesses that over-reach by offering public shares too soon might find themselves devalued. Others may find that they are unable to raise enough money through the sale of shares to cover the considerable costs of the IPO.",
+   "links": [
+    {
+     "text": "Tampa CPA",
+     "href": "http://www.reliancecpa.com"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "How expensive is an IPO? On average, it costs around $500,000 – and can be much more, depending on the size and scope of the company. Those costs are related to the actual process, which involves fees for investment bankers, accountants, and attorneys. Plus, the SEC requires in most cases that the company give up at least 25 percent of its equity in the form of public shares. What this means is that the company is responsible for informing its shareholders of earnings and other company business, and the officers must take into account the needs and opinions of the shareholders. Another cost is more difficult to measure, and that is the increased public scrutiny that might expose the company’s previously private business practices and other information to competitors.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "All of this must be weighed before making an IPO, and a CPA from Reliance Consulting is here to help. [Contact](http://www.reliancecpa.com/contact.html) us for more information.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 323
+}

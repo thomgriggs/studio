@@ -1,0 +1,130 @@
+{
+ "url": "https://www.reliancecpa.com/customer-base.html",
+ "slug": "customer-base.html",
+ "type": "page",
+ "source": "live",
+ "inventory": {
+  "category": "article-library",
+  "first_pass_action": "Review",
+  "notes": "generic financial-guide library; keep only with traffic, else retire with redirect to nearest tier"
+ },
+ "status": 200,
+ "redirected_to": null,
+ "last_modified": "2011-12-08",
+ "seo": {
+  "title_tag": "Tampa CPA | Analyzing the Customer Base | Reliance Consulting, LLC",
+  "meta_description": "",
+  "meta_keywords": "",
+  "canonical": "https://www.reliancecpa.com/customer-base.html",
+  "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "og_title": "A CPA in Tampa on the Importance of Analyzing the Customer Base for a New Business",
+  "og_description": "",
+  "og_image": "",
+  "twitter_card": "",
+  "lang": "en-US",
+  "json_ld_types": [
+   "WebPage",
+   "ImageObject",
+   "WebSite"
+  ],
+  "h1_count": 0,
+  "yoast": {
+   "present": true,
+   "version": "25.0",
+   "schema_graph": true,
+   "og_type": "article",
+   "og_site_name": "Reliance Consulting",
+   "article_modified": "",
+   "reading_time": "1 minute"
+  }
+ },
+ "blocks": [
+  {
+   "type": "h3",
+   "text": "A CPA in Tampa on the Importance of Analyzing the Customer Base for a New Business",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "img",
+   "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/customer-base.gif",
+   "alt": "CPA Tampa",
+   "alt_missing": false,
+   "title": "CPA Tampa",
+   "width": "300",
+   "height": "199",
+   "source": "img",
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Perhaps the most important element of planning a new business is learning as much as possible about the people you hope will purchase the product or service you plan to offer. Quite likely, you decided to start the business to meet a perceived need in your chosen market, so you probably already have an idea about the identity of your potential clients. That’s a good start, but your early notion of your customers’ needs is sure to evolve with research, thereby strengthening your ability to meet their needs.",
+   "links": [],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "A [CPA in Tampa](http://www.reliancecpa.com/) from Reliance Consulting, LLC, can help you develop a research plan that will eliminate uncertainty about your customer base. The information you need to gain a thorough understanding of your potential clients includes:",
+   "links": [
+    {
+     "text": "CPA in Tampa",
+     "href": "http://www.reliancecpa.com/"
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "text": "Where they live",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Age",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Gender",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Ethnic background",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Education level",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Income level",
+     "links": [],
+     "children": []
+    },
+    {
+     "text": "Marital status",
+     "links": [],
+     "children": []
+    }
+   ],
+   "region": "main"
+  },
+  {
+   "type": "p",
+   "text": "Since opening our doors in 1984, Reliance Consulting has developed small business plans that have helped hundreds of new companies in the Tampa Bay area grow and prosper. Our goal is to help your company reach maximum profitability – and sustain that level of success in the long-term. In addition to helping with market research, a small business accountant from Reliance can handle all the financial details of your business – including tax planning, bookkeeping, payroll and more – while you focus on day-to-day operations. [Contact](http://www.reliancecpa.com/contact.html) Reliance today for a free, no-obligation financial health checkup.",
+   "links": [
+    {
+     "text": "Contact",
+     "href": "http://www.reliancecpa.com/contact.html"
+    }
+   ],
+   "region": "main"
+  }
+ ],
+ "word_count": 249
+}
