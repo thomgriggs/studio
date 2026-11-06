@@ -33,6 +33,8 @@ def img_slot(b):
 # Client corrections (Thom, 2026-11-06): Kim Nguyen is the owner now; Amol Nirgudkar no longer works at the firm,
 # so his "can be reached at" author lines are dropped from the articles that carry them.
 ROLE_FIX = {"Kim Nguyen": "Owner"}
+# Thom, 2026-11-06: everyone else on the live staff page has left the firm.
+CURRENT_STAFF = {"Kim Nguyen"}
 FORMER_STAFF = re.compile(r"Amol Nirgudkar|amol@reliancecpa\.com", re.I)
 
 
@@ -80,6 +82,7 @@ def staff_override():
             else:
                 cur["body"].append({"type": "p", "text": re.sub(r"^(\*\*[^*]+\*\*)\s*\n+", r"\1 ", tx)})
     mods = [{"module": "title-banner", "slots": {"title": title}}]
+    people = [p for p in people if p["name"] in CURRENT_STAFF]
     for p in people:
         if p["name"] in ROLE_FIX:
             if p.get("image") and p["image"].get("alt"):

@@ -33,12 +33,6 @@ SQUARESPACE: Section with a cream background, two columns: Heading 1 + Text + Bu
     {% if s.tagline %}<p class="lead">{{ s.tagline|md }}</p>{% endif %}
     {{ actions(s.actions) }}
   </div>
-  <div class="svc-chart" aria-hidden="true">
-    {% set ns = namespace(items=[]) %}{% for col in cols if col.tier == s.tier %}{% for l in col.links if l.available and not (col.overview and l.label == col.overview.label) %}{% set ns.items = ns.items + [l.label] %}{% endfor %}{% endfor %}
-    <p class="svc-chart__t">{{ s.title }}</p>
-    <div class="svc-chart__rings">{% for n in (ns.items[:3] if ns.items else ['Plan', 'Prepare', 'Advise']) %}<span class="r{{ loop.index }}">{{ n }}</span>{% if not loop.last %}<i>&rarr;</i>{% endif %}{% endfor %}</div>
-    <b class="svc-chart__bar">{{ s.tagline.split('. ')[0] if s.tagline else s.title }}</b>
-  </div>
 </section>
 {% else %}
 <section class="m m-hero m-hero--plain" data-module="hero" data-tone="{{ tone }}">

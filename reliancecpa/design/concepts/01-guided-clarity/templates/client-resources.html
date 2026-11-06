@@ -1,4 +1,4 @@
 {# Page shell: client-resources. Renders the page's modules in order; the look of this template is in style.css (body.t-client-resources). #}
 {% extends "_base.html" %}
-{% block main %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "nav": nav}) }}
+{% block main %}{% include "_crumbs.html" %}{% for m in page.modules %}{{ render_module(m, page, {"root": root, "nav": nav}) }}
 {% endfor %}{% endblock %}

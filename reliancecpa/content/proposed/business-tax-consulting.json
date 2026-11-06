@@ -27,7 +27,7 @@
   "Tagline 'Planning, financing and advice for owners, from a first plan to the next step.' and the tier description (new copy)",
   "Service card summaries (one sentence each, condensed from the page text; check each reads true)",
   "CTA: 'Not sure where to start? Tell us what you are working on.' and 'Choose what you need help with and send a short request.' (new copy)",
-  "Which team members work in this tier: the crawl does not say, so every tier shows the whole team",
+  "The staff listed on the live site have all left (Thom, 2026-11-06); only the owner is shown. Current team names, roles and photos are needed from Kim",
   "Kim Nguyen's portrait comes from concept-02, not from the live site; confirm it is the one she wants used. Her exact title wording ('Owner') and credentials are to confirm",
   "SEO title and meta description (new copy, not from the live site, which has none)",
   "The live 'Who it is for' sentence is used as written, including 'time-tested strategies that have been proven to turn stressed companies into flourishing businesses' (business consultants page); it is the firm's own claim, so confirm it stands",
@@ -232,46 +232,8 @@
       }
      }
     ],
-    "team": [
-     {
-      "name": "Valerie Stickeler",
-      "role": "Certified Public Accountant"
-     },
-     {
-      "name": "Tara Govindaraju",
-      "role": "Accounting Manager",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
-       "alt": "Tara Govindaraju, Accounting Manager"
-      }
-     },
-     {
-      "name": "Nicole Frenier",
-      "role": "Staff Accountant",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
-       "alt": "Nicole Frenier, Staff Accountant"
-      }
-     },
-     {
-      "name": "Jamie Partin",
-      "role": "Staff Accountant",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
-       "alt": "Jamie Partin, Staff Accountant"
-      }
-     },
-     {
-      "name": "Briana McNulty",
-      "role": "Office Administrator & Billing Manager",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
-       "alt": "Briana McNulty, Office Administrator & Billing Manager"
-      }
-     }
-    ],
     "link": {
-     "text": "Meet the team",
+     "text": "More about Kim",
      "page": "staff-profiles.htm"
     }
    }

@@ -251,50 +251,12 @@
       }
      }
     ],
-    "team": [
-     {
-      "name": "Valerie Stickeler",
-      "role": "Certified Public Accountant"
-     },
-     {
-      "name": "Tara Govindaraju",
-      "role": "Accounting Manager",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/tara-govindaraju.jpg",
-       "alt": "Tara Govindaraju, Accounting Manager"
-      }
-     },
-     {
-      "name": "Nicole Frenier",
-      "role": "Staff Accountant",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/nicole-frenier.jpg",
-       "alt": "Nicole Frenier, Staff Accountant"
-      }
-     },
-     {
-      "name": "Jamie Partin",
-      "role": "Staff Accountant",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/jamie-partin.jpg",
-       "alt": "Jamie Partin, Staff Accountant"
-      }
-     },
-     {
-      "name": "Briana McNulty",
-      "role": "Office Administrator & Billing Manager",
-      "image": {
-       "src": "http://www.reliancecpa.com/wp-content/uploads/2011/12/briana-mcnulty.jpg",
-       "alt": "Briana McNulty, Office Administrator & Billing Manager"
-      }
-     }
-    ],
     "quote": {
      "text": "In the success of our clients lies our own.",
      "attribution": "Reliance Consulting, LLC"
     },
     "link": {
-     "text": "Meet the team",
+     "text": "More about Kim",
      "page": "staff-profiles.htm"
     }
    }

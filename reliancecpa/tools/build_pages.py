@@ -156,13 +156,8 @@ CONTACT = {"name": "Reliance Consulting LLC", "address": "14499 N Dale Mabry Hwy
 CONTACT_LINES = [{"label": "Address", "value": CONTACT["address"]}, {"label": "Phone", "value": CONTACT["phone"]},
                  {"label": "Fax", "value": CONTACT["fax"]}, {"label": "Email", "value": CONTACT["email"]}]
 
-STAFF = [  # from the live /staff-profiles.htm (names, roles, photos)
-    ("Valerie Stickeler", "Certified Public Accountant", None),
-    ("Tara Govindaraju", "Accounting Manager", "tara-govindaraju.jpg"),
-    ("Nicole Frenier", "Staff Accountant", "nicole-frenier.jpg"),
-    ("Jamie Partin", "Staff Accountant", "jamie-partin.jpg"),
-    ("Briana McNulty", "Office Administrator & Billing Manager", "briana-mcnulty.jpg"),
-]
+# Thom, 2026-11-06: none of the staff on the live /staff-profiles.htm work at the firm any more (only Kim Nguyen, the owner, remains), so the roster is empty.
+STAFF = []
 PHOTO = "http://www.reliancecpa.com/wp-content/uploads/2011/12/"
 # Thom, 2026-11-06: Kim Nguyen is the owner now (the live "Staff Accountant" title is out of date); Amol Nirgudkar no longer works at the firm.
 OWNER = {"name": "Kim Nguyen", "role": "Owner",
@@ -257,8 +252,8 @@ def tier_page(t):
             "cards": [card(i["slug"], i["label"], SUMMARY[i["slug"]][0], "See the example") for i in t["industries"]]}})
     mods += [
         {"module": "people", "slots": {"eyebrow": "People", "title": "Who you will work with",
-                                       "people": [OWNER], "team": team_list(),
-                                       "link": {"text": "Meet the team", "page": "staff-profiles.htm"}}},
+                                       "people": [OWNER],
+                                       "link": {"text": "More about Kim", "page": "staff-profiles.htm"}}},
         feed(c["related"]),
         {"module": "cta-band", "slots": {"title": c["cta"], "text": "Choose what you need help with and send a short request.",
                                          "buttons": [{"text": "Get Started", "page": f"get-started__{t['id']}"}]}},
@@ -274,7 +269,7 @@ def tier_page(t):
         f"Tagline '{c['tagline']}' and the tier description (new copy)",
         "Service card summaries (one sentence each, condensed from the page text; check each reads true)",
         f"CTA: '{c['cta']}' and 'Choose what you need help with and send a short request.' (new copy)",
-        "Which team members work in this tier: the crawl does not say, so every tier shows the whole team",
+        "The staff listed on the live site have all left (Thom, 2026-11-06); only the owner is shown. Current team names, roles and photos are needed from Kim",
         "Kim Nguyen's portrait comes from concept-02, not from the live site; confirm it is the one she wants used. Her exact title wording ('Owner') and credentials are to confirm",
         "SEO title and meta description (new copy, not from the live site, which has none)",
         "The live Business Accounting copy lists 'Unlimited consultations' among its services; it is left out of the problems list because it is a promise about the firm's time (confirm if it is true and wanted)" if t["id"] == "business-accounting" else "The live 'Who it is for' sentence is used as written, including 'time-tested strategies that have been proven to turn stressed companies into flourishing businesses' (business consultants page); it is the firm's own claim, so confirm it stands" if t["id"] == "business-tax-consulting" else "The live 'Who it is for' sentences are used as written ('we are committed to helping you take advantage of the tax benefits that apply to your unique situation'); confirm they stand",
@@ -409,9 +404,9 @@ def home_page():
         {"module": "video-split", "slots": {"eyebrow": "Watch", "title": "Business growth strategies", "level": 2, "depth": 2,
                                            "body": [{"type": "p", "text": "From the Reliance Consulting channel."}],
                                            "url": "https://www.youtube.com/embed/GRQm2WMPdmI", "video_title": "Tampa CPA | Business Growth Strategies"}},
-        {"module": "people", "slots": {"eyebrow": "People", "title": "Who you will work with", "people": [OWNER], "team": team_list(),
+        {"module": "people", "slots": {"eyebrow": "People", "title": "Who you will work with", "people": [OWNER],
                                        "quote": {"text": "In the success of our clients lies our own.", "attribution": "Reliance Consulting, LLC"},
-                                       "link": {"text": "Meet the team", "page": "staff-profiles.htm"}}},
+                                       "link": {"text": "More about Kim", "page": "staff-profiles.htm"}}},
         {"module": "card-grid", "variant": "resources", "slots": {"eyebrow": "For clients", "title": "Client resources", "cards": [
             card("reliance-consulting-netclient-portals", "Client portal", sents("reliance-consulting-netclient-portals", 0, 1, 1), "About the portal"),
             card("app", "Mobile app", "Access your tax returns and financial documents from a phone or tablet.", "About the app"),

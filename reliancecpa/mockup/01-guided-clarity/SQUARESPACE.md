@@ -20,7 +20,7 @@ Target: Squarespace 7.1 (Business plan or higher), per PROJECT_PLAN section 8. F
 | image-text, image, gallery, video, video-split | Image, Gallery, Video blocks; two-column Section on mint for video-split | The white "Watch" pill over the thumbnail is custom CSS; native Video block thumbnail and play button are the fallback. Image corner radius 22px is an Image block setting |
 | post-feed (cards) | Summary block (grid, titles + excerpts) over the Resources collection on a pale green Section | "Read the article" link per card is a Summary option |
 | cta-band | Section with a coral background colour: Heading, Text, two Buttons (second in outline style) | none (ink text on coral is the section's colour theme; coral buttons use ink text for contrast) |
-| profile / people | Two-column Section (Image + Heading 3 + Text) per person, image side flipped on alternate people; Image blocks with captions in a 6-column Section | Placeholders = empty Image blocks until portraits exist (Valerie Stickeler has none) |
+| profile / people | Two-column Section (Image + Heading 3 + Text) per person, image side flipped on alternate people; Image blocks with captions in a 6-column Section | Placeholders = empty Image blocks until portraits exist |
 | link-list | Text block of links or Summary block | Ruled rows: CSS |
 | table | no native table | Markdown block or a small Code block |
 | steps, reasons (numbered flow on ink) | Section with the dark (ink) theme: Heading + Text + Button left, numbered Text blocks (Heading 4 + small text) with Line blocks between rows on the right | Outlined number circle, lime highlighted last row and arrows are CSS/typed characters; a block background on the last row gives the lime |
