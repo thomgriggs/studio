@@ -35,16 +35,19 @@
 		});
 	}
 
-	/* opening line only: the verse up to data-split, trailing punctuation dropped */
+	/* opening line: the verse split at data-split, trailing punctuation dropped.                         */
+	/* data-part="1" renders only the first half with an ellipsis; data-part="2" only the second half      */
+	/* and the reference; without data-part both halves render in one element (the two-beat opener).      */
 	function renderOpen(h) {
 		/* data-copy pins the line to one wording; the reference still comes from the passage */
-		var t = h.dataset.copy || text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep);
+		var t = h.dataset.copy || text(h.dataset.ref), sep = h.dataset.split || ',', i = t.indexOf(sep), part = h.dataset.part;
 		var clean = function (s) { return s.replace(/^[\s,.;:]+|[\s,.;:]+$/g, ''); };
 		h.textContent = '';
 		var mk = function (cls, str) { var s = document.createElement('span'); s.className = 'verse__part ' + cls; words(s, str); h.appendChild(s); return s; };
-		mk('verse__part1', clean(i < 0 ? t : t.slice(0, i)));
-		if (i >= 0 && clean(t.slice(i + sep.length))) {
-			mk('verse__part2', clean(t.slice(i + sep.length)));
+		var first = clean(i < 0 ? t : t.slice(0, i)), second = i >= 0 ? clean(t.slice(i + sep.length)) : '';
+		if (part !== '2') { mk('verse__part1', first + (part === '1' && second ? '…' : '')); }
+		if (second && part !== '1') {
+			mk('verse__part2', second);
 			var ref = document.createElement('span'); ref.className = 'verse__ref'; ref.textContent = passage(h.dataset.ref).reference; h.appendChild(ref);
 		}
 	}
@@ -55,6 +58,8 @@
 		if (!src) { return; }
 		var re = new RegExp(src, 'i');
 		h.querySelectorAll('.w').forEach(function (s) { if (re.test(s.textContent.replace(/[^\w]/g, ''))) { s.classList.add('emph'); } });
+		/* data-show-ref: the reference follows the verse (burgundy, like the opener's) */
+		if ('showRef' in h.dataset) { var ref = document.createElement('span'); ref.className = 'verse__ref'; ref.textContent = passage(h.dataset.ref).reference; h.appendChild(ref); }
 	}
 	function renderAll() {
 		document.querySelectorAll('.verse--open').forEach(renderOpen);
@@ -74,7 +79,7 @@
 	var pin = document.querySelector('.pin');
 	function openerIn() {
 		/* on load: the picture, then the line fades up. the light comes with the scroll. */
-		if (pin) { pin.classList.add('is-loaded'); }
+		document.querySelectorAll('.pin').forEach(function (p) { p.classList.add('is-loaded'); });
 		setTimeout(function () { document.querySelectorAll('.verse--open').forEach(function (h) { h.classList.add('is-in'); }); }, reduced ? 0 : 900);
 	}
 	var bg = pin && pin.querySelector('.sec__bg');
@@ -184,21 +189,28 @@
 					majors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, (p * 1.5 * (majors.length + .6) - i) / 1.2))); });
 					minors.forEach(function (m, i) { m.style.setProperty('--g', reduced ? 1 : Math.min(1, Math.max(0, ((p - .62) / .38 * (minors.length + 2) - i) / 3))); });
 				}
-				var v = sec.querySelector('.verse'); if (v && v.classList.contains('verse--open') && v.querySelector('.verse__part2')) {
-					v.classList.toggle('is-gone', r.bottom <= 0);
-					/* two beats: the first half is read (0..0.5), swaps at ~0.55, the second half is read (0.6..0.9), then the reference */
+				/* arrival: a later pin's stage rises over the one before; its fixed line waits until the stage has nearly covered the viewport */
+				var a = reduced ? 1 : Math.min(1, Math.max(0, ((innerHeight - r.top) / innerHeight - .55) / .45));
+				sec.style.setProperty('--a', a);
+				var v = sec.querySelector('.verse');
+				if (v) {
 					var lit = function (part, q) { var ws = part.querySelectorAll('.w'), n = ws.length; ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (q * (n + .6) - i) / 1.2))); }); };
 					var clamp01 = function (x) { return Math.min(1, Math.max(0, x)); };
-					lit(v.querySelector('.verse__part1'), p / .5);
-					lit(v.querySelector('.verse__part2'), (p - .6) / .3);
-					v.style.setProperty('--o1', reduced ? 1 : 1 - clamp01((p - .5) / .06));
-					v.style.setProperty('--o2', reduced ? 1 : clamp01((p - .55) / .06));
-					v.style.setProperty('--or', reduced ? 1 : clamp01((p - .88) / .08));
-				} else if (v) {
-					v.classList.toggle('is-gone', r.bottom <= 0);
-					/* on scroll, while the picture is stuck: the light reads across the line, word by word; the curtain only starts after */
-					var ws = v.querySelectorAll('.w'), n = ws.length;
-					ws.forEach(function (w, i) { w.style.setProperty('--lit', reduced ? 1 : Math.min(1, Math.max(0, (p * (n + .6) - i) / 1.2))); });
+					var p1 = v.querySelector('.verse__part1'), p2 = v.querySelector('.verse__part2'), ref = v.querySelector('.verse__ref');
+					v.classList.toggle('is-gone', r.bottom <= 0 || r.top >= innerHeight);
+					if (p1 && p2) {
+						/* two beats in one panel: the first half is read (0..0.5), swaps at ~0.55, the second half is read (0.6..0.9), then the reference */
+						lit(p1, p / .5);
+						lit(p2, (p - .6) / .3);
+						v.style.setProperty('--o1', reduced ? 1 : 1 - clamp01((p - .5) / .06));
+						v.style.setProperty('--o2', reduced ? 1 : clamp01((p - .55) / .06));
+						v.style.setProperty('--or', reduced ? 1 : clamp01((p - .88) / .08));
+					} else {
+						/* one half per panel: the light reads across the line word by word; the reference, when there is one, follows */
+						lit(v, ref ? p / .8 : p);
+						if (p2) { v.style.setProperty('--o2', 1); }
+						if (ref) { v.style.setProperty('--or', reduced ? 1 : clamp01((p - .82) / .1)); }
+					}
 				}
 				return;
 			}

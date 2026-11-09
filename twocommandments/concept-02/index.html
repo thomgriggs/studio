@@ -13,20 +13,30 @@
 <body>
 	<a class="skip" href="#s1">Skip to content</a>
 
-	<!-- ===== SECTION 1 : IF YOU LOVE ME — fixed copy; the version picker comes later (section 4) ===== -->
+	<!-- ===== SECTION 1 : IF YOU LOVE ME… — fixed copy, first half only (v.3: split into two panels); the version picker is on the law panel ===== -->
 	<section class="sec sec--open pin" id="s1" aria-labelledby="s1-h" style="--p:0">
 		<div class="stage">
 			<img class="sec__bg" src="assets/bloch-sermon-on-the-mount.jpg" alt="" aria-hidden="true">
 			<div class="sec__veil" aria-hidden="true"></div>
 		</div>
-		<h1 class="verse verse--open" id="s1-h" data-copy="If you love me, you will keep my commandments." data-ref="john.14.15" data-split=","></h1>
+		<h1 class="verse verse--open" id="s1-h" data-copy="If you love me, you will keep my commandments." data-ref="john.14.15" data-split="," data-part="1"></h1>
 		<div class="yt" id="yt" aria-hidden="true"></div>
+	</section>
+
+	<!-- ===== SECTION 1B : …YOU WILL KEEP MY COMMANDMENTS — second half on its own panel, John 14:15 in burgundy after it (v.3) ===== -->
+	<section class="sec sec--open sec--open2 pin" id="s1b" aria-labelledby="s1b-h" style="--p:0">
+		<div class="stage">
+			<img class="sec__bg sec__bg--open2" src="assets/bloch-sermon-on-the-mount.jpg" alt="" aria-hidden="true">
+			<div class="sec__veil" aria-hidden="true"></div>
+		</div>
+		<h2 class="verse verse--open" id="s1b-h" data-copy="If you love me, you will keep my commandments." data-ref="john.14.15" data-split="," data-part="2"></h2>
 	</section>
 
 	<!-- ===== SECTION 2 : LOGO, BUILT BY SCROLLING (jitter.video circle stack) ===== -->
 	<section class="sec sec--logo scrub" id="s2" aria-labelledby="s2-h" style="--p:0">
 		<div class="stage">
 			<div class="logo">
+				<p class="wordmark wordmark--top" aria-hidden="true" data-letters>Jesus’</p>
 				<h2 class="tablets" id="s2-h">
 					<span class="tablet tablet--a" aria-hidden="true">
 <svg class="glass" viewBox="0 0 200 440">
@@ -434,7 +444,7 @@
 </g>
 </svg>
 					</span>
-					<span class="sr">II Commandments</span>
+					<span class="sr">Jesus’ II Commandments</span>
 				</h2>
 				<p class="wordmark" aria-hidden="true" data-letters>Commandments</p>
 			</div>
@@ -463,9 +473,23 @@
 		</div>
 	</section>
 
-	<!-- ===== SECTION 3 : SEGUE — the law and the prophets ===== -->
+	<!-- ===== SECTION 4 : JESUS SAID — the whole law and the prophets; Matthew 22:40 in burgundy; choose your version here (v.3: now before the segue) ===== -->
+	<section class="sec sec--law" id="s4" aria-labelledby="s4-h">
+		<img class="sec__bg sec__bg--law" src="assets/rembrandt-christ-preaching.jpg" alt="" aria-hidden="true">
+		<div class="sec__veil" aria-hidden="true"></div>
+		<p class="said said--static reveal" data-words>Jesus said</p>
+		<h2 class="verse verse--law reveal" id="s4-h" data-ref="matthew.22.40" data-emph="^(whole|all)$|^law$|^prophets$|^two$|^commandments?$" data-show-ref></h2>
+		<label class="bible">
+			<span class="bible__label">Choose your version</span>
+			<select class="bible__select" data-action="bible" aria-label="Bible version"></select>
+		</label>
+	</section>
+
+	<!-- ===== SECTION 3 : SEGUE — 4 major, 12 minor; same picture as the law panel continues under it (v.3: now after the law) ===== -->
 	<section class="sec sec--segue pin pin--short" id="s3" aria-labelledby="s3-h" style="--p:0">
 		<div class="stage">
+		<img class="sec__bg sec__bg--law" src="assets/rembrandt-christ-preaching.jpg" alt="" aria-hidden="true">
+		<div class="sec__veil" aria-hidden="true"></div>
 		<div class="segue">
 			<p class="segue__line reveal" id="s3-h" data-words>In the Old Testament, there are 4 major prophets and 12 minor prophets.</p>
 			<ul class="prophets" aria-hidden="true">
@@ -474,18 +498,6 @@
 			</ul>
 		</div>
 		</div>
-	</section>
-
-	<!-- ===== SECTION 4 : JESUS SAID — all the law and the prophets ===== -->
-	<section class="sec sec--law" id="s4" aria-labelledby="s4-h">
-		<img class="sec__bg sec__bg--law" src="assets/rembrandt-christ-preaching.jpg" alt="" aria-hidden="true">
-		<div class="sec__veil" aria-hidden="true"></div>
-		<p class="said said--static reveal" data-words>Jesus said</p>
-		<h2 class="verse verse--law reveal" id="s4-h" data-ref="matthew.22.40" data-emph="^(whole|all)$|^law$|^prophets$|^two$|^commandments?$"></h2>
-		<label class="bible">
-			<span class="bible__label">Choose your version</span>
-			<select class="bible__select" data-action="bible" aria-label="Bible version"></select>
-		</label>
 	</section>
 
 	<!-- ===== SECTION 5 : CHOOSE YOUR GOSPEL — four windows ===== -->

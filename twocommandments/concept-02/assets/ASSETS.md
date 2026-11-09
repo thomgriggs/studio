@@ -22,3 +22,6 @@ Thom's reference for the mark: Mobile Bay Magazine, "Explore the Beauty of Mobil
 
 ## Section 5 doors — references (2026-10-22)
 Gothic oak plank doors with scrolled wrought-iron strap hinges (LAPADA listing, arched Gothic oak cathedral door, SW England, mid-1800s) and Pexels "gothic church door" photos (pointed arches in stepped stone orders, studded planks, red cloister doors). Inspiration only; the doors are drawn by `scripts/make-windows.py`.
+
+## Concept 02 — section 1B (2026-11-08)
+CL's v.3 sheet splits the opener into two panels and links a Rapid City Diocese photo ("jesus-teaching-scaled.jpg") for the second. Not licensed; Bloch's *Sermon on the Mount* stands in on both panels, cropped lower on the second (`.sec__bg--open2`), until an image is cleared.

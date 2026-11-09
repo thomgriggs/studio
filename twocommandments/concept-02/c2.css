@@ -45,7 +45,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .pin .sec__bg { animation: none; opacity: 0; transform: scale(calc(1.28 - var(--p) * .28)); transition: opacity 1800ms ease; }
 .pin.is-loaded .sec__bg { opacity: 1; }
 /* the words are fixed to the middle of the browser, above the curtain; they fade only once the curtain has closed over the picture */
-.pin .verse { position: fixed; left: 50%; top: 50%; translate: -50% -50%; z-index: 1; width: max-content; max-width: 90vw; opacity: calc(1 - min(1, var(--c, 0) / .45)); /* fades as the curtain comes up */ transition: text-shadow 1600ms ease; pointer-events: none; }
+.pin .verse { position: fixed; left: 50%; top: 50%; translate: -50% -50%; z-index: 1; width: max-content; max-width: 90vw; opacity: calc((1 - min(1, var(--c, 0) / .45)) * var(--a, 1)); /* fades as the curtain comes up; a later panel's line waits for its stage (--a) */ transition: text-shadow 1600ms ease; pointer-events: none; }
 .pin .verse.is-gone { visibility: hidden; }
 /* as you scroll, light passes over the words one by one, as if reading; unread words wait in shadow */
 .pin .verse .w { --lit: 0; transition: opacity 2200ms ease, transform 2200ms ease, filter 300ms linear, text-shadow 300ms linear; filter: brightness(calc(1 + var(--lit) * .25)); text-shadow: 0 0 calc(var(--lit) * 16px) rgba(255,236,196,calc(var(--lit) * .7)), 0 0 calc(var(--lit) * 56px) rgba(255,214,140,calc(var(--lit) * .55)), 0 2px 40px rgba(0,0,0,.5); }
@@ -60,6 +60,10 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 
 /* stacking, bottom to top: the opener's picture (0) · the fixed line (1) · the black stage of slide 2 (2), which covers both like a curtain */
 .pin .stage { z-index: 0; }
+/* the second opener panel (v.3) is its own curtain over the first: same picture, closer crop, its line fading in once its stage has risen */
+.sec--open2 { position: relative; z-index: 2; background: var(--color_bg); }
+.sec__bg--open2 { object-position: center 58%; }
+.sec--open2 .sec__bg { transform: scale(calc(1.42 - var(--p) * .28)); }
 .sec--logo { position: relative; z-index: 2; background: var(--color_bg); box-shadow: 0 -40px 80px rgba(13,11,9,.6); }
 
 /* ===== VERSE ===== */
@@ -111,6 +115,7 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .wordmark { margin: 0; font: 400 clamp(1.8rem, 7vmin, 5rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
 .wordmark .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .wordmark .l.is-on { opacity: 1; translate: 0; }
+.wordmark--top { font-size: clamp(1.1rem, 4vmin, 2.8rem); letter-spacing: .22em; padding-left: .22em; margin-bottom: calc(-1 * clamp(8px, 2vmin, 24px)); } /* "Jesus'" over the tablets, same face as "Commandments" (v.3) */
 
 /* ===== SEGUE : one line, sixteen marks (four major, twelve minor) ===== */
 .sec--segue { background: var(--color_bg); }
@@ -119,7 +124,10 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .prophets { display: flex; align-items: flex-end; gap: clamp(8px, 1.4vw, 16px); margin: 0; padding: 0; list-style: none; }
 .pin--short { min-height: 190vh; }
 .pin--short .stage { background: radial-gradient(ellipse at 50% 62%, var(--color_bg-warm-glow), var(--color_bg-warm) 55%, #120e0a 100%); }
-.sec--segue { background: var(--color_bg-warm); }
+/* v.3: the segue follows the law panel and keeps its picture — same etching, same veil, no pull-back, so the ground reads as one */
+.sec--segue { background: var(--color_bg); }
+.sec--segue .stage { background: var(--color_bg); }
+.sec--segue .sec__bg, .sec--law .sec__bg { animation: none; transform: scale(1.04); }
 /* the marks answer the scroll: the four major prophets catch light one after another and grow; the twelve follow faintly */
 .prophets li { --g: 0; width: 3px; height: 22px; border-radius: 2px; background: var(--color_muted); opacity: calc(.25 + var(--g) * .75); transform: translateY(calc((1 - var(--g)) * 6px)); }
 .prophets .prophets__major { width: 4px; height: calc(44px + var(--g) * 22px); background: rgb(calc(243 + var(--g) * 12), calc(238 + var(--g) * -10), calc(228 + var(--g) * -90)); box-shadow: 0 0 calc(var(--g) * 14px) rgba(255,214,140,calc(var(--g) * .9)), 0 0 calc(var(--g) * 40px) rgba(255,190,80,calc(var(--g) * .5)); opacity: calc(.55 + var(--g) * .45); }
@@ -127,10 +135,13 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 /* ===== LAW : hero verse over Jesus, from the crowd ===== */
 .sec--law { gap: clamp(16px, 3vmin, 32px); align-content: center; }
 .sec__bg--law { object-position: 50% 40%; filter: saturate(.55) contrast(1.1) brightness(.85); }
-.sec--law .sec__veil { background: linear-gradient(180deg, rgba(13,11,9,.55), rgba(13,11,9,.45) 45%, rgba(13,11,9,.9)); }
+.sec--law .sec__veil, .sec--segue .sec__veil { background: linear-gradient(180deg, rgba(13,11,9,.55), rgba(13,11,9,.45) 45%, rgba(13,11,9,.9)); }
 .said { position: absolute; top: calc(50% - min(16vmin, 9rem)); margin: 0; font: 500 .8rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
 .verse--law { max-width: 22ch; font-size: clamp(1.9rem, 5.4vw, 4.6rem); font-style: italic; }
 .verse--law .emph { font-style: normal; font-weight: 600; color: #f2c14e; text-shadow: 0 0 16px rgba(255,236,196,.7), 0 0 56px rgba(255,214,140,.55), 0 2px 40px rgba(0,0,0,.5); }
+/* the reference after the verse, burgundy as on the opener, arriving after the last word (v.3) */
+.verse--law .verse__ref { position: static; display: block; margin: .7em auto 0; translate: none; font-style: normal; opacity: 0; transition: opacity 600ms linear 1600ms; }
+.verse--law.is-in .verse__ref { opacity: 1; }
 .bible { position: absolute; left: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 16px; border-radius: 999px; background: rgba(243,238,228,.14); backdrop-filter: blur(10px); color: var(--color_ink); font: 500 .75rem/1 var(--font_sans); letter-spacing: .12em; text-transform: uppercase; }
 .bible__select { appearance: none; border: 0; background: transparent; color: inherit; font: 500 .8rem/1 var(--font_sans); letter-spacing: .06em; padding: 6px 0; cursor: pointer; }
 .bible__select:focus-visible { outline: 2px solid var(--color_ink); outline-offset: 4px; border-radius: 4px; }
@@ -316,6 +327,8 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.verse--open .verse__part { display: inline; }
 	.verse__part1, .verse__part2, .verse__ref { opacity: 1; transition: none; }
 	.verse__ref { position: static; display: table; margin: .5em auto 0; translate: none; }
+	.verse--law .verse__ref { transition: none; }
+	.pin .verse { opacity: 1; }
 	.scrub { min-height: 100vh; }
 	.logo, .tablet { translate: 0; rotate: 0deg; scale: 1; opacity: 1; }
 	.tablet .frags, .tablet .sacred, .glass rect { opacity: 1; }
