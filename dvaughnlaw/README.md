@@ -27,6 +27,6 @@ Platform decision (2026-10-26): fresh Squarespace install. Content only carries 
 
 ## November 11, 2026
 - Danielle back from vacation; returned the audit sheet with Keep/Change/Remove per page (research/danielle-sheet-2026-11-11.md, decisions in research/page-decisions-2026-11-11.md). She wants a cleaner, simpler site and fewer pages.
-- Two review pages added to concept 05 for the next meeting: `home-lean/` (hero, trust strip, doors, situation picker, contact) and `home-modules/` (the six optional sections: reasons, people, video-feed, steps, post-feed, event-band). Sources: content/proposed/home-lean.json and home-modules.json; built by tools/build.py --all. Hand-built first drafts set aside in mockup/_superseded/2026-11-11/.
+- Concept 05 home is now the lean version (hero, trust strip, doors, situation picker, contact; content/proposed/home.json). The six optional sections are at `home-modules/` (content/proposed/home-modules.json). Both listed on pages.html. Earlier lean/modules drafts in mockup/_superseded/2026-11-11/.
 - Google reviews pulled: 4.9 stars, 107 ratings; only snippets available (research/google-reviews-2026-11-11.md).
 - Jeff proposed a meeting with Danielle next week.
