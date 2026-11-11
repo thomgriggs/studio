@@ -1,0 +1,284 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/home-modules/",
+  "slug": "home-modules",
+  "template": "home",
+  "family": "home",
+  "title": "Optional home modules",
+  "own_closing": true,
+  "seo": {
+    "title_tag": "Optional modules · Real Estate & Estate Planning Attorneys – St. Pete Beach | Vaughn Law",
+    "meta_description": "Review page: optional home page sections.",
+    "h1_count": 1
+  },
+  "_about": "The six sections lifted off the lean home page, shown together so the client can pick which come back: reasons, people, video-feed, steps, post-feed, event-band. Each is the same module instance as in home.json. Not a real site page; a review aid.",
+  "verified": [
+    "Board certification wording: 'Board Certified Real Estate Attorney' (Danielle Vaughn's byline on the live articles) and 'FLORIDA BAR BOARD CERTIFIED' with the Florida Bar Board Certified logo on /about/our-team/",
+    "Licensed throughout Florida: 'we are licensed to practice throughout the entire state of Florida' (live /real-estate-law/ and /about/ copy)",
+    "Address 350 Corey Avenue, St. Pete Beach, FL 33706, phone and email: the live shared contact block",
+    "Workshop title, 'FREE', venues and times, and the founder quote: live /person-workshops/",
+    "Intro video: live post 'Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida' (2024-09-23), YouTube ekRcoj3fKWs; its poster frame shows Danielle Vaughn speaking",
+    "Team names, roles and portraits: live /about/our-team/",
+    "Articles: the three newest post-article pages by publish time; excerpt = the article's own subtitle line",
+    "Workshop dates and venues: live /person-workshops/ 'Upcoming Events' (Thursday, November 19th, 2026, 2:00 PM – 4:00 PM, Sunshine City Comedy Club, 5501 Gulf Blvd, St. Pete Beach, FL; Tuesday, December 1st, 2026, 1PM – 3PM, Florida Lithuanian Center, 4880 46th Ave North, St Petersburg, FL); both are after 2026-11-05",
+    "Videos: the three chosen from content/videos.json (the firm's YouTube channel @Vaughnlawstpete): jc_kTAVi7fE (trust funding, 2026-03-23), BXW3Fx0aKuA (litigation, 2026-02-10), LKK1Uzrq4ec (Danielle Vaughn introduction, 2025-12-09). Recent, one each from estate planning, real estate disputes and the firm; cards open the video on YouTube in a new tab; 'All videos' opens the Videos page"
+  ],
+  "confirm": [
+    "Board certification wording: the crawl says 'Board Certified Real Estate Attorney' (and 'Florida Bar Board Certified'); the brief's 'board certified in real estate law by The Florida Bar' is not verbatim anywhere, so the page uses the live wording. Confirm the certified area and wording.",
+    "Cost promise: 'You'll know what it costs before you decide.' and 'what it costs, before you commit' (not on the live site)",
+    "'You get one person to call, and they pick up.' (not on the live site)",
+    "The towns list: St. Pete Beach, Treasure Island, Pass-a-Grille, Gulfport, Madeira Beach and Tierra Verde (live site names St. Petersburg, Tampa and Pinellas County)",
+    "Workshop 'Free, in person': 'free' is on the live page; 'in person' is inferred from the venue addresses (not stated in those words); confirm it before launch",
+    "'Closings with an attorney in the room' / 'with a lawyer at the table' and 'we tell you plainly which one fits': service descriptions written for this page",
+    "'Especially if you've just moved to Florida' and 'Your old plan may not work here': consistent with the live workshop page, not worded there",
+    "Which firm facts may be called out in the trust strip (board certification, Licensed throughout Florida, address); the strip shows no years in practice, counts or rankings because none are in the crawl",
+    "Intro video: the crawl gives only its title and a poster frame; confirm it still represents the firm and that it may be shown beside the team",
+    "Badges (Super Lawyers Rising Stars, The Fund 2023 President's Circle, Best of Florida 2023, The Fund 6th Circuit Top Contributor) are from 2023-2024; confirm they are current",
+    "Photo use: the October 2026 shoot files and the team portraits come from the live site; confirm the people shown consent to being featured",
+    "Every 'Schedule a Consultation' button on this page now opens the new /consultation/ flow (a choice page, then a short form per situation) instead of the contact page"
+  ],
+  "modules": [
+    {
+      "module": "title-banner",
+      "slots": {
+        "title": "Optional modules",
+        "text": "These sections were lifted off the lean home page. Each one can be added back to the home page, used on another page, or left out."
+      }
+    },
+    {
+      "module": "reasons",
+      "slots": {
+        "title": "Why people on the beach call us",
+        "items": [
+          {
+            "title": "An attorney, not just a title company.",
+            "text": "When a closing goes sideways, you don't get referred out. The lawyer is already here."
+          },
+          {
+            "title": "A board certified real estate attorney.",
+            "text": "[Danielle Vaughn](https://dvaughnlaw.com/about/our-team/) is a Florida Bar Board Certified Real Estate Attorney."
+          },
+          {
+            "title": "Local.",
+            "text": "St. Pete Beach, Treasure Island, Pass-a-Grille, Gulfport, Madeira Beach and Tierra Verde."
+          },
+          {
+            "title": "Plain answers about cost.",
+            "text": "You'll know what it costs before you decide."
+          }
+        ],
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Reviewing-Docs.jpg",
+          "alt": "Danielle Vaughn reviewing documents with a client"
+        }
+      }
+    },
+    {
+      "module": "people",
+      "slots": {
+        "title": "You'll know who's handling it",
+        "text": "A small team on Corey Avenue. You get one person to call, and they pick up.",
+        "people": [
+          {
+            "name": "Danielle Vaughn",
+            "role": "Managing Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Danielle-Vaughn-Black-Blazer.jpg",
+              "alt": "Danielle Vaughn"
+            }
+          },
+          {
+            "name": "Whitney L. Smith",
+            "role": "Real Estate Litigation Attorney",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Whitney-Smith.jpg",
+              "alt": "Whitney L. Smith"
+            }
+          }
+        ],
+        "team": [
+          {
+            "name": "Tracey Pion",
+            "role": "Director Of Operations",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Tracey-Pion.jpg",
+              "alt": "Tracey Pion"
+            }
+          },
+          {
+            "name": "Pamela Cihlar",
+            "role": "Office Manager and Bookkeeper",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Pamela-Cihlar.jpg",
+              "alt": "Pamela Cihlar"
+            }
+          },
+          {
+            "name": "Barbara Trawinski",
+            "role": "Licensed Title Agent/Closer",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Barbara-Trawinski.jpg",
+              "alt": "Barbara Trawinski"
+            }
+          },
+          {
+            "name": "Kathie Hart",
+            "role": "Paralegal",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Kathie-Hart.jpg",
+              "alt": "Kathie Hart"
+            }
+          },
+          {
+            "name": "Joe Pritt",
+            "role": "Paralegal, Estate Planning and Probate",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Joe-Pritt.jpg",
+              "alt": "Joe Pritt"
+            }
+          },
+          {
+            "name": "Daniela Brown",
+            "role": "Closing Assistant",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Daniela-Brown.jpg",
+              "alt": "Daniela Brown"
+            }
+          }
+        ],
+        "link": {
+          "text": "Meet the team",
+          "nav": "About/Our Team"
+        },
+        "quote": {
+          "text": "My mission is to educate families so they can make proper decisions — and ensure their family and assets are truly protected.",
+          "attribution": "Danielle Vaughn, Managing Attorney, Vaughn Law, PLLC"
+        },
+        "video": {
+          "url": "https://www.youtube.com/embed/ekRcoj3fKWs",
+          "title": "Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida"
+        }
+      }
+    },
+    {
+      "module": "video-feed",
+      "slots": {
+        "title": "Watch",
+        "videos": [
+          {
+            "title": "The most important part of your trust, funding it!",
+            "href": "https://www.youtube.com/watch?v=jc_kTAVi7fE",
+            "date": "2026-03-23",
+            "video": "https://www.youtube.com/embed/jc_kTAVi7fE"
+          },
+          {
+            "title": "Facing a Lawsuit? What You Need to Know About the Litigation Process",
+            "href": "https://www.youtube.com/watch?v=BXW3Fx0aKuA",
+            "date": "2026-02-10",
+            "video": "https://www.youtube.com/embed/BXW3Fx0aKuA"
+          },
+          {
+            "title": "Danielle Vaughn, Board Certified Real Estate Attorney and owner of Vaughn Law PLLC",
+            "href": "https://www.youtube.com/watch?v=LKK1Uzrq4ec",
+            "date": "2025-12-09",
+            "video": "https://www.youtube.com/embed/LKK1Uzrq4ec"
+          }
+        ],
+        "more": {
+          "text": "All videos",
+          "page": "videos"
+        }
+      }
+    },
+    {
+      "module": "steps",
+      "variant": "process",
+      "slots": {
+        "title": "How it starts",
+        "items": [
+          {
+            "lead": "Call or send a note.",
+            "text": "Tell us what's going on."
+          },
+          {
+            "lead": "We tell you what it takes.",
+            "text": "What we'd do, how long it should take, and what it costs, before you commit."
+          },
+          {
+            "lead": "We handle it.",
+            "text": "You get one person to call and plain updates along the way."
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          }
+        ]
+      }
+    },
+    {
+      "module": "post-feed",
+      "variant": "cards",
+      "slots": {
+        "title": "From the firm",
+        "posts": [
+          {
+            "title": "Fifty Percent of Paradise",
+            "href": "https://dvaughnlaw.com/fifty-percent-of-paradise/",
+            "date": "2026-10-06",
+            "excerpt": "The rebuilding rule nobody mentioned while the water was going down"
+          },
+          {
+            "title": "The Repairs You Inherit",
+            "href": "https://dvaughnlaw.com/the-repairs-you-inherit/",
+            "date": "2026-10-06",
+            "excerpt": "Due diligence before you buy a storm-repaired home"
+          },
+          {
+            "title": "What Your November Tax Bill Won’t Tell You",
+            "href": "https://dvaughnlaw.com/what-your-november-tax-bill-wont-tell-you/",
+            "date": "2026-10-06",
+            "excerpt": "The discount, the deadline, and the deed that can undo both"
+          }
+        ],
+        "more": {
+          "text": "All articles",
+          "page": "blog"
+        }
+      }
+    },
+    {
+      "module": "event-band",
+      "slots": {
+        "eyebrow": "Free workshop",
+        "title": "Estate Planning: How To Protect Your Home, Savings & Family From Costly Mistakes",
+        "text": "Free, in person, and in plain language.",
+        "events": [
+          {
+            "date": "Thursday, November 19th, 2026",
+            "time": "2:00 PM – 4:00 PM",
+            "venue": "Sunshine City Comedy Club",
+            "address": "5501 Gulf Blvd, St. Pete Beach, FL"
+          },
+          {
+            "date": "Tuesday, December 1st, 2026",
+            "time": "1PM – 3PM",
+            "venue": "Florida Lithuanian Center",
+            "address": "4880 46th Ave North, St Petersburg, FL"
+          }
+        ],
+        "image": {
+          "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2-1.jpg",
+          "alt": "The Vaughn Law team standing together in front of the teal Vaughn Law wall"
+        },
+        "buttons": [
+          {
+            "text": "See the workshop",
+            "page": "person-workshops"
+          }
+        ]
+      }
+    }
+  ]
+}
