@@ -279,6 +279,36 @@
           }
         ]
       }
+    },
+    {
+      "module": "review-cards",
+      "slots": {
+        "eyebrow": "From Google (option A, curated; option B is a live widget)",
+        "title": "What people say after they leave",
+        "rating": "4.9",
+        "count": 107,
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach",
+        "cards": [
+          {
+            "quote": "Their pricing was also very fair and clearly communicated upfront, which we greatly appreciated. Vaughn Law will absolutely be our go-to firm moving forward.",
+            "reviewer": "Carlo D.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "She made what seemed like a daunting task easy and comfortable. Everything was done in a timely manner and the communication was excellent.",
+            "reviewer": "Teri T.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "I went in to their office feeling quite nervous about making such important decisions. I left feeling comfortable about everything.",
+            "reviewer": "Sabina H.",
+            "tag": "client",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          }
+        ]
+      }
     }
   ]
 }

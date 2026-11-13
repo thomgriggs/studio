@@ -1,0 +1,39 @@
+{
+  "_about": "Hand-picked Google reviews for the site. Verbatim text; 'quote' is the trimmed pull quote, 'full' is the whole review. Reviewer shown as first name + last initial. Confirm with the firm before publishing (Florida Bar Rule 4-7.13: testimonials must be truthful and not misleading; use with permission is the safe path).",
+  "rating": {"stars": 4.9, "count": 107, "source": "Google, pulled 2026-11-13"},
+  "home": [
+    {"id": "carlo-d", "reviewer": "Carlo D.", "date": "5 months ago", "area": "estate planning", "mentions": ["Allison"],
+     "quote": "Their pricing was also very fair and clearly communicated upfront, which we greatly appreciated. Vaughn Law will absolutely be our go-to firm moving forward."},
+    {"id": "teri-t", "reviewer": "Teri T.", "date": "7 months ago", "area": "estate planning", "mentions": ["Allison"],
+     "quote": "She made what seemed like a daunting task easy and comfortable. Everything was done in a timely manner and the communication was excellent."},
+    {"id": "sabina-h", "reviewer": "Sabina H.", "date": "a month ago", "area": "other", "mentions": [],
+     "quote": "I went in to their office feeling quite nervous about making such important decisions. I left feeling comfortable about everything."}
+  ],
+  "estate-planning": [
+    {"id": "charlee", "reviewer": "Charlee", "date": "4 months ago", "area": "estate planning", "mentions": [],
+     "quote": "Their team took the time to explain my options, including a revocable living trust, pour-over will, and other planning tools, so I felt confident making informed decisions."},
+    {"id": "robert-h", "reviewer": "Robert H.", "date": "6 months ago", "area": "estate planning", "mentions": ["Allison"],
+     "quote": "Our 20 year old wills and such were from our prior residency in Georgia and as things have changed in our lives, including moving to Florida, we needed a lot of help."},
+    {"id": "richard-j", "reviewer": "Richard J.", "date": "a week ago", "area": "estate planning", "mentions": ["Danielle"],
+     "quote": "I attended the workshop as an interview of sorts to help me decide if Vaughn Law will perform this service for me. Danielle's presentation was informative and entertaining."}
+  ],
+  "real-estate": [
+    {"id": "kevin-c", "reviewer": "Kevin C.", "date": "4 years ago", "area": "closing-title", "mentions": [],
+     "quote": "The Vaughn Law team is extremely timely and responsive to our requests, properly researched all aspects of the chain of title, and handled communication with all parties at the highest level."},
+    {"id": "alexander-i", "reviewer": "Alexander I.", "date": "a year ago", "area": "closing-title", "mentions": ["Danielle", "Barbara"],
+     "quote": "They helped navigate and simplify a complicated transaction with many hurdles, which they skillfully worked through."},
+    {"id": "aisha-t", "reviewer": "Aisha T.", "date": "4 months ago", "area": "litigation-landlord", "mentions": ["Danielle"],
+     "quote": "I was particularly impressed by Attorney Danielle's attention to detail, clear communication, and ability to navigate challenging real estate issues while keeping the client's goals at the forefront."},
+    {"id": "chocbarte", "reviewer": "C. H.", "date": "a year ago", "area": "litigation-landlord", "mentions": ["Whitney"],
+     "quote": "Whitney Smith took my case after 17 other lawyers turned me away! Not only did she fight for me, she also got the case dismissed!"}
+  ],
+  "workshop": [
+    {"id": "e-diaz", "reviewer": "E. Diaz", "date": "3 months ago", "area": "estate planning", "mentions": ["Allison"],
+     "quote": "I highly recommend their seminar and especially recommend their legal services."}
+  ],
+  "questions_for_firm": [
+    "Allison Couri is named in 16 reviews and most recent estate-planning ones, but is not on the team page. Still with the firm?",
+    "OK to publish reviewer first name + last initial, or prefer first name only?",
+    "Any of these reviewers the firm would rather not feature?"
+  ]
+}

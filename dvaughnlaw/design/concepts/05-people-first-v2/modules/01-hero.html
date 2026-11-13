@@ -23,6 +23,8 @@ SQUARESPACE: Section on a pale section colour with a Heading block set to H1, a 
       {% endfor %}
     </ul>
   </div>
+  {% elif mosaic and mosaic|length == 2 %}
+  <div class="wrap hero__media"><ul class="mosaic mosaic--2" role="list">{% for i in mosaic %}<li class="mo-{{ loop.index }}"><img src="{{ i.src }}" alt="{{ i.alt }}"{% if not loop.first %} loading="lazy"{% endif %}></li>{% endfor %}</ul></div>
   {% elif tile %}
   <div class="wrap wrap--mid hero__media"><img class="hero__img" src="{{ s.image.src }}" alt="{{ s.image.alt }}"></div>
   {% endif %}

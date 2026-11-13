@@ -335,6 +335,42 @@
           "page": "blog"
         }
       }
+    },
+    {
+      "module": "review-cards",
+      "slots": {
+        "eyebrow": "From Google",
+        "title": "What clients and lenders say",
+        "rating": "4.9",
+        "count": 107,
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach",
+        "cards": [
+          {
+            "quote": "The Vaughn Law team is extremely timely and responsive to our requests, properly researched all aspects of the chain of title, and handled communication with all parties at the highest level.",
+            "reviewer": "Kevin C.",
+            "tag": "closing",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "They helped navigate and simplify a complicated transaction with many hurdles, which they skillfully worked through.",
+            "reviewer": "Alexander I.",
+            "tag": "closing",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "I was particularly impressed by Attorney Danielle's attention to detail, clear communication, and ability to navigate challenging real estate issues while keeping the client's goals at the forefront.",
+            "reviewer": "Aisha T.",
+            "tag": "litigation",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "Whitney Smith took my case after 17 other lawyers turned me away! Not only did she fight for me, she also got the case dismissed!",
+            "reviewer": "C. H.",
+            "tag": "litigation",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          }
+        ]
+      }
     }
   ]
 }

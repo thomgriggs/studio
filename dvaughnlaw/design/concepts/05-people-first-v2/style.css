@@ -795,3 +795,23 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:.85em}
 .card.card--planned{background:transparent;box-shadow:none;border:2px dashed #b9c7d6}
 .card--planned .card__title{color:var(--muted)}
 .card__planned{margin-top:auto!important;padding-top:var(--s1);font-size:12px!important;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)!important}
+
+/* review-cards (added 2026-11-13) */
+.m-rcards{padding-block:var(--s6)}
+.rcards__rating{margin:var(--s1) 0 0;font:400 16px var(--font-body);color:var(--muted)}
+.rcards__rating strong{color:var(--navy);font-size:18px}
+.rcards__stars{color:var(--green-deep);letter-spacing:.08em;font-size:15px}
+.rcards{list-style:none;margin:var(--s4) 0 0;padding:0;display:grid;gap:var(--s3);grid-template-columns:repeat(3,1fr)}
+.rcards--2{grid-template-columns:repeat(2,1fr)}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2)}
+.rcard blockquote{margin:0}
+.rcard blockquote p{margin:0;font:400 clamp(17px,1.5vw,20px)/1.45 var(--font-head);color:var(--ink)}
+.rcard__by{margin:auto 0 0;font:400 14px var(--font-body);color:var(--muted)}
+.rcard__by strong{color:var(--navy)}
+@media (max-width:760px){.rcards,.rcards--2{grid-template-columns:1fr}}
+
+/* two-tile hero mosaic (2026-11-13): team photo + sign, side by side */
+.mosaic--2{grid-template-columns:3fr 2fr;grid-auto-rows:clamp(220px,26vw,360px)}
+.mosaic--2 .mo-1{grid-column:1;grid-row:1}
+.mosaic--2 .mo-2{grid-column:2;grid-row:1}
+@media (max-width:760px){.mosaic--2{grid-template-columns:1fr}.mosaic--2 .mo-1,.mosaic--2 .mo-2{grid-column:1;grid-row:auto}}

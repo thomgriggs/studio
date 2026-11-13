@@ -1,0 +1,20 @@
+{#
+MODULE: review-cards
+PURPOSE: Two or three client reviews as white rounded cards on a tinted band: sage stars, the quote in serif, then the reviewer (first name and initial), a practice tag and a small "Read on Google" link. Only real reviews from content/proposed/review-picks.json; never invented.
+SLOTS: eyebrow, title, rating (number), count (number), href (review source), cards[quote, reviewer, tag, href].
+SQUARESPACE: Option A (shown): a section with a Testimonials block or three Quote blocks in a 3-column row, quotes entered by the firm from Google. Option B: a code block with a Google-reviews widget (Elfsight / Trustindex, paid) that pulls the live feed. No code for A.
+#}
+{% from "_macros.html" import heading, eyebrow %}
+<section class="m m-rcards" data-module="review-cards" data-tone="{{ tone }}">
+  <div class="wrap">
+    <div class="m__head">{{ eyebrow(s.eyebrow) }}{{ heading(2, s.title, s.level, "h-section") }}{% if s.rating %}<p class="rcards__rating"><span class="rcards__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>{{ s.rating }}</strong> on Google{% if s.count %} &middot; {{ s.count }} reviews{% endif %}{% if s.href %} &middot; <a href="{{ s.href }}" target="_blank" rel="noopener">Read them all</a>{% endif %}</p>{% endif %}</div>
+    <ul class="rcards rcards--{{ s.cards|length }}" role="list">
+      {% for c in s.cards %}
+      <li class="rcard"><span class="rcards__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote><p>&ldquo;{{ c.quote|md }}&rdquo;</p></blockquote>
+        <p class="rcard__by"><strong>{{ c.reviewer }}</strong>{% if c.tag %} &middot; {{ c.tag }}{% endif %}{% if c.href %} &middot; <a href="{{ c.href }}" target="_blank" rel="noopener">Google</a>{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -21,7 +21,8 @@
     "Team names, roles and portraits: live /about/our-team/",
     "Articles: the three newest post-article pages by publish time; excerpt = the article's own subtitle line",
     "Workshop dates and venues: live /person-workshops/ 'Upcoming Events' (Thursday, November 19th, 2026, 2:00 PM – 4:00 PM, Sunshine City Comedy Club, 5501 Gulf Blvd, St. Pete Beach, FL; Tuesday, December 1st, 2026, 1PM – 3PM, Florida Lithuanian Center, 4880 46th Ave North, St Petersburg, FL); both are after 2026-11-05",
-    "Videos: the three chosen from content/videos.json (the firm's YouTube channel @Vaughnlawstpete): jc_kTAVi7fE (trust funding, 2026-03-23), BXW3Fx0aKuA (litigation, 2026-02-10), LKK1Uzrq4ec (Danielle Vaughn introduction, 2025-12-09). Recent, one each from estate planning, real estate disputes and the firm; cards open the video on YouTube in a new tab; 'All videos' opens the Videos page"
+    "Videos: the three chosen from content/videos.json (the firm's YouTube channel @Vaughnlawstpete): jc_kTAVi7fE (trust funding, 2026-03-23), BXW3Fx0aKuA (litigation, 2026-02-10), LKK1Uzrq4ec (Danielle Vaughn introduction, 2025-12-09). Recent, one each from estate planning, real estate disputes and the firm; cards open the video on YouTube in a new tab; 'All videos' opens the Videos page",
+    "Google rating 4.9 from 107 reviews and the quoted reviews: Google Maps listing for Vaughn Law, PLLC, pulled 2026-11-13 (research/google-reviews-all-2026-11-13.csv)"
   ],
   "confirm": [
     "Board certification wording: the crawl says 'Board Certified Real Estate Attorney' (and 'Florida Bar Board Certified'); the brief's 'board certified in real estate law by The Florida Bar' is not verbatim anywhere, so the page uses the live wording. Confirm the certified area and wording.",
@@ -35,7 +36,9 @@
     "Intro video: the crawl gives only its title and a poster frame; confirm it still represents the firm and that it may be shown beside the team",
     "Badges (Super Lawyers Rising Stars, The Fund 2023 President's Circle, Best of Florida 2023, The Fund 6th Circuit Top Contributor) are from 2023-2024; confirm they are current",
     "Photo use: the October 2026 shoot files and the team portraits come from the live site; confirm the people shown consent to being featured",
-    "Every 'Schedule a Consultation' button on this page now opens the new /consultation/ flow (a choice page, then a short form per situation) instead of the contact page"
+    "Every 'Schedule a Consultation' button on this page now opens the new /consultation/ flow (a choice page, then a short form per situation) instead of the contact page",
+    "Reviews shown: first name + last initial, verbatim quotes. Confirm the firm is comfortable publishing these (Florida Bar Rule 4-7.13) and whether to use first names only. Allison Couri is named in many reviews but is not on the team page; confirm.",
+    "Hero photos trimmed to the team photo and the sign (Nov 13); the lobby and notes photos were dropped from the home hero."
   ],
   "modules": [
     {
@@ -50,16 +53,8 @@
             "alt": "The Vaughn Law team standing together in front of the teal Vaughn Law wall"
           },
           {
-            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Lobby.jpg",
-            "alt": "The Vaughn Law office lobby"
-          },
-          {
             "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Vaughn-Law-Sign.jpg",
             "alt": "The Vaughn Law sign in the Corey Avenue office"
-          },
-          {
-            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Whitneys-Notes.jpg",
-            "alt": "A hand with a pen over a legal pad on a conference table"
           }
         ],
         "actions": [
@@ -116,6 +111,54 @@
       }
     },
     {
+      "module": "review-line",
+      "slots": {
+        "rating": "4.9",
+        "text": "",
+        "author": "107 reviews",
+        "source": "Google",
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+      }
+    },
+    {
+      "module": "situation-picker",
+      "slots": {
+        "title": "What brings you here?",
+        "cards": [
+          {
+            "title": "I'm buying or selling a home.",
+            "text": "We handle the contract, the title and the closing, with a lawyer at the table.",
+            "nav": "Real Estate/Buying and Selling"
+          },
+          {
+            "title": "I need to change a deed.",
+            "text": "Adding a spouse, removing a name, or moving a home into a trust, prepared and recorded the right way.",
+            "nav": "Real Estate/Deeds and Title"
+          },
+          {
+            "title": "I have a problem with a tenant.",
+            "text": "Notices, leases and evictions, handled start to finish.",
+            "nav": "Real Estate/Landlord and Tenant"
+          },
+          {
+            "title": "A parent has died.",
+            "text": "We explain what probate is, whether you need it, and take it from there.",
+            "nav": "Estate Planning/Probate"
+          },
+          {
+            "title": "I need a will or a trust.",
+            "text": "We tell you plainly which one fits and what it involves.",
+            "nav": "Estate Planning/Wills and Trusts"
+          },
+          {
+            "title": "I just moved to Florida.",
+            "text": "Your old plan may not work here. We'll show you what to update first.",
+            "nav": "Estate Planning/Overview"
+          }
+        ]
+      }
+    },
+    {
       "module": "door-pair",
       "slots": {
         "anchor": "help",
@@ -156,39 +199,31 @@
       }
     },
     {
-      "module": "situation-picker",
+      "module": "review-cards",
       "slots": {
-        "title": "What brings you here?",
+        "eyebrow": "From Google",
+        "title": "What people say after they leave",
+        "rating": "4.9",
+        "count": 107,
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach",
         "cards": [
           {
-            "title": "I'm buying or selling a home.",
-            "text": "We handle the contract, the title and the closing, with a lawyer at the table.",
-            "nav": "Real Estate/Buying and Selling"
+            "quote": "Their pricing was also very fair and clearly communicated upfront, which we greatly appreciated. Vaughn Law will absolutely be our go-to firm moving forward.",
+            "reviewer": "Carlo D.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
           },
           {
-            "title": "I need to change a deed.",
-            "text": "Adding a spouse, removing a name, or moving a home into a trust, prepared and recorded the right way.",
-            "nav": "Real Estate/Deeds and Title"
+            "quote": "She made what seemed like a daunting task easy and comfortable. Everything was done in a timely manner and the communication was excellent.",
+            "reviewer": "Teri T.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
           },
           {
-            "title": "I have a problem with a tenant.",
-            "text": "Notices, leases and evictions, handled start to finish.",
-            "nav": "Real Estate/Landlord and Tenant"
-          },
-          {
-            "title": "A parent has died.",
-            "text": "We explain what probate is, whether you need it, and take it from there.",
-            "nav": "Estate Planning/Probate"
-          },
-          {
-            "title": "I need a will or a trust.",
-            "text": "We tell you plainly which one fits and what it involves.",
-            "nav": "Estate Planning/Wills and Trusts"
-          },
-          {
-            "title": "I just moved to Florida.",
-            "text": "Your old plan may not work here. We'll show you what to update first.",
-            "nav": "Estate Planning/Overview"
+            "quote": "I went in to their office feeling quite nervous about making such important decisions. I left feeling comfortable about everything.",
+            "reviewer": "Sabina H.",
+            "tag": "client",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
           }
         ]
       }

@@ -1,0 +1,244 @@
+{
+  "source": "proposed",
+  "url": "https://dvaughnlaw.com/home-b/",
+  "slug": "home-b",
+  "template": "home",
+  "family": "home",
+  "title": "Home (B: statewide headline)",
+  "own_closing": true,
+  "seo": {
+    "title_tag": "Home B · Real Estate & Estate Planning Attorneys – St. Pete Beach | Vaughn Law",
+    "meta_description": "Vaughn Law is a real estate and estate planning law firm on St. Pete Beach. Closings, deeds, landlord-tenant, wills, trusts and probate for Pinellas families.",
+    "h1_count": 1
+  },
+  "_about": "Variant B of the proposed home for the client to compare: statewide headline and subhead (Jeff, Nov 12), no location eyebrow, Corey Avenue tile replaced. Everything below the hero is identical to home.json.",
+  "verified": [
+    "Board certification wording: 'Board Certified Real Estate Attorney' (Danielle Vaughn's byline on the live articles) and 'FLORIDA BAR BOARD CERTIFIED' with the Florida Bar Board Certified logo on /about/our-team/",
+    "Licensed throughout Florida: 'we are licensed to practice throughout the entire state of Florida' (live /real-estate-law/ and /about/ copy)",
+    "Address 350 Corey Avenue, St. Pete Beach, FL 33706, phone and email: the live shared contact block",
+    "Workshop title, 'FREE', venues and times, and the founder quote: live /person-workshops/",
+    "Intro video: live post 'Discover Why Vaughn Law Is Your Top Choice for Real Estate and Estate Planning in Florida' (2024-09-23), YouTube ekRcoj3fKWs; its poster frame shows Danielle Vaughn speaking",
+    "Team names, roles and portraits: live /about/our-team/",
+    "Articles: the three newest post-article pages by publish time; excerpt = the article's own subtitle line",
+    "Workshop dates and venues: live /person-workshops/ 'Upcoming Events' (Thursday, November 19th, 2026, 2:00 PM – 4:00 PM, Sunshine City Comedy Club, 5501 Gulf Blvd, St. Pete Beach, FL; Tuesday, December 1st, 2026, 1PM – 3PM, Florida Lithuanian Center, 4880 46th Ave North, St Petersburg, FL); both are after 2026-11-05",
+    "Videos: the three chosen from content/videos.json (the firm's YouTube channel @Vaughnlawstpete): jc_kTAVi7fE (trust funding, 2026-03-23), BXW3Fx0aKuA (litigation, 2026-02-10), LKK1Uzrq4ec (Danielle Vaughn introduction, 2025-12-09). Recent, one each from estate planning, real estate disputes and the firm; cards open the video on YouTube in a new tab; 'All videos' opens the Videos page",
+    "Google rating 4.9 from 107 reviews and the quoted reviews: Google Maps listing for Vaughn Law, PLLC, pulled 2026-11-13 (research/google-reviews-all-2026-11-13.csv)"
+  ],
+  "confirm": [
+    "Board certification wording: the crawl says 'Board Certified Real Estate Attorney' (and 'Florida Bar Board Certified'); the brief's 'board certified in real estate law by The Florida Bar' is not verbatim anywhere, so the page uses the live wording. Confirm the certified area and wording.",
+    "Cost promise: 'You'll know what it costs before you decide.' and 'what it costs, before you commit' (not on the live site)",
+    "'You get one person to call, and they pick up.' (not on the live site)",
+    "The towns list: St. Pete Beach, Treasure Island, Pass-a-Grille, Gulfport, Madeira Beach and Tierra Verde (live site names St. Petersburg, Tampa and Pinellas County)",
+    "Workshop 'Free, in person': 'free' is on the live page; 'in person' is inferred from the venue addresses (not stated in those words); confirm it before launch",
+    "'Closings with an attorney in the room' / 'with a lawyer at the table' and 'we tell you plainly which one fits': service descriptions written for this page",
+    "'Especially if you've just moved to Florida' and 'Your old plan may not work here': consistent with the live workshop page, not worded there",
+    "Which firm facts may be called out in the trust strip (board certification, Licensed throughout Florida, address); the strip shows no years in practice, counts or rankings because none are in the crawl",
+    "Intro video: the crawl gives only its title and a poster frame; confirm it still represents the firm and that it may be shown beside the team",
+    "Badges (Super Lawyers Rising Stars, The Fund 2023 President's Circle, Best of Florida 2023, The Fund 6th Circuit Top Contributor) are from 2023-2024; confirm they are current",
+    "Photo use: the October 2026 shoot files and the team portraits come from the live site; confirm the people shown consent to being featured",
+    "Every 'Schedule a Consultation' button on this page now opens the new /consultation/ flow (a choice page, then a short form per situation) instead of the contact page",
+    "Reviews shown: first name + last initial, verbatim quotes. Confirm the firm is comfortable publishing these (Florida Bar Rule 4-7.13) and whether to use first names only. Allison Couri is named in many reviews but is not on the team page; confirm.",
+    "Hero photos trimmed to the team photo and the sign (Nov 13); the lobby and notes photos were dropped from the home hero.",
+    "Variant B headline and subhead are new copy (Jeff Dela Cruz, Nov 12); 'board certified' wording as on the live site."
+  ],
+  "modules": [
+    {
+      "module": "hero",
+      "slots": {
+        "title": "Florida real estate and estate planning attorneys",
+        "tagline": "Board certified, straightforward legal guidance to protect your property, get you through your closing, and secure your family's future, anywhere in Florida.",
+        "images": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Group-Photo-2.jpg",
+            "alt": "The Vaughn Law team standing together in front of the teal Vaughn Law wall"
+          },
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Vaughn-Law-Sign.jpg",
+            "alt": "The Vaughn Law sign in the Corey Avenue office"
+          }
+        ],
+        "actions": [
+          {
+            "text": "Schedule a Consultation",
+            "page": "consultation"
+          },
+          {
+            "text": "See how we can help",
+            "href": "#help"
+          }
+        ]
+      }
+    },
+    {
+      "module": "trust-strip",
+      "slots": {
+        "facts": [
+          {
+            "lead": "Florida Bar Board Certified",
+            "text": "Danielle Vaughn, Real Estate Attorney"
+          },
+          {
+            "lead": "In St. Pete Beach",
+            "text": "One office, clients across Florida"
+          },
+          {
+            "lead": "Licensed throughout Florida",
+            "text": "Not only the Tampa Bay area, the entire state"
+          }
+        ],
+        "logos": [
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/mybadge.png",
+            "alt": "Super Lawyers Rising Stars Award"
+          },
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/2023-PC-BLK-320px.png",
+            "alt": "The Fund 2023 President's Circle Award"
+          },
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/BOFL-2023-Best-Web-234x60-1.jpg",
+            "alt": "Best of Florida 2023 Award"
+          },
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2024/03/CTC-BLK-6-1200px.png",
+            "alt": "The Fund 2023 6th Circuit Top Contributor Award"
+          },
+          {
+            "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2020/04/Board-Certified-Logo-242x300.jpeg",
+            "alt": "The Florida Bar Board Certified"
+          }
+        ]
+      }
+    },
+    {
+      "module": "review-line",
+      "slots": {
+        "rating": "4.9",
+        "text": "",
+        "author": "107 reviews",
+        "source": "Google",
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+      }
+    },
+    {
+      "module": "situation-picker",
+      "slots": {
+        "title": "What brings you here?",
+        "cards": [
+          {
+            "title": "I'm buying or selling a home.",
+            "text": "We handle the contract, the title and the closing, with a lawyer at the table.",
+            "nav": "Real Estate/Buying and Selling"
+          },
+          {
+            "title": "I need to change a deed.",
+            "text": "Adding a spouse, removing a name, or moving a home into a trust, prepared and recorded the right way.",
+            "nav": "Real Estate/Deeds and Title"
+          },
+          {
+            "title": "I have a problem with a tenant.",
+            "text": "Notices, leases and evictions, handled start to finish.",
+            "nav": "Real Estate/Landlord and Tenant"
+          },
+          {
+            "title": "A parent has died.",
+            "text": "We explain what probate is, whether you need it, and take it from there.",
+            "nav": "Estate Planning/Probate"
+          },
+          {
+            "title": "I need a will or a trust.",
+            "text": "We tell you plainly which one fits and what it involves.",
+            "nav": "Estate Planning/Wills and Trusts"
+          },
+          {
+            "title": "I just moved to Florida.",
+            "text": "Your old plan may not work here. We'll show you what to update first.",
+            "nav": "Estate Planning/Overview"
+          }
+        ]
+      }
+    },
+    {
+      "module": "door-pair",
+      "slots": {
+        "anchor": "help",
+        "title": "What we help with",
+        "items": [
+          {
+            "title": "Real estate",
+            "text": "Closings with an attorney in the room, deed changes, landlord and tenant matters, and the disputes that come with property.",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Front-Office.jpg",
+              "alt": "A Vaughn Law team member greets a client at the front office reception"
+            },
+            "links": {
+              "nav_folder": "Real Estate"
+            },
+            "button": {
+              "text": "Real estate law",
+              "nav": "Real Estate/Overview"
+            }
+          },
+          {
+            "title": "Estate planning",
+            "text": "Wills, trusts, powers of attorney and probate, written so your family can actually use them. Especially if you've just moved to Florida.",
+            "image": {
+              "src": "https://dvaughnlaw.com/wp-content/uploads/sites/238/2026/10/Attorneys-in-the-Conference-Room.jpg",
+              "alt": "Three Vaughn Law attorneys in the conference room"
+            },
+            "links": {
+              "nav_folder": "Estate Planning",
+              "planned": "hub"
+            },
+            "button": {
+              "text": "Estate planning",
+              "nav": "Estate Planning/Overview"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "module": "review-cards",
+      "slots": {
+        "eyebrow": "From Google",
+        "title": "What people say after they leave",
+        "rating": "4.9",
+        "count": 107,
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach",
+        "cards": [
+          {
+            "quote": "Their pricing was also very fair and clearly communicated upfront, which we greatly appreciated. Vaughn Law will absolutely be our go-to firm moving forward.",
+            "reviewer": "Carlo D.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "She made what seemed like a daunting task easy and comfortable. Everything was done in a timely manner and the communication was excellent.",
+            "reviewer": "Teri T.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "I went in to their office feeling quite nervous about making such important decisions. I left feeling comfortable about everything.",
+            "reviewer": "Sabina H.",
+            "tag": "client",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          }
+        ]
+      }
+    },
+    {
+      "module": "contact-band",
+      "slots": {
+        "title": "Talk to us",
+        "text": "Call, send a note, or stop by. We'll tell you what it takes before you decide anything.",
+        "lines_from": "closing",
+        "button": {
+          "text": "Schedule a Consultation",
+          "page": "consultation"
+        }
+      }
+    }
+  ]
+}

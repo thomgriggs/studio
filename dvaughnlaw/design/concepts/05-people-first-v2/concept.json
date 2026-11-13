@@ -53,7 +53,9 @@
       "video-feed": "b",
       "video-grid": "pale",
       "choice-cards": "pale",
-      "form": "pale"
+      "form": "pale",
+      "review-line": "a",
+      "review-cards": "b"
     },
     "after_fixed": "a",
     "tinted": [

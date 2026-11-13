@@ -314,6 +314,36 @@
           "page": "blog"
         }
       }
+    },
+    {
+      "module": "review-cards",
+      "slots": {
+        "eyebrow": "From Google",
+        "title": "What families say",
+        "rating": "4.9",
+        "count": 107,
+        "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach",
+        "cards": [
+          {
+            "quote": "Their team took the time to explain my options, including a revocable living trust, pour-over will, and other planning tools, so I felt confident making informed decisions.",
+            "reviewer": "Charlee",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "Our 20 year old wills and such were from our prior residency in Georgia and as things have changed in our lives, including moving to Florida, we needed a lot of help.",
+            "reviewer": "Robert H.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          },
+          {
+            "quote": "I attended the workshop as an interview of sorts to help me decide if Vaughn Law will perform this service for me. Danielle's presentation was informative and entertaining.",
+            "reviewer": "Richard J.",
+            "tag": "estate planning",
+            "href": "https://www.google.com/maps/search/Vaughn+Law+PLLC+350+Corey+Ave+St+Pete+Beach"
+          }
+        ]
+      }
     }
   ]
 }
