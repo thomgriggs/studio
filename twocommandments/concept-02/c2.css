@@ -7,8 +7,26 @@
 	--color_veil: rgba(13, 11, 9, .55);
 	--color_bg-warm: #1e1710;   /* the segue: a warmer, lamp-lit room between the glass and the etching */
 	--color_bg-warm-glow: #3a2c1c;
-	--color_bg-wine: #3b1118;   /* agape: oxblood, wine side not plum */
-	--color_bg-wine-glow: #5a1c25;
+	--color_bg-wine: #4a0c16;   /* agape + the "how complete" panel: blood-red burgundy (v.3: "maybe just a burgundy / blood red"); lightest point #5c0f1b, ink on it is 11.8:1 */
+	--color_bg-wine-glow: #5c0f1b;
+	--color_bg-wine-deep: #350810;
+	--color_cross-wine: #611b28;   /* the woven crosses: a tone or two above the ground */
+	--color_gold-matte: #b8974a;   /* the related verses: matte gold, no sheen; dark ink on it is 6.7:1 */
+	--color_gold-cross: #a8873f;   /* crosses a tone darker; dark ink on it is 5.5:1 */
+	--size_cross-tile: 56px;
+	--img_cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Cpath d='M13 7h2v14h-2zM10 11h8v2h-8zM41 35h2v14h-2zM38 39h8v2h-8z'/%3E%3C/svg%3E"); /* two small Latin crosses on a half-drop repeat; used as a mask so the colour stays a token */
+	--img_snow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+	--color_tv-wood: #5a3a22;      /* the television: a warm walnut cabinet, brass trim, bakelite knobs */
+	--color_tv-wood-hi: #7a5233;
+	--color_tv-wood-lo: #2f1d11;
+	--color_tv-bezel: #16110d;
+	--color_tv-glass: #0a0c0b;
+	--color_tv-glass-lit: #1b201e;
+	--color_tv-trim: #cdb98a;
+	--color_tv-trim-dim: #6b5c3c;
+	--color_tv-knob: #2a221c;
+	--color_tv-knob-hi: #4a3f36;
+	--color_shadow: rgba(0, 0, 0, .55);
 	--font_serif: 'Cormorant Garamond', 'Times New Roman', serif;
 	--font_sans: 'Inter', system-ui, sans-serif;
 	--gospel_matthew: #2f6b45;
@@ -62,8 +80,8 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .pin .stage { z-index: 0; }
 /* the second opener panel (v.3) is its own curtain over the first: same picture, closer crop, its line fading in once its stage has risen */
 .sec--open2 { position: relative; z-index: 2; background: var(--color_bg); }
-.sec__bg--open2 { object-position: center 58%; }
-.sec--open2 .sec__bg { transform: scale(calc(1.42 - var(--p) * .28)); }
+.sec__bg--open2 { object-position: 50% 6%; } /* Tissot is portrait: crop to the top, where Jesus stands on the rock */
+.sec--open2 .sec__bg { transform-origin: 50% 0; transform: scale(calc(1.12 - var(--p) * .1)); }
 .sec--logo { position: relative; z-index: 2; background: var(--color_bg); box-shadow: 0 -40px 80px rgba(13,11,9,.6); }
 
 /* ===== VERSE ===== */
@@ -115,7 +133,6 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .wordmark { margin: 0; font: 400 clamp(1.8rem, 7vmin, 5rem)/1 var(--font_serif); letter-spacing: .28em; text-transform: uppercase; padding-left: .28em; color: var(--color_ink); white-space: nowrap; }
 .wordmark .l { display: inline-block; opacity: 0; translate: 0 6px; transition: opacity 240ms ease, translate 240ms ease; }
 .wordmark .l.is-on { opacity: 1; translate: 0; }
-.wordmark--top { font-size: clamp(1.1rem, 4vmin, 2.8rem); letter-spacing: .22em; padding-left: .22em; margin-bottom: calc(-1 * clamp(8px, 2vmin, 24px)); } /* "Jesus'" over the tablets, same face as "Commandments" (v.3) */
 
 /* ===== SEGUE : one line, sixteen marks (four major, twelve minor) ===== */
 .sec--segue { background: var(--color_bg); }
@@ -149,13 +166,13 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 /* ===== GOSPELS : four windows, choose one ===== */
 .sec--gospels { background: var(--color_bg); gap: clamp(24px, 5vmin, 48px); align-content: center; }
 /* the room takes the chosen Gospel's colour: deep tint on the ground, soft glow behind the windows */
-.sec--gospels, .sec--passage { transition: background-color 1400ms ease; }
+.sec--gospels { transition: background-color 1400ms ease; }
 .sec--gospels::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 45%, var(--color_tint-glow, transparent), transparent 60%); opacity: 0; transition: opacity 1400ms ease; }
 :root[data-gospel] .sec--gospels::before { opacity: 1; }
-:root[data-gospel="matthew"] .sec--gospels, :root[data-gospel="matthew"] .sec--passage { background-color: #0e1b13; --color_tint-glow: rgba(47,107,69,.45); }
-:root[data-gospel="mark"]    .sec--gospels, :root[data-gospel="mark"]    .sec--passage { background-color: #220e0c; --color_tint-glow: rgba(156,47,36,.45); }
-:root[data-gospel="luke"]    .sec--gospels, :root[data-gospel="luke"]    .sec--passage { background-color: #0d1626; --color_tint-glow: rgba(43,108,176,.45); }
-:root[data-gospel="john"]    .sec--gospels, :root[data-gospel="john"]    .sec--passage { background-color: #201806; --color_tint-glow: rgba(201,151,28,.4); }
+:root[data-gospel="matthew"] .sec--gospels, :root[data-gospel="matthew"] .passage-modal__sheet { background-color: #0e1b13; --color_tint-glow: rgba(47,107,69,.45); }
+:root[data-gospel="mark"]    .sec--gospels, :root[data-gospel="mark"]    .passage-modal__sheet { background-color: #220e0c; --color_tint-glow: rgba(156,47,36,.45); }
+:root[data-gospel="luke"]    .sec--gospels, :root[data-gospel="luke"]    .passage-modal__sheet { background-color: #0d1626; --color_tint-glow: rgba(43,108,176,.45); }
+:root[data-gospel="john"]    .sec--gospels, :root[data-gospel="john"]    .passage-modal__sheet { background-color: #201806; --color_tint-glow: rgba(201,151,28,.4); }
 .said--static { position: static; }
 .gospels { display: flex; gap: clamp(12px, 3vmin, 36px); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
 .gospel { position: relative; display: grid; justify-items: center; gap: 14px; width: clamp(96px, 22vmin, 210px); padding: 0; border: 0; background: none; color: var(--color_muted); font: 500 .75rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; transition: color 400ms ease; }
@@ -196,50 +213,49 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .glass .medallion { fill: #f6e7b8; }
 .glass .symbol path { fill: none; stroke: var(--color_lead); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 .proceed { display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid rgba(243,238,228,.35); border-radius: 999px; color: var(--color_ink); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: border-color 300ms ease, background 300ms ease; }
+button.proceed { background: none; cursor: pointer; }
 .proceed:hover { border-color: var(--color_ink); background: rgba(243,238,228,.08); }
 
-/* ===== PASSAGE : the chosen Gospel, read in full ===== */
-.sec--passage { background: var(--color_bg); align-content: center; position: relative; }
-.passage { max-width: 44rem; width: 100%; }
-.passage__gospel { margin: 0 0 8px; font: 500 .75rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
-.passage__ref { margin: 0 0 clamp(20px, 4vmin, 40px); font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
-.passage__text { font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); color: var(--color_ink); max-height: 60vh; overflow: auto; padding-right: 8px; }
-.passage__text p { margin: 0 0 1em; }
-.passage__text .n { font: 500 .6em/1 var(--font_sans); color: var(--color_muted); vertical-align: super; margin-right: .3em; }
+/* ===== PASSAGE : the chosen Gospel opens as a reading panel over the Gospels section (v.3: no longer a scroll section) ===== */
+.passage-modal { position: fixed; inset: 0; z-index: 8; display: grid; place-items: center; padding: var(--space_gutter); background: rgba(13,11,9,.88); } /* above the corner controls */
+.passage-modal[hidden] { display: none; }
+.passage-modal__sheet { position: relative; width: min(100%, 46rem); max-height: 100%; display: grid; padding: clamp(20px, 4vw, 40px); border: 1px solid rgba(243,238,228,.22); border-radius: 18px; background: var(--color_bg-warm); animation: sheet-in 400ms ease both; }
+@keyframes sheet-in { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+.passage { width: 100%; min-height: 0; }
+.passage__gospel { margin: 0 48px 8px 0; font: 500 .75rem/1 var(--font_sans); letter-spacing: .3em; text-transform: uppercase; color: var(--color_muted); }
+.passage__ref { margin: 0 48px clamp(16px, 3vmin, 28px) 0; font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
+.passage__body { max-height: 60vh; overflow: auto; padding-right: 8px; }
+.passage__text { font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); color: var(--color_ink); }
+.passage__text p, .passage__more p { margin: 0 0 1em; }
+.passage__text .n, .passage__more .n { font: 500 .6em/1 var(--font_sans); color: var(--color_muted); vertical-align: super; margin-right: .3em; }
+.passage__more { margin-top: clamp(16px, 3vmin, 28px); padding-top: clamp(16px, 3vmin, 28px); border-top: 1px solid rgba(243,238,228,.22); font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); }
+.passage__more[hidden] { display: none; }
+.passage__more-ref { margin: 0 0 12px; font: 500 .75rem/1.2 var(--font_sans); letter-spacing: .24em; text-transform: uppercase; color: var(--color_muted); }
 .passage[data-gospel="matthew"] .passage__gospel { color: #6fb08a; }
 .passage[data-gospel="mark"]    .passage__gospel { color: #e07a6e; }
 .passage[data-gospel="luke"]    .passage__gospel { color: #7fa9e0; }
 .passage[data-gospel="john"]    .passage__gospel { color: #e0b64a; }
+html.is-locked, html.is-locked body { overflow: hidden; } /* a reading panel is open: the page behind does not scroll */
 
 /* ===== PATHS : the finale — the end of the story: white, thick sans, Design top-left / Shop bottom-right ===== */
 :root { --font_black: 'Archivo Black', 'Arial Black', sans-serif; --color_paper: #f7f5f0; --color_ink-dark: #15130f; }
 .sec--paths { padding: 0; background: var(--color_paper); color: var(--color_ink-dark); }
-.split { position: absolute; inset: 0; display: flex; }
-.half { position: relative; flex: 1 1 0; overflow: hidden; text-decoration: none; color: inherit; background: var(--color_paper); transition: flex 900ms cubic-bezier(.7, 0, .3, 1); }
+/* v.3: nothing here changes size or position on hover or focus (the old halves resized under the pointer and thrashed). Feedback is colour only. */
+.split { width: 100%; min-height: 100vh; min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr; }
+.half { position: relative; display: grid; grid-template-rows: auto 1fr auto; gap: clamp(16px, 3vmin, 32px); padding: clamp(20px, 4vw, 64px); text-decoration: none; background: var(--color_paper); color: var(--color_ink-dark); transition: background-color 220ms ease, color 220ms ease; }
 .half + .half { border-left: 2px solid var(--color_ink-dark); }
-.half__word { position: absolute; margin: 0; font: 400 clamp(3rem, 10.5vw, 11rem)/.85 var(--font_black); letter-spacing: -.03em; text-transform: uppercase; white-space: nowrap; transition: font-size 900ms cubic-bezier(.7, 0, .3, 1), opacity 600ms ease, translate 900ms cubic-bezier(.7, 0, .3, 1); }
-.half--design .half__word { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); }
-.half--shop   .half__word { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); }
-/* supporting graphics: thick ink line drawings in the opposite corner from the word */
-.half__art { position: absolute; width: clamp(140px, 26vmin, 320px); height: auto; fill: none; stroke: var(--color_ink-dark); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: .9; transition: translate 900ms cubic-bezier(.7, 0, .3, 1), opacity 600ms ease; }
-.half--design .half__art { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); }
-.half--shop   .half__art { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); }
-/* the story behind each word, diagonally opposite it */
-.half__more { position: absolute; width: min(70vw, 34ch); display: grid; gap: 24px; opacity: 0; transition: opacity 600ms ease, translate 600ms ease; pointer-events: none; }
-.half--design .half__more { right: clamp(20px, 4vw, 64px); bottom: clamp(20px, 4vw, 64px); justify-items: end; text-align: right; translate: 0 16px; }
-.half--shop   .half__more { left: clamp(20px, 4vw, 64px); top: clamp(20px, 4vw, 64px); justify-items: start; text-align: left; translate: 0 -16px; }
-.half__lede { font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.45 var(--font_sans); color: var(--color_ink-dark); }
-.half__cta { display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--color_ink-dark); color: var(--color_paper); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; }
-/* hover: that side takes the panel; the other narrows to a sliver with its word turned sideways */
-.split:has(.half:hover) .half:not(:hover), .split:has(.half:focus-visible) .half:not(:focus-visible) { flex: 0 0 clamp(72px, 10vw, 160px); }
-.split:has(.half:hover) .half:not(:hover) .half__word, .split:has(.half:focus-visible) .half:not(:focus-visible) .half__word { font-size: clamp(2rem, 5vw, 4.5rem); left: 50%; right: auto; top: 50%; bottom: auto; translate: -50% -50%; rotate: -90deg; }
-.split:has(.half:hover) .half:not(:hover) .half__art, .split:has(.half:focus-visible) .half:not(:focus-visible) .half__art { opacity: 0; }
-.half:hover, .half:focus-visible { flex: 1 1 0; }
-.half:hover .half__word, .half:focus-visible .half__word { font-size: clamp(4rem, 17vw, 19rem); }
-.half--design:hover .half__art, .half--design:focus-visible .half__art { translate: 0 calc(-100% - 40px); opacity: .25; }
-.half--shop:hover .half__art,   .half--shop:focus-visible .half__art   { translate: 0 calc(100% + 40px); opacity: .25; }
-.half:hover .half__more, .half:focus-visible .half__more { opacity: 1; translate: 0 0; transition-delay: 350ms; }
-@media (max-width: 640px) { .split { flex-direction: column; } .half + .half { border-left: 0; border-top: 2px solid var(--color_ink-dark); } .half__more { width: min(80vw, 34ch); } .split:has(.half:hover) .half:not(:hover) .half__word { rotate: 0deg; } }
+.half__word { margin: 0; font: 400 clamp(2.6rem, 8vw, 9rem)/.85 var(--font_black); letter-spacing: -.03em; text-transform: uppercase; white-space: nowrap; }
+/* thick ink line drawings; they follow the text colour so they invert with the half */
+.half__art { align-self: center; justify-self: end; width: clamp(120px, 22vmin, 280px); height: auto; fill: none; stroke: currentColor; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; transition: translate 220ms ease; }
+.half__more { display: grid; gap: 24px; justify-items: start; text-align: left; }
+.half__lede { max-width: 34ch; font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.45 var(--font_sans); }
+.half__cta { display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--color_ink-dark); color: var(--color_paper); font: 500 .8rem/1 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; transition: background-color 220ms ease, color 220ms ease; }
+.half:hover, .half:focus-visible { background: var(--color_ink-dark); color: var(--color_paper); }
+.half:hover .half__cta, .half:focus-visible .half__cta { background: var(--color_paper); color: var(--color_ink-dark); }
+.half:hover .half__art, .half:focus-visible .half__art { translate: 0 -8px; }
+.half:focus-visible { outline-color: var(--color_paper); outline-offset: -8px; } /* inside the half, on the inverted ground */
+.is-light :focus-visible { outline-color: var(--color_ink-dark); }
+@media (max-width: 640px) { .split { grid-template-columns: 1fr; grid-auto-rows: minmax(50svh, auto); } .half + .half { border-left: 0; border-top: 2px solid var(--color_ink-dark); } .half__word { font-size: clamp(3rem, 16vw, 6rem); } .half__art { width: clamp(96px, 28vw, 160px); } .half--shop { padding-bottom: 96px; } }
 /* corner controls on a light slide */
 .corner.is-dark .ctl { background: rgba(21,19,15,.08); color: var(--color_ink-dark); }
 .corner.is-dark .ctl:hover { background: rgba(21,19,15,.16); }
@@ -281,10 +297,11 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .corner.is-dark .ctl--music option { background: var(--color_paper); color: var(--color_ink-dark); }
 
 /* ===== AGAPE : two words trade places, settle, then eight related words ring them ===== */
-.sec--agape { --ag-a: 1; --ag-l: 0; --ag-s: 1; --ag-q1: 1; --ag-q2: 1; min-height: 320vh; background: var(--color_bg-wine); }
-.sec--agape .stage { background: radial-gradient(ellipse at 50% 50%, var(--color_bg-wine-glow), var(--color_bg-wine) 60%, #2a0d12 100%); }
+.sec--agape { --ag-a: 1; --ag-l: 0; --ag-s: 1; --ag-q1: 1; --ag-q2: 1; --ag-e: 0; --ag-pr: 1; min-height: 400vh; background: var(--color_bg-wine); }
+.sec--agape .stage { background: radial-gradient(ellipse at 50% 50%, var(--color_bg-wine-glow), var(--color_bg-wine) 60%, var(--color_bg-wine-deep) 100%); }
 .sec--agape .stage { position: sticky; }
-.agape__pair { position: relative; display: grid; place-items: center; margin: 0; font: 400 clamp(3rem, 11vw, 9rem)/1 var(--font_serif); letter-spacing: .12em; text-transform: uppercase; padding-left: .12em; }
+.agape__lead { position: absolute; left: 50%; top: 50%; translate: -50% -50%; margin: 0; width: max-content; max-width: 80vw; text-align: center; font: italic 400 clamp(1.6rem, 4vw, 3.4rem)/1.3 var(--font_serif); text-wrap: balance; opacity: var(--ag-e); } /* "The essence of these commandments is" — first thing seen, fades before the pair */
+.agape__pair { opacity: var(--ag-pr); position: relative; display: grid; place-items: center; margin: 0; font: 400 clamp(3rem, 11vw, 9rem)/1 var(--font_serif); letter-spacing: .12em; text-transform: uppercase; padding-left: .12em; }
 .agape__w { grid-area: 1 / 1; white-space: nowrap; }
 .agape__w--a { opacity: calc(var(--ag-a) + (1 - var(--ag-a)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * -.55em); }
 .agape__w--l { opacity: calc(var(--ag-l) + (1 - var(--ag-l)) * var(--ag-s)); translate: 0 calc(var(--ag-s) * .55em); font-style: italic; color: #f2c14e; }
@@ -297,29 +314,95 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 .agape__ring li[data-beat="2"] { opacity: var(--ag-q2); }
 .agape__ref { display: block; margin-top: .35em; font: 500 .68rem/1.3 var(--font_sans); letter-spacing: .16em; text-transform: uppercase; color: var(--color_muted); }
 
-/* ===== FLOATING VERSES : the related verses drift; one click opens a reading panel ===== */
-.sec--float { --cols: 3; --rows: 3; display: block; min-height: max(100vh, calc(var(--rows) * 10rem)); background: var(--color_bg); }
-.float__field { position: absolute; inset: var(--space_gutter); }
-.float__verse { position: absolute; display: block; width: calc(100% / var(--cols) - 1.5rem); min-height: 3rem; padding: 12px 16px; border: 1px solid rgba(243,238,228,.22); border-radius: 14px; background: rgba(13,11,9,.6); color: var(--color_ink); text-decoration: none; animation: float-drift calc(14s + var(--i) * 1.7s) ease-in-out calc(var(--i) * -2.3s) infinite alternate; transition: border-color 250ms ease, background 250ms ease; }
-.float__verse:hover, .float__verse:focus-visible { animation-play-state: paused; z-index: 2; border-color: var(--color_ink); background: rgba(30,23,16,.95); }
-.float__verse-ref { display: block; font: 500 .72rem/1.3 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; color: var(--color_muted); }
-.float__verse-title { display: block; margin-top: 4px; font: 400 clamp(1.05rem, 1.6vw, 1.35rem)/1.25 var(--font_serif); }
-@keyframes float-drift { from { translate: -14px 8px; } to { translate: 14px -10px; } }
-.float__read { position: fixed; inset: 0; z-index: 7; display: grid; place-items: center; padding: var(--space_gutter); background: rgba(13,11,9,.88); }
+/* ===== RELATED VERSES : matte gold with a quiet repeat of small crosses; one statement at a time as you scroll ===== */
+.sec--float { display: block; min-height: 0; padding: 0; background: var(--color_gold-matte); color: var(--color_ink-dark); }
+.sec--float::before, .sec--complete::before { content: ""; position: absolute; inset: 0; z-index: -1; -webkit-mask-image: var(--img_cross); mask-image: var(--img_cross); -webkit-mask-size: var(--size_cross-tile); mask-size: var(--size_cross-tile); -webkit-mask-repeat: repeat; mask-repeat: repeat; }
+.sec--float::before { background: var(--color_gold-cross); }
+.vstep { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: var(--space_gutter); }
+.verse--gold { max-width: 22ch; font-size: clamp(2rem, 5.4vw, 4.6rem); color: var(--color_ink-dark); text-shadow: none; }
+.verse--gold .verse__ref { position: static; display: block; translate: none; margin: .7em auto 0; color: var(--color_ink-dark); text-shadow: none; opacity: 0; transition: opacity 600ms linear 1600ms; }
+.verse--gold.is-in .verse__ref { opacity: 1; }
+.vstep__open { display: grid; gap: .5em; width: min(100%, 44rem); padding: 16px 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.vstep > .vstep__open, .vstep > .vmore { opacity: 0; translate: 0 2rem; transition: opacity 900ms ease, translate 900ms ease; }
+.vstep.is-in > .vstep__open, .vstep.is-in > .vmore { opacity: 1; translate: 0 0; }
+.vstep__ref { display: block; font: 500 .78rem/1.3 var(--font_sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; transition: text-decoration-color 250ms ease; }
+.vstep__open:hover .vstep__ref, .vstep__open:focus-visible .vstep__ref { text-decoration-color: currentColor; }
+.vstep__title { display: block; font: italic 400 clamp(1.2rem, 2.2vw, 1.7rem)/1.25 var(--font_serif); }
+.vstep__text { display: block; margin-top: .4em; font: 400 clamp(1.5rem, 3.2vw, 2.5rem)/1.3 var(--font_serif); text-wrap: pretty; }
+/* the last step: a quiet row of the rest */
+.vmore { display: grid; gap: clamp(16px, 3vmin, 28px); justify-items: center; width: min(100%, 46rem); text-align: center; }
+.vmore__h { margin: 0; font: 400 clamp(1.6rem, 3.2vw, 2.4rem)/1.2 var(--font_serif); }
+.vmore__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; margin: 0; padding: 0; list-style: none; }
+.vmore__btn { min-height: 40px; padding: 0 4px; border: 0; background: none; color: inherit; font: 500 .85rem/1 var(--font_sans); letter-spacing: .1em; text-decoration: underline; text-underline-offset: 6px; cursor: pointer; }
+.vmore__btn:hover { text-decoration-thickness: 2px; }
+.float__read { position: fixed; inset: 0; z-index: 8; display: grid; place-items: center; padding: var(--space_gutter); background: rgba(13,11,9,.88); color: var(--color_ink); }
 .float__read[hidden] { display: none; }
 .float__sheet { position: relative; width: min(100%, 44rem); max-height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 16px; padding: clamp(20px, 4vw, 40px); border: 1px solid rgba(243,238,228,.22); border-radius: 18px; background: var(--color_bg-warm); }
 .float__close { position: absolute; top: 8px; right: 8px; width: 48px; height: 48px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: rgba(243,238,228,.14); color: var(--color_ink); cursor: pointer; }
 .float__close:hover { background: rgba(243,238,228,.28); }
+.float__read :focus-visible, .passage-modal :focus-visible { outline-color: var(--color_ink); } /* the panels are dark even over a light section */
 .float__ref { margin: 0; padding-right: 48px; font: 400 clamp(1.6rem, 3.6vw, 2.6rem)/1.1 var(--font_serif); }
 .float__text { overflow: auto; max-height: 60vh; padding-right: 8px; font: 400 clamp(1.1rem, 1.6vw, 1.35rem)/1.7 var(--font_serif); }
 .float__text p { margin: 0; }
 .float__text .n { font: 500 .6em/1 var(--font_sans); color: var(--color_muted); vertical-align: super; margin-right: .3em; }
 
+/* ===== COMPLETE : one question on burgundy, woven with small crosses ===== */
+.sec--complete { background: var(--color_bg-wine); }
+.sec--complete::before { background: var(--color_cross-wine); }
+.sec--complete::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 50%, var(--color_bg-wine) 0%, transparent 60%); opacity: .7; } /* quiets the weave behind the line */
+.complete__line { margin: 0; max-width: 18ch; text-align: center; font: 400 clamp(2rem, 6vw, 5rem)/1.12 var(--font_serif); text-wrap: balance; text-shadow: 0 2px 40px var(--color_shadow); }
+
+/* ===== WATCH : an old television; the screen is dark until it is switched on ===== */
+.sec--watch { background: radial-gradient(ellipse at 50% 55%, var(--color_bg-warm-glow), var(--color_bg-warm) 55%, var(--color_bg) 100%); }
+.watch { width: min(100%, 56rem); display: grid; justify-items: center; gap: clamp(12px, 2.5vmin, 24px); text-align: center; }
+.watch__h { margin: 0; font: 400 clamp(2.2rem, 5vw, 4rem)/1 var(--font_serif); letter-spacing: .02em; }
+.watch__chan { margin: 0; min-height: 1.3em; font: 500 .8rem/1.3 var(--font_sans); letter-spacing: .18em; text-transform: uppercase; color: var(--color_muted); }
+.tv { position: relative; width: 100%; padding-bottom: clamp(18px, 3vw, 30px); }
+.tv__cabinet { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) clamp(88px, 20%, 150px); gap: clamp(10px, 2vw, 22px); padding: clamp(14px, 2.6vw, 28px); border-radius: clamp(14px, 2.4vw, 26px); background: repeating-linear-gradient(90deg, rgba(0,0,0,.05) 0 2px, transparent 2px 7px), linear-gradient(180deg, var(--color_tv-wood-hi), var(--color_tv-wood) 30%, var(--color_tv-wood-lo)); box-shadow: inset 0 1px 0 var(--color_tv-trim-dim), inset 0 -3px 8px var(--color_shadow), 0 24px 50px var(--color_shadow); }
+.tv__bezel { padding: clamp(8px, 1.6vw, 16px); border-radius: clamp(18px, 3vw, 34px); background: var(--color_tv-bezel); box-shadow: inset 0 0 0 2px var(--color_tv-trim-dim), inset 0 6px 14px var(--color_shadow); }
+.tv__glass { position: relative; aspect-ratio: 16 / 10; border-radius: 9% / 14%; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, var(--color_tv-glass-lit), var(--color_tv-glass) 70%); box-shadow: inset 0 0 40px var(--color_shadow); }
+.tv__feed, .tv__feed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--color_tv-glass); }
+.tv[data-state="off"] .tv__feed { display: none; }
+.tv__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; padding: 0; border: 0; background: transparent; color: var(--color_muted); cursor: pointer; transition: color 250ms ease; }
+.tv__play:hover { color: var(--color_ink); }
+.tv__play:focus-visible { outline-offset: -8px; }
+.tv[data-state="on"] .tv__play { display: none; }
+.tv__glare { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(125deg, rgba(255,255,255,.1) 0, rgba(255,255,255,.03) 28%, transparent 40%), radial-gradient(ellipse at 20% 10%, rgba(255,255,255,.07), transparent 40%); }
+.tv__static { position: absolute; inset: 0; z-index: 1; opacity: 0; pointer-events: none; background-image: var(--img_snow); background-size: 160px 160px; }
+.tv__static.is-flash { animation: snow 420ms steps(6) 1; }
+@keyframes snow { 0% { opacity: .95; background-position: 0 0; } 100% { opacity: 0; background-position: -90px 60px; } }
+.tv__controls { display: grid; grid-template-rows: auto auto auto 1fr; justify-items: center; gap: clamp(10px, 1.8vw, 18px); padding: clamp(4px, 1vw, 10px) 0; }
+.tv__dial { position: relative; width: clamp(52px, 70%, 84px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, transparent 0 70%, var(--color_tv-bezel) 71%), repeating-conic-gradient(var(--color_tv-trim) 0 3deg, var(--color_tv-bezel) 3deg 30deg); } /* tick marks round the knob */
+.tv__knob { position: absolute; inset: 14%; border-radius: 50%; background: radial-gradient(circle at 35% 30%, var(--color_tv-knob-hi), var(--color_tv-knob) 70%); box-shadow: 0 3px 8px var(--color_shadow), inset 0 0 0 2px var(--color_tv-trim-dim); rotate: var(--tv-angle, 0deg); transition: rotate 300ms cubic-bezier(.5, 0, .3, 1); }
+.tv__knob::after { content: ""; position: absolute; left: 50%; top: 8%; width: 3px; height: 28%; translate: -50% 0; border-radius: 2px; background: var(--color_tv-trim); }
+.tv__chans { display: flex; gap: 8px; }
+.tv__btn { width: 36px; height: 36px; display: grid; place-items: center; padding: 0; border: 1px solid var(--color_tv-trim-dim); border-radius: 50%; background: radial-gradient(circle at 35% 30%, var(--color_tv-knob-hi), var(--color_tv-knob)); color: var(--color_tv-trim); cursor: pointer; box-shadow: 0 2px 5px var(--color_shadow); transition: color 200ms ease; }
+.tv__btn:hover { color: var(--color_ink); }
+.tv__btn:active { translate: 0 1px; }
+.tv__power { width: 44px; height: 44px; }
+.tv__power[aria-pressed="true"] { color: var(--gospel_john); border-color: var(--gospel_john); }
+.tv__grille { align-self: end; width: 80%; min-height: 48px; height: 100%; max-height: 9rem; border-radius: 8px; background: repeating-linear-gradient(0deg, var(--color_tv-bezel) 0 3px, var(--color_tv-wood-lo) 3px 6px); box-shadow: inset 0 0 6px var(--color_shadow); }
+.tv__legs { position: absolute; left: 9%; right: 9%; bottom: 0; display: flex; justify-content: space-between; pointer-events: none; }
+.tv__legs span { width: clamp(14px, 3vw, 28px); height: clamp(18px, 3vw, 30px); background: linear-gradient(90deg, var(--color_tv-wood-lo), var(--color_tv-wood)); clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%); }
+.watch__alt { margin: 0; }
+.watch__link { display: inline-flex; align-items: center; min-height: 44px; color: var(--color_ink); font: 500 .8rem/1 var(--font_sans); letter-spacing: .12em; text-transform: uppercase; text-underline-offset: 6px; }
+@media (max-width: 560px) {
+	.tv__cabinet { grid-template-columns: minmax(0, 1fr); }
+	.tv__controls { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 18px; }
+	.tv__dial { width: 56px; }
+	.tv__grille { width: 96px; min-height: 36px; height: 36px; align-self: center; }
+}
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
-	.float__verse { animation: none; }
-	.float__verse, .float__close { transition: none; }
+	.float__close, .tv__knob, .tv__play, .tv__btn { transition: none; }
+	.passage-modal__sheet { animation: none; }
+	.tv__static { display: none; }
+	.vstep > .vstep__open, .vstep > .vmore { opacity: 1; translate: none; transition: none; }
+	.vstep__ref { transition: none; }
+	.verse--gold .verse__ref { opacity: 1; transition: none; }
+	.half, .half__cta, .half__art { transition: none; }
 	.sec__bg { animation: none; }
 	.pin .sec__bg { opacity: 1; transform: none; transition: none; }
 	.pin .verse { transition: none; }
@@ -337,7 +420,6 @@ body { margin: 0; background: var(--color_bg); color: var(--color_ink); font: 16
 	.scrub__hint { display: none; }
 	.sec--gospels, .sec--passage, .sec--gospels::before, .door__leaf, .gospels { transition: none; }
 	.gospels.is-entering { transform: none; opacity: 1; }
-	.half, .half__word, .half__more, .half__art { transition: none; }
 	.verse .w { opacity: 1; transform: none; filter: none; }
 	.gospel--corner .corner__symbol { transition: none; transform: none; }
 }

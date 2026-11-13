@@ -26,7 +26,7 @@
 	<!-- ===== SECTION 1B : …YOU WILL KEEP MY COMMANDMENTS — second half on its own panel, John 14:15 in burgundy after it (v.3) ===== -->
 	<section class="sec sec--open sec--open2 pin" id="s1b" aria-labelledby="s1b-h" style="--p:0">
 		<div class="stage">
-			<img class="sec__bg sec__bg--open2" src="assets/bloch-sermon-on-the-mount.jpg" alt="" aria-hidden="true">
+			<img class="sec__bg sec__bg--open2" src="assets/tissot-sermon-of-the-beatitudes.jpg" alt="" aria-hidden="true">
 			<div class="sec__veil" aria-hidden="true"></div>
 		</div>
 		<h2 class="verse verse--open" id="s1b-h" data-copy="If you love me, you will keep my commandments." data-ref="john.14.15" data-split="," data-part="2"></h2>
@@ -36,7 +36,6 @@
 	<section class="sec sec--logo scrub" id="s2" aria-labelledby="s2-h" style="--p:0">
 		<div class="stage">
 			<div class="logo">
-				<p class="wordmark wordmark--top" aria-hidden="true" data-letters>Jesus’</p>
 				<h2 class="tablets" id="s2-h">
 					<span class="tablet tablet--a" aria-hidden="true">
 <svg class="glass" viewBox="0 0 200 440">
@@ -444,7 +443,7 @@
 </g>
 </svg>
 					</span>
-					<span class="sr">Jesus’ II Commandments</span>
+					<span class="sr">II Commandments</span>
 				</h2>
 				<p class="wordmark" aria-hidden="true" data-letters>Commandments</p>
 			</div>
@@ -456,9 +455,10 @@
 	<section class="sec sec--agape scrub" id="s-agape" aria-labelledby="s-agape-h" style="--p:0">
 		<div class="stage">
 			<h2 class="sr" id="s-agape-h">Agape</h2>
+			<p class="agape__lead">The essence of these commandments is</p>
 			<p class="agape__pair">
-				<span class="agape__w agape__w--a">Agape</span>
 				<span class="agape__w agape__w--l">Love</span>
+				<span class="agape__w agape__w--a">Agape</span>
 			</p>
 			<ul class="agape__ring">
 				<li style="--k:0" data-beat="1">Forgives freely <small class="agape__ref">Ephesians 4:32</small></li>
@@ -471,6 +471,11 @@
 				<li style="--k:7" data-beat="2">Sacrifices oneself <small class="agape__ref">John 15:13</small></li>
 			</ul>
 		</div>
+	</section>
+
+	<!-- ===== SECTION COMPLETE : one question on burgundy woven with small crosses (v.3) ===== -->
+	<section class="sec sec--complete" id="s-complete" aria-labelledby="s-complete-h">
+		<h2 class="complete__line reveal" id="s-complete-h" data-words>How complete are these two commandments?</h2>
 	</section>
 
 	<!-- ===== SECTION 4 : JESUS SAID — the whole law and the prophets; Matthew 22:40 in burgundy; choose your version here (v.3: now before the segue) ===== -->
@@ -1565,35 +1570,81 @@
 				<svg class="corner__symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 20l-4 6h8zM8 34c10-6 18-6 24-2 6-4 14-4 24 2-8 2-14 6-16 12h-16c-2-6-8-10-16-12z"/></svg>
 				<span class="gospel__name">John</span>
 			</button>
-			<p class="corners__line">In every Gospel</p>
-			<a class="proceed corners__proceed" href="#s6">Proceed</a>
+			<p class="corners__line">Each Gospel mentions Jesus’ Commandments</p>
+			<button type="button" class="proceed corners__proceed" data-action="open-passage">Proceed</button>
 		</div>
 		<p class="s5-switch" role="group" aria-label="Section 5 layout"><button type="button" data-action="s5" data-s5="doors" aria-pressed="true">Option 1 · doors</button> / <button type="button" data-action="s5" data-s5="corners" aria-pressed="false">Option 2 · corners</button></p>
 	</section>
 
-	<!-- ===== SECTION 6 : THE PASSAGE ===== -->
-	<section class="sec sec--passage" id="s6" aria-labelledby="s6-h">
-		<article class="passage">
-			<p class="passage__gospel" data-field="gospel"></p>
-			<h2 class="passage__ref" id="s6-h" data-field="reference"></h2>
-			<div class="passage__text" data-field="text"></div>
-		</article>
-	</section>
-
-	<!-- ===== SECTION FLOATING VERSES : the related verses drift; each opens a reading panel (filled from TC_DATA.related by c2.js) ===== -->
-	<section class="sec sec--float" id="s-verses" aria-labelledby="s-verses-h">
-		<h2 class="sr" id="s-verses-h">Related verses</h2>
-		<div class="float__field"></div>
-		<div class="float__read" role="dialog" aria-modal="true" aria-labelledby="float-read-h" hidden>
-			<div class="float__sheet">
-				<button type="button" class="float__close" aria-label="Close">
-					<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
-				</button>
-				<h3 class="float__ref" id="float-read-h"></h3>
-				<div class="float__text" tabindex="0"></div>
+	<!-- ===== SECTION WATCH : an old television; channels from TC_DATA.tv (filled by c2.js). Nothing loads from YouTube until it is switched on ===== -->
+	<section class="sec sec--watch" id="s-watch" aria-labelledby="s-watch-h">
+		<div class="watch">
+			<h2 class="watch__h" id="s-watch-h">Watch</h2>
+			<p class="watch__chan" data-field="tv-channel" aria-live="polite"></p>
+			<div class="tv" data-state="off">
+				<div class="tv__cabinet">
+					<div class="tv__bezel">
+						<div class="tv__glass">
+							<div class="tv__feed" data-field="tv-feed"></div>
+							<div class="tv__static" aria-hidden="true"></div>
+							<button type="button" class="tv__play" data-action="tv-power" aria-label="Turn the television on">
+								<svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3v8"/><path d="M7 6.5a8 8 0 1 0 10 0"/></svg>
+							</button>
+							<div class="tv__glare" aria-hidden="true"></div>
+						</div>
+					</div>
+					<div class="tv__controls">
+						<div class="tv__dial" aria-hidden="true"><span class="tv__knob"></span></div>
+						<div class="tv__chans">
+							<button type="button" class="tv__btn" data-action="tv-down" aria-label="Channel down"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+							<button type="button" class="tv__btn" data-action="tv-up" aria-label="Channel up"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+						</div>
+						<button type="button" class="tv__btn tv__power" data-action="tv-power" aria-pressed="false" aria-label="Power"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v8"/><path d="M7 6.5a8 8 0 1 0 10 0"/></svg></button>
+						<div class="tv__grille" aria-hidden="true"></div>
+					</div>
+				</div>
+				<div class="tv__legs" aria-hidden="true"><span></span><span></span></div>
 			</div>
+			<p class="watch__alt"><a class="watch__link" data-field="tv-link" href="https://www.youtube.com/" target="_blank" rel="noopener">Watch on YouTube</a></p>
 		</div>
 	</section>
+
+	<!-- ===== SECTION RELATED VERSES : matte gold, one statement at a time; the featured verses and the rest come from TC_DATA.related (c2.js) ===== -->
+	<section class="sec sec--float is-light" id="s-verses" aria-labelledby="s-verses-h">
+		<h2 class="sr" id="s-verses-h">Related verses</h2>
+		<div class="vstep vstep--first">
+			<p class="verse verse--gold reveal" data-copy="…but the greatest of these is love." data-ref="1corinthians.13.13"></p>
+		</div>
+		<div class="float__field"></div>
+	</section>
+
+	<!-- ===== THE PASSAGE : the chosen Gospel opens as a reading panel over the Gospels section (doors or Proceed) ===== -->
+	<div class="passage-modal" role="dialog" aria-modal="true" aria-labelledby="passage-h" hidden>
+		<div class="passage-modal__sheet">
+			<button type="button" class="float__close passage-modal__close" aria-label="Close">
+				<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+			</button>
+			<article class="passage">
+				<p class="passage__gospel" data-field="gospel"></p>
+				<h2 class="passage__ref" id="passage-h" data-field="reference"></h2>
+				<div class="passage__body" tabindex="0">
+					<div class="passage__text" data-field="text"></div>
+					<div class="passage__more" data-field="more" hidden></div>
+				</div>
+			</article>
+		</div>
+	</div>
+
+	<!-- the verse reading panel (opened from the related verses) -->
+	<div class="float__read" role="dialog" aria-modal="true" aria-labelledby="float-read-h" hidden>
+		<div class="float__sheet">
+			<button type="button" class="float__close" aria-label="Close">
+				<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+			</button>
+			<h3 class="float__ref" id="float-read-h"></h3>
+			<div class="float__text" tabindex="0"></div>
+		</div>
+	</div>
 
 	<!-- ===== SECTION 7 : TWO PATHS — the end of the story: white, thick type, Design | Shop ===== -->
 	<section class="sec sec--paths is-light" id="s7" aria-labelledby="s7-h">

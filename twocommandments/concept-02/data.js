@@ -4,7 +4,8 @@
 /* Shape:                                                                     */
 /*   TC_DATA.versions[]   Bible versions in the picker (bundled or licensed)  */
 /*   TC_DATA.gospels[]    the four Gospel buttons + their passage             */
-/*   TC_DATA.related[]    the "related verses" side track                     */
+/*   TC_DATA.related[]    the "related verses" (featured:true = own step)       */
+/*   TC_DATA.tv[]         television channels { id, label, yt, start }         */
 /*   TC_DATA.share[]      call-to-share verses                                */
 /*   TC_DATA.churches[]   sample churches / non-profits                       */
 /*   TC_DATA.designers[]  seed designer profiles                              */
@@ -30,30 +31,32 @@ window.TC_DATA = (function () {
 	const defaultVersion = 'web'; /* the founder's default is CSB (doc, Oct 2026) — licensed; WEB until then */
 
 	/* ---------------------------------------------------------------------- */
-	/* GOSPELS — panel 5 buttons → panel 6 passages                            */
+	/* GOSPELS — panel 5 buttons → the passage popup (v.3); `more` = extra refs under the main passage. */
+	/* John's 15:9-17 moved here from the related verses (CL). Was: panel 6 passages                */
 	/* symbol + color per the storyboard (Ezekiel 1:5-10, Revelation 4:6-8)    */
 	/* ---------------------------------------------------------------------- */
 	const gospels = [
-		{ id:'matthew', label:'Matthew', symbol:'Winged man', icon:'assets/gospel-matthew.svg', ref:'matthew.22.36-40', meaning:'Humanity, reason and divine inspiration — the Gospel of Jesus’ human nature and genealogy.' },
+		{ id:'matthew', label:'Matthew', symbol:'Winged man', icon:'assets/gospel-matthew.svg', ref:'matthew.22.34-40', meaning:'Humanity, reason and divine inspiration — the Gospel of Jesus’ human nature and genealogy.' },
 		{ id:'mark',    label:'Mark',    symbol:'Lion',       icon:'assets/gospel-mark.svg',    ref:'mark.12.28-34',    meaning:'Courage, royalty and prophetic voice — the Gospel that opens with a voice in the wilderness.' },
-		{ id:'luke',    label:'Luke',    symbol:'Ox',         icon:'assets/gospel-luke.svg',    ref:'luke.10.25-37',    meaning:'Sacrifice, service and strength — the Gospel of compassion and the Good Samaritan.' },
-		{ id:'john',    label:'John',    symbol:'Eagle',      icon:'assets/gospel-john.svg',    ref:'john.13.34-35',    meaning:'Spiritual insight and divine vision — the Gospel that gazes into the sun.' }
+		{ id:'luke',    label:'Luke',    symbol:'Ox',         icon:'assets/gospel-luke.svg',    ref:'luke.10.27-28',    meaning:'Sacrifice, service and strength — the Gospel of compassion and the Good Samaritan.' },
+		{ id:'john',    label:'John',    symbol:'Eagle',      icon:'assets/gospel-john.svg',    ref:'john.15.12-14',    more:['john.15.9-17'], meaning:'Spiritual insight and divine vision — the Gospel that gazes into the sun.' }
 	];
 
 	/* ---------------------------------------------------------------------- */
 	/* RELATED VERSES — panel 11 ("maybe a side track")                        */
 	/* ---------------------------------------------------------------------- */
+	/* v.3: `featured:true` verses get a full-height step of their own (in this order); the rest are the quiet "More" row */
 	const related = [
+		{ ref:'romans.13.8-10',   title:'Love fulfills the Law', featured:true },
+		{ ref:'galatians.5.14',   title:'The whole law in one word', featured:true },
 		{ ref:'matthew.5.43-48',  title:'Love for enemies' },
-		{ ref:'matthew.5.17-20',  title:'The fulfillment of the Law' },
-		{ ref:'john.15.9-17',     title:'As the Father has loved me' },
-		{ ref:'romans.13.8-10',   title:'Love fulfills the Law' },
-		{ ref:'galatians.5.13-14',title:'Life by the Spirit' },
+		{ ref:'matthew.5.17-19',  title:'The fulfillment of the Law' },
+		{ ref:'luke.10.30-37',    title:'The Good Samaritan' },
 		{ ref:'james.2.8',        title:'The royal law' },
 		{ ref:'1john.4.7-12',     title:'God’s love and ours' },
 		{ ref:'1john.4.19-21',    title:'We love because he first loved us' },
-		{ ref:'luke.10.25-37',    title:'The Good Samaritan' }
-		/* the founder's tenth (Galatians 5:14) is covered by galatians.5.13-14 above */
+		{ ref:'galatians.5.13-14',title:'Life by the Spirit' }
+		/* John 15:9-17 left this list: it is the John window's `more` */
 	];
 
 	/* ---------------------------------------------------------------------- */
@@ -157,11 +160,25 @@ window.TC_DATA = (function () {
 
 	/* focus-group test: one set per tradition, picked with ?music= or the picker; YouTube ids, nothing bundled */
 	const musicSets = {
+		cinematic:  { label:'Cinematic',  ids:['cWBi3L-Nx9A'] }, /* CL: "USE this playlist for now" — the default */
 		syriac:     { label:'Syriac',     ids:['uyoXMs8AZcg', '4vdk1jo7Tw8', '5e9rGmiCxJU'] },
 		catholic:   { label:'Catholic',   ids:['FLbyr94LH1I', 'o2_YXd0FPxY'] },
 		orthodox:   { label:'Orthodox',   ids:['zLEXAjetYd4'] },
 		protestant: { label:'Protestant', ids:['DlAZxnpsFdo'] }
 	};
 
-	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split, music, musicSets };
+	/* ---------------------------------------------------------------------- */
+	/* TELEVISION — the "watch" option (CL's doc: GIVE OPTION TO WATCH).        */
+	/* CL will add more channels; each is a YouTube id + start second.         */
+	/* Some of these films may refuse to play embedded: the set always shows a  */
+	/* "Watch on YouTube" link for the current channel.                         */
+	/* ---------------------------------------------------------------------- */
+	const tv = [
+		/* the sermon leads because it plays embedded; the Matthew film is age-restricted on YouTube and only opens through the link */
+		{ id:'love',    label:'Love · Aaron Burke',    yt:'JLk6Xfwd09U', start:1140 },
+		{ id:'matthew', label:'The Gospel of Matthew', yt:'-pUy_ytMt3U', start:6829 },
+		{ id:'john',    label:'The Gospel of John',    yt:'IZLDEWg9JkU', start:7349 }
+	];
+
+	return { versions, defaultVersion, gospels, related, share, churches, designers, products, split, music, musicSets, tv };
 })();

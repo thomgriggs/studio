@@ -61,18 +61,27 @@
 		/* data-show-ref: the reference follows the verse (burgundy, like the opener's) */
 		if ('showRef' in h.dataset) { var ref = document.createElement('span'); ref.className = 'verse__ref'; ref.textContent = passage(h.dataset.ref).reference; h.appendChild(ref); }
 	}
+	/* the line on the gold panel: pinned wording (data-copy) with its reference beneath, in the opener's small-reference style */
+	function renderQuote(h) {
+		var t = h.dataset.copy || text(h.dataset.ref), s = document.createElement('span'), ref = document.createElement('span');
+		h.textContent = ''; s.className = 'verse__part'; words(s, t); h.appendChild(s);
+		ref.className = 'verse__ref'; ref.textContent = passage(h.dataset.ref).reference; h.appendChild(ref);
+	}
 	function renderAll() {
 		document.querySelectorAll('.verse--open').forEach(renderOpen);
+		document.querySelectorAll('.verse--gold').forEach(renderQuote);
 		document.querySelectorAll('.verse--law').forEach(renderVerse);
 		document.querySelectorAll('[data-words]').forEach(function (el) { if (!el.dataset.ref) { words(el, el.dataset.copy || (el.dataset.copy = el.textContent)); } });
 		renderFloat();
 	}
-	renderAll();
-
-	/* reveal when a section scrolls into view; the opener reveals at once */
+	/* reveal when a section scrolls into view; the opener reveals at once. (defined before renderAll: the verse steps observe themselves as they are built) */
 	var io = new IntersectionObserver(function (entries) {
 		entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); } });
 	}, { threshold: .4 });
+	/* a reading panel is open: the page behind does not scroll */
+	var locks = 0;
+	function lockScroll(on) { locks = Math.max(0, locks + (on ? 1 : -1)); document.documentElement.classList.toggle('is-locked', locks > 0); }
+	renderAll();
 	document.querySelectorAll('.reveal, .segue').forEach(function (el) { io.observe(el); });
 	document.querySelectorAll('.prophets li').forEach(function (li, i) { li.style.setProperty('--i', i); });
 	/* opener: the picture fades in, then the words, then the light on them */
@@ -86,23 +95,18 @@
 	if (bg && !bg.complete) { bg.addEventListener('load', openerIn, { once: true }); bg.addEventListener('error', openerIn, { once: true }); } else { openerIn(); }
 
 	/* ---------------------------------------------------------------- */
-	/* GOSPELS — choose one window; its passage renders in section 6     */
+	/* GOSPELS — choose one window; its passage opens as a popup (v.3)    */
 	/* choice persists in tc-gospel; without one, Matthew reads first     */
 	/* ---------------------------------------------------------------- */
 	var gospelsEl = document.querySelector('.gospels');
 	function gospelById(id) { return TC_DATA.gospels.filter(function (g) { return g.id === id; })[0]; }
-	function renderPassage(id) {
-		var g = gospelById(id) || TC_DATA.gospels[0], ps = passage(g.ref), art = document.querySelector('.passage');
-		if (!art) { return; }
-		art.dataset.gospel = g.id;
-		art.querySelector('[data-field="gospel"]').textContent = 'The Gospel of ' + g.label;
-		art.querySelector('[data-field="reference"]').textContent = ps.reference;
-		var box = art.querySelector('[data-field="text"]'); box.textContent = '';
+	/* one passage as a paragraph of numbered verses; first / second / commandment(s) stand out in gold */
+	function fillPassage(box, ps) {
+		box.textContent = '';
 		var para = document.createElement('p');
 		ps.verses.forEach(function (v) {
 			var n = document.createElement('span'); n.className = 'n'; n.textContent = v.n;
 			para.appendChild(n);
-			/* first / second / commandment(s) stand out in gold */
 			v.text.split(/\s+/).filter(Boolean).forEach(function (w) {
 				if (/^(first|second|commandments?)$/.test(w.replace(/[^A-Za-z]/g, '').toLowerCase())) {
 					var e = document.createElement('span'); e.className = 'emph'; e.textContent = w; para.appendChild(e);
@@ -112,6 +116,22 @@
 		});
 		box.appendChild(para);
 	}
+	function renderPassage(id) {
+		var g = gospelById(id) || TC_DATA.gospels[0], ps = passage(g.ref), art = document.querySelector('.passage');
+		if (!art) { return; }
+		art.dataset.gospel = g.id;
+		art.querySelector('[data-field="gospel"]').textContent = 'The Gospel of ' + g.label;
+		art.querySelector('[data-field="reference"]').textContent = ps.reference;
+		fillPassage(art.querySelector('[data-field="text"]'), ps);
+		/* g.more: further passages beneath the main one, each under its own small heading */
+		var more = art.querySelector('[data-field="more"]'); more.textContent = '';
+		(g.more || []).forEach(function (ref) {
+			var mp = passage(ref); if (!mp) { return; }
+			var h = document.createElement('h3'); h.className = 'passage__more-ref'; h.textContent = mp.reference; more.appendChild(h);
+			var box = document.createElement('div'); fillPassage(box, mp); more.appendChild(box);
+		});
+		more.hidden = !more.children.length;
+	}
 	function setGospel(id) {
 		localStorage.setItem('tc-gospel', id);
 		document.documentElement.dataset.gospel = id; /* the room takes the Gospel's colour */
@@ -119,7 +139,27 @@
 		if (gospelsEl) { gospelsEl.classList.add('has-choice'); }
 		renderPassage(id);
 	}
-	/* click: the door opens, the row drifts in through it, the passage section takes over, then the row resets for the way back */
+	/* the popup: modelled on the verse reading panel — close button, Esc, backdrop click, focus in and back out, body scroll locked */
+	var pModal = document.querySelector('.passage-modal'), pClose = pModal.querySelector('.passage-modal__close'), pBody = pModal.querySelector('.passage__body'), pOpener = null, pReset = null;
+	function openPassage(opener, reset) {
+		pOpener = opener; pReset = reset || null;
+		pModal.hidden = false; lockScroll(true); pBody.scrollTop = 0; pClose.focus();
+	}
+	function closePassage() {
+		if (pModal.hidden) { return; }
+		pModal.hidden = true; lockScroll(false);
+		if (pReset) { pReset(); pReset = null; } /* the doors close again */
+		if (pOpener) { pOpener.focus(); pOpener = null; }
+	}
+	pClose.addEventListener('click', closePassage);
+	pModal.addEventListener('click', function (ev) { if (ev.target === pModal) { closePassage(); } });
+	document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !pModal.hidden) { ev.preventDefault(); closePassage(); } });
+	pModal.addEventListener('keydown', function (ev) {
+		if (ev.key !== 'Tab') { return; } /* keep focus inside: close button <-> text */
+		if (ev.shiftKey && document.activeElement === pClose) { ev.preventDefault(); pBody.focus(); }
+		else if (!ev.shiftKey && document.activeElement === pBody) { ev.preventDefault(); pClose.focus(); }
+	});
+	/* click: the door opens, the row drifts in through it, then the popup opens over the room; closing resets the doors */
 	var entering = false;
 	function enter(btn) {
 		if (entering) { return; }
@@ -128,14 +168,10 @@
 		var r = btn.getBoundingClientRect(), g = gospelsEl.getBoundingClientRect();
 		gospelsEl.style.setProperty('--door_x', ((r.left + r.width / 2 - g.left) / g.width * 100).toFixed(1) + '%');
 		btn.classList.add('is-open');
-		var delay = reduced ? 0 : 1500;
 		setTimeout(function () { gospelsEl.classList.add('is-entering'); }, reduced ? 0 : 100);
 		setTimeout(function () {
-			document.getElementById('s6').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-			setTimeout(function () {
-				gospelsEl.classList.remove('is-entering'); btn.classList.remove('is-open'); entering = false;
-			}, reduced ? 0 : 900);
-		}, delay);
+			openPassage(btn, function () { gospelsEl.classList.remove('is-entering'); btn.classList.remove('is-open'); entering = false; });
+		}, reduced ? 0 : 1500);
 	}
 	document.querySelectorAll('.gospels:not(.gospels--corners) .gospel').forEach(function (b) { b.addEventListener('click', function () { enter(b); }); });
 	var saved = localStorage.getItem('tc-gospel');
@@ -237,7 +273,7 @@
 	});
 
 	/* ---------------------------------------------------------------- */
-	/* AGAPE — scroll drives the crossfade of AGAPE / LOVE, then two beats */
+	/* AGAPE — an italic lead-in fades, then scroll drives LOVE / AGAPE, then two beats */
 	/* of related words (placeholders until the founder's chart arrives)    */
 	/* ---------------------------------------------------------------- */
 	var agape = document.querySelector('.sec--agape');
@@ -245,42 +281,52 @@
 		if (!agape) { return; }
 		var r = agape.getBoundingClientRect(), track = r.height - innerHeight;
 		var p = reduced ? 1 : Math.min(1, Math.max(0, -r.top / track));
-		/* 0 to .3: three full crossfades (AGAPE shows at both ends), .3 to .4: they settle stacked */
-		var a = .5 + .5 * Math.cos(Math.min(1, p / .3) * Math.PI * 6);
-		agape.style.setProperty('--ag-a', a.toFixed(3));
-		agape.style.setProperty('--ag-l', (1 - a).toFixed(3));
-		agape.style.setProperty('--ag-s', phase(p, .3, .4));
-		agape.style.setProperty('--ag-q1', phase(p, .4, .65));
-		agape.style.setProperty('--ag-q2', phase(p, .7, 1));
+		/* "The essence of these commandments is" reads first (0 to .04) and fades by .14; the pair appears (.12 to .2);        */
+		/* then LOVE and AGAPE trade places, LOVE first, five crossings (.16 to .46); they settle stacked (.46 to .56); the ring follows */
+		var l = .5 + .5 * Math.cos(Math.min(1, Math.max(0, (p - .16) / .3)) * Math.PI * 5);
+		agape.style.setProperty('--ag-e', (1 - phase(p, .04, .14)).toFixed(3));
+		agape.style.setProperty('--ag-pr', phase(p, .12, .2).toFixed(3));
+		agape.style.setProperty('--ag-l', l.toFixed(3));
+		agape.style.setProperty('--ag-a', (1 - l).toFixed(3));
+		agape.style.setProperty('--ag-s', phase(p, .46, .56));
+		agape.style.setProperty('--ag-q1', phase(p, .56, .76));
+		agape.style.setProperty('--ag-q2', phase(p, .8, 1));
 	}
 	addEventListener('scroll', agapeScrub, { passive: true });
 	addEventListener('resize', agapeScrub);
 	agapeScrub();
 
 	/* ---------------------------------------------------------------- */
-	/* FLOATING VERSES — TC_DATA.related drifts; click opens a reading panel */
+	/* RELATED VERSES — the featured ones get a full-height step each,   */
+	/* the rest sit in a quiet row; any of them opens the reading panel   */
 	/* renderFloat() is also called from renderAll(), before this block runs */
 	/* ---------------------------------------------------------------- */
+	function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) { e.className = cls; } if (txt) { e.textContent = txt; } return e; }
 	function renderFloat() {
 		var sec = document.querySelector('.sec--float');
 		if (!sec) { return; }
-		var field = sec.querySelector('.float__field'), list = TC_DATA.related;
-		var cols = innerWidth < 640 ? 2 : 3, rows = Math.ceil(list.length / cols);
-		sec.style.setProperty('--cols', cols); sec.style.setProperty('--rows', rows);
+		var field = sec.querySelector('.float__field'), list = TC_DATA.related.filter(function (it) { return passage(it.ref); });
 		field.textContent = '';
-		var seed = 7, rnd = function () { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
-		/* each verse gets its own cell of a grid, jittered inside it, so none overlap */
-		list.forEach(function (it, i) {
-			var ps = passage(it.ref); if (!ps) { return; }
-			var a = document.createElement('a'); a.className = 'float__verse'; a.href = '#'; a.dataset.ref = it.ref;
-			a.style.setProperty('--i', i);
-			a.style.left = ((i % cols + rnd() * .28) / cols * 100).toFixed(1) + '%';
-			a.style.top = ((Math.floor(i / cols) + rnd() * .5) / rows * 100).toFixed(1) + '%';
-			var r = document.createElement('span'); r.className = 'float__verse-ref'; r.textContent = ps.reference;
-			var t = document.createElement('span'); t.className = 'float__verse-title'; t.textContent = it.title;
-			a.appendChild(r); a.appendChild(t); field.appendChild(a);
+		list.filter(function (it) { return it.featured; }).forEach(function (it) {
+			var step = el('div', 'vstep'), b = el('button', 'vstep__open');
+			b.type = 'button'; b.dataset.ref = it.ref;
+			b.appendChild(el('span', 'vstep__ref', passage(it.ref).reference));
+			b.appendChild(el('span', 'vstep__title', it.title));
+			b.appendChild(el('span', 'vstep__text', text(it.ref)));
+			step.appendChild(b); field.appendChild(step); io.observe(step);
 		});
-		var panel = sec.querySelector('.float__read');
+		var rest = list.filter(function (it) { return !it.featured; });
+		if (rest.length) {
+			var step = el('div', 'vstep'), nav = el('nav', 'vmore'), ul = el('ul', 'vmore__list');
+			nav.setAttribute('aria-labelledby', 'vmore-h');
+			var h = el('h3', 'vmore__h', 'More on these two commandments'); h.id = 'vmore-h';
+			rest.forEach(function (it) {
+				var li = el('li'), b = el('button', 'vmore__btn', passage(it.ref).reference);
+				b.type = 'button'; b.dataset.ref = it.ref; b.title = it.title; li.appendChild(b); ul.appendChild(li);
+			});
+			nav.appendChild(h); nav.appendChild(ul); step.appendChild(nav); field.appendChild(step); io.observe(step);
+		}
+		var panel = document.querySelector('.float__read');
 		if (!panel.hidden && panel.dataset.ref) { fillRead(panel, panel.dataset.ref); } /* version changed while reading */
 	}
 	function fillRead(panel, ref) {
@@ -297,25 +343,23 @@
 	}
 	(function () {
 		var sec = document.querySelector('.sec--float'); if (!sec) { return; }
-		var panel = sec.querySelector('.float__read'), closeBtn = panel.querySelector('.float__close'), body = panel.querySelector('.float__text'), opener = null;
-		function close() { panel.hidden = true; panel.dataset.ref = ''; if (opener) { opener.focus(); opener = null; } }
+		var panel = document.querySelector('.float__read'), closeBtn = panel.querySelector('.float__close'), body = panel.querySelector('.float__text'), opener = null;
+		function close() { if (panel.hidden) { return; } panel.hidden = true; panel.dataset.ref = ''; lockScroll(false); if (opener) { opener.focus(); opener = null; } }
 		sec.querySelector('.float__field').addEventListener('click', function (ev) {
-			var a = ev.target.closest('.float__verse'); if (!a) { return; }
+			var a = ev.target.closest('.vstep__open, .vmore__btn'); if (!a) { return; }
 			ev.preventDefault(); opener = a;
-			fillRead(panel, a.dataset.ref); panel.hidden = false; body.scrollTop = 0; closeBtn.focus();
+			fillRead(panel, a.dataset.ref); panel.hidden = false; lockScroll(true); body.scrollTop = 0; closeBtn.focus();
 		});
 		closeBtn.addEventListener('click', close);
 		panel.addEventListener('click', function (ev) { if (ev.target === panel) { close(); } });
+		document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !panel.hidden) { ev.preventDefault(); close(); } });
 		panel.addEventListener('keydown', function (ev) {
-			if (ev.key === 'Escape') { ev.preventDefault(); close(); }
 			if (ev.key === 'Tab') { /* keep focus inside: close button <-> text */
 				var first = closeBtn, last = body;
 				if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
 				else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
 			}
 		});
-		var cols0 = innerWidth < 640 ? 2 : 3, rt;
-		addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { var c = innerWidth < 640 ? 2 : 3; if (c !== cols0) { cols0 = c; renderFloat(); } }, 200); });
 	})();
 
 	/* ---------------------------------------------------------------- */
@@ -333,7 +377,7 @@
 		if (i < 0 || i >= list.length) { return; }
 		var t = list[i], r = t.getBoundingClientRect();
 		/* a tall scrubbed section is entered at its top going down and at its end coming up */
-		var y = scrollY + r.top + (step < 0 && t.classList.contains('scrub') ? r.height - innerHeight : 0);
+		var y = scrollY + r.top + (step < 0 && (t.classList.contains('scrub') || t.classList.contains('sec--float')) ? r.height - innerHeight : 0);
 		scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
 	}
 	function syncCorner() {
@@ -361,22 +405,21 @@
 		if (mode === 'corners' || u.searchParams.has('s5')) { u.searchParams.set('s5', mode); history.replaceState(null, '', u); }
 	}
 	document.querySelectorAll('[data-action="s5"]').forEach(function (b) { b.addEventListener('click', function () { setS5(b.dataset.s5); }); });
-	/* a corner choice sets the Gospel and moves on; no door animation */
-	document.querySelectorAll('.gospel--corner').forEach(function (b) {
-		b.addEventListener('click', function () {
-			setGospel(b.dataset.gospel);
-			document.getElementById('s6').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
-		});
+	/* a corner choice sets the Gospel; Proceed opens its passage (no door animation) */
+	document.querySelectorAll('.gospel--corner').forEach(function (b) { b.addEventListener('click', function () { setGospel(b.dataset.gospel); }); });
+	document.querySelector('[data-action="open-passage"]').addEventListener('click', function (ev) {
+		if (!document.querySelector('.gospel--corner[aria-pressed="true"]')) { toast('Choose a Gospel first'); return; }
+		openPassage(ev.currentTarget);
 	});
 	setS5(new URLSearchParams(location.search).get('s5'));
 
 	/* ---------------------------------------------------------------- */
 	/* MUSIC — the founder's YouTube picks, hidden player, user-started     */
 	/* ---------------------------------------------------------------- */
-	/* the set comes from ?music= (syriac | catholic | orthodox | protestant), default syriac */
+	/* the set comes from ?music= (cinematic | syriac | catholic | orthodox | protestant), default cinematic (CL: "USE this playlist for now") */
 	var SETS = TC_DATA.musicSets;
 	var setKey = new URLSearchParams(location.search).get('music');
-	if (!SETS[setKey]) { setKey = 'syriac'; }
+	if (!SETS[setKey]) { setKey = 'cinematic'; }
 	var loadedKey = setKey;
 	function tracks() { return SETS[setKey].ids; }
 	var player = null, ready = false, wanted = false;
@@ -425,4 +468,45 @@
 		if (!ready) { return; }
 		wanted ? player.playVideo() : player.pauseVideo();
 	});
+
+	/* ---------------------------------------------------------------- */
+	/* TELEVISION — nothing loads from YouTube until it is switched on;   */
+	/* channels come from TC_DATA.tv; powering on pauses the page music   */
+	/* ---------------------------------------------------------------- */
+	(function () {
+		var tvEl = document.querySelector('.tv'), chans = TC_DATA.tv;
+		if (!tvEl || !chans || !chans.length) { return; }
+		var feed = tvEl.querySelector('[data-field="tv-feed"]'), snow = tvEl.querySelector('.tv__static'), power = tvEl.querySelector('.tv__power'), play = tvEl.querySelector('.tv__play');
+		var chanEl = document.querySelector('[data-field="tv-channel"]'), link = document.querySelector('[data-field="tv-link"]');
+		var ch = 0, on = false, angle = 0;
+		function show() {
+			var c = chans[ch];
+			chanEl.textContent = 'Channel ' + (ch + 1) + ' · ' + c.label;
+			link.href = 'https://www.youtube.com/watch?v=' + c.yt + (c.start ? '&t=' + c.start + 's' : '');
+			link.setAttribute('aria-label', 'Watch on YouTube: ' + c.label + ' (opens in a new tab)');
+			tvEl.style.setProperty('--tv-angle', angle + 'deg');
+		}
+		function load() {
+			var c = chans[ch], f = document.createElement('iframe');
+			feed.textContent = '';
+			f.title = 'Television: ' + c.label;
+			f.src = 'https://www.youtube-nocookie.com/embed/' + c.yt + '?start=' + (c.start || 0) + '&autoplay=1&rel=0&playsinline=1';
+			f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.setAttribute('allowfullscreen', '');
+			feed.appendChild(f);
+		}
+		function flash() { if (reduced) { return; } snow.classList.remove('is-flash'); void snow.offsetWidth; snow.classList.add('is-flash'); }
+		function setPower(v) {
+			on = v; tvEl.dataset.state = v ? 'on' : 'off'; power.setAttribute('aria-pressed', v ? 'true' : 'false');
+			if (v) {
+				if (wanted) { wanted = false; label(false); if (player && ready) { player.pauseVideo(); } } /* two sounds must not overlap */
+				flash(); load();
+				if (document.activeElement === play || document.activeElement === document.body) { power.focus({ preventScroll: true }); }
+			} else { feed.textContent = ''; }
+		}
+		function step(d) { ch = (ch + d + chans.length) % chans.length; angle += d * 30; show(); if (on) { flash(); load(); } }
+		tvEl.querySelectorAll('[data-action="tv-power"]').forEach(function (b) { b.addEventListener('click', function () { setPower(!on); }); });
+		tvEl.querySelector('[data-action="tv-up"]').addEventListener('click', function () { step(1); });
+		tvEl.querySelector('[data-action="tv-down"]').addEventListener('click', function () { step(-1); });
+		show();
+	})();
 })();

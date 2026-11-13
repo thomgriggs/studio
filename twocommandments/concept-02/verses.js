@@ -398,6 +398,141 @@ window.TC_VERSES = {
 					"text": "He said to them, “Go into all the world, and preach the Good News to the whole creation."
 				}
 			]
+		},
+		"john.15.12-14": {
+			"reference": "John 15:12-14",
+			"verses": [
+				{
+					"n": 12,
+					"text": "“This is my commandment, that you love one another, even as I have loved you."
+				},
+				{
+					"n": 13,
+					"text": "Greater love has no one than this, that someone lay down his life for his friends."
+				},
+				{
+					"n": 14,
+					"text": "You are my friends, if you do whatever I command you."
+				}
+			]
+		},
+		"luke.10.27-28": {
+			"reference": "Luke 10:27-28",
+			"verses": [
+				{
+					"n": 27,
+					"text": "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”"
+				},
+				{
+					"n": 28,
+					"text": "He said to him, “You have answered correctly. Do this, and you will live.”"
+				}
+			]
+		},
+		"luke.10.30-37": {
+			"reference": "Luke 10:30-37",
+			"verses": [
+				{
+					"n": 30,
+					"text": "Jesus answered, “A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead."
+				},
+				{
+					"n": 31,
+					"text": "By chance a certain priest was going down that way. When he saw him, he passed by on the other side."
+				},
+				{
+					"n": 32,
+					"text": "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side."
+				},
+				{
+					"n": 33,
+					"text": "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,"
+				},
+				{
+					"n": 34,
+					"text": "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him."
+				},
+				{
+					"n": 35,
+					"text": "On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’"
+				},
+				{
+					"n": 36,
+					"text": "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”"
+				},
+				{
+					"n": 37,
+					"text": "He said, “He who showed mercy on him.” Then Jesus said to him, “Go and do likewise.”"
+				}
+			]
+		},
+		"matthew.22.34-40": {
+			"reference": "Matthew 22:34-40",
+			"verses": [
+				{
+					"n": 34,
+					"text": "But the Pharisees, when they heard that he had silenced the Sadducees, gathered themselves together."
+				},
+				{
+					"n": 35,
+					"text": "One of them, a lawyer, asked him a question, testing him."
+				},
+				{
+					"n": 36,
+					"text": "“Teacher, which is the greatest commandment in the law?”"
+				},
+				{
+					"n": 37,
+					"text": "Jesus said to him, “‘You shall love the Lord your God with all your heart, with all your soul, and with all your mind.’"
+				},
+				{
+					"n": 38,
+					"text": "This is the first and great commandment."
+				},
+				{
+					"n": 39,
+					"text": "A second likewise is this, ‘You shall love your neighbor as yourself.’"
+				},
+				{
+					"n": 40,
+					"text": "The whole law and the prophets depend on these two commandments.”"
+				}
+			]
+		},
+		"matthew.5.17-19": {
+			"reference": "Matthew 5:17-19",
+			"verses": [
+				{
+					"n": 17,
+					"text": "“Don’t think that I came to destroy the law or the prophets. I didn’t come to destroy, but to fulfill."
+				},
+				{
+					"n": 18,
+					"text": "For most certainly, I tell you, until heaven and earth pass away, not even one smallest letter or one tiny pen stroke shall in any way pass away from the law, until all things are accomplished."
+				},
+				{
+					"n": 19,
+					"text": "Whoever, therefore, shall break one of these least commandments, and teach others to do so, shall be called least in the Kingdom of Heaven; but whoever shall do and teach them shall be called great in the Kingdom of Heaven."
+				}
+			]
+		},
+		"1corinthians.13.13": {
+			"reference": "1 Corinthians 13:13",
+			"verses": [
+				{
+					"n": 13,
+					"text": "But now faith, hope, and love remain—these three. The greatest of these is love."
+				}
+			]
+		},
+		"galatians.5.14": {
+			"reference": "Galatians 5:14",
+			"verses": [
+				{
+					"n": 14,
+					"text": "For the whole law is fulfilled in one word, in this: “You shall love your neighbor as yourself.”"
+				}
+			]
 		}
 	},
 	"kjv": {
@@ -794,6 +929,141 @@ window.TC_VERSES = {
 					"text": "And he said unto them, Go ye into all the world, and preach the gospel to every creature."
 				}
 			]
+		},
+		"john.15.12-14": {
+			"reference": "John 15:12-14",
+			"verses": [
+				{
+					"n": 12,
+					"text": "This is my commandment, That ye love one another, as I have loved you."
+				},
+				{
+					"n": 13,
+					"text": "Greater love hath no man than this, that a man lay down his life for his friends."
+				},
+				{
+					"n": 14,
+					"text": "Ye are my friends, if ye do whatsoever I command you."
+				}
+			]
+		},
+		"luke.10.27-28": {
+			"reference": "Luke 10:27-28",
+			"verses": [
+				{
+					"n": 27,
+					"text": "And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself."
+				},
+				{
+					"n": 28,
+					"text": "And he said unto him, Thou hast answered right: this do, and thou shalt live."
+				}
+			]
+		},
+		"luke.10.30-37": {
+			"reference": "Luke 10:30-37",
+			"verses": [
+				{
+					"n": 30,
+					"text": "And Jesus answering said, A certain man went down from Jerusalem to Jericho, and fell among thieves, which stripped him of his raiment, and wounded him, and departed, leaving him half dead."
+				},
+				{
+					"n": 31,
+					"text": "And by chance there came down a certain priest that way: and when he saw him, he passed by on the other side."
+				},
+				{
+					"n": 32,
+					"text": "And likewise a Levite, when he was at the place, came and looked on him, and passed by on the other side."
+				},
+				{
+					"n": 33,
+					"text": "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him,"
+				},
+				{
+					"n": 34,
+					"text": "And went to him, and bound up his wounds, pouring in oil and wine, and set him on his own beast, and brought him to an inn, and took care of him."
+				},
+				{
+					"n": 35,
+					"text": "And on the morrow when he departed, he took out two pence, and gave them to the host, and said unto him, Take care of him; and whatsoever thou spendest more, when I come again, I will repay thee."
+				},
+				{
+					"n": 36,
+					"text": "Which now of these three, thinkest thou, was neighbour unto him that fell among the thieves?"
+				},
+				{
+					"n": 37,
+					"text": "And he said, He that shewed mercy on him. Then said Jesus unto him, Go, and do thou likewise."
+				}
+			]
+		},
+		"matthew.22.34-40": {
+			"reference": "Matthew 22:34-40",
+			"verses": [
+				{
+					"n": 34,
+					"text": "But when the Pharisees had heard that he had put the Sadducees to silence, they were gathered together."
+				},
+				{
+					"n": 35,
+					"text": "Then one of them, which was a lawyer, asked him a question, tempting him, and saying,"
+				},
+				{
+					"n": 36,
+					"text": "Master, which is the great commandment in the law?"
+				},
+				{
+					"n": 37,
+					"text": "Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind."
+				},
+				{
+					"n": 38,
+					"text": "This is the first and great commandment."
+				},
+				{
+					"n": 39,
+					"text": "And the second is like unto it, Thou shalt love thy neighbour as thyself."
+				},
+				{
+					"n": 40,
+					"text": "On these two commandments hang all the law and the prophets."
+				}
+			]
+		},
+		"matthew.5.17-19": {
+			"reference": "Matthew 5:17-19",
+			"verses": [
+				{
+					"n": 17,
+					"text": "Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil."
+				},
+				{
+					"n": 18,
+					"text": "For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled."
+				},
+				{
+					"n": 19,
+					"text": "Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them, the same shall be called great in the kingdom of heaven."
+				}
+			]
+		},
+		"1corinthians.13.13": {
+			"reference": "1 Corinthians 13:13",
+			"verses": [
+				{
+					"n": 13,
+					"text": "And now abideth faith, hope, charity, these three; but the greatest of these is charity."
+				}
+			]
+		},
+		"galatians.5.14": {
+			"reference": "Galatians 5:14",
+			"verses": [
+				{
+					"n": 14,
+					"text": "For all the law is fulfilled in one word, even in this; Thou shalt love thy neighbour as thyself."
+				}
+			]
 		}
 	},
 	"asv": {
@@ -1188,6 +1458,141 @@ window.TC_VERSES = {
 				{
 					"n": 15,
 					"text": "And he said unto them, Go ye into all the world, and preach the gospel to the whole creation."
+				}
+			]
+		},
+		"john.15.12-14": {
+			"reference": "John 15:12-14",
+			"verses": [
+				{
+					"n": 12,
+					"text": "This is my commandment, that ye love one another, even as I have loved you."
+				},
+				{
+					"n": 13,
+					"text": "Greater love hath no man than this, that a man lay down his life for his friends."
+				},
+				{
+					"n": 14,
+					"text": "Ye are my friends, if ye do the things which I command you."
+				}
+			]
+		},
+		"luke.10.27-28": {
+			"reference": "Luke 10:27-28",
+			"verses": [
+				{
+					"n": 27,
+					"text": "And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbor as thyself."
+				},
+				{
+					"n": 28,
+					"text": "And he said unto him, Thou hast answered right: this do, and thou shalt live."
+				}
+			]
+		},
+		"luke.10.30-37": {
+			"reference": "Luke 10:30-37",
+			"verses": [
+				{
+					"n": 30,
+					"text": "Jesus made answer and said, A certain man was going down from Jerusalem to Jericho; and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead."
+				},
+				{
+					"n": 31,
+					"text": "And by chance a certain priest was going down that way: and when he saw him, he passed by on the other side."
+				},
+				{
+					"n": 32,
+					"text": "And in like manner a Levite also, when he came to the place, and saw him, passed by on the other side."
+				},
+				{
+					"n": 33,
+					"text": "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he was moved with compassion,"
+				},
+				{
+					"n": 34,
+					"text": "and came to him, and bound up his wounds, pouring on [them] oil and wine; and he set him on his own beast, and brought him to an inn, and took care of him."
+				},
+				{
+					"n": 35,
+					"text": "And on the morrow he took out two shillings, and gave them to the host, and said, Take care of him; and whatsoever thou spendest more, I, when I come back again, will repay thee."
+				},
+				{
+					"n": 36,
+					"text": "Which of these three, thinkest thou, proved neighbor unto him that fell among the robbers?"
+				},
+				{
+					"n": 37,
+					"text": "And he said, He that showed mercy on him. And Jesus said unto him, Go, and do thou likewise."
+				}
+			]
+		},
+		"matthew.22.34-40": {
+			"reference": "Matthew 22:34-40",
+			"verses": [
+				{
+					"n": 34,
+					"text": "But the Pharisees, when they heard that he had put the Sadducees to silence, gathered themselves together."
+				},
+				{
+					"n": 35,
+					"text": "And one of them, a lawyer, asked him a question, trying him:"
+				},
+				{
+					"n": 36,
+					"text": "Teacher, which is the great commandment in the law?"
+				},
+				{
+					"n": 37,
+					"text": "And he said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind."
+				},
+				{
+					"n": 38,
+					"text": "This is the great and first commandment."
+				},
+				{
+					"n": 39,
+					"text": "And a second like [unto it] is this, Thou shalt love thy neighbor as thyself."
+				},
+				{
+					"n": 40,
+					"text": "On these two commandments the whole law hangeth, and the prophets."
+				}
+			]
+		},
+		"matthew.5.17-19": {
+			"reference": "Matthew 5:17-19",
+			"verses": [
+				{
+					"n": 17,
+					"text": "Think not that I came to destroy the law or the prophets: I came not to destroy, but to fulfil."
+				},
+				{
+					"n": 18,
+					"text": "For verily I say unto you, Till heaven and earth pass away, one jot or one tittle shall in no wise pass away from the law, till all things be accomplished."
+				},
+				{
+					"n": 19,
+					"text": "Whosoever therefore shall break one of these least commandments, and shall teach men so, shall be called least in the kingdom of heaven: but whosoever shall do and teach them, he shall be called great in the kingdom of heaven."
+				}
+			]
+		},
+		"1corinthians.13.13": {
+			"reference": "1 Corinthians 13:13",
+			"verses": [
+				{
+					"n": 13,
+					"text": "But now abideth faith, hope, love, these three; and the greatest of these is love."
+				}
+			]
+		},
+		"galatians.5.14": {
+			"reference": "Galatians 5:14",
+			"verses": [
+				{
+					"n": 14,
+					"text": "For the whole law is fulfilled in one word, [even] in this: Thou shalt love thy neighbor as thyself."
 				}
 			]
 		}

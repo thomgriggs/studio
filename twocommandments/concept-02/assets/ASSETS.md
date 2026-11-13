@@ -25,3 +25,12 @@ Gothic oak plank doors with scrolled wrought-iron strap hinges (LAPADA listing, 
 
 ## Concept 02 — section 1B (2026-11-08)
 CL's v.3 sheet splits the opener into two panels and links a Rapid City Diocese photo ("jesus-teaching-scaled.jpg") for the second. Not licensed; Bloch's *Sermon on the Mount* stands in on both panels, cropped lower on the second (`.sec__bg--open2`), until an image is cleared.
+
+## Concept 02 — section 1B image swap (2026-11-13)
+Panel 1B no longer repeats Bloch (Thom: two images the same, with different messages feels wrong). CL's linked photo is still unlicensed, so a second public-domain stand-in is used until a licensed image arrives. Credit copied from `design-iterations/inspiration/artwork/ARTWORK.md`:
+
+| File | Work | Source | License |
+|---|---|---|---|
+| `tissot-sermon-of-the-beatitudes.jpg` | James Tissot, *The Sermon of the Beatitudes (La sermon des béatitudes)*, 1886–1894 (Brooklyn Museum) | https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_The_Sermon_of_the_Beatitudes_(La_sermon_des_b%C3%A9atitudes)_-_James_Tissot.jpg | Public domain (Wikimedia Commons) |
+
+Considered and rejected: Cigoli *Christ Teaching* (a pale red-chalk sketch on cream paper, washes out under the veil); Begas (Jesus dead centre, so he sits under the text). Tissot is portrait 533×768, so it is cropped to the top where Jesus stands on the rock.

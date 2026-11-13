@@ -188,3 +188,20 @@ Gospel colours restated by him (rows 9–12): Matthew green · Mark red · Luke 
 ## Next steps (2026-11-02)
 1. Founder reviews the build; his focus-group links: `?music=catholic`, `?music=orthodox`, `?music=protestant`, `?s5=corners`.
 2. Ask him for: the Agape chart source, what "option to watch" should play, and the official logo. Tell him the ESV/CSB and film-clip answers are licensing, not technical.
+
+## Built 2026-11-13 — v.3 (sheet edited 11-10) + Thom's notes
+All in `concept-02/`. New refs fetched with `concept-02/scripts/fetch-verses.mjs` (copied from `archive/`, adds `john.15.12-14`, `luke.10.27-28`, `luke.10.30-37`, `matthew.22.34-40`, `matthew.5.17-19`, `1corinthians.13.13`, `galatians.5.14`).
+- s2 logo: "Jesus’" removed (CL); sr-only name is "II Commandments".
+- s1b: second picture is Tissot, *Sermon of the Beatitudes* (public domain stand-in; CL's photo is unlicensed), so the two opener panels no longer repeat. Credit in `assets/ASSETS.md`.
+- `#s-agape`: opens on the italic line "The essence of these commandments is", which fades; then LOVE first, AGAPE, alternating five crossings, settle stacked, ring of eight as before. Track 400vh. Ground is now blood-red burgundy (`--color_bg-wine` #4a0c16, glow #5c0f1b).
+- `#s-complete` (new, between agape and s4): "How complete are these two commandments?" — burgundy with a half-drop repeat of small Latin crosses (`--img_cross` as a mask, `--color_cross-wine`).
+- s5: corners line reads "Each Gospel mentions Jesus’ Commandments"; Proceed is a button. Refs: Matthew `matthew.22.34-40`, Luke `luke.10.27-28`, John `john.15.12-14` + `more:['john.15.9-17']`.
+- The passage (was `#s6`) is now a popup over the Gospels section: door animation finishes, panel opens (corners: Proceed). Close button / Esc / backdrop; focus returns to the door or Proceed; body scroll locked; doors reset on close; `more` refs render under the main passage with their own heading. `#s6` no longer exists.
+- `#s-verses`: matte gold (`--color_gold-matte` #b8974a) with darker-gold crosses; opens on "…but the greatest of these is love." / 1 Corinthians 13:13 (`data-copy` + `data-ref`), then one featured verse per full-height step (Romans 13:8-10, Galatians 5:14), then a quiet "More on these two commandments" row (Matthew 5:43-48, Matthew 5:17-19, Luke 10:30-37, James 2:8, 1 John 4:7-12, 1 John 4:19-21, Galatians 5:13-14). John 15:9-17 left the list. Drifting grid removed; reading panel kept (moved to body level so it sits above the corner controls).
+- `#s-watch` (new, between s5 and s-verses): a CSS/SVG 1960s-70s walnut television. Dark until powered on (screen or power button); then a youtube-nocookie iframe; channel up/down with a static flash (off under reduced motion); power off removes the iframe; "Watch on YouTube" fallback link; powering on pauses the page music.
+- s7 finale: the hover-resizing split is gone. Two equal halves, everything always visible; hover/focus only inverts colour (ink ground, paper text, pill inverts) and nudges the drawing 8px. Stacks under 640px.
+- Music: `cinematic` (`cWBi3L-Nx9A`) is first and the default.
+
+New data shapes: `TC_DATA.gospels[].more` (array of ref ids shown under the main passage); `TC_DATA.related[].featured` (true = its own full-height step, in array order); `TC_DATA.tv[] = { id, label, yt, start }`; `TC_DATA.musicSets.cinematic = { label, ids }`.
+
+Open questions: which verses CL wants featured (we chose Romans 13:8-10 and Galatians 5:14); which videos go on the TV, and whether those films allow embedding (the YouTube link is the fallback); a licensed image for panel 2; evangelist symbol art for the corners is still placeholder.
